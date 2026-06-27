@@ -1,0 +1,106 @@
+{
+  "tagline": "글로벌 정보보안 뉴스레터",
+  "title": "보안 브리핑",
+  "date_display": "2026년 6월 26일 금요일",
+  "date_short": "2026.06.26",
+  "sources_line": "The Hacker News · BleepingComputer · SecurityWeek · Dark Reading",
+  "sections": [
+    {
+      "label": "취약점 & 공격",
+      "type": "cards",
+      "items": [
+        {
+          "severity": "critical",
+          "source": "The Hacker News",
+          "headline": "포티넷 'FortiBleed' — SSL VPN 자격증명 대규모 유출, CISA 경고",
+          "url": "https://thehackernews.com/2026/06/cisa-warns-fortinet-customers-as.html",
+          "summary": "러시아어권 위협 그룹이 약 86,644대의 FortiGate 방화벽·SSL VPN 자격증명을 확보한 정황이 드러나, CISA·英 NCSC가 글로벌 경보를 발령했다. 신규 취약점이 아닌 자격증명 재사용·브루트 포스·해시 크래킹 결합 공격이며, CISA는 전 세션 종료·비밀번호 재설정·MFA 적용·PBKDF2 해싱 전환을 권고한다."
+        },
+        {
+          "severity": "critical",
+          "source": "BleepingComputer",
+          "headline": "시스코 SD-WAN CVE-2026-20245 — 공개 수개월 전부터 제로데이 악용",
+          "url": "https://www.bleepingcomputer.com/news/security/cisco-fixes-sd-wan-vmanage-flaw-exploited-in-zero-day-attacks/",
+          "summary": "Cisco Catalyst SD-WAN Manager의 CVE-2026-20245(root 권한 상승)가 공개 수개월 전부터 제로데이로 악용된 정황을 Mandiant가 확인했다. 2026년 들어 7번째 SD-WAN 제로데이로, Cisco는 6월 패치를 배포했고 CISA 연방 패치 기한은 6월 23일이었다. 패치 후에도 침해 흔적은 별도 조사가 필요하다."
+        },
+        {
+          "severity": "high",
+          "source": "The Hacker News · BleepingComputer",
+          "headline": "랜트로닉스 시리얼-이더넷 서버 취약점 — CISA 경고",
+          "url": "https://thehackernews.com/2026/06/cisa-warns-critical-lantronix-eds5000.html",
+          "summary": "CISA가 Lantronix EDS5000 시리얼-IP 콘솔 서버의 인증 불필요 root 권한 명령 주입 취약점(CVE-2025-67038, CVSS 9.8)을 KEV 목록에 추가하고 연방 기관에 6월 26일까지 패치를 지시했다. OT/ICS 환경의 시리얼 장비를 IP망에 연결하는 위치 특성상 위험도가 높으며, EDS5000 펌웨어 2.2.0.0R1로 업그레이드가 권고된다."
+        },
+        {
+          "severity": "high",
+          "source": "BleepingComputer",
+          "headline": "엣지 확장 프로그램 'Edgecution' — 브라우저 샌드박스 우회 랜섬웨어",
+          "url": "https://www.bleepingcomputer.com/news/security/malicious-edge-extension-abuses-native-messaging-as-bridge-to-malware/",
+          "summary": "악성 마이크로소프트 엣지 확장 프로그램이 브라우저 샌드박스를 우회해 파이썬 기반 백도어를 설치한다. 랜섬웨어 공격의 초기 침투 수단으로 활용되고 있으며, 기업 환경에서 브라우저 확장 프로그램 관리 정책 점검이 필요하다."
+        },
+        {
+          "severity": "high",
+          "source": "BleepingComputer",
+          "headline": "유비키티 UniFi OS 결함 — CISA KEV 목록 등재",
+          "url": "https://www.bleepingcomputer.com/news/security/cisa-warns-of-max-severity-ubiquiti-flaws-exploited-in-attacks/",
+          "summary": "CISA가 유비키티 UniFi OS 취약점을 Known Exploited Vulnerabilities 목록에 추가했다. 랜트로닉스 서버 취약점과 함께 다분야에서 동시 공격이 확인되고 있으며, 네트워크 관리 장비 운영 기관의 즉각적인 패치 적용이 권고된다."
+        },
+        {
+          "severity": "medium",
+          "source": "SecurityWeek",
+          "headline": "GitLab CE/EE 업데이트 — 고심각도 3개 포함 총 13개 취약점 수정",
+          "url": "https://www.securityweek.com/gitlab-patches-code-execution-information-disclosure-vulnerabilities/",
+          "summary": "GitLab이 최신 보안 업데이트를 통해 13개 취약점을 패치했으며, 이 중 3개는 고심각도로 분류된다. 개발 환경을 통한 공급망 공격 경로로 악용될 수 있어 즉각적인 업데이트가 권고된다."
+        },
+        {
+          "severity": "medium",
+          "source": "SecurityWeek",
+          "headline": "Squid Proxy 'Squidbleed' — 수십 년 된 레거시 결함 재부상",
+          "url": "https://www.securityweek.com/decades-old-squid-proxy-flaw-squidbleed-can-expose-user-data/",
+          "summary": "1997년부터 존재해 온 Squid 프록시 FTP 파서의 힙 메모리 오버리드 취약점(CVE-2026-47729)이 공개됐다. 기본 설정에서 동작하며, 같은 프록시를 공유하는 환경(기업·학교·공용 와이파이)에서 타 사용자의 평문 HTTP 인증 헤더·세션 토큰이 노출될 수 있다. 정식 패치는 Squid 7.7 예정이며, FTP 비활성화가 즉시 완화책이다."
+        },
+        {
+          "severity": "medium",
+          "source": "Dark Reading",
+          "headline": "macOS 보안 공백 — 공격자가 보안 도구 비활성화 가능",
+          "url": "https://www.darkreading.com/application-security/apple-macos-security-gap-users-disable-security-tools",
+          "summary": "XM Cyber 연구진이 macOS의 앱 신뢰 정보(CDHash) 캐싱·검증 방식을 악용해 관리자 권한이나 커널 익스플로잇 없이 표준 사용자 권한만으로 EDR·MDM을 비활성화하는 기법을 공개했다. CrowdStrike Falcon, Kandji(CVE-2026-39118)에서 실증됐으며, 공격자가 이미 계정 접근을 확보한 경우가 전제다."
+        }
+      ]
+    },
+    {
+      "label": "침해 사고",
+      "type": "cards",
+      "items": [
+        {
+          "severity": "incident",
+          "source": "BleepingComputer",
+          "headline": "타타 전자(Tata Electronics) IT 인프라 침해 공개",
+          "url": "https://www.bleepingcomputer.com/news/security/tata-electronics-confirms-cyberattack-as-hackers-leak-data/",
+          "summary": "인도 전자·반도체 제조사이자 애플 공급망의 핵심인 타타 전자가 IT 인프라 일부 침해를 공식 확인했다. 데이터 탈취·갈취 그룹 World Leaks(Hunters International 후신)가 애플 제품 관련 PCB 설계·부품 명세 등 제조 데이터를 유출했다고 주장했으며, 운영에는 영향이 없다고 밝혔다."
+        }
+      ]
+    },
+    {
+      "label": "동향 & 분석",
+      "type": "trends",
+      "items": [
+        {
+          "lead": "공개 전 악용 기간의 위험",
+          "body": "Cisco SD-WAN CVE-2026-20245는 공식 공개 수개월 전부터 제로데이로 악용됐다. 벤더가 인지하기 전 기간 전체가 무방비 노출 구간이며, 패치 적용만으로는 이미 발생한 침해를 되돌릴 수 없다는 점에서 침해 탐지·포렌식 체계가 함께 필요하다."
+        },
+        {
+          "lead": "브라우저가 새로운 침투 경로로 부상",
+          "body": "Edgecution 사례는 브라우저 확장 프로그램이 엔드포인트 보안을 우회하는 공격 벡터로 자리잡고 있음을 보여준다. 기업 환경에서 허용 확장 프로그램 Allowlist 관리가 필요하다."
+        },
+        {
+          "lead": "레거시 코드 · AI 기반 취약점 발굴",
+          "body": "29년간(1997년~) 잠복해 있던 Squidbleed가 AI 분석을 통해 발견됐다. 수십 년의 코드 리뷰·감사를 통과한 결함이 드러난 사례로, 레거시 자산 인벤토리 관리와 AI 보조 취약점 분석의 부상을 동시에 보여준다."
+        },
+        {
+          "lead": "AI 기반 초분할(Hyper-Segmentation) 보안",
+          "body": "Dark Reading은 AI가 조정하는 초세분화 네트워크 보안이 향후 엔터프라이즈 보안의 핵심 방향이 될 것으로 전망했다. 동적 정책 적용 기반의 새로운 보안 모델이 부상 중이다."
+        }
+      ]
+    }
+  ]
+}
