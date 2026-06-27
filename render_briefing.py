@@ -22,6 +22,7 @@ from pathlib import Path
 BRAND_MAIN = "Secu"        # 워드마크 앞부분 (진한 남색)
 BRAND_ACCENT = "Log"       # 워드마크 뒷부분 (파란색 강조)
 AUTHOR = "Felix"           # 푸터 저작권 표기
+LINKEDIN_URL = "https://www.linkedin.com/in/insun-lee-b1201a10b/"
 # ───────────────────────────────────────────────────────────
 
 # 심각도 -> (badge 클래스, 좌측 바 클래스, 기본 라벨)
@@ -69,6 +70,9 @@ CSS = """
   .trend-text { font-size: 13px; color: #4a5568; line-height: 1.6; }
   .trend-text strong { color: #0d1b3e; font-weight: 600; }
   .footer { background: #f4f5f7; border-top: 1px solid #e8eaed; padding: 16px 36px; font-size: 11px; color: #9aa0b0; line-height: 1.6; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 8px; }
+  .footer-meta { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; justify-content: flex-end; }
+  .linkedin-link { display: inline-flex; align-items: center; justify-content: center; min-height: 28px; padding: 6px 12px; border-radius: 6px; background: #0a66c2; color: #fff; font-size: 12px; font-weight: 800; letter-spacing: 0.01em; box-shadow: 0 6px 14px rgba(10,102,194,0.16); }
+  .linkedin-link:hover { background: #004182; color: #fff; }
   .card-inner { display: flex; gap: 14px; }
   .sev-bar { width: 3px; border-radius: 2px; flex-shrink: 0; margin: 3px 0; }
   .sev-critical { background: #e74c3c; }
@@ -173,7 +177,10 @@ def render(data: dict) -> str:
   </div>
   <div class="footer">
     <div>출처: {esc(data.get("sources_line", ""))}</div>
-    <div>© 2026 {esc(AUTHOR)} · {esc(BRAND_MAIN + BRAND_ACCENT)}. 본 브리핑은 공개된 보안 뉴스를 기반으로 작성되었습니다.</div>
+    <div class="footer-meta">
+      <a class="linkedin-link" href="{esc(LINKEDIN_URL)}" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+      <span>© 2026 {esc(AUTHOR)} · {esc(BRAND_MAIN + BRAND_ACCENT)}. 본 브리핑은 공개된 보안 뉴스를 기반으로 작성되었습니다.</span>
+    </div>
   </div>
 </div>
 </body>

@@ -15,7 +15,7 @@ import datetime
 from email.utils import format_datetime
 from pathlib import Path
 
-from render_briefing import render, esc, CSS, BRAND_MAIN, BRAND_ACCENT, AUTHOR
+from render_briefing import render, esc, CSS, BRAND_MAIN, BRAND_ACCENT, AUTHOR, LINKEDIN_URL
 
 # ── 사이트 설정 (배포 후 본인 주소로 변경) ──────────────────
 SITE_URL = "https://macbong83.github.io"          # ← GitHub Pages / 커스텀 도메인 주소
@@ -71,7 +71,10 @@ INDEX_EXTRA_CSS = """
   .site-head { max-width: 700px; margin: 32px auto 0; padding: 0 8px; display: flex; align-items: flex-end; justify-content: space-between; gap: 16px; flex-wrap: wrap; }
   .site-head .wordmark { font-size: 30px; }
   .site-desc { font-size: 13px; color: #6b7488; margin-top: 6px; }
+  .site-actions { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
   .rss-link { font-size: 12px; font-weight: 700; color: #b94d00; border: 1px solid #fdd5a8; background: #fff7ee; padding: 6px 12px; border-radius: 6px; }
+  .site-linkedin { font-size: 12px; font-weight: 800; color: #fff; background: #0a66c2; padding: 7px 12px; border-radius: 6px; box-shadow: 0 6px 14px rgba(10,102,194,0.16); }
+  .site-linkedin:hover { background: #004182; color: #fff; }
   .archive { max-width: 700px; margin: 20px auto 48px; background: #fff; border-radius: 12px; box-shadow: 0 2px 20px rgba(0,0,0,0.08); overflow: hidden; }
   .post-item { display: block; padding: 22px 32px; border-bottom: 1px solid #f0f1f3; transition: background 0.15s; }
   .post-item:last-child { border-bottom: none; }
@@ -112,7 +115,10 @@ def build_index(items):
       <span class="wordmark">{esc(BRAND_MAIN)}<span class="accent">{esc(BRAND_ACCENT)}</span></span>
       <div class="site-desc">{esc(SITE_DESC)}</div>
     </div>
-    <a class="rss-link" href="{SITE_URL}/feed.xml">RSS 구독</a>
+    <div class="site-actions">
+      <a class="rss-link" href="{SITE_URL}/feed.xml">RSS 구독</a>
+      <a class="site-linkedin" href="{esc(LINKEDIN_URL)}" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+    </div>
   </div>
   <div class="archive">
 {chr(10).join(cards)}
