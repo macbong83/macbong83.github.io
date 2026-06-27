@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SecuLog 보안 브리핑 — 2026.06.27</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: -apple-system, 'Malgun Gothic', 'Apple SD Gothic Neo', Arial, sans-serif; background: #f4f5f7; color: #1a1a2e; line-height: 1.6; }
+  a { text-decoration: none; color: inherit; }
+  .wrapper { max-width: 700px; margin: 32px auto; background: #ffffff; border-radius: 12px; overflow: hidden; box-shadow: 0 2px 20px rgba(0,0,0,0.08); }
+  .header { background: #eef0f4; padding: 28px 36px 24px; display: flex; align-items: center; justify-content: space-between; gap: 16px; border-bottom: 3px solid #0d1b3e; }
+  .wordmark { font-size: 26px; font-weight: 800; letter-spacing: -0.02em; color: #0d1b3e; }
+  .wordmark .accent { color: #2563eb; }
+  .header-meta { text-align: right; }
+  .header-meta .nl-label { font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase; color: #6b7488; margin-bottom: 4px; }
+  .header-meta .nl-title { font-size: 17px; font-weight: 700; color: #0d1b3e; }
+  .header-meta .nl-date { font-size: 12px; color: #8a93a8; margin-top: 3px; }
+  .body { padding: 28px 36px 32px; }
+  .section-label { font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase; color: #8a93a8; font-weight: 600; padding-bottom: 8px; border-bottom: 1px solid #e8eaed; margin-bottom: 4px; margin-top: 28px; }
+  .section-label:first-child { margin-top: 0; }
+  .card { display: block; padding: 16px 0; border-bottom: 1px solid #f0f1f3; transition: background 0.15s; }
+  .card:last-child { border-bottom: none; }
+  .card:hover { background: #f8f9fc; margin: 0 -36px; padding: 16px 36px; }
+  .card-top { display: flex; align-items: center; gap: 8px; margin-bottom: 6px; flex-wrap: wrap; }
+  .badge { font-size: 10px; font-weight: 700; padding: 3px 9px; border-radius: 4px; letter-spacing: 0.04em; }
+  .badge-critical { background: #fff0f0; color: #c0392b; border: 1px solid #f5c6c6; }
+  .badge-high { background: #fff7ee; color: #b94d00; border: 1px solid #fdd5a8; }
+  .badge-medium { background: #fff9e6; color: #856900; border: 1px solid #f9e0a0; }
+  .badge-incident { background: #f3f0ff; color: #6133c0; border: 1px solid #cfc0f5; }
+  .source { font-size: 11px; color: #a0a8b8; }
+  .card-headline { font-size: 14px; font-weight: 600; color: #0d1b3e; margin-bottom: 5px; line-height: 1.45; }
+  .card-headline .arrow { font-size: 12px; color: #2563eb; margin-left: 4px; opacity: 0; transition: opacity 0.15s; }
+  .card:hover .card-headline .arrow { opacity: 1; }
+  .card-summary { font-size: 13px; color: #4a5568; line-height: 1.65; }
+  .trend-box { background: #f8f9fc; border-radius: 10px; padding: 18px 20px; margin-top: 6px; }
+  .trend-row { display: flex; gap: 12px; padding: 10px 0; border-bottom: 1px solid #e8eaed; align-items: flex-start; }
+  .trend-row:last-child { border-bottom: none; padding-bottom: 0; }
+  .trend-num { font-size: 11px; font-weight: 700; color: #2563eb; min-width: 22px; padding-top: 2px; }
+  .trend-text { font-size: 13px; color: #4a5568; line-height: 1.6; }
+  .trend-text strong { color: #0d1b3e; font-weight: 600; }
+  .footer { background: #f4f5f7; border-top: 1px solid #e8eaed; padding: 16px 36px; font-size: 11px; color: #9aa0b0; line-height: 1.6; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 8px; }
+  .card-inner { display: flex; gap: 14px; }
+  .sev-bar { width: 3px; border-radius: 2px; flex-shrink: 0; margin: 3px 0; }
+  .sev-critical { background: #e74c3c; }
+  .sev-high { background: #e67e22; }
+  .sev-medium { background: #f0b429; }
+  .sev-incident { background: #7c3aed; }
+  .card-content { flex: 1; }
+</style>
+</head>
+<body>
+<div class="wrapper">
+  <div class="header">
+    <div class="header-logo">
+      <span class="wordmark">Secu<span class="accent">Log</span></span>
+    </div>
+    <div class="header-meta">
+      <div class="nl-label">글로벌 정보보안 뉴스레터</div>
+      <div class="nl-title">보안 브리핑</div>
+      <div class="nl-date">2026년 6월 27일 토요일</div>
+    </div>
+  </div>
+  <div class="body">
+    <div class="section-label">취약점 &amp; 공격</div>
+
+    <a class="card" href="https://thehackernews.com/search/label/Vulnerability" target="_blank">
+      <div class="card-inner"><div class="sev-bar sev-critical"></div><div class="card-content">
+        <div class="card-top"><span class="badge badge-critical">긴급</span><span class="source">The Hacker News</span></div>
+        <div class="card-headline">PTC Windchill critical RCE 취약점 공개 — CVE-2026-20245<span class="arrow">↗</span></div>
+        <div class="card-summary">CISA는 PTC Windchill 제품의 원격 코드 실행 취약점(CVE-2026-20245)을 공개하며, 해당 결함이 제로데이 공격으로 악용되고 있다고 발표했다. 업데이트 적용이 시급하다.</div>
+      </div></div>
+    </a>
+
+    <a class="card" href="https://www.bleepingcomputer.com" target="_blank">
+      <div class="card-inner"><div class="sev-bar sev-critical"></div><div class="card-content">
+        <div class="card-top"><span class="badge badge-critical">긴급</span><span class="source">BleepingComputer</span></div>
+        <div class="card-headline">Cisco Catalyst SD-WAN 제로데이 공격 활동 확인 — CVE-2026-20245<span class="arrow">↗</span></div>
+        <div class="card-summary">Cisco Catalyst SD-WAN의 취약점(CVE-2026-20245)이 제로데이 공격으로 악용되어 사기적인 루트 계정이 생성되는 것으로 밝혀졌다.</div>
+      </div></div>
+    </a>
+
+    <a class="card" href="https://thehackernews.com/search/label/Cyber%20Attack" target="_blank">
+      <div class="card-inner"><div class="sev-bar sev-high"></div><div class="card-content">
+        <div class="card-top"><span class="badge badge-high">높음</span><span class="source">The Hacker News</span></div>
+        <div class="card-headline">포티넷 SSL VPN 대규모 브루트포스 공격 증가<span class="arrow">↗</span></div>
+        <div class="card-summary">보안 전문가들은 포티넷 SSL VPN 장치를 대상으로 한 브루트포스 트래픽이 급증하고 있다고 경고했다. 이는 협력적인 공격으로 추정되며, 보안업체는 즉시 패치 적용을 권장했다.</div>
+      </div></div>
+    </a>
+
+    <a class="card" href="https://www.bleepingcomputer.com" target="_blank">
+      <div class="card-inner"><div class="sev-bar sev-high"></div><div class="card-content">
+        <div class="card-top"><span class="badge badge-high">높음</span><span class="source">BleepingComputer</span></div>
+        <div class="card-headline">Edgecution 확장 프로그램을 통한 랜섬웨어 공격<span class="arrow">↗</span></div>
+        <div class="card-summary">Microsoft Edge 확장 프로그램 &#x27;Edgecution&#x27;이 브라우저 샌드박스를 탈출해 파이썬 기반 백도어를 설치하는 랜섬웨어 공격에 악용된 사례가 보고됐다.</div>
+      </div></div>
+    </a>
+
+    <a class="card" href="https://x.com/BleepinComputer" target="_blank">
+      <div class="card-inner"><div class="sev-bar sev-medium"></div><div class="card-content">
+        <div class="card-top"><span class="badge badge-medium">중간</span><span class="source">BleepingComputer</span></div>
+        <div class="card-headline">Linux 메인보드의 루트 권한 취약점 공개<span class="arrow">↗</span></div>
+        <div class="card-summary">Linux 메인보드에서 모든 주요 디스트리버션에 적용 가능한 루트 권한 취약점이 발견되며, 공격자에 의해 활용 가능한 업데이트가 발표됐다.</div>
+      </div></div>
+    </a>
+
+    <a class="card" href="https://www.securityweek.com/news" target="_blank">
+      <div class="card-inner"><div class="sev-bar sev-medium"></div><div class="card-content">
+        <div class="card-top"><span class="badge badge-medium">중간</span><span class="source">SecurityWeek</span></div>
+        <div class="card-headline">GitLab 13개 취약점 경고 및 패치 발표<span class="arrow">↗</span></div>
+        <div class="card-summary">GitLab CE/EE 최신 업데이트에서 3개의 고위험 취약점이 수정됐으며, 25년 전 Curl에 포함된 취약점도 패치됐다는 소식이 전달됐다.</div>
+      </div></div>
+    </a>
+
+    <div class="section-label">침해 사고</div>
+
+    <a class="card" href="https://www.bleepingcomputer.com" target="_blank">
+      <div class="card-inner"><div class="sev-bar sev-incident"></div><div class="card-content">
+        <div class="card-top"><span class="badge badge-incident">사고</span><span class="source">BleepingComputer</span></div>
+        <div class="card-headline">Tata Electronics 대규모 사이버 공격 피해<span class="arrow">↗</span></div>
+        <div class="card-summary">Tata Electronics는 IT 인프라 일부가 사이버 공격으로 인해 피해를 입었다고 공식 발표했다. 보안 취약점의 악용으로 추정된다.</div>
+      </div></div>
+    </a>
+
+    <div class="section-label">동향 &amp; 분석</div>
+    <div class="trend-box">
+      <div class="trend-row">
+        <div class="trend-num">01</div>
+        <div class="trend-text"><strong>제로데이 공격 증가</strong> — 최근 보고된 PTC Windchill 및 Cisco Catalyst SD-WAN의 제로데이 공격은 보안 업체와 정부 기관의 즉각적인 대응을 요구하고 있다. 이는 제로데이 취약점의 빠른 발견과 악용이 증가하고 있음을 시사한다.</div>
+      </div>
+      <div class="trend-row">
+        <div class="trend-num">02</div>
+        <div class="trend-text"><strong>악성코드 기술 진화</strong> — macOS 악성코드 &#x27;Gaslight&#x27;는 AI 기반 분석 도구를 속이기 위해 프롬프트 주입 문자열을 숨기는 등 기술적 특징을 보여주며, 악성코드의 진화가 가속화되고 있음을 보여준다.</div>
+      </div>
+      <div class="trend-row">
+        <div class="trend-num">03</div>
+        <div class="trend-text"><strong>보안 M&amp;A 활성화</strong> — Quantum eMotion의 보안 인수합병 발표는 보안 분야에서의 M&amp;A 활성화를 보여주며, 보안 기술의 통합과 혁신이 가속화되고 있음을 시사한다.</div>
+      </div>
+    </div>
+  </div>
+  <div class="footer">
+    <div>출처: The Hacker News · BleepingComputer · SecurityWeek · Dark Reading</div>
+    <div>© 2026 Felix · SecuLog. 본 브리핑은 공개된 보안 뉴스를 기반으로 작성되었습니다.</div>
+  </div>
+</div>
+</body>
+</html>
