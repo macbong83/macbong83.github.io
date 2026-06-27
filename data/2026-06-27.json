@@ -84,5 +84,10 @@
         }
       ]
     }
-  ]
+  ],
+  "seo": {
+    "title": "포티넷 SSL VPN 자격증명 유출·Cisco SD-WAN 제로데이·PTC Windchill RCE 취약점",
+    "description": "포티넷 FortiGate 86,000대 자격증명 유출, Cisco SD-WAN 제로데이 악용, PTC Windchill RCE 취약점 CISA KEV 등재 등 오늘의 주요 보안 위협을 요약합니다.",
+    "keywords": "포티넷, FortiGate, Cisco SD-WAN, PTC Windchill, RCE, 취약점, 보안뉴스, CISA, 제로데이, 랜섬웨어"
+  }
 }

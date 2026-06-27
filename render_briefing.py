@@ -126,12 +126,34 @@ def render_section(sec: dict) -> str:
 def render(data: dict) -> str:
     body = "\n\n".join(render_section(s) for s in data["sections"])
     page_title = f'{BRAND_MAIN}{BRAND_ACCENT} {data.get("title", "보안 브리핑")} — {data.get("date_short", "")}'.strip(" —")
+
+    seo = data.get("seo", {})
+    seo_title = seo.get("title") or page_title
+    seo_desc  = seo.get("description", "")
+    seo_kw    = seo.get("keywords", "")
+    site_url  = "https://macbong83.github.io"
+    date_short = data.get("date_short", "").replace(".", "-")
+    og_url    = f"{site_url}/posts/{date_short}.html" if date_short else site_url
+    full_title = f"{esc(seo_title)} | {BRAND_MAIN}{BRAND_ACCENT}"
+
     return f"""<!DOCTYPE html>
 <html lang="ko">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>{esc(page_title)}</title>
+<title>{full_title}</title>
+<meta name="description" content="{esc(seo_desc)}">
+<meta name="keywords" content="{esc(seo_kw)}">
+<meta name="author" content="{esc(AUTHOR)}">
+<meta property="og:type" content="article">
+<meta property="og:title" content="{esc(seo_title)}">
+<meta property="og:description" content="{esc(seo_desc)}">
+<meta property="og:url" content="{esc(og_url)}">
+<meta property="og:site_name" content="{BRAND_MAIN}{BRAND_ACCENT}">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="{esc(seo_title)}">
+<meta name="twitter:description" content="{esc(seo_desc)}">
+<link rel="canonical" href="{esc(og_url)}">
 <style>{CSS}</style>
 </head>
 <body>
