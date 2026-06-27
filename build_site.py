@@ -18,7 +18,7 @@ from pathlib import Path
 from render_briefing import render, esc, CSS, BRAND_MAIN, BRAND_ACCENT, AUTHOR
 
 # ── 사이트 설정 (배포 후 본인 주소로 변경) ──────────────────
-SITE_URL = "https://seculog-felix.github.io"          # ← GitHub Pages / 커스텀 도메인 주소
+SITE_URL = "https://macbong83.github.io"          # ← GitHub Pages / 커스텀 도메인 주소
 SITE_TITLE = f"{BRAND_MAIN}{BRAND_ACCENT}"
 SITE_DESC = "EDR · SASE · CTEM · 취약점 관리 중심의 매일 보안 브리핑"
 KST = datetime.timezone(datetime.timedelta(hours=9))
