@@ -5,9 +5,9 @@
   "date_short": "2026.06.28",
   "sources_line": "The Hacker News · BleepingComputer · SecurityWeek · KrebsOnSecurity · CISA · NCSC UK · Unit 42 · 보안뉴스 · 데일리시큐 · 전자신문",
   "seo": {
-    "title": "취약점 악용, 랜섬웨어 활동, 대규모 자격증명 유출 | 보안 뉴스",
-    "description": "Cisco, SolarWinds, FortiBleed 취약점 악용, The Gentlemen 랜섬웨어, 대규모 자격증명 유출 사례 분석",
-    "keywords": "취약점, 랜섬웨어, 자격증명 유출, Cisco, SolarWinds, FortiBleed, CISA, Unit 42"
+    "title": "러시아 해킹, 신종 피싱, AI 보안 취약점 등 주요 보안 이슈 | 2026.06.28",
+    "description": "러시아 해킹, 신종 피싱, AI 보안 취약점 등 주요 보안 이슈 요약. 뉴스 핵심 내용과 키워드 포함.",
+    "keywords": "러시아 해킹, 신종 피싱, AI 보안 취약점, Signal 백업 키, SharkLoader, Cisco 취약점, OpenAI, AWS, 보안 뉴스, 데일리시큐"
   },
   "sections": [
     {
@@ -15,39 +15,59 @@
       "type": "cards",
       "items": [
         {
-          "severity": "high",
-          "source": "The Hacker News",
-          "headline": "Cisco Unified CM SSRF 취약점(CVE-2026-20230) 실제 공격 악용 — 인증되지 않은 원격 공격자 root 권한 상승 가능성",
-          "url": "https://thehackernews.com/2026/06/cisco-unified-cm-flaw-exploited-after.html",
-          "summary": "Cisco Unified Communications Manager의 SSRF 취약점(CVE-2026-20230, CVSS 8.6)이 실제 공격에 악용되고 있다. 인증되지 않은 원격 공격자가 서버 측 요청 위조 및 파일 쓰기로 root 권한 상승 가능. 즉각적인 패치 적용 권고."
-        },
-        {
-          "severity": "high",
-          "source": "The Hacker News",
-          "headline": "CISA KEV, SolarWinds Serv-U DoS 취약점 추가 — 연방 기관 패치 의무화",
-          "url": "https://thehackernews.com/2026/06/cisa-adds-actively-exploited-solarwinds.html",
-          "summary": "CISA가 SolarWinds Serv-U의 서비스 거부(DoS) 취약점을 알려진 악용 취약점(KEV) 목록에 추가했다. 연방 기관은 기한 내 패치 적용이 의무화됐다."
-        },
-        {
-          "severity": "high",
-          "source": "KrebsOnSecurity",
-          "headline": "The Gentlemen 랜섬웨어 그룹 운영자 추적 조사",
-          "url": "https://krebsonsecurity.com/2026/06/who-runs-the-ransomware-group-the-gentlemen/",
-          "summary": "2026년 두 번째로 활발한 RaaS 그룹 'The Gentlemen'의 운영자를 KrebsOnSecurity가 추적했다. 올해에만 240건 이상의 피해자를 주장하며 중간 규모 기업을 집중 타겟으로 삼고 있다."
-        },
-        {
           "severity": "critical",
-          "source": "BleepingComputer",
-          "headline": "Microsoft 6월 Patch Tuesday — 제로데이 6건 포함 200개 취약점 수정",
-          "url": "https://www.bleepingcomputer.com/news/microsoft/microsoft-june-2026-patch-tuesday-fixes-6-zero-days-200-flaws/",
-          "summary": "마이크로소프트가 6월 Patch Tuesday를 통해 제로데이 6건을 포함한 200개 취약점을 수정했다. YellowKey(CVE-2026-45585)는 BitLocker 우회에 악용 가능한 제로데이로 Windows 11 및 Server 2022/2025에 영향을 미친다."
+          "source": "CISA",
+          "headline": "Cisco Unified Communications Manager Server 취약점 긴급 패치 권고",
+          "url": "https://www.bleepingcomputer.com/news/security/cisa-sets-urgent-deadline-to-fix-cisco-flaw-exploited-in-attacks/",
+          "summary": "CISA는 Cisco Unified Communications Manager Server의 취약점이 악용되고 있으며, 연방 기관에 긴급한 패치를 요구하고 있다. 이 취약점은 현재 활발히 악용되고 있어 즉각적인 조치가 필요하다."
         },
         {
           "severity": "high",
           "source": "BleepingComputer",
-          "headline": "Windows macOS 악성코드 'Gaslight' — AI 분석 도구 교란 설계",
-          "url": "https://www.bleepingcomputer.com/news/microsoft/microsoft-patches-yellowkey-greenplasma-miniplasma-zero-days/",
-          "summary": "새로 발견된 macOS 악성코드 'Gaslight'는 AI 기반 악성코드 분석 도구를 혼란에 빠뜨리도록 설계됐다. 실행 파일 내 프롬프트 인젝션 문자열과 가짜 디버깅 데이터를 숨겨 탐지를 우회한다."
+          "headline": "Amazon Q 개발자 취약점으로 AWS 자격증명 탈취 가능",
+          "url": "https://www.securityweek.com/amazon-q-flaw-enabled-cloud-credential-theft-via-malicious-repositories/",
+          "summary": "AWS의 AI 코딩 도우미인 Amazon Q Developer에 고위험 취약점이 발견되었다. 공격자는 악성 저장소를 열도록 유도하기만 해도 AWS 자격증명과 API 키를 탈취할 수 있다."
+        },
+        {
+          "severity": "high",
+          "source": "BleepingComputer",
+          "headline": "GitHub 저장소를 통해 AI 코딩 에이전트 유도하여 악성코드 실행",
+          "url": "https://www.bleepingcomputer.com/news/security/clean-github-repo-tricks-ai-coding-agents-into-running-malware/",
+          "summary": "보기에는 무해한 GitHub 저장소가 AI 코딩 에이전트를 유도해 악성코드를 실행하게 만들 수 있다. 이는 보안 스캐너와 인간 검토자에게도 감지되지 않는 악성코드를 실행시킬 수 있다."
+        },
+        {
+          "severity": "medium",
+          "source": "The Hacker News",
+          "headline": "SharkLoader 악성코드로 Cobalt Strike Beacon 배포",
+          "url": "https://thehackernews.com/2026/06/new-sharkloader-malware-deploys-cobalt.html",
+          "summary": "SharkLoader 악성코드는 Cobalt Strike Beacon을 배포하는 데 사용되며, Kaspersky는 이 활동을 StrikeShark로 추적하고 있다. 이는 기업의 시스템에 침투할 수 있는 위험한 공격 방식이다."
+        },
+        {
+          "severity": "medium",
+          "source": "The Hacker News",
+          "headline": "중국어 APT 그룹, Southeast Asia에서 TinyRCT 백도어 배포",
+          "url": "https://thehackernews.com/2026/06/chinese-speaking-apt-deploys-new.html",
+          "summary": "중국어 APT 그룹이 Southeast Asia의 정부 및 인프라를 대상으로 TinyRCT 백도어를 배포하고 있다. 이는 국가 기업 및 중요 인프라에 대한 지속적인 위협이다."
+        }
+      ]
+    },
+    {
+      "label": "침해 사고",
+      "type": "cards",
+      "items": [
+        {
+          "severity": "incident",
+          "source": "BleepingComputer",
+          "headline": "Polymarket, 공급망 공격으로 300만 달러 손실",
+          "url": "https://www.bleepingcomputer.com/news/security/polymarket-customers-lose-3-million-in-supply-chain-attack/",
+          "summary": "Polymarket는 공급망 공격으로 인해 약 300만 달러의 손실을 입었으며, 피해 고객에게 전액 보상할 계획이다. 이는 제3자 공급업체의 보안 취약점으로 인한 사고이다."
+        },
+        {
+          "severity": "incident",
+          "source": "BleepingComputer",
+          "headline": "Klue 데이터 유출로 20개 이상 기업 피해",
+          "url": "https://www.securityweek.com/more-klue-breach-victims-identified-as-hackers-get-hacked/",
+          "summary": "Klue-Salesforce 데이터 유출 사고로 20개 이상의 기업이 영향을 받았으며, 이로 인해 고객 정보가 노출될 수 있다."
         }
       ]
     }

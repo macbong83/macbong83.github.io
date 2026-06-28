@@ -5,13 +5,13 @@
     <link>https://macbong83.github.io/</link>
     <description>EDR · SASE · CTEM · 취약점 관리 중심의 매일 보안 브리핑</description>
     <language>ko</language>
-    <lastBuildDate>Sun, 28 Jun 2026 17:46:43 +0900</lastBuildDate>
+    <lastBuildDate>Sun, 28 Jun 2026 17:54:24 +0900</lastBuildDate>
     <item>
       <title>SecuLog 보안 브리핑 — 2026.06.28</title>
       <link>https://macbong83.github.io/posts/2026-06-28.html</link>
       <guid isPermaLink="true">https://macbong83.github.io/posts/2026-06-28.html</guid>
       <pubDate>Sun, 28 Jun 2026 08:00:00 +0900</pubDate>
-      <description>Cisco Unified CM SSRF 취약점(CVE-2026-20230) 실제 공격 악용 — 인증되지 않은 원격 공격자 root 권한 상승 가능성 / CISA KEV, SolarWinds Serv-U DoS 취약점 추가 — 연방 기관 패치 의무화 / The Gentlemen 랜섬웨어 그룹 운영자 추적 조사 / Microsoft 6월 Patch Tuesday — 제로데이 6건 포함 200개 취약점 수정</description>
+      <description>Cisco Unified Communications Manager Server 취약점 긴급 패치 권고 / Amazon Q 개발자 취약점으로 AWS 자격증명 탈취 가능 / GitHub 저장소를 통해 AI 코딩 에이전트 유도하여 악성코드 실행 / SharkLoader 악성코드로 Cobalt Strike Beacon 배포</description>
     </item>
     <item>
       <title>SecuLog 보안 브리핑 — 2026.06.27</title>
