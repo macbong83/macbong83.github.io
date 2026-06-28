@@ -36,13 +36,6 @@
           "summary": "CISA는 KEV(known exploited vulnerabilities) 캐탈로그에 새로운 취약점을 추가하며 Daemon Tools Lite와 Nx Console의 악성코드 위험을 경고하고 있다."
         },
         {
-          "severity": "medium",
-          "source": "바이라인네트워크",
-          "headline": "AI 모델을 이용한 소프트웨어 보안 취약점 발견 급증",
-          "url": "https://byline.network/2026/06/25-572/",
-          "summary": "AI 도구를 활용한 소프트웨어 보안 취약점 발견 사례가 급증하고 있으며, 이는 보안 업계의 새로운 도전 과제로 부상하고 있다."
-        },
-        {
           "severity": "high",
           "source": "데일리시큐",
           "headline": "AI 기반 피싱 공격 확산 — OpenAI 공식 이메일 악용",
