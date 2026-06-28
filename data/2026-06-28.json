@@ -52,19 +52,6 @@
       ]
     },
     {
-      "label": "침해 사고",
-      "type": "cards",
-      "items": [
-        {
-          "severity": "incident",
-          "source": "데일리시큐",
-          "headline": "국내 기업 DB 서버 대상 랜섬웨어 감염 사고 확산",
-          "url": "https://www.cpoforum.or.kr/bbs/board.php?bo_table=privacynews&wr_id=7215",
-          "summary": "데일리시큐 보도에 따르면 국내 기업의 데이터베이스 서버를 대상으로 한 랜섬웨어 감염 사고가 지속적으로 발생하고 있으며, 보안 점검의 중요성이 강조되고 있다."
-        }
-      ]
-    },
-    {
       "label": "동향 & 분석",
       "type": "trends",
       "items": [
