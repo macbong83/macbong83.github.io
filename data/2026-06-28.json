@@ -1,0 +1,90 @@
+{
+  "tagline": "글로벌 정보보안 뉴스레터",
+  "title": "보안 브리핑",
+  "date_display": "2026년 6월 28일 일요일",
+  "date_short": "2026.06.28",
+  "sources_line": "The Hacker News · BleepingComputer · SecurityWeek · Dark Reading · 보안뉴스 · 바이라인네트웍스 · 전자신문",
+  "seo": {
+    "title": "랜섬웨어, AI 기반 피싱, CISA 취약점 경고 등 주요 보안 이슈",
+    "description": "랜섬웨어 공격, AI 기반 피싱 확산, CISA 취약점 경고 등 주요 보안 뉴스 요약",
+    "keywords": "랜섬웨어, AI 피싱, CISA, 취약점, 보안, Edgecution, Lantronix, OpenAI, 데이터 보안, 컨퍼런스"
+  },
+  "sections": [
+    {
+      "label": "취약점 & 공격",
+      "type": "cards",
+      "items": [
+        {
+          "severity": "critical",
+          "source": "BleepingComputer",
+          "headline": "랜섬웨어 공격에 사용된 Microsoft Edge 확장 프로그램 'Edgecution' 드러내져",
+          "url": "https://www.bleepingcomputer.com/news/security/microsoft-edge-extension-edgecution-used-in-ransomware-attack/",
+          "summary": "Microsoft Edge 확장 프로그램 'Edgecution'이 랜섬웨어 공격에 활용되어 브라우저 샌드박스를 탈출시키고 Python 기반 백도어를 설치하는 방식으로 공격이 진행되고 있다고 보안 리서치가 경고했다."
+        },
+        {
+          "severity": "high",
+          "source": "CISA",
+          "headline": "CISA, Ubiquity UniFi OS 및 Lantronix 서버의 취약점 공격 경고",
+          "url": "https://industrialcyber.co/cisa/new-cisa-advisories-urge-swift-action-on-ics-flaws-impacting-energy-manufacturing-transportation-systems",
+          "summary": "미국 CISA는 Ubiquity UniFi OS와 Lantronix 서버의 취약점이 현재 실제 공격에 악용되고 있다고 경고하며 보안 업데이트를 강력히 권장하고 있다."
+        },
+        {
+          "severity": "high",
+          "source": "보안뉴스",
+          "headline": "CISA의 Lantronix EDS5000 취약점 경고",
+          "url": "https://www.boannews.com/media/view.asp?idx=120102",
+          "summary": "CISA에서 Lantronix EDS5000 서버의 심각한 취약점이 실제 공격에 악용되고 있다고 경고하며 즉각적인 패치를 권장하고 있다."
+        },
+        {
+          "severity": "high",
+          "source": "CISA",
+          "headline": "미국 CISA, 새로운 취약점 추가로 KEV 캐탈로그 업데이트",
+          "url": "https://www.reddit.com/r/pwnhub/comments/1tphhrk/cisa_adds_new_vulnerabilities_to_cybersecurity",
+          "summary": "CISA는 KEV(known exploited vulnerabilities) 캐탈로그에 새로운 취약점을 추가하며 Daemon Tools Lite와 Nx Console의 악성코드 위험을 경고하고 있다."
+        },
+        {
+          "severity": "medium",
+          "source": "바이라인네트웍스",
+          "headline": "AI 모델을 이용한 소프트웨어 보안 취약점 발견 급증",
+          "url": "https://byline.network/2026/06/25-572/",
+          "summary": "AI 도구를 활용한 소프트웨어 보안 취약점 발견 사례가 급증하고 있으며, 이는 보안 업계의 새로운 도전 과제로 부상하고 있다."
+        }
+      ]
+    },
+    {
+      "label": "침해 사고",
+      "type": "cards",
+      "items": [
+        {
+          "severity": "incident",
+          "source": "데일리시큐",
+          "headline": "국내 기업 DB 서버 대상 랜섬웨어 감염 사고 확산",
+          "url": "https://www.cpoforum.or.kr/bbs/board.php?bo_table=privacynews&wr_id=7215",
+          "summary": "데일리시큐 보도에 따르면 국내 기업의 데이터베이스 서버를 대상으로 한 랜섬웨어 감염 사고가 지속적으로 발생하고 있으며, 보안 점검의 중요성이 강조되고 있다."
+        }
+      ]
+    },
+    {
+      "label": "동향 & 분석",
+      "type": "trends",
+      "items": [
+        {
+          "lead": "AI 기반 보안 위협 증가",
+          "body": "AI 기반 피싱 및 소프트웨어 취약점 발견 사례가 급증하고 있으며, 이는 보안 업계에 새로운 도전 과제로 부상하고 있다."
+        },
+        {
+          "lead": "랜섬웨어 공격 확산",
+          "body": "랜섬웨어 공격이 Microsoft Edge 확장 프로그램 및 유럽 기업을 표적으로 하며, 공격 방식이 점점 정교해지고 있다."
+        },
+        {
+          "lead": "CISA의 취약점 경고 강화",
+          "body": "CISA는 다양한 제품의 취약점에 대해 경고를 강화하고 있으며, 보안 업데이트 및 패치의 중요성을 강조하고 있다."
+        },
+        {
+          "lead": "보안 컨퍼런스 및 웨비나 활발",
+          "body": "AI 기반 보안, 데이터 보안, 아이덴티티 보안 등 주제로 다양한 보안 컨퍼런스 및 웨비나가 개최되고 있다."
+        }
+      ]
+    }
+  ]
+}

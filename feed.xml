@@ -5,7 +5,14 @@
     <link>https://macbong83.github.io/</link>
     <description>EDR · SASE · CTEM · 취약점 관리 중심의 매일 보안 브리핑</description>
     <language>ko</language>
-    <lastBuildDate>Sat, 27 Jun 2026 21:37:35 +0900</lastBuildDate>
+    <lastBuildDate>Sun, 28 Jun 2026 16:03:48 +0900</lastBuildDate>
+    <item>
+      <title>SecuLog 보안 브리핑 — 2026.06.28</title>
+      <link>https://macbong83.github.io/posts/2026-06-28.html</link>
+      <guid isPermaLink="true">https://macbong83.github.io/posts/2026-06-28.html</guid>
+      <pubDate>Sun, 28 Jun 2026 08:00:00 +0900</pubDate>
+      <description>랜섬웨어 공격에 사용된 Microsoft Edge 확장 프로그램 &#x27;Edgecution&#x27; 드러내져 / CISA, Ubiquity UniFi OS 및 Lantronix 서버의 취약점 공격 경고 / CISA의 Lantronix EDS5000 취약점 경고 / 미국 CISA, 새로운 취약점 추가로 KEV 캐탈로그 업데이트</description>
+    </item>
     <item>
       <title>SecuLog 보안 브리핑 — 2026.06.27</title>
       <link>https://macbong83.github.io/posts/2026-06-27.html</link>
