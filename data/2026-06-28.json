@@ -30,13 +30,6 @@
         },
         {
           "severity": "high",
-          "source": "보안뉴스",
-          "headline": "CISA의 Lantronix EDS5000 취약점 경고",
-          "url": "https://www.boannews.com/media/view.asp?idx=120102",
-          "summary": "CISA에서 Lantronix EDS5000 서버의 심각한 취약점이 실제 공격에 악용되고 있다고 경고하며 즉각적인 패치를 권장하고 있다."
-        },
-        {
-          "severity": "high",
           "source": "CISA",
           "headline": "미국 CISA, 새로운 취약점 추가로 KEV 캐탈로그 업데이트",
           "url": "https://www.reddit.com/r/pwnhub/comments/1tphhrk/cisa_adds_new_vulnerabilities_to_cybersecurity",
