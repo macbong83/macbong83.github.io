@@ -5,9 +5,9 @@
   "date_short": "2026.06.28",
   "sources_line": "The Hacker News · BleepingComputer · SecurityWeek · Dark Reading · 보안뉴스 · 바이라인네트웍스 · 전자신문",
   "seo": {
-    "title": "랜섬웨어, AI 기반 피싱, CISA 취약점 경고 등 주요 보안 이슈",
-    "description": "랜섬웨어 공격, AI 기반 피싱 확산, CISA 취약점 경고 등 주요 보안 뉴스 요약",
-    "keywords": "랜섬웨어, AI 피싱, CISA, 취약점, 보안, Edgecution, Lantronix, OpenAI, 데이터 보안, 컨퍼런스"
+    "title": "랜섬웨어 공격, CISA 취약점 경고, AI 기반 피싱 확산 | 보안 뉴스",
+    "description": "랜섬웨어 공격에 사용된 Microsoft Edge 확장 프로그램, CISA의 취약점 경고, AI 기반 피싱 공격 증가 등 주요 보안 이슈 요약",
+    "keywords": "랜섬웨어, CISA, 취약점, AI 피싱, 보안, Microsoft Edge, 백도어, 데이터 유출, 보안 컨퍼런스, 인증"
   },
   "sections": [
     {
@@ -22,8 +22,8 @@
           "summary": "Microsoft Edge 확장 프로그램 'Edgecution'이 랜섬웨어 공격에 활용되어 브라우저 샌드박스를 탈출시키고 Python 기반 백도어를 설치하는 방식으로 공격이 진행되고 있다고 보안 리서치가 경고했다."
         },
         {
-          "severity": "high",
-          "source": "CISA",
+          "severity": "critical",
+          "source": "Industrial Cyber",
           "headline": "CISA, Ubiquity UniFi OS 및 Lantronix 서버의 취약점 공격 경고",
           "url": "https://industrialcyber.co/cisa/new-cisa-advisories-urge-swift-action-on-ics-flaws-impacting-energy-manufacturing-transportation-systems",
           "summary": "미국 CISA는 Ubiquity UniFi OS와 Lantronix 서버의 취약점이 현재 실제 공격에 악용되고 있다고 경고하며 보안 업데이트를 강력히 권장하고 있다."
@@ -44,32 +44,31 @@
         },
         {
           "severity": "medium",
-          "source": "바이라인네트웍스",
+          "source": "바이라인네트워크",
           "headline": "AI 모델을 이용한 소프트웨어 보안 취약점 발견 급증",
           "url": "https://byline.network/2026/06/25-572/",
           "summary": "AI 도구를 활용한 소프트웨어 보안 취약점 발견 사례가 급증하고 있으며, 이는 보안 업계의 새로운 도전 과제로 부상하고 있다."
-        }
-      ]
-    },
-    {
-      "label": "동향 & 분석",
-      "type": "trends",
-      "items": [
-        {
-          "lead": "AI 기반 보안 위협 증가",
-          "body": "AI 기반 피싱 및 소프트웨어 취약점 발견 사례가 급증하고 있으며, 이는 보안 업계에 새로운 도전 과제로 부상하고 있다."
         },
         {
-          "lead": "랜섬웨어 공격 확산",
-          "body": "랜섬웨어 공격이 Microsoft Edge 확장 프로그램 및 유럽 기업을 표적으로 하며, 공격 방식이 점점 정교해지고 있다."
+          "severity": "high",
+          "source": "데일리시큐",
+          "headline": "AI 기반 피싱 공격 확산 — OpenAI 공식 이메일 악용",
+          "url": "https://www.dailysecu.com/news/articleView.html?idxno=207316",
+          "summary": "공식 OpenAI 이메일이 악용되어 보안 솔루션을 우회하는 신종 AI 기반 피싱 공격이 발견됐다. 정교한 사회공학 기법을 활용해 민감한 업무 자료를 타겟으로 한다."
         },
         {
-          "lead": "CISA의 취약점 경고 강화",
-          "body": "CISA는 다양한 제품의 취약점에 대해 경고를 강화하고 있으며, 보안 업데이트 및 패치의 중요성을 강조하고 있다."
+          "severity": "medium",
+          "source": "데일리시큐",
+          "headline": "AI 무기화 시대의 보안 거버넌스 체계 필요성",
+          "url": "https://www.dailysecu.com/news/articleView.html?idxno=207301",
+          "summary": "AI 기술 진흥과 국가 안보 간 균형 있는 거버넌스 체계 구축이 시급하다는 전문가 제언이 나왔다. 정책적 방향 수립의 필요성이 강조되고 있다."
         },
         {
-          "lead": "보안 컨퍼런스 및 웨비나 활발",
-          "body": "AI 기반 보안, 데이터 보안, 아이덴티티 보안 등 주제로 다양한 보안 컨퍼런스 및 웨비나가 개최되고 있다."
+          "severity": "medium",
+          "source": "바이라인네트워크",
+          "headline": "IdentityTV 2026 — 아이덴티티 보안 웨비나 개최",
+          "url": "https://byline.network/2026/06/24_19228783/",
+          "summary": "2026년 7월 9일 개최 예정인 IdentityTV 2026 웨비나에서 아이덴티티 보안의 미래 전략을 전문가들이 논의한다."
         }
       ]
     }
