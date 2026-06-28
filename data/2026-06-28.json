@@ -30,13 +30,6 @@
         },
         {
           "severity": "high",
-          "source": "CISA",
-          "headline": "미국 CISA, 새로운 취약점 추가로 KEV 캐탈로그 업데이트",
-          "url": "https://www.reddit.com/r/pwnhub/comments/1tphhrk/cisa_adds_new_vulnerabilities_to_cybersecurity",
-          "summary": "CISA는 KEV(known exploited vulnerabilities) 캐탈로그에 새로운 취약점을 추가하며 Daemon Tools Lite와 Nx Console의 악성코드 위험을 경고하고 있다."
-        },
-        {
-          "severity": "high",
           "source": "데일리시큐",
           "headline": "AI 기반 피싱 공격 확산 — OpenAI 공식 이메일 악용",
           "url": "https://www.dailysecu.com/news/articleView.html?idxno=207316",
