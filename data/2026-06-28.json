@@ -5,9 +5,51 @@
   "date_short": "2026.06.28",
   "sources_line": "The Hacker News · BleepingComputer · SecurityWeek · KrebsOnSecurity · CISA · NCSC UK · Unit 42 · 보안뉴스 · 데일리시큐 · 전자신문",
   "seo": {
-    "title": "랜섬웨어, AI 피싱, CISA 취약점 경고 등 주요 보안 이슈 (2026.06.28)",
-    "description": "랜섬웨어 공격, AI 기반 피싱, CISA 취약점 경고 등 주요 보안 뉴스 요약",
-    "keywords": "랜섬웨어, AI 피싱, CISA, 취약점, 보안, 보안 업데이트, 랜섬웨어 공격, Microsoft Edge, Lantronix, OpenAI"
+    "title": "취약점 악용, 랜섬웨어 활동, 대규모 자격증명 유출 | 보안 뉴스",
+    "description": "Cisco, SolarWinds, FortiBleed 취약점 악용, The Gentlemen 랜섬웨어, 대규모 자격증명 유출 사례 분석",
+    "keywords": "취약점, 랜섬웨어, 자격증명 유출, Cisco, SolarWinds, FortiBleed, CISA, Unit 42"
   },
-  "sections": []
+  "sections": [
+    {
+      "label": "취약점 & 공격",
+      "type": "cards",
+      "items": [
+        {
+          "severity": "high",
+          "source": "The Hacker News",
+          "headline": "Cisco Unified CM SSRF 취약점(CVE-2026-20230) 실제 공격 악용 — 인증되지 않은 원격 공격자 root 권한 상승 가능성",
+          "url": "https://thehackernews.com/2026/06/cisco-unified-cm-flaw-exploited-after.html",
+          "summary": "Cisco Unified Communications Manager의 SSRF 취약점(CVE-2026-20230, CVSS 8.6)이 실제 공격에 악용되고 있다. 인증되지 않은 원격 공격자가 서버 측 요청 위조 및 파일 쓰기로 root 권한 상승 가능. 즉각적인 패치 적용 권고."
+        },
+        {
+          "severity": "high",
+          "source": "The Hacker News",
+          "headline": "CISA KEV, SolarWinds Serv-U DoS 취약점 추가 — 연방 기관 패치 의무화",
+          "url": "https://thehackernews.com/2026/06/cisa-adds-actively-exploited-solarwinds.html",
+          "summary": "CISA가 SolarWinds Serv-U의 서비스 거부(DoS) 취약점을 알려진 악용 취약점(KEV) 목록에 추가했다. 연방 기관은 기한 내 패치 적용이 의무화됐다."
+        },
+        {
+          "severity": "high",
+          "source": "KrebsOnSecurity",
+          "headline": "The Gentlemen 랜섬웨어 그룹 운영자 추적 조사",
+          "url": "https://krebsonsecurity.com/2026/06/who-runs-the-ransomware-group-the-gentlemen/",
+          "summary": "2026년 두 번째로 활발한 RaaS 그룹 'The Gentlemen'의 운영자를 KrebsOnSecurity가 추적했다. 올해에만 240건 이상의 피해자를 주장하며 중간 규모 기업을 집중 타겟으로 삼고 있다."
+        },
+        {
+          "severity": "critical",
+          "source": "BleepingComputer",
+          "headline": "Microsoft 6월 Patch Tuesday — 제로데이 6건 포함 200개 취약점 수정",
+          "url": "https://www.bleepingcomputer.com/news/microsoft/microsoft-june-2026-patch-tuesday-fixes-6-zero-days-200-flaws/",
+          "summary": "마이크로소프트가 6월 Patch Tuesday를 통해 제로데이 6건을 포함한 200개 취약점을 수정했다. YellowKey(CVE-2026-45585)는 BitLocker 우회에 악용 가능한 제로데이로 Windows 11 및 Server 2022/2025에 영향을 미친다."
+        },
+        {
+          "severity": "high",
+          "source": "BleepingComputer",
+          "headline": "Windows macOS 악성코드 'Gaslight' — AI 분석 도구 교란 설계",
+          "url": "https://www.bleepingcomputer.com/news/microsoft/microsoft-patches-yellowkey-greenplasma-miniplasma-zero-days/",
+          "summary": "새로 발견된 macOS 악성코드 'Gaslight'는 AI 기반 악성코드 분석 도구를 혼란에 빠뜨리도록 설계됐다. 실행 파일 내 프롬프트 인젝션 문자열과 가짜 디버깅 데이터를 숨겨 탐지를 우회한다."
+        }
+      ]
+    }
+  ]
 }
