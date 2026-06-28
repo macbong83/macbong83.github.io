@@ -19,7 +19,7 @@
   "title": "보안 브리핑",
   "date_display": "YYYY년 M월 D일 요일",
   "date_short": "YYYY.MM.DD",
-  "sources_line": "The Hacker News · BleepingComputer · SecurityWeek · Dark Reading · 보안뉴스 · 바이라인네트웍스 · 전자신문",
+  "sources_line": "The Hacker News · BleepingComputer · SecurityWeek · KrebsOnSecurity · CISA · NCSC UK · Unit 42 · 보안뉴스 · 데일리시큐 · 전자신문",
   "sections": [
     {
       "label": "취약점 & 공격",
