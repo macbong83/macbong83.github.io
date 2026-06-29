@@ -5,9 +5,9 @@
   "date_short": "2026.06.29",
   "sources_line": "The Hacker News · BleepingComputer · SecurityWeek · KrebsOnSecurity · CISA · NCSC UK · Unit 42 · 보안뉴스 · 데일리시큐 · 전자신문",
   "seo": {
-    "title": "러시아 정보기관, 우크라이나 메시징 계정 해킹 | 1400만 명 이메일 유출 | GPT-5.6 공개",
-    "description": "러시아 정보기관의 우크라이나 해킹, 1400만 명 이메일 유출, GPT-5.6 공개로 AI 보안 경쟁 심화",
-    "keywords": "러시아, 해킹, 이메일 유출, GPT-5.6, AI, 보안, 오픈AI, 우크라이나, 메시징, 취약점"
+    "title": "2026년 6월 29일 주요 보안 이슈: 데이터 유출, 제로데이, AI 보안 경쟁 | SecuLog",
+    "description": "2026년 6월 29일 주요 보안 이슈: KDDI 데이터 유출, 오라클 제로데이, AI 보안 경쟁, 사이버보안 인재 양성 등",
+    "keywords": "데이터 유출, 제로데이, AI 보안, 사이버보안, 인재 양성, 공격 표면 관리, 보안 교육, 취약점, 침해 사고, 보안 기술"
   },
   "sections": [
     {
@@ -15,11 +15,74 @@
       "type": "cards",
       "items": [
         {
+          "severity": "critical",
+          "source": "Security Affairs",
+          "headline": "NAIC, 오라클 제로데이로 3.1TB 데이터 유출",
+          "url": "https://www.dailysecu.com/news/articleView.html?idxno=207353",
+          "summary": "미국 보험 감독 기관 NAIC은 오라클 피플소프트 제로데이 취약점을 악용한 해킹으로 3.1TB의 데이터가 유출됐다고 발표했다. 공격자는 내부 자료를 탈취하고 이를 온라인에 공개했다."
+        },
+        {
           "severity": "high",
+          "source": "Security Affairs",
+          "headline": "AryStinger 악성코드, 4,000대 라우터 해킹",
+          "url": "https://securityaffairs.com/194383/malware/security-affairs-malware-newsletter-round-103.html",
+          "summary": "AryStinger 악성코드가 4,000대 이상의 라우터를 해킹해 글로벌 공격 프록시로 악용되고 있다. 이는 주요 인프라에 심각한 영향을 줄 수 있는 사례이다."
+        },
+        {
+          "severity": "medium",
+          "source": "DailySecu",
+          "headline": "KDDI, 1420만 이메일 계정 유출 사고",
+          "url": "https://www.dailysecu.com/news/articleView.html?idxno=207354",
+          "summary": "KDDI는 제3자 소프트웨어의 취약점을 악용한 해킹으로 1420만 개의 이메일 계정이 유출됐다고 발표했다. 이는 일본의 주요 ISP 6곳에 영향을 미쳤다."
+        }
+      ]
+    },
+    {
+      "label": "침해 사고",
+      "type": "cards",
+      "items": [
+        {
+          "severity": "incident",
+          "source": "DailySecu",
+          "headline": "NAIC, 오라클 제로데이로 3.1TB 데이터 유출",
+          "url": "https://www.dailysecu.com/news/articleView.html?idxno=207353",
+          "summary": "미국 보험 감독 기관 NAIC은 오라클 피플소프트 제로데이 취약점을 악용한 해킹으로 3.1TB의 데이터가 유출됐다고 발표했다. 공격자는 내부 자료를 탈취하고 이를 온라인에 공개했다."
+        },
+        {
+          "severity": "incident",
           "source": "The Hacker News",
-          "headline": "러시아 정보기관, 우크라이나 메시징 계정 해킹 — 가짜 지원 텍스트로 자격 증명 도용",
+          "headline": "우크라이나, 러시아 정보기관의 페이크 지원 텍스트로 메시지 자격 증명 도용",
           "url": "https://thehackernews.com/2026/06/ukraine-says-russian-intelligence-used.html",
-          "summary": "러시아 정보기관이 가짜 지원 텍스트를 통해 우크라이나 정부 및 군인의 메시징 계정 자격 증명을 도용한 것으로 드러났다. 미국 FBI와 협력해 이 캠페인을 조사 중이며, 이는 중요한 인프라에 대한 광범위한 영향을 미칠 수 있다."
+          "summary": "우크라이나 보안 서비스는 러시아 정보기관이 페이크 지원 텍스트를 사용해 정부 및 군 관계자들의 메시지 자격 증명을 도용한 캠페인을 발각했다."
+        },
+        {
+          "severity": "incident",
+          "source": "Security Affairs",
+          "headline": "러시아 정보기관, Signal 복구 키를 악용해 메시지 액세스",
+          "url": "https://securityaffairs.com/194360/intelligence/new-fbi-alert-russian-intelligence-uses-signal-recovery-keys-to-access-messages.html",
+          "summary": "FBI는 러시아 정보기관이 Signal 복구 키를 악용해 메시지 기록에 접근하고 장기적인 계정 해킹을 시도하고 있다고 경고했다."
+        }
+      ]
+    },
+    {
+      "label": "동향 & 분석",
+      "type": "trends",
+      "items": [
+        {
+          "lead": "AI 보안 기술의 급속한 발전",
+          "body": "오픈AI는 GPT-5.6 시리즈를 공개하며, AI가 소프트웨어 취약점을 탐지하고 보안 패치를 개발하는 능력을 크게 향상시켰다. 이는 AI 기반 보안 기술의 새로운 국면을 열고 있다."
+        },
+        {
+          "lead": "제로데이 공격의 증가",
+          "body": "오라클 제로데이 취약점이 악용된 사례가 증가하고 있으며, 이는 기존의 보안 패치가 적용되지 않은 시스템에 심각한 위협이 될 수 있다."
+        },
+        {
+          "lead": "사이버보안 인재 양성의 중요성",
+          "body": "시스코와 과기정통부는 사이버보안 인재 200명을 양성하기 위한 '버추얼 인턴십 2026' 프로그램을 운영하고 있다. 이는 보안 인력 부족 문제를 해결하기 위한 중요한 노력이다."
+        },
+        {
+          "lead": "AI 기반 공격 표면 관리",
+          "body": "금융보안원은 '아틀라스 ASM' 웹서비스를 통해 금융권의 외부 노출 자산을 실시간으로 관리하고 있다. AI 기술을 활용한 공격 표면 관리가 보안 전략의 핵심으로 부상하고 있다."
         }
       ]
     }
