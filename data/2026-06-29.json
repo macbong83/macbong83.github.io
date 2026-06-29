@@ -1,0 +1,27 @@
+{
+  "tagline": "글로벌 정보보안 뉴스레터",
+  "title": "보안 브리핑",
+  "date_display": "2026년 6월 29일 월요일",
+  "date_short": "2026.06.29",
+  "sources_line": "The Hacker News · BleepingComputer · SecurityWeek · KrebsOnSecurity · CISA · NCSC UK · Unit 42 · 보안뉴스 · 데일리시큐 · 전자신문",
+  "seo": {
+    "title": "러시아 정보기관, 우크라이나 메시징 계정 해킹 | 1400만 명 이메일 유출 | GPT-5.6 공개",
+    "description": "러시아 정보기관의 우크라이나 해킹, 1400만 명 이메일 유출, GPT-5.6 공개로 AI 보안 경쟁 심화",
+    "keywords": "러시아, 해킹, 이메일 유출, GPT-5.6, AI, 보안, 오픈AI, 우크라이나, 메시징, 취약점"
+  },
+  "sections": [
+    {
+      "label": "취약점 & 공격",
+      "type": "cards",
+      "items": [
+        {
+          "severity": "high",
+          "source": "The Hacker News",
+          "headline": "러시아 정보기관, 우크라이나 메시징 계정 해킹 — 가짜 지원 텍스트로 자격 증명 도용",
+          "url": "https://thehackernews.com/2026/06/ukraine-says-russian-intelligence-used.html",
+          "summary": "러시아 정보기관이 가짜 지원 텍스트를 통해 우크라이나 정부 및 군인의 메시징 계정 자격 증명을 도용한 것으로 드러났다. 미국 FBI와 협력해 이 캠페인을 조사 중이며, 이는 중요한 인프라에 대한 광범위한 영향을 미칠 수 있다."
+        }
+      ]
+    }
+  ]
+}
