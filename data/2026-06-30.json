@@ -1,0 +1,104 @@
+{
+  "tagline": "글로벌 정보보안 뉴스레터",
+  "title": "보안 브리핑",
+  "date_display": "2026년 6월 30일 화요일",
+  "date_short": "2026.06.30",
+  "sources_line": "The Hacker News · BleepingComputer · SecurityWeek · KrebsOnSecurity · CISA · NCSC UK · Unit 42 · 보안뉴스 · 데일리시큐 · 전자신문",
+  "seo": {
+    "title": "2026년 6월 30일 주요 보안 이슈: 취약점, 침해사고, AI 보안 동향 | SecuLog",
+    "description": "2026년 6월 30일 주요 보안 이슈 요약: 취약점 공격, 데이터 유출 사고, AI 보안 동향 분석",
+    "keywords": "취약점, 침해사고, AI 보안, 데이터 유출, 클라우드 보안, 보안 패치, 랜섬웨어, 보안 인증, 보안 인사이트, 보안 기술"
+  },
+  "sections": [
+    {
+      "label": "취약점 & 공격",
+      "type": "cards",
+      "items": [
+        {
+          "severity": "critical",
+          "source": "The Hacker News",
+          "headline": "Malicious Perplexity Chrome Extension Intercepted Searches and Address Bar Input",
+          "url": "https://thehackernews.com/2026/06/malicious-perplexity-chrome-extension.html",
+          "summary": "Microsoft has found a malicious Chrome extension that posed as the AI search engine Perplexity and quietly logged what people searched for. It routed every query and every character typed into the address bar through an attacker-controlled server before redirecting users to real results."
+        },
+        {
+          "severity": "high",
+          "source": "The Hacker News",
+          "headline": "Mustang Panda Uses Zoho WorkDrive as Command Channel in Indian Government Attacks",
+          "url": "https://thehackernews.com/2026/06/mustang-panda-uses-zoho-workdrive-as.html",
+          "summary": "The China-aligned espionage group Mustang Panda is running two campaigns against the Indian government and hydropower targets, deploying new malware and turning a legitimate cloud service into its command channel."
+        },
+        {
+          "severity": "high",
+          "source": "The Hacker News",
+          "headline": "Public PoC Released for Critical libssh2 CVE-2026-55200 Client-Side SSH Flaw",
+          "url": "https://thehackernews.com/2026/06/public-poc-released-for-critical.html",
+          "summary": "A public proof-of-concept is now out for CVE-2026-55200, a critical flaw in libssh2 that lets a malicious or compromised SSH server trigger memory corruption on a connecting client, with possible code execution."
+        },
+        {
+          "severity": "medium",
+          "source": "The Hacker News",
+          "headline": "Microsoft Removes 119 Edge Extensions That Hid Malware in Images and Fonts",
+          "url": "https://thehackernews.com/2026/06/microsoft-removes-119-edge-extensions.html",
+          "summary": "Microsoft has shut down a long-running malicious extension operation on the Edge Add-ons store that hid its payloads inside ordinary image and font files, then woke up days after install to steal credentials and run ad fraud."
+        },
+        {
+          "severity": "medium",
+          "source": "The Hacker News",
+          "headline": "Hijacked npm and Go Packages Use VS Code Tasks to Deploy Python Infostealer",
+          "url": "https://thehackernews.com/2026/06/hijacked-npm-and-go-packages-use-vs.html",
+          "summary": "Cybersecurity researchers have uncovered two hijacked npm packages and a cluster of Go packages that are designed to deploy a Python-based information stealer on compromised Windows, Linux, and macOS hosts."
+        }
+      ]
+    },
+    {
+      "label": "침해 사고",
+      "type": "cards",
+      "items": [
+        {
+          "severity": "incident",
+          "source": "데일리시큐",
+          "headline": "일본 KDDI, 이메일 계정 1,422만 건 유출…협력사 소프트웨어 취약점이 공격 시작점",
+          "url": "https://www.dailysecu.com/news/articleView.html?idxno=207363",
+          "summary": "일본 통신기업 KDDI가 운영하는 이메일 시스템이 사이버 공격을 받아 최대 1,422만 개의 이메일 계정 정보가 외부에 노출됐을 가능성이 확인됐다. 공격자는 KDDI가 사용하는 협력사 소프트웨어 취약점을 악용해 시스템에 침입한 것으로 조사됐다."
+        },
+        {
+          "severity": "incident",
+          "source": "데일리시큐",
+          "headline": "미 보험감독협회 해킹…샤이니헌터스 “오라클 제로데이로 3.1TB 탈취” 주장",
+          "url": "https://www.dailysecu.com/news/articleView.html?idxno=207353",
+          "summary": "미국 보험 규제의 중심 기관인 전미보험감독관협회(NAIC)가 오라클 피플소프트 제로데이 취약점을 악용한 해킹 공격으로 내부 자료를 탈취당했다. 공격 조직 샤이니헌터스(ShinyHunters)는 약 3.1TB 규모의 데이터를 빼냈다고 주장하고 관련 자료를 온라인에 공개했다."
+        },
+        {
+          "severity": "incident",
+          "source": "데일리시큐",
+          "headline": "[단독] 두산밥캣, 랜섬웨어 피해 의혹…3.27TB 내부자료 유출 주장",
+          "url": "https://www.ngetnews.com/news/articleView.html?idxno=551130",
+          "summary": "두산밥캣이 글로벌 랜섬웨어 조직의 공격을 받았다는 의혹이 제기됐다. 주장이 사실로 확인될 경우 제품 설계도와 재무자료, 공급망 정보, 임직원 개인정보 등 핵심 정보가 대규모로 외부에 유출된 사례가 될 수 있다는 우려가 나온다."
+        }
+      ]
+    },
+    {
+      "label": "동향 & 분석",
+      "type": "trends",
+      "items": [
+        {
+          "lead": "AI 기반 보안 위협 증가",
+          "body": "AI 기술이 발전하면서 보안 위협도 복잡해지고 있다. AI를 활용한 악성코드, 정보 유출, 인지 조작 등이 증가하고 있으며, 기존의 보안 방식으로는 대응이 어려워지고 있다."
+        },
+        {
+          "lead": "클라우드 서비스 악용 증가",
+          "body": "클라우드 서비스가 보편화되면서 공격자들이 정상적인 서비스를 악용해 지속적인 통제 채널을 구축하거나 악성코드를 전달하는 사례가 늘고 있다."
+        },
+        {
+          "lead": "보안 인증 기술의 중요성 강조",
+          "body": "보안 인증 기술이 기존의 비밀번호 기반 방식에서 AI 기반 인증으로 전환되고 있으며, 이는 보다 강력한 보안을 제공할 것으로 기대된다."
+        },
+        {
+          "lead": "AI 기반 보안 솔루션 확대",
+          "body": "AI 기술이 보안 분야에 적용되면서 보안 솔루션의 효율성이 크게 향상되고 있으며, 이는 보안 분야의 혁신을 이끌고 있다."
+        }
+      ]
+    }
+  ]
+}
