@@ -5,8 +5,8 @@
   "date_short": "2026.07.01",
   "sources_line": "The Hacker News · BleepingComputer · SecurityWeek · KrebsOnSecurity · CISA · NCSC UK · Unit 42 · 보안뉴스 · 데일리시큐 · 전자신문",
   "seo": {
-    "title": "AI 악용, 랜섬웨어 공격, 데이터 유출 등 주요 보안 이슈 (60자 이내)",
-    "description": "AI 기반 공격, 랜섬웨어, 데이터 유출 사고 등 주요 보안 이슈 요약 (150자 이내)",
+    "title": "Langflow·SimpleHelp RCE 악용, Aflac·Nissan 데이터 유출 — 7월 1일 보안 브리핑",
+    "description": "CVE-2026-33017 Langflow RCE, CVE-2026-48558 SimpleHelp 취약점 악용 사례와 Aflac Japan 438만 명 유출, Nissan 직원 데이터 침해 등 주요 보안 이슈 정리.",
     "keywords": "AI, 랜섬웨어, 데이터 유출, 취약점, 공격, 보안, CISA, 침해, 취약점 패치, 보안 분석"
   },
   "sections": [
