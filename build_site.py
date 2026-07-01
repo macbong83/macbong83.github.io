@@ -64,6 +64,9 @@ def preview_headlines(d, n=3):
 def build_posts(items):
     POSTS_DIR.mkdir(exist_ok=True)
     for slug, d in items:
+        if "sections" not in d:
+            print(f"  ⚠️  sections 없음, 스킵: {slug}")
+            continue
         (POSTS_DIR / f"{slug}.html").write_text(render(d), encoding="utf-8")
 
 

@@ -1,0 +1,55 @@
+{
+  "week_start": "2026-06-24",
+  "week_end": "2026-06-30",
+  "title": "이번 주 보안 벤더 동향",
+  "summary": "이번 주 보안 벤더들의 주요 포스트는 AI 기술의 보안 위험과 공급망 위협에 대한 경고가 중심이었다. 특히 Tenable은 AI 관련 보안 문제의 규모를 강조했으며, Prompt Security는 AI 브라우저의 기업 보안 위험을 분석했다.",
+  "highlights": [
+    {
+      "vendor": "SentinelOne",
+      "headline": "Cybersecurity Threats and AI Triage Challenges",
+      "url": "https://www.sentinelone.com/blog/the-good-the-bad-and-the-ugly-in-cybersecurity-week-26-7/",
+      "insight": "SentinelOne은 AI 기반의 보안 분석 시스템이 가짜 오류로 인해 오작동할 수 있음을 지적하며, AI 기술의 신뢰성에 대한 경고를 강조했다."
+    },
+    {
+      "vendor": "Tenable",
+      "headline": "AI Creates 457 Million Security Issues",
+      "url": "https://www.tenable.com/blog/how-much-cyber-risk-does-ai-create-for-organizations-457-million-security-issues-heres-what",
+      "insight": "Tenable은 AI 도구의 사용이 기업에 엄청난 보안 위험을 초래할 수 있음을 밝히며, 기업이 AI 관련 노출을 체계적으로 관리해야 함을 강조했다."
+    },
+    {
+      "vendor": "Tenable",
+      "headline": "Miasma Campaign Exposes Supply Chain Threats",
+      "url": "https://www.tenable.com/blog/what-the-miasma-campaign-reveals-about-the-new-supply-chain-threat-model-and-the-underground",
+      "insight": "Miasma 캠페인은 공급망 공격의 새로운 모델을 보여주며, 개발자 자격 증명의 해킹이 공급망 위협의 핵심 요소임을 드러냈다."
+    },
+    {
+      "vendor": "Prompt Security",
+      "headline": "AI Browsers Pose Enterprise Security Risks",
+      "url": "https://prompt.security/blog/why-ai-browsers-create-a-new-unavoidable-security-risk",
+      "insight": "AI 브라우저는 프롬프트 삽입과 자율적 행동으로 인해 기업에 피할 수 없는 보안 위험을 초래할 수 있음을 지적했다."
+    },
+    {
+      "vendor": "Prompt Security",
+      "headline": "ChatGPT Security Risks and Guidance",
+      "url": "https://prompt.security/blog/chatgpt-security-guide-enterprise-risks-incidents-and-practitioner-guidance",
+      "insight": "Prompt Security은 ChatGPT의 데이터 처리 방식과 API 위험에 대한 기업 보안팀의 주의가 필요함을 강조했다."
+    }
+  ],
+  "trends": [
+    {
+      "lead": "AI Security Risks",
+      "body": "AI 기술의 확산은 보안 위험을 증가시키고 있으며, 기업은 AI 도구의 사용을 체계적으로 관리해야 한다는 공통된 인식이 나타났다."
+    },
+    {
+      "lead": "Supply Chain Threats",
+      "body": "공급망 공격의 복잡성과 위협 수준이 증가하고 있으며, 개발자 자격 증명의 해킹이 공급망 공격의 새로운 패턴으로 부상하고 있다."
+    }
+  ],
+  "seo": {
+    "title": "2026년 6월 보안 벤더 동향: AI와 공급망 위협 분석",
+    "description": "이번 주 보안 벤더들의 주요 동향을 살펴보면 AI 기술의 보안 위험과 공급망 공격의 새로운 패턴이 주목받고 있습니다.",
+    "keywords": "AI 보안, 공급망 위협, 보안 벤더, Tenable, SentinelOne, Prompt Security, ChatGPT, 공급망 공격, 보안 위험, AI 브라우저"
+  },
+  "slug": "vendor-weekly-2026-06-30",
+  "type": "vendor-weekly"
+}

@@ -1,0 +1,111 @@
+{
+  "tagline": "글로벌 정보보안 뉴스레터",
+  "title": "보안 브리핑",
+  "date_display": "2026년 7월 1일 수요일",
+  "date_short": "2026.07.01",
+  "sources_line": "The Hacker News · BleepingComputer · SecurityWeek · KrebsOnSecurity · CISA · NCSC UK · Unit 42 · 보안뉴스 · 데일리시큐 · 전자신문",
+  "seo": {
+    "title": "AI 악용, 랜섬웨어 공격, 데이터 유출 등 주요 보안 이슈 (60자 이내)",
+    "description": "AI 기반 공격, 랜섬웨어, 데이터 유출 사고 등 주요 보안 이슈 요약 (150자 이내)",
+    "keywords": "AI, 랜섬웨어, 데이터 유출, 취약점, 공격, 보안, CISA, 침해, 취약점 패치, 보안 분석"
+  },
+  "sections": [
+    {
+      "label": "취약점 & 공격",
+      "type": "cards",
+      "items": [
+        {
+          "severity": "critical",
+          "source": "The Hacker News",
+          "headline": "Langflow RCE 취약점(CVE-2026-33017)을 악용한 Monero 마이너 배포",
+          "url": "https://thehackernews.com/2026/06/langflow-rce-exploited-to-deploy-monero.html",
+          "summary": "Langflow의 RCE 취약점(CVE-2026-33017, CVSS 9.3)이 악용되어 Monero 마이너가 배포되고 있다. 이 취약점은 인증 없이 원격 코드 실행이 가능하며, 주요 인프라에 영향을 줄 수 있다."
+        },
+        {
+          "severity": "critical",
+          "source": "The Hacker News",
+          "headline": "SimpleHelp 취약점(CVE-2026-48558)을 악용한 TaskWeaver 및 Djinn Stealer 배포",
+          "url": "https://thehackernews.com/2026/06/attackers-exploit-simplehelp-cve-2026.html",
+          "summary": "CISA가 알려진 취약점인 SimpleHelp의 CVE-2026-48558(CVSS 10.0)이 악용되어 TaskWeaver 및 Djinn Stealer가 배포되고 있다. 이 취약점은 인증 없이 원격 코드 실행이 가능하다."
+        },
+        {
+          "severity": "critical",
+          "source": "The Hacker News",
+          "headline": "Progress Kemp LoadMaster의 RCE 취약점(CVE-2026-8037) 악용",
+          "url": "https://thehackernews.com/2026/06/progress-kemp-loadmaster-flaw-could-let.html",
+          "summary": "Progress Kemp LoadMaster의 RCE 취약점(CVE-2026-8037, CVSS 9.8)이 악용되어 공격자가 인증 없이 원격 코드 실행이 가능하다. 이 취약점은 네트워크 장비에 심각한 영향을 줄 수 있다."
+        },
+        {
+          "severity": "high",
+          "source": "The Hacker News",
+          "headline": "RustDuck 봇넷이 라우터 및 서버를 해킹해 DDoS 공격 수행",
+          "url": "https://thehackernews.com/2026/06/rustduck-botnet-rebuilds-in-rust-to.html",
+          "summary": "RustDuck 봇넷은 라우터, IP 카메라, 서버 등을 해킹해 DDoS 공격을 수행하고 있다. 이 봇넷은 Rust로 재구성되어 있으며, 실제 악용 사례가 확인되었다."
+        },
+        {
+          "severity": "high",
+          "source": "The Hacker News",
+          "headline": "Oracle E-Business Suite 취약점(CVE-2026-46817)이 악용되어 공격 수행",
+          "url": "https://thehackernews.com/2026/06/oracle-e-business-suite-flaw-cve-2026.html",
+          "summary": "Oracle E-Business Suite의 취약점(CVE-2026-46817, CVSS 9.8)이 악용되어 공격자가 인증 없이 시스템을 조작할 수 있다. 이 취약점은 주요 인프라에 영향을 줄 수 있다."
+        },
+        {
+          "severity": "medium",
+          "source": "The Hacker News",
+          "headline": "Microsoft MCP 도구 설명을 악용한 AI 에이전트 데이터 유출",
+          "url": "https://thehackernews.com/2026/06/microsoft-warns-poisoned-mcp-tool.html",
+          "summary": "Microsoft는 MCP 도구 설명을 악용해 AI 에이전트가 데이터를 유출할 수 있다고 경고했다. 이 취약점은 인증 없이 데이터 유출이 가능하며, 패치가 권장된다."
+        }
+      ]
+    },
+    {
+      "label": "침해 사고",
+      "type": "cards",
+      "items": [
+        {
+          "severity": "incident",
+          "source": "SecurityWeek",
+          "headline": "Aflac Japan 데이터 유출 사고, 438만 명 영향",
+          "url": "https://www.securityweek.com/aflac-japan-data-breach-impacts-4-38-million/",
+          "summary": "Aflac Japan은 6월 15일부터 25일까지 시스템에 접근한 해커에 의해 438만 명의 고객 데이터가 유출되었다. 이 사고는 주요 보안 사고로 분류된다."
+        },
+        {
+          "severity": "incident",
+          "source": "SecurityWeek",
+          "headline": "Nissan 직원 데이터 유출, Oracle PeopleSoft 해킹으로 발생",
+          "url": "https://www.securityweek.com/nissan-employee-data-breached-in-oracle-peoplesoft-hack/",
+          "summary": "Oracle PeopleSoft 해킹으로 인해 Nissan의 직원 데이터가 유출되었다. 이 사고는 주요 기업의 데이터 보안에 심각한 영향을 주었다."
+        },
+        {
+          "severity": "incident",
+          "source": "SecurityWeek",
+          "headline": "BlueHammer 취약점(CVE-2026-33825)을 악용한 랜섬웨어 공격 발생",
+          "url": "https://www.securityweek.com/bluehammer-vulnerability-exploited-in-ransomware-attacks/",
+          "summary": "Microsoft Defender의 취약점(CVE-2026-33825)이 제로데이로 악용되어 랜섬웨어 공격이 발생했다. 이 사고는 심각한 보안 사고로 분류된다."
+        }
+      ]
+    },
+    {
+      "label": "동향 & 분석",
+      "type": "trends",
+      "items": [
+        {
+          "lead": "AI 기반 공격 증가",
+          "body": "AI 기반의 공격이 급증하고 있으며, AI 도구를 악용한 취약점 공격, 봇넷, 데이터 유출 등이 주요 이슈로 대두되고 있다."
+        },
+        {
+          "lead": "취약점 패치 지연",
+          "body": "취약점이 공개된 후 패치가 지연되거나 악용되는 사례가 늘고 있으며, 이는 보안 대응의 중요성을 강조한다."
+        },
+        {
+          "lead": "랜섬웨어 공격 확산",
+          "body": "랜섬웨어 공격이 다양한 취약점을 악용해 확산되고 있으며, 특히 제로데이 취약점이 주요 공격 경로로 사용되고 있다."
+        },
+        {
+          "lead": "데이터 유출 사고 증가",
+          "body": "데이터 유출 사고가 증가하며, 기업의 보안 대응 체계가 시급하게 요구되고 있다. 특히 인증 취약점이 주요 원인으로 작용하고 있다."
+        }
+      ]
+    }
+  ]
+}

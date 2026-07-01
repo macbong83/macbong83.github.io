@@ -19,3 +19,9 @@ echo "[3/3] 푸시 → GitHub Pages 자동 배포..."
 git push
 
 echo "✅ 발행 완료. 1분 내 사이트에 반영됩니다."
+
+echo "[4/3] Tistory 보안 브리핑 발행..."
+DATE=$(date +%Y-%m-%d)
+/Users/felix_mac/.hermes/hermes-agent/venv/bin/python3 \
+  /Users/felix_mac/crawlers/tistory_publish.py \
+  --date "$DATE" --category 845064 || echo "⚠️ Tistory 발행 실패 (GitHub Pages는 정상)"

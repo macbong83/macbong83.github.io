@@ -5,13 +5,27 @@
     <link>https://macbong83.github.io/</link>
     <description>EDR · SASE · CTEM · 취약점 관리 중심의 매일 보안 브리핑</description>
     <language>ko</language>
-    <lastBuildDate>Tue, 30 Jun 2026 09:08:41 +0900</lastBuildDate>
+    <lastBuildDate>Wed, 01 Jul 2026 09:32:50 +0900</lastBuildDate>
+    <item>
+      <title>SecuLog 보안 브리핑 — vendor-weekly-2026-06-30</title>
+      <link>https://macbong83.github.io/posts/vendor-weekly-2026-06-30.html</link>
+      <guid isPermaLink="true">https://macbong83.github.io/posts/vendor-weekly-2026-06-30.html</guid>
+      <pubDate>Wed, 01 Jul 2026 09:32:50 +0900</pubDate>
+      <description></description>
+    </item>
+    <item>
+      <title>SecuLog 보안 브리핑 — 2026.07.01</title>
+      <link>https://macbong83.github.io/posts/2026-07-01.html</link>
+      <guid isPermaLink="true">https://macbong83.github.io/posts/2026-07-01.html</guid>
+      <pubDate>Wed, 01 Jul 2026 08:00:00 +0900</pubDate>
+      <description>Langflow RCE 취약점(CVE-2026-33017)을 악용한 Monero 마이너 배포 / SimpleHelp 취약점(CVE-2026-48558)을 악용한 TaskWeaver 및 Djinn Stealer 배포 / Progress Kemp LoadMaster의 RCE 취약점(CVE-2026-8037) 악용 / RustDuck 봇넷이 라우터 및 서버를 해킹해 DDoS 공격 수행</description>
+    </item>
     <item>
       <title>SecuLog 보안 브리핑 — 2026.06.30</title>
       <link>https://macbong83.github.io/posts/2026-06-30.html</link>
       <guid isPermaLink="true">https://macbong83.github.io/posts/2026-06-30.html</guid>
       <pubDate>Tue, 30 Jun 2026 08:00:00 +0900</pubDate>
-      <description>Malicious Perplexity Chrome Extension Intercepted Searches and Address Bar Input / Mustang Panda Uses Zoho WorkDrive as Command Channel in Indian Government Attacks / Public PoC Released for Critical libssh2 CVE-2026-55200 Client-Side SSH Flaw / Microsoft Removes 119 Edge Extensions That Hid Malware in Images and Fonts</description>
+      <description>악성 크롬 확장 프로그램, 사용자 검색 정보 수집 / Mustang Panda, 인도 정부 공격 위해 Zoho WorkDrive 악용 / CVE-2026-55200: libssh2 클라이언트 측 SSH 취약점 / 236,000개의 DCloud Uni-App 사이트, 암호화폐 사기 및 피싱 사용</description>
     </item>
     <item>
       <title>SecuLog 보안 브리핑 — 2026.06.29</title>
