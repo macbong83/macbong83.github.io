@@ -5,12 +5,12 @@
     <link>https://macbong83.github.io/</link>
     <description>EDR · SASE · CTEM · 취약점 관리 중심의 매일 보안 브리핑</description>
     <language>ko</language>
-    <lastBuildDate>Thu, 02 Jul 2026 09:13:53 +0900</lastBuildDate>
+    <lastBuildDate>Thu, 02 Jul 2026 09:19:30 +0900</lastBuildDate>
     <item>
       <title>SecuLog 보안 브리핑 — vendor-weekly-2026-06-30</title>
       <link>https://macbong83.github.io/posts/vendor-weekly-2026-06-30.html</link>
       <guid isPermaLink="true">https://macbong83.github.io/posts/vendor-weekly-2026-06-30.html</guid>
-      <pubDate>Thu, 02 Jul 2026 09:13:53 +0900</pubDate>
+      <pubDate>Thu, 02 Jul 2026 09:19:30 +0900</pubDate>
       <description></description>
     </item>
     <item>
@@ -18,7 +18,7 @@
       <link>https://macbong83.github.io/posts/2026-07-02.html</link>
       <guid isPermaLink="true">https://macbong83.github.io/posts/2026-07-02.html</guid>
       <pubDate>Thu, 02 Jul 2026 08:00:00 +0900</pubDate>
-      <description>CVE-2026-XXXXX 제로데이 악용으로 대규모 랜섬웨어 공격 발생 — 2026년 7월 2일 / CVE-2026-XXXXX 악용으로 주요 인프라 대규모 침해 — 2026년 7월 2일 / CVE-2026-XXXXX 취약점 패치 권고 — 2026년 7월 2일 / CVE-2026-XXXXX 악용으로 10개 기관 데이터 유출 사고 발생 — 2026년 7월 2일</description>
+      <description>Argo CD repo-server 취약점으로 Kubernetes 클러스터 해킹 가능성 / Oracle E-Business Suite 취약점 CVE-2026-46817 악용 증가 / Cursor AI 코드 편집기 취약점으로 코드 실행 가능 / Progress Kemp LoadMaster Pre-Auth RCE 취약점 악용 증가</description>
     </item>
     <item>
       <title>SecuLog 보안 브리핑 — 2026.07.01</title>
