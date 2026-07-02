@@ -172,6 +172,14 @@ def render(data: dict) -> str:
 <meta name="twitter:description" content="{esc(seo_desc)}">
 <link rel="canonical" href="{esc(og_url)}">
 <style>{CSS}</style>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-6B7GS688HP"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){{dataLayer.push(arguments);}}
+  gtag('js', new Date());
+  gtag('config', 'G-6B7GS688HP');
+</script>
 </head>
 <body>
 <div class="wrapper">
