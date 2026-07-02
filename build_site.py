@@ -111,14 +111,6 @@ def build_index(items):
 <meta name="description" content="{esc(SITE_DESC)}">
 <link rel="alternate" type="application/rss+xml" title="{esc(SITE_TITLE)}" href="{SITE_URL}/feed.xml">
 <style>{CSS}{INDEX_EXTRA_CSS}</style>
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-6B7GS688HP"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){{dataLayer.push(arguments);}}
-  gtag('js', new Date());
-  gtag('config', 'G-6B7GS688HP');
-</script>
 </head>
 <body>
   <div class="site-head">
