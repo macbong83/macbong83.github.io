@@ -191,7 +191,6 @@ def render(data: dict) -> str:
   <div class="footer">
     <div>출처: {esc(data.get("sources_line", ""))}</div>
     <div class="footer-meta">
-      <a class="linkedin-link" href="{esc(LINKEDIN_URL)}" target="_blank" rel="noopener noreferrer">LinkedIn</a>
       <span>© 2026 {esc(AUTHOR)} · {esc(BRAND_MAIN + BRAND_ACCENT)}. 본 브리핑은 공개된 보안 뉴스를 기반으로 작성되었습니다.</span>
     </div>
   </div>

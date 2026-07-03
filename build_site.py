@@ -120,7 +120,6 @@ def build_index(items):
     </div>
     <div class="site-actions">
       <a class="rss-link" href="{SITE_URL}/feed.xml">RSS 구독</a>
-      <a class="site-linkedin" href="{esc(LINKEDIN_URL)}" target="_blank" rel="noopener noreferrer">LinkedIn</a>
     </div>
   </div>
   <div class="archive">

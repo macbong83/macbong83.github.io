@@ -10,15 +10,13 @@ python3 build_site.py
 echo "[2/3] 변경사항 커밋..."
 git add -A
 if git diff --cached --quiet; then
-  echo "변경된 내용이 없습니다. 종료."
-  exit 0
+  echo "변경된 내용 없음 — GitHub 푸시 스킵 (Tistory 단계는 계속 진행)"
+else
+  git commit -m "brief: $(date +%F)"
+  echo "[3/3] 푸시 → GitHub Pages 자동 배포..."
+  git push
+  echo "✅ GitHub 발행 완료. 1분 내 사이트에 반영됩니다."
 fi
-git commit -m "brief: $(date +%F)"
-
-echo "[3/3] 푸시 → GitHub Pages 자동 배포..."
-git push
-
-echo "✅ 발행 완료. 1분 내 사이트에 반영됩니다."
 
 echo "[4/3] Tistory 보안 브리핑 발행..."
 DATE=$(date +%Y-%m-%d)
