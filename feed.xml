@@ -5,13 +5,27 @@
     <link>https://macbong83.github.io/</link>
     <description>EDR · SASE · CTEM · 취약점 관리 중심의 매일 보안 브리핑</description>
     <language>ko</language>
-    <lastBuildDate>Fri, 03 Jul 2026 09:39:03 +0900</lastBuildDate>
+    <lastBuildDate>Sun, 05 Jul 2026 09:03:02 +0900</lastBuildDate>
     <item>
       <title>SecuLog 보안 브리핑 — vendor-weekly-2026-06-30</title>
       <link>https://macbong83.github.io/posts/vendor-weekly-2026-06-30.html</link>
       <guid isPermaLink="true">https://macbong83.github.io/posts/vendor-weekly-2026-06-30.html</guid>
-      <pubDate>Fri, 03 Jul 2026 09:39:03 +0900</pubDate>
+      <pubDate>Sun, 05 Jul 2026 09:03:02 +0900</pubDate>
       <description></description>
+    </item>
+    <item>
+      <title>SecuLog 보안 브리핑 — 2026.07.05</title>
+      <link>https://macbong83.github.io/posts/2026-07-05.html</link>
+      <guid isPermaLink="true">https://macbong83.github.io/posts/2026-07-05.html</guid>
+      <pubDate>Sun, 05 Jul 2026 08:00:00 +0900</pubDate>
+      <description>Linux 커널 &#x27;Bad Epoll&#x27; 취약점(CVE-2026-46242) 악용 시 루트 권한 획득 가능 / FatFs 파일시스템 라이브러리 7개 취약점 공개 / Avalon 악성코드 프레임워크, CrownX 랜섬웨어 기능 포함 / North Korea 연계 npm 패키지, 개발자 비밀 유출 목적</description>
+    </item>
+    <item>
+      <title>SecuLog 보안 브리핑 — 2026.07.04</title>
+      <link>https://macbong83.github.io/posts/2026-07-04.html</link>
+      <guid isPermaLink="true">https://macbong83.github.io/posts/2026-07-04.html</guid>
+      <pubDate>Sat, 04 Jul 2026 08:00:00 +0900</pubDate>
+      <description>수백만 대의 임베디드 장치에 포함된 파일시스템의 취약점 공개 / Linux 커널 &#x27;Bad Epoll&#x27; 취약점으로 일반 사용자가 루트 권한 획득 가능 / CrownX 랜섬웨어 기능을 포함한 새로운 Avalon 악성코드 프레임워크 발견 / 북한 관련 npm 패키지가 개발자 비밀 정보 유출 목적의 Rollup 폴리필로 위장</description>
     </item>
     <item>
       <title>SecuLog 보안 브리핑 — 2026.07.03</title>

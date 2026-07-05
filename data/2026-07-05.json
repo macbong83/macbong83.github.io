@@ -1,0 +1,104 @@
+{
+  "tagline": "글로벌 정보보안 뉴스레터",
+  "title": "보안 브리핑",
+  "date_display": "2026년 7월 5일 일요일",
+  "date_short": "2026.07.05",
+  "sources_line": "The Hacker News · BleepingComputer · SecurityWeek · KrebsOnSecurity · CISA · NCSC UK · Unit 42 · 보안뉴스 · 데일리시큐 · 전자신문",
+  "seo": {
+    "title": "CVE-2026-XXXXX 악용·랜섬웨어 급증 — 2026.07.05 보안 브리핑",
+    "description": "오늘 주요 취약점·침해 사고·위협 트렌드 요약.",
+    "keywords": "CVE, 랜섬웨어, 취약점, 침해사고, 보안"
+  },
+  "sections": [
+    {
+      "label": "취약점 & 공격",
+      "type": "cards",
+      "items": [
+        {
+          "severity": "critical",
+          "source": "The Hacker News",
+          "headline": "Linux 커널 'Bad Epoll' 취약점(CVE-2026-46242) 악용 시 루트 권한 획득 가능",
+          "url": "https://thehackernews.com/2026/07/new-bad-epoll-linux-kernel-flaw-lets.html",
+          "summary": "CVE-2026-46242 취약점은 Linux 커널의 epoll 기능에 존재하며, 일반 사용자가 루트 권한을 얻을 수 있다. Android 및 서버, 데스크톱 모두 영향을 받고 패치가 제공되었다."
+        },
+        {
+          "severity": "high",
+          "source": "The Hacker News",
+          "headline": "FatFs 파일시스템 라이브러리 7개 취약점 공개",
+          "url": "https://thehackernews.com/2026/07/unpatched-flaws-disclosed-in-filesystem.html",
+          "summary": "FatFs 라이브러리의 7개 취약점이 공개되었으며, 이는 수백만 대의 임베디드 장치에 영향을 줄 수 있다. 패치가 권고되고 있다."
+        },
+        {
+          "severity": "high",
+          "source": "The Hacker News",
+          "headline": "Avalon 악성코드 프레임워크, CrownX 랜섬웨어 기능 포함",
+          "url": "https://thehackernews.com/2026/07/new-avalon-malware-framework-packs.html",
+          "summary": "Avalon 악성코드 프레임워크는 다단계 피싱 체인을 통해 전통적인 보안 조치를 우회하고, CrownX 랜섬웨어 기능을 포함하고 있다."
+        },
+        {
+          "severity": "medium",
+          "source": "The Hacker News",
+          "headline": "North Korea 연계 npm 패키지, 개발자 비밀 유출 목적",
+          "url": "https://thehackernews.com/2026/07/north-korea-linked-npm-packages-mimic.html",
+          "summary": "북한과 연계된 악성 npm 패키지가 Rollup 폴리필 도구로 위장하여 개발자 비밀을 유출하고 있다. JFrog에서 관련 패키지를 확인했다."
+        },
+        {
+          "severity": "medium",
+          "source": "The Hacker News",
+          "headline": "PolinRider 캠페인으로 108개 악성 패키지 및 확장 프로그램 배포",
+          "url": "https://thehackernews.com/2026/07/north-korean-hackers-publish-108.html",
+          "summary": "북한 해커 그룹이 PolinRider 캠페인으로 npm, Packagist, Go, Google Chrome 등에 108개 악성 패키지 및 확장 프로그램을 배포하고 있다."
+        }
+      ]
+    },
+    {
+      "label": "침해 사고",
+      "type": "cards",
+      "items": [
+        {
+          "severity": "incident",
+          "source": "The Hacker News",
+          "headline": "미국 정부 기관, Kairos 그룹에 100만 달러 지불",
+          "url": "https://thehackernews.com/2026/07/us-government-entity-paid-kairos-group.html",
+          "summary": "미국 정부 기관이 데이터 유출을 방지하기 위해 Kairos 그룹에 100만 달러를 지불한 사건이 발생했다. 이 그룹은 랜섬웨어보다 데이터 유출 및 강요에 집중하고 있다."
+        },
+        {
+          "severity": "incident",
+          "source": "Security Affairs",
+          "headline": "TeamPCP, 개발 도구 해킹으로 클라우드 자격 증명 도난",
+          "url": "https://securityaffairs.com/194741/cyber-crime/fbi-teampcp-compromised-dev-tools-to-steal-cloud-credentials.html",
+          "summary": "TeamPCP 그룹은 신뢰된 개발 도구를 해킹하여 클라우드 자격 증명을 도난하고, 소프트웨어 업데이트를 통해 악성코드를 유포하며 피해자를 강요하고 있다."
+        },
+        {
+          "severity": "incident",
+          "source": "Security Affairs",
+          "headline": "Pegasus 스파이웨어, MEP 조사자 대상으로 사용",
+          "url": "https://securityaffairs.com/194728/malware/pegasus-used-against-mep-investigating-pegasus-citizen-lab-finds.html",
+          "summary": "Citizen Lab 보고서에 따르면, 이전 유럽 의회 의원이 Pegasus 스파이웨어로 해킹되었으며, 그는 Pegasus의 사용을 조사하고 있었다."
+        }
+      ]
+    },
+    {
+      "label": "동향 & 분석",
+      "type": "trends",
+      "items": [
+        {
+          "lead": "랜섬웨어 및 데이터 강요 사례 증가",
+          "body": "최근 미국 정부 기관이 Kairos 그룹에 100만 달러를 지불한 사건과 TeamPCP의 클라우드 자격 증명 도난 사례 등 랜섬웨어 및 데이터 강요 사례가 증가하고 있다."
+        },
+        {
+          "lead": "AI 기반 악성코드 증가",
+          "body": "AI 기반의 악성코드 및 스파이웨어가 증가하고 있으며, 특히 North Korea와 연계된 악성 npm 패키지와 같은 AI 기술이 악용되고 있다."
+        },
+        {
+          "lead": "취약점 패치 지연",
+          "body": "Linux 커널의 'Bad Epoll' 취약점과 FatFs 라이브러리의 취약점 등이 공개되었으나, 패치 지연으로 인해 많은 시스템이 위험에 노출되고 있다."
+        },
+        {
+          "lead": "국제적 해킹 그룹 활동 증가",
+          "body": "TeamPCP, Armored Likho, North Korea 연계 그룹 등 국제적 해킹 그룹의 활동이 증가하고 있으며, 정부 및 전력 부문을 포함한 다양한 목표를 공격하고 있다."
+        }
+      ]
+    }
+  ]
+}

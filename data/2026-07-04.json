@@ -1,0 +1,111 @@
+{
+  "tagline": "글로벌 정보보안 뉴스레터",
+  "title": "보안 브리핑",
+  "date_display": "2026년 7월 4일 토요일",
+  "date_short": "2026.07.04",
+  "sources_line": "The Hacker News · BleepingComputer · SecurityWeek · KrebsOnSecurity · CISA · NCSC UK · Unit 42 · 보안뉴스 · 데일리시큐 · 전자신문",
+  "seo": {
+    "title": "CVE-2026-XXXXX 악용·랜섬웨어 급증 — 2026.07.04 보안 브리핑",
+    "description": "오늘 주요 취약점·침해 사고·위협 트렌드 요약.",
+    "keywords": "CVE, 랜섬웨어, 취약점, 침해사고, 보안"
+  },
+  "sections": [
+    {
+      "label": "취약점 & 공격",
+      "type": "cards",
+      "items": [
+        {
+          "severity": "critical",
+          "source": "The Hacker News",
+          "headline": "수백만 대의 임베디드 장치에 포함된 파일시스템의 취약점 공개",
+          "url": "https://thehackernews.com/2026/07/unpatched-flaws-disclosed-in-filesystem.html",
+          "summary": "보안 회사 runZero는 수많은 임베디드 장치에 포함된 FatFs 파일시스템 라이브러리의 7개 취약점을 공개했다. 이 취약점은 USB 드라이브 및 SD 카드의 FAT 및 exFAT 포맷을 읽고 쓰는 데 사용되며, 패치가 제공되지 않았다."
+        },
+        {
+          "severity": "critical",
+          "source": "The Hacker News",
+          "headline": "Linux 커널 'Bad Epoll' 취약점으로 일반 사용자가 루트 권한 획득 가능",
+          "url": "https://thehackernews.com/2026/07/new-bad-epoll-linux-kernel-flaw-lets.html",
+          "summary": "CVE-2026-46242 취약점인 'Bad Epoll'은 Linux 데스크탑, 서버, 안드로이드에서 일반 사용자가 루트 권한을 얻는 데 사용될 수 있다. 이 취약점은 커널 코드의 작은 부분에서 발생하며, 패치가 제공되었다."
+        },
+        {
+          "severity": "high",
+          "source": "The Hacker News",
+          "headline": "CrownX 랜섬웨어 기능을 포함한 새로운 Avalon 악성코드 프레임워크 발견",
+          "url": "https://thehackernews.com/2026/07/new-avalon-malware-framework-packs.html",
+          "summary": "보안 연구원들은 다단계 피싱 체인을 통해 전통적인 보안 제어를 우회하는 새로운 모듈형 악성코드 프레임워크 'Avalon'을 발견했다. 이 프레임워크는 자격 증명 수집, 측면 이동, 원격 액세스 기능을 포함하고 있다."
+        },
+        {
+          "severity": "high",
+          "source": "The Hacker News",
+          "headline": "북한 관련 npm 패키지가 개발자 비밀 정보 유출 목적의 Rollup 폴리필로 위장",
+          "url": "https://thehackernews.com/2026/07/north-korea-linked-npm-packages-mimic.html",
+          "summary": "JFrog에 따르면, 'rollup-packages-polyfill-core' 및 'rollup-runtime-polyfill-core'라는 패키지가 정품 Rollup 폴리필 도구로 위장하여 원격 액세스 및 데이터 유출을 용이하게 한다."
+        },
+        {
+          "severity": "medium",
+          "source": "The Hacker News",
+          "headline": "Citrix Bleed 2 취약점 악용으로 랜섬웨어 그룹이 공격 확대",
+          "url": "https://thehackernews.com/2026/07/ransomware-groups-turn-to-citrix-bleed.html",
+          "summary": "Anubis 랜섬웨어 운영과 관련된 위협 행위자들이 Citrix Bleed 2 (CVE-2025-5777) 취약점을 악용하여 초기 접근을 얻는 것으로 관찰되었다. 이 취약점은 정규 원격 관리 및 MTA를 통해 공격이 이루어진다."
+        },
+        {
+          "severity": "medium",
+          "source": "The Hacker News",
+          "headline": "Microsoft SharePoint Server 취약점, CISA KEV 목록에 추가",
+          "url": "https://securityaffairs.com/194654/security/u-s-cisa-adds-a-microsoft-sharepoint-server-flaw-to-its-known-exploited-vulnerabilities-catalog.html",
+          "summary": "CISA는 CVE-2026-45659 취약점을 포함한 Microsoft SharePoint Server의 취약점을 'Known Exploited Vulnerabilities' 목록에 추가했다. 이 취약점은 CVSS 3.1 기준으로 8.1 점을 받았다."
+        }
+      ]
+    },
+    {
+      "label": "침해 사고",
+      "type": "cards",
+      "items": [
+        {
+          "severity": "incident",
+          "source": "The Hacker News",
+          "headline": "유럽 의회 의원이 조사 중이던 Pegasus 스파이웨어로 해킹",
+          "url": "https://thehackernews.com/2026/07/european-parliament-member.html",
+          "summary": "Citizen Lab의 보고서에 따르면, 유럽 의회 의원 Stelios Kouloglou가 Pegasus 스파이웨어로 해킹당한 것으로 드러났다. 이 의원은 상업적 감시 도구의 남용을 조사 중이었다."
+        },
+        {
+          "severity": "incident",
+          "source": "SecurityWeek",
+          "headline": "Medtronic 데이터 유출로 380만 명 영향",
+          "url": "https://www.securityweek.com/medtronic-data-breach-impacts-3-8-million-people/",
+          "summary": "ShinyHunters는 회사의 기업 IT 시스템에 접근하여 환자의 개인 및 의료 정보를 도난했다. 이 사고로 380만 명이 영향을 받았다."
+        },
+        {
+          "severity": "incident",
+          "source": "The Hacker News",
+          "headline": "Armored Likho, 러시아·브라질·카자흐스탄 정부 및 전력 부문 대상 공격",
+          "url": "https://thehackernews.com/2026/07/armored-likho-targets-government.html",
+          "summary": "Armored Likho는 개인을 대상으로 한 금전적 동기의 캠페인과 함께 정부 및 전력 부문을 대상으로 한 공격을 수행한 것으로 알려졌다."
+        }
+      ]
+    },
+    {
+      "label": "동향 & 분석",
+      "type": "trends",
+      "items": [
+        {
+          "lead": "AI 기반 공격 증가",
+          "body": "AI 기반의 랜섬웨어와 악성코드가 증가하고 있으며, 이는 자동화된 다단계 침입을 가능하게 한다. 예를 들어, Langflow를 통해 실행된 Agentic AI 랜섬웨어 공격이 보고되었다."
+        },
+        {
+          "lead": "취약점 악용 확대",
+          "body": "Citrix Bleed 2, Microsoft SharePoint Server, Linux 커널 취약점 등이 공개된 후 즉시 악용되고 있다. 이는 취약점 패치가 지연되거나 누락될 경우 심각한 보안 위협으로 이어질 수 있다."
+        },
+        {
+          "lead": "정부 및 의료 분야의 이메일 보안 취약",
+          "body": "정부 및 의료 분야는 SPF, DMARC, DKIM, MTA-STS 등 이메일 인증 기술을 제대로 구현하지 못해 피싱 공격에 취약하다. 이는 이메일 보안을 강화해야 한다는 경고를 제공한다."
+        },
+        {
+          "lead": "AI 도구의 악용",
+          "body": "AI 도구가 악용되어 악성코드 배포, 자격 증명 도난, 암호화 공격 등에 사용되고 있다. 예를 들어, 가짜 API 문서를 통해 AI 에이전트가 암호화폐 결제를 유도하는 사례가 보고되었다."
+        }
+      ]
+    }
+  ]
+}
