@@ -1,0 +1,104 @@
+{
+  "tagline": "글로벌 정보보안 뉴스레터",
+  "title": "보안 브리핑",
+  "date_display": "2026년 7월 6일 월요일",
+  "date_short": "2026.07.06",
+  "sources_line": "The Hacker News · BleepingComputer · SecurityWeek · KrebsOnSecurity · CISA · NCSC UK · Unit 42 · 보안뉴스 · 데일리시큐 · 전자신문",
+  "seo": {
+    "title": "CVE-2026-XXXXX 악용·랜섬웨어 급증 — 2026.07.06 보안 브리핑",
+    "description": "오늘 주요 취약점·침해 사고·위협 트렌드 요약.",
+    "keywords": "CVE, 랜섬웨어, 취약점, 침해사고, 보안"
+  },
+  "sections": [
+    {
+      "label": "취약점 & 공격",
+      "type": "cards",
+      "items": [
+        {
+          "severity": "high",
+          "source": "Security Affairs",
+          "headline": "미국 정부 기관, 데이타 유출 협박에 100만 달러 지급",
+          "url": "https://securityaffairs.com/194750/security/u-s-government-agency-paid-1m-to-data-extortion-group-kairos.html",
+          "summary": "미국 정부 기관이 데이타 유출 협박에 100만 달러를 지급한 사건이 발생했다. 카이로스는 랜섬웨어 대신 데이타 유출 협박을 사용했으며, 암호화 없이 데이터를 공개하겠다고 위협했다."
+        },
+        {
+          "severity": "high",
+          "source": "Security Affairs",
+          "headline": "북한 해커, 악성 오픈소스 패키지 108개 유포",
+          "url": "https://www.dailysecu.com/news/articleView.html?idxno=207447",
+          "summary": "북한 해커 그룹이 개발자들의 PC를 노린 악성 오픈소스 패키지 108개를 유포했다. 이는 소프트웨어 공급망 보안 기업 소켓이 확인한 것으로, npm, PHP, Go, Chrome 확장 프로그램 등에 악성코드가 포함된 것으로 드러났다."
+        },
+        {
+          "severity": "medium",
+          "source": "보안뉴스",
+          "headline": "AI 에이전트 보안, 블랙햇 USA 2026 주요 화두",
+          "url": "https://www.dailysecu.com/news/articleView.html?idxno=207453",
+          "summary": "블랙햇 USA 2026에서 AI 에이전트 보안이 주요 화두로 등장했다. AI 에이전트의 권한 증가로 인한 계정 탈취 및 프롬프트 인젝션 위험이 커지고 있어, 보안 대응이 시급하다."
+        },
+        {
+          "severity": "medium",
+          "source": "보안뉴스",
+          "headline": "호텔 개인정보 보호 평가, 실효성 논란",
+          "url": "https://www.ngetnews.com/news/articleView.html?idxno=551279",
+          "summary": "정부가 호텔업계의 개인정보 보호를 강화하려는 조치를 발표했지만, 실제 실행에 대한 비판이 제기되고 있다. 주요 호텔의 정보보호 현황 확인이 어려운 실정이다."
+        },
+        {
+          "severity": "medium",
+          "source": "보안뉴스",
+          "headline": "AI 기반 위협 탐지, 블랙햇 USA 2026 교육 과정 주제",
+          "url": "https://www.dailysecu.com/news/articleView.html?idxno=207450",
+          "summary": "블랙햇 USA 2026에서 AI 기반 위협 탐지 기술을 중심으로 한 교육 과정이 진행될 예정이다. 보안 실무자가 직접 공격 및 방어 기술을 학습하는 프로그램이다."
+        }
+      ]
+    },
+    {
+      "label": "침해 사고",
+      "type": "cards",
+      "items": [
+        {
+          "severity": "incident",
+          "source": "보안뉴스",
+          "headline": "메디트로닉, 380만 명의 개인 정보 유출 사고",
+          "url": "https://securityaffairs.com/194788/cyber-crime/medtronic-notifies-3-8-million-after-shinyhunters-data-breach.html",
+          "summary": "메디트로닉은 ShinyHunters 해커 그룹의 공격으로 380만 명의 개인 및 의료 정보가 유출된 사고를 발표했다. 제품 및 운영에는 영향이 없었지만, 피해자에게 통보를 진행 중이다."
+        },
+        {
+          "severity": "incident",
+          "source": "보안뉴스",
+          "headline": "미국 지방정부, 데이타 유출 협박에 100만 달러 지급",
+          "url": "https://www.dailysecu.com/news/articleView.html?idxno=207454",
+          "summary": "미국의 한 지방정부가 해커 조직 카이로스에 100만 달러를 지급한 사건이 발생했다. 카이로스는 랜섬웨어 대신 데이타 유출 협박을 사용했으며, 암호화 없이 데이터를 공개하겠다고 위협했다."
+        },
+        {
+          "severity": "incident",
+          "source": "보안뉴스",
+          "headline": "호텔 개인정보 유출, 보호 평가 실효성 논란",
+          "url": "https://www.ngetnews.com/news/articleView.html?idxno=551279",
+          "summary": "호텔업계의 개인정보 보호 평가 항목이 추가되었지만, 실제 실행에 대한 비판이 제기되고 있다. 주요 호텔의 정보보호 현황 확인이 어려운 실정이다."
+        }
+      ]
+    },
+    {
+      "label": "동향 & 분석",
+      "type": "trends",
+      "items": [
+        {
+          "lead": "AI 기반 위협 증가",
+          "body": "AI 기반의 보안 위협이 증가하고 있으며, 특히 AI 에이전트의 권한 증가로 인한 계정 탈취 및 프롬프트 인젝션 위험이 커지고 있다. 블랙햇 USA 2026에서 이에 대한 대응 방안이 논의되고 있다."
+        },
+        {
+          "lead": "데이타 유출 협박 사례 증가",
+          "body": "랜섬웨어 대신 데이타 유출 협박이 증가하고 있으며, 미국 정부 기관과 지방정부가 이를 대상으로 한 사례가 발생했다. 이는 기존의 랜섬웨어 공격과는 다른 새로운 형태의 위협이다."
+        },
+        {
+          "lead": "소프트웨어 공급망 보안 문제",
+          "body": "북한 해커 그룹이 오픈소스 패키지와 웹브라우저 확장 프로그램을 통해 개발자들의 PC를 공격한 사례가 확인되었다. 이는 소프트웨어 공급망 보안의 취약점을 드러내는 사례이다."
+        },
+        {
+          "lead": "개인정보 보호 실효성 논란",
+          "body": "호텔업계의 개인정보 보호 평가 항목이 추가되었지만, 실제 실행에 대한 비판이 제기되고 있다. 주요 호텔의 정보보호 현황 확인이 어려운 실정이다."
+        }
+      ]
+    }
+  ]
+}
