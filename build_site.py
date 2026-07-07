@@ -119,6 +119,7 @@ def build_index(items):
       <div class="site-desc">{esc(SITE_DESC)}</div>
     </div>
     <div class="site-actions">
+      <a class="rss-link" href="{SITE_URL}/cve/">CVE Archive</a>
       <a class="rss-link" href="{SITE_URL}/feed.xml">RSS 구독</a>
     </div>
   </div>
