@@ -1,0 +1,111 @@
+{
+  "tagline": "글로벌 정보보안 뉴스레터",
+  "title": "보안 브리핑",
+  "date_display": "2026년 7월 7일 화요일",
+  "date_short": "2026.07.07",
+  "sources_line": "The Hacker News · BleepingComputer · SecurityWeek · KrebsOnSecurity · CISA · NCSC UK · Unit 42 · 보안뉴스 · 데일리시큐 · 전자신문",
+  "seo": {
+    "title": "CVE-2026-XXXXX 악용·랜섬웨어 급증 — 2026.07.07 보안 브리핑",
+    "description": "오늘 주요 취약점·침해 사고·위협 트렌드 요약.",
+    "keywords": "CVE, 랜섬웨어, 취약점, 침해사고, 보안"
+  },
+  "sections": [
+    {
+      "label": "취약점 & 공격",
+      "type": "cards",
+      "items": [
+        {
+          "severity": "critical",
+          "source": "The Hacker News",
+          "headline": "Gitea Docker 취약점 CVE-2026-20896 악용 시도 증가",
+          "url": "https://thehackernews.com/2026/07/threat-actors-probe-gitea-docker-flaw.html",
+          "summary": "CVSS 9.8의 Gitea Docker 취약점 CVE-2026-20896이 공개된 지 13일 만에 악용 시도가 확인되었다. 이 취약점은 DevOps 플랫폼이 'X-WEBAUTH-USER' 헤더를 신뢰하는 것으로 인해 발생하며, 보안 업데이트가 시급하다."
+        },
+        {
+          "severity": "critical",
+          "source": "Security Affairs",
+          "headline": "Linux 'Bad Epoll' 취약점 CVE-2026-46242 악용 가능성 확인",
+          "url": "https://securityaffairs.com/194795/hacking/bad-epoll-flaw-gives-attackers-root-access-on-linux-and-android.html",
+          "summary": "Linux 커널의 'Bad Epoll' 취약점 CVE-2026-46242은 로컬 공격자가 특별한 권한 없이도 루트 접근이 가능하게 만든다. 이 취약점은 AI 기반 보안 시스템에서 놓친 것으로, 즉각적인 패치가 필요하다."
+        },
+        {
+          "severity": "critical",
+          "source": "The Hacker News",
+          "headline": "Adobe ColdFusion 취약점 CVE-2026-48282 악용 사례 발생",
+          "url": "https://securityaffairs.com/194837/hacking/adobe-coldfusion-flaw-cve-2026-48282-now-exploited-in-the-wild.html",
+          "summary": "Adobe ColdFusion의 경로 탐색 취약점 CVE-2026-48282이 악용되어 원격 코드 실행이 가능하다. 이 취약점은 최대 심각도로 분류되며, 즉시 패치가 필요한 상황이다."
+        },
+        {
+          "severity": "high",
+          "source": "The Hacker News",
+          "headline": "Opera GX 취약점으로 악성 CSS 주입 가능성 확인",
+          "url": "https://gbhackers.com/critical-opera-gx-vulnerability/",
+          "summary": "Opera GX의 GX Mods 기능을 악용하여 사용자가 방문한 모든 웹페이지에 악성 CSS를 주입할 수 있는 취약점이 발견되었다. 이는 크로스사이트 데이터 유출로 이어질 수 있다."
+        },
+        {
+          "severity": "high",
+          "source": "The Hacker News",
+          "headline": "Veeam Backup BinaryFormatter 취약점 CVE-2026-44963 발견",
+          "url": "https://gbhackers.com/veeam-backup-binaryformatter-flaw/",
+          "summary": "Veeam Backup & Replication의 BinaryFormatter 취약점 CVE-2026-44963은 인증된 도메인 사용자가 백업 서버에서 원격 코드 실행이 가능하게 만든다. 이 취약점은 즉시 패치가 필요하다."
+        },
+        {
+          "severity": "medium",
+          "source": "The Hacker News",
+          "headline": "16년 전 Linux KVM 취약점 'Januscape' CVE-2026-53359 발견",
+          "url": "https://thehackernews.com/2026/07/16-year-old-linux-kvm-flaw-lets-guest.html",
+          "summary": "Linux KVM 힙서버의 'Januscape' 취약점 CVE-2026-53359은 게스트 가상 머신이 호스트 커널의 shadow-page 상태를 손상시킬 수 있다. 이 취약점은 패치가 권장된다."
+        }
+      ]
+    },
+    {
+      "label": "침해 사고",
+      "type": "cards",
+      "items": [
+        {
+          "severity": "incident",
+          "source": "SecurityWeek",
+          "headline": "Medtronic, ShinyHunters 해킹으로 380만 명의 데이터 유출",
+          "url": "https://securityaffairs.com/194788/cyber-crime/medtronic-notifies-3-8-million-after-shinyhunters-data-breach.html",
+          "summary": "ShinyHunters 해킹으로 Medtronic의 개인 및 의료 데이터가 380만 명에게 유출되었다. 이 사고는 제품 및 운영에 영향을 주지 않았으나, 보안 취약점이 확인되었다."
+        },
+        {
+          "severity": "incident",
+          "source": "SecurityWeek",
+          "headline": "North Korean 해커, 오픈소스 개발자 대상 공급망 공격",
+          "url": "https://www.securityweek.com/north-korean-hackers-target-open-source-developers-in-supply-chain-attacks/",
+          "summary": "North Korean 해커 그룹 PolinRider는 100개 이상의 오픈소스 패키지와 저장소를 해킹하여 개발자에게 백도어와 정보 도둑을 설치하였다."
+        },
+        {
+          "severity": "incident",
+          "source": "SecurityWeek",
+          "headline": "FIFA 월드컵 피싱 사기로 신용카드 정보 유출",
+          "url": "https://gbhackers.com/fifa-world-cup-phishing-scam/",
+          "summary": "2026 FIFA 월드컵을 이용한 피싱 캠페인에서 가짜 보상 페이지를 통해 신용카드 정보가 유출되고 있다. 이 사기 행위는 매우 정교하게 구성되어 있다."
+        }
+      ]
+    },
+    {
+      "label": "동향 & 분석",
+      "type": "trends",
+      "items": [
+        {
+          "lead": "AI 기반 보안 위협 증가",
+          "body": "AI 에이전트를 악용한 공격이 증가하고 있으며, 특히 악성 웹사이트를 통해 인젝션 공격이 이루어지고 있다. 이는 AI 기술의 발전과 함께 새로운 보안 위협으로 주목받고 있다."
+        },
+        {
+          "lead": "취약점 악용 시도 빈도 증가",
+          "body": "최근 공개된 취약점들이 곧바로 악용되고 있으며, 특히 높은 CVSS 점수를 가진 취약점들이 주목받고 있다. 이는 보안 패치의 시급성을 강조한다."
+        },
+        {
+          "lead": "랜섬웨어의 진화",
+          "body": "Go 기반의 랜섬웨어 Gentlemen이 네트워크 전파를 위해 PsExec, WMIC, PowerShell을 사용하고 있으며, 이는 랜섬웨어의 진화를 보여준다."
+        },
+        {
+          "lead": "공급망 공격 증가",
+          "body": "공급망 공격이 증가하고 있으며, 특히 오픈소스 개발자와 같은 주요 인프라를 대상으로 하고 있다. 이는 보안 감시와 패치 관리의 중요성을 강조한다."
+        }
+      ]
+    }
+  ]
+}
