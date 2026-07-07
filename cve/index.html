@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SecuLog CVE Archive</title>
+<meta name="description" content="SecuLog CVE archive. NVD 기반 주요 Critical CVE 누적 페이지.">
+<style>
+  * { box-sizing: border-box; }
+  body { margin: 0; font-family: -apple-system, BlinkMacSystemFont, 'Malgun Gothic', 'Apple SD Gothic Neo', Arial, sans-serif; background: #f4f6fa; color: #172033; line-height: 1.65; }
+  a { color: inherit; }
+  .wrap { max-width: 920px; margin: 0 auto; padding: 34px 18px 60px; }
+  .hero { background: #0d1b3e; color: #fff; border-radius: 10px; padding: 30px 32px; margin-bottom: 20px; }
+  .eyebrow { font-size: 12px; color: #93c5fd; font-weight: 800; letter-spacing: .08em; text-transform: uppercase; }
+  h1 { margin: 6px 0 8px; font-size: 32px; line-height: 1.25; }
+  .hero p { max-width: 740px; margin: 0; color: #d9e4ff; }
+  .meta { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 16px; font-size: 13px; color: #c8d4ef; }
+  .meta span { background: rgba(255,255,255,.10); padding: 5px 10px; border-radius: 6px; }
+  .notice { background: #fff7ed; border: 1px solid #fed7aa; color: #7c2d12; padding: 13px 16px; border-radius: 8px; margin-bottom: 16px; font-size: 14px; }
+  .cve-card { background: #fff; border: 1px solid #e5eaf3; border-radius: 10px; padding: 22px 24px; margin: 14px 0; box-shadow: 0 8px 22px rgba(15,23,42,.05); }
+  .cve-top { display: flex; justify-content: space-between; gap: 12px; align-items: center; flex-wrap: wrap; margin-bottom: 10px; }
+  .cve-id { font-size: 21px; font-weight: 900; color: #0d1b3e; text-decoration: none; }
+  .score { background: #fee2e2; color: #b91c1c; border: 1px solid #fecaca; border-radius: 6px; padding: 5px 10px; font-size: 13px; font-weight: 900; }
+  .desc { margin: 0 0 16px; color: #334155; }
+  dl { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px 14px; margin: 0; }
+  dl div { background: #f8fafc; border: 1px solid #edf2f7; border-radius: 7px; padding: 8px 10px; }
+  dt { font-size: 11px; color: #64748b; font-weight: 800; text-transform: uppercase; letter-spacing: .04em; }
+  dd { margin: 2px 0 0; color: #172033; font-size: 13px; word-break: break-word; }
+  .vector { margin-top: 12px; background: #111827; color: #e5e7eb; padding: 9px 12px; border-radius: 7px; overflow-x: auto; }
+  details { margin-top: 12px; color: #334155; }
+  summary { cursor: pointer; font-weight: 800; color: #1d4ed8; }
+  li { word-break: break-all; }
+  .foot { margin-top: 26px; text-align: center; color: #64748b; font-size: 12px; }
+  @media (max-width: 720px) { h1 { font-size: 26px; } dl { grid-template-columns: 1fr; } .hero { padding: 24px 20px; } .cve-card { padding: 18px; } }
+</style>
+</head>
+<body>
+<main class="wrap">
+  <section class="hero">
+    <div class="eyebrow">SecuLog Felix</div>
+    <h1>CVE Archive</h1>
+    <p>NVD 기반 Critical CVE를 누적 관리하는 별도 페이지입니다. 블로그에는 CVE 자동 글을 발행하지 않고, 이 페이지에만 기록합니다.</p>
+    <div class="meta">
+      <span>Total 0</span>
+      <span>Updated 2026-07-07 16:03 KST</span>
+      <span>Source NVD API</span>
+    </div>
+  </section>
+  <div class="notice">중복 제거 기준은 CVE ID입니다. 동일 CVE는 다시 추가하지 않습니다. 실제 악용 여부와 패치 우선순위는 CISA KEV, 벤더 권고, 자산 노출 여부와 함께 검토해야 합니다.</div>
+
+  <div class="foot">© 2026 Felix · SecuLog. Public NVD data based CVE archive.</div>
+</main>
+</body>
+</html>
