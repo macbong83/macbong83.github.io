@@ -1,0 +1,233 @@
+{
+  "migrated_at": "2026-07-07T16:08:19.443944",
+  "source": "Tistory category 845066",
+  "target": "https://macbong83.github.io/cve/",
+  "tistory_posts": [
+    {
+      "id": "142",
+      "created": "2026-07-07 16:01",
+      "title": "CVE-2026-14345 — CVSS 9.8 CRITICAL 취약점 분석",
+      "url": "https://seculog-felix.tistory.com/142",
+      "cve_id": "CVE-2026-14345"
+    },
+    {
+      "id": "132",
+      "created": "2026-07-06 19:45",
+      "title": "CVE-2026-14808 — CVSS 9.8 CRITICAL 취약점 분석",
+      "url": "https://seculog-felix.tistory.com/132",
+      "cve_id": "CVE-2026-14808"
+    },
+    {
+      "id": "131",
+      "created": "2026-07-06 19:45",
+      "title": "CVE-2026-14807 — CVSS 9.8 CRITICAL 취약점 분석",
+      "url": "https://seculog-felix.tistory.com/131",
+      "cve_id": "CVE-2026-14807"
+    },
+    {
+      "id": "113",
+      "created": "2026-07-05 12:02",
+      "title": "CVE-2026-58289 — CVSS 9.0 CRITICAL 취약점 분석",
+      "url": "https://seculog-felix.tistory.com/113",
+      "cve_id": "CVE-2026-58289"
+    },
+    {
+      "id": "112",
+      "created": "2026-07-05 12:02",
+      "title": "CVE-2026-4321 — CVSS 9.8 CRITICAL 취약점 분석",
+      "url": "https://seculog-felix.tistory.com/112",
+      "cve_id": "CVE-2026-4321"
+    },
+    {
+      "id": "108",
+      "created": "2026-07-05 08:05",
+      "title": "CVE-2026-14544 — CVSS 9.8 CRITICAL 취약점 분석",
+      "url": "https://seculog-felix.tistory.com/108",
+      "cve_id": "CVE-2026-14544"
+    },
+    {
+      "id": "107",
+      "created": "2026-07-05 08:04",
+      "title": "CVE-2026-9725 — CVSS 9.1 CRITICAL 취약점 분석",
+      "url": "https://seculog-felix.tistory.com/107",
+      "cve_id": "CVE-2026-9725"
+    },
+    {
+      "id": "106",
+      "created": "2026-07-05 08:04",
+      "title": "CVE-2026-57100 — CVSS 9.9 CRITICAL 취약점 분석",
+      "url": "https://seculog-felix.tistory.com/106",
+      "cve_id": "CVE-2026-57100"
+    },
+    {
+      "id": "105",
+      "created": "2026-07-05 08:04",
+      "title": "CVE-2026-45499 — CVSS 9.9 CRITICAL 취약점 분석",
+      "url": "https://seculog-felix.tistory.com/105",
+      "cve_id": "CVE-2026-45499"
+    },
+    {
+      "id": "101",
+      "created": "2026-07-04 14:14",
+      "title": "CVE-2026-41106 — CVSS 9.3 CRITICAL 취약점 분석",
+      "url": "https://seculog-felix.tistory.com/101",
+      "cve_id": "CVE-2026-41106"
+    },
+    {
+      "id": "100",
+      "created": "2026-07-04 14:14",
+      "title": "CVE-2026-59099 — CVSS 9.1 CRITICAL 취약점 분석",
+      "url": "https://seculog-felix.tistory.com/100",
+      "cve_id": "CVE-2026-59099"
+    },
+    {
+      "id": "99",
+      "created": "2026-07-04 14:14",
+      "title": "CVE-2026-58466 — CVSS 9.8 CRITICAL 취약점 분석",
+      "url": "https://seculog-felix.tistory.com/99",
+      "cve_id": "CVE-2026-58466"
+    },
+    {
+      "id": "98",
+      "created": "2026-07-04 14:14",
+      "title": "CVE-2026-58455 — CVSS 9.8 CRITICAL 취약점 분석",
+      "url": "https://seculog-felix.tistory.com/98",
+      "cve_id": "CVE-2026-58455"
+    },
+    {
+      "id": "97",
+      "created": "2026-07-04 14:14",
+      "title": "CVE-2026-58457 — CVSS 9.8 CRITICAL 취약점 분석",
+      "url": "https://seculog-felix.tistory.com/97",
+      "cve_id": "CVE-2026-58457"
+    },
+    {
+      "id": "96",
+      "created": "2026-07-04 14:13",
+      "title": "CVE-2026-53492 — CVSS 9.6 CRITICAL 취약점 분석",
+      "url": "https://seculog-felix.tistory.com/96",
+      "cve_id": "CVE-2026-53492"
+    },
+    {
+      "id": "95",
+      "created": "2026-07-04 14:13",
+      "title": "CVE-2026-50195 — CVSS 9.9 CRITICAL 취약점 분석",
+      "url": "https://seculog-felix.tistory.com/95",
+      "cve_id": "CVE-2026-50195"
+    },
+    {
+      "id": "94",
+      "created": "2026-07-04 14:13",
+      "title": "CVE-2026-58453 — CVSS 9.8 CRITICAL 취약점 분석",
+      "url": "https://seculog-felix.tistory.com/94",
+      "cve_id": "CVE-2026-58453"
+    },
+    {
+      "id": "93",
+      "created": "2026-07-04 14:13",
+      "title": "CVE-2026-34106 — CVSS 9.8 CRITICAL 취약점 분석",
+      "url": "https://seculog-felix.tistory.com/93",
+      "cve_id": "CVE-2026-34106"
+    },
+    {
+      "id": "92",
+      "created": "2026-07-04 14:13",
+      "title": "CVE-2026-34100 — CVSS 9.8 CRITICAL 취약점 분석",
+      "url": "https://seculog-felix.tistory.com/92",
+      "cve_id": "CVE-2026-34100"
+    },
+    {
+      "id": "73",
+      "created": "2026-07-02 16:02",
+      "title": "CVE-2026-8655 — CVSS 9.8 CRITICAL 취약점 분석",
+      "url": "https://seculog-felix.tistory.com/73",
+      "cve_id": "CVE-2026-8655"
+    },
+    {
+      "id": "72",
+      "created": "2026-07-02 16:02",
+      "title": "CVE-2026-8452 — CVSS 9.8 CRITICAL 취약점 분석",
+      "url": "https://seculog-felix.tistory.com/72",
+      "cve_id": "CVE-2026-8452"
+    },
+    {
+      "id": "71",
+      "created": "2026-07-02 16:02",
+      "title": "CVE-2026-11720 — CVSS 9.1 CRITICAL 취약점 분석",
+      "url": "https://seculog-felix.tistory.com/71",
+      "cve_id": "CVE-2026-11720"
+    },
+    {
+      "id": "58",
+      "created": "2026-07-01 16:01",
+      "title": "CVE-2026-11708 — CVSS 9.3 CRITICAL 취약점 분석",
+      "url": "https://seculog-felix.tistory.com/58",
+      "cve_id": "CVE-2026-11708"
+    },
+    {
+      "id": "57",
+      "created": "2026-07-01 16:01",
+      "title": "CVE-2026-10140 — CVSS 9.6 CRITICAL 취약점 분석",
+      "url": "https://seculog-felix.tistory.com/57",
+      "cve_id": "CVE-2026-10140"
+    },
+    {
+      "id": "53",
+      "created": "2026-07-01 10:03",
+      "title": "CVE-2026-58138 — CVSS 9.8 CRITICAL 취약점 분석",
+      "url": "https://seculog-felix.tistory.com/53",
+      "cve_id": "CVE-2026-58138"
+    },
+    {
+      "id": "52",
+      "created": "2026-07-01 10:02",
+      "title": "CVE-2026-58172 — CVSS 9.1 CRITICAL 취약점 분석",
+      "url": "https://seculog-felix.tistory.com/52",
+      "cve_id": "CVE-2026-58172"
+    },
+    {
+      "id": "51",
+      "created": "2026-07-01 10:02",
+      "title": "CVE-2026-58166 — CVSS 9.1 CRITICAL 취약점 분석",
+      "url": "https://seculog-felix.tistory.com/51",
+      "cve_id": "CVE-2026-58166"
+    },
+    {
+      "id": "50",
+      "created": "2026-07-01 10:02",
+      "title": "CVE-2026-48286 — CVSS 10.0 CRITICAL 취약점 분석",
+      "url": "https://seculog-felix.tistory.com/50",
+      "cve_id": "CVE-2026-48286"
+    },
+    {
+      "id": "49",
+      "created": "2026-07-01 10:02",
+      "title": "CVE-2026-48277 — CVSS 10.0 CRITICAL 취약점 분석",
+      "url": "https://seculog-felix.tistory.com/49",
+      "cve_id": "CVE-2026-48277"
+    },
+    {
+      "id": "48",
+      "created": "2026-07-01 10:02",
+      "title": "CVE-2026-48276 — CVSS 10.0 CRITICAL 취약점 분석",
+      "url": "https://seculog-felix.tistory.com/48",
+      "cve_id": "CVE-2026-48276"
+    },
+    {
+      "id": "40",
+      "created": "2026-06-30 15:41",
+      "title": "CVE-2026-12073 — CVSS 9.8 CRITICAL 취약점 분석",
+      "url": "https://seculog-felix.tistory.com/40",
+      "cve_id": "CVE-2026-12073"
+    },
+    {
+      "id": "39",
+      "created": "2026-06-30 15:41",
+      "title": "CVE-2026-58053 — CVSS 9.9 CRITICAL 취약점 분석",
+      "url": "https://seculog-felix.tistory.com/39",
+      "cve_id": "CVE-2026-58053"
+    }
+  ],
+  "migrated_count": 32,
+  "errors": []
+}

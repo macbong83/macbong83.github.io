@@ -1,1 +1,954 @@
-[]
+[
+  {
+    "id": "CVE-2026-14345",
+    "published": "2026-07-07",
+    "last_modified": "2026-07-07",
+    "status": "Received",
+    "description": "The WPFunnels – Funnel Builder for WooCommerce with Checkout & One Click Upsell plugin for WordPress is vulnerable to Remote Code Execution in all versions up to, and including, 3.12.7 via the 'postData' parameter parameter. This is due to unsanitized write of attacker-controlled postData values into a PHP-includeable .log file combined with the use of include_once to render that file in wpfnl_show_log. This makes it possible for unauthenticated attackers to execute code on the server. Exploitation requires that the Log Settings \"Enable Logs\" toggle is on and that an administrator subsequently opens the polluted log file via the plugin's Log Settings View UI; however, the nonce required to reach the optin endpoint is publicly emitted on every funnel step page, so the injection step itself is fully unauthenticated.",
+    "cvss": {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "score": 9.8,
+      "severity": "CRITICAL",
+      "attack_vector": "네트워크",
+      "attack_complexity": "낮음",
+      "privileges_required": "없음",
+      "user_interaction": "없음"
+    },
+    "cwes": [
+      "CWE-434"
+    ],
+    "affected": [],
+    "references": [
+      "https://plugins.trac.wordpress.org/browser/wpfunnels/tags/3.12.5/admin/modules/settings/class-wpfnl-settings.php#L709",
+      "https://plugins.trac.wordpress.org/browser/wpfunnels/tags/3.12.5/includes/core/classes/class-wpfnl-ajax-handler.php#L39",
+      "https://plugins.trac.wordpress.org/browser/wpfunnels/tags/3.12.5/includes/core/classes/class-wpfnl-ajax-handler.php#L523",
+      "https://plugins.trac.wordpress.org/browser/wpfunnels/tags/3.12.5/public/class-wpfnl-public.php#L1185",
+      "https://plugins.trac.wordpress.org/browser/wpfunnels/tags/3.12.7/admin/modules/settings/class-wpfnl-settings.php#L709",
+      "https://plugins.trac.wordpress.org/browser/wpfunnels/tags/3.12.7/includes/core/classes/class-wpfnl-ajax-handler.php#L39"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-14345",
+    "added_at": "2026-07-07T16:07:21+09:00",
+    "tistory_original_url": "https://seculog-felix.tistory.com/142"
+  },
+  {
+    "id": "CVE-2026-14808",
+    "published": "2026-07-06",
+    "last_modified": "2026-07-06",
+    "status": "Deferred",
+    "description": "Prog\n  Management System developed by PROG MIS has a Exposure of Sensitive\n  Information vulnerability, allowing unauthenticated remote attackers to view\n  a specific page and obtain the database account and password.",
+    "cvss": {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "score": 9.8,
+      "severity": "CRITICAL",
+      "attack_vector": "네트워크",
+      "attack_complexity": "낮음",
+      "privileges_required": "없음",
+      "user_interaction": "없음"
+    },
+    "cwes": [
+      "CWE-497"
+    ],
+    "affected": [],
+    "references": [
+      "https://www.twcert.org.tw/en/cp-139-11026-3df18-2.html",
+      "https://www.twcert.org.tw/tw/cp-132-11025-fa1d9-1.html"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-14808",
+    "added_at": "2026-07-07T16:07:25+09:00",
+    "tistory_original_url": "https://seculog-felix.tistory.com/132"
+  },
+  {
+    "id": "CVE-2026-14807",
+    "published": "2026-07-06",
+    "last_modified": "2026-07-06",
+    "status": "Deferred",
+    "description": "ERP App developed by PROG MIS has a Use of Hard-coded Credentials vulnerability, allowing unauthenticated remote attackers to log in to view application code and obtain the database account and password.",
+    "cvss": {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "score": 9.8,
+      "severity": "CRITICAL",
+      "attack_vector": "네트워크",
+      "attack_complexity": "낮음",
+      "privileges_required": "없음",
+      "user_interaction": "없음"
+    },
+    "cwes": [
+      "CWE-798"
+    ],
+    "affected": [],
+    "references": [
+      "https://www.twcert.org.tw/en/cp-139-11024-c5c1a-2.html",
+      "https://www.twcert.org.tw/tw/cp-132-11023-3abe8-1.html"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-14807",
+    "added_at": "2026-07-07T16:07:23+09:00",
+    "tistory_original_url": "https://seculog-felix.tistory.com/131"
+  },
+  {
+    "id": "CVE-2026-9725",
+    "published": "2026-07-05",
+    "last_modified": "",
+    "status": "Migrated from Tistory CVE post",
+    "description": "WordPress 플랫폼을 위한 WooCommerce용 Printcart Web to Print Product Designer 플러그인은 2.5.2 버전까지 포함하여 임의 파일 삭제 취약점이 존재합니다. 이는 store_design_data() 함수에서 사용자가 제공한 'nbd_item_key' POST 파라미터가 sanitize_text_field() 함수만으로 청소되어 경로 탐색 시퀀스를 제거하지 못하고, 이로 인해 생성된 파일 시스템 경로가 Nbdesigner_IO::delete_folder() 및 PHP의 rename() 함수에 직접 전달되기 때문입니다. 또한, nbd_save_customer_design AJAX 액션을 보호하는 nonce는 비인증 사용자가 nbd_check_use_logged_in 엔드포인트를 통해 자유롭게 획득할 수 있습니다. 이로 인해 비인증 공격자가 영향을 받은 웹사이트 서버의 임의 파일을 삭제할 수 있으며, 이는 원격 코드 실행이 가능하게 만들 수 있습니다.",
+    "cvss": {
+      "version": "3.x",
+      "vector": "",
+      "score": 9.1,
+      "severity": "CRITICAL",
+      "attack_vector": "",
+      "attack_complexity": "",
+      "privileges_required": "",
+      "user_interaction": ""
+    },
+    "cwes": [
+      "CWE-22"
+    ],
+    "affected": [],
+    "references": [
+      "https://plugins.trac.wordpress.org/browser/printcart-integration/tags/2.4.8/includes/class.nbdesigner.php#L214",
+      "https://plugins.trac.wordpress.org/browser/printcart-integration/tags/2.4.8/includes/class.nbdesigner.php#L3246",
+      "https://plugins.trac.wordpress.org/browser/printcart-integration/tags/2.4.8/includes/class.nbdesigner.php#L3698",
+      "https://plugins.trac.wordpress.org/changeset/3593521/printcart-integration/trunk/includes/class.nbdesigner.php",
+      "https://plugins.trac.wordpress.org/changeset?old_path=%2Fprintcart-integration/tags/2.5.2&new_path=%2Fprintcart-integration/tags/2.5.3",
+      "https://nvd.nist.gov/vuln/detail/CVE-2026-9725"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-9725",
+    "added_at": "2026-07-07T16:08:17+09:00",
+    "tistory_original_url": "https://seculog-felix.tistory.com/107",
+    "migration_source": "Tistory category 845066 backup extraction"
+  },
+  {
+    "id": "CVE-2026-58289",
+    "published": "2026-07-05",
+    "last_modified": "",
+    "status": "Migrated from Tistory CVE post",
+    "description": "마이크로소프트 에지(크로미움 기반)에서 호환되지 않는 유형('type confusion')을 사용하여 자원에 접근하는 취약점으로 인해 비인가 공격자가 네트워크를 통해 코드를 실행할 수 있습니다.",
+    "cvss": {
+      "version": "3.x",
+      "vector": "",
+      "score": 9.0,
+      "severity": "CRITICAL",
+      "attack_vector": "",
+      "attack_complexity": "",
+      "privileges_required": "",
+      "user_interaction": ""
+    },
+    "cwes": [
+      "CWE-843"
+    ],
+    "affected": [],
+    "references": [
+      "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-58289",
+      "https://nvd.nist.gov/vuln/detail/CVE-2026-58289"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-58289",
+    "added_at": "2026-07-07T16:08:17+09:00",
+    "tistory_original_url": "https://seculog-felix.tistory.com/113",
+    "migration_source": "Tistory category 845066 backup extraction"
+  },
+  {
+    "id": "CVE-2026-57100",
+    "published": "2026-07-05",
+    "last_modified": "",
+    "status": "Migrated from Tistory CVE post",
+    "description": "마이크로소프트 엔트라 프로비저닝 서비스(SyncFabric)에서 발생하는 서버 측 요청 위조(ssrf) 취약점은 인증된 공격자가 네트워크를 통해 권한을 상승시킬 수 있게 합니다.",
+    "cvss": {
+      "version": "3.x",
+      "vector": "",
+      "score": 9.9,
+      "severity": "CRITICAL",
+      "attack_vector": "",
+      "attack_complexity": "",
+      "privileges_required": "",
+      "user_interaction": ""
+    },
+    "cwes": [
+      "CWE-918"
+    ],
+    "affected": [],
+    "references": [
+      "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-57100",
+      "https://nvd.nist.gov/vuln/detail/CVE-2026-57100"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-57100",
+    "added_at": "2026-07-07T16:08:17+09:00",
+    "tistory_original_url": "https://seculog-felix.tistory.com/106",
+    "migration_source": "Tistory category 845066 backup extraction"
+  },
+  {
+    "id": "CVE-2026-45499",
+    "published": "2026-07-05",
+    "last_modified": "",
+    "status": "Migrated from Tistory CVE post",
+    "description": "Azure OpenAI에서 발생하는 서버 측 요청 위조(ssrf) 취약점은 인증된 공격자가 네트워크 상에서 권한을 상승시킬 수 있게 합니다.",
+    "cvss": {
+      "version": "3.x",
+      "vector": "",
+      "score": 9.9,
+      "severity": "CRITICAL",
+      "attack_vector": "",
+      "attack_complexity": "",
+      "privileges_required": "",
+      "user_interaction": ""
+    },
+    "cwes": [
+      "CWE-918"
+    ],
+    "affected": [],
+    "references": [
+      "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-45499",
+      "https://nvd.nist.gov/vuln/detail/CVE-2026-45499"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-45499",
+    "added_at": "2026-07-07T16:08:17+09:00",
+    "tistory_original_url": "https://seculog-felix.tistory.com/105",
+    "migration_source": "Tistory category 845066 backup extraction"
+  },
+  {
+    "id": "CVE-2026-4321",
+    "published": "2026-07-05",
+    "last_modified": "",
+    "status": "Migrated from Tistory CVE post",
+    "description": "Raera - Ankara Web Design and Digital Advertising Agency Destekz에서 SQL 명령어에 사용되는 특수 요소가 적절히 중화되지 않아 SQL 인젝션 취약점이 발생할 수 있습니다. 이 문제는 Destekz의 02062026 버전까지 영향을 줍니다. 참고로, 제조사에 연락하여 해당 제품이 더 이상 지원되지 않는다는 사실을 확인했습니다.",
+    "cvss": {
+      "version": "3.x",
+      "vector": "",
+      "score": 9.8,
+      "severity": "CRITICAL",
+      "attack_vector": "",
+      "attack_complexity": "",
+      "privileges_required": "",
+      "user_interaction": ""
+    },
+    "cwes": [
+      "CWE-89"
+    ],
+    "affected": [],
+    "references": [
+      "https://siberguvenlik.gov.tr/guvenlik-bildirimleri/detay/tr-26-0488",
+      "https://nvd.nist.gov/vuln/detail/CVE-2026-4321"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-4321",
+    "added_at": "2026-07-07T16:08:17+09:00",
+    "tistory_original_url": "https://seculog-felix.tistory.com/112",
+    "migration_source": "Tistory category 845066 backup extraction"
+  },
+  {
+    "id": "CVE-2026-59099",
+    "published": "2026-07-04",
+    "last_modified": "",
+    "status": "Migrated from Tistory CVE post",
+    "description": "Apereo CAS 7.3.0에서 8.0.0-RC6 이전 버전에는 암호화 취약점이 존재하여, 원격으로 인증되지 않은 공격자가 서버의 수명 동안 AES-GCM 초기화 벡터가 반복적으로 사용되는 것을 악용하여 평문 대화 상태를 복구할 수 있습니다. 공격자는 인증되지 않은 로그인 페이지에서 여러 클라이언트 측 웹플로우 실행 토큰을 수집한 후, 동일한 암호화 키와 고정된 0으로 구성된 IV가 사용되어 키스트림이 반복되는 문제로 인해 평문 분석을 수행하여 웹플로우 대화 상태를 복호화할 수 있습니다.",
+    "cvss": {
+      "version": "3.x",
+      "vector": "",
+      "score": 9.1,
+      "severity": "CRITICAL",
+      "attack_vector": "",
+      "attack_complexity": "",
+      "privileges_required": "",
+      "user_interaction": ""
+    },
+    "cwes": [
+      "CWE-323"
+    ],
+    "affected": [],
+    "references": [
+      "https://apereo.github.io/2026/06/18/vuln/",
+      "https://github.com/apereo/cas/commit/22c6f4adf738852782309b523b4e80371057f2d0",
+      "https://github.com/apereo/cas/releases/tag/v8.0.0-RC6",
+      "https://github.com/geo-chen/oss/blob/main/cas.md",
+      "https://www.vulncheck.com/advisories/apereo-cas-rc6-aes-gcm-nonce-reuse-information-disclosure",
+      "https://nvd.nist.gov/vuln/detail/CVE-2026-59099"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-59099",
+    "added_at": "2026-07-07T16:08:17+09:00",
+    "tistory_original_url": "https://seculog-felix.tistory.com/100",
+    "migration_source": "Tistory category 845066 backup extraction"
+  },
+  {
+    "id": "CVE-2026-58466",
+    "published": "2026-07-04",
+    "last_modified": "",
+    "status": "Migrated from Tistory CVE post",
+    "description": "3.2.8 버전 이전의 AutoBangumi는 사용자 테이블이 비어 있을 때 데이터베이스 사용자 모듈의 add_default_user() 함수를 통해 시작 시에 설정된 공개적으로 알려진 기본 자격 증명을 사용하여 인증이 가능한 관리자 계정을 생성하는 하드코딩된 기본 자격 증명 취약점이 존재합니다. 공격자는 인증이 필요한 로그인 엔드포인트에 기본 자격 증명을 제출하여 애플리케이션에 대한 전체적인 제어권을 얻을 수 있으며, 이는 RSS 피드 설정, 다운로더 설정 및 모든 인증된 API 엔드포인트에 영향을 줄 수 있습니다.",
+    "cvss": {
+      "version": "3.x",
+      "vector": "",
+      "score": 9.8,
+      "severity": "CRITICAL",
+      "attack_vector": "",
+      "attack_complexity": "",
+      "privileges_required": "",
+      "user_interaction": ""
+    },
+    "cwes": [
+      "CWE-1392"
+    ],
+    "affected": [],
+    "references": [
+      "https://github.com/EstrellaXD/Auto_Bangumi/commit/487bdfec545e805ae416e6ddf28651bd274d6a73",
+      "https://github.com/EstrellaXD/Auto_Bangumi/issues/1041",
+      "https://github.com/EstrellaXD/Auto_Bangumi/releases/tag/3.2.8",
+      "https://www.vulncheck.com/advisories/autobangumi-hard-coded-default-credentials-via-add-default-user",
+      "https://nvd.nist.gov/vuln/detail/CVE-2026-58466"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-58466",
+    "added_at": "2026-07-07T16:08:17+09:00",
+    "tistory_original_url": "https://seculog-felix.tistory.com/99",
+    "migration_source": "Tistory category 845066 backup extraction"
+  },
+  {
+    "id": "CVE-2026-58457",
+    "published": "2026-07-04",
+    "last_modified": "",
+    "status": "Migrated from Tistory CVE post",
+    "description": "심천 아이템이 M300 Wi-Fi 리피터(하드웨어 모델 MT02)는 인증 없이 OS 명령 주입 취약점이 존재하여, 네트워크 인접 공격자가 commuos 웹 백엔드의 smacfilter_conf 핸들러를 통해 비검증된 입력을 주입함으로써 임의의 쉘 명령을 실행할 수 있습니다. 공격자는 이름, enable, 또는 mac GET 파라미터에 세미콜론으로 구분된 페이로드를 추가하여, 이 값들이 sprintf() 함수로 전달될 때 검증 없이 uci 쉘 명령을 생성하게 되고, doSystemCmdComlib()를 통해 실행되어 장치에 대한 완전한 루트 수준 제어권을 얻을 수 있습니다.",
+    "cvss": {
+      "version": "3.x",
+      "vector": "",
+      "score": 9.8,
+      "severity": "CRITICAL",
+      "attack_vector": "",
+      "attack_complexity": "",
+      "privileges_required": "",
+      "user_interaction": ""
+    },
+    "cwes": [
+      "CWE-78"
+    ],
+    "affected": [],
+    "references": [
+      "https://github.com/IEATASICS/m300-repeater-bugs#",
+      "https://www.aliexpress.us/item/3256806767641280.html",
+      "https://www.vulncheck.com/advisories/shenzhen-aitemi-m300-mt02-unauthenticated-os-command-injection-via-protocol-csp",
+      "https://nvd.nist.gov/vuln/detail/CVE-2026-58457"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-58457",
+    "added_at": "2026-07-07T16:08:18+09:00",
+    "tistory_original_url": "https://seculog-felix.tistory.com/97",
+    "migration_source": "Tistory category 845066 backup extraction"
+  },
+  {
+    "id": "CVE-2026-58455",
+    "published": "2026-07-04",
+    "last_modified": "",
+    "status": "Migrated from Tistory CVE post",
+    "description": "Dockwatch 0.6.567 이전 버전에는 인증 없이 OS 명령 주입 취약점이 존재하여, 원격 공격자가 loader.php 파일에서 인증 리디렉션 후 exit() 함수가 누락된 부분을 악용하고, ajax/compose.php 파일에서 shell_exec() 함수로 전달된 비정화 입력을 통해 임의의 쉘 명령을 실행할 수 있습니다. 공격자는 불완전한 인증 검사로 인해 필요한 세션 플래그를 설정한 후, composePull 액션의 composePath POST 파라미터를 통해 임의의 명령을 주입하여 호스트를 완전히 점령할 수 있으며, 이는 표준 배포 시 Docker 소켓 마운트를 통해 가능합니다.",
+    "cvss": {
+      "version": "3.x",
+      "vector": "",
+      "score": 9.8,
+      "severity": "CRITICAL",
+      "attack_vector": "",
+      "attack_complexity": "",
+      "privileges_required": "",
+      "user_interaction": ""
+    },
+    "cwes": [
+      "CWE-78"
+    ],
+    "affected": [],
+    "references": [
+      "https://github.com/Notifiarr/dockwatch/pull/135",
+      "https://www.vulncheck.com/advisories/dockwatch-unauthenticated-os-command-injection-via-ajax-compose-php",
+      "https://nvd.nist.gov/vuln/detail/CVE-2026-58455"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-58455",
+    "added_at": "2026-07-07T16:08:18+09:00",
+    "tistory_original_url": "https://seculog-felix.tistory.com/98",
+    "migration_source": "Tistory category 845066 backup extraction"
+  },
+  {
+    "id": "CVE-2026-58453",
+    "published": "2026-07-04",
+    "last_modified": "",
+    "status": "Migrated from Tistory CVE post",
+    "description": "JAIOTlink C492A-W6 Wi-Fi IP 카메라가 4.8.30.57701411 버전의 펌웨어를 실행하고 있을 경우, anyka_ipc HTTP 서비스가 80번 포트에서 기본 admin 사용자명과 빈 비밀번호를 허용함으로써, 네트워크 인접 공격자가 비인가된 접근을 얻을 수 있는 하드코딩된 자격 증명 취약점이 존재합니다. 공격자는 이러한 하드코딩된 자격 증명을 사용하여 카메라 스냅샷, 비디오 스트림, 네트워크 설정, 그리고 팩토리 수준 API 엔드포인트(예: SetMAC 명령 주입 표면)에 접근할 수 있습니다.",
+    "cvss": {
+      "version": "3.x",
+      "vector": "",
+      "score": 9.8,
+      "severity": "CRITICAL",
+      "attack_vector": "",
+      "attack_complexity": "",
+      "privileges_required": "",
+      "user_interaction": ""
+    },
+    "cwes": [
+      "CWE-1392"
+    ],
+    "affected": [],
+    "references": [
+      "https://github.com/rwprimitives/jaiotlink-c492a-wifi-camera/blob/main/writeups/02-default-http-credentials.md",
+      "https://www.amazon.com/stores/JAIOTlink/page/3B00DC41-70C3-4BAA-925C-3D222C2633D5?lp_asin=B0GX1BNZ78&ref_=ast_bln&store_ref=bl_ast_dp_brandlogo_sto",
+      "https://www.vulncheck.com/advisories/jaiotlink-c492a-w6-hard-coded-credentials-via-anyka-ipc",
+      "https://nvd.nist.gov/vuln/detail/CVE-2026-58453"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-58453",
+    "added_at": "2026-07-07T16:08:18+09:00",
+    "tistory_original_url": "https://seculog-felix.tistory.com/94",
+    "migration_source": "Tistory category 845066 backup extraction"
+  },
+  {
+    "id": "CVE-2026-53492",
+    "published": "2026-07-04",
+    "last_modified": "",
+    "status": "Migrated from Tistory CVE post",
+    "description": "containerd는 오픈소스 컨테이너 런타임입니다. 2.3.2, 2.2.5, 2.1.9 버전 이전의 버전에서는 CRI 구현이 컨테이너 복원 시 신뢰할 수 없는 체크포인트 이미지 메타데이터 내에 포함된 컨테이너 장치 인터페이스(CDI) 주석을 잘못하게 신뢰합니다. 체크포인트에서 컨테이너를 복원할 때 containerd는 체크포인트 아카이브에서 CDI 관련 주석을 보존하고, 포드 생성 시 지정된 사양에만 의존하지 않습니다. 이로 인해 포드 생성 권한이 있는 사용자는 표준 Kubernetes 자원 할당 및 장치 플러그인 강제 적용을 우회할 수 있으며, 복원된 컨테이너에 임의의 CDI 편집(예: 장치 노드 및 호스트 마운트)을 삽입할 수 있습니다. 성공적인 공격을 위해서는 노드에 CDI가 활성화되어 있고, 요청된 장치에 해당하는 호스트 CDI 사양이 포함되어 있어야 합니다. CDI가 비활성화되거나 민감한 장치 사양이 누락된 환경은 영향을 받지 않습니다. 이 문제는 2.3.2, 2.2.5, 2.1.9 버전에서 수정되었습니다.",
+    "cvss": {
+      "version": "3.x",
+      "vector": "",
+      "score": 9.6,
+      "severity": "CRITICAL",
+      "attack_vector": "",
+      "attack_complexity": "",
+      "privileges_required": "",
+      "user_interaction": ""
+    },
+    "cwes": [
+      "CWE-20"
+    ],
+    "affected": [],
+    "references": [
+      "https://github.com/containerd/containerd/security/advisories/GHSA-33vj-92qq-66hc",
+      "https://nvd.nist.gov/vuln/detail/CVE-2026-53492"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-53492",
+    "added_at": "2026-07-07T16:08:18+09:00",
+    "tistory_original_url": "https://seculog-felix.tistory.com/96",
+    "migration_source": "Tistory category 845066 backup extraction"
+  },
+  {
+    "id": "CVE-2026-50195",
+    "published": "2026-07-04",
+    "last_modified": "",
+    "status": "Migrated from Tistory CVE post",
+    "description": "containerd는 오픈소스 컨테이너 런타임입니다. 2.3.2, 2.2.5, 2.1.9 버전 이전에는 CRI 체크포인트 임포트 과정에서 체크포인트 이미지의 구성에 명시된 이미지 참조를 검증하지 못하는 취약점이 존재했습니다. 이 취약점을 악용하여 pod를 생성할 수 있는 공격자는 특수하게 제작된 체크포인트 이미지를 사용해 containerd가 악성 이미지를 끌어다 놓고 임의의 로컬 태그를 할당하도록 강제할 수 있습니다. 이로 인해 노드의 로컬 이미지 캐시가 오염될 수 있습니다. 이후 동일 노드에 있는 다른 pod가 IfNotPresent(또는 Never) 끌어다 놓기 정책을 사용하여 오염된 태그를 사용하게 되면, 정당한 이미지 대신 공격자의 악성 이미지를 실행하게 되어 피해 pod의 정체성으로 임의의 코드를 실행할 수 있게 됩니다. 이 문제는 2.3.2, 2.2.5, 2.1.9 버전에서 수정되었습니다.",
+    "cvss": {
+      "version": "3.x",
+      "vector": "",
+      "score": 9.9,
+      "severity": "CRITICAL",
+      "attack_vector": "",
+      "attack_complexity": "",
+      "privileges_required": "",
+      "user_interaction": ""
+    },
+    "cwes": [
+      "CWE-345"
+    ],
+    "affected": [],
+    "references": [
+      "https://github.com/containerd/containerd/security/advisories/GHSA-cvxm-645q-p574",
+      "https://nvd.nist.gov/vuln/detail/CVE-2026-50195"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-50195",
+    "added_at": "2026-07-07T16:08:18+09:00",
+    "tistory_original_url": "https://seculog-felix.tistory.com/95",
+    "migration_source": "Tistory category 845066 backup extraction"
+  },
+  {
+    "id": "CVE-2026-41106",
+    "published": "2026-07-04",
+    "last_modified": "",
+    "status": "Migrated from Tistory CVE post",
+    "description": "M365 Copilot에서 '오픈 리디렉션' 취약점으로 인해 비인가 공격자가 네트워크를 통해 권한을 상승시킬 수 있습니다.",
+    "cvss": {
+      "version": "3.x",
+      "vector": "",
+      "score": 9.3,
+      "severity": "CRITICAL",
+      "attack_vector": "",
+      "attack_complexity": "",
+      "privileges_required": "",
+      "user_interaction": ""
+    },
+    "cwes": [
+      "CWE-601"
+    ],
+    "affected": [],
+    "references": [
+      "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-41106",
+      "https://nvd.nist.gov/vuln/detail/CVE-2026-41106"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-41106",
+    "added_at": "2026-07-07T16:08:17+09:00",
+    "tistory_original_url": "https://seculog-felix.tistory.com/101",
+    "migration_source": "Tistory category 845066 backup extraction"
+  },
+  {
+    "id": "CVE-2026-14544",
+    "published": "2026-07-03",
+    "last_modified": "2026-07-06",
+    "status": "Awaiting Analysis",
+    "description": "A flaw was found in HPLIP (HP Linux Imaging and Printing Software). This vulnerability, an incomplete fix for CVE-2026-8631, may allow a remote attacker to escalate privileges or achieve arbitrary code execution. This can occur through an integer overflow in the hpcups processing path when handling specially crafted print data.",
+    "cvss": {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "score": 9.8,
+      "severity": "CRITICAL",
+      "attack_vector": "네트워크",
+      "attack_complexity": "낮음",
+      "privileges_required": "없음",
+      "user_interaction": "없음"
+    },
+    "cwes": [
+      "CWE-190"
+    ],
+    "affected": [],
+    "references": [
+      "https://access.redhat.com/security/cve/CVE-2026-14544",
+      "https://bugzilla.redhat.com/show_bug.cgi?id=2496772"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-14544",
+    "added_at": "2026-07-07T16:07:22+09:00",
+    "tistory_original_url": "https://seculog-felix.tistory.com/108"
+  },
+  {
+    "id": "CVE-2026-8655",
+    "published": "2026-07-02",
+    "last_modified": "",
+    "status": "Migrated from Tistory CVE post",
+    "description": "NetScaler ADC 및 NetScaler Gateway에 존재하는 여러 메모리 오버플로우 취약점으로 인해, NetScaler ADC가 Oracle 유형의 LB로 구성되었거나 DNS 프록시로 구성되었거나 DNS 재귀 리졸버 배포로 구성된 경우 예측 불가능하거나 오류가 발생하거나 서비스 거부(Denial of Service)가 발생할 수 있습니다.",
+    "cvss": {
+      "version": "3.x",
+      "vector": "",
+      "score": 9.8,
+      "severity": "CRITICAL",
+      "attack_vector": "",
+      "attack_complexity": "",
+      "privileges_required": "",
+      "user_interaction": ""
+    },
+    "cwes": [
+      "CWE-119"
+    ],
+    "affected": [],
+    "references": [
+      "https://support.citrix.com/support-home/kbsearch/article?articleNumber=CTX696604",
+      "https://nvd.nist.gov/vuln/detail/CVE-2026-8655"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-8655",
+    "added_at": "2026-07-07T16:08:18+09:00",
+    "tistory_original_url": "https://seculog-felix.tistory.com/73",
+    "migration_source": "Tistory category 845066 backup extraction"
+  },
+  {
+    "id": "CVE-2026-8452",
+    "published": "2026-07-02",
+    "last_modified": "",
+    "status": "Migrated from Tistory CVE post",
+    "description": "메모리 오버플로우 취약점으로 인해 NetScaler ADC 및 NetScaler Gateway가 게이트웨이(SSL VPN, ICA Proxy, CVPN, RDP Proxy) 또는 AAA 가상 서버로 구성된 경우 예측 불가능하거나 오류가 발생하거나 서비스 거부(Denial of Service)로 이어질 수 있습니다.",
+    "cvss": {
+      "version": "3.x",
+      "vector": "",
+      "score": 9.8,
+      "severity": "CRITICAL",
+      "attack_vector": "",
+      "attack_complexity": "",
+      "privileges_required": "",
+      "user_interaction": ""
+    },
+    "cwes": [
+      "CWE-119"
+    ],
+    "affected": [],
+    "references": [
+      "https://support.citrix.com/support-home/kbsearch/article?articleNumber=CTX696604",
+      "https://nvd.nist.gov/vuln/detail/CVE-2026-8452"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-8452",
+    "added_at": "2026-07-07T16:08:18+09:00",
+    "tistory_original_url": "https://seculog-felix.tistory.com/72",
+    "migration_source": "Tistory category 845066 backup extraction"
+  },
+  {
+    "id": "CVE-2026-58172",
+    "published": "2026-07-01",
+    "last_modified": "",
+    "status": "Migrated from Tistory CVE post",
+    "description": "Ocelot 24.1.0 이전 버전에서, 커밋 f156fd4에서 수정된 보안 제어 우회 취약점이 존재합니다. 이 취약점은 차단된 클라이언트가 WebSocket 업그레이드 요청을 보내어 IP 기반 접근 제한을 우회할 수 있게 합니다. OcelotPipelineExtensions.cs에서 MapWhen을 통해 구성된 WebSocket 업그레이드 파이프라인 브랜치는 SecurityMiddleware를 누락시켜, 차단된 IP 주소에서 온 요청이 설정된 허용/차단 목록을 적용하지 않고 하류 서비스로 프록시되어 전달됩니다.",
+    "cvss": {
+      "version": "3.x",
+      "vector": "",
+      "score": 9.1,
+      "severity": "CRITICAL",
+      "attack_vector": "",
+      "attack_complexity": "",
+      "privileges_required": "",
+      "user_interaction": ""
+    },
+    "cwes": [
+      "CWE-288"
+    ],
+    "affected": [],
+    "references": [
+      "https://github.com/ThreeMammals/Ocelot/commit/f156fd4017ca25025fffdad8ec56c1d657dfb402",
+      "https://github.com/ThreeMammals/Ocelot/issues/2403",
+      "https://github.com/ThreeMammals/Ocelot/pull/2406",
+      "https://www.vulncheck.com/advisories/ocelot-ip-allow-block-list-bypass-for-websocket-upgrade-requests",
+      "https://nvd.nist.gov/vuln/detail/CVE-2026-58172"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-58172",
+    "added_at": "2026-07-07T16:08:18+09:00",
+    "tistory_original_url": "https://seculog-felix.tistory.com/52",
+    "migration_source": "Tistory category 845066 backup extraction"
+  },
+  {
+    "id": "CVE-2026-58166",
+    "published": "2026-07-01",
+    "last_modified": "",
+    "status": "Migrated from Tistory CVE post",
+    "description": "OpenBMB ChatDev 2.2.0 이전 버전은 커밋 4fd4da6에서 수정되었으나, 파일 업로드 엔드포인트에서 악의적인 multipart 파일명을 제공함으로써 인증되지 않은 원격 공격자가 임의의 파일을 작성하거나 삭제할 수 있는 경로 탐색 취약점이 존재합니다. 공격자는 POST 업로드 세션 엔드포인트에 경로 탐색 시퀀스나 절대 경로를 포함한 조작된 파일명을 보내면, save_upload_file에서 경로를 정화하지 않고 목적지 경로를 구성하게 되어, 서버 파일 시스템 상 공격자가 선택한 경로에 파일 작성 및 정리 작업이 수행될 수 있습니다.",
+    "cvss": {
+      "version": "3.x",
+      "vector": "",
+      "score": 9.1,
+      "severity": "CRITICAL",
+      "attack_vector": "",
+      "attack_complexity": "",
+      "privileges_required": "",
+      "user_interaction": ""
+    },
+    "cwes": [
+      "CWE-22"
+    ],
+    "affected": [],
+    "references": [
+      "https://github.com/OpenBMB/ChatDev/commit/4fd4da603801766b14ad8788649cfc1ad21f99a6",
+      "https://github.com/OpenBMB/ChatDev/issues/638",
+      "https://github.com/OpenBMB/ChatDev/pull/641",
+      "https://www.vulncheck.com/advisories/openbmb-chatdev-unauthenticated-path-traversal-in-upload-handler-allows-arbitrary-file-write-and-delete",
+      "https://nvd.nist.gov/vuln/detail/CVE-2026-58166"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-58166",
+    "added_at": "2026-07-07T16:08:19+09:00",
+    "tistory_original_url": "https://seculog-felix.tistory.com/51",
+    "migration_source": "Tistory category 845066 backup extraction"
+  },
+  {
+    "id": "CVE-2026-58138",
+    "published": "2026-07-01",
+    "last_modified": "",
+    "status": "Migrated from Tistory CVE post",
+    "description": "Orkes Conductor 3.21.21 버전에서 3.30.2 버전까지는 인증 없이 원격 코드 실행 취약점이 존재하여, 인증 전에 워크플로우 API 엔드포인트에 악의적인 JavaScript 또는 Python 표현식을 포함한 인라인 워크플로우 정의를 제출함으로써 원격 공격자가 임의의 OS 명령을 실행할 수 있습니다. 공격자는 INLINE, LAMBDA, DO_WHILE, SWITCH 작업 유형을 통해 HostAccess.ALL 또는 allowAllAccess(true)로 구성된 비사andbox 환경의 GraalVM 평가기를 악용하여 Java 반사 또는 직접 서브프로세스 호출을 통해 임의의 시스템 명령을 실행할 수 있습니다.",
+    "cvss": {
+      "version": "3.x",
+      "vector": "",
+      "score": 9.8,
+      "severity": "CRITICAL",
+      "attack_vector": "",
+      "attack_complexity": "",
+      "privileges_required": "",
+      "user_interaction": ""
+    },
+    "cwes": [
+      "CWE-94"
+    ],
+    "affected": [],
+    "references": [
+      "https://github.com/conductor-oss/conductor/commit/87a7d96aabbb706d6e84f812b93da5165028d18f",
+      "https://github.com/conductor-oss/conductor/commit/c691e35e768caeb802c9f06ecdd9674c80081af1",
+      "https://github.com/conductor-oss/conductor/releases/tag/v3.30.2",
+      "https://www.cve.org/CVERecord?id=CVE-2025-26074",
+      "https://www.vulncheck.com/advisories/orkes-conductor-unauthenticated-rce-via-graalvm-script-evaluators",
+      "https://nvd.nist.gov/vuln/detail/CVE-2026-58138"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-58138",
+    "added_at": "2026-07-07T16:08:18+09:00",
+    "tistory_original_url": "https://seculog-felix.tistory.com/53",
+    "migration_source": "Tistory category 845066 backup extraction"
+  },
+  {
+    "id": "CVE-2026-48286",
+    "published": "2026-07-01",
+    "last_modified": "",
+    "status": "Migrated from Tistory CVE post",
+    "description": "Adobe Campaign Classic(ACC) 7.4.3 빌드 9396 이전 버전은 현재 사용자의 맥락에서 임의의 코드 실행이 가능한 인증 오류 취약점에 영향을 받고 있습니다. 이 취약점의 악용은 사용자 상호작용이 필요하지 않습니다. 영향 범위가 변경되었습니다.",
+    "cvss": {
+      "version": "3.x",
+      "vector": "",
+      "score": 10.0,
+      "severity": "CRITICAL",
+      "attack_vector": "",
+      "attack_complexity": "",
+      "privileges_required": "",
+      "user_interaction": ""
+    },
+    "cwes": [
+      "CWE-863"
+    ],
+    "affected": [],
+    "references": [
+      "https://helpx.adobe.com/security/products/campaign/apsb26-69.html",
+      "https://nvd.nist.gov/vuln/detail/CVE-2026-48286"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-48286",
+    "added_at": "2026-07-07T16:08:19+09:00",
+    "tistory_original_url": "https://seculog-felix.tistory.com/50",
+    "migration_source": "Tistory category 845066 backup extraction"
+  },
+  {
+    "id": "CVE-2026-48277",
+    "published": "2026-07-01",
+    "last_modified": "",
+    "status": "Migrated from Tistory CVE post",
+    "description": "2025.9, 2023.20 및 이전 버전의 ColdFusion은 입력 검증이 잘못되어 현재 사용자 컨텍스트에서 임의 코드 실행이 발생할 수 있는 취약점에 영향을 받습니다. 이 문제를 악용하려면 사용자 상호작용이 필요하지 않습니다. 영향 범위가 변경되었습니다.",
+    "cvss": {
+      "version": "3.x",
+      "vector": "",
+      "score": 10.0,
+      "severity": "CRITICAL",
+      "attack_vector": "",
+      "attack_complexity": "",
+      "privileges_required": "",
+      "user_interaction": ""
+    },
+    "cwes": [
+      "CWE-20"
+    ],
+    "affected": [],
+    "references": [
+      "https://helpx.adobe.com/security/products/coldfusion/apsb26-68.html",
+      "https://nvd.nist.gov/vuln/detail/CVE-2026-48277"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-48277",
+    "added_at": "2026-07-07T16:08:19+09:00",
+    "tistory_original_url": "https://seculog-felix.tistory.com/49",
+    "migration_source": "Tistory category 845066 backup extraction"
+  },
+  {
+    "id": "CVE-2026-48276",
+    "published": "2026-07-01",
+    "last_modified": "",
+    "status": "Migrated from Tistory CVE post",
+    "description": "2025.9, 2023.20 및 이전 버전의 ColdFusion는 현재 사용자 컨텍스트에서 임의 코드 실행이 가능한 위험한 유형의 파일을 무제한으로 업로드할 수 있는 취약점으로 인해 영향을 받습니다. 이 문제를 악용하려면 사용자 상호작용이 필요하지 않습니다. 영향 범위가 변경되었습니다.",
+    "cvss": {
+      "version": "3.x",
+      "vector": "",
+      "score": 10.0,
+      "severity": "CRITICAL",
+      "attack_vector": "",
+      "attack_complexity": "",
+      "privileges_required": "",
+      "user_interaction": ""
+    },
+    "cwes": [
+      "CWE-434"
+    ],
+    "affected": [],
+    "references": [
+      "https://helpx.adobe.com/security/products/coldfusion/apsb26-68.html",
+      "https://nvd.nist.gov/vuln/detail/CVE-2026-48276"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-48276",
+    "added_at": "2026-07-07T16:08:19+09:00",
+    "tistory_original_url": "https://seculog-felix.tistory.com/48",
+    "migration_source": "Tistory category 845066 backup extraction"
+  },
+  {
+    "id": "CVE-2026-34106",
+    "published": "2026-07-01",
+    "last_modified": "2026-07-01",
+    "status": "Deferred",
+    "description": "Guardian language-system passes the id GET parameter directly into a PHP exec() call in subtitles.php (line 19) without sanitization: exec(\\\"php jobs/subtitle_rendering.php \\\".$login_session.\\\" \\\".$_GET['id'].\\\" ...\\\"). No authentication is required. An unauthenticated remote attacker can append shell metacharacters to the id parameter to execute arbitrary OS commands on the server.",
+    "cvss": {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "score": 9.8,
+      "severity": "CRITICAL",
+      "attack_vector": "네트워크",
+      "attack_complexity": "낮음",
+      "privileges_required": "없음",
+      "user_interaction": "없음"
+    },
+    "cwes": [
+      "CWE-78"
+    ],
+    "affected": [],
+    "references": [
+      "https://gist.github.com/cyberinforepo/d5b2771d82e1b31b8fc1c33052e08dad",
+      "https://www.vulncheck.com/advisories/guardian-language-system-unauthenticated-os-command-injection-via-id-parameter-in-subtitles-php"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-34106",
+    "added_at": "2026-07-07T16:07:28+09:00",
+    "tistory_original_url": "https://seculog-felix.tistory.com/93"
+  },
+  {
+    "id": "CVE-2026-34100",
+    "published": "2026-07-01",
+    "last_modified": "2026-07-01",
+    "status": "Deferred",
+    "description": "Guardian language-system passes the id GET parameter directly into an unsanitized SQL query in media.php (line 17): SELECT id, filename, extension, type, duration, owner, private FROM files where id = '\\\".$_GET['id'].\\\"'. An authenticated attacker can perform error-based SQL injection to extract database contents.",
+    "cvss": {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "score": 9.8,
+      "severity": "CRITICAL",
+      "attack_vector": "네트워크",
+      "attack_complexity": "낮음",
+      "privileges_required": "없음",
+      "user_interaction": "없음"
+    },
+    "cwes": [
+      "CWE-89"
+    ],
+    "affected": [],
+    "references": [
+      "https://gist.github.com/cyberinforepo/d5b2771d82e1b31b8fc1c33052e08dad",
+      "https://www.vulncheck.com/advisories/guardian-language-system-unauthenticated-sql-injection-via-id-parameter-in-media-php"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-34100",
+    "added_at": "2026-07-07T16:07:27+09:00",
+    "tistory_original_url": "https://seculog-felix.tistory.com/92"
+  },
+  {
+    "id": "CVE-2026-58053",
+    "published": "2026-06-30",
+    "last_modified": "",
+    "status": "Migrated from Tistory CVE post",
+    "description": "Gitea의 act_runner가 Docker 백엔드(0.262.0 버전의 act를 통해)를 사용할 때, 워크플로우의 container.options 문자열을 Docker 작업 컨테이너의 HostConfig에 전달합니다. 이 설정이 privileged: false로 구성된 경우, Privileged 플래그만 비활성화되고 --pid=host, --cap-add, --security-opt과 같은 옵션은 그대로 유지됩니다. Docker 백엔드 러너에서 워크플로우를 실행할 수 있는 사용자는, privileged 모드가 비활성화된 상태에서도 호스트 네임스페이스와 넓은 기능을 가진 작업 컨테이너를 생성하고, 이를 통해 호스트 시스템의 루트로 탈출할 수 있습니다.",
+    "cvss": {
+      "version": "3.x",
+      "vector": "",
+      "score": 9.9,
+      "severity": "CRITICAL",
+      "attack_vector": "",
+      "attack_complexity": "",
+      "privileges_required": "",
+      "user_interaction": ""
+    },
+    "cwes": [
+      "CWE-269"
+    ],
+    "affected": [],
+    "references": [
+      "https://github.com/bikini/exploitarium/tree/main/gitea-act-runner-container-options-poc",
+      "https://www.vulncheck.com/advisories/gitea-act-runner-container-hardening-bypass-via-workflow-container-options",
+      "https://nvd.nist.gov/vuln/detail/CVE-2026-58053"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-58053",
+    "added_at": "2026-07-07T16:08:19+09:00",
+    "tistory_original_url": "https://seculog-felix.tistory.com/39",
+    "migration_source": "Tistory category 845066 backup extraction"
+  },
+  {
+    "id": "CVE-2026-12073",
+    "published": "2026-06-30",
+    "last_modified": "2026-06-30",
+    "status": "Deferred",
+    "description": "The ProfileGrid – User Profiles, Groups and Communities plugin for WordPress is vulnerable to privilege escalation via account takeover in all versions up to, and including, 5.9.9.5. This is due to the plugin not validating a `user_login` on registration forms that don't contain this parameter, and not properly handling the error messages. This makes it possible for unauthenticated attackers to change email address of user account with ID=1 (usually an administrator), and leverage that to reset the user's password and gain access to their account.",
+    "cvss": {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "score": 9.8,
+      "severity": "CRITICAL",
+      "attack_vector": "네트워크",
+      "attack_complexity": "낮음",
+      "privileges_required": "없음",
+      "user_interaction": "없음"
+    },
+    "cwes": [
+      "CWE-639"
+    ],
+    "affected": [],
+    "references": [
+      "https://plugins.trac.wordpress.org/changeset/3578435/",
+      "https://www.wordfence.com/threat-intel/vulnerabilities/id/2d35279d-299e-4ca2-8f84-165284e058c8?source=cve"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-12073",
+    "added_at": "2026-07-07T16:07:19+09:00",
+    "tistory_original_url": "https://seculog-felix.tistory.com/40"
+  },
+  {
+    "id": "CVE-2026-11708",
+    "published": "2026-06-30",
+    "last_modified": "2026-07-02",
+    "status": "Analyzed",
+    "description": "IBM WebSphere Application Server 9.0, and 8.5 is affected by a cross-site scripting vulnerability in the administrative console's integrated help system.",
+    "cvss": {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:H/I:H/A:N",
+      "score": 9.3,
+      "severity": "CRITICAL",
+      "attack_vector": "네트워크",
+      "attack_complexity": "낮음",
+      "privileges_required": "없음",
+      "user_interaction": "필요"
+    },
+    "cwes": [
+      "CWE-79"
+    ],
+    "affected": [
+      "ibm websphere_application_server"
+    ],
+    "references": [
+      "https://www.ibm.com/support/pages/node/7278590"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-11708",
+    "added_at": "2026-07-07T16:07:17+09:00",
+    "tistory_original_url": "https://seculog-felix.tistory.com/58"
+  },
+  {
+    "id": "CVE-2026-10140",
+    "published": "2026-06-30",
+    "last_modified": "2026-07-02",
+    "status": "Analyzed",
+    "description": "IBM Langflow OSS 1.0.0 through 1.10.0 voice mode contains improper shared-state handling that allows reuse of API clients across tenant boundaries. An authenticated attacker can manipulate cache state to cause requests from other users to be processed using incorrect upstream API credentials, leading to cross-tenant billing and accountability misattribution.",
+    "cvss": {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:N",
+      "score": 9.6,
+      "severity": "CRITICAL",
+      "attack_vector": "네트워크",
+      "attack_complexity": "낮음",
+      "privileges_required": "낮음",
+      "user_interaction": "없음"
+    },
+    "cwes": [
+      "CWE-639"
+    ],
+    "affected": [
+      "langflow langflow"
+    ],
+    "references": [
+      "https://www.ibm.com/support/pages/node/7278209"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-10140",
+    "added_at": "2026-07-07T16:07:15+09:00",
+    "tistory_original_url": "https://seculog-felix.tistory.com/57"
+  },
+  {
+    "id": "CVE-2026-11720",
+    "published": "2026-06-29",
+    "last_modified": "2026-07-01",
+    "status": "Analyzed",
+    "description": "A path traversal vulnerability exists in the HTTP tool URL builder of googleapis/mcp-toolbox.\n\nWhen constructing downstream API requests, the URL builder substitutes user-controlled pathParams into the configured tool path and parses the resulting string as a relative URL. While it checks that the input does not alter the scheme, host, or user info, it relies on ResolveReference for the final URL resolution. Because dot segments (../) are normalized during this resolution step, an attacker can supply path parameters containing directory traversal sequences to escape the operator-configured path scope. This allows the client to coerce the toolbox into making requests to unintended endpoints on the same target host while forwarding the toolbox's configured credentials (e.g., bypassing a restricted path like /api/v1/users/{{.id}} to reach /admin/secrets).",
+    "cvss": {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N",
+      "score": 9.1,
+      "severity": "CRITICAL",
+      "attack_vector": "네트워크",
+      "attack_complexity": "낮음",
+      "privileges_required": "없음",
+      "user_interaction": "없음"
+    },
+    "cwes": [
+      "CWE-22"
+    ],
+    "affected": [
+      "google mcp_toolbox_for_databases"
+    ],
+    "references": [
+      "https://github.com/googleapis/mcp-toolbox/pull/3218"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-11720",
+    "added_at": "2026-07-07T16:07:18+09:00",
+    "tistory_original_url": "https://seculog-felix.tistory.com/71"
+  }
+]
