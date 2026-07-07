@@ -1,5 +1,64 @@
 [
   {
+    "id": "CVE-2026-59706",
+    "published": "2026-07-07",
+    "last_modified": "2026-07-07",
+    "status": "Received",
+    "description": "mem0 contains unauthenticated config API endpoints that expose LLM API keys in plaintext and allow server-side request forgery via attacker-controlled ollama_base_url parameter. Unauthenticated attackers can retrieve stored secrets like OpenAI API keys via GET /api/v1/config/ or trigger SSRF attacks by setting ollama_base_url to internal addresses like cloud IMDS via PUT /api/v1/config/mem0/llm endpoint.",
+    "cvss": {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:L/A:N",
+      "score": 9.3,
+      "severity": "CRITICAL",
+      "attack_vector": "네트워크",
+      "attack_complexity": "낮음",
+      "privileges_required": "없음",
+      "user_interaction": "없음"
+    },
+    "cwes": [
+      "CWE-306"
+    ],
+    "affected": [],
+    "references": [
+      "https://github.com/mem0ai/mem0",
+      "https://github.com/mem0ai/mem0/commit/a3154d59e52386d4e1189c1f5f44819868f76514",
+      "https://github.com/mem0ai/mem0/issues/6081",
+      "https://www.vulncheck.com/advisories/mem0-server-side-request-forgery-and-plaintext-api-key-exposure-via-unauthenticated-config-endpoints"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-59706",
+    "added_at": "2026-07-08T08:03:00+09:00"
+  },
+  {
+    "id": "CVE-2026-58473",
+    "published": "2026-07-07",
+    "last_modified": "2026-07-07",
+    "status": "Received",
+    "description": "Cognee before 1.2.0 contains an improper access control vulnerability that allows unauthenticated attackers to overwrite the global LLM provider configuration by self-registering an account and calling the settings endpoint, which performs no admin or superuser check. Attackers can redirect all LLM operations instance-wide to an attacker-controlled endpoint by exploiting the process-wide singleton configuration cache, enabling exfiltration of prompts, uploaded documents, extracted entities, and knowledge graph content from all users.",
+    "cvss": {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N",
+      "score": 9.1,
+      "severity": "CRITICAL",
+      "attack_vector": "네트워크",
+      "attack_complexity": "낮음",
+      "privileges_required": "없음",
+      "user_interaction": "없음"
+    },
+    "cwes": [
+      "CWE-306",
+      "CWE-862"
+    ],
+    "affected": [],
+    "references": [
+      "https://github.com/topoteretes/cognee/commit/d10b1b77e2157c6238fd4d1acb1923a048991699",
+      "https://github.com/topoteretes/cognee/issues/3084",
+      "https://github.com/topoteretes/cognee/releases/tag/v1.2.0",
+      "https://www.vulncheck.com/advisories/cognee-unauthorized-llm-configuration-overwrite-via-api-v1-settings"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-58473",
+    "added_at": "2026-07-08T08:03:00+09:00"
+  },
+  {
     "id": "CVE-2026-14345",
     "published": "2026-07-07",
     "last_modified": "2026-07-07",
@@ -30,6 +89,64 @@
     "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-14345",
     "added_at": "2026-07-07T16:07:21+09:00",
     "tistory_original_url": "https://seculog-felix.tistory.com/142"
+  },
+  {
+    "id": "CVE-2026-40141",
+    "published": "2026-07-06",
+    "last_modified": "2026-07-07",
+    "status": "Analyzed",
+    "description": "A high-severity vulnerability exists in a web application component of BeyondTrust Remote Support and Privileged Remote Access related to the processing of certain input parameters. Insufficient validation of user-supplied input may allow an authenticated attacker with limited privileges to access unintended resources or data beyond their authorization scope. Exploitation is restricted to accounts with specific permissions.",
+    "cvss": {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H",
+      "score": 9.9,
+      "severity": "CRITICAL",
+      "attack_vector": "네트워크",
+      "attack_complexity": "낮음",
+      "privileges_required": "낮음",
+      "user_interaction": "없음"
+    },
+    "cwes": [
+      "CWE-943"
+    ],
+    "affected": [
+      "beyondtrust privileged_remote_access",
+      "beyondtrust remote_support"
+    ],
+    "references": [
+      "https://www.beyondtrust.com/trust-center/security-advisories/bt26-03"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-40141",
+    "added_at": "2026-07-08T08:03:00+09:00"
+  },
+  {
+    "id": "CVE-2026-40139",
+    "published": "2026-07-06",
+    "last_modified": "2026-07-07",
+    "status": "Analyzed",
+    "description": "A critical pre-authentication vulnerability exists in the authentication subsystem of BeyondTrust Remote Support. Improper processing of authentication requests may allow an unauthenticated remote attacker to bypass access controls and gain unauthorized access to the appliance, including accounts with elevated privileges. Exploitation requires a specific authentication configuration to be enabled.",
+    "cvss": {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "score": 9.8,
+      "severity": "CRITICAL",
+      "attack_vector": "네트워크",
+      "attack_complexity": "낮음",
+      "privileges_required": "없음",
+      "user_interaction": "없음"
+    },
+    "cwes": [
+      "CWE-287"
+    ],
+    "affected": [
+      "beyondtrust privileged_remote_access",
+      "beyondtrust remote_support"
+    ],
+    "references": [
+      "https://www.beyondtrust.com/trust-center/security-advisories/bt26-03"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-40139",
+    "added_at": "2026-07-08T08:03:00+09:00"
   },
   {
     "id": "CVE-2026-14808",
