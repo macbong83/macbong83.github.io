@@ -1,0 +1,258 @@
+[
+  {
+    "id": "142",
+    "title": "CVE-2026-14345 — CVSS 9.8 CRITICAL 취약점 분석",
+    "status": "deleted",
+    "response": {
+      "data": 142
+    }
+  },
+  {
+    "id": "132",
+    "title": "CVE-2026-14808 — CVSS 9.8 CRITICAL 취약점 분석",
+    "status": "deleted",
+    "response": {
+      "data": 132
+    }
+  },
+  {
+    "id": "131",
+    "title": "CVE-2026-14807 — CVSS 9.8 CRITICAL 취약점 분석",
+    "status": "deleted",
+    "response": {
+      "data": 131
+    }
+  },
+  {
+    "id": "113",
+    "title": "CVE-2026-58289 — CVSS 9.0 CRITICAL 취약점 분석",
+    "status": "deleted",
+    "response": {
+      "data": 113
+    }
+  },
+  {
+    "id": "112",
+    "title": "CVE-2026-4321 — CVSS 9.8 CRITICAL 취약점 분석",
+    "status": "deleted",
+    "response": {
+      "data": 112
+    }
+  },
+  {
+    "id": "108",
+    "title": "CVE-2026-14544 — CVSS 9.8 CRITICAL 취약점 분석",
+    "status": "deleted",
+    "response": {
+      "data": 108
+    }
+  },
+  {
+    "id": "107",
+    "title": "CVE-2026-9725 — CVSS 9.1 CRITICAL 취약점 분석",
+    "status": "deleted",
+    "response": {
+      "data": 107
+    }
+  },
+  {
+    "id": "106",
+    "title": "CVE-2026-57100 — CVSS 9.9 CRITICAL 취약점 분석",
+    "status": "deleted",
+    "response": {
+      "data": 106
+    }
+  },
+  {
+    "id": "105",
+    "title": "CVE-2026-45499 — CVSS 9.9 CRITICAL 취약점 분석",
+    "status": "deleted",
+    "response": {
+      "data": 105
+    }
+  },
+  {
+    "id": "101",
+    "title": "CVE-2026-41106 — CVSS 9.3 CRITICAL 취약점 분석",
+    "status": "deleted",
+    "response": {
+      "data": 101
+    }
+  },
+  {
+    "id": "100",
+    "title": "CVE-2026-59099 — CVSS 9.1 CRITICAL 취약점 분석",
+    "status": "deleted",
+    "response": {
+      "data": 100
+    }
+  },
+  {
+    "id": "99",
+    "title": "CVE-2026-58466 — CVSS 9.8 CRITICAL 취약점 분석",
+    "status": "deleted",
+    "response": {
+      "data": 99
+    }
+  },
+  {
+    "id": "98",
+    "title": "CVE-2026-58455 — CVSS 9.8 CRITICAL 취약점 분석",
+    "status": "deleted",
+    "response": {
+      "data": 98
+    }
+  },
+  {
+    "id": "97",
+    "title": "CVE-2026-58457 — CVSS 9.8 CRITICAL 취약점 분석",
+    "status": "deleted",
+    "response": {
+      "data": 97
+    }
+  },
+  {
+    "id": "96",
+    "title": "CVE-2026-53492 — CVSS 9.6 CRITICAL 취약점 분석",
+    "status": "deleted",
+    "response": {
+      "data": 96
+    }
+  },
+  {
+    "id": "95",
+    "title": "CVE-2026-50195 — CVSS 9.9 CRITICAL 취약점 분석",
+    "status": "deleted",
+    "response": {
+      "data": 95
+    }
+  },
+  {
+    "id": "94",
+    "title": "CVE-2026-58453 — CVSS 9.8 CRITICAL 취약점 분석",
+    "status": "deleted",
+    "response": {
+      "data": 94
+    }
+  },
+  {
+    "id": "93",
+    "title": "CVE-2026-34106 — CVSS 9.8 CRITICAL 취약점 분석",
+    "status": "deleted",
+    "response": {
+      "data": 93
+    }
+  },
+  {
+    "id": "92",
+    "title": "CVE-2026-34100 — CVSS 9.8 CRITICAL 취약점 분석",
+    "status": "deleted",
+    "response": {
+      "data": 92
+    }
+  },
+  {
+    "id": "73",
+    "title": "CVE-2026-8655 — CVSS 9.8 CRITICAL 취약점 분석",
+    "status": "deleted",
+    "response": {
+      "data": 73
+    }
+  },
+  {
+    "id": "72",
+    "title": "CVE-2026-8452 — CVSS 9.8 CRITICAL 취약점 분석",
+    "status": "deleted",
+    "response": {
+      "data": 72
+    }
+  },
+  {
+    "id": "71",
+    "title": "CVE-2026-11720 — CVSS 9.1 CRITICAL 취약점 분석",
+    "status": "deleted",
+    "response": {
+      "data": 71
+    }
+  },
+  {
+    "id": "58",
+    "title": "CVE-2026-11708 — CVSS 9.3 CRITICAL 취약점 분석",
+    "status": "deleted",
+    "response": {
+      "data": 58
+    }
+  },
+  {
+    "id": "57",
+    "title": "CVE-2026-10140 — CVSS 9.6 CRITICAL 취약점 분석",
+    "status": "deleted",
+    "response": {
+      "data": 57
+    }
+  },
+  {
+    "id": "53",
+    "title": "CVE-2026-58138 — CVSS 9.8 CRITICAL 취약점 분석",
+    "status": "deleted",
+    "response": {
+      "data": 53
+    }
+  },
+  {
+    "id": "52",
+    "title": "CVE-2026-58172 — CVSS 9.1 CRITICAL 취약점 분석",
+    "status": "deleted",
+    "response": {
+      "data": 52
+    }
+  },
+  {
+    "id": "51",
+    "title": "CVE-2026-58166 — CVSS 9.1 CRITICAL 취약점 분석",
+    "status": "deleted",
+    "response": {
+      "data": 51
+    }
+  },
+  {
+    "id": "50",
+    "title": "CVE-2026-48286 — CVSS 10.0 CRITICAL 취약점 분석",
+    "status": "deleted",
+    "response": {
+      "data": 50
+    }
+  },
+  {
+    "id": "49",
+    "title": "CVE-2026-48277 — CVSS 10.0 CRITICAL 취약점 분석",
+    "status": "deleted",
+    "response": {
+      "data": 49
+    }
+  },
+  {
+    "id": "48",
+    "title": "CVE-2026-48276 — CVSS 10.0 CRITICAL 취약점 분석",
+    "status": "deleted",
+    "response": {
+      "data": 48
+    }
+  },
+  {
+    "id": "40",
+    "title": "CVE-2026-12073 — CVSS 9.8 CRITICAL 취약점 분석",
+    "status": "deleted",
+    "response": {
+      "data": 40
+    }
+  },
+  {
+    "id": "39",
+    "title": "CVE-2026-58053 — CVSS 9.9 CRITICAL 취약점 분석",
+    "status": "deleted",
+    "response": {
+      "data": 39
+    }
+  }
+]
