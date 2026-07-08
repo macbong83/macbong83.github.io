@@ -1,0 +1,104 @@
+{
+  "tagline": "글로벌 정보보안 뉴스레터",
+  "title": "보안 브리핑",
+  "date_display": "2026년 7월 8일 수요일",
+  "date_short": "2026.07.08",
+  "sources_line": "The Hacker News · BleepingComputer · SecurityWeek · KrebsOnSecurity · CISA · NCSC UK · Unit 42 · 보안뉴스 · 데일리시큐 · 전자신문",
+  "seo": {
+    "title": "CVE-2026-XXXXX 악용·랜섬웨어 급증 — 2026.07.08 보안 브리핑",
+    "description": "오늘 주요 취약점·침해 사고·위협 트렌드 요약.",
+    "keywords": "CVE, 랜섬웨어, 취약점, 침해사고, 보안"
+  },
+  "sections": [
+    {
+      "label": "취약점 & 공격",
+      "type": "cards",
+      "items": [
+        {
+          "severity": "critical",
+          "source": "SecurityWeek",
+          "headline": "Gitea 취약점 CVE-2026-20896 악용 증가 — 인증 우회로 저장소 및 비밀 정보 노출",
+          "url": "https://www.securityweek.com/critical-gitea-flaw-under-active-exploitation-researchers-warn/",
+          "summary": "Gitea의 심각한 취약점 CVE-2026-20896이 활발히 악용되고 있으며, 단일 HTTP 헤더로 인증을 우회하여 저장소와 민감한 정보에 접근할 수 있다. 시스디그 연구팀은 이 취약점이 현재까지 활발히 악용되고 있다고 경고했다."
+        },
+        {
+          "severity": "critical",
+          "source": "The Hacker News",
+          "headline": "Linux KVM 하이퍼바이저 취약점 CVE-2026-53359 — 가상 머신 탈출 위험",
+          "url": "https://thehackernews.com/2026/07/16-year-old-linux-kvm-flaw-lets-guest.html",
+          "summary": "Linux KVM 하이퍼바이저의 16년 된 use-after-free 버그인 CVE-2026-53359이 발견되었으며, 이는 가상 머신이 호스트 시스템으로 탈출할 수 있는 위험을 초래한다. 이 취약점은 인텔 및 AMD x86 시스템에서 공통적으로 영향을 받는다."
+        },
+        {
+          "severity": "high",
+          "source": "The Hacker News",
+          "headline": "Google Dialogflow CX 취약점 — 코드 블록 기반 에이전트 해킹 가능성",
+          "url": "https://thehackernews.com/2026/07/rogue-agent-flaw-could-have-let.html",
+          "summary": "Google Dialogflow CX의 심각한 취약점이 발견되었으며, 이는 편집 권한이 있는 코드 블록 기반 에이전트를 통해 동일한 클라우드 프로젝트 내 다른 에이전트를 해킹할 수 있다. 이로 인해 실시간 대화 내용과 사용자 데이터가 유출될 수 있다."
+        },
+        {
+          "severity": "high",
+          "source": "The Hacker News",
+          "headline": "Microsoft 365 기반 디바이스 코드 피싱 캠페인 — DEBULL 도구 악용",
+          "url": "https://thehackernews.com/2026/07/debull-tooling-abuses-microsoft-device.html",
+          "summary": "ZeroBEC 연구팀은 Microsoft 365 기반 디바이스 코드 피싱 캠페인을 조사한 결과, 협업 테마의 유인을 통해 피해자의 계정을 조작하는 DEBULL 도구가 사용되고 있다고 보고했다. 이는 가짜 Microsoft 패스워드 페이지를 사용하지 않고 악의적인 방법으로 진행된다."
+        },
+        {
+          "severity": "medium",
+          "source": "The Hacker News",
+          "headline": "Writer AI 플랫폼의 세션 분리 취약점 — 크로스 테넌트 공격 가능성",
+          "url": "https://thehackernews.com/2026/07/writer-ai-flaw-could-let-agent-previews.html",
+          "summary": "Writer AI 플랫폼에서 발견된 심각한 세션 분리 취약점이 보고되었으며, 이는 크로스 테넌트 공격을 통해 세션 토큰이 유출될 수 있다. 이 취약점은 'WriteOut'이라는 이름으로 알려져 있으며, 패치가 완료되었다."
+        }
+      ]
+    },
+    {
+      "label": "침해 사고",
+      "type": "cards",
+      "items": [
+        {
+          "severity": "incident",
+          "source": "SecurityWeek",
+          "headline": "미국 오하이오 주 카운티, 랜섬웨어 협박으로 100만 달러 지불",
+          "url": "https://www.securityweek.com/county-government-reportedly-paid-1-million-to-cyber-extortion-group/",
+          "summary": "미국 오하이오 주의 작은 카운티가 랜섬웨어 협박으로 100만 달러를 지불한 것으로 보고되었다. 이는 민감한 데이터 유출을 방지하기 위한 조치로, 공공 기관의 보안 취약점이 다시 한 번 드러났다."
+        },
+        {
+          "severity": "incident",
+          "source": "SecurityAffairs",
+          "headline": "스페인, 러시아와 연관된 해커 조직 관련 인물 체포",
+          "url": "https://securityaffairs.com/194894/hacktivism/spanish-police-arrest-man-linked-to-carr-z-pentest-and-noname05716.html",
+          "summary": "스페인 경찰은 FBI 주도의 수사에서 러시아와 연관된 해커 조직인 CARR 및 Z-Pentest와 관련된 인물을 체포했다. 이 인물은 프로 러시아 해커와의 협력, 공격 조정, 암호화폐 사용 등 혐의로 기소되었다."
+        },
+        {
+          "severity": "incident",
+          "source": "SecurityWeek",
+          "headline": "중국과 연관된 해커, 미국 및 캐나다 대학의 Roundcube 취약점 악용",
+          "url": "https://www.infosecurity-magazine.com/news/china-aligned-cluster-roundcube/",
+          "summary": "중국과 연관된 해커 그룹이 미국과 캐나다의 대학에서 사용하는 Roundcube 웹메일 소프트웨어의 취약점을 악용하여 사용자 자격 증명을 도용한 것으로 보고되었다. 이는 새로운 캠페인의 일부로, 현재까지 패치된 취약점이 악용되고 있다."
+        }
+      ]
+    },
+    {
+      "label": "동향 & 분석",
+      "type": "trends",
+      "items": [
+        {
+          "lead": "AI 기반 보안 위협 증가",
+          "body": "AI 기술이 보안 위협에 활용되고 있으며, 특히 생성형 AI가 소프트웨어 개발 속도를 높이지만, AI 생성 코드의 보안 검증이 필수적이다. 이는 의료SW 및 기타 중요한 시스템에서의 보안 취약점으로 이어질 수 있다."
+        },
+        {
+          "lead": "취약점 악용 빈도 증가",
+          "body": "최근 발견된 취약점들이 빠르게 악용되고 있으며, 특히 Gitea 및 Linux KVM의 취약점이 주목받고 있다. 이는 보안 패치의 시급성을 강조하며, 기업 및 기관의 보안 대응 체계가 중요해지고 있다."
+        },
+        {
+          "lead": "랜섬웨어 및 사이버 협박 사례 증가",
+          "body": "랜섬웨어 및 사이버 협박 사례가 증가하며, 특히 공공 기관 및 지역 정부가 피해를 입고 있다. 이는 보안 대응 및 예방 조치의 중요성을 다시 한 번 강조하고 있다."
+        },
+        {
+          "lead": "AI 기반 보안 감사 도입",
+          "body": "CISA는 Anthropic의 AI 모델인 Mythos를 사용하여 정부 소프트웨어의 취약점을 감사하고 있다. 이는 AI 기반 보안 감사의 새로운 트렌드로, 기업 및 정부 기관의 보안 체계에 큰 변화를 가져올 것으로 보인다."
+        }
+      ]
+    }
+  ]
+}
