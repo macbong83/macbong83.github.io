@@ -41,13 +41,82 @@
     <h1>CVE Archive</h1>
     <p>NVD 기반 Critical CVE를 누적 관리하는 별도 페이지입니다. 블로그에는 CVE 자동 글을 발행하지 않고, 이 페이지에만 기록합니다.</p>
     <div class="meta">
-      <span>Total 36</span>
-      <span>Updated 2026-07-08 08:03 KST</span>
+      <span>Total 40</span>
+      <span>Updated 2026-07-10 08:39 KST</span>
       <span>Source NVD API</span>
     </div>
   </section>
   <div class="notice">중복 제거 기준은 CVE ID입니다. 동일 CVE는 다시 추가하지 않습니다. 실제 악용 여부와 패치 우선순위는 CISA KEV, 벤더 권고, 자산 노출 여부와 함께 검토해야 합니다.</div>
 
+    <article class="cve-card" id="CVE-2026-58123">
+      <div class="cve-top">
+        <a class="cve-id" href="https://nvd.nist.gov/vuln/detail/CVE-2026-58123" target="_blank" rel="noopener">CVE-2026-58123</a>
+        <span class="score">CVSS 9.8 CRITICAL</span>
+      </div>
+      <p class="desc">Hermes WebUI before 0.51.788 contains an unauthenticated remote code execution vulnerability that allows remote attackers to execute arbitrary shell commands by accessing the embedded terminal API endpoints without credentials. Attackers can create a session, attach a PTY shell, and write arbitrary commands through the terminal input endpoint to achieve full command execution as the server process user via four sequential unauthenticated HTTP requests.</p>
+      <dl>
+        <div><dt>Published</dt><dd>2026-07-09</dd></div>
+        <div><dt>Last Modified</dt><dd>2026-07-09</dd></div>
+        <div><dt>Status</dt><dd>Received</dd></div>
+        <div><dt>Attack Vector</dt><dd>네트워크</dd></div>
+        <div><dt>Attack Complexity</dt><dd>낮음</dd></div>
+        <div><dt>Privileges</dt><dd>없음</dd></div>
+        <div><dt>User Interaction</dt><dd>없음</dd></div>
+        <div><dt>CWE</dt><dd>CWE-306</dd></div>
+        <div><dt>Affected</dt><dd>NVD CPE 기준 확인 필요</dd></div>
+      </dl>
+      <div class="vector"><code>CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H</code></div>
+      <details>
+        <summary>References</summary>
+        <ul><li><a href="https://github.com/nesquena/hermes-webui/commit/d257e5f36cfa9328600c8bde6f0de09a6ad9b6f4" target="_blank" rel="noopener">https://github.com/nesquena/hermes-webui/commit/d257e5f36cfa9328600c8bde6f0de09a6ad9b6f4</a></li><li><a href="https://github.com/nesquena/hermes-webui/pull/5268" target="_blank" rel="noopener">https://github.com/nesquena/hermes-webui/pull/5268</a></li><li><a href="https://github.com/nesquena/hermes-webui/releases/tag/v0.51.788" target="_blank" rel="noopener">https://github.com/nesquena/hermes-webui/releases/tag/v0.51.788</a></li><li><a href="https://www.vulncheck.com/advisories/hermes-webui-unauthenticated-rce-via-terminal-api" target="_blank" rel="noopener">https://www.vulncheck.com/advisories/hermes-webui-unauthenticated-rce-via-terminal-api</a></li></ul>
+      </details>
+    </article>
+    <article class="cve-card" id="CVE-2026-58122">
+      <div class="cve-top">
+        <a class="cve-id" href="https://nvd.nist.gov/vuln/detail/CVE-2026-58122" target="_blank" rel="noopener">CVE-2026-58122</a>
+        <span class="score">CVSS 9.1 CRITICAL</span>
+      </div>
+      <p class="desc">Hermes WebUI before 0.51.307 contains an authentication bypass vulnerability that allows unauthenticated remote attackers to circumvent local-origin IP restrictions on onboarding endpoints by supplying a spoofed X-Forwarded-For header with a loopback address. Attackers can exploit this bypass to perform server-side request forgery against internal services including cloud metadata endpoints, overwrite LLM provider configuration and API keys with attacker-controlled values, or initiate OAuth device-code flows to obtain persistent access tokens stored in auth.json.</p>
+      <dl>
+        <div><dt>Published</dt><dd>2026-07-09</dd></div>
+        <div><dt>Last Modified</dt><dd>2026-07-09</dd></div>
+        <div><dt>Status</dt><dd>Received</dd></div>
+        <div><dt>Attack Vector</dt><dd>네트워크</dd></div>
+        <div><dt>Attack Complexity</dt><dd>낮음</dd></div>
+        <div><dt>Privileges</dt><dd>없음</dd></div>
+        <div><dt>User Interaction</dt><dd>없음</dd></div>
+        <div><dt>CWE</dt><dd>CWE-348</dd></div>
+        <div><dt>Affected</dt><dd>NVD CPE 기준 확인 필요</dd></div>
+      </dl>
+      <div class="vector"><code>CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N</code></div>
+      <details>
+        <summary>References</summary>
+        <ul><li><a href="https://github.com/nesquena/hermes-webui/commit/70596e6993be0d4cee083c1c1a86f5e7ad5d57b7" target="_blank" rel="noopener">https://github.com/nesquena/hermes-webui/commit/70596e6993be0d4cee083c1c1a86f5e7ad5d57b7</a></li><li><a href="https://github.com/nesquena/hermes-webui/pull/3758" target="_blank" rel="noopener">https://github.com/nesquena/hermes-webui/pull/3758</a></li><li><a href="https://github.com/nesquena/hermes-webui/releases/tag/v0.51.307" target="_blank" rel="noopener">https://github.com/nesquena/hermes-webui/releases/tag/v0.51.307</a></li><li><a href="https://www.vulncheck.com/advisories/hermes-webui-authentication-bypass-via-x-forwarded-for-header-spoofing" target="_blank" rel="noopener">https://www.vulncheck.com/advisories/hermes-webui-authentication-bypass-via-x-forwarded-for-header-spoofing</a></li></ul>
+      </details>
+    </article>
+    <article class="cve-card" id="CVE-2026-58480">
+      <div class="cve-top">
+        <a class="cve-id" href="https://nvd.nist.gov/vuln/detail/CVE-2026-58480" target="_blank" rel="noopener">CVE-2026-58480</a>
+        <span class="score">CVSS 9.8 CRITICAL</span>
+      </div>
+      <p class="desc">Blocksy Companion Pro plugin for WordPress before 2.1.47 contains an unauthenticated arbitrary file upload vulnerability that allows attackers to upload executable files by bypassing extension validation in the save_attachments function exposed through the Advanced Reviews feature. Attackers can exploit the Custom Fonts extension&#x27;s flawed strpos() substring check by uploading double-extension filenames such as shell.woff2.php, causing the validation to pass on the substring match while the web server executes the file as PHP, achieving remote code execution.</p>
+      <dl>
+        <div><dt>Published</dt><dd>2026-07-08</dd></div>
+        <div><dt>Last Modified</dt><dd>2026-07-08</dd></div>
+        <div><dt>Status</dt><dd>Deferred</dd></div>
+        <div><dt>Attack Vector</dt><dd>네트워크</dd></div>
+        <div><dt>Attack Complexity</dt><dd>낮음</dd></div>
+        <div><dt>Privileges</dt><dd>없음</dd></div>
+        <div><dt>User Interaction</dt><dd>없음</dd></div>
+        <div><dt>CWE</dt><dd>CWE-434</dd></div>
+        <div><dt>Affected</dt><dd>NVD CPE 기준 확인 필요</dd></div>
+      </dl>
+      <div class="vector"><code>CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H</code></div>
+      <details>
+        <summary>References</summary>
+        <ul><li><a href="https://patchstack.com/database/wordpress/plugin/blocksy-companion/vulnerability/wordpress-blocksy-companion-plugin-2-1-46-unauthenticated-arbitrary-file-upload-vulnerability" target="_blank" rel="noopener">https://patchstack.com/database/wordpress/plugin/blocksy-companion/vulnerability/wordpress-blocksy-companion-plugin-2-1-46-unauthenticated-arbitrary-file-upload-vulnerability</a></li><li><a href="https://wordpress.org/plugins/blocksy-companion/" target="_blank" rel="noopener">https://wordpress.org/plugins/blocksy-companion/</a></li><li><a href="https://www.vulncheck.com/advisories/blocksy-companion-pro-unauthenticated-file-upload-via-save-attachments" target="_blank" rel="noopener">https://www.vulncheck.com/advisories/blocksy-companion-pro-unauthenticated-file-upload-via-save-attachments</a></li><li><a href="https://www.wordfence.com/threat-intel/vulnerabilities/wordpress-plugins/blocksy-companion/blocksy-companion-2146-unauthenticated-arbitrary-file-upload-via-blc-review-images-parameter" target="_blank" rel="noopener">https://www.wordfence.com/threat-intel/vulnerabilities/wordpress-plugins/blocksy-companion/blocksy-companion-2146-unauthenticated-arbitrary-file-upload-via-blc-review-images-parameter</a></li></ul>
+      </details>
+    </article>
     <article class="cve-card" id="CVE-2026-59706">
       <div class="cve-top">
         <a class="cve-id" href="https://nvd.nist.gov/vuln/detail/CVE-2026-59706" target="_blank" rel="noopener">CVE-2026-59706</a>
@@ -115,6 +184,29 @@
       <details>
         <summary>References</summary>
         <ul><li><a href="https://plugins.trac.wordpress.org/browser/wpfunnels/tags/3.12.5/admin/modules/settings/class-wpfnl-settings.php#L709" target="_blank" rel="noopener">https://plugins.trac.wordpress.org/browser/wpfunnels/tags/3.12.5/admin/modules/settings/class-wpfnl-settings.php#L709</a></li><li><a href="https://plugins.trac.wordpress.org/browser/wpfunnels/tags/3.12.5/includes/core/classes/class-wpfnl-ajax-handler.php#L39" target="_blank" rel="noopener">https://plugins.trac.wordpress.org/browser/wpfunnels/tags/3.12.5/includes/core/classes/class-wpfnl-ajax-handler.php#L39</a></li><li><a href="https://plugins.trac.wordpress.org/browser/wpfunnels/tags/3.12.5/includes/core/classes/class-wpfnl-ajax-handler.php#L523" target="_blank" rel="noopener">https://plugins.trac.wordpress.org/browser/wpfunnels/tags/3.12.5/includes/core/classes/class-wpfnl-ajax-handler.php#L523</a></li><li><a href="https://plugins.trac.wordpress.org/browser/wpfunnels/tags/3.12.5/public/class-wpfnl-public.php#L1185" target="_blank" rel="noopener">https://plugins.trac.wordpress.org/browser/wpfunnels/tags/3.12.5/public/class-wpfnl-public.php#L1185</a></li></ul>
+      </details>
+    </article>
+    <article class="cve-card" id="CVE-2026-54763">
+      <div class="cve-top">
+        <a class="cve-id" href="https://nvd.nist.gov/vuln/detail/CVE-2026-54763" target="_blank" rel="noopener">CVE-2026-54763</a>
+        <span class="score">CVSS 10.0 CRITICAL</span>
+      </div>
+      <p class="desc">Traefik is an HTTP reverse proxy and load balancer. Prior to v2.11.51, v3.6.22, and v3.7.6, Traefik&#x27;s BasicAuth, DigestAuth, and ForwardAuth middlewares strip canonical-cased spoofed identity headers before writing Traefik&#x27;s own value, but do not account for underscore-variant header names, which many backends normalize identically to dashed forms. An attacker able to reach a protected route can inject an underscore-variant header that survives Traefik&#x27;s stripping and reaches the backend alongside, or on the unauthenticated ForwardAuth authResponseHeaders path instead of, the value Traefik intended to set, spoofing identity or authorization context. This issue is fixed in versions v2.11.51, v3.6.22, and v3.7.6.</p>
+      <dl>
+        <div><dt>Published</dt><dd>2026-07-06</dd></div>
+        <div><dt>Last Modified</dt><dd>2026-07-08</dd></div>
+        <div><dt>Status</dt><dd>Analyzed</dd></div>
+        <div><dt>Attack Vector</dt><dd>네트워크</dd></div>
+        <div><dt>Attack Complexity</dt><dd>낮음</dd></div>
+        <div><dt>Privileges</dt><dd>없음</dd></div>
+        <div><dt>User Interaction</dt><dd>없음</dd></div>
+        <div><dt>CWE</dt><dd>CWE-178, CWE-290, CWE-345</dd></div>
+        <div><dt>Affected</dt><dd>traefik traefik</dd></div>
+      </dl>
+      <div class="vector"><code>CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:N</code></div>
+      <details>
+        <summary>References</summary>
+        <ul><li><a href="https://github.com/traefik/traefik/commit/108a5264473a2cbc8f12d6d691a3c6553cdf2c1b" target="_blank" rel="noopener">https://github.com/traefik/traefik/commit/108a5264473a2cbc8f12d6d691a3c6553cdf2c1b</a></li><li><a href="https://github.com/traefik/traefik/pull/13262" target="_blank" rel="noopener">https://github.com/traefik/traefik/pull/13262</a></li><li><a href="https://github.com/traefik/traefik/security/advisories/GHSA-x677-9fxg-v5c5" target="_blank" rel="noopener">https://github.com/traefik/traefik/security/advisories/GHSA-x677-9fxg-v5c5</a></li></ul>
       </details>
     </article>
     <article class="cve-card" id="CVE-2026-40141">

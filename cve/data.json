@@ -1,5 +1,92 @@
 [
   {
+    "id": "CVE-2026-58123",
+    "published": "2026-07-09",
+    "last_modified": "2026-07-09",
+    "status": "Received",
+    "description": "Hermes WebUI before 0.51.788 contains an unauthenticated remote code execution vulnerability that allows remote attackers to execute arbitrary shell commands by accessing the embedded terminal API endpoints without credentials. Attackers can create a session, attach a PTY shell, and write arbitrary commands through the terminal input endpoint to achieve full command execution as the server process user via four sequential unauthenticated HTTP requests.",
+    "cvss": {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "score": 9.8,
+      "severity": "CRITICAL",
+      "attack_vector": "네트워크",
+      "attack_complexity": "낮음",
+      "privileges_required": "없음",
+      "user_interaction": "없음"
+    },
+    "cwes": [
+      "CWE-306"
+    ],
+    "affected": [],
+    "references": [
+      "https://github.com/nesquena/hermes-webui/commit/d257e5f36cfa9328600c8bde6f0de09a6ad9b6f4",
+      "https://github.com/nesquena/hermes-webui/pull/5268",
+      "https://github.com/nesquena/hermes-webui/releases/tag/v0.51.788",
+      "https://www.vulncheck.com/advisories/hermes-webui-unauthenticated-rce-via-terminal-api"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-58123",
+    "added_at": "2026-07-10T08:39:47+09:00"
+  },
+  {
+    "id": "CVE-2026-58122",
+    "published": "2026-07-09",
+    "last_modified": "2026-07-09",
+    "status": "Received",
+    "description": "Hermes WebUI before 0.51.307 contains an authentication bypass vulnerability that allows unauthenticated remote attackers to circumvent local-origin IP restrictions on onboarding endpoints by supplying a spoofed X-Forwarded-For header with a loopback address. Attackers can exploit this bypass to perform server-side request forgery against internal services including cloud metadata endpoints, overwrite LLM provider configuration and API keys with attacker-controlled values, or initiate OAuth device-code flows to obtain persistent access tokens stored in auth.json.",
+    "cvss": {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N",
+      "score": 9.1,
+      "severity": "CRITICAL",
+      "attack_vector": "네트워크",
+      "attack_complexity": "낮음",
+      "privileges_required": "없음",
+      "user_interaction": "없음"
+    },
+    "cwes": [
+      "CWE-348"
+    ],
+    "affected": [],
+    "references": [
+      "https://github.com/nesquena/hermes-webui/commit/70596e6993be0d4cee083c1c1a86f5e7ad5d57b7",
+      "https://github.com/nesquena/hermes-webui/pull/3758",
+      "https://github.com/nesquena/hermes-webui/releases/tag/v0.51.307",
+      "https://www.vulncheck.com/advisories/hermes-webui-authentication-bypass-via-x-forwarded-for-header-spoofing"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-58122",
+    "added_at": "2026-07-10T08:39:47+09:00"
+  },
+  {
+    "id": "CVE-2026-58480",
+    "published": "2026-07-08",
+    "last_modified": "2026-07-08",
+    "status": "Deferred",
+    "description": "Blocksy Companion Pro plugin for WordPress before 2.1.47 contains an unauthenticated arbitrary file upload vulnerability that allows attackers to upload executable files by bypassing extension validation in the save_attachments function exposed through the Advanced Reviews feature. Attackers can exploit the Custom Fonts extension's flawed strpos() substring check by uploading double-extension filenames such as shell.woff2.php, causing the validation to pass on the substring match while the web server executes the file as PHP, achieving remote code execution.",
+    "cvss": {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "score": 9.8,
+      "severity": "CRITICAL",
+      "attack_vector": "네트워크",
+      "attack_complexity": "낮음",
+      "privileges_required": "없음",
+      "user_interaction": "없음"
+    },
+    "cwes": [
+      "CWE-434"
+    ],
+    "affected": [],
+    "references": [
+      "https://patchstack.com/database/wordpress/plugin/blocksy-companion/vulnerability/wordpress-blocksy-companion-plugin-2-1-46-unauthenticated-arbitrary-file-upload-vulnerability",
+      "https://wordpress.org/plugins/blocksy-companion/",
+      "https://www.vulncheck.com/advisories/blocksy-companion-pro-unauthenticated-file-upload-via-save-attachments",
+      "https://www.wordfence.com/threat-intel/vulnerabilities/wordpress-plugins/blocksy-companion/blocksy-companion-2146-unauthenticated-arbitrary-file-upload-via-blc-review-images-parameter"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-58480",
+    "added_at": "2026-07-10T08:39:47+09:00"
+  },
+  {
     "id": "CVE-2026-59706",
     "published": "2026-07-07",
     "last_modified": "2026-07-07",
@@ -89,6 +176,38 @@
     "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-14345",
     "added_at": "2026-07-07T16:07:21+09:00",
     "tistory_original_url": "https://seculog-felix.tistory.com/142"
+  },
+  {
+    "id": "CVE-2026-54763",
+    "published": "2026-07-06",
+    "last_modified": "2026-07-08",
+    "status": "Analyzed",
+    "description": "Traefik is an HTTP reverse proxy and load balancer. Prior to v2.11.51, v3.6.22, and v3.7.6, Traefik's BasicAuth, DigestAuth, and ForwardAuth middlewares strip canonical-cased spoofed identity headers before writing Traefik's own value, but do not account for underscore-variant header names, which many backends normalize identically to dashed forms. An attacker able to reach a protected route can inject an underscore-variant header that survives Traefik's stripping and reaches the backend alongside, or on the unauthenticated ForwardAuth authResponseHeaders path instead of, the value Traefik intended to set, spoofing identity or authorization context. This issue is fixed in versions v2.11.51, v3.6.22, and v3.7.6.",
+    "cvss": {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:N",
+      "score": 10.0,
+      "severity": "CRITICAL",
+      "attack_vector": "네트워크",
+      "attack_complexity": "낮음",
+      "privileges_required": "없음",
+      "user_interaction": "없음"
+    },
+    "cwes": [
+      "CWE-178",
+      "CWE-290",
+      "CWE-345"
+    ],
+    "affected": [
+      "traefik traefik"
+    ],
+    "references": [
+      "https://github.com/traefik/traefik/commit/108a5264473a2cbc8f12d6d691a3c6553cdf2c1b",
+      "https://github.com/traefik/traefik/pull/13262",
+      "https://github.com/traefik/traefik/security/advisories/GHSA-x677-9fxg-v5c5"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-54763",
+    "added_at": "2026-07-10T08:39:47+09:00"
   },
   {
     "id": "CVE-2026-40141",
