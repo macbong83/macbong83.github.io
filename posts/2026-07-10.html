@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CVE-2026-XXXXX 악용·랜섬웨어 급증 — 2026.07.10 보안 브리핑 | SecuLog</title>
+<meta name="description" content="오늘 주요 취약점·침해 사고·위협 트렌드 요약.">
+<meta name="keywords" content="CVE, 랜섬웨어, 취약점, 침해사고, 보안">
+<meta name="author" content="Felix">
+<meta property="og:type" content="article">
+<meta property="og:title" content="CVE-2026-XXXXX 악용·랜섬웨어 급증 — 2026.07.10 보안 브리핑">
+<meta property="og:description" content="오늘 주요 취약점·침해 사고·위협 트렌드 요약.">
+<meta property="og:url" content="https://macbong83.github.io/posts/2026-07-10.html">
+<meta property="og:site_name" content="SecuLog">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="CVE-2026-XXXXX 악용·랜섬웨어 급증 — 2026.07.10 보안 브리핑">
+<meta name="twitter:description" content="오늘 주요 취약점·침해 사고·위협 트렌드 요약.">
+<link rel="canonical" href="https://macbong83.github.io/posts/2026-07-10.html">
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: -apple-system, 'Malgun Gothic', 'Apple SD Gothic Neo', Arial, sans-serif; background: #f4f5f7; color: #1a1a2e; line-height: 1.6; }
+  a { text-decoration: none; color: inherit; }
+  .wrapper { max-width: 700px; margin: 32px auto; background: #ffffff; border-radius: 12px; overflow: hidden; box-shadow: 0 2px 20px rgba(0,0,0,0.08); }
+  .header { background: #eef0f4; padding: 28px 36px 24px; display: flex; align-items: center; justify-content: space-between; gap: 16px; border-bottom: 3px solid #0d1b3e; }
+  .wordmark { font-size: 26px; font-weight: 800; letter-spacing: -0.02em; color: #0d1b3e; }
+  .wordmark .accent { color: #2563eb; }
+  .header-meta { text-align: right; }
+  .header-meta .nl-label { font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase; color: #6b7488; margin-bottom: 4px; }
+  .header-meta .nl-title { font-size: 17px; font-weight: 700; color: #0d1b3e; }
+  .header-meta .nl-date { font-size: 12px; color: #8a93a8; margin-top: 3px; }
+  .body { padding: 28px 36px 32px; }
+  .section-label { font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase; color: #8a93a8; font-weight: 600; padding-bottom: 8px; border-bottom: 1px solid #e8eaed; margin-bottom: 4px; margin-top: 28px; }
+  .section-label:first-child { margin-top: 0; }
+  .card { display: block; padding: 16px 0; border-bottom: 1px solid #f0f1f3; transition: background 0.15s; }
+  .card:last-child { border-bottom: none; }
+  .card:hover { background: #f8f9fc; margin: 0 -36px; padding: 16px 36px; }
+  .card-top { display: flex; align-items: center; gap: 8px; margin-bottom: 6px; flex-wrap: wrap; }
+  .badge { font-size: 10px; font-weight: 700; padding: 3px 9px; border-radius: 4px; letter-spacing: 0.04em; }
+  .badge-critical { background: #fff0f0; color: #c0392b; border: 1px solid #f5c6c6; }
+  .badge-high { background: #fff7ee; color: #b94d00; border: 1px solid #fdd5a8; }
+  .badge-medium { background: #fff9e6; color: #856900; border: 1px solid #f9e0a0; }
+  .badge-incident { background: #f3f0ff; color: #6133c0; border: 1px solid #cfc0f5; }
+  .source { font-size: 11px; color: #a0a8b8; }
+  .card-headline { font-size: 14px; font-weight: 600; color: #0d1b3e; margin-bottom: 5px; line-height: 1.45; }
+  .card-headline .arrow { font-size: 12px; color: #2563eb; margin-left: 4px; opacity: 0; transition: opacity 0.15s; }
+  .card:hover .card-headline .arrow { opacity: 1; }
+  .card-summary { font-size: 13px; color: #4a5568; line-height: 1.65; }
+  .trend-box { background: #f8f9fc; border-radius: 10px; padding: 18px 20px; margin-top: 6px; }
+  .trend-row { display: flex; gap: 12px; padding: 10px 0; border-bottom: 1px solid #e8eaed; align-items: flex-start; }
+  .trend-row:last-child { border-bottom: none; padding-bottom: 0; }
+  .trend-num { font-size: 11px; font-weight: 700; color: #2563eb; min-width: 22px; padding-top: 2px; }
+  .trend-text { font-size: 13px; color: #4a5568; line-height: 1.6; }
+  .trend-text strong { color: #0d1b3e; font-weight: 600; }
+  .footer { background: #f4f5f7; border-top: 1px solid #e8eaed; padding: 16px 36px; font-size: 11px; color: #9aa0b0; line-height: 1.6; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 8px; }
+  .footer-meta { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; justify-content: flex-end; }
+  .linkedin-link { display: inline-flex; align-items: center; justify-content: center; min-height: 28px; padding: 6px 12px; border-radius: 6px; background: #0a66c2; color: #fff; font-size: 12px; font-weight: 800; letter-spacing: 0.01em; box-shadow: 0 6px 14px rgba(10,102,194,0.16); }
+  .linkedin-link:hover { background: #004182; color: #fff; }
+  .card-inner { display: flex; gap: 14px; }
+  .sev-bar { width: 3px; border-radius: 2px; flex-shrink: 0; margin: 3px 0; }
+  .sev-critical { background: #e74c3c; }
+  .sev-high { background: #e67e22; }
+  .sev-medium { background: #f0b429; }
+  .sev-incident { background: #7c3aed; }
+  .card-content { flex: 1; }
+  @media (max-width: 600px) {
+    .wrapper { margin: 0; border-radius: 0; box-shadow: none; }
+    .header { padding: 18px 20px 16px; flex-direction: column; align-items: flex-start; gap: 8px; }
+    .header-meta { text-align: left; }
+    .body { padding: 18px 20px 24px; }
+    .card:hover { margin: 0 -20px; padding: 16px 20px; }
+    .footer { padding: 14px 20px; flex-direction: column; align-items: flex-start; }
+    .footer-meta { justify-content: flex-start; }
+    .wordmark { font-size: 22px; }
+    .card-headline { font-size: 13px; }
+    .card-summary { font-size: 12px; }
+    .card-headline .arrow { opacity: 1; }
+  }
+</style>
+</head>
+<body>
+<div class="wrapper">
+  <div class="header">
+    <div class="header-logo">
+      <span class="wordmark">Secu<span class="accent">Log</span></span>
+    </div>
+    <div class="header-meta">
+      <div class="nl-label">글로벌 정보보안 뉴스레터</div>
+      <div class="nl-title">보안 브리핑</div>
+      <div class="nl-date">2026년 7월 10일 금요일</div>
+    </div>
+  </div>
+  <div class="body">
+    <div class="section-label">취약점 &amp; 공격</div>
+
+    <a class="card" href="https://gbhackers.com/hp-linux-imaging-and-printing-software-flaw/" target="_blank">
+      <div class="card-inner"><div class="sev-bar sev-critical"></div><div class="card-content">
+        <div class="card-top"><span class="badge badge-critical">긴급</span><span class="source">SecurityWeek</span></div>
+        <div class="card-headline">HP Linux Imaging and Printing Software 취약점(CVE-2026-14544) 악용 가능성<span class="arrow">↗</span></div>
+        <div class="card-summary">HP Linux Imaging and Printing Software(HPLIP)에 CVSS 9.8의 심각한 취약점(CVE-2026-14544)이 발견되어, 리눅스 시스템에서 권한 상승 및 원격 코드 실행 공격이 가능하다. 이 취약점은 즉시 패치가 필요하다.</div>
+      </div></div>
+    </a>
+
+    <a class="card" href="https://www.securityweek.com/microsoft-patches-defender-rogueplanet-vulnerability/" target="_blank">
+      <div class="card-inner"><div class="sev-bar sev-high"></div><div class="card-content">
+        <div class="card-top"><span class="badge badge-high">높음</span><span class="source">SecurityWeek</span></div>
+        <div class="card-headline">Microsoft Defender &#x27;RoguePlanet&#x27; 취약점(CVE-2026-50656) 패치<span class="arrow">↗</span></div>
+        <div class="card-summary">Microsoft는 Defender에서 발견된 &#x27;RoguePlanet&#x27; 취약점(CVE-2026-50656)을 패치했다. 이 취약점은 시스템 권한 상승이 가능하며 CVSS 7.8의 중대한 영향을 미친다.</div>
+      </div></div>
+    </a>
+
+    <a class="card" href="https://thehackernews.com/2026/07/new-gigawiper-windows-backdoor-bundles.html" target="_blank">
+      <div class="card-inner"><div class="sev-bar sev-high"></div><div class="card-content">
+        <div class="card-top"><span class="badge badge-high">높음</span><span class="source">The Hacker News</span></div>
+        <div class="card-headline">GigaWiper 윈도우 백도어 악용으로 시스템 파괴 가능성<span class="arrow">↗</span></div>
+        <div class="card-summary">Microsoft는 파괴적인 GigaWiper 윈도우 백도어를 분석했다. 이 백도어는 디스크 지우기, 파일 암호화, 원격 액세스 기능을 포함하며, 실제 공격에서 사용되고 있다.</div>
+      </div></div>
+    </a>
+
+    <a class="card" href="https://thehackernews.com/2026/07/npm-12-disables-install-scripts-by.html" target="_blank">
+      <div class="card-inner"><div class="sev-bar sev-medium"></div><div class="card-content">
+        <div class="card-top"><span class="badge badge-medium">중간</span><span class="source">The Hacker News</span></div>
+        <div class="card-headline">npm 12 설치 스크립트 기본 비활성화로 공급망 위험 감소<span class="arrow">↗</span></div>
+        <div class="card-summary">npm 12 버전에서는 설치 스크립트가 기본적으로 비활성화되며, 2FA 우회를 위한 GATs도 폐지되었다. 이는 공급망 위험을 줄이는 데 기여한다.</div>
+      </div></div>
+    </a>
+
+    <a class="card" href="https://thehackernews.com/2026/07/ghostapproval-symlink-flaws-could-let.html" target="_blank">
+      <div class="card-inner"><div class="sev-bar sev-medium"></div><div class="card-content">
+        <div class="card-top"><span class="badge badge-medium">중간</span><span class="source">The Hacker News</span></div>
+        <div class="card-headline">AI 코딩 도구 &#x27;GhostApproval&#x27; 공격으로 개발자 기계 해킹 가능성<span class="arrow">↗</span></div>
+        <div class="card-summary">Wiz는 AI 코딩 도구에서 &#x27;GhostApproval&#x27; 공격을 발견했다. 이 공격은 개발자의 컴퓨터에 악성 코드를 실행시킬 수 있으며, 기존의 심볼릭 링크 취약점을 악용한다.</div>
+      </div></div>
+    </a>
+
+    <div class="section-label">침해 사고</div>
+
+    <a class="card" href="https://www.securityweek.com/12-million-impacted-by-data-breach-at-japanese-telco-kddi/" target="_blank">
+      <div class="card-inner"><div class="sev-bar sev-incident"></div><div class="card-content">
+        <div class="card-top"><span class="badge badge-incident">사고</span><span class="source">SecurityWeek</span></div>
+        <div class="card-headline">KDDI 1200만 명 데이터 유출 사고<span class="arrow">↗</span></div>
+        <div class="card-summary">일본 통신사 KDDI에서 제3자 시스템의 제로데이 취약점을 악용한 해킹으로 1200만 명의 데이터가 유출되었다. 이는 심각한 개인정보 침해 사고로 분류된다.</div>
+      </div></div>
+    </a>
+
+    <a class="card" href="https://www.securityweek.com/mount-royal-university-confirms-data-stolen-in-ransomware-attack/" target="_blank">
+      <div class="card-inner"><div class="sev-bar sev-incident"></div><div class="card-content">
+        <div class="card-top"><span class="badge badge-incident">사고</span><span class="source">SecurityWeek</span></div>
+        <div class="card-headline">Mount Royal University 랜섬웨어 공격으로 데이터 유출<span class="arrow">↗</span></div>
+        <div class="card-summary">Mount Royal University는 랜섬웨어 공격으로 직원, 학생, 대학 데이터가 유출되었다. 공격자는 내부 네트워크에 침입하고 두 개의 드라이브를 삭제했다.</div>
+      </div></div>
+    </a>
+
+    <a class="card" href="https://gbhackers.com/assuranceamerica-confirms-massive-data-breach/" target="_blank">
+      <div class="card-inner"><div class="sev-bar sev-incident"></div><div class="card-content">
+        <div class="card-top"><span class="badge badge-incident">사고</span><span class="source">SecurityWeek</span></div>
+        <div class="card-headline">AssuranceAmerica 699만 명의 운전 면허 및 보험 정보 유출<span class="arrow">↗</span></div>
+        <div class="card-summary">AssuranceAmerica는 약 699만 명의 운전 면허 및 보험 정보가 유출된 대규모 데이터 유출 사고를 확인했다. 이는 미국 내 가장 큰 운전 면허 정보 유출 사례이다.</div>
+      </div></div>
+    </a>
+
+    <div class="section-label">동향 &amp; 분석</div>
+    <div class="trend-box">
+      <div class="trend-row">
+        <div class="trend-num">01</div>
+        <div class="trend-text"><strong>AI 기반 공격 증가</strong> — AI 기반의 공격이 급증하고 있으며, AI 코딩 도구를 악용한 &#x27;GhostApproval&#x27; 공격, &#x27;HalluSquatting&#x27; 공격 등이 발견되고 있다. 이는 AI 도구의 신뢰성과 보안 취약점을 악용한 새로운 공격 패턴이다.</div>
+      </div>
+      <div class="trend-row">
+        <div class="trend-num">02</div>
+        <div class="trend-text"><strong>랜섬웨어 진화</strong> — 랜섬웨어는 기존의 암호화 기능에 더해 디스크 지우기, 백도어 설치 등 다양한 기능을 갖추고 있다. &#x27;GodDamn&#x27; 랜섬웨어는 PoisonX 드라이버를 사용해 보안 소프트웨어를 비활성화하는 등 기술적 진화를 보이고 있다.</div>
+      </div>
+      <div class="trend-row">
+        <div class="trend-num">03</div>
+        <div class="trend-text"><strong>공급망 취약점 확대</strong> — npm, Chrome, Foxit 등 다양한 소프트웨어에서 공급망 취약점이 발견되고 있으며, 이는 개발자 및 기업의 보안에 심각한 영향을 미칠 수 있다. 패치 및 업데이트의 중요성이 강조된다.</div>
+      </div>
+      <div class="trend-row">
+        <div class="trend-num">04</div>
+        <div class="trend-text"><strong>국제적 협력 강화</strong> — INTERPOL의 &#x27;Operation First Light&#x27;는 5,811명의 체포와 293억 달러의 자산 압류를 성공적으로 수행하며, 국제적 협력이 보안 문제 해결에 중요한 역할을 하고 있음을 보여준다.</div>
+      </div>
+    </div>
+  </div>
+  <div class="footer">
+    <div>출처: The Hacker News · BleepingComputer · SecurityWeek · KrebsOnSecurity · CISA · NCSC UK · Unit 42 · 보안뉴스 · 데일리시큐 · 전자신문</div>
+    <div class="footer-meta">
+      <span>© 2026 Felix · SecuLog. 본 브리핑은 공개된 보안 뉴스를 기반으로 작성되었습니다.</span>
+    </div>
+  </div>
+</div>
+</body>
+</html>
