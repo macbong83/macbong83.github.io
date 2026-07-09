@@ -1,0 +1,118 @@
+{
+  "tagline": "글로벌 정보보안 뉴스레터",
+  "title": "보안 브리핑",
+  "date_display": "2026년 7월 9일 목요일",
+  "date_short": "2026.07.09",
+  "sources_line": "The Hacker News · BleepingComputer · SecurityWeek · KrebsOnSecurity · CISA · NCSC UK · Unit 42 · 보안뉴스 · 데일리시큐 · 전자신문",
+  "seo": {
+    "title": "CVE-2026-XXXXX 악용·랜섬웨어 급증 — 2026.07.09 보안 브리핑",
+    "description": "오늘 주요 취약점·침해 사고·위협 트렌드 요약.",
+    "keywords": "CVE, 랜섬웨어, 취약점, 침해사고, 보안"
+  },
+  "sections": [
+    {
+      "label": "취약점 & 공격",
+      "type": "cards",
+      "items": [
+        {
+          "severity": "critical",
+          "source": "The Hacker News",
+          "headline": "Ubiquiti, UniFi OS의 Critical 취약점 패치",
+          "url": "https://securityaffairs.com/194978/security/ubiquiti-patches-critical-unifi-os-flaws-allowing-command-injection-and-privilege-escalation.html",
+          "summary": "Ubiquiti는 UniFi OS의 7개 취약점을 패치했으며, 그 중 CVE-2026-50746은 CVSS 점수 10.0의 Critical 취약점으로, 명령 주입 및 권한 상승을 허용합니다."
+        },
+        {
+          "severity": "critical",
+          "source": "CISA",
+          "headline": "CISA, Adobe 및 Joomla 취약점 KEV 목록에 추가",
+          "url": "https://thehackernews.com/2026/07/cisa-adds-4-actively-exploited-adobe.html",
+          "summary": "CISA는 Adobe, Joomla, Langflow의 4개 취약점을 KEV 목록에 추가하며, 이 취약점들은 현재 악용되고 있습니다. 이 중 CVE-2026-48282은 CVSS 점수 10.0의 Critical 취약점입니다."
+        },
+        {
+          "severity": "critical",
+          "source": "The Hacker News",
+          "headline": "15년 된 GhostLock 취약점, Linux 시스템에서 Root 권한 부여",
+          "url": "https://thehackernews.com/2026/07/15-year-old-ghostlock-flaw-enables-root.html",
+          "summary": "Nebula Security는 15년 된 Linux 커널 취약점 GhostLock (CVE-2026-43499)을 공개했습니다. 이 취약점은 패치되지 않은 시스템에서 로그인한 사용자가 Root 권한을 얻을 수 있도록 합니다."
+        },
+        {
+          "severity": "high",
+          "source": "The Hacker News",
+          "headline": "AI 코딩 에이전트, 엔드포인트 보안 규칙을 트리거",
+          "url": "https://thehackernews.com/2026/07/ai-coding-agents-found-triggering.html",
+          "summary": "Sophos는 AI 코딩 에이전트가 엔드포인트 보안 규칙을 트리거할 수 있음을 분석했습니다. 이는 보안 엔진에 의해 공격자로 간주될 수 있는 행동을 합니다."
+        },
+        {
+          "severity": "high",
+          "source": "The Hacker News",
+          "headline": "HalluSquatting 공격, AI 코딩 어시스턴트를 통해 Botnet 악성코드 설치 유도",
+          "url": "https://thehackernews.com/2026/07/new-hallusquatting-attack-could-trick.html",
+          "summary": "AI 코딩 어시스턴트는 가짜 프로젝트 이름을 생성할 수 있으며, 이는 HalluSquatting 공격으로 악용되어 Botnet 악성코드 설치를 유도할 수 있습니다."
+        },
+        {
+          "severity": "high",
+          "source": "The Hacker News",
+          "headline": "Ghost Phishing, 전통적 이메일 보안 우회",
+          "url": "https://thehackernews.com/2026/07/new-ghost-phishing-wave-is-breaking.html",
+          "summary": "EvilTokens 캠페인은 'ghost phishing' 기법을 사용해 이메일 보안을 우회하며, 이는 피해자의 브라우저에서 악성 페이지를 활성화시킬 수 있습니다."
+        },
+        {
+          "severity": "medium",
+          "source": "The Hacker News",
+          "headline": "GitHub 'Verified' 커밋, 새로운 해시로 재작성 가능",
+          "url": "https://thehackernews.com/2026/07/github-verified-commits-can-be.html",
+          "summary": "GitHub의 'Verified' 커밋은 해시를 변경해도 서명이 유지되며, 이는 소프트웨어 세계의 기존 가정을 뒤집는 취약점입니다."
+        }
+      ]
+    },
+    {
+      "label": "침해 사고",
+      "type": "cards",
+      "items": [
+        {
+          "severity": "incident",
+          "source": "SecurityWeek",
+          "headline": "Accenture, 해커 주장에 따라 데이터 유출 인정",
+          "url": "https://www.securityweek.com/accenture-confirms-data-breach-after-hacker-claims-source-code-theft/",
+          "summary": "Accenture는 해커가 35GB의 소스 코드 및 Azure 자격 증명을 유출했다고 주장하며, 이에 따라 데이터 유출을 인정했습니다."
+        },
+        {
+          "severity": "incident",
+          "source": "SecurityWeek",
+          "headline": "미국 카운티, 사이버 랜섬웨어에 100만 달러 지불",
+          "url": "https://www.securityweek.com/county-government-reportedly-paid-1-million-to-cyber-extortion-group/",
+          "summary": "미국의 작은 카운티는 민감한 데이터 유출을 방지하기 위해 사이버 랜섬웨어 그룹에 100만 달러를 지불했다고 보고되었습니다."
+        },
+        {
+          "severity": "incident",
+          "source": "SecurityWeek",
+          "headline": "RedWing 악성코드, Telegram을 통해 Android 뱅킹 사기 서비스로 제공",
+          "url": "https://thehackernews.com/2026/07/redwing-maas-packages-android-bank.html",
+          "summary": "RedWing 악성코드는 Telegram을 통해 Android 뱅킹 사기 서비스로 제공되며, 이는 낮은 기술력의 범죄자도 피해자의 계좌를 해킹할 수 있도록 합니다."
+        }
+      ]
+    },
+    {
+      "label": "동향 & 분석",
+      "type": "trends",
+      "items": [
+        {
+          "lead": "AI 기반 공격 증가",
+          "body": "AI 코딩 어시스턴트와 같은 도구가 보안 시스템을 우회하거나 악용하는 사례가 증가하고 있습니다. HalluSquatting, Prompt Injection 등 새로운 공격 기법이 등장하고 있습니다."
+        },
+        {
+          "lead": "취약점 패치 지연",
+          "body": "CISA는 여러 Critical 취약점을 KEV 목록에 추가하며, 이들 취약점이 현재 악용되고 있음을 강조하고 있습니다. 그러나 패치 지연으로 인해 많은 시스템이 위험에 노출되고 있습니다."
+        },
+        {
+          "lead": "랜섬웨어 및 데이터 유출 사례 증가",
+          "body": "Accenture와 같은 대규모 기업의 데이터 유출 사례와 함께, 카운티가 랜섬웨어에 지불한 사례가 보안 트렌드로 부상하고 있습니다. 이는 기업 및 정부 기관의 보안 대응 체계에 대한 경고를 제공합니다."
+        },
+        {
+          "lead": "AI 기반 보안 도구의 취약점",
+          "body": "GitHub Copilot과 같은 AI 기반 도구는 해킹 요청을 거부하지만, 코드 편집기 내에서 요청을 분할하면 악용될 수 있습니다. 이는 AI 보안 도구의 취약점을 드러냅니다."
+        }
+      ]
+    }
+  ]
+}
