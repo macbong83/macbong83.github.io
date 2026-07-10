@@ -1,5 +1,63 @@
 [
   {
+    "id": "CVE-2026-61459",
+    "published": "2026-07-10",
+    "last_modified": "2026-07-10",
+    "status": "Undergoing Analysis",
+    "description": "MCP Server Kubernetes before 3.9.0 contains an argument injection vulnerability in structured tools (kubectl_get, kubectl_describe, kubectl_delete) that allows attackers to bypass the assertNoDangerousFlags security check by supplying resourceType and name parameters with leading dashes. Attackers can inject the --server flag to redirect kubectl commands to an attacker-controlled API server, causing the operator's bearer token to be transmitted externally and enabling full cluster compromise.",
+    "cvss": {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "score": 9.8,
+      "severity": "CRITICAL",
+      "attack_vector": "네트워크",
+      "attack_complexity": "낮음",
+      "privileges_required": "없음",
+      "user_interaction": "없음"
+    },
+    "cwes": [
+      "CWE-88"
+    ],
+    "affected": [],
+    "references": [
+      "https://github.com/Flux159/mcp-server-kubernetes/commit/d7890f50a4567bf5d9842541ba6f41e180227f9a",
+      "https://github.com/Flux159/mcp-server-kubernetes/issues/328",
+      "https://github.com/Flux159/mcp-server-kubernetes/pull/329",
+      "https://github.com/Flux159/mcp-server-kubernetes/releases/tag/3.9.0",
+      "https://www.vulncheck.com/advisories/mcp-server-kubernetes-argument-injection-via-kubectl-structured-tools"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-61459",
+    "added_at": "2026-07-11T08:00:37+09:00"
+  },
+  {
+    "id": "CVE-2026-59792",
+    "published": "2026-07-10",
+    "last_modified": "2026-07-10",
+    "status": "Analyzed",
+    "description": "In JetBrains IntelliJ IDEA before 2026.1.4, \n2026.2 code execution via path traversal in project workspace ID handling was possible",
+    "cvss": {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:H/I:H/A:L",
+      "score": 9.6,
+      "severity": "CRITICAL",
+      "attack_vector": "네트워크",
+      "attack_complexity": "낮음",
+      "privileges_required": "없음",
+      "user_interaction": "필요"
+    },
+    "cwes": [
+      "CWE-23"
+    ],
+    "affected": [
+      "jetbrains intellij_idea"
+    ],
+    "references": [
+      "https://www.jetbrains.com/privacy-security/issues-fixed/"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-59792",
+    "added_at": "2026-07-11T08:00:37+09:00"
+  },
+  {
     "id": "CVE-2026-15378",
     "published": "2026-07-10",
     "last_modified": "2026-07-10",
@@ -114,6 +172,37 @@
     "added_at": "2026-07-10T20:00:12+09:00"
   },
   {
+    "id": "CVE-2026-12761",
+    "published": "2026-07-10",
+    "last_modified": "2026-07-10",
+    "status": "Received",
+    "description": "The miniOrange Social Login and Register (Discord, Google, Twitter, LinkedIn) plugin for WordPress is vulnerable to authentication bypass leading to account takeover in versions up to and including 7.7.0. This is due to the Profile Completion flow accepting an arbitrary email address via the 'email_field' POST parameter without verifying that the email belongs to the identity returned by the OAuth provider, combined with send_otp_token() returning the SHA-512(customer_key || otp) transaction hash to the client where the OTP space is only 99,000 values (wp_rand(1000, 99999)) and the customer_key is a static option (empty on unregistered installs). This makes it possible for unauthenticated attackers to trigger an OTP email to an arbitrary admin's address, crack the OTP offline from the leaked hash in under a second, and submit the cracked OTP to mo_openid_social_login_validate_otp(), which logs the attacker in as the user whose email was supplied — granting full administrator access.",
+    "cvss": {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "score": 9.8,
+      "severity": "CRITICAL",
+      "attack_vector": "네트워크",
+      "attack_complexity": "낮음",
+      "privileges_required": "없음",
+      "user_interaction": "없음"
+    },
+    "cwes": [
+      "CWE-287"
+    ],
+    "affected": [],
+    "references": [
+      "https://plugins.trac.wordpress.org/browser/miniorange-login-openid/tags/7.7.0/class-mo-openid-login-widget.php#L1502",
+      "https://plugins.trac.wordpress.org/browser/miniorange-login-openid/tags/7.7.0/mo-openid-social-login-functions.php#L34",
+      "https://plugins.trac.wordpress.org/browser/miniorange-login-openid/tags/7.7.0/view/profile_completion/mo_openid_prof_comp_funct.php#L191",
+      "https://plugins.trac.wordpress.org/browser/miniorange-login-openid/tags/7.7.0/view/profile_completion/mo_openid_prof_comp_funct.php#L41",
+      "https://plugins.trac.wordpress.org/changeset/3592642/",
+      "https://www.wordfence.com/threat-intel/vulnerabilities/id/a56b59ce-29c2-4172-b703-a06d7bb28da0?source=cve"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-12761",
+    "added_at": "2026-07-11T08:00:37+09:00"
+  },
+  {
     "id": "CVE-2026-58123",
     "published": "2026-07-09",
     "last_modified": "2026-07-09",
@@ -170,6 +259,65 @@
     ],
     "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-58122",
     "added_at": "2026-07-10T08:39:47+09:00"
+  },
+  {
+    "id": "CVE-2026-56291",
+    "published": "2026-07-09",
+    "last_modified": "2026-07-10",
+    "status": "Analyzed",
+    "description": "The Joomla extension Balbooa Forms is vulnerable to an unauthenticated arbitrary file upload that allows uploading executable files and leads to full RCE.",
+    "cvss": {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "score": 9.8,
+      "severity": "CRITICAL",
+      "attack_vector": "네트워크",
+      "attack_complexity": "낮음",
+      "privileges_required": "없음",
+      "user_interaction": "없음"
+    },
+    "cwes": [
+      "CWE-434"
+    ],
+    "affected": [
+      "balbooa forms"
+    ],
+    "references": [
+      "https://mysites.guru/blog/balbooa-forms-unauthenticated-file-upload-flaw/",
+      "https://www.balbooa.com/joomla-forms",
+      "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-56291"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-56291",
+    "added_at": "2026-07-11T08:00:37+09:00"
+  },
+  {
+    "id": "CVE-2026-9074",
+    "published": "2026-07-08",
+    "last_modified": "2026-07-10",
+    "status": "Analyzed",
+    "description": "IBM API Connect 10.0.8.0 through 10.0.8.9 and 12.1.0.0 through 12.1.0.3 contains an unauthenticated SQL injection vulnerability in the password reset functionality.",
+    "cvss": {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N",
+      "score": 9.1,
+      "severity": "CRITICAL",
+      "attack_vector": "네트워크",
+      "attack_complexity": "낮음",
+      "privileges_required": "없음",
+      "user_interaction": "없음"
+    },
+    "cwes": [
+      "CWE-89"
+    ],
+    "affected": [
+      "ibm api_connect"
+    ],
+    "references": [
+      "https://www.ibm.com/support/pages/node/7278218",
+      "https://www.ibm.com/support/pages/node/7278909"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-9074",
+    "added_at": "2026-07-11T08:00:37+09:00"
   },
   {
     "id": "CVE-2026-58480",
