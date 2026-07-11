@@ -41,13 +41,82 @@
     <h1>CVE Archive</h1>
     <p>NVD 기반 Critical CVE를 누적 관리하는 별도 페이지입니다. 블로그에는 CVE 자동 글을 발행하지 않고, 이 페이지에만 기록합니다.</p>
     <div class="meta">
-      <span>Total 49</span>
-      <span>Updated 2026-07-11 08:00 KST</span>
+      <span>Total 52</span>
+      <span>Updated 2026-07-12 08:00 KST</span>
       <span>Source NVD API</span>
     </div>
   </section>
   <div class="notice">중복 제거 기준은 CVE ID입니다. 동일 CVE는 다시 추가하지 않습니다. 실제 악용 여부와 패치 우선순위는 CISA KEV, 벤더 권고, 자산 노출 여부와 함께 검토해야 합니다.</div>
 
+    <article class="cve-card" id="CVE-2026-61447">
+      <div class="cve-top">
+        <a class="cve-id" href="https://nvd.nist.gov/vuln/detail/CVE-2026-61447" target="_blank" rel="noopener">CVE-2026-61447</a>
+        <span class="score">CVSS 10.0 CRITICAL</span>
+      </div>
+      <p class="desc">PraisonAI before 1.6.78 contains a remote code execution vulnerability in CodeAgent._execute_python() that executes LLM-generated Python code without AST validation, import restrictions, or sandbox enforcement. Attackers can influence LLM output through prompt injection to exfiltrate all environment secrets and execute arbitrary code on the host system.</p>
+      <dl>
+        <div><dt>Published</dt><dd>2026-07-11</dd></div>
+        <div><dt>Last Modified</dt><dd>2026-07-11</dd></div>
+        <div><dt>Status</dt><dd>Received</dd></div>
+        <div><dt>Attack Vector</dt><dd>네트워크</dd></div>
+        <div><dt>Attack Complexity</dt><dd>낮음</dd></div>
+        <div><dt>Privileges</dt><dd>없음</dd></div>
+        <div><dt>User Interaction</dt><dd>없음</dd></div>
+        <div><dt>CWE</dt><dd>CWE-94</dd></div>
+        <div><dt>Affected</dt><dd>NVD CPE 기준 확인 필요</dd></div>
+      </dl>
+      <div class="vector"><code>CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:H</code></div>
+      <details>
+        <summary>References</summary>
+        <ul><li><a href="https://github.com/MervinPraison/PraisonAI/security/advisories/GHSA-2xv2-w8cq-5gxw" target="_blank" rel="noopener">https://github.com/MervinPraison/PraisonAI/security/advisories/GHSA-2xv2-w8cq-5gxw</a></li><li><a href="https://www.vulncheck.com/advisories/praisonai-before-remote-code-execution-via-codeagent" target="_blank" rel="noopener">https://www.vulncheck.com/advisories/praisonai-before-remote-code-execution-via-codeagent</a></li></ul>
+      </details>
+    </article>
+    <article class="cve-card" id="CVE-2026-61445">
+      <div class="cve-top">
+        <a class="cve-id" href="https://nvd.nist.gov/vuln/detail/CVE-2026-61445" target="_blank" rel="noopener">CVE-2026-61445</a>
+        <span class="score">CVSS 9.9 CRITICAL</span>
+      </div>
+      <p class="desc">PraisonAI before 4.6.78 contains arbitrary file write and command execution vulnerabilities in the AICoder component due to missing path validation and command sanitization in LLM tool calls. Attackers can inject malicious prompts through the chat interface to write files to arbitrary filesystem locations and execute arbitrary shell commands with root privileges.</p>
+      <dl>
+        <div><dt>Published</dt><dd>2026-07-11</dd></div>
+        <div><dt>Last Modified</dt><dd>2026-07-11</dd></div>
+        <div><dt>Status</dt><dd>Received</dd></div>
+        <div><dt>Attack Vector</dt><dd>네트워크</dd></div>
+        <div><dt>Attack Complexity</dt><dd>낮음</dd></div>
+        <div><dt>Privileges</dt><dd>낮음</dd></div>
+        <div><dt>User Interaction</dt><dd>없음</dd></div>
+        <div><dt>CWE</dt><dd>CWE-22</dd></div>
+        <div><dt>Affected</dt><dd>NVD CPE 기준 확인 필요</dd></div>
+      </dl>
+      <div class="vector"><code>CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H</code></div>
+      <details>
+        <summary>References</summary>
+        <ul><li><a href="https://github.com/MervinPraison/PraisonAI/security/advisories/GHSA-9mp3-24cc-77mg" target="_blank" rel="noopener">https://github.com/MervinPraison/PraisonAI/security/advisories/GHSA-9mp3-24cc-77mg</a></li><li><a href="https://www.vulncheck.com/advisories/praisonai-before-arbitrary-file-write-and-command-execution" target="_blank" rel="noopener">https://www.vulncheck.com/advisories/praisonai-before-arbitrary-file-write-and-command-execution</a></li></ul>
+      </details>
+    </article>
+    <article class="cve-card" id="CVE-2026-60090">
+      <div class="cve-top">
+        <a class="cve-id" href="https://nvd.nist.gov/vuln/detail/CVE-2026-60090" target="_blank" rel="noopener">CVE-2026-60090</a>
+        <span class="score">CVSS 9.8 CRITICAL</span>
+      </div>
+      <p class="desc">PraisonAI before 4.6.78 fails to validate the caller-controlled dimension argument in the PGVector and Cassandra knowledge-store create_collection() backends. Although schema, keyspace, and collection-name identifiers are validated, the dimension value (declared as int but not enforced at runtime) is interpolated directly into the vector column of the generated CREATE TABLE DDL. A caller able to influence collection-creation dimensions can pass a string such as &#x27;3); DROP TABLE tenant_secrets; --&#x27; to inject SQL/CQL tokens into the statement executed by the database driver.</p>
+      <dl>
+        <div><dt>Published</dt><dd>2026-07-11</dd></div>
+        <div><dt>Last Modified</dt><dd>2026-07-11</dd></div>
+        <div><dt>Status</dt><dd>Received</dd></div>
+        <div><dt>Attack Vector</dt><dd>네트워크</dd></div>
+        <div><dt>Attack Complexity</dt><dd>낮음</dd></div>
+        <div><dt>Privileges</dt><dd>없음</dd></div>
+        <div><dt>User Interaction</dt><dd>없음</dd></div>
+        <div><dt>CWE</dt><dd>CWE-89</dd></div>
+        <div><dt>Affected</dt><dd>NVD CPE 기준 확인 필요</dd></div>
+      </dl>
+      <div class="vector"><code>CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H</code></div>
+      <details>
+        <summary>References</summary>
+        <ul><li><a href="https://github.com/MervinPraison/PraisonAI/commit/3aa9cbc2bd49c23a32be0a89a5e620d13d843eab" target="_blank" rel="noopener">https://github.com/MervinPraison/PraisonAI/commit/3aa9cbc2bd49c23a32be0a89a5e620d13d843eab</a></li><li><a href="https://github.com/MervinPraison/PraisonAI/security/advisories/GHSA-wf65-4jjx-q444" target="_blank" rel="noopener">https://github.com/MervinPraison/PraisonAI/security/advisories/GHSA-wf65-4jjx-q444</a></li><li><a href="https://www.vulncheck.com/advisories/praisonai-before-sql-cql-injection-via-vector-dimension" target="_blank" rel="noopener">https://www.vulncheck.com/advisories/praisonai-before-sql-cql-injection-via-vector-dimension</a></li></ul>
+      </details>
+    </article>
     <article class="cve-card" id="CVE-2026-61459">
       <div class="cve-top">
         <a class="cve-id" href="https://nvd.nist.gov/vuln/detail/CVE-2026-61459" target="_blank" rel="noopener">CVE-2026-61459</a>
