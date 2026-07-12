@@ -1,5 +1,60 @@
 [
   {
+    "id": "CVE-2026-56271",
+    "published": "2026-07-12",
+    "last_modified": "2026-07-12",
+    "status": "Received",
+    "description": "Flowise before 3.1.0 (affected versions 3.0.13 and earlier) uses weak hardcoded default JWT secrets ('auth_token', 'refresh_token') and default audience and issuer values ('AUDIENCE', 'ISSUER') in the enterprise passport authentication middleware (packages/server/src/enterprise/middleware/passport/index.ts). When the corresponding environment variables (JWT_AUTH_TOKEN_SECRET, JWT_REFRESH_TOKEN_SECRET, JWT_AUDIENCE, JWT_ISSUER) are not set, the application silently falls back to these publicly known defaults, allowing an attacker to forge valid JWTs and impersonate any user, including administrators, resulting in authentication bypass.",
+    "cvss": {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "score": 9.8,
+      "severity": "CRITICAL",
+      "attack_vector": "네트워크",
+      "attack_complexity": "낮음",
+      "privileges_required": "없음",
+      "user_interaction": "없음"
+    },
+    "cwes": [
+      "CWE-321"
+    ],
+    "affected": [],
+    "references": [
+      "https://github.com/FlowiseAI/Flowise/security/advisories/GHSA-cc4f-hjpj-g9p8",
+      "https://www.vulncheck.com/advisories/flowise-weak-default-jwt-secrets-in-authentication-middleware"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-56271",
+    "added_at": "2026-07-13T08:00:18+09:00"
+  },
+  {
+    "id": "CVE-2026-56260",
+    "published": "2026-07-12",
+    "last_modified": "2026-07-12",
+    "status": "Received",
+    "description": "Crawl4AI before 0.8.7 contains an arbitrary file write vulnerability in the Docker API server's /screenshot and /pdf endpoints. The output_path parameter accepts arbitrary filesystem paths without validation, allowing an attacker to supply absolute or path-traversal values to write to any location writable by the application's user, overwriting server files and causing denial of service.",
+    "cvss": {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:H",
+      "score": 9.1,
+      "severity": "CRITICAL",
+      "attack_vector": "네트워크",
+      "attack_complexity": "낮음",
+      "privileges_required": "없음",
+      "user_interaction": "없음"
+    },
+    "cwes": [
+      "CWE-22"
+    ],
+    "affected": [],
+    "references": [
+      "https://github.com/unclecode/crawl4ai",
+      "https://github.com/unclecode/crawl4ai/security/advisories/GHSA-365w-hqf6-vxfg",
+      "https://www.vulncheck.com/advisories/crawl4ai-arbitrary-file-write-via-output-path-parameter"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-56260",
+    "added_at": "2026-07-13T08:00:18+09:00"
+  },
+  {
     "id": "CVE-2026-61447",
     "published": "2026-07-11",
     "last_modified": "2026-07-11",

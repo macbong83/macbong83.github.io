@@ -41,13 +41,59 @@
     <h1>CVE Archive</h1>
     <p>NVD 기반 Critical CVE를 누적 관리하는 별도 페이지입니다. 블로그에는 CVE 자동 글을 발행하지 않고, 이 페이지에만 기록합니다.</p>
     <div class="meta">
-      <span>Total 52</span>
-      <span>Updated 2026-07-12 08:00 KST</span>
+      <span>Total 54</span>
+      <span>Updated 2026-07-13 08:00 KST</span>
       <span>Source NVD API</span>
     </div>
   </section>
   <div class="notice">중복 제거 기준은 CVE ID입니다. 동일 CVE는 다시 추가하지 않습니다. 실제 악용 여부와 패치 우선순위는 CISA KEV, 벤더 권고, 자산 노출 여부와 함께 검토해야 합니다.</div>
 
+    <article class="cve-card" id="CVE-2026-56271">
+      <div class="cve-top">
+        <a class="cve-id" href="https://nvd.nist.gov/vuln/detail/CVE-2026-56271" target="_blank" rel="noopener">CVE-2026-56271</a>
+        <span class="score">CVSS 9.8 CRITICAL</span>
+      </div>
+      <p class="desc">Flowise before 3.1.0 (affected versions 3.0.13 and earlier) uses weak hardcoded default JWT secrets (&#x27;auth_token&#x27;, &#x27;refresh_token&#x27;) and default audience and issuer values (&#x27;AUDIENCE&#x27;, &#x27;ISSUER&#x27;) in the enterprise passport authentication middleware (packages/server/src/enterprise/middleware/passport/index.ts). When the corresponding environment variables (JWT_AUTH_TOKEN_SECRET, JWT_REFRESH_TOKEN_SECRET, JWT_AUDIENCE, JWT_ISSUER) are not set, the application silently falls back to these publicly known defaults, allowing an attacker to forge valid JWTs and impersonate any user, including administrators, resulting in authentication bypass.</p>
+      <dl>
+        <div><dt>Published</dt><dd>2026-07-12</dd></div>
+        <div><dt>Last Modified</dt><dd>2026-07-12</dd></div>
+        <div><dt>Status</dt><dd>Received</dd></div>
+        <div><dt>Attack Vector</dt><dd>네트워크</dd></div>
+        <div><dt>Attack Complexity</dt><dd>낮음</dd></div>
+        <div><dt>Privileges</dt><dd>없음</dd></div>
+        <div><dt>User Interaction</dt><dd>없음</dd></div>
+        <div><dt>CWE</dt><dd>CWE-321</dd></div>
+        <div><dt>Affected</dt><dd>NVD CPE 기준 확인 필요</dd></div>
+      </dl>
+      <div class="vector"><code>CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H</code></div>
+      <details>
+        <summary>References</summary>
+        <ul><li><a href="https://github.com/FlowiseAI/Flowise/security/advisories/GHSA-cc4f-hjpj-g9p8" target="_blank" rel="noopener">https://github.com/FlowiseAI/Flowise/security/advisories/GHSA-cc4f-hjpj-g9p8</a></li><li><a href="https://www.vulncheck.com/advisories/flowise-weak-default-jwt-secrets-in-authentication-middleware" target="_blank" rel="noopener">https://www.vulncheck.com/advisories/flowise-weak-default-jwt-secrets-in-authentication-middleware</a></li></ul>
+      </details>
+    </article>
+    <article class="cve-card" id="CVE-2026-56260">
+      <div class="cve-top">
+        <a class="cve-id" href="https://nvd.nist.gov/vuln/detail/CVE-2026-56260" target="_blank" rel="noopener">CVE-2026-56260</a>
+        <span class="score">CVSS 9.1 CRITICAL</span>
+      </div>
+      <p class="desc">Crawl4AI before 0.8.7 contains an arbitrary file write vulnerability in the Docker API server&#x27;s /screenshot and /pdf endpoints. The output_path parameter accepts arbitrary filesystem paths without validation, allowing an attacker to supply absolute or path-traversal values to write to any location writable by the application&#x27;s user, overwriting server files and causing denial of service.</p>
+      <dl>
+        <div><dt>Published</dt><dd>2026-07-12</dd></div>
+        <div><dt>Last Modified</dt><dd>2026-07-12</dd></div>
+        <div><dt>Status</dt><dd>Received</dd></div>
+        <div><dt>Attack Vector</dt><dd>네트워크</dd></div>
+        <div><dt>Attack Complexity</dt><dd>낮음</dd></div>
+        <div><dt>Privileges</dt><dd>없음</dd></div>
+        <div><dt>User Interaction</dt><dd>없음</dd></div>
+        <div><dt>CWE</dt><dd>CWE-22</dd></div>
+        <div><dt>Affected</dt><dd>NVD CPE 기준 확인 필요</dd></div>
+      </dl>
+      <div class="vector"><code>CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:H</code></div>
+      <details>
+        <summary>References</summary>
+        <ul><li><a href="https://github.com/unclecode/crawl4ai" target="_blank" rel="noopener">https://github.com/unclecode/crawl4ai</a></li><li><a href="https://github.com/unclecode/crawl4ai/security/advisories/GHSA-365w-hqf6-vxfg" target="_blank" rel="noopener">https://github.com/unclecode/crawl4ai/security/advisories/GHSA-365w-hqf6-vxfg</a></li><li><a href="https://www.vulncheck.com/advisories/crawl4ai-arbitrary-file-write-via-output-path-parameter" target="_blank" rel="noopener">https://www.vulncheck.com/advisories/crawl4ai-arbitrary-file-write-via-output-path-parameter</a></li></ul>
+      </details>
+    </article>
     <article class="cve-card" id="CVE-2026-61447">
       <div class="cve-top">
         <a class="cve-id" href="https://nvd.nist.gov/vuln/detail/CVE-2026-61447" target="_blank" rel="noopener">CVE-2026-61447</a>
