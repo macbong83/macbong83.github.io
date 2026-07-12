@@ -5,20 +5,27 @@
     <link>https://macbong83.github.io/</link>
     <description>EDR · SASE · CTEM · 취약점 관리 중심의 매일 보안 브리핑</description>
     <language>ko</language>
-    <lastBuildDate>Sun, 12 Jul 2026 08:00:15 +0900</lastBuildDate>
+    <lastBuildDate>Sun, 12 Jul 2026 09:03:30 +0900</lastBuildDate>
     <item>
       <title>SecuLog 보안 브리핑 — vendor-weekly-2026-07-06</title>
       <link>https://macbong83.github.io/posts/vendor-weekly-2026-07-06.html</link>
       <guid isPermaLink="true">https://macbong83.github.io/posts/vendor-weekly-2026-07-06.html</guid>
-      <pubDate>Sun, 12 Jul 2026 08:00:15 +0900</pubDate>
+      <pubDate>Sun, 12 Jul 2026 09:03:30 +0900</pubDate>
       <description></description>
     </item>
     <item>
       <title>SecuLog 보안 브리핑 — vendor-weekly-2026-06-30</title>
       <link>https://macbong83.github.io/posts/vendor-weekly-2026-06-30.html</link>
       <guid isPermaLink="true">https://macbong83.github.io/posts/vendor-weekly-2026-06-30.html</guid>
-      <pubDate>Sun, 12 Jul 2026 08:00:15 +0900</pubDate>
+      <pubDate>Sun, 12 Jul 2026 09:03:30 +0900</pubDate>
       <description></description>
+    </item>
+    <item>
+      <title>SecuLog 보안 브리핑 — 2026.07.12</title>
+      <link>https://macbong83.github.io/posts/2026-07-12.html</link>
+      <guid isPermaLink="true">https://macbong83.github.io/posts/2026-07-12.html</guid>
+      <pubDate>Sun, 12 Jul 2026 08:00:00 +0900</pubDate>
+      <description>jscrambler npm 패키지 악용으로 인한 정보 유출 / Zimbra 클래식 웹 클라이언트 저장형 XSS 취약점 / U-Boot 6개의 심각한 취약점 발견 / Injective Labs GitHub 저장소 악용으로 인한 지갑 키 유출</description>
     </item>
     <item>
       <title>SecuLog 보안 브리핑 — 2026.07.11</title>

@@ -1,0 +1,111 @@
+{
+  "tagline": "글로벌 정보보안 뉴스레터",
+  "title": "보안 브리핑",
+  "date_display": "2026년 7월 12일 일요일",
+  "date_short": "2026.07.12",
+  "sources_line": "The Hacker News · BleepingComputer · SecurityWeek · KrebsOnSecurity · CISA · NCSC UK · Unit 42 · 보안뉴스 · 데일리시큐 · 전자신문",
+  "seo": {
+    "title": "CVE-2026-XXXXX 악용·랜섬웨어 급증 — 2026.07.12 보안 브리핑",
+    "description": "오늘 주요 취약점·침해 사고·위협 트렌드 요약.",
+    "keywords": "CVE, 랜섬웨어, 취약점, 침해사고, 보안"
+  },
+  "sections": [
+    {
+      "label": "취약점 & 공격",
+      "type": "cards",
+      "items": [
+        {
+          "severity": "critical",
+          "source": "The Hacker News",
+          "headline": "jscrambler npm 패키지 악용으로 인한 정보 유출",
+          "url": "https://thehackernews.com/2026/07/compromised-jscrambler-8140-npm-release.html",
+          "summary": "jscrambler npm 패키지가 악용되어 설치 시 인포스테이러가 실행되는 취약점이 발견되었다. Windows, macOS, Linux 플랫폼에 영향을 주며, 즉시 패치가 권장된다."
+        },
+        {
+          "severity": "critical",
+          "source": "The Hacker News",
+          "headline": "Zimbra 클래식 웹 클라이언트 저장형 XSS 취약점",
+          "url": "https://thehackernews.com/2026/07/critical-zimbra-flaw-could-let-crafted_0483473395.html",
+          "summary": "Zimbra 클래식 웹 클라이언트에 저장형 XSS 취약점이 발견되어 악의적인 이메일을 통해 임의 코드 실행이 가능하다. 즉시 패치가 권장된다."
+        },
+        {
+          "severity": "critical",
+          "source": "The Hacker News",
+          "headline": "U-Boot 6개의 심각한 취약점 발견",
+          "url": "https://thehackernews.com/2026/07/six-new-u-boot-flaws-could-let.html",
+          "summary": "Binarly는 U-Boot에 6개의 심각한 취약점을 발견했으며, 이는 홈 라우터, 스마트 카메라 등 다양한 장치에 영향을 줄 수 있다. 즉시 패치가 권장된다."
+        },
+        {
+          "severity": "high",
+          "source": "The Hacker News",
+          "headline": "Injective Labs GitHub 저장소 악용으로 인한 지갑 키 유출",
+          "url": "https://thehackernews.com/2026/07/injective-labs-github-compromise-pushes.html",
+          "summary": "Injective Labs의 GitHub 저장소가 악용되어 npm 레지스트리에 악성 패키지가 배포되어 암호화폐 지갑의 개인 키를 유출할 수 있다. 즉시 패치가 권장된다."
+        },
+        {
+          "severity": "high",
+          "source": "The Hacker News",
+          "headline": "Progress Software ShareFile 고객 대상 보안 위협 대응",
+          "url": "https://thehackernews.com/2026/07/urgent-progress-tells-sharefile.html",
+          "summary": "Progress Software는 ShareFile 고객에게 보안 위협 대응을 위해 Storage Zone Controller 서버를 중지하도록 요청했다. 즉시 조치가 필요하다."
+        },
+        {
+          "severity": "medium",
+          "source": "CISA",
+          "headline": "iCagenda 및 Balbooa Forms 취약점 KEV 목록에 추가",
+          "url": "https://securityaffairs.com/195164/security/u-s-cisa-adds-icagenda-and-balbooa-forms-flaws-to-its-known-exploited-vulnerabilities-catalog.html",
+          "summary": "CISA는 iCagenda 및 Balbooa Forms의 취약점을 KEV 목록에 추가했다. 이 취약점은 즉시 패치가 권장된다."
+        }
+      ]
+    },
+    {
+      "label": "침해 사고",
+      "type": "cards",
+      "items": [
+        {
+          "severity": "incident",
+          "source": "데일리시큐",
+          "headline": "가상화폐 지갑 431개에서 500만 달러 피해 발생",
+          "url": "https://www.dailysecu.com/news/articleView.html?idxno=207566",
+          "summary": "‘일 블룸’ 취약점이 실제 공격에 악용되어 500만 달러 이상의 피해가 발생했다. 이 취약점은 복구 문구를 예측할 수 있어 개인키가 유출될 수 있다."
+        },
+        {
+          "severity": "incident",
+          "source": "데일리시큐",
+          "headline": "랜섬웨어 협상가가 고객사 정보 유출로 징역 70개월 선고",
+          "url": "https://www.dailysecu.com/news/articleView.html?idxno=207565",
+          "summary": "랜섬웨어 협상가가 고객사 정보를 랜섬웨어 조직에 넘기고 직접 공격에 가담한 혐의로 징역 70개월을 선고받았다."
+        },
+        {
+          "severity": "incident",
+          "source": "데일리시큐",
+          "headline": "락앤락 130만 명 개인정보 유출 사고 발생",
+          "url": "https://www.ddaily.co.kr/page/view/2026071015485568340",
+          "summary": "락앤락의 개인정보 유출 사고로 130만 명의 개인정보가 유출된 것으로 확인되었다. 이에 대한 보안 대응이 필요하다."
+        }
+      ]
+    },
+    {
+      "label": "동향 & 분석",
+      "type": "trends",
+      "items": [
+        {
+          "lead": "취약점 악용 증가",
+          "body": "2026년 상반기 취약점 악용 사례가 급증하고 있으며, 특히 npm, GitHub 등 개발자 플랫폼을 통한 악성 패키지 배포가 주요한 공격 수단으로 나타났다."
+        },
+        {
+          "lead": "랜섬웨어 피해 확대",
+          "body": "랜섬웨어 공격이 기업 및 개인을 대상으로 확대되고 있으며, 협상가의 배신 사례가 보안 위협으로 작용하고 있다."
+        },
+        {
+          "lead": "AI 기반 보안 위협 증가",
+          "body": "AI 기술이 보안 위협에 악용되는 사례가 증가하고 있으며, 특히 지갑 키 유출, 정보 유출 등에 대한 위협이 심각하다."
+        },
+        {
+          "lead": "보안 인프라 취약점 심화",
+          "body": "U-Boot, BIOS 등 기반 시스템의 취약점이 지속적으로 발견되고 있으며, 이는 보안 인프라의 취약성을 드러내고 있다."
+        }
+      ]
+    }
+  ]
+}
