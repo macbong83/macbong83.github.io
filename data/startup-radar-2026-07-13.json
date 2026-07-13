@@ -1,0 +1,24 @@
+{
+  "date": "2026-07-13",
+  "slug": "startup-radar-2026-07-13",
+  "type": "startup-radar",
+  "count": 1,
+  "companies": [
+    {
+      "name": "QIZ Security",
+      "country": "Israel",
+      "founded": null,
+      "stage": "Series B",
+      "funding": "$17M",
+      "category": "Other",
+      "solution": "QIZ Security has developed a cryptographic posture and post-quantum cryptography management platform that helps organizations govern their cryptographic assets securely.",
+      "problem": "Organizations struggle with managing cryptographic keys and ensuring secure post-quantum cryptography practices as quantum computing threats emerge.",
+      "competitors": "N/A",
+      "korea_point": "As quantum computing threats grow, QIZ Security's platform could be a strategic fit for Korean enterprises looking to future-proof their cryptographic infrastructure.",
+      "urls": {
+        "homepage": "https://www.qizsecurity.com",
+        "source": "https://www.securityweek.com/qiz-security-raises-17-million-for-cryptographic-governance-platform/"
+      }
+    }
+  ]
+}
