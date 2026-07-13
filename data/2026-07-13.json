@@ -1,0 +1,83 @@
+{
+  "tagline": "글로벌 정보보안 뉴스레터",
+  "title": "보안 브리핑",
+  "date_display": "2026년 7월 13일 월요일",
+  "date_short": "2026.07.13",
+  "sources_line": "The Hacker News · BleepingComputer · SecurityWeek · KrebsOnSecurity · CISA · NCSC UK · Unit 42 · 보안뉴스 · 데일리시큐 · 전자신문",
+  "seo": {
+    "title": "CVE-2026-XXXXX 악용·랜섬웨어 급증 — 2026.07.13 보안 브리핑",
+    "description": "오늘 주요 취약점·침해 사고·위협 트렌드 요약.",
+    "keywords": "CVE, 랜섬웨어, 취약점, 침해사고, 보안"
+  },
+  "sections": [
+    {
+      "label": "취약점 & 공격",
+      "type": "cards",
+      "items": [
+        {
+          "severity": "critical",
+          "source": "The Hacker News",
+          "headline": "jscrambler npm 패키지 악용으로 Rust 정보 수집 악성코드 설치",
+          "url": "https://thehackernews.com/2026/07/compromised-jscrambler-8140-npm-release.html",
+          "summary": "jscrambler npm 패키지가 악용되어 설치 시 Rust 기반의 정보 수집 악성코드가 자동 실행되는 것으로 확인되었다. 이는 Windows, macOS, Linux 플랫폼에서 모두 영향을 받는 심각한 취약점이다."
+        },
+        {
+          "severity": "high",
+          "source": "CISA",
+          "headline": "iCagenda 및 Balbooa Forms 취약점, CISA KEV 목록에 추가",
+          "url": "https://securityaffairs.com/195164/security/u-s-cisa-adds-icagenda-and-balbooa-forms-flaws-to-its-known-exploited-vulnerabilities-catalog.html",
+          "summary": "CISA는 iCagenda와 Balbooa Forms의 취약점을 KEV(알려진 악용 취약점) 목록에 추가하며, 이들 취약점이 실제 악용되고 있음을 경고했다. 해당 취약점은 주요 인프라에 영향을 줄 수 있다."
+        },
+        {
+          "severity": "high",
+          "source": "Security Affairs",
+          "headline": "U-Boot 심각한 취약점, 수백만 대 기기의 보안 부트 영향",
+          "url": "https://securityaffairs.com/195150/security/critical-u-boot-bugs-undermine-secure-boot-on-millions-of-devices.html",
+          "summary": "Binarly는 U-Boot에서 6개의 심각한 취약점을 발견했으며, 이는 수백만 대의 홈 라우터, 스마트 카메라, 서버 관리 컨트롤러 등에 영향을 줄 수 있다."
+        },
+        {
+          "severity": "medium",
+          "source": "SecurityWeek",
+          "headline": "GitHub API 대규모 정보 수집 캠페인, 'ghost account' 악용",
+          "url": "https://www.securityweek.com/ghost-accounts-abuse-github-api-in-mass-recon-campaign/",
+          "summary": "ghost account를 이용한 GitHub API 대규모 정보 수집 캠페인이 진행되고 있으며, 조직의 저장소 및 멤버 정보를 수집하는 것으로 확인되었다."
+        }
+      ]
+    },
+    {
+      "label": "침해 사고",
+      "type": "cards",
+      "items": [
+        {
+          "severity": "incident",
+          "source": "Security Affairs",
+          "headline": "Ryuk 랜섬웨어 멤버, 미국 기업 대상 공격으로 유죄 판결",
+          "url": "https://securityaffairs.com/195216/uncategorized/ryuk-ransomware-member-pleads-guilty-over-attacks-on-u-s-organizations.html",
+          "summary": "Ryuk 랜섬웨어와 관련된 멤버가 미국 기업을 대상으로 한 공격으로 유죄 판결을 받았으며, 최대 15년의 징역형을 선고받았다."
+        }
+      ]
+    },
+    {
+      "label": "동향 & 분석",
+      "type": "trends",
+      "items": [
+        {
+          "lead": "AI 기반 공격 증가",
+          "body": "AI 기술이 악용되어 새로운 형태의 공격이 증가하고 있으며, 특히 프롬프트 삽입 공격을 통한 C2 에이전트 생성이 주목받고 있다."
+        },
+        {
+          "lead": "npm 패키지 악용 사례 증가",
+          "body": "npm 패키지가 악용되어 악성코드가 자동 설치되는 사례가 증가하고 있으며, 개발자들의 주의가 필요하다."
+        },
+        {
+          "lead": "국제적 정보 수집 캠페인 확대",
+          "body": "국제적으로 여러 그룹이 정보 수집을 위한 캠페인을 확대하고 있으며, GitHub API 및 공공 포털을 악용하는 사례가 늘고 있다."
+        },
+        {
+          "lead": "보안 인프라 취약점 심화",
+          "body": "보안 인프라에서의 취약점이 지속적으로 발견되고 있으며, 특히 U-Boot와 같은 핵심 부트로더의 취약점은 수많은 기기를 위협하고 있다."
+        }
+      ]
+    }
+  ]
+}
