@@ -1,5 +1,115 @@
 [
   {
+    "id": "CVE-2026-62327",
+    "published": "2026-07-13",
+    "last_modified": "2026-07-13",
+    "status": "Received",
+    "description": "9Router through version 0.4.41 contain an unauthenticated information disclosure vulnerability that allows remote attackers to retrieve plaintext API keys for all connected AI provider accounts by sending a single unauthenticated request to the /api/usage/stats endpoint. Attackers can exploit the missing authentication middleware on the Next.js API route to obtain full API key strings alongside token counts, cost breakdowns, and request metadata, enabling unauthorized use of connected AI provider accounts, billing fraud, and quota exhaustion.",
+    "cvss": {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N",
+      "score": 9.1,
+      "severity": "CRITICAL",
+      "attack_vector": "네트워크",
+      "attack_complexity": "낮음",
+      "privileges_required": "없음",
+      "user_interaction": "없음"
+    },
+    "cwes": [
+      "CWE-306",
+      "CWE-522"
+    ],
+    "affected": [],
+    "references": [
+      "https://github.com/decolua/9router/security/advisories/GHSA-vjc7-jrh9-9j86",
+      "https://www.vulncheck.com/advisories/9router-unauthenticated-api-key-exposure-via-api-usage-stats"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-62327",
+    "added_at": "2026-07-14T08:00:21+09:00"
+  },
+  {
+    "id": "CVE-2026-61500",
+    "published": "2026-07-13",
+    "last_modified": "2026-07-13",
+    "status": "Deferred",
+    "description": "Rejetto HFS 3.0.0 through 3.2.0 derives its session-cookie signing key from the non-cryptographic Math.random() generator and discloses outputs of the same generator to unauthenticated clients during login. A remote attacker can collect a small number of login responses, reconstruct the generator's state, recover the signing key, and forge a valid administrator session cookie, leading to full administrative access and remote code execution via the server_code configuration feature.",
+    "cvss": {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "score": 9.8,
+      "severity": "CRITICAL",
+      "attack_vector": "네트워크",
+      "attack_complexity": "낮음",
+      "privileges_required": "없음",
+      "user_interaction": "없음"
+    },
+    "cwes": [
+      "CWE-338"
+    ],
+    "affected": [],
+    "references": [
+      "https://github.com/rejetto/hfs/releases/tag/v3.2.1",
+      "https://www.vulncheck.com/advisories/rejetto-hfs-session-forgery-via-predictable-signing-key"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-61500",
+    "added_at": "2026-07-14T08:00:21+09:00"
+  },
+  {
+    "id": "CVE-2026-61498",
+    "published": "2026-07-13",
+    "last_modified": "2026-07-13",
+    "status": "Undergoing Analysis",
+    "description": "Vitec Flamingo 4.12.2 contains an unauthenticated OS command injection vulnerability in the admin/ajax/gen_graphs.php endpoint that allows remote unauthenticated attackers to execute arbitrary commands by supplying shell metacharacters in the start, end, key, or format HTTP GET parameters. Attackers can exploit the lack of input sanitization in the graph generation script, which passes user-supplied values directly to shell commands via passthru(), to execute arbitrary OS commands with root privileges due to the web server context having passwordless sudo access.",
+    "cvss": {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "score": 9.8,
+      "severity": "CRITICAL",
+      "attack_vector": "네트워크",
+      "attack_complexity": "낮음",
+      "privileges_required": "없음",
+      "user_interaction": "없음"
+    },
+    "cwes": [
+      "CWE-78"
+    ],
+    "affected": [],
+    "references": [
+      "https://damiri.fr/en/cve/CVE-2026-61498",
+      "https://www.vitec.com/solutions/iptv-distribution",
+      "https://www.vulncheck.com/advisories/vitec-flamingo-unauthenticated-os-command-injection-via-gen-graphs-php"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-61498",
+    "added_at": "2026-07-14T08:00:21+09:00"
+  },
+  {
+    "id": "CVE-2026-59801",
+    "published": "2026-07-13",
+    "last_modified": "2026-07-13",
+    "status": "Received",
+    "description": "9Router through version 0.4.41 contains an unauthenticated access vulnerability that allows remote attackers to interact with provider management API endpoints by sending requests without any credentials due to missing authentication middleware in the Next.js API routes under src/app/api/providers/*. Attackers can enumerate, create, modify, or delete provider connections to expose partial credentials, OAuth tokens, and API keys, redirect AI traffic to attacker-controlled servers, or cause complete denial of service by deleting all provider connections.",
+    "cvss": {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "score": 9.8,
+      "severity": "CRITICAL",
+      "attack_vector": "네트워크",
+      "attack_complexity": "낮음",
+      "privileges_required": "없음",
+      "user_interaction": "없음"
+    },
+    "cwes": [
+      "CWE-306"
+    ],
+    "affected": [],
+    "references": [
+      "https://github.com/decolua/9router/security/advisories/GHSA-vjc7-jrh9-9j86",
+      "https://www.vulncheck.com/advisories/9router-unauthenticated-api-exposure-via-api-providers"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-59801",
+    "added_at": "2026-07-14T08:00:21+09:00"
+  },
+  {
     "id": "CVE-2026-4769",
     "published": "2026-07-13",
     "last_modified": "2026-07-13",
@@ -250,6 +360,37 @@
     ],
     "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-59792",
     "added_at": "2026-07-11T08:00:37+09:00"
+  },
+  {
+    "id": "CVE-2026-57158",
+    "published": "2026-07-10",
+    "last_modified": "2026-07-13",
+    "status": "Analyzed",
+    "description": "FreeRDP is a free implementation of the Remote Desktop Protocol. From 3.21.0 before 3.28.0, FreeRDP clients using the GFX pipeline contain an incomplete fix for CVE-2026-23530 in planar_decompress_plane_rle_only in libfreerdp/codec/planar.c, allowing a malicious RDP server to send a truncated RDPGFX_CMDID_WIRETOSURFACE_1 planar payload that reads one byte past the input buffer. This issue is fixed in version 3.28.0.",
+    "cvss": {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:H",
+      "score": 9.1,
+      "severity": "CRITICAL",
+      "attack_vector": "네트워크",
+      "attack_complexity": "낮음",
+      "privileges_required": "없음",
+      "user_interaction": "없음"
+    },
+    "cwes": [
+      "CWE-125"
+    ],
+    "affected": [
+      "freerdp freerdp"
+    ],
+    "references": [
+      "https://github.com/FreeRDP/FreeRDP/commit/a7e797626fcb7f1d556ce63febb84f9f4a822731",
+      "https://github.com/FreeRDP/FreeRDP/pull/12952",
+      "https://github.com/FreeRDP/FreeRDP/releases/tag/3.28.0",
+      "https://github.com/FreeRDP/FreeRDP/security/advisories/GHSA-mp3f-59pg-c5pp"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-57158",
+    "added_at": "2026-07-14T08:00:21+09:00"
   },
   {
     "id": "CVE-2026-15378",

@@ -41,13 +41,105 @@
     <h1>CVE Archive</h1>
     <p>NVD 기반 Critical CVE를 누적 관리하는 별도 페이지입니다. 블로그에는 CVE 자동 글을 발행하지 않고, 이 페이지에만 기록합니다.</p>
     <div class="meta">
-      <span>Total 56</span>
-      <span>Updated 2026-07-13 20:00 KST</span>
+      <span>Total 61</span>
+      <span>Updated 2026-07-14 08:00 KST</span>
       <span>Source NVD API</span>
     </div>
   </section>
   <div class="notice">중복 제거 기준은 CVE ID입니다. 동일 CVE는 다시 추가하지 않습니다. 실제 악용 여부와 패치 우선순위는 CISA KEV, 벤더 권고, 자산 노출 여부와 함께 검토해야 합니다.</div>
 
+    <article class="cve-card" id="CVE-2026-62327">
+      <div class="cve-top">
+        <a class="cve-id" href="https://nvd.nist.gov/vuln/detail/CVE-2026-62327" target="_blank" rel="noopener">CVE-2026-62327</a>
+        <span class="score">CVSS 9.1 CRITICAL</span>
+      </div>
+      <p class="desc">9Router through version 0.4.41 contain an unauthenticated information disclosure vulnerability that allows remote attackers to retrieve plaintext API keys for all connected AI provider accounts by sending a single unauthenticated request to the /api/usage/stats endpoint. Attackers can exploit the missing authentication middleware on the Next.js API route to obtain full API key strings alongside token counts, cost breakdowns, and request metadata, enabling unauthorized use of connected AI provider accounts, billing fraud, and quota exhaustion.</p>
+      <dl>
+        <div><dt>Published</dt><dd>2026-07-13</dd></div>
+        <div><dt>Last Modified</dt><dd>2026-07-13</dd></div>
+        <div><dt>Status</dt><dd>Received</dd></div>
+        <div><dt>Attack Vector</dt><dd>네트워크</dd></div>
+        <div><dt>Attack Complexity</dt><dd>낮음</dd></div>
+        <div><dt>Privileges</dt><dd>없음</dd></div>
+        <div><dt>User Interaction</dt><dd>없음</dd></div>
+        <div><dt>CWE</dt><dd>CWE-306, CWE-522</dd></div>
+        <div><dt>Affected</dt><dd>NVD CPE 기준 확인 필요</dd></div>
+      </dl>
+      <div class="vector"><code>CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N</code></div>
+      <details>
+        <summary>References</summary>
+        <ul><li><a href="https://github.com/decolua/9router/security/advisories/GHSA-vjc7-jrh9-9j86" target="_blank" rel="noopener">https://github.com/decolua/9router/security/advisories/GHSA-vjc7-jrh9-9j86</a></li><li><a href="https://www.vulncheck.com/advisories/9router-unauthenticated-api-key-exposure-via-api-usage-stats" target="_blank" rel="noopener">https://www.vulncheck.com/advisories/9router-unauthenticated-api-key-exposure-via-api-usage-stats</a></li></ul>
+      </details>
+    </article>
+    <article class="cve-card" id="CVE-2026-61500">
+      <div class="cve-top">
+        <a class="cve-id" href="https://nvd.nist.gov/vuln/detail/CVE-2026-61500" target="_blank" rel="noopener">CVE-2026-61500</a>
+        <span class="score">CVSS 9.8 CRITICAL</span>
+      </div>
+      <p class="desc">Rejetto HFS 3.0.0 through 3.2.0 derives its session-cookie signing key from the non-cryptographic Math.random() generator and discloses outputs of the same generator to unauthenticated clients during login. A remote attacker can collect a small number of login responses, reconstruct the generator&#x27;s state, recover the signing key, and forge a valid administrator session cookie, leading to full administrative access and remote code execution via the server_code configuration feature.</p>
+      <dl>
+        <div><dt>Published</dt><dd>2026-07-13</dd></div>
+        <div><dt>Last Modified</dt><dd>2026-07-13</dd></div>
+        <div><dt>Status</dt><dd>Deferred</dd></div>
+        <div><dt>Attack Vector</dt><dd>네트워크</dd></div>
+        <div><dt>Attack Complexity</dt><dd>낮음</dd></div>
+        <div><dt>Privileges</dt><dd>없음</dd></div>
+        <div><dt>User Interaction</dt><dd>없음</dd></div>
+        <div><dt>CWE</dt><dd>CWE-338</dd></div>
+        <div><dt>Affected</dt><dd>NVD CPE 기준 확인 필요</dd></div>
+      </dl>
+      <div class="vector"><code>CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H</code></div>
+      <details>
+        <summary>References</summary>
+        <ul><li><a href="https://github.com/rejetto/hfs/releases/tag/v3.2.1" target="_blank" rel="noopener">https://github.com/rejetto/hfs/releases/tag/v3.2.1</a></li><li><a href="https://www.vulncheck.com/advisories/rejetto-hfs-session-forgery-via-predictable-signing-key" target="_blank" rel="noopener">https://www.vulncheck.com/advisories/rejetto-hfs-session-forgery-via-predictable-signing-key</a></li></ul>
+      </details>
+    </article>
+    <article class="cve-card" id="CVE-2026-61498">
+      <div class="cve-top">
+        <a class="cve-id" href="https://nvd.nist.gov/vuln/detail/CVE-2026-61498" target="_blank" rel="noopener">CVE-2026-61498</a>
+        <span class="score">CVSS 9.8 CRITICAL</span>
+      </div>
+      <p class="desc">Vitec Flamingo 4.12.2 contains an unauthenticated OS command injection vulnerability in the admin/ajax/gen_graphs.php endpoint that allows remote unauthenticated attackers to execute arbitrary commands by supplying shell metacharacters in the start, end, key, or format HTTP GET parameters. Attackers can exploit the lack of input sanitization in the graph generation script, which passes user-supplied values directly to shell commands via passthru(), to execute arbitrary OS commands with root privileges due to the web server context having passwordless sudo access.</p>
+      <dl>
+        <div><dt>Published</dt><dd>2026-07-13</dd></div>
+        <div><dt>Last Modified</dt><dd>2026-07-13</dd></div>
+        <div><dt>Status</dt><dd>Undergoing Analysis</dd></div>
+        <div><dt>Attack Vector</dt><dd>네트워크</dd></div>
+        <div><dt>Attack Complexity</dt><dd>낮음</dd></div>
+        <div><dt>Privileges</dt><dd>없음</dd></div>
+        <div><dt>User Interaction</dt><dd>없음</dd></div>
+        <div><dt>CWE</dt><dd>CWE-78</dd></div>
+        <div><dt>Affected</dt><dd>NVD CPE 기준 확인 필요</dd></div>
+      </dl>
+      <div class="vector"><code>CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H</code></div>
+      <details>
+        <summary>References</summary>
+        <ul><li><a href="https://damiri.fr/en/cve/CVE-2026-61498" target="_blank" rel="noopener">https://damiri.fr/en/cve/CVE-2026-61498</a></li><li><a href="https://www.vitec.com/solutions/iptv-distribution" target="_blank" rel="noopener">https://www.vitec.com/solutions/iptv-distribution</a></li><li><a href="https://www.vulncheck.com/advisories/vitec-flamingo-unauthenticated-os-command-injection-via-gen-graphs-php" target="_blank" rel="noopener">https://www.vulncheck.com/advisories/vitec-flamingo-unauthenticated-os-command-injection-via-gen-graphs-php</a></li></ul>
+      </details>
+    </article>
+    <article class="cve-card" id="CVE-2026-59801">
+      <div class="cve-top">
+        <a class="cve-id" href="https://nvd.nist.gov/vuln/detail/CVE-2026-59801" target="_blank" rel="noopener">CVE-2026-59801</a>
+        <span class="score">CVSS 9.8 CRITICAL</span>
+      </div>
+      <p class="desc">9Router through version 0.4.41 contains an unauthenticated access vulnerability that allows remote attackers to interact with provider management API endpoints by sending requests without any credentials due to missing authentication middleware in the Next.js API routes under src/app/api/providers/*. Attackers can enumerate, create, modify, or delete provider connections to expose partial credentials, OAuth tokens, and API keys, redirect AI traffic to attacker-controlled servers, or cause complete denial of service by deleting all provider connections.</p>
+      <dl>
+        <div><dt>Published</dt><dd>2026-07-13</dd></div>
+        <div><dt>Last Modified</dt><dd>2026-07-13</dd></div>
+        <div><dt>Status</dt><dd>Received</dd></div>
+        <div><dt>Attack Vector</dt><dd>네트워크</dd></div>
+        <div><dt>Attack Complexity</dt><dd>낮음</dd></div>
+        <div><dt>Privileges</dt><dd>없음</dd></div>
+        <div><dt>User Interaction</dt><dd>없음</dd></div>
+        <div><dt>CWE</dt><dd>CWE-306</dd></div>
+        <div><dt>Affected</dt><dd>NVD CPE 기준 확인 필요</dd></div>
+      </dl>
+      <div class="vector"><code>CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H</code></div>
+      <details>
+        <summary>References</summary>
+        <ul><li><a href="https://github.com/decolua/9router/security/advisories/GHSA-vjc7-jrh9-9j86" target="_blank" rel="noopener">https://github.com/decolua/9router/security/advisories/GHSA-vjc7-jrh9-9j86</a></li><li><a href="https://www.vulncheck.com/advisories/9router-unauthenticated-api-exposure-via-api-providers" target="_blank" rel="noopener">https://www.vulncheck.com/advisories/9router-unauthenticated-api-exposure-via-api-providers</a></li></ul>
+      </details>
+    </article>
     <article class="cve-card" id="CVE-2026-4769">
       <div class="cve-top">
         <a class="cve-id" href="https://nvd.nist.gov/vuln/detail/CVE-2026-4769" target="_blank" rel="noopener">CVE-2026-4769</a>
@@ -254,6 +346,29 @@
       <details>
         <summary>References</summary>
         <ul><li><a href="https://www.jetbrains.com/privacy-security/issues-fixed/" target="_blank" rel="noopener">https://www.jetbrains.com/privacy-security/issues-fixed/</a></li></ul>
+      </details>
+    </article>
+    <article class="cve-card" id="CVE-2026-57158">
+      <div class="cve-top">
+        <a class="cve-id" href="https://nvd.nist.gov/vuln/detail/CVE-2026-57158" target="_blank" rel="noopener">CVE-2026-57158</a>
+        <span class="score">CVSS 9.1 CRITICAL</span>
+      </div>
+      <p class="desc">FreeRDP is a free implementation of the Remote Desktop Protocol. From 3.21.0 before 3.28.0, FreeRDP clients using the GFX pipeline contain an incomplete fix for CVE-2026-23530 in planar_decompress_plane_rle_only in libfreerdp/codec/planar.c, allowing a malicious RDP server to send a truncated RDPGFX_CMDID_WIRETOSURFACE_1 planar payload that reads one byte past the input buffer. This issue is fixed in version 3.28.0.</p>
+      <dl>
+        <div><dt>Published</dt><dd>2026-07-10</dd></div>
+        <div><dt>Last Modified</dt><dd>2026-07-13</dd></div>
+        <div><dt>Status</dt><dd>Analyzed</dd></div>
+        <div><dt>Attack Vector</dt><dd>네트워크</dd></div>
+        <div><dt>Attack Complexity</dt><dd>낮음</dd></div>
+        <div><dt>Privileges</dt><dd>없음</dd></div>
+        <div><dt>User Interaction</dt><dd>없음</dd></div>
+        <div><dt>CWE</dt><dd>CWE-125</dd></div>
+        <div><dt>Affected</dt><dd>freerdp freerdp</dd></div>
+      </dl>
+      <div class="vector"><code>CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:H</code></div>
+      <details>
+        <summary>References</summary>
+        <ul><li><a href="https://github.com/FreeRDP/FreeRDP/commit/a7e797626fcb7f1d556ce63febb84f9f4a822731" target="_blank" rel="noopener">https://github.com/FreeRDP/FreeRDP/commit/a7e797626fcb7f1d556ce63febb84f9f4a822731</a></li><li><a href="https://github.com/FreeRDP/FreeRDP/pull/12952" target="_blank" rel="noopener">https://github.com/FreeRDP/FreeRDP/pull/12952</a></li><li><a href="https://github.com/FreeRDP/FreeRDP/releases/tag/3.28.0" target="_blank" rel="noopener">https://github.com/FreeRDP/FreeRDP/releases/tag/3.28.0</a></li><li><a href="https://github.com/FreeRDP/FreeRDP/security/advisories/GHSA-mp3f-59pg-c5pp" target="_blank" rel="noopener">https://github.com/FreeRDP/FreeRDP/security/advisories/GHSA-mp3f-59pg-c5pp</a></li></ul>
       </details>
     </article>
     <article class="cve-card" id="CVE-2026-15378">
