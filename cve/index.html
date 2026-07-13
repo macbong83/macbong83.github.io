@@ -41,13 +41,36 @@
     <h1>CVE Archive</h1>
     <p>NVD 기반 Critical CVE를 누적 관리하는 별도 페이지입니다. 블로그에는 CVE 자동 글을 발행하지 않고, 이 페이지에만 기록합니다.</p>
     <div class="meta">
-      <span>Total 54</span>
-      <span>Updated 2026-07-13 08:00 KST</span>
+      <span>Total 56</span>
+      <span>Updated 2026-07-13 20:00 KST</span>
       <span>Source NVD API</span>
     </div>
   </section>
   <div class="notice">중복 제거 기준은 CVE ID입니다. 동일 CVE는 다시 추가하지 않습니다. 실제 악용 여부와 패치 우선순위는 CISA KEV, 벤더 권고, 자산 노출 여부와 함께 검토해야 합니다.</div>
 
+    <article class="cve-card" id="CVE-2026-4769">
+      <div class="cve-top">
+        <a class="cve-id" href="https://nvd.nist.gov/vuln/detail/CVE-2026-4769" target="_blank" rel="noopener">CVE-2026-4769</a>
+        <span class="score">CVSS 9.8 CRITICAL</span>
+      </div>
+      <p class="desc">Certain devices in the WAGO System I/O Field series activate an internal diagnostic capability during the initial startup sequence. This functionality is not formally documented and becomes accessible without authentication for a brief period in the early boot phase. During this window, an unauthenticated remote attacker can gain access to the internal system processes, resulting in full system compromise.</p>
+      <dl>
+        <div><dt>Published</dt><dd>2026-07-13</dd></div>
+        <div><dt>Last Modified</dt><dd>2026-07-13</dd></div>
+        <div><dt>Status</dt><dd>Received</dd></div>
+        <div><dt>Attack Vector</dt><dd>네트워크</dd></div>
+        <div><dt>Attack Complexity</dt><dd>낮음</dd></div>
+        <div><dt>Privileges</dt><dd>없음</dd></div>
+        <div><dt>User Interaction</dt><dd>없음</dd></div>
+        <div><dt>CWE</dt><dd>CWE-912</dd></div>
+        <div><dt>Affected</dt><dd>NVD CPE 기준 확인 필요</dd></div>
+      </dl>
+      <div class="vector"><code>CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H</code></div>
+      <details>
+        <summary>References</summary>
+        <ul><li><a href="https://www.certvde.com/en/advisories/VDE-2026-031/" target="_blank" rel="noopener">https://www.certvde.com/en/advisories/VDE-2026-031/</a></li></ul>
+      </details>
+    </article>
     <article class="cve-card" id="CVE-2026-56271">
       <div class="cve-top">
         <a class="cve-id" href="https://nvd.nist.gov/vuln/detail/CVE-2026-56271" target="_blank" rel="noopener">CVE-2026-56271</a>
@@ -92,6 +115,29 @@
       <details>
         <summary>References</summary>
         <ul><li><a href="https://github.com/unclecode/crawl4ai" target="_blank" rel="noopener">https://github.com/unclecode/crawl4ai</a></li><li><a href="https://github.com/unclecode/crawl4ai/security/advisories/GHSA-365w-hqf6-vxfg" target="_blank" rel="noopener">https://github.com/unclecode/crawl4ai/security/advisories/GHSA-365w-hqf6-vxfg</a></li><li><a href="https://www.vulncheck.com/advisories/crawl4ai-arbitrary-file-write-via-output-path-parameter" target="_blank" rel="noopener">https://www.vulncheck.com/advisories/crawl4ai-arbitrary-file-write-via-output-path-parameter</a></li></ul>
+      </details>
+    </article>
+    <article class="cve-card" id="CVE-2026-15511">
+      <div class="cve-top">
+        <a class="cve-id" href="https://nvd.nist.gov/vuln/detail/CVE-2026-15511" target="_blank" rel="noopener">CVE-2026-15511</a>
+        <span class="score">CVSS 9.8 CRITICAL</span>
+      </div>
+      <p class="desc">A vulnerability was determined in Comfast CF-WR631AX V3 up to 2.7.0.8. Affected by this vulnerability is the function system_wl_upload_pic_file of the file /usr/bin/webmgnt of the component FastCGI Backend. This manipulation of the argument filename causes os command injection. It is possible to initiate the attack remotely. The exploit has been publicly disclosed and may be utilized. The vendor was contacted early about this disclosure but did not respond in any way.</p>
+      <dl>
+        <div><dt>Published</dt><dd>2026-07-12</dd></div>
+        <div><dt>Last Modified</dt><dd>2026-07-12</dd></div>
+        <div><dt>Status</dt><dd>Received</dd></div>
+        <div><dt>Attack Vector</dt><dd>네트워크</dd></div>
+        <div><dt>Attack Complexity</dt><dd>낮음</dd></div>
+        <div><dt>Privileges</dt><dd>없음</dd></div>
+        <div><dt>User Interaction</dt><dd>없음</dd></div>
+        <div><dt>CWE</dt><dd>CWE-77, CWE-78</dd></div>
+        <div><dt>Affected</dt><dd>NVD CPE 기준 확인 필요</dd></div>
+      </dl>
+      <div class="vector"><code>CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H</code></div>
+      <details>
+        <summary>References</summary>
+        <ul><li><a href="https://github.com/luminarydawn/cve/tree/main/Command%20Injection%20in%20Comfast%20CF-WR631AX%20V3%20%E2%80%94%20WiFi%20Portal%20Image%20Upload%20(CWE-78)" target="_blank" rel="noopener">https://github.com/luminarydawn/cve/tree/main/Command%20Injection%20in%20Comfast%20CF-WR631AX%20V3%20%E2%80%94%20WiFi%20Portal%20Image%20Upload%20(CWE-78)</a></li><li><a href="https://vuldb.com/cve/CVE-2026-15511" target="_blank" rel="noopener">https://vuldb.com/cve/CVE-2026-15511</a></li><li><a href="https://vuldb.com/submit/846719" target="_blank" rel="noopener">https://vuldb.com/submit/846719</a></li><li><a href="https://vuldb.com/vuln/377840" target="_blank" rel="noopener">https://vuldb.com/vuln/377840</a></li></ul>
       </details>
     </article>
     <article class="cve-card" id="CVE-2026-61447">

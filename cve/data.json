@@ -1,5 +1,31 @@
 [
   {
+    "id": "CVE-2026-4769",
+    "published": "2026-07-13",
+    "last_modified": "2026-07-13",
+    "status": "Received",
+    "description": "Certain devices in the WAGO System I/O Field series activate an internal diagnostic capability during the initial startup sequence. This functionality is not formally documented and becomes accessible without authentication for a brief period in the early boot phase. During this window, an unauthenticated remote attacker can gain access to the internal system processes, resulting in full system compromise.",
+    "cvss": {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "score": 9.8,
+      "severity": "CRITICAL",
+      "attack_vector": "네트워크",
+      "attack_complexity": "낮음",
+      "privileges_required": "없음",
+      "user_interaction": "없음"
+    },
+    "cwes": [
+      "CWE-912"
+    ],
+    "affected": [],
+    "references": [
+      "https://www.certvde.com/en/advisories/VDE-2026-031/"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-4769",
+    "added_at": "2026-07-13T20:00:35+09:00"
+  },
+  {
     "id": "CVE-2026-56271",
     "published": "2026-07-12",
     "last_modified": "2026-07-12",
@@ -53,6 +79,37 @@
     ],
     "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-56260",
     "added_at": "2026-07-13T08:00:18+09:00"
+  },
+  {
+    "id": "CVE-2026-15511",
+    "published": "2026-07-12",
+    "last_modified": "2026-07-12",
+    "status": "Received",
+    "description": "A vulnerability was determined in Comfast CF-WR631AX V3 up to 2.7.0.8. Affected by this vulnerability is the function system_wl_upload_pic_file of the file /usr/bin/webmgnt of the component FastCGI Backend. This manipulation of the argument filename causes os command injection. It is possible to initiate the attack remotely. The exploit has been publicly disclosed and may be utilized. The vendor was contacted early about this disclosure but did not respond in any way.",
+    "cvss": {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "score": 9.8,
+      "severity": "CRITICAL",
+      "attack_vector": "네트워크",
+      "attack_complexity": "낮음",
+      "privileges_required": "없음",
+      "user_interaction": "없음"
+    },
+    "cwes": [
+      "CWE-77",
+      "CWE-78"
+    ],
+    "affected": [],
+    "references": [
+      "https://github.com/luminarydawn/cve/tree/main/Command%20Injection%20in%20Comfast%20CF-WR631AX%20V3%20%E2%80%94%20WiFi%20Portal%20Image%20Upload%20(CWE-78)",
+      "https://vuldb.com/cve/CVE-2026-15511",
+      "https://vuldb.com/submit/846719",
+      "https://vuldb.com/vuln/377840",
+      "https://vuldb.com/vuln/377840/cti"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-15511",
+    "added_at": "2026-07-13T20:00:35+09:00"
   },
   {
     "id": "CVE-2026-61447",
