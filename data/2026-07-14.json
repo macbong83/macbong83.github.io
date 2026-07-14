@@ -1,0 +1,104 @@
+{
+  "tagline": "글로벌 정보보안 뉴스레터",
+  "title": "보안 브리핑",
+  "date_display": "2026년 7월 14일 화요일",
+  "date_short": "2026.07.14",
+  "sources_line": "The Hacker News · BleepingComputer · SecurityWeek · KrebsOnSecurity · CISA · NCSC UK · Unit 42 · 보안뉴스 · 데일리시큐 · 전자신문",
+  "seo": {
+    "title": "CVE-2026-XXXXX 악용·랜섬웨어 급증 — 2026.07.14 보안 브리핑",
+    "description": "오늘 주요 취약점·침해 사고·위협 트렌드 요약.",
+    "keywords": "CVE, 랜섬웨어, 취약점, 침해사고, 보안"
+  },
+  "sections": [
+    {
+      "label": "취약점 & 공격",
+      "type": "cards",
+      "items": [
+        {
+          "severity": "critical",
+          "source": "The Hacker News",
+          "headline": "Cisco IOS 취약점, CISA KEV에 등재 — CVE-2008-4128",
+          "url": "https://securityaffairs.com/195262/security/u-s-cisa-adds-a-cisco-ios-flaw-to-its-known-exploited-vulnerabilities-catalog.html",
+          "summary": "CISA는 Cisco IOS의 취약점 CVE-2008-4128을 KEV 목록에 추가했다. 이 취약점은 실제 악용 사례가 확인되었으며, 네트워크 장비의 보안에 중대한 영향을 줄 수 있다. 즉시 패치를 적용해야 한다."
+        },
+        {
+          "severity": "high",
+          "source": "The Hacker News",
+          "headline": "iCagenda 및 Balbooa Forms Joomla 취약점, 제로데이 악용",
+          "url": "https://thehackernews.com/2026/07/icagenda-and-balbooa-forms-joomla-flaws.html",
+          "summary": "CISA는 iCagenda와 Balbooa Forms Joomla 확장 프로그램의 취약점을 KEV 목록에 추가했다. 이 취약점은 제로데이로 악용되고 있으며, 원격 코드 실행이 가능하다. 즉시 업데이트를 적용해야 한다."
+        },
+        {
+          "severity": "high",
+          "source": "The Hacker News",
+          "headline": "RabbitMQ OAuth 취약점, 공격자에게 전체 관리 권한 부여",
+          "url": "https://gbhackers.com/rabbitmq-oauth-vulnerability/",
+          "summary": "RabbitMQ의 OAuth 취약점은 공격자가 모든 메시지, 큐, 사용자에 접근할 수 있게 해준다. 이 취약점은 기업 시스템에 중대한 위협이 될 수 있으며, 즉시 패치를 적용해야 한다."
+        },
+        {
+          "severity": "medium",
+          "source": "The Hacker News",
+          "headline": "miniOrange OAuth SSO 플러그인, 인증 우회 취약점",
+          "url": "https://gbhackers.com/critical-wordpress-oauth-sso-plugin-flaw/",
+          "summary": "miniOrange OAuth SSO 플러그인의 취약점 CVE-2026-57807은 인증 우회가 가능하다. 이 취약점은 WordPress 플러그인에 영향을 주며, 즉시 패치를 적용해야 한다."
+        },
+        {
+          "severity": "medium",
+          "source": "The Hacker News",
+          "headline": "Misconfigured Server, Evilginx Phishing 운영 노출",
+          "url": "https://www.infosecurity-magazine.com/news/open-directory-exposes-evilginx/",
+          "summary": "불확실한 서버 설정으로 인해 세 개의 Evilginx 피싱 운영이 노출되었다. 이 취약점은 MFA 우회가 가능하며, 즉시 서버 설정을 점검해야 한다."
+        }
+      ]
+    },
+    {
+      "label": "침해 사고",
+      "type": "cards",
+      "items": [
+        {
+          "severity": "incident",
+          "source": "Security Affairs",
+          "headline": "Lidl 온라인 쇼핑 고객 데이터 유출 사고",
+          "url": "https://securityaffairs.com/195270/data-breach/lidl-notified-online-shop-customers-in-germany-belgium-and-the-netherlands-of-a-data-breach.html",
+          "summary": "Lidl은 독일, 벨기에, 네덜란드의 온라인 쇼핑 고객 데이터 유출 사고를 공개했다. 이 사고로 고객의 개인 정보가 유출되었으며, 즉시 고객에게 알리고 조치를 취해야 한다."
+        },
+        {
+          "severity": "incident",
+          "source": "Security Affairs",
+          "headline": "Centers Laboratory 데이터 유출, 54만 명 영향",
+          "url": "https://www.securityweek.com/centers-laboratory-data-breach-affects-540000-individuals/",
+          "summary": "WorldLeaks는 Centers Laboratory에서 720GB의 데이터를 유출했다고 주장했다. 이 사고로 54만 명의 개인 정보가 노출되었으며, 즉시 조사와 대응이 필요하다."
+        },
+        {
+          "severity": "incident",
+          "source": "Security Affairs",
+          "headline": "Odido 해킹, 600만 명 고객 정보 유출",
+          "url": "https://securityaffairs.com/195235/cyber-crime/dutch-nationals-suspected-in-odido-hack-that-exposed-six-million-customers.html",
+          "summary": "네덜란드 경찰은 Odido 해킹 사건에서 600만 명의 고객 정보가 유출되었다고 발표했다. 이 사고는 피싱 공격으로 인해 발생했으며, 즉시 조사와 대응이 필요하다."
+        }
+      ]
+    },
+    {
+      "label": "동향 & 분석",
+      "type": "trends",
+      "items": [
+        {
+          "lead": "AI 기반 악성코드 증가",
+          "body": "AI 기반의 악성코드와 공격 기법이 급증하고 있다. 예를 들어, MemGhost 공격은 단일 이메일을 통해 AI 에이전트에 가짜 메모리를 심어 정보 유출을 유도한다. 이러한 트렌드는 보안 대응 전략에 변화를 요구하고 있다."
+        },
+        {
+          "lead": "취약점 악용 증가",
+          "body": "취약점이 실제 악용되는 사례가 증가하고 있으며, 특히 CMS 및 웹 플러그인의 취약점이 주요 목표가 되고 있다. 이는 보안 업데이트와 패치 적용의 중요성을 강조한다."
+        },
+        {
+          "lead": "국제적 사이버 전쟁 확대",
+          "body": "러시아 FSB와 연관된 해커 그룹이 유럽과 아시아의 정부 및 방위 기관을 대상으로 한 사이버 스파이 활동이 지속되고 있다. 이는 국제적 사이버 전쟁의 확대를 시사한다."
+        },
+        {
+          "lead": "AI 기반 보안 대응 강화",
+          "body": "AI 기반의 보안 대응 시스템이 확대되고 있으며, 자동화된 보안 운영과 분석가의 협업이 중요해지고 있다. 이는 보안 운영의 효율성을 높이는 데 기여한다."
+        }
+      ]
+    }
+  ]
+}

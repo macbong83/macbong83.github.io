@@ -5,27 +5,34 @@
     <link>https://macbong83.github.io/</link>
     <description>EDR · SASE · CTEM · 취약점 관리 중심의 매일 보안 브리핑</description>
     <language>ko</language>
-    <lastBuildDate>Tue, 14 Jul 2026 08:00:21 +0900</lastBuildDate>
+    <lastBuildDate>Tue, 14 Jul 2026 09:03:28 +0900</lastBuildDate>
     <item>
       <title>SecuLog 보안 브리핑 — vendor-weekly-2026-07-06</title>
       <link>https://macbong83.github.io/posts/vendor-weekly-2026-07-06.html</link>
       <guid isPermaLink="true">https://macbong83.github.io/posts/vendor-weekly-2026-07-06.html</guid>
-      <pubDate>Tue, 14 Jul 2026 08:00:21 +0900</pubDate>
+      <pubDate>Tue, 14 Jul 2026 09:03:28 +0900</pubDate>
       <description></description>
     </item>
     <item>
       <title>SecuLog 보안 브리핑 — vendor-weekly-2026-06-30</title>
       <link>https://macbong83.github.io/posts/vendor-weekly-2026-06-30.html</link>
       <guid isPermaLink="true">https://macbong83.github.io/posts/vendor-weekly-2026-06-30.html</guid>
-      <pubDate>Tue, 14 Jul 2026 08:00:21 +0900</pubDate>
+      <pubDate>Tue, 14 Jul 2026 09:03:28 +0900</pubDate>
       <description></description>
     </item>
     <item>
       <title>SecuLog 보안 브리핑 — startup-radar-2026-07-13</title>
       <link>https://macbong83.github.io/posts/startup-radar-2026-07-13.html</link>
       <guid isPermaLink="true">https://macbong83.github.io/posts/startup-radar-2026-07-13.html</guid>
-      <pubDate>Tue, 14 Jul 2026 08:00:21 +0900</pubDate>
+      <pubDate>Tue, 14 Jul 2026 09:03:28 +0900</pubDate>
       <description></description>
+    </item>
+    <item>
+      <title>SecuLog 보안 브리핑 — 2026.07.14</title>
+      <link>https://macbong83.github.io/posts/2026-07-14.html</link>
+      <guid isPermaLink="true">https://macbong83.github.io/posts/2026-07-14.html</guid>
+      <pubDate>Tue, 14 Jul 2026 08:00:00 +0900</pubDate>
+      <description>Cisco IOS 취약점, CISA KEV에 등재 — CVE-2008-4128 / iCagenda 및 Balbooa Forms Joomla 취약점, 제로데이 악용 / RabbitMQ OAuth 취약점, 공격자에게 전체 관리 권한 부여 / miniOrange OAuth SSO 플러그인, 인증 우회 취약점</description>
     </item>
     <item>
       <title>SecuLog 보안 브리핑 — 2026.07.13</title>
