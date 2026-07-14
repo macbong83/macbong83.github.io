@@ -1,5 +1,112 @@
 [
   {
+    "id": "CVE-2026-56451",
+    "published": "2026-07-14",
+    "last_modified": "2026-07-14",
+    "status": "Received",
+    "description": "A vulnerability has been identified in Opcenter X (All versions < V2604). Affected applications do not properly validate the algorithm specified in the JSON Web Token (JWT) header.\r\nThis could allow an unauthenticated remote attacker to forge arbitrary JWT, bypass authentication mechanisms and impersonate any user including administrative accounts, potentially gaining full unauthorized access to the application.",
+    "cvss": {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:H",
+      "score": 10.0,
+      "severity": "CRITICAL",
+      "attack_vector": "네트워크",
+      "attack_complexity": "낮음",
+      "privileges_required": "없음",
+      "user_interaction": "없음"
+    },
+    "cwes": [
+      "CWE-347"
+    ],
+    "affected": [],
+    "references": [
+      "https://cert-portal.siemens.com/productcert/html/ssa-096828.html"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-56451",
+    "added_at": "2026-07-14T20:00:17+09:00"
+  },
+  {
+    "id": "CVE-2026-44761",
+    "published": "2026-07-14",
+    "last_modified": "2026-07-14",
+    "status": "Received",
+    "description": "SAP Commerce Cloud could retain a sample OAuth2 client with publicly documented sample credentials originating from sample configuration provided in SAP Help Portal documentation. If left unchanged, an unauthenticated attacker could use these well-known credentials to obtain a valid access token and invoke certain APIs to read and modify data. Successful exploitation results in high impact on confidentiality and integrity, with no impact on availability.",
+    "cvss": {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N",
+      "score": 9.1,
+      "severity": "CRITICAL",
+      "attack_vector": "네트워크",
+      "attack_complexity": "낮음",
+      "privileges_required": "없음",
+      "user_interaction": "없음"
+    },
+    "cwes": [
+      "CWE-1392"
+    ],
+    "affected": [],
+    "references": [
+      "https://me.sap.com/notes/3753495",
+      "https://url.sap/sapsecuritypatchday"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-44761",
+    "added_at": "2026-07-14T20:00:17+09:00"
+  },
+  {
+    "id": "CVE-2026-44747",
+    "published": "2026-07-14",
+    "last_modified": "2026-07-14",
+    "status": "Received",
+    "description": "SAP NetWeaver Application Server ABAP allows an authenticated attacker to leverage logical errors in memory management to cause a memory corruption that could lead to unauthorized data access, modification, or system unavailability. This has high impact on confidentiality, integrity, and availability of the application.",
+    "cvss": {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H",
+      "score": 9.9,
+      "severity": "CRITICAL",
+      "attack_vector": "네트워크",
+      "attack_complexity": "낮음",
+      "privileges_required": "낮음",
+      "user_interaction": "없음"
+    },
+    "cwes": [
+      "CWE-787"
+    ],
+    "affected": [],
+    "references": [
+      "https://me.sap.com/notes/3747367",
+      "https://url.sap/sapsecuritypatchday"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-44747",
+    "added_at": "2026-07-14T20:00:17+09:00"
+  },
+  {
+    "id": "CVE-2026-27690",
+    "published": "2026-07-14",
+    "last_modified": "2026-07-14",
+    "status": "Received",
+    "description": "Due to an HTTP Request Smuggling vulnerability in SAP Approuter, an unauthenticated attacker could send a specially crafted HTTP request that leads to request-response desynchronization. This could result in the exposure of user responses and cause the system to become unavailable. This leads to a high impact on confidentiality and availability.",
+    "cvss": {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:H",
+      "score": 9.1,
+      "severity": "CRITICAL",
+      "attack_vector": "네트워크",
+      "attack_complexity": "낮음",
+      "privileges_required": "없음",
+      "user_interaction": "없음"
+    },
+    "cwes": [
+      "CWE-444"
+    ],
+    "affected": [],
+    "references": [
+      "https://me.sap.com/notes/3720138",
+      "https://url.sap/sapsecuritypatchday"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-27690",
+    "added_at": "2026-07-14T20:00:17+09:00"
+  },
+  {
     "id": "CVE-2026-62327",
     "published": "2026-07-13",
     "last_modified": "2026-07-13",
@@ -134,6 +241,64 @@
     ],
     "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-4769",
     "added_at": "2026-07-13T20:00:35+09:00"
+  },
+  {
+    "id": "CVE-2026-40469",
+    "published": "2026-07-13",
+    "last_modified": "2026-07-14",
+    "status": "Analyzed",
+    "description": "Integer overflow vulnerability has been found in \"builtin.c\" program file of gawk (do_sub() routine). This issue could be used to overwrite gawk heap metadata and objects causing the program to crash. It affects 32-bit builds of gawk in versions 5.4.0 and below.",
+    "cvss": {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:H",
+      "score": 9.1,
+      "severity": "CRITICAL",
+      "attack_vector": "네트워크",
+      "attack_complexity": "낮음",
+      "privileges_required": "없음",
+      "user_interaction": "없음"
+    },
+    "cwes": [
+      "CWE-190"
+    ],
+    "affected": [
+      "fossies gawk"
+    ],
+    "references": [
+      "https://cert.pl/en/posts/2026/07/CVE-2026-40467",
+      "https://cgit.git.savannah.gnu.org/cgit/gawk.git/commit/?id=ae1b2d508f46913269a9e62aceda3636afe8147b"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-40469",
+    "added_at": "2026-07-14T20:00:17+09:00"
+  },
+  {
+    "id": "CVE-2026-40468",
+    "published": "2026-07-13",
+    "last_modified": "2026-07-14",
+    "status": "Analyzed",
+    "description": "Integer overflow vulnerability has been found in \"builtin.c\" program file of gawk. This issue may lead to memory exhaustion on the hosting operating system and could be used to overwrite gawk heap metadata and objects with attacker-controlled bytes. It affects gawk in versions 5.4.0 and below.",
+    "cvss": {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:H",
+      "score": 9.1,
+      "severity": "CRITICAL",
+      "attack_vector": "네트워크",
+      "attack_complexity": "낮음",
+      "privileges_required": "없음",
+      "user_interaction": "없음"
+    },
+    "cwes": [
+      "CWE-190"
+    ],
+    "affected": [
+      "fossies gawk"
+    ],
+    "references": [
+      "https://cert.pl/en/posts/2026/07/CVE-2026-40467",
+      "https://cgit.git.savannah.gnu.org/cgit/gawk.git/commit/?id=062f2f2581b991362c046f7f2e238ffa34e6f8c7"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-40468",
+    "added_at": "2026-07-14T20:00:17+09:00"
   },
   {
     "id": "CVE-2026-56271",
