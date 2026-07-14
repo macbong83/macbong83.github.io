@@ -1,5 +1,118 @@
 [
   {
+    "id": "CVE-2026-62392",
+    "published": "2026-07-14",
+    "last_modified": "2026-07-14",
+    "status": "Modified",
+    "description": "Improper Neutralization of Special Elements used in an OS Command ('OS Command Injection') vulnerability in Apache Kylin. A backend API may bring job config parameters to OS command line.\n\nThis issue affects Apache Kylin: from 4 through 5.0.3.\n\nUsers are recommended to upgrade to version 5.0.4, which fixes the issue.",
+    "cvss": {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "score": 9.8,
+      "severity": "CRITICAL",
+      "attack_vector": "네트워크",
+      "attack_complexity": "낮음",
+      "privileges_required": "없음",
+      "user_interaction": "없음"
+    },
+    "cwes": [
+      "CWE-78"
+    ],
+    "affected": [
+      "apache kylin"
+    ],
+    "references": [
+      "https://lists.apache.org/thread/9hof8lxo3mzshsh5r77mskzqlkns09gn",
+      "http://www.openwall.com/lists/oss-security/2026/07/14/5"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-62392",
+    "added_at": "2026-07-15T08:00:29+09:00"
+  },
+  {
+    "id": "CVE-2026-62390",
+    "published": "2026-07-14",
+    "last_modified": "2026-07-14",
+    "status": "Modified",
+    "description": "Improper Neutralization of Special Elements used in an SQL Command ('SQL Injection') vulnerability in Apache Kylin. A backend API refreshing table catalog may cause the injection to the generated SQL.\n\nThis issue affects Apache Kylin: from 4 through 5.0.3.\n\nUsers are recommended to upgrade to version 5.0.4, which fixes the issue.",
+    "cvss": {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "score": 9.8,
+      "severity": "CRITICAL",
+      "attack_vector": "네트워크",
+      "attack_complexity": "낮음",
+      "privileges_required": "없음",
+      "user_interaction": "없음"
+    },
+    "cwes": [
+      "CWE-89"
+    ],
+    "affected": [
+      "apache kylin"
+    ],
+    "references": [
+      "https://lists.apache.org/thread/zdrj93txvdjj07f88s43d2pcg2gomvjc",
+      "http://www.openwall.com/lists/oss-security/2026/07/14/4"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-62390",
+    "added_at": "2026-07-15T08:00:29+09:00"
+  },
+  {
+    "id": "CVE-2026-58644",
+    "published": "2026-07-14",
+    "last_modified": "2026-07-14",
+    "status": "Awaiting Analysis",
+    "description": "Deserialization of untrusted data in Microsoft Office SharePoint allows an unauthorized attacker to execute code over a network.",
+    "cvss": {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "score": 9.8,
+      "severity": "CRITICAL",
+      "attack_vector": "네트워크",
+      "attack_complexity": "낮음",
+      "privileges_required": "없음",
+      "user_interaction": "없음"
+    },
+    "cwes": [
+      "CWE-502"
+    ],
+    "affected": [],
+    "references": [
+      "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-58644"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-58644",
+    "added_at": "2026-07-15T08:00:29+09:00"
+  },
+  {
+    "id": "CVE-2026-58319",
+    "published": "2026-07-14",
+    "last_modified": "2026-07-14",
+    "status": "Analyzed",
+    "description": "Certain Apache Doris FE HTTP REST administrative APIs were accessible without proper authentication. An unauthenticated attacker with network access to the FE HTTP service could perform unauthorized administrative operations, potentially affecting cluster integrity and availability and leading to cluster instability or denial of service. \n\nThis issue affects Apache Doris versions prior to 3.1.0. Users are advised to upgrade to Apache Doris 3.1.0 or later.",
+    "cvss": {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:H",
+      "score": 9.1,
+      "severity": "CRITICAL",
+      "attack_vector": "네트워크",
+      "attack_complexity": "낮음",
+      "privileges_required": "없음",
+      "user_interaction": "없음"
+    },
+    "cwes": [
+      "CWE-306"
+    ],
+    "affected": [
+      "apache doris"
+    ],
+    "references": [
+      "https://lists.apache.org/thread/cob5mxkyr1k81o8v91hox2hld6zh25b4",
+      "http://www.openwall.com/lists/oss-security/2026/07/14/3"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-58319",
+    "added_at": "2026-07-15T08:00:29+09:00"
+  },
+  {
     "id": "CVE-2026-56451",
     "published": "2026-07-14",
     "last_modified": "2026-07-14",
@@ -24,6 +137,526 @@
     ],
     "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-56451",
     "added_at": "2026-07-14T20:00:17+09:00"
+  },
+  {
+    "id": "CVE-2026-56190",
+    "published": "2026-07-14",
+    "last_modified": "2026-07-14",
+    "status": "Awaiting Analysis",
+    "description": "Use of uninitialized resource in Windows RDP allows an unauthorized attacker to execute code over a network.",
+    "cvss": {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "score": 9.8,
+      "severity": "CRITICAL",
+      "attack_vector": "네트워크",
+      "attack_complexity": "낮음",
+      "privileges_required": "없음",
+      "user_interaction": "없음"
+    },
+    "cwes": [
+      "CWE-908"
+    ],
+    "affected": [],
+    "references": [
+      "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-56190"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-56190",
+    "added_at": "2026-07-15T08:00:29+09:00"
+  },
+  {
+    "id": "CVE-2026-55008",
+    "published": "2026-07-14",
+    "last_modified": "2026-07-14",
+    "status": "Awaiting Analysis",
+    "description": "Improper neutralization of input during web page generation ('cross-site scripting') in Microsoft Exchange Server allows an unauthorized attacker to perform spoofing over a network.",
+    "cvss": {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:H/I:H/A:H",
+      "score": 9.6,
+      "severity": "CRITICAL",
+      "attack_vector": "네트워크",
+      "attack_complexity": "낮음",
+      "privileges_required": "없음",
+      "user_interaction": "필요"
+    },
+    "cwes": [
+      "CWE-79"
+    ],
+    "affected": [],
+    "references": [
+      "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-55008"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-55008",
+    "added_at": "2026-07-15T08:00:29+09:00"
+  },
+  {
+    "id": "CVE-2026-54990",
+    "published": "2026-07-14",
+    "last_modified": "2026-07-14",
+    "status": "Awaiting Analysis",
+    "description": "Heap-based buffer overflow in Remote Desktop Client allows an unauthorized attacker to execute code over a network.",
+    "cvss": {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "score": 9.8,
+      "severity": "CRITICAL",
+      "attack_vector": "네트워크",
+      "attack_complexity": "낮음",
+      "privileges_required": "없음",
+      "user_interaction": "없음"
+    },
+    "cwes": [
+      "CWE-122"
+    ],
+    "affected": [],
+    "references": [
+      "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-54990"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-54990",
+    "added_at": "2026-07-15T08:00:29+09:00"
+  },
+  {
+    "id": "CVE-2026-50518",
+    "published": "2026-07-14",
+    "last_modified": "2026-07-14",
+    "status": "Awaiting Analysis",
+    "description": "Heap-based buffer overflow in Windows DHCP Server allows an unauthorized attacker to execute code over a network.",
+    "cvss": {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "score": 9.8,
+      "severity": "CRITICAL",
+      "attack_vector": "네트워크",
+      "attack_complexity": "낮음",
+      "privileges_required": "없음",
+      "user_interaction": "없음"
+    },
+    "cwes": [
+      "CWE-122"
+    ],
+    "affected": [],
+    "references": [
+      "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-50518"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-50518",
+    "added_at": "2026-07-15T08:00:29+09:00"
+  },
+  {
+    "id": "CVE-2026-50380",
+    "published": "2026-07-14",
+    "last_modified": "2026-07-14",
+    "status": "Awaiting Analysis",
+    "description": "Heap-based buffer overflow in Windows GDI+ allows an unauthorized attacker to execute code over a network.",
+    "cvss": {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:H/I:H/A:H",
+      "score": 9.6,
+      "severity": "CRITICAL",
+      "attack_vector": "네트워크",
+      "attack_complexity": "낮음",
+      "privileges_required": "없음",
+      "user_interaction": "필요"
+    },
+    "cwes": [
+      "CWE-122"
+    ],
+    "affected": [],
+    "references": [
+      "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-50380"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-50380",
+    "added_at": "2026-07-15T08:00:29+09:00"
+  },
+  {
+    "id": "CVE-2026-49798",
+    "published": "2026-07-14",
+    "last_modified": "2026-07-14",
+    "status": "Undergoing Analysis",
+    "description": "Use after free in Windows Kernel allows an unauthorized attacker to elevate privileges locally.",
+    "cvss": {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:L/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:H",
+      "score": 9.3,
+      "severity": "CRITICAL",
+      "attack_vector": "로컬",
+      "attack_complexity": "낮음",
+      "privileges_required": "없음",
+      "user_interaction": "없음"
+    },
+    "cwes": [
+      "CWE-416"
+    ],
+    "affected": [],
+    "references": [
+      "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-49798"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-49798",
+    "added_at": "2026-07-15T08:00:29+09:00"
+  },
+  {
+    "id": "CVE-2026-48561",
+    "published": "2026-07-14",
+    "last_modified": "2026-07-14",
+    "status": "Undergoing Analysis",
+    "description": "Improper neutralization of special elements used in a command ('command injection') in Microsoft Copilot allows an unauthorized attacker to execute code over a network.",
+    "cvss": {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:H/I:H/A:H",
+      "score": 9.6,
+      "severity": "CRITICAL",
+      "attack_vector": "네트워크",
+      "attack_complexity": "낮음",
+      "privileges_required": "없음",
+      "user_interaction": "필요"
+    },
+    "cwes": [
+      "CWE-77"
+    ],
+    "affected": [],
+    "references": [
+      "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-48561"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-48561",
+    "added_at": "2026-07-15T08:00:29+09:00"
+  },
+  {
+    "id": "CVE-2026-48359",
+    "published": "2026-07-14",
+    "last_modified": "2026-07-14",
+    "status": "Undergoing Analysis",
+    "description": "Adobe Experience Manager is affected by an Improper Restriction of XML External Entity Reference ('XXE') vulnerability that could result in arbitrary code execution in the context of the current user. A low-privileged attacker could exploit this vulnerability to read sensitive files, potentially gaining elevated access or control over the victim's account or session. Exploitation of this issue does not require user interaction. Scope is changed.",
+    "cvss": {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:N",
+      "score": 9.6,
+      "severity": "CRITICAL",
+      "attack_vector": "네트워크",
+      "attack_complexity": "낮음",
+      "privileges_required": "낮음",
+      "user_interaction": "없음"
+    },
+    "cwes": [
+      "CWE-611"
+    ],
+    "affected": [],
+    "references": [
+      "https://helpx.adobe.com/security/products/experience-manager/apsb26-74.html"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-48359",
+    "added_at": "2026-07-15T08:00:29+09:00"
+  },
+  {
+    "id": "CVE-2026-48358",
+    "published": "2026-07-14",
+    "last_modified": "2026-07-14",
+    "status": "Undergoing Analysis",
+    "description": "Adobe Commerce is affected by an Improper Encoding or Escaping of Output vulnerability that could result in arbitrary code execution in the context of the current user. Exploitation of this issue does not require user interaction. Scope is changed.",
+    "cvss": {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:C/C:H/I:H/A:H",
+      "score": 9.1,
+      "severity": "CRITICAL",
+      "attack_vector": "네트워크",
+      "attack_complexity": "낮음",
+      "privileges_required": "높음",
+      "user_interaction": "없음"
+    },
+    "cwes": [
+      "CWE-116"
+    ],
+    "affected": [],
+    "references": [
+      "https://helpx.adobe.com/security/products/magento/apsb26-73.html"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-48358",
+    "added_at": "2026-07-15T08:00:29+09:00"
+  },
+  {
+    "id": "CVE-2026-48356",
+    "published": "2026-07-14",
+    "last_modified": "2026-07-14",
+    "status": "Undergoing Analysis",
+    "description": "Adobe Commerce is affected by an Unrestricted Upload of File with Dangerous Type vulnerability that could result in arbitrary code execution in the context of the current user. An attacker could exploit this vulnerability to inject malicious scripts into a web page, potentially gaining elevated access or control over the victim's account or session. Exploitation of this issue requires user interaction in that a victim must visit a maliciously crafted URL or interact with a compromised web page. Scope is changed.",
+    "cvss": {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:H/I:H/A:L",
+      "score": 9.6,
+      "severity": "CRITICAL",
+      "attack_vector": "네트워크",
+      "attack_complexity": "낮음",
+      "privileges_required": "없음",
+      "user_interaction": "필요"
+    },
+    "cwes": [
+      "CWE-434"
+    ],
+    "affected": [],
+    "references": [
+      "https://helpx.adobe.com/security/products/magento/apsb26-73.html"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-48356",
+    "added_at": "2026-07-15T08:00:29+09:00"
+  },
+  {
+    "id": "CVE-2026-48334",
+    "published": "2026-07-14",
+    "last_modified": "2026-07-14",
+    "status": "Received",
+    "description": "Illustrator is affected by an Improper Input Validation vulnerability that could result in arbitrary code execution in the context of the current user. Exploitation of this issue requires user interaction in that a victim must open a malicious file. Scope is changed.",
+    "cvss": {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:H/I:H/A:N",
+      "score": 9.3,
+      "severity": "CRITICAL",
+      "attack_vector": "네트워크",
+      "attack_complexity": "낮음",
+      "privileges_required": "없음",
+      "user_interaction": "필요"
+    },
+    "cwes": [
+      "CWE-20"
+    ],
+    "affected": [],
+    "references": [
+      "https://helpx.adobe.com/security/products/illustrator/apsb26-79.html"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-48334",
+    "added_at": "2026-07-15T08:00:29+09:00"
+  },
+  {
+    "id": "CVE-2026-48327",
+    "published": "2026-07-14",
+    "last_modified": "2026-07-14",
+    "status": "Received",
+    "description": "ColdFusion is affected by an Incorrect Authorization vulnerability that could result in arbitrary code execution in the context of the current user. Exploitation of this issue does not require user interaction. Scope is changed.",
+    "cvss": {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:A/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H",
+      "score": 9.0,
+      "severity": "CRITICAL",
+      "attack_vector": "인접 네트워크",
+      "attack_complexity": "낮음",
+      "privileges_required": "낮음",
+      "user_interaction": "없음"
+    },
+    "cwes": [
+      "CWE-863"
+    ],
+    "affected": [],
+    "references": [
+      "https://helpx.adobe.com/security/products/coldfusion/apsb26-82.html"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-48327",
+    "added_at": "2026-07-15T08:00:29+09:00"
+  },
+  {
+    "id": "CVE-2026-48325",
+    "published": "2026-07-14",
+    "last_modified": "2026-07-14",
+    "status": "Received",
+    "description": "ColdFusion is affected by a Missing Authentication for Critical Function vulnerability that could result in arbitrary code execution in the context of the current user. Exploitation of this issue does not require user interaction. Scope is changed.",
+    "cvss": {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:A/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:N",
+      "score": 9.3,
+      "severity": "CRITICAL",
+      "attack_vector": "인접 네트워크",
+      "attack_complexity": "낮음",
+      "privileges_required": "없음",
+      "user_interaction": "없음"
+    },
+    "cwes": [
+      "CWE-306"
+    ],
+    "affected": [],
+    "references": [
+      "https://helpx.adobe.com/security/products/coldfusion/apsb26-82.html"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-48325",
+    "added_at": "2026-07-15T08:00:29+09:00"
+  },
+  {
+    "id": "CVE-2026-48324",
+    "published": "2026-07-14",
+    "last_modified": "2026-07-14",
+    "status": "Received",
+    "description": "ColdFusion is affected by an Improper Neutralization of Special Elements used in an SQL Command ('SQL Injection') vulnerability that could result in arbitrary code execution in the context of the current user. Exploitation of this issue does not require user interaction. Scope is changed.",
+    "cvss": {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:C/C:H/I:H/A:H",
+      "score": 9.1,
+      "severity": "CRITICAL",
+      "attack_vector": "네트워크",
+      "attack_complexity": "낮음",
+      "privileges_required": "높음",
+      "user_interaction": "없음"
+    },
+    "cwes": [
+      "CWE-89"
+    ],
+    "affected": [],
+    "references": [
+      "https://helpx.adobe.com/security/products/coldfusion/apsb26-82.html"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-48324",
+    "added_at": "2026-07-15T08:00:29+09:00"
+  },
+  {
+    "id": "CVE-2026-48322",
+    "published": "2026-07-14",
+    "last_modified": "2026-07-14",
+    "status": "Received",
+    "description": "ColdFusion is affected by an Improper Control of Generation of Code ('Code Injection') vulnerability that could result in arbitrary code execution in the context of the current user. Exploitation of this issue does not require user interaction. Scope is changed.",
+    "cvss": {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:N",
+      "score": 9.6,
+      "severity": "CRITICAL",
+      "attack_vector": "네트워크",
+      "attack_complexity": "낮음",
+      "privileges_required": "낮음",
+      "user_interaction": "없음"
+    },
+    "cwes": [
+      "CWE-94"
+    ],
+    "affected": [],
+    "references": [
+      "https://helpx.adobe.com/security/products/coldfusion/apsb26-82.html"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-48322",
+    "added_at": "2026-07-15T08:00:29+09:00"
+  },
+  {
+    "id": "CVE-2026-48321",
+    "published": "2026-07-14",
+    "last_modified": "2026-07-14",
+    "status": "Received",
+    "description": "ColdFusion is affected by an Incorrect Authorization vulnerability that could result in privilege escalation. An attacker could leverage this vulnerability to gain unauthorized read and write access. Exploitation of this issue does not require user interaction. Scope is changed.",
+    "cvss": {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:A/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:N",
+      "score": 9.3,
+      "severity": "CRITICAL",
+      "attack_vector": "인접 네트워크",
+      "attack_complexity": "낮음",
+      "privileges_required": "없음",
+      "user_interaction": "없음"
+    },
+    "cwes": [
+      "CWE-863"
+    ],
+    "affected": [],
+    "references": [
+      "https://helpx.adobe.com/security/products/coldfusion/apsb26-82.html"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-48321",
+    "added_at": "2026-07-15T08:00:29+09:00"
+  },
+  {
+    "id": "CVE-2026-48319",
+    "published": "2026-07-14",
+    "last_modified": "2026-07-14",
+    "status": "Received",
+    "description": "ColdFusion is affected by an Improper Limitation of a Pathname to a Restricted Directory ('Path Traversal') vulnerability that could result in arbitrary code execution in the context of the current user. Exploitation of this issue does not require user interaction. Scope is changed.",
+    "cvss": {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:C/C:H/I:H/A:H",
+      "score": 9.1,
+      "severity": "CRITICAL",
+      "attack_vector": "네트워크",
+      "attack_complexity": "낮음",
+      "privileges_required": "높음",
+      "user_interaction": "없음"
+    },
+    "cwes": [
+      "CWE-22"
+    ],
+    "affected": [],
+    "references": [
+      "https://helpx.adobe.com/security/products/coldfusion/apsb26-82.html"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-48319",
+    "added_at": "2026-07-15T08:00:29+09:00"
+  },
+  {
+    "id": "CVE-2026-48318",
+    "published": "2026-07-14",
+    "last_modified": "2026-07-14",
+    "status": "Received",
+    "description": "ColdFusion is affected by an Improper Limitation of a Pathname to a Restricted Directory ('Path Traversal') vulnerability that could lead to arbitrary file system read. An attacker could exploit this vulnerability to access sensitive files and directories outside the intended access scope. Exploitation of this issue does not require user interaction. Scope is changed.",
+    "cvss": {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H",
+      "score": 9.9,
+      "severity": "CRITICAL",
+      "attack_vector": "네트워크",
+      "attack_complexity": "낮음",
+      "privileges_required": "낮음",
+      "user_interaction": "없음"
+    },
+    "cwes": [
+      "CWE-22"
+    ],
+    "affected": [],
+    "references": [
+      "https://helpx.adobe.com/security/products/coldfusion/apsb26-82.html"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-48318",
+    "added_at": "2026-07-15T08:00:29+09:00"
+  },
+  {
+    "id": "CVE-2026-48284",
+    "published": "2026-07-14",
+    "last_modified": "2026-07-14",
+    "status": "Received",
+    "description": "ColdFusion is affected by an Improper Input Validation vulnerability that could result in arbitrary code execution in the context of the current user. Exploitation of this issue does not require user interaction. Scope is changed.",
+    "cvss": {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:A/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:H",
+      "score": 9.6,
+      "severity": "CRITICAL",
+      "attack_vector": "인접 네트워크",
+      "attack_complexity": "낮음",
+      "privileges_required": "없음",
+      "user_interaction": "없음"
+    },
+    "cwes": [
+      "CWE-20"
+    ],
+    "affected": [],
+    "references": [
+      "https://helpx.adobe.com/security/products/coldfusion/apsb26-82.html"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-48284",
+    "added_at": "2026-07-15T08:00:29+09:00"
+  },
+  {
+    "id": "CVE-2026-48259",
+    "published": "2026-07-14",
+    "last_modified": "2026-07-14",
+    "status": "Undergoing Analysis",
+    "description": "Adobe Experience Manager is affected by a Server-Side Request Forgery (SSRF) vulnerability that could result in arbitrary code execution in the context of the current user. A low-privileged attacker could leverage this vulnerability to issue unauthorized server-side requests, potentially gaining elevated access or control over the victim's account or session. Exploitation of this issue does not require user interaction. Scope is changed.",
+    "cvss": {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:N",
+      "score": 9.6,
+      "severity": "CRITICAL",
+      "attack_vector": "네트워크",
+      "attack_complexity": "낮음",
+      "privileges_required": "낮음",
+      "user_interaction": "없음"
+    },
+    "cwes": [
+      "CWE-918"
+    ],
+    "affected": [],
+    "references": [
+      "https://helpx.adobe.com/security/products/experience-manager/apsb26-74.html"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-48259",
+    "added_at": "2026-07-15T08:00:29+09:00"
   },
   {
     "id": "CVE-2026-44761",
@@ -105,6 +738,38 @@
     ],
     "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-27690",
     "added_at": "2026-07-14T20:00:17+09:00"
+  },
+  {
+    "id": "CVE-2026-15701",
+    "published": "2026-07-14",
+    "last_modified": "2026-07-14",
+    "status": "Deferred",
+    "description": "A weakness has been identified in Totolink NR1800X 9.1.0u.6279_B20210910. Affected by this issue is the function Form_Logout of the file /formLogout.htm of the component lighttpd. This manipulation of the argument Host causes stack-based buffer overflow. The attack is possible to be carried out remotely. The exploit has been made available to the public and could be used for attacks.",
+    "cvss": {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "score": 9.8,
+      "severity": "CRITICAL",
+      "attack_vector": "네트워크",
+      "attack_complexity": "낮음",
+      "privileges_required": "없음",
+      "user_interaction": "없음"
+    },
+    "cwes": [
+      "CWE-119",
+      "CWE-121"
+    ],
+    "affected": [],
+    "references": [
+      "https://github.com/fu9-dotom/cve/issues/1",
+      "https://vuldb.com/cve/CVE-2026-15701",
+      "https://vuldb.com/submit/856136",
+      "https://vuldb.com/vuln/378248",
+      "https://vuldb.com/vuln/378248/cti",
+      "https://www.totolink.net/"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-15701",
+    "added_at": "2026-07-15T08:00:29+09:00"
   },
   {
     "id": "CVE-2026-62327",
@@ -217,6 +882,34 @@
     "added_at": "2026-07-14T08:00:21+09:00"
   },
   {
+    "id": "CVE-2026-57830",
+    "published": "2026-07-13",
+    "last_modified": "2026-07-14",
+    "status": "Analyzed",
+    "description": "The Joomla extension Helix Ultimate is vulnerable to an unauthenticated arbitrary file deletion.",
+    "cvss": {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:H",
+      "score": 9.1,
+      "severity": "CRITICAL",
+      "attack_vector": "네트워크",
+      "attack_complexity": "낮음",
+      "privileges_required": "없음",
+      "user_interaction": "없음"
+    },
+    "cwes": [
+      "CWE-862"
+    ],
+    "affected": [
+      "ollyo helix_ultimate"
+    ],
+    "references": [
+      "https://www.joomshaper.com/joomla-templates/helixultimate"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-57830",
+    "added_at": "2026-07-15T08:00:29+09:00"
+  },
+  {
     "id": "CVE-2026-4769",
     "published": "2026-07-13",
     "last_modified": "2026-07-13",
@@ -299,6 +992,36 @@
     ],
     "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-40468",
     "added_at": "2026-07-14T20:00:17+09:00"
+  },
+  {
+    "id": "CVE-2026-13221",
+    "published": "2026-07-13",
+    "last_modified": "2026-07-14",
+    "status": "Analyzed",
+    "description": "Perl versions through 5.43.9 produce silently incorrect regular expression matches when an alternation of more than 65535 fixed string branches is compiled into a trie in Perl_study_chunk.\n\nWhen such branches are combined into a trie, the delta between the first branch and the shared tail is stored in a 16-bit field. A branch count above 65535 overflows the field, and the trie's match decision table is truncated with no warning or error.\n\nA pattern of this shape produces false positive matches (matching strings it should not) and false negative matches (failing to match strings it should). When such a pattern gates an access or filtering decision, the result is wrong.",
+    "cvss": {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:H",
+      "score": 9.1,
+      "severity": "CRITICAL",
+      "attack_vector": "네트워크",
+      "attack_complexity": "낮음",
+      "privileges_required": "없음",
+      "user_interaction": "없음"
+    },
+    "cwes": [
+      "CWE-190"
+    ],
+    "affected": [
+      "perl perl"
+    ],
+    "references": [
+      "https://github.com/Perl/perl5/commit/03f74bbbd3a68350d926ee93d56ee4808c28c4c7.patch",
+      "https://github.com/Perl/perl5/issues/23388",
+      "http://www.openwall.com/lists/oss-security/2026/07/13/5"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-13221",
+    "added_at": "2026-07-15T08:00:29+09:00"
   },
   {
     "id": "CVE-2026-56271",
@@ -467,6 +1190,35 @@
     ],
     "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-60090",
     "added_at": "2026-07-12T08:00:15+09:00"
+  },
+  {
+    "id": "CVE-2026-57827",
+    "published": "2026-07-11",
+    "last_modified": "2026-07-14",
+    "status": "Analyzed",
+    "description": "The Joomla extension RSFiles is vulnerable to an unauthenticated arbitrary file upload that allows uploading executable files and leads to full RCE.",
+    "cvss": {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "score": 9.8,
+      "severity": "CRITICAL",
+      "attack_vector": "네트워크",
+      "attack_complexity": "낮음",
+      "privileges_required": "없음",
+      "user_interaction": "없음"
+    },
+    "cwes": [
+      "CWE-434"
+    ],
+    "affected": [
+      "rsjoomla rsfiles\\!"
+    ],
+    "references": [
+      "https://mysites.guru/blog/rsfiles-unauthenticated-file-upload-rce/",
+      "https://www.rsjoomla.com/joomla-extensions/joomla-download-manager.html"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-57827",
+    "added_at": "2026-07-15T08:00:29+09:00"
   },
   {
     "id": "CVE-2026-61459",

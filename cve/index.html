@@ -41,13 +41,115 @@
     <h1>CVE Archive</h1>
     <p>NVD 기반 Critical CVE를 누적 관리하는 별도 페이지입니다. 블로그에는 CVE 자동 글을 발행하지 않고, 이 페이지에만 기록합니다.</p>
     <div class="meta">
-      <span>Total 67</span>
-      <span>Updated 2026-07-14 20:00 KST</span>
+      <span>Total 95</span>
+      <span>Updated 2026-07-15 08:00 KST</span>
       <span>Source NVD API</span>
     </div>
   </section>
   <div class="notice">중복 제거 기준은 CVE ID입니다. 동일 CVE는 다시 추가하지 않습니다. 실제 악용 여부와 패치 우선순위는 CISA KEV, 벤더 권고, 자산 노출 여부와 함께 검토해야 합니다.</div>
 
+    <article class="cve-card" id="CVE-2026-62392">
+      <div class="cve-top">
+        <a class="cve-id" href="https://nvd.nist.gov/vuln/detail/CVE-2026-62392" target="_blank" rel="noopener">CVE-2026-62392</a>
+        <span class="score">CVSS 9.8 CRITICAL</span>
+      </div>
+      <p class="desc">Improper Neutralization of Special Elements used in an OS Command (&#x27;OS Command Injection&#x27;) vulnerability in Apache Kylin. A backend API may bring job config parameters to OS command line.
+
+This issue affects Apache Kylin: from 4 through 5.0.3.
+
+Users are recommended to upgrade to version 5.0.4, which fixes the issue.</p>
+      <dl>
+        <div><dt>Published</dt><dd>2026-07-14</dd></div>
+        <div><dt>Last Modified</dt><dd>2026-07-14</dd></div>
+        <div><dt>Status</dt><dd>Modified</dd></div>
+        <div><dt>Attack Vector</dt><dd>네트워크</dd></div>
+        <div><dt>Attack Complexity</dt><dd>낮음</dd></div>
+        <div><dt>Privileges</dt><dd>없음</dd></div>
+        <div><dt>User Interaction</dt><dd>없음</dd></div>
+        <div><dt>CWE</dt><dd>CWE-78</dd></div>
+        <div><dt>Affected</dt><dd>apache kylin</dd></div>
+      </dl>
+      <div class="vector"><code>CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H</code></div>
+      <details>
+        <summary>References</summary>
+        <ul><li><a href="https://lists.apache.org/thread/9hof8lxo3mzshsh5r77mskzqlkns09gn" target="_blank" rel="noopener">https://lists.apache.org/thread/9hof8lxo3mzshsh5r77mskzqlkns09gn</a></li><li><a href="http://www.openwall.com/lists/oss-security/2026/07/14/5" target="_blank" rel="noopener">http://www.openwall.com/lists/oss-security/2026/07/14/5</a></li></ul>
+      </details>
+    </article>
+    <article class="cve-card" id="CVE-2026-62390">
+      <div class="cve-top">
+        <a class="cve-id" href="https://nvd.nist.gov/vuln/detail/CVE-2026-62390" target="_blank" rel="noopener">CVE-2026-62390</a>
+        <span class="score">CVSS 9.8 CRITICAL</span>
+      </div>
+      <p class="desc">Improper Neutralization of Special Elements used in an SQL Command (&#x27;SQL Injection&#x27;) vulnerability in Apache Kylin. A backend API refreshing table catalog may cause the injection to the generated SQL.
+
+This issue affects Apache Kylin: from 4 through 5.0.3.
+
+Users are recommended to upgrade to version 5.0.4, which fixes the issue.</p>
+      <dl>
+        <div><dt>Published</dt><dd>2026-07-14</dd></div>
+        <div><dt>Last Modified</dt><dd>2026-07-14</dd></div>
+        <div><dt>Status</dt><dd>Modified</dd></div>
+        <div><dt>Attack Vector</dt><dd>네트워크</dd></div>
+        <div><dt>Attack Complexity</dt><dd>낮음</dd></div>
+        <div><dt>Privileges</dt><dd>없음</dd></div>
+        <div><dt>User Interaction</dt><dd>없음</dd></div>
+        <div><dt>CWE</dt><dd>CWE-89</dd></div>
+        <div><dt>Affected</dt><dd>apache kylin</dd></div>
+      </dl>
+      <div class="vector"><code>CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H</code></div>
+      <details>
+        <summary>References</summary>
+        <ul><li><a href="https://lists.apache.org/thread/zdrj93txvdjj07f88s43d2pcg2gomvjc" target="_blank" rel="noopener">https://lists.apache.org/thread/zdrj93txvdjj07f88s43d2pcg2gomvjc</a></li><li><a href="http://www.openwall.com/lists/oss-security/2026/07/14/4" target="_blank" rel="noopener">http://www.openwall.com/lists/oss-security/2026/07/14/4</a></li></ul>
+      </details>
+    </article>
+    <article class="cve-card" id="CVE-2026-58644">
+      <div class="cve-top">
+        <a class="cve-id" href="https://nvd.nist.gov/vuln/detail/CVE-2026-58644" target="_blank" rel="noopener">CVE-2026-58644</a>
+        <span class="score">CVSS 9.8 CRITICAL</span>
+      </div>
+      <p class="desc">Deserialization of untrusted data in Microsoft Office SharePoint allows an unauthorized attacker to execute code over a network.</p>
+      <dl>
+        <div><dt>Published</dt><dd>2026-07-14</dd></div>
+        <div><dt>Last Modified</dt><dd>2026-07-14</dd></div>
+        <div><dt>Status</dt><dd>Awaiting Analysis</dd></div>
+        <div><dt>Attack Vector</dt><dd>네트워크</dd></div>
+        <div><dt>Attack Complexity</dt><dd>낮음</dd></div>
+        <div><dt>Privileges</dt><dd>없음</dd></div>
+        <div><dt>User Interaction</dt><dd>없음</dd></div>
+        <div><dt>CWE</dt><dd>CWE-502</dd></div>
+        <div><dt>Affected</dt><dd>NVD CPE 기준 확인 필요</dd></div>
+      </dl>
+      <div class="vector"><code>CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H</code></div>
+      <details>
+        <summary>References</summary>
+        <ul><li><a href="https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-58644" target="_blank" rel="noopener">https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-58644</a></li></ul>
+      </details>
+    </article>
+    <article class="cve-card" id="CVE-2026-58319">
+      <div class="cve-top">
+        <a class="cve-id" href="https://nvd.nist.gov/vuln/detail/CVE-2026-58319" target="_blank" rel="noopener">CVE-2026-58319</a>
+        <span class="score">CVSS 9.1 CRITICAL</span>
+      </div>
+      <p class="desc">Certain Apache Doris FE HTTP REST administrative APIs were accessible without proper authentication. An unauthenticated attacker with network access to the FE HTTP service could perform unauthorized administrative operations, potentially affecting cluster integrity and availability and leading to cluster instability or denial of service. 
+
+This issue affects Apache Doris versions prior to 3.1.0. Users are advised to upgrade to Apache Doris 3.1.0 or later.</p>
+      <dl>
+        <div><dt>Published</dt><dd>2026-07-14</dd></div>
+        <div><dt>Last Modified</dt><dd>2026-07-14</dd></div>
+        <div><dt>Status</dt><dd>Analyzed</dd></div>
+        <div><dt>Attack Vector</dt><dd>네트워크</dd></div>
+        <div><dt>Attack Complexity</dt><dd>낮음</dd></div>
+        <div><dt>Privileges</dt><dd>없음</dd></div>
+        <div><dt>User Interaction</dt><dd>없음</dd></div>
+        <div><dt>CWE</dt><dd>CWE-306</dd></div>
+        <div><dt>Affected</dt><dd>apache doris</dd></div>
+      </dl>
+      <div class="vector"><code>CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:H</code></div>
+      <details>
+        <summary>References</summary>
+        <ul><li><a href="https://lists.apache.org/thread/cob5mxkyr1k81o8v91hox2hld6zh25b4" target="_blank" rel="noopener">https://lists.apache.org/thread/cob5mxkyr1k81o8v91hox2hld6zh25b4</a></li><li><a href="http://www.openwall.com/lists/oss-security/2026/07/14/3" target="_blank" rel="noopener">http://www.openwall.com/lists/oss-security/2026/07/14/3</a></li></ul>
+      </details>
+    </article>
     <article class="cve-card" id="CVE-2026-56451">
       <div class="cve-top">
         <a class="cve-id" href="https://nvd.nist.gov/vuln/detail/CVE-2026-56451" target="_blank" rel="noopener">CVE-2026-56451</a>
@@ -70,6 +172,466 @@ This could allow an unauthenticated remote attacker to forge arbitrary JWT, bypa
       <details>
         <summary>References</summary>
         <ul><li><a href="https://cert-portal.siemens.com/productcert/html/ssa-096828.html" target="_blank" rel="noopener">https://cert-portal.siemens.com/productcert/html/ssa-096828.html</a></li></ul>
+      </details>
+    </article>
+    <article class="cve-card" id="CVE-2026-56190">
+      <div class="cve-top">
+        <a class="cve-id" href="https://nvd.nist.gov/vuln/detail/CVE-2026-56190" target="_blank" rel="noopener">CVE-2026-56190</a>
+        <span class="score">CVSS 9.8 CRITICAL</span>
+      </div>
+      <p class="desc">Use of uninitialized resource in Windows RDP allows an unauthorized attacker to execute code over a network.</p>
+      <dl>
+        <div><dt>Published</dt><dd>2026-07-14</dd></div>
+        <div><dt>Last Modified</dt><dd>2026-07-14</dd></div>
+        <div><dt>Status</dt><dd>Awaiting Analysis</dd></div>
+        <div><dt>Attack Vector</dt><dd>네트워크</dd></div>
+        <div><dt>Attack Complexity</dt><dd>낮음</dd></div>
+        <div><dt>Privileges</dt><dd>없음</dd></div>
+        <div><dt>User Interaction</dt><dd>없음</dd></div>
+        <div><dt>CWE</dt><dd>CWE-908</dd></div>
+        <div><dt>Affected</dt><dd>NVD CPE 기준 확인 필요</dd></div>
+      </dl>
+      <div class="vector"><code>CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H</code></div>
+      <details>
+        <summary>References</summary>
+        <ul><li><a href="https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-56190" target="_blank" rel="noopener">https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-56190</a></li></ul>
+      </details>
+    </article>
+    <article class="cve-card" id="CVE-2026-55008">
+      <div class="cve-top">
+        <a class="cve-id" href="https://nvd.nist.gov/vuln/detail/CVE-2026-55008" target="_blank" rel="noopener">CVE-2026-55008</a>
+        <span class="score">CVSS 9.6 CRITICAL</span>
+      </div>
+      <p class="desc">Improper neutralization of input during web page generation (&#x27;cross-site scripting&#x27;) in Microsoft Exchange Server allows an unauthorized attacker to perform spoofing over a network.</p>
+      <dl>
+        <div><dt>Published</dt><dd>2026-07-14</dd></div>
+        <div><dt>Last Modified</dt><dd>2026-07-14</dd></div>
+        <div><dt>Status</dt><dd>Awaiting Analysis</dd></div>
+        <div><dt>Attack Vector</dt><dd>네트워크</dd></div>
+        <div><dt>Attack Complexity</dt><dd>낮음</dd></div>
+        <div><dt>Privileges</dt><dd>없음</dd></div>
+        <div><dt>User Interaction</dt><dd>필요</dd></div>
+        <div><dt>CWE</dt><dd>CWE-79</dd></div>
+        <div><dt>Affected</dt><dd>NVD CPE 기준 확인 필요</dd></div>
+      </dl>
+      <div class="vector"><code>CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:H/I:H/A:H</code></div>
+      <details>
+        <summary>References</summary>
+        <ul><li><a href="https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-55008" target="_blank" rel="noopener">https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-55008</a></li></ul>
+      </details>
+    </article>
+    <article class="cve-card" id="CVE-2026-54990">
+      <div class="cve-top">
+        <a class="cve-id" href="https://nvd.nist.gov/vuln/detail/CVE-2026-54990" target="_blank" rel="noopener">CVE-2026-54990</a>
+        <span class="score">CVSS 9.8 CRITICAL</span>
+      </div>
+      <p class="desc">Heap-based buffer overflow in Remote Desktop Client allows an unauthorized attacker to execute code over a network.</p>
+      <dl>
+        <div><dt>Published</dt><dd>2026-07-14</dd></div>
+        <div><dt>Last Modified</dt><dd>2026-07-14</dd></div>
+        <div><dt>Status</dt><dd>Awaiting Analysis</dd></div>
+        <div><dt>Attack Vector</dt><dd>네트워크</dd></div>
+        <div><dt>Attack Complexity</dt><dd>낮음</dd></div>
+        <div><dt>Privileges</dt><dd>없음</dd></div>
+        <div><dt>User Interaction</dt><dd>없음</dd></div>
+        <div><dt>CWE</dt><dd>CWE-122</dd></div>
+        <div><dt>Affected</dt><dd>NVD CPE 기준 확인 필요</dd></div>
+      </dl>
+      <div class="vector"><code>CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H</code></div>
+      <details>
+        <summary>References</summary>
+        <ul><li><a href="https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-54990" target="_blank" rel="noopener">https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-54990</a></li></ul>
+      </details>
+    </article>
+    <article class="cve-card" id="CVE-2026-50518">
+      <div class="cve-top">
+        <a class="cve-id" href="https://nvd.nist.gov/vuln/detail/CVE-2026-50518" target="_blank" rel="noopener">CVE-2026-50518</a>
+        <span class="score">CVSS 9.8 CRITICAL</span>
+      </div>
+      <p class="desc">Heap-based buffer overflow in Windows DHCP Server allows an unauthorized attacker to execute code over a network.</p>
+      <dl>
+        <div><dt>Published</dt><dd>2026-07-14</dd></div>
+        <div><dt>Last Modified</dt><dd>2026-07-14</dd></div>
+        <div><dt>Status</dt><dd>Awaiting Analysis</dd></div>
+        <div><dt>Attack Vector</dt><dd>네트워크</dd></div>
+        <div><dt>Attack Complexity</dt><dd>낮음</dd></div>
+        <div><dt>Privileges</dt><dd>없음</dd></div>
+        <div><dt>User Interaction</dt><dd>없음</dd></div>
+        <div><dt>CWE</dt><dd>CWE-122</dd></div>
+        <div><dt>Affected</dt><dd>NVD CPE 기준 확인 필요</dd></div>
+      </dl>
+      <div class="vector"><code>CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H</code></div>
+      <details>
+        <summary>References</summary>
+        <ul><li><a href="https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-50518" target="_blank" rel="noopener">https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-50518</a></li></ul>
+      </details>
+    </article>
+    <article class="cve-card" id="CVE-2026-50380">
+      <div class="cve-top">
+        <a class="cve-id" href="https://nvd.nist.gov/vuln/detail/CVE-2026-50380" target="_blank" rel="noopener">CVE-2026-50380</a>
+        <span class="score">CVSS 9.6 CRITICAL</span>
+      </div>
+      <p class="desc">Heap-based buffer overflow in Windows GDI+ allows an unauthorized attacker to execute code over a network.</p>
+      <dl>
+        <div><dt>Published</dt><dd>2026-07-14</dd></div>
+        <div><dt>Last Modified</dt><dd>2026-07-14</dd></div>
+        <div><dt>Status</dt><dd>Awaiting Analysis</dd></div>
+        <div><dt>Attack Vector</dt><dd>네트워크</dd></div>
+        <div><dt>Attack Complexity</dt><dd>낮음</dd></div>
+        <div><dt>Privileges</dt><dd>없음</dd></div>
+        <div><dt>User Interaction</dt><dd>필요</dd></div>
+        <div><dt>CWE</dt><dd>CWE-122</dd></div>
+        <div><dt>Affected</dt><dd>NVD CPE 기준 확인 필요</dd></div>
+      </dl>
+      <div class="vector"><code>CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:H/I:H/A:H</code></div>
+      <details>
+        <summary>References</summary>
+        <ul><li><a href="https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-50380" target="_blank" rel="noopener">https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-50380</a></li></ul>
+      </details>
+    </article>
+    <article class="cve-card" id="CVE-2026-49798">
+      <div class="cve-top">
+        <a class="cve-id" href="https://nvd.nist.gov/vuln/detail/CVE-2026-49798" target="_blank" rel="noopener">CVE-2026-49798</a>
+        <span class="score">CVSS 9.3 CRITICAL</span>
+      </div>
+      <p class="desc">Use after free in Windows Kernel allows an unauthorized attacker to elevate privileges locally.</p>
+      <dl>
+        <div><dt>Published</dt><dd>2026-07-14</dd></div>
+        <div><dt>Last Modified</dt><dd>2026-07-14</dd></div>
+        <div><dt>Status</dt><dd>Undergoing Analysis</dd></div>
+        <div><dt>Attack Vector</dt><dd>로컬</dd></div>
+        <div><dt>Attack Complexity</dt><dd>낮음</dd></div>
+        <div><dt>Privileges</dt><dd>없음</dd></div>
+        <div><dt>User Interaction</dt><dd>없음</dd></div>
+        <div><dt>CWE</dt><dd>CWE-416</dd></div>
+        <div><dt>Affected</dt><dd>NVD CPE 기준 확인 필요</dd></div>
+      </dl>
+      <div class="vector"><code>CVSS:3.1/AV:L/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:H</code></div>
+      <details>
+        <summary>References</summary>
+        <ul><li><a href="https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-49798" target="_blank" rel="noopener">https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-49798</a></li></ul>
+      </details>
+    </article>
+    <article class="cve-card" id="CVE-2026-48561">
+      <div class="cve-top">
+        <a class="cve-id" href="https://nvd.nist.gov/vuln/detail/CVE-2026-48561" target="_blank" rel="noopener">CVE-2026-48561</a>
+        <span class="score">CVSS 9.6 CRITICAL</span>
+      </div>
+      <p class="desc">Improper neutralization of special elements used in a command (&#x27;command injection&#x27;) in Microsoft Copilot allows an unauthorized attacker to execute code over a network.</p>
+      <dl>
+        <div><dt>Published</dt><dd>2026-07-14</dd></div>
+        <div><dt>Last Modified</dt><dd>2026-07-14</dd></div>
+        <div><dt>Status</dt><dd>Undergoing Analysis</dd></div>
+        <div><dt>Attack Vector</dt><dd>네트워크</dd></div>
+        <div><dt>Attack Complexity</dt><dd>낮음</dd></div>
+        <div><dt>Privileges</dt><dd>없음</dd></div>
+        <div><dt>User Interaction</dt><dd>필요</dd></div>
+        <div><dt>CWE</dt><dd>CWE-77</dd></div>
+        <div><dt>Affected</dt><dd>NVD CPE 기준 확인 필요</dd></div>
+      </dl>
+      <div class="vector"><code>CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:H/I:H/A:H</code></div>
+      <details>
+        <summary>References</summary>
+        <ul><li><a href="https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-48561" target="_blank" rel="noopener">https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-48561</a></li></ul>
+      </details>
+    </article>
+    <article class="cve-card" id="CVE-2026-48359">
+      <div class="cve-top">
+        <a class="cve-id" href="https://nvd.nist.gov/vuln/detail/CVE-2026-48359" target="_blank" rel="noopener">CVE-2026-48359</a>
+        <span class="score">CVSS 9.6 CRITICAL</span>
+      </div>
+      <p class="desc">Adobe Experience Manager is affected by an Improper Restriction of XML External Entity Reference (&#x27;XXE&#x27;) vulnerability that could result in arbitrary code execution in the context of the current user. A low-privileged attacker could exploit this vulnerability to read sensitive files, potentially gaining elevated access or control over the victim&#x27;s account or session. Exploitation of this issue does not require user interaction. Scope is changed.</p>
+      <dl>
+        <div><dt>Published</dt><dd>2026-07-14</dd></div>
+        <div><dt>Last Modified</dt><dd>2026-07-14</dd></div>
+        <div><dt>Status</dt><dd>Undergoing Analysis</dd></div>
+        <div><dt>Attack Vector</dt><dd>네트워크</dd></div>
+        <div><dt>Attack Complexity</dt><dd>낮음</dd></div>
+        <div><dt>Privileges</dt><dd>낮음</dd></div>
+        <div><dt>User Interaction</dt><dd>없음</dd></div>
+        <div><dt>CWE</dt><dd>CWE-611</dd></div>
+        <div><dt>Affected</dt><dd>NVD CPE 기준 확인 필요</dd></div>
+      </dl>
+      <div class="vector"><code>CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:N</code></div>
+      <details>
+        <summary>References</summary>
+        <ul><li><a href="https://helpx.adobe.com/security/products/experience-manager/apsb26-74.html" target="_blank" rel="noopener">https://helpx.adobe.com/security/products/experience-manager/apsb26-74.html</a></li></ul>
+      </details>
+    </article>
+    <article class="cve-card" id="CVE-2026-48358">
+      <div class="cve-top">
+        <a class="cve-id" href="https://nvd.nist.gov/vuln/detail/CVE-2026-48358" target="_blank" rel="noopener">CVE-2026-48358</a>
+        <span class="score">CVSS 9.1 CRITICAL</span>
+      </div>
+      <p class="desc">Adobe Commerce is affected by an Improper Encoding or Escaping of Output vulnerability that could result in arbitrary code execution in the context of the current user. Exploitation of this issue does not require user interaction. Scope is changed.</p>
+      <dl>
+        <div><dt>Published</dt><dd>2026-07-14</dd></div>
+        <div><dt>Last Modified</dt><dd>2026-07-14</dd></div>
+        <div><dt>Status</dt><dd>Undergoing Analysis</dd></div>
+        <div><dt>Attack Vector</dt><dd>네트워크</dd></div>
+        <div><dt>Attack Complexity</dt><dd>낮음</dd></div>
+        <div><dt>Privileges</dt><dd>높음</dd></div>
+        <div><dt>User Interaction</dt><dd>없음</dd></div>
+        <div><dt>CWE</dt><dd>CWE-116</dd></div>
+        <div><dt>Affected</dt><dd>NVD CPE 기준 확인 필요</dd></div>
+      </dl>
+      <div class="vector"><code>CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:C/C:H/I:H/A:H</code></div>
+      <details>
+        <summary>References</summary>
+        <ul><li><a href="https://helpx.adobe.com/security/products/magento/apsb26-73.html" target="_blank" rel="noopener">https://helpx.adobe.com/security/products/magento/apsb26-73.html</a></li></ul>
+      </details>
+    </article>
+    <article class="cve-card" id="CVE-2026-48356">
+      <div class="cve-top">
+        <a class="cve-id" href="https://nvd.nist.gov/vuln/detail/CVE-2026-48356" target="_blank" rel="noopener">CVE-2026-48356</a>
+        <span class="score">CVSS 9.6 CRITICAL</span>
+      </div>
+      <p class="desc">Adobe Commerce is affected by an Unrestricted Upload of File with Dangerous Type vulnerability that could result in arbitrary code execution in the context of the current user. An attacker could exploit this vulnerability to inject malicious scripts into a web page, potentially gaining elevated access or control over the victim&#x27;s account or session. Exploitation of this issue requires user interaction in that a victim must visit a maliciously crafted URL or interact with a compromised web page. Scope is changed.</p>
+      <dl>
+        <div><dt>Published</dt><dd>2026-07-14</dd></div>
+        <div><dt>Last Modified</dt><dd>2026-07-14</dd></div>
+        <div><dt>Status</dt><dd>Undergoing Analysis</dd></div>
+        <div><dt>Attack Vector</dt><dd>네트워크</dd></div>
+        <div><dt>Attack Complexity</dt><dd>낮음</dd></div>
+        <div><dt>Privileges</dt><dd>없음</dd></div>
+        <div><dt>User Interaction</dt><dd>필요</dd></div>
+        <div><dt>CWE</dt><dd>CWE-434</dd></div>
+        <div><dt>Affected</dt><dd>NVD CPE 기준 확인 필요</dd></div>
+      </dl>
+      <div class="vector"><code>CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:H/I:H/A:L</code></div>
+      <details>
+        <summary>References</summary>
+        <ul><li><a href="https://helpx.adobe.com/security/products/magento/apsb26-73.html" target="_blank" rel="noopener">https://helpx.adobe.com/security/products/magento/apsb26-73.html</a></li></ul>
+      </details>
+    </article>
+    <article class="cve-card" id="CVE-2026-48334">
+      <div class="cve-top">
+        <a class="cve-id" href="https://nvd.nist.gov/vuln/detail/CVE-2026-48334" target="_blank" rel="noopener">CVE-2026-48334</a>
+        <span class="score">CVSS 9.3 CRITICAL</span>
+      </div>
+      <p class="desc">Illustrator is affected by an Improper Input Validation vulnerability that could result in arbitrary code execution in the context of the current user. Exploitation of this issue requires user interaction in that a victim must open a malicious file. Scope is changed.</p>
+      <dl>
+        <div><dt>Published</dt><dd>2026-07-14</dd></div>
+        <div><dt>Last Modified</dt><dd>2026-07-14</dd></div>
+        <div><dt>Status</dt><dd>Received</dd></div>
+        <div><dt>Attack Vector</dt><dd>네트워크</dd></div>
+        <div><dt>Attack Complexity</dt><dd>낮음</dd></div>
+        <div><dt>Privileges</dt><dd>없음</dd></div>
+        <div><dt>User Interaction</dt><dd>필요</dd></div>
+        <div><dt>CWE</dt><dd>CWE-20</dd></div>
+        <div><dt>Affected</dt><dd>NVD CPE 기준 확인 필요</dd></div>
+      </dl>
+      <div class="vector"><code>CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:H/I:H/A:N</code></div>
+      <details>
+        <summary>References</summary>
+        <ul><li><a href="https://helpx.adobe.com/security/products/illustrator/apsb26-79.html" target="_blank" rel="noopener">https://helpx.adobe.com/security/products/illustrator/apsb26-79.html</a></li></ul>
+      </details>
+    </article>
+    <article class="cve-card" id="CVE-2026-48327">
+      <div class="cve-top">
+        <a class="cve-id" href="https://nvd.nist.gov/vuln/detail/CVE-2026-48327" target="_blank" rel="noopener">CVE-2026-48327</a>
+        <span class="score">CVSS 9.0 CRITICAL</span>
+      </div>
+      <p class="desc">ColdFusion is affected by an Incorrect Authorization vulnerability that could result in arbitrary code execution in the context of the current user. Exploitation of this issue does not require user interaction. Scope is changed.</p>
+      <dl>
+        <div><dt>Published</dt><dd>2026-07-14</dd></div>
+        <div><dt>Last Modified</dt><dd>2026-07-14</dd></div>
+        <div><dt>Status</dt><dd>Received</dd></div>
+        <div><dt>Attack Vector</dt><dd>인접 네트워크</dd></div>
+        <div><dt>Attack Complexity</dt><dd>낮음</dd></div>
+        <div><dt>Privileges</dt><dd>낮음</dd></div>
+        <div><dt>User Interaction</dt><dd>없음</dd></div>
+        <div><dt>CWE</dt><dd>CWE-863</dd></div>
+        <div><dt>Affected</dt><dd>NVD CPE 기준 확인 필요</dd></div>
+      </dl>
+      <div class="vector"><code>CVSS:3.1/AV:A/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H</code></div>
+      <details>
+        <summary>References</summary>
+        <ul><li><a href="https://helpx.adobe.com/security/products/coldfusion/apsb26-82.html" target="_blank" rel="noopener">https://helpx.adobe.com/security/products/coldfusion/apsb26-82.html</a></li></ul>
+      </details>
+    </article>
+    <article class="cve-card" id="CVE-2026-48325">
+      <div class="cve-top">
+        <a class="cve-id" href="https://nvd.nist.gov/vuln/detail/CVE-2026-48325" target="_blank" rel="noopener">CVE-2026-48325</a>
+        <span class="score">CVSS 9.3 CRITICAL</span>
+      </div>
+      <p class="desc">ColdFusion is affected by a Missing Authentication for Critical Function vulnerability that could result in arbitrary code execution in the context of the current user. Exploitation of this issue does not require user interaction. Scope is changed.</p>
+      <dl>
+        <div><dt>Published</dt><dd>2026-07-14</dd></div>
+        <div><dt>Last Modified</dt><dd>2026-07-14</dd></div>
+        <div><dt>Status</dt><dd>Received</dd></div>
+        <div><dt>Attack Vector</dt><dd>인접 네트워크</dd></div>
+        <div><dt>Attack Complexity</dt><dd>낮음</dd></div>
+        <div><dt>Privileges</dt><dd>없음</dd></div>
+        <div><dt>User Interaction</dt><dd>없음</dd></div>
+        <div><dt>CWE</dt><dd>CWE-306</dd></div>
+        <div><dt>Affected</dt><dd>NVD CPE 기준 확인 필요</dd></div>
+      </dl>
+      <div class="vector"><code>CVSS:3.1/AV:A/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:N</code></div>
+      <details>
+        <summary>References</summary>
+        <ul><li><a href="https://helpx.adobe.com/security/products/coldfusion/apsb26-82.html" target="_blank" rel="noopener">https://helpx.adobe.com/security/products/coldfusion/apsb26-82.html</a></li></ul>
+      </details>
+    </article>
+    <article class="cve-card" id="CVE-2026-48324">
+      <div class="cve-top">
+        <a class="cve-id" href="https://nvd.nist.gov/vuln/detail/CVE-2026-48324" target="_blank" rel="noopener">CVE-2026-48324</a>
+        <span class="score">CVSS 9.1 CRITICAL</span>
+      </div>
+      <p class="desc">ColdFusion is affected by an Improper Neutralization of Special Elements used in an SQL Command (&#x27;SQL Injection&#x27;) vulnerability that could result in arbitrary code execution in the context of the current user. Exploitation of this issue does not require user interaction. Scope is changed.</p>
+      <dl>
+        <div><dt>Published</dt><dd>2026-07-14</dd></div>
+        <div><dt>Last Modified</dt><dd>2026-07-14</dd></div>
+        <div><dt>Status</dt><dd>Received</dd></div>
+        <div><dt>Attack Vector</dt><dd>네트워크</dd></div>
+        <div><dt>Attack Complexity</dt><dd>낮음</dd></div>
+        <div><dt>Privileges</dt><dd>높음</dd></div>
+        <div><dt>User Interaction</dt><dd>없음</dd></div>
+        <div><dt>CWE</dt><dd>CWE-89</dd></div>
+        <div><dt>Affected</dt><dd>NVD CPE 기준 확인 필요</dd></div>
+      </dl>
+      <div class="vector"><code>CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:C/C:H/I:H/A:H</code></div>
+      <details>
+        <summary>References</summary>
+        <ul><li><a href="https://helpx.adobe.com/security/products/coldfusion/apsb26-82.html" target="_blank" rel="noopener">https://helpx.adobe.com/security/products/coldfusion/apsb26-82.html</a></li></ul>
+      </details>
+    </article>
+    <article class="cve-card" id="CVE-2026-48322">
+      <div class="cve-top">
+        <a class="cve-id" href="https://nvd.nist.gov/vuln/detail/CVE-2026-48322" target="_blank" rel="noopener">CVE-2026-48322</a>
+        <span class="score">CVSS 9.6 CRITICAL</span>
+      </div>
+      <p class="desc">ColdFusion is affected by an Improper Control of Generation of Code (&#x27;Code Injection&#x27;) vulnerability that could result in arbitrary code execution in the context of the current user. Exploitation of this issue does not require user interaction. Scope is changed.</p>
+      <dl>
+        <div><dt>Published</dt><dd>2026-07-14</dd></div>
+        <div><dt>Last Modified</dt><dd>2026-07-14</dd></div>
+        <div><dt>Status</dt><dd>Received</dd></div>
+        <div><dt>Attack Vector</dt><dd>네트워크</dd></div>
+        <div><dt>Attack Complexity</dt><dd>낮음</dd></div>
+        <div><dt>Privileges</dt><dd>낮음</dd></div>
+        <div><dt>User Interaction</dt><dd>없음</dd></div>
+        <div><dt>CWE</dt><dd>CWE-94</dd></div>
+        <div><dt>Affected</dt><dd>NVD CPE 기준 확인 필요</dd></div>
+      </dl>
+      <div class="vector"><code>CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:N</code></div>
+      <details>
+        <summary>References</summary>
+        <ul><li><a href="https://helpx.adobe.com/security/products/coldfusion/apsb26-82.html" target="_blank" rel="noopener">https://helpx.adobe.com/security/products/coldfusion/apsb26-82.html</a></li></ul>
+      </details>
+    </article>
+    <article class="cve-card" id="CVE-2026-48321">
+      <div class="cve-top">
+        <a class="cve-id" href="https://nvd.nist.gov/vuln/detail/CVE-2026-48321" target="_blank" rel="noopener">CVE-2026-48321</a>
+        <span class="score">CVSS 9.3 CRITICAL</span>
+      </div>
+      <p class="desc">ColdFusion is affected by an Incorrect Authorization vulnerability that could result in privilege escalation. An attacker could leverage this vulnerability to gain unauthorized read and write access. Exploitation of this issue does not require user interaction. Scope is changed.</p>
+      <dl>
+        <div><dt>Published</dt><dd>2026-07-14</dd></div>
+        <div><dt>Last Modified</dt><dd>2026-07-14</dd></div>
+        <div><dt>Status</dt><dd>Received</dd></div>
+        <div><dt>Attack Vector</dt><dd>인접 네트워크</dd></div>
+        <div><dt>Attack Complexity</dt><dd>낮음</dd></div>
+        <div><dt>Privileges</dt><dd>없음</dd></div>
+        <div><dt>User Interaction</dt><dd>없음</dd></div>
+        <div><dt>CWE</dt><dd>CWE-863</dd></div>
+        <div><dt>Affected</dt><dd>NVD CPE 기준 확인 필요</dd></div>
+      </dl>
+      <div class="vector"><code>CVSS:3.1/AV:A/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:N</code></div>
+      <details>
+        <summary>References</summary>
+        <ul><li><a href="https://helpx.adobe.com/security/products/coldfusion/apsb26-82.html" target="_blank" rel="noopener">https://helpx.adobe.com/security/products/coldfusion/apsb26-82.html</a></li></ul>
+      </details>
+    </article>
+    <article class="cve-card" id="CVE-2026-48319">
+      <div class="cve-top">
+        <a class="cve-id" href="https://nvd.nist.gov/vuln/detail/CVE-2026-48319" target="_blank" rel="noopener">CVE-2026-48319</a>
+        <span class="score">CVSS 9.1 CRITICAL</span>
+      </div>
+      <p class="desc">ColdFusion is affected by an Improper Limitation of a Pathname to a Restricted Directory (&#x27;Path Traversal&#x27;) vulnerability that could result in arbitrary code execution in the context of the current user. Exploitation of this issue does not require user interaction. Scope is changed.</p>
+      <dl>
+        <div><dt>Published</dt><dd>2026-07-14</dd></div>
+        <div><dt>Last Modified</dt><dd>2026-07-14</dd></div>
+        <div><dt>Status</dt><dd>Received</dd></div>
+        <div><dt>Attack Vector</dt><dd>네트워크</dd></div>
+        <div><dt>Attack Complexity</dt><dd>낮음</dd></div>
+        <div><dt>Privileges</dt><dd>높음</dd></div>
+        <div><dt>User Interaction</dt><dd>없음</dd></div>
+        <div><dt>CWE</dt><dd>CWE-22</dd></div>
+        <div><dt>Affected</dt><dd>NVD CPE 기준 확인 필요</dd></div>
+      </dl>
+      <div class="vector"><code>CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:C/C:H/I:H/A:H</code></div>
+      <details>
+        <summary>References</summary>
+        <ul><li><a href="https://helpx.adobe.com/security/products/coldfusion/apsb26-82.html" target="_blank" rel="noopener">https://helpx.adobe.com/security/products/coldfusion/apsb26-82.html</a></li></ul>
+      </details>
+    </article>
+    <article class="cve-card" id="CVE-2026-48318">
+      <div class="cve-top">
+        <a class="cve-id" href="https://nvd.nist.gov/vuln/detail/CVE-2026-48318" target="_blank" rel="noopener">CVE-2026-48318</a>
+        <span class="score">CVSS 9.9 CRITICAL</span>
+      </div>
+      <p class="desc">ColdFusion is affected by an Improper Limitation of a Pathname to a Restricted Directory (&#x27;Path Traversal&#x27;) vulnerability that could lead to arbitrary file system read. An attacker could exploit this vulnerability to access sensitive files and directories outside the intended access scope. Exploitation of this issue does not require user interaction. Scope is changed.</p>
+      <dl>
+        <div><dt>Published</dt><dd>2026-07-14</dd></div>
+        <div><dt>Last Modified</dt><dd>2026-07-14</dd></div>
+        <div><dt>Status</dt><dd>Received</dd></div>
+        <div><dt>Attack Vector</dt><dd>네트워크</dd></div>
+        <div><dt>Attack Complexity</dt><dd>낮음</dd></div>
+        <div><dt>Privileges</dt><dd>낮음</dd></div>
+        <div><dt>User Interaction</dt><dd>없음</dd></div>
+        <div><dt>CWE</dt><dd>CWE-22</dd></div>
+        <div><dt>Affected</dt><dd>NVD CPE 기준 확인 필요</dd></div>
+      </dl>
+      <div class="vector"><code>CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H</code></div>
+      <details>
+        <summary>References</summary>
+        <ul><li><a href="https://helpx.adobe.com/security/products/coldfusion/apsb26-82.html" target="_blank" rel="noopener">https://helpx.adobe.com/security/products/coldfusion/apsb26-82.html</a></li></ul>
+      </details>
+    </article>
+    <article class="cve-card" id="CVE-2026-48284">
+      <div class="cve-top">
+        <a class="cve-id" href="https://nvd.nist.gov/vuln/detail/CVE-2026-48284" target="_blank" rel="noopener">CVE-2026-48284</a>
+        <span class="score">CVSS 9.6 CRITICAL</span>
+      </div>
+      <p class="desc">ColdFusion is affected by an Improper Input Validation vulnerability that could result in arbitrary code execution in the context of the current user. Exploitation of this issue does not require user interaction. Scope is changed.</p>
+      <dl>
+        <div><dt>Published</dt><dd>2026-07-14</dd></div>
+        <div><dt>Last Modified</dt><dd>2026-07-14</dd></div>
+        <div><dt>Status</dt><dd>Received</dd></div>
+        <div><dt>Attack Vector</dt><dd>인접 네트워크</dd></div>
+        <div><dt>Attack Complexity</dt><dd>낮음</dd></div>
+        <div><dt>Privileges</dt><dd>없음</dd></div>
+        <div><dt>User Interaction</dt><dd>없음</dd></div>
+        <div><dt>CWE</dt><dd>CWE-20</dd></div>
+        <div><dt>Affected</dt><dd>NVD CPE 기준 확인 필요</dd></div>
+      </dl>
+      <div class="vector"><code>CVSS:3.1/AV:A/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:H</code></div>
+      <details>
+        <summary>References</summary>
+        <ul><li><a href="https://helpx.adobe.com/security/products/coldfusion/apsb26-82.html" target="_blank" rel="noopener">https://helpx.adobe.com/security/products/coldfusion/apsb26-82.html</a></li></ul>
+      </details>
+    </article>
+    <article class="cve-card" id="CVE-2026-48259">
+      <div class="cve-top">
+        <a class="cve-id" href="https://nvd.nist.gov/vuln/detail/CVE-2026-48259" target="_blank" rel="noopener">CVE-2026-48259</a>
+        <span class="score">CVSS 9.6 CRITICAL</span>
+      </div>
+      <p class="desc">Adobe Experience Manager is affected by a Server-Side Request Forgery (SSRF) vulnerability that could result in arbitrary code execution in the context of the current user. A low-privileged attacker could leverage this vulnerability to issue unauthorized server-side requests, potentially gaining elevated access or control over the victim&#x27;s account or session. Exploitation of this issue does not require user interaction. Scope is changed.</p>
+      <dl>
+        <div><dt>Published</dt><dd>2026-07-14</dd></div>
+        <div><dt>Last Modified</dt><dd>2026-07-14</dd></div>
+        <div><dt>Status</dt><dd>Undergoing Analysis</dd></div>
+        <div><dt>Attack Vector</dt><dd>네트워크</dd></div>
+        <div><dt>Attack Complexity</dt><dd>낮음</dd></div>
+        <div><dt>Privileges</dt><dd>낮음</dd></div>
+        <div><dt>User Interaction</dt><dd>없음</dd></div>
+        <div><dt>CWE</dt><dd>CWE-918</dd></div>
+        <div><dt>Affected</dt><dd>NVD CPE 기준 확인 필요</dd></div>
+      </dl>
+      <div class="vector"><code>CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:N</code></div>
+      <details>
+        <summary>References</summary>
+        <ul><li><a href="https://helpx.adobe.com/security/products/experience-manager/apsb26-74.html" target="_blank" rel="noopener">https://helpx.adobe.com/security/products/experience-manager/apsb26-74.html</a></li></ul>
       </details>
     </article>
     <article class="cve-card" id="CVE-2026-44761">
@@ -139,6 +701,29 @@ This could allow an unauthenticated remote attacker to forge arbitrary JWT, bypa
       <details>
         <summary>References</summary>
         <ul><li><a href="https://me.sap.com/notes/3720138" target="_blank" rel="noopener">https://me.sap.com/notes/3720138</a></li><li><a href="https://url.sap/sapsecuritypatchday" target="_blank" rel="noopener">https://url.sap/sapsecuritypatchday</a></li></ul>
+      </details>
+    </article>
+    <article class="cve-card" id="CVE-2026-15701">
+      <div class="cve-top">
+        <a class="cve-id" href="https://nvd.nist.gov/vuln/detail/CVE-2026-15701" target="_blank" rel="noopener">CVE-2026-15701</a>
+        <span class="score">CVSS 9.8 CRITICAL</span>
+      </div>
+      <p class="desc">A weakness has been identified in Totolink NR1800X 9.1.0u.6279_B20210910. Affected by this issue is the function Form_Logout of the file /formLogout.htm of the component lighttpd. This manipulation of the argument Host causes stack-based buffer overflow. The attack is possible to be carried out remotely. The exploit has been made available to the public and could be used for attacks.</p>
+      <dl>
+        <div><dt>Published</dt><dd>2026-07-14</dd></div>
+        <div><dt>Last Modified</dt><dd>2026-07-14</dd></div>
+        <div><dt>Status</dt><dd>Deferred</dd></div>
+        <div><dt>Attack Vector</dt><dd>네트워크</dd></div>
+        <div><dt>Attack Complexity</dt><dd>낮음</dd></div>
+        <div><dt>Privileges</dt><dd>없음</dd></div>
+        <div><dt>User Interaction</dt><dd>없음</dd></div>
+        <div><dt>CWE</dt><dd>CWE-119, CWE-121</dd></div>
+        <div><dt>Affected</dt><dd>NVD CPE 기준 확인 필요</dd></div>
+      </dl>
+      <div class="vector"><code>CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H</code></div>
+      <details>
+        <summary>References</summary>
+        <ul><li><a href="https://github.com/fu9-dotom/cve/issues/1" target="_blank" rel="noopener">https://github.com/fu9-dotom/cve/issues/1</a></li><li><a href="https://vuldb.com/cve/CVE-2026-15701" target="_blank" rel="noopener">https://vuldb.com/cve/CVE-2026-15701</a></li><li><a href="https://vuldb.com/submit/856136" target="_blank" rel="noopener">https://vuldb.com/submit/856136</a></li><li><a href="https://vuldb.com/vuln/378248" target="_blank" rel="noopener">https://vuldb.com/vuln/378248</a></li></ul>
       </details>
     </article>
     <article class="cve-card" id="CVE-2026-62327">
@@ -233,6 +818,29 @@ This could allow an unauthenticated remote attacker to forge arbitrary JWT, bypa
         <ul><li><a href="https://github.com/decolua/9router/security/advisories/GHSA-vjc7-jrh9-9j86" target="_blank" rel="noopener">https://github.com/decolua/9router/security/advisories/GHSA-vjc7-jrh9-9j86</a></li><li><a href="https://www.vulncheck.com/advisories/9router-unauthenticated-api-exposure-via-api-providers" target="_blank" rel="noopener">https://www.vulncheck.com/advisories/9router-unauthenticated-api-exposure-via-api-providers</a></li></ul>
       </details>
     </article>
+    <article class="cve-card" id="CVE-2026-57830">
+      <div class="cve-top">
+        <a class="cve-id" href="https://nvd.nist.gov/vuln/detail/CVE-2026-57830" target="_blank" rel="noopener">CVE-2026-57830</a>
+        <span class="score">CVSS 9.1 CRITICAL</span>
+      </div>
+      <p class="desc">The Joomla extension Helix Ultimate is vulnerable to an unauthenticated arbitrary file deletion.</p>
+      <dl>
+        <div><dt>Published</dt><dd>2026-07-13</dd></div>
+        <div><dt>Last Modified</dt><dd>2026-07-14</dd></div>
+        <div><dt>Status</dt><dd>Analyzed</dd></div>
+        <div><dt>Attack Vector</dt><dd>네트워크</dd></div>
+        <div><dt>Attack Complexity</dt><dd>낮음</dd></div>
+        <div><dt>Privileges</dt><dd>없음</dd></div>
+        <div><dt>User Interaction</dt><dd>없음</dd></div>
+        <div><dt>CWE</dt><dd>CWE-862</dd></div>
+        <div><dt>Affected</dt><dd>ollyo helix_ultimate</dd></div>
+      </dl>
+      <div class="vector"><code>CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:H</code></div>
+      <details>
+        <summary>References</summary>
+        <ul><li><a href="https://www.joomshaper.com/joomla-templates/helixultimate" target="_blank" rel="noopener">https://www.joomshaper.com/joomla-templates/helixultimate</a></li></ul>
+      </details>
+    </article>
     <article class="cve-card" id="CVE-2026-4769">
       <div class="cve-top">
         <a class="cve-id" href="https://nvd.nist.gov/vuln/detail/CVE-2026-4769" target="_blank" rel="noopener">CVE-2026-4769</a>
@@ -300,6 +908,33 @@ This could allow an unauthenticated remote attacker to forge arbitrary JWT, bypa
       <details>
         <summary>References</summary>
         <ul><li><a href="https://cert.pl/en/posts/2026/07/CVE-2026-40467" target="_blank" rel="noopener">https://cert.pl/en/posts/2026/07/CVE-2026-40467</a></li><li><a href="https://cgit.git.savannah.gnu.org/cgit/gawk.git/commit/?id=062f2f2581b991362c046f7f2e238ffa34e6f8c7" target="_blank" rel="noopener">https://cgit.git.savannah.gnu.org/cgit/gawk.git/commit/?id=062f2f2581b991362c046f7f2e238ffa34e6f8c7</a></li></ul>
+      </details>
+    </article>
+    <article class="cve-card" id="CVE-2026-13221">
+      <div class="cve-top">
+        <a class="cve-id" href="https://nvd.nist.gov/vuln/detail/CVE-2026-13221" target="_blank" rel="noopener">CVE-2026-13221</a>
+        <span class="score">CVSS 9.1 CRITICAL</span>
+      </div>
+      <p class="desc">Perl versions through 5.43.9 produce silently incorrect regular expression matches when an alternation of more than 65535 fixed string branches is compiled into a trie in Perl_study_chunk.
+
+When such branches are combined into a trie, the delta between the first branch and the shared tail is stored in a 16-bit field. A branch count above 65535 overflows the field, and the trie&#x27;s match decision table is truncated with no warning or error.
+
+A pattern of this shape produces false positive matches (matching strings it should not) and false negative matches (failing to match strings it should). When such a pattern gates an access or filtering decision, the result is wrong.</p>
+      <dl>
+        <div><dt>Published</dt><dd>2026-07-13</dd></div>
+        <div><dt>Last Modified</dt><dd>2026-07-14</dd></div>
+        <div><dt>Status</dt><dd>Analyzed</dd></div>
+        <div><dt>Attack Vector</dt><dd>네트워크</dd></div>
+        <div><dt>Attack Complexity</dt><dd>낮음</dd></div>
+        <div><dt>Privileges</dt><dd>없음</dd></div>
+        <div><dt>User Interaction</dt><dd>없음</dd></div>
+        <div><dt>CWE</dt><dd>CWE-190</dd></div>
+        <div><dt>Affected</dt><dd>perl perl</dd></div>
+      </dl>
+      <div class="vector"><code>CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:H</code></div>
+      <details>
+        <summary>References</summary>
+        <ul><li><a href="https://github.com/Perl/perl5/commit/03f74bbbd3a68350d926ee93d56ee4808c28c4c7.patch" target="_blank" rel="noopener">https://github.com/Perl/perl5/commit/03f74bbbd3a68350d926ee93d56ee4808c28c4c7.patch</a></li><li><a href="https://github.com/Perl/perl5/issues/23388" target="_blank" rel="noopener">https://github.com/Perl/perl5/issues/23388</a></li><li><a href="http://www.openwall.com/lists/oss-security/2026/07/13/5" target="_blank" rel="noopener">http://www.openwall.com/lists/oss-security/2026/07/13/5</a></li></ul>
       </details>
     </article>
     <article class="cve-card" id="CVE-2026-56271">
@@ -438,6 +1073,29 @@ This could allow an unauthenticated remote attacker to forge arbitrary JWT, bypa
       <details>
         <summary>References</summary>
         <ul><li><a href="https://github.com/MervinPraison/PraisonAI/commit/3aa9cbc2bd49c23a32be0a89a5e620d13d843eab" target="_blank" rel="noopener">https://github.com/MervinPraison/PraisonAI/commit/3aa9cbc2bd49c23a32be0a89a5e620d13d843eab</a></li><li><a href="https://github.com/MervinPraison/PraisonAI/security/advisories/GHSA-wf65-4jjx-q444" target="_blank" rel="noopener">https://github.com/MervinPraison/PraisonAI/security/advisories/GHSA-wf65-4jjx-q444</a></li><li><a href="https://www.vulncheck.com/advisories/praisonai-before-sql-cql-injection-via-vector-dimension" target="_blank" rel="noopener">https://www.vulncheck.com/advisories/praisonai-before-sql-cql-injection-via-vector-dimension</a></li></ul>
+      </details>
+    </article>
+    <article class="cve-card" id="CVE-2026-57827">
+      <div class="cve-top">
+        <a class="cve-id" href="https://nvd.nist.gov/vuln/detail/CVE-2026-57827" target="_blank" rel="noopener">CVE-2026-57827</a>
+        <span class="score">CVSS 9.8 CRITICAL</span>
+      </div>
+      <p class="desc">The Joomla extension RSFiles is vulnerable to an unauthenticated arbitrary file upload that allows uploading executable files and leads to full RCE.</p>
+      <dl>
+        <div><dt>Published</dt><dd>2026-07-11</dd></div>
+        <div><dt>Last Modified</dt><dd>2026-07-14</dd></div>
+        <div><dt>Status</dt><dd>Analyzed</dd></div>
+        <div><dt>Attack Vector</dt><dd>네트워크</dd></div>
+        <div><dt>Attack Complexity</dt><dd>낮음</dd></div>
+        <div><dt>Privileges</dt><dd>없음</dd></div>
+        <div><dt>User Interaction</dt><dd>없음</dd></div>
+        <div><dt>CWE</dt><dd>CWE-434</dd></div>
+        <div><dt>Affected</dt><dd>rsjoomla rsfiles\!</dd></div>
+      </dl>
+      <div class="vector"><code>CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H</code></div>
+      <details>
+        <summary>References</summary>
+        <ul><li><a href="https://mysites.guru/blog/rsfiles-unauthenticated-file-upload-rce/" target="_blank" rel="noopener">https://mysites.guru/blog/rsfiles-unauthenticated-file-upload-rce/</a></li><li><a href="https://www.rsjoomla.com/joomla-extensions/joomla-download-manager.html" target="_blank" rel="noopener">https://www.rsjoomla.com/joomla-extensions/joomla-download-manager.html</a></li></ul>
       </details>
     </article>
     <article class="cve-card" id="CVE-2026-61459">
