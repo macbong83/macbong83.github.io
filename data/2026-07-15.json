@@ -1,0 +1,104 @@
+{
+  "tagline": "글로벌 정보보안 뉴스레터",
+  "title": "보안 브리핑",
+  "date_display": "2026년 7월 15일 수요일",
+  "date_short": "2026.07.15",
+  "sources_line": "The Hacker News · BleepingComputer · SecurityWeek · KrebsOnSecurity · CISA · NCSC UK · Unit 42 · 보안뉴스 · 데일리시큐 · 전자신문",
+  "seo": {
+    "title": "CVE-2026-XXXXX 악용·랜섬웨어 급증 — 2026.07.15 보안 브리핑",
+    "description": "오늘 주요 취약점·침해 사고·위협 트렌드 요약.",
+    "keywords": "CVE, 랜섬웨어, 취약점, 침해사고, 보안"
+  },
+  "sections": [
+    {
+      "label": "취약점 & 공격",
+      "type": "cards",
+      "items": [
+        {
+          "severity": "critical",
+          "source": "The Hacker News",
+          "headline": "SAP, CVSS 9.9 취약점 패치",
+          "url": "https://thehackernews.com/2026/07/sap-patches-cvss-99-netweaver-abap-flaw.html",
+          "summary": "SAP는 NetWeaver Application Server ABAP의 CVSS 9.9 취약점을 패치했다. 이 취약점은 인증된 사용자가 데이터를 노출하거나 수정할 수 있게 해준다."
+        },
+        {
+          "severity": "critical",
+          "source": "SecurityWeek",
+          "headline": "Microsoft, 622개 취약점 패치 및 제로데이 악용",
+          "url": "https://www.securityweek.com/microsoft-patches-record-622-vulnerabilities-including-two-exploited-zero-days/",
+          "summary": "Microsoft는 Active Directory와 SharePoint Server의 제로데이 취약점을 포함한 622개의 취약점을 패치했다. 이 취약점들은 이미 악용되고 있다."
+        },
+        {
+          "severity": "high",
+          "source": "The Hacker News",
+          "headline": "RabbitMQ, OAuth 비밀번호 유출 취약점",
+          "url": "https://thehackernews.com/2026/07/rabbitmq-flaws-could-leak-oauth-secrets.html",
+          "summary": "RabbitMQ의 접근 제어 관련 취약점이 발견되었다. 이 취약점은 공격자가 OAuth 클라이언트 비밀번호를 유출하거나, 기업 메시징 인프라를 탈취하거나, 테넌트 경계를 우회할 수 있게 해준다."
+        },
+        {
+          "severity": "high",
+          "source": "The Hacker News",
+          "headline": "Microsoft, 11개의 오래된 Linux UEFI Shim 취약점 발견",
+          "url": "https://thehackernews.com/2026/07/11-old-microsoft-signed-linux-uefi.html",
+          "summary": "11개의 오래된 Microsoft 서명된 Linux UEFI 애플리케이션이 발견되었다. 이 취약점은 Secure Boot를 우회할 수 있게 해준다."
+        },
+        {
+          "severity": "medium",
+          "source": "The Hacker News",
+          "headline": "Adobe, ColdFusion의 중대한 취약점 패치",
+          "url": "https://www.securityweek.com/adobe-patches-critical-coldfusion-vulnerabilities/",
+          "summary": "Adobe는 ColdFusion의 중대한 취약점을 패치했다. 이 취약점은 공격자가 임의 코드를 실행하거나 권한을 상승시킬 수 있게 해준다."
+        }
+      ]
+    },
+    {
+      "label": "침해 사고",
+      "type": "cards",
+      "items": [
+        {
+          "severity": "incident",
+          "source": "SecurityWeek",
+          "headline": "Synopsys, Bosch 해킹 주장에 대한 데이터 유출 증거 없음",
+          "url": "https://www.securityweek.com/synopsys-finds-no-evidence-of-data-breach-following-bosch-hack-claims/",
+          "summary": "D1R 해킹 그룹은 Synopsys와 Bosch에서 데이터를 유출했다고 주장했지만, Synopsys는 데이터 유출 증거가 없다고 밝혔다."
+        },
+        {
+          "severity": "incident",
+          "source": "SecurityWeek",
+          "headline": "미국 재무부, 랜섬웨어 지원을 위한 VPN 제공업체와 암호화 도구 판매자 제재",
+          "url": "https://securityaffairs.com/195336/security/u-s-treasury-sanctions-vpn-provider-and-cryptor-seller-behind-billions-in-ransomware-losses.html",
+          "summary": "미국 재무부는 랜섬웨어 조직을 지원한 1VPNS VPN 제공업체와 암호화 도구 판매자를 제재했다."
+        },
+        {
+          "severity": "incident",
+          "source": "The Hacker News",
+          "headline": "148개의 npm 패키지, 학생 프록시로 위장한 DDoS 봇넷 생성",
+          "url": "https://thehackernews.com/2026/07/148-npm-packages-disguised-as-student.html",
+          "summary": "148개의 npm 패키지가 학생 프록시로 위장하여 사용자의 브라우저를 DDoS 봇넷으로 전환시켰다."
+        }
+      ]
+    },
+    {
+      "label": "동향 & 분석",
+      "type": "trends",
+      "items": [
+        {
+          "lead": "AI 기반 보안 도구의 증가",
+          "body": "AI 기반 보안 도구는 취약점 탐지 및 대응 과정에서 중요한 역할을 하고 있다. 그러나 이 도구들은 공격자에게도 유리하게 사용될 수 있다."
+        },
+        {
+          "lead": "공급망 공격의 증가",
+          "body": "공급망 공격이 지속적으로 증가하고 있으며, 이는 여러 npm 패키지와 Jscrambler의 공급망 공격 사례에서 확인할 수 있다."
+        },
+        {
+          "lead": "제로데이 취약점의 악용",
+          "body": "제로데이 취약점이 계속해서 악용되고 있으며, Microsoft와 SAP의 취약점 패치 사례에서 이를 확인할 수 있다."
+        },
+        {
+          "lead": "랜섬웨어 및 암호화 도구의 증가",
+          "body": "랜섬웨어 및 암호화 도구의 사용이 증가하고 있으며, 이는 미국 재무부의 제재 사례에서 확인할 수 있다."
+        }
+      ]
+    }
+  ]
+}
