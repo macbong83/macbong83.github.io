@@ -5,27 +5,34 @@
     <link>https://macbong83.github.io/</link>
     <description>EDR · SASE · CTEM · 취약점 관리 중심의 매일 보안 브리핑</description>
     <language>ko</language>
-    <lastBuildDate>Thu, 16 Jul 2026 08:00:55 +0900</lastBuildDate>
+    <lastBuildDate>Thu, 16 Jul 2026 09:03:13 +0900</lastBuildDate>
     <item>
       <title>SecuLog 보안 브리핑 — vendor-weekly-2026-07-06</title>
       <link>https://macbong83.github.io/posts/vendor-weekly-2026-07-06.html</link>
       <guid isPermaLink="true">https://macbong83.github.io/posts/vendor-weekly-2026-07-06.html</guid>
-      <pubDate>Thu, 16 Jul 2026 08:00:55 +0900</pubDate>
+      <pubDate>Thu, 16 Jul 2026 09:03:13 +0900</pubDate>
       <description></description>
     </item>
     <item>
       <title>SecuLog 보안 브리핑 — vendor-weekly-2026-06-30</title>
       <link>https://macbong83.github.io/posts/vendor-weekly-2026-06-30.html</link>
       <guid isPermaLink="true">https://macbong83.github.io/posts/vendor-weekly-2026-06-30.html</guid>
-      <pubDate>Thu, 16 Jul 2026 08:00:55 +0900</pubDate>
+      <pubDate>Thu, 16 Jul 2026 09:03:13 +0900</pubDate>
       <description></description>
     </item>
     <item>
       <title>SecuLog 보안 브리핑 — startup-radar-2026-07-13</title>
       <link>https://macbong83.github.io/posts/startup-radar-2026-07-13.html</link>
       <guid isPermaLink="true">https://macbong83.github.io/posts/startup-radar-2026-07-13.html</guid>
-      <pubDate>Thu, 16 Jul 2026 08:00:55 +0900</pubDate>
+      <pubDate>Thu, 16 Jul 2026 09:03:13 +0900</pubDate>
       <description></description>
+    </item>
+    <item>
+      <title>SecuLog 보안 브리핑 — 2026.07.16</title>
+      <link>https://macbong83.github.io/posts/2026-07-16.html</link>
+      <guid isPermaLink="true">https://macbong83.github.io/posts/2026-07-16.html</guid>
+      <pubDate>Thu, 16 Jul 2026 08:00:00 +0900</pubDate>
+      <description>LegacyHive 취약점: 패치 완료된 Windows 시스템 영향 / SMA 1000 시리즈의 두 개 Zero-Day 취약점 악용 / SAP NetWeaver ABAP 취약점(CVE-2026-44747) 패치 / Cursor 취약점: 악의적인 저장소가 Windows 코드 실행 유도</description>
     </item>
     <item>
       <title>SecuLog 보안 브리핑 — 2026.07.15</title>
