@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CVE-2026-XXXXX 악용·랜섬웨어 급증 — 2026.07.17 보안 브리핑 | SecuLog</title>
+<meta name="description" content="오늘 주요 취약점·침해 사고·위협 트렌드 요약.">
+<meta name="keywords" content="CVE, 랜섬웨어, 취약점, 침해사고, 보안">
+<meta name="author" content="Felix">
+<meta property="og:type" content="article">
+<meta property="og:title" content="CVE-2026-XXXXX 악용·랜섬웨어 급증 — 2026.07.17 보안 브리핑">
+<meta property="og:description" content="오늘 주요 취약점·침해 사고·위협 트렌드 요약.">
+<meta property="og:url" content="https://macbong83.github.io/posts/2026-07-17.html">
+<meta property="og:site_name" content="SecuLog">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="CVE-2026-XXXXX 악용·랜섬웨어 급증 — 2026.07.17 보안 브리핑">
+<meta name="twitter:description" content="오늘 주요 취약점·침해 사고·위협 트렌드 요약.">
+<link rel="canonical" href="https://macbong83.github.io/posts/2026-07-17.html">
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: -apple-system, 'Malgun Gothic', 'Apple SD Gothic Neo', Arial, sans-serif; background: #f4f5f7; color: #1a1a2e; line-height: 1.6; }
+  a { text-decoration: none; color: inherit; }
+  .wrapper { max-width: 700px; margin: 32px auto; background: #ffffff; border-radius: 12px; overflow: hidden; box-shadow: 0 2px 20px rgba(0,0,0,0.08); }
+  .header { background: #eef0f4; padding: 28px 36px 24px; display: flex; align-items: center; justify-content: space-between; gap: 16px; border-bottom: 3px solid #0d1b3e; }
+  .wordmark { font-size: 26px; font-weight: 800; letter-spacing: -0.02em; color: #0d1b3e; }
+  .wordmark .accent { color: #2563eb; }
+  .header-meta { text-align: right; }
+  .header-meta .nl-label { font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase; color: #6b7488; margin-bottom: 4px; }
+  .header-meta .nl-title { font-size: 17px; font-weight: 700; color: #0d1b3e; }
+  .header-meta .nl-date { font-size: 12px; color: #8a93a8; margin-top: 3px; }
+  .body { padding: 28px 36px 32px; }
+  .section-label { font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase; color: #8a93a8; font-weight: 600; padding-bottom: 8px; border-bottom: 1px solid #e8eaed; margin-bottom: 4px; margin-top: 28px; }
+  .section-label:first-child { margin-top: 0; }
+  .card { display: block; padding: 16px 0; border-bottom: 1px solid #f0f1f3; transition: background 0.15s; }
+  .card:last-child { border-bottom: none; }
+  .card:hover { background: #f8f9fc; margin: 0 -36px; padding: 16px 36px; }
+  .card-top { display: flex; align-items: center; gap: 8px; margin-bottom: 6px; flex-wrap: wrap; }
+  .badge { font-size: 10px; font-weight: 700; padding: 3px 9px; border-radius: 4px; letter-spacing: 0.04em; }
+  .badge-critical { background: #fff0f0; color: #c0392b; border: 1px solid #f5c6c6; }
+  .badge-high { background: #fff7ee; color: #b94d00; border: 1px solid #fdd5a8; }
+  .badge-medium { background: #fff9e6; color: #856900; border: 1px solid #f9e0a0; }
+  .badge-incident { background: #f3f0ff; color: #6133c0; border: 1px solid #cfc0f5; }
+  .source { font-size: 11px; color: #a0a8b8; }
+  .card-headline { font-size: 14px; font-weight: 600; color: #0d1b3e; margin-bottom: 5px; line-height: 1.45; }
+  .card-headline .arrow { font-size: 12px; color: #2563eb; margin-left: 4px; opacity: 0; transition: opacity 0.15s; }
+  .card:hover .card-headline .arrow { opacity: 1; }
+  .card-summary { font-size: 13px; color: #4a5568; line-height: 1.65; }
+  .trend-box { background: #f8f9fc; border-radius: 10px; padding: 18px 20px; margin-top: 6px; }
+  .trend-row { display: flex; gap: 12px; padding: 10px 0; border-bottom: 1px solid #e8eaed; align-items: flex-start; }
+  .trend-row:last-child { border-bottom: none; padding-bottom: 0; }
+  .trend-num { font-size: 11px; font-weight: 700; color: #2563eb; min-width: 22px; padding-top: 2px; }
+  .trend-text { font-size: 13px; color: #4a5568; line-height: 1.6; }
+  .trend-text strong { color: #0d1b3e; font-weight: 600; }
+  .footer { background: #f4f5f7; border-top: 1px solid #e8eaed; padding: 16px 36px; font-size: 11px; color: #9aa0b0; line-height: 1.6; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 8px; }
+  .footer-meta { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; justify-content: flex-end; }
+  .linkedin-link { display: inline-flex; align-items: center; justify-content: center; min-height: 28px; padding: 6px 12px; border-radius: 6px; background: #0a66c2; color: #fff; font-size: 12px; font-weight: 800; letter-spacing: 0.01em; box-shadow: 0 6px 14px rgba(10,102,194,0.16); }
+  .linkedin-link:hover { background: #004182; color: #fff; }
+  .card-inner { display: flex; gap: 14px; }
+  .sev-bar { width: 3px; border-radius: 2px; flex-shrink: 0; margin: 3px 0; }
+  .sev-critical { background: #e74c3c; }
+  .sev-high { background: #e67e22; }
+  .sev-medium { background: #f0b429; }
+  .sev-incident { background: #7c3aed; }
+  .card-content { flex: 1; }
+  @media (max-width: 600px) {
+    .wrapper { margin: 0; border-radius: 0; box-shadow: none; }
+    .header { padding: 18px 20px 16px; flex-direction: column; align-items: flex-start; gap: 8px; }
+    .header-meta { text-align: left; }
+    .body { padding: 18px 20px 24px; }
+    .card:hover { margin: 0 -20px; padding: 16px 20px; }
+    .footer { padding: 14px 20px; flex-direction: column; align-items: flex-start; }
+    .footer-meta { justify-content: flex-start; }
+    .wordmark { font-size: 22px; }
+    .card-headline { font-size: 13px; }
+    .card-summary { font-size: 12px; }
+    .card-headline .arrow { opacity: 1; }
+  }
+</style>
+</head>
+<body>
+<div class="wrapper">
+  <div class="header">
+    <div class="header-logo">
+      <span class="wordmark">Secu<span class="accent">Log</span></span>
+    </div>
+    <div class="header-meta">
+      <div class="nl-label">글로벌 정보보안 뉴스레터</div>
+      <div class="nl-title">보안 브리핑</div>
+      <div class="nl-date">2026년 7월 17일 금요일</div>
+    </div>
+  </div>
+  <div class="body">
+    <div class="section-label">취약점 &amp; 공격</div>
+
+    <a class="card" href="https://thehackernews.com/2026/07/zoom-patches-critical-windows-flaw-that.html" target="_blank">
+      <div class="card-inner"><div class="sev-bar sev-critical"></div><div class="card-content">
+        <div class="card-top"><span class="badge badge-critical">긴급</span><span class="source">The Hacker News</span></div>
+        <div class="card-headline">CVE-2026-53412: Zoom Workplace 약한 입력 검증 취약점으로 원격 계정 탈취 가능<span class="arrow">↗</span></div>
+        <div class="card-summary">Zoom Workplace for Windows에서 약한 입력 검증 취약점(CVE-2026-53412, CVSS 9.8)이 발견되어 원격으로 사용자 계정을 탈취할 수 있다. 이 취약점은 Zoom Desktop Client, VDI Client, Meeting SDK에 영향을 줌.</div>
+      </div></div>
+    </a>
+
+    <a class="card" href="https://thehackernews.com/2026/07/unpatched-shark-vacuum-flaw-could-let.html" target="_blank">
+      <div class="card-inner"><div class="sev-bar sev-high"></div><div class="card-content">
+        <div class="card-top"><span class="badge badge-high">높음</span><span class="source">The Hacker News</span></div>
+        <div class="card-headline">Shark 로봇 청소기 원격 코드 실행 취약점으로 장치 조종 가능<span class="arrow">↗</span></div>
+        <div class="card-summary">Shark RV2320EDUS 로봇 청소기의 미패치된 원격 코드 실행 취약점으로, AWS 지역 내 다른 사용자의 장치를 조종할 수 있다. 카메라 조작, 로봇 이동, Wi-Fi 패스워드 유출 등이 가능하다.</div>
+      </div></div>
+    </a>
+
+    <a class="card" href="https://thehackernews.com/2026/07/tuxbot-v3-evolution-shows-signs-of-llm.html" target="_blank">
+      <div class="card-inner"><div class="sev-bar sev-high"></div><div class="card-content">
+        <div class="card-top"><span class="badge badge-high">높음</span><span class="source">The Hacker News</span></div>
+        <div class="card-headline">TuxBot v3 Evolution: LLM 기반 IoT 봇넷 개발 시도<span class="arrow">↗</span></div>
+        <div class="card-summary">TuxBot v3 Evolution이라는 IoT 봇넷 프레임워크가 LLM을 사용해 개발되었으나, 결과는 성공적이지 않았다. 이 봇넷은 IoT 장치를 대규모로 조종할 수 있는 잠재력을 가진다.</div>
+      </div></div>
+    </a>
+
+    <a class="card" href="https://thehackernews.com/2026/07/n8n-token-exchange-flaw-could-let.html" target="_blank">
+      <div class="card-inner"><div class="sev-bar sev-medium"></div><div class="card-content">
+        <div class="card-top"><span class="badge badge-medium">중간</span><span class="source">The Hacker News</span></div>
+        <div class="card-headline">n8n 토큰 교환 취약점으로 다른 발급자 계정 로그인 가능<span class="arrow">↗</span></div>
+        <div class="card-summary">n8n 플랫폼에서 토큰 교환 취약점이 발견되어, 여러 외부 토큰 발급자를 신뢰하는 기업 인스턴스에서 로그인 시 토큰을 잘못 처리할 수 있다. 이로 인해 보안 위험이 발생할 수 있다.</div>
+      </div></div>
+    </a>
+
+    <a class="card" href="https://thehackernews.com/2026/07/new-telepuz-malware-spreads-via.html" target="_blank">
+      <div class="card-inner"><div class="sev-bar sev-medium"></div><div class="card-content">
+        <div class="card-top"><span class="badge badge-medium">중간</span><span class="source">The Hacker News</span></div>
+        <div class="card-headline">TELEPUZ 랜섬웨어: ClickFix 유도로 데이터 유출 및 명령 실행<span class="arrow">↗</span></div>
+        <div class="card-summary">TELEPUZ 랜섬웨어가 ClickFix 유도를 통해 전파되고 있으며, 데이터를 유출하고 사용자 컴퓨터에서 명령을 실행할 수 있다. 이 랜섬웨어는 가볍고 모듈형 구조를 가진 것으로 알려졌다.</div>
+      </div></div>
+    </a>
+
+    <div class="section-label">침해 사고</div>
+
+    <a class="card" href="https://thehackernews.com/2026/07/two-scattered-spider-hackers-get-55.html" target="_blank">
+      <div class="card-inner"><div class="sev-bar sev-incident"></div><div class="card-content">
+        <div class="card-top"><span class="badge badge-incident">사고</span><span class="source">The Hacker News</span></div>
+        <div class="card-headline">Scattered Spider 해커, 2900만 파운드 TfL 해킹으로 5.5년 구형<span class="arrow">↗</span></div>
+        <div class="card-summary">Owen Flowers(18)와 Thalha Jubair(20)는 2024년 TfL 해킹 사건으로 각각 5.5년의 징역형을 선고받았다. 이 공격으로 148개 시스템이 비활성화되고 27,000명의 직원이 사무실로 이동해야 했다.</div>
+      </div></div>
+    </a>
+
+    <a class="card" href="https://www.securityweek.com/clicklock-stealer-bypasses-macos-security-with-social-engineering-process-killing/" target="_blank">
+      <div class="card-inner"><div class="sev-bar sev-incident"></div><div class="card-content">
+        <div class="card-top"><span class="badge badge-incident">사고</span><span class="source">SecurityWeek</span></div>
+        <div class="card-headline">ClickLock Stealer: macOS에서 암호 및 암호화폐 유출<span class="arrow">↗</span></div>
+        <div class="card-summary">ClickLock Stealer는 macOS 사용자의 암호와 암호화폐를 유출하기 위해 사회공학 및 프로세스 종료 기법을 사용한다. 최소 100명의 사용자에게 영향을 주었다.</div>
+      </div></div>
+    </a>
+
+    <a class="card" href="https://thehackernews.com/2026/07/20-hijacked-government-websites.html" target="_blank">
+      <div class="card-inner"><div class="sev-bar sev-incident"></div><div class="card-content">
+        <div class="card-top"><span class="badge badge-incident">사고</span><span class="source">The Hacker News</span></div>
+        <div class="card-headline">20개 이상의 브라질 정부 웹사이트 해킹, 악성코드 전달 채널로 활용<span class="arrow">↗</span></div>
+        <div class="card-summary">ANY.RUN은 브라질 정부 웹사이트 20개 이상이 PhantomEnigma 캠페인으로 해킹되어 악성코드 전달 채널로 사용되고 있다고 밝혔다. 이로 인해 수많은 시스템이 감염 위험에 처해 있다.</div>
+      </div></div>
+    </a>
+
+    <div class="section-label">동향 &amp; 분석</div>
+    <div class="trend-box">
+      <div class="trend-row">
+        <div class="trend-num">01</div>
+        <div class="trend-text"><strong>AI 기반 보안 위협 증가</strong> — AI 기반의 랜섬웨어, 스파이웨어, 봇넷 등이 증가하고 있으며, AI가 보안 취약점을 자동으로 탐지하고 공격을 수행하는 사례가 늘고 있다. 예를 들어, GPT-Red는 AI 대화 시스템의 프롬프트 삽입 취약점을 자동으로 탐지한다.</div>
+      </div>
+      <div class="trend-row">
+        <div class="trend-num">02</div>
+        <div class="trend-text"><strong>IoT 장치 취약점 심각</strong> — Shark 로봇 청소기, TuxBot v3 Evolution 등 IoT 장치의 취약점이 심각한 보안 위험으로 작용하고 있다. 이러한 장치는 보안 패치가 부족하거나 사용자가 취약점을 인지하지 못하는 경우, 원격 조종이 가능하다.</div>
+      </div>
+      <div class="trend-row">
+        <div class="trend-num">03</div>
+        <div class="trend-text"><strong>AI 기반 보안 대응 강화</strong> — AI 기반의 보안 대응 기술이 발전하고 있으며, Microsoft는 AI 에이전트에 대한 최소 권한 접근 제어를 강화하고 있다. 또한, OpenAI는 GPT-Red 모델을 통해 AI 시스템의 취약점을 자동으로 탐지하고 있다.</div>
+      </div>
+      <div class="trend-row">
+        <div class="trend-num">04</div>
+        <div class="trend-text"><strong>국제적 협력으로 보안 사고 대응 강화</strong> — 유럽 경찰(Europol)과 네덜란드 경찰은 글로벌 투자 사기 조직을 해체하고 주요 용의자를 체포하는 등 국제적 협력을 통해 보안 사고를 대응하고 있다. 이는 보안 위협에 대한 글로벌 대응이 필요하다는 것을 보여준다.</div>
+      </div>
+    </div>
+  </div>
+  <div class="footer">
+    <div>출처: The Hacker News · BleepingComputer · SecurityWeek · KrebsOnSecurity · CISA · NCSC UK · Unit 42 · 보안뉴스 · 데일리시큐 · 전자신문</div>
+    <div class="footer-meta">
+      <span>© 2026 Felix · SecuLog. 본 브리핑은 공개된 보안 뉴스를 기반으로 작성되었습니다.</span>
+    </div>
+  </div>
+</div>
+</body>
+</html>
