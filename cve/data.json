@@ -1,5 +1,237 @@
 [
   {
+    "id": "CVE-2026-9198",
+    "published": "2026-07-17",
+    "last_modified": "2026-07-17",
+    "status": "Undergoing Analysis",
+    "description": "IBM Langflow OSS 1.0.0 through 1.10.0 allows unauthenticated attackers to chain /api/v1/auto_login (mints SUPERUSER tokens to any network caller) with /api/v1/validate/code (executes user code via exec()) to achieve full RCE on default Langflow deployments",
+    "cvss": {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "score": 9.8,
+      "severity": "CRITICAL",
+      "attack_vector": "네트워크",
+      "attack_complexity": "낮음",
+      "privileges_required": "없음",
+      "user_interaction": "없음"
+    },
+    "cwes": [
+      "CWE-94"
+    ],
+    "affected": [],
+    "references": [
+      "https://www.ibm.com/support/pages/node/7278927"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-9198",
+    "added_at": "2026-07-18T08:00:45+09:00"
+  },
+  {
+    "id": "CVE-2026-9135",
+    "published": "2026-07-17",
+    "last_modified": "2026-07-17",
+    "status": "Received",
+    "description": "IBM Langflow OSS 1.0.0 through 1.10.0 Langflow versions up to 1.9.2 (commit 94981c443d4918517b9e8163d70fc598dc33a32d) contain a code injection vulnerability in the Policies component's ToolGuard integration that bypasses the allow_custom_components=false security control. The vulnerability exists because the validation mechanism only checks the main component source code in node_template[\"code\"][\"value\"] but fails to validate dynamic CodeInput fields that store generated ToolGuard Python files. Attackers can embed malicious Python code in these unvalidated dynamic fields, which are persisted in Flow.data and later executed server-side when a guarded tool is invoked through the ToolGuard runtime. This allows authenticated users with flow creation privileges to achieve arbitrary Python code execution on the backend despite custom component restrictions. The vulnerability can be escalated through cross-tenant flow manipulation via the agentic MCP update_flow_component_field tool, which accepts attacker-controlled user_id parameters, enabling attackers to inject malicious code into victim users' flows. When combined with publicly accessible flows and specific misconfigurations (AUTO_LOGIN=true, NEW_USER_IS_ACTIVE=true), the attack can be conducted with reduced authentication requirements.",
+    "cvss": {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H",
+      "score": 9.9,
+      "severity": "CRITICAL",
+      "attack_vector": "네트워크",
+      "attack_complexity": "낮음",
+      "privileges_required": "낮음",
+      "user_interaction": "없음"
+    },
+    "cwes": [
+      "CWE-94"
+    ],
+    "affected": [],
+    "references": [
+      "https://www.ibm.com/support/pages/node/7278920"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-9135",
+    "added_at": "2026-07-18T08:00:45+09:00"
+  },
+  {
+    "id": "CVE-2026-9103",
+    "published": "2026-07-17",
+    "last_modified": "2026-07-17",
+    "status": "Received",
+    "description": "IBM Langflow OSS 1.0.0 through 1.10.0 could allow a remote attacker to gain unauthorized access due to improper authentication in the /api/v1/login/auto_login endpoint. The endpoint issues long-lived superuser bearer tokens without requiring authentication when the AUTO_LOGIN configuration is enabled (enabled by default), which may allow an unauthenticated network attacker to obtain full administrative access. Additionally, permissive cross-origin resource sharing (CORS) settings may allow tokens to be exposed to unintended origins, increasing the risk of unauthorized access.",
+    "cvss": {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "score": 9.8,
+      "severity": "CRITICAL",
+      "attack_vector": "네트워크",
+      "attack_complexity": "낮음",
+      "privileges_required": "없음",
+      "user_interaction": "없음"
+    },
+    "cwes": [
+      "CWE-306"
+    ],
+    "affected": [],
+    "references": [
+      "https://www.ibm.com/support/pages/node/7278926"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-9103",
+    "added_at": "2026-07-18T08:00:45+09:00"
+  },
+  {
+    "id": "CVE-2026-8859",
+    "published": "2026-07-17",
+    "last_modified": "2026-07-17",
+    "status": "Received",
+    "description": "IBM Langflow OSS 1.0.0 through 1.10.0 Langflow could allow an attacker to write arbitrary files to unintended locations due to improper input validation in the APIRequest component. A path traversal vulnerability exists when the \"Save to File\" feature is enabled, where filenames extracted from HTTP response Content-Disposition headers are not sanitized before being joined to the temporary directory path. An attacker controlling an external HTTP server can supply crafted filename values containing path traversal sequences (e.g., ../), enabling arbitrary file writes to locations accessible by the Langflow process.",
+    "cvss": {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H",
+      "score": 9.9,
+      "severity": "CRITICAL",
+      "attack_vector": "네트워크",
+      "attack_complexity": "낮음",
+      "privileges_required": "낮음",
+      "user_interaction": "없음"
+    },
+    "cwes": [
+      "CWE-22"
+    ],
+    "affected": [],
+    "references": [
+      "https://www.ibm.com/support/pages/node/7278924"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-8859",
+    "added_at": "2026-07-18T08:00:45+09:00"
+  },
+  {
+    "id": "CVE-2026-8635",
+    "published": "2026-07-17",
+    "last_modified": "2026-07-17",
+    "status": "Received",
+    "description": "IBM Langflow OSS 1.0.0 through 1.10.0 allows authenticated users to escalate privileges to superuser by directly manipulating the database, execute arbitrary system commands, and achieve full system compromise with Langflow service permissions.",
+    "cvss": {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H",
+      "score": 9.9,
+      "severity": "CRITICAL",
+      "attack_vector": "네트워크",
+      "attack_complexity": "낮음",
+      "privileges_required": "낮음",
+      "user_interaction": "없음"
+    },
+    "cwes": [
+      "CWE-94"
+    ],
+    "affected": [],
+    "references": [
+      "https://www.ibm.com/support/pages/node/7278925"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-8635",
+    "added_at": "2026-07-18T08:00:45+09:00"
+  },
+  {
+    "id": "CVE-2026-8505",
+    "published": "2026-07-17",
+    "last_modified": "2026-07-17",
+    "status": "Received",
+    "description": "IBM Langflow OSS 1.0.0 through 1.10.0 has a vulnerability in Langflow's webhook authentication logic allows unauthenticated users to trigger the execution of any flow. The system incorrectly bypasses API key validation when the WEBHOOK_AUTH_ENABLE configuration is set to False (which is the default setting). This allows a remote attacker who knows a flow's UUID to execute it as if they were the owner, potentially leading to Remote Code Execution (RCE).",
+    "cvss": {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "score": 9.8,
+      "severity": "CRITICAL",
+      "attack_vector": "네트워크",
+      "attack_complexity": "낮음",
+      "privileges_required": "없음",
+      "user_interaction": "없음"
+    },
+    "cwes": [],
+    "affected": [],
+    "references": [
+      "https://www.ibm.com/support/pages/node/7278921"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-8505",
+    "added_at": "2026-07-18T08:00:45+09:00"
+  },
+  {
+    "id": "CVE-2026-8481",
+    "published": "2026-07-17",
+    "last_modified": "2026-07-17",
+    "status": "Received",
+    "description": "IBM Langflow OSS 1.0.0 through 1.10.0 contain a critical remote code execution vulnerability in the code validation API endpoint. The POST /api/v1/validate/code endpoint accepts user-supplied Python code and executes it directly using Python's built-in exec() function without sandboxing, input validation, or privilege restrictions, enabling any authenticated user to execute arbitrary system commands with the full privileges of the Langflow server process.",
+    "cvss": {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H",
+      "score": 9.9,
+      "severity": "CRITICAL",
+      "attack_vector": "네트워크",
+      "attack_complexity": "낮음",
+      "privileges_required": "낮음",
+      "user_interaction": "없음"
+    },
+    "cwes": [
+      "CWE-94"
+    ],
+    "affected": [],
+    "references": [
+      "https://www.ibm.com/support/pages/node/7278923"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-8481",
+    "added_at": "2026-07-18T08:00:45+09:00"
+  },
+  {
+    "id": "CVE-2026-8476",
+    "published": "2026-07-17",
+    "last_modified": "2026-07-17",
+    "status": "Received",
+    "description": "IBM Langflow OSS 1.0.0 through 1.10.0 contain a critical remote code execution vulnerability in the disk-based caching mechanism. The AsyncDiskCache class uses Python's unsafe pickle.loads() function to deserialize cached objects from disk without validation, integrity verification, or authentication, enabling arbitrary code execution when malicious pickle payloads are processed. Attackers who can influence cached data through file system access, malicious workflow inputs, custom components, or API manipulation can achieve complete system compromise with the privileges of the Langflow server process.",
+    "cvss": {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H",
+      "score": 9.9,
+      "severity": "CRITICAL",
+      "attack_vector": "네트워크",
+      "attack_complexity": "낮음",
+      "privileges_required": "낮음",
+      "user_interaction": "없음"
+    },
+    "cwes": [
+      "CWE-502"
+    ],
+    "affected": [],
+    "references": [
+      "https://www.ibm.com/support/pages/node/7278922"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-8476",
+    "added_at": "2026-07-18T08:00:45+09:00"
+  },
+  {
+    "id": "CVE-2026-8297",
+    "published": "2026-07-17",
+    "last_modified": "2026-07-17",
+    "status": "Deferred",
+    "description": "Improper neutralization of special elements used in an SQL command ('SQL injection') vulnerability in Gis Informatics Engineering Consulting Laboratory R&D and Software Services Inc. GisLab Laboratory Management System allows SQL Injection.\n\nThis issue affects GisLab Laboratory Management System: from 1.4.03 through 08072026.",
+    "cvss": {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "score": 9.8,
+      "severity": "CRITICAL",
+      "attack_vector": "네트워크",
+      "attack_complexity": "낮음",
+      "privileges_required": "없음",
+      "user_interaction": "없음"
+    },
+    "cwes": [
+      "CWE-89"
+    ],
+    "affected": [],
+    "references": [
+      "https://siberguvenlik.gov.tr/guvenlik-bildirimleri/detay/tr-26-0573"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-8297",
+    "added_at": "2026-07-18T08:00:45+09:00"
+  },
+  {
     "id": "CVE-2026-62241",
     "published": "2026-07-17",
     "last_modified": "2026-07-17",
@@ -55,6 +287,32 @@
     "added_at": "2026-07-17T20:01:06+09:00"
   },
   {
+    "id": "CVE-2026-15091",
+    "published": "2026-07-17",
+    "last_modified": "2026-07-17",
+    "status": "Received",
+    "description": "IBM Engineering AI Hub 1.0.0, 1.1.0, and 1.2.0 could allow a remote attacker to execute arbitrary scripts due to improper neutralization of input during web page generation.",
+    "cvss": {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:H/I:H/A:N",
+      "score": 9.3,
+      "severity": "CRITICAL",
+      "attack_vector": "네트워크",
+      "attack_complexity": "낮음",
+      "privileges_required": "없음",
+      "user_interaction": "필요"
+    },
+    "cwes": [
+      "CWE-79"
+    ],
+    "affected": [],
+    "references": [
+      "https://www.ibm.com/support/pages/node/7279964"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-15091",
+    "added_at": "2026-07-18T08:00:45+09:00"
+  },
+  {
     "id": "CVE-2026-14956",
     "published": "2026-07-17",
     "last_modified": "2026-07-17",
@@ -80,6 +338,58 @@
     ],
     "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-14956",
     "added_at": "2026-07-17T20:01:06+09:00"
+  },
+  {
+    "id": "CVE-2026-13446",
+    "published": "2026-07-17",
+    "last_modified": "2026-07-17",
+    "status": "Received",
+    "description": "IBM Langflow OSS 1.0.0 through 1.10.1 contains hard-coded credentials, such as a password or cryptographic key, which it uses for its own inbound authentication, outbound communication to external components, or encryption of internal data.",
+    "cvss": {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "score": 9.8,
+      "severity": "CRITICAL",
+      "attack_vector": "네트워크",
+      "attack_complexity": "낮음",
+      "privileges_required": "없음",
+      "user_interaction": "없음"
+    },
+    "cwes": [
+      "CWE-798"
+    ],
+    "affected": [],
+    "references": [
+      "https://www.ibm.com/support/pages/node/7279991"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-13446",
+    "added_at": "2026-07-18T08:00:45+09:00"
+  },
+  {
+    "id": "CVE-2026-12692",
+    "published": "2026-07-17",
+    "last_modified": "2026-07-17",
+    "status": "Deferred",
+    "description": "Unverified password change vulnerability in Vimesoft Inc. Enterprise Video Platform allows Authentication Bypass.\n\nThis issue affects Enterprise Video Platform: from 3.11.0.0 before 3.25.0.",
+    "cvss": {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "score": 9.8,
+      "severity": "CRITICAL",
+      "attack_vector": "네트워크",
+      "attack_complexity": "낮음",
+      "privileges_required": "없음",
+      "user_interaction": "없음"
+    },
+    "cwes": [
+      "CWE-620"
+    ],
+    "affected": [],
+    "references": [
+      "https://siberguvenlik.gov.tr/guvenlik-bildirimleri/detay/tr-26-0574"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-12692",
+    "added_at": "2026-07-18T08:00:45+09:00"
   },
   {
     "id": "CVE-2026-63089",
@@ -193,6 +503,36 @@
     ],
     "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2023-49899",
     "added_at": "2026-07-17T08:00:37+09:00"
+  },
+  {
+    "id": "CVE-2026-54052",
+    "published": "2026-07-15",
+    "last_modified": "2026-07-17",
+    "status": "Analyzed",
+    "description": "n8n-MCP is an MCP server that provides AI assistants access to n8n node documentation, properties, and operations. Prior to 2.56.1, in HTTP mode with multi-tenancy enabled through ENABLE_MULTI_TENANT=true, n8n-mcp's local workflow version history backups were not isolated per tenant, allowing an authenticated tenant to read workflow version snapshots belonging to other tenants and delete or destroy other tenants' stored backups, including full node definitions, credential references, and authorization headers. This issue is fixed in version 2.56.1.",
+    "cvss": {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:L",
+      "score": 9.9,
+      "severity": "CRITICAL",
+      "attack_vector": "네트워크",
+      "attack_complexity": "낮음",
+      "privileges_required": "낮음",
+      "user_interaction": "없음"
+    },
+    "cwes": [
+      "CWE-639",
+      "CWE-862"
+    ],
+    "affected": [
+      "n8n-mcp n8n-mcp"
+    ],
+    "references": [
+      "https://github.com/czlonkowski/n8n-mcp/releases/tag/v2.56.1",
+      "https://github.com/czlonkowski/n8n-mcp/security/advisories/GHSA-j6r7-6fhx-77wx"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-54052",
+    "added_at": "2026-07-18T08:00:45+09:00"
   },
   {
     "id": "CVE-2026-62392",
