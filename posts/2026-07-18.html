@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CVE-2026-XXXXX 악용·랜섬웨어 급증 — 2026.07.18 보안 브리핑 | SecuLog</title>
+<meta name="description" content="오늘 주요 취약점·침해 사고·위협 트렌드 요약.">
+<meta name="keywords" content="CVE, 랜섬웨어, 취약점, 침해사고, 보안">
+<meta name="author" content="Felix">
+<meta property="og:type" content="article">
+<meta property="og:title" content="CVE-2026-XXXXX 악용·랜섬웨어 급증 — 2026.07.18 보안 브리핑">
+<meta property="og:description" content="오늘 주요 취약점·침해 사고·위협 트렌드 요약.">
+<meta property="og:url" content="https://macbong83.github.io/posts/2026-07-18.html">
+<meta property="og:site_name" content="SecuLog">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="CVE-2026-XXXXX 악용·랜섬웨어 급증 — 2026.07.18 보안 브리핑">
+<meta name="twitter:description" content="오늘 주요 취약점·침해 사고·위협 트렌드 요약.">
+<link rel="canonical" href="https://macbong83.github.io/posts/2026-07-18.html">
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: -apple-system, 'Malgun Gothic', 'Apple SD Gothic Neo', Arial, sans-serif; background: #f4f5f7; color: #1a1a2e; line-height: 1.6; }
+  a { text-decoration: none; color: inherit; }
+  .wrapper { max-width: 700px; margin: 32px auto; background: #ffffff; border-radius: 12px; overflow: hidden; box-shadow: 0 2px 20px rgba(0,0,0,0.08); }
+  .header { background: #eef0f4; padding: 28px 36px 24px; display: flex; align-items: center; justify-content: space-between; gap: 16px; border-bottom: 3px solid #0d1b3e; }
+  .wordmark { font-size: 26px; font-weight: 800; letter-spacing: -0.02em; color: #0d1b3e; }
+  .wordmark .accent { color: #2563eb; }
+  .header-meta { text-align: right; }
+  .header-meta .nl-label { font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase; color: #6b7488; margin-bottom: 4px; }
+  .header-meta .nl-title { font-size: 17px; font-weight: 700; color: #0d1b3e; }
+  .header-meta .nl-date { font-size: 12px; color: #8a93a8; margin-top: 3px; }
+  .body { padding: 28px 36px 32px; }
+  .section-label { font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase; color: #8a93a8; font-weight: 600; padding-bottom: 8px; border-bottom: 1px solid #e8eaed; margin-bottom: 4px; margin-top: 28px; }
+  .section-label:first-child { margin-top: 0; }
+  .card { display: block; padding: 16px 0; border-bottom: 1px solid #f0f1f3; transition: background 0.15s; }
+  .card:last-child { border-bottom: none; }
+  .card:hover { background: #f8f9fc; margin: 0 -36px; padding: 16px 36px; }
+  .card-top { display: flex; align-items: center; gap: 8px; margin-bottom: 6px; flex-wrap: wrap; }
+  .badge { font-size: 10px; font-weight: 700; padding: 3px 9px; border-radius: 4px; letter-spacing: 0.04em; }
+  .badge-critical { background: #fff0f0; color: #c0392b; border: 1px solid #f5c6c6; }
+  .badge-high { background: #fff7ee; color: #b94d00; border: 1px solid #fdd5a8; }
+  .badge-medium { background: #fff9e6; color: #856900; border: 1px solid #f9e0a0; }
+  .badge-incident { background: #f3f0ff; color: #6133c0; border: 1px solid #cfc0f5; }
+  .source { font-size: 11px; color: #a0a8b8; }
+  .card-headline { font-size: 14px; font-weight: 600; color: #0d1b3e; margin-bottom: 5px; line-height: 1.45; }
+  .card-headline .arrow { font-size: 12px; color: #2563eb; margin-left: 4px; opacity: 0; transition: opacity 0.15s; }
+  .card:hover .card-headline .arrow { opacity: 1; }
+  .card-summary { font-size: 13px; color: #4a5568; line-height: 1.65; }
+  .trend-box { background: #f8f9fc; border-radius: 10px; padding: 18px 20px; margin-top: 6px; }
+  .trend-row { display: flex; gap: 12px; padding: 10px 0; border-bottom: 1px solid #e8eaed; align-items: flex-start; }
+  .trend-row:last-child { border-bottom: none; padding-bottom: 0; }
+  .trend-num { font-size: 11px; font-weight: 700; color: #2563eb; min-width: 22px; padding-top: 2px; }
+  .trend-text { font-size: 13px; color: #4a5568; line-height: 1.6; }
+  .trend-text strong { color: #0d1b3e; font-weight: 600; }
+  .footer { background: #f4f5f7; border-top: 1px solid #e8eaed; padding: 16px 36px; font-size: 11px; color: #9aa0b0; line-height: 1.6; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 8px; }
+  .footer-meta { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; justify-content: flex-end; }
+  .linkedin-link { display: inline-flex; align-items: center; justify-content: center; min-height: 28px; padding: 6px 12px; border-radius: 6px; background: #0a66c2; color: #fff; font-size: 12px; font-weight: 800; letter-spacing: 0.01em; box-shadow: 0 6px 14px rgba(10,102,194,0.16); }
+  .linkedin-link:hover { background: #004182; color: #fff; }
+  .card-inner { display: flex; gap: 14px; }
+  .sev-bar { width: 3px; border-radius: 2px; flex-shrink: 0; margin: 3px 0; }
+  .sev-critical { background: #e74c3c; }
+  .sev-high { background: #e67e22; }
+  .sev-medium { background: #f0b429; }
+  .sev-incident { background: #7c3aed; }
+  .card-content { flex: 1; }
+  @media (max-width: 600px) {
+    .wrapper { margin: 0; border-radius: 0; box-shadow: none; }
+    .header { padding: 18px 20px 16px; flex-direction: column; align-items: flex-start; gap: 8px; }
+    .header-meta { text-align: left; }
+    .body { padding: 18px 20px 24px; }
+    .card:hover { margin: 0 -20px; padding: 16px 20px; }
+    .footer { padding: 14px 20px; flex-direction: column; align-items: flex-start; }
+    .footer-meta { justify-content: flex-start; }
+    .wordmark { font-size: 22px; }
+    .card-headline { font-size: 13px; }
+    .card-summary { font-size: 12px; }
+    .card-headline .arrow { opacity: 1; }
+  }
+</style>
+</head>
+<body>
+<div class="wrapper">
+  <div class="header">
+    <div class="header-logo">
+      <span class="wordmark">Secu<span class="accent">Log</span></span>
+    </div>
+    <div class="header-meta">
+      <div class="nl-label">글로벌 정보보안 뉴스레터</div>
+      <div class="nl-title">보안 브리핑</div>
+      <div class="nl-date">2026년 7월 18일 토요일</div>
+    </div>
+  </div>
+  <div class="body">
+    <div class="section-label">취약점 &amp; 공격</div>
+
+    <a class="card" href="https://thehackernews.com/2026/07/new-wp2shell-wordpress-core-flaw-lets.html" target="_blank">
+      <div class="card-inner"><div class="sev-bar sev-critical"></div><div class="card-content">
+        <div class="card-top"><span class="badge badge-critical">긴급</span><span class="source">The Hacker News</span></div>
+        <div class="card-headline">WordPress 핵심 취약점으로 원격 코드 실행 가능<span class="arrow">↗</span></div>
+        <div class="card-summary">WordPress 6.9 및 7.0 버전의 핵심 취약점(wp2shell)이 발견되어, 인증 없이 원격 코드 실행이 가능하다. 이 취약점은 플러그인 없이도 공격이 가능하며, 6.9.5 및 7.0.2 패치가 출시되었다.</div>
+      </div></div>
+    </a>
+
+    <a class="card" href="https://thehackernews.com/2026/07/openssl-hollowbyte-flaw-could-freeze.html" target="_blank">
+      <div class="card-inner"><div class="sev-bar sev-high"></div><div class="card-content">
+        <div class="card-top"><span class="badge badge-high">높음</span><span class="source">The Hacker News</span></div>
+        <div class="card-headline">OpenSSL HollowByte 취약점으로 서버 메모리 동결 가능성<span class="arrow">↗</span></div>
+        <div class="card-summary">11바이트의 TLS 요청으로 OpenSSL 서버가 메모리를 할당하고, 이 메모리는 프로세스 재시작 없이 회복되지 않는다. 이 취약점은 6월에 패치되었으나, CVE 번호나 공지가 없어 많은 시스템이 영향을 받고 있다.</div>
+      </div></div>
+    </a>
+
+    <a class="card" href="https://thehackernews.com/2026/07/seven-malicious-vite-npm-packages-use.html" target="_blank">
+      <div class="card-inner"><div class="sev-bar sev-high"></div><div class="card-content">
+        <div class="card-top"><span class="badge badge-high">높음</span><span class="source">The Hacker News</span></div>
+        <div class="card-headline">Vite npm 패키지에 블록체인 C2를 이용한 RAT 배포<span class="arrow">↗</span></div>
+        <div class="card-summary">Checkmarx는 Vite 프론트엔드 도구 생태계를 대상으로 한 7개의 악성 npm 패키지(ViteVenom)를 발견했다. 이는 체인베일 공격의 확장으로, 블록체인 기반 C2를 통해 RAT를 배포하고 있다.</div>
+      </div></div>
+    </a>
+
+    <a class="card" href="https://thehackernews.com/2026/07/new-nadmesh-botnet-hunts-exposed-ai.html" target="_blank">
+      <div class="card-inner"><div class="sev-bar sev-medium"></div><div class="card-content">
+        <div class="card-top"><span class="badge badge-medium">중간</span><span class="source">The Hacker News</span></div>
+        <div class="card-headline">NadMesh 봇넷이 AI 서비스의 클라우드 키와 Kubernetes 토큰 탐색<span class="arrow">↗</span></div>
+        <div class="card-summary">NadMesh 봇넷은 7월 초에 출현하여 노출된 AI 서비스를 탐색하고 있으며, 운영자는 3,811개의 AWS 키를 확보했다고 주장하고 있다. Shodan 수집기로 ComfyUI, Ollama, n8n 등 다양한 AI 플랫폼을 탐색하고 있다.</div>
+      </div></div>
+    </a>
+
+    <a class="card" href="https://thehackernews.com/2026/07/goldeneyedog-subgroup-linked-to.html" target="_blank">
+      <div class="card-inner"><div class="sev-bar sev-medium"></div><div class="card-content">
+        <div class="card-top"><span class="badge badge-medium">중간</span><span class="source">The Hacker News</span></div>
+        <div class="card-headline">GoldenEyeDog 그룹이 DigiCert 침해 및 코드 서명 인증서 유출<span class="arrow">↗</span></div>
+        <div class="card-summary">CylindricalCanine 활동 그룹이 2026년 4월 DigiCert 보안 사고를 일으켰으며, 이는 GoldenEyeDog 그룹(APT-Q-27, Dragon Breath 등)의 하위 그룹으로 추정된다. 코드 서명 인증서 유출로 인한 보안 위협이 지적되고 있다.</div>
+      </div></div>
+    </a>
+
+    <a class="card" href="https://thehackernews.com/2026/07/cisa-adds-exploited-sharepoint-rce-zero.html" target="_blank">
+      <div class="card-inner"><div class="sev-bar sev-medium"></div><div class="card-content">
+        <div class="card-top"><span class="badge badge-medium">중간</span><span class="source">The Hacker News</span></div>
+        <div class="card-headline">CISA, SharePoint RCE 제로데이 CVE-2026-58644 KEV 목록에 추가<span class="arrow">↗</span></div>
+        <div class="card-summary">CISA는 2026년 7월 14일 SharePoint 서버의 RCE 제로데이 취약점 CVE-2026-58644를 KEV 목록에 추가했다. 이 취약점은 7월 19일까지 FCEB 기관에서 패치를 적용해야 한다.</div>
+      </div></div>
+    </a>
+
+    <div class="section-label">침해 사고</div>
+
+    <a class="card" href="https://securityaffairs.com/195550/data-breach/ernst-young-ey-investigates-data-breach-involving-third-party-support-tickets.html" target="_blank">
+      <div class="card-inner"><div class="sev-bar sev-incident"></div><div class="card-content">
+        <div class="card-top"><span class="badge badge-incident">사고</span><span class="source">Security Affairs</span></div>
+        <div class="card-headline">EY, 제3자 지원 티켓 시스템 침해로 데이터 유출<span class="arrow">↗</span></div>
+        <div class="card-summary">EY는 제3자 IT 지원 시스템이 해킹되어 고객 문서 및 세금 정보가 유출되었다고 공개했다. 이 사건은 EY의 IT 팀이 사용하는 지원 티켓 시스템이 침해된 것으로 보인다.</div>
+      </div></div>
+    </a>
+
+    <a class="card" href="https://securityaffairs.com/195543/security/a-cyberattack-hit-nichirei-one-of-japans-largest-food-companies.html" target="_blank">
+      <div class="card-inner"><div class="sev-bar sev-incident"></div><div class="card-content">
+        <div class="card-top"><span class="badge badge-incident">사고</span><span class="source">Security Affairs</span></div>
+        <div class="card-headline">일본 최대 식품 회사 Nichirei, 사이버 공격으로 물류 중단<span class="arrow">↗</span></div>
+        <div class="card-summary">일본의 대형 식품 회사 Nichirei가 사이버 공격으로 인해 물류 및 배송이 중단되었으며, 회사는 점차적으로 운영을 복구하고 있다. Nichirei는 1942년에 설립된 동결식품 회사로, 토쿄에 본사를 두고 있다.</div>
+      </div></div>
+    </a>
+
+    <a class="card" href="https://www.securityweek.com/coca-cola-suspends-us-fairlife-production-due-to-ransomware-attack/" target="_blank">
+      <div class="card-inner"><div class="sev-bar sev-incident"></div><div class="card-content">
+        <div class="card-top"><span class="badge badge-incident">사고</span><span class="source">Security Week</span></div>
+        <div class="card-headline">Coca-Cola, 랜섬웨어 공격으로 미국 Fairlife 생산 중단<span class="arrow">↗</span></div>
+        <div class="card-summary">Coca-Cola는 랜섬웨어 공격으로 인해 미국 Fairlife의 생산을 중단했으며, 이 사건의 전체 범위, 성격, 영향은 아직 확인되지 않았다.</div>
+      </div></div>
+    </a>
+
+    <div class="section-label">동향 &amp; 분석</div>
+    <div class="trend-box">
+      <div class="trend-row">
+        <div class="trend-num">01</div>
+        <div class="trend-text"><strong>랜섬웨어 공격 증가</strong> — 랜섬웨어 공격이 정부 기관 및 대기업을 포함한 다양한 조직을 대상으로 급증하고 있다. 특히, 랜섬웨어 공격은 공격자가 피해 조직의 운영 중단을 유발할 수 있다는 점에서 주목받고 있다.</div>
+      </div>
+      <div class="trend-row">
+        <div class="trend-num">02</div>
+        <div class="trend-text"><strong>AI 기반 공격 증가</strong> — AI 기반의 공격이 증가하고 있으며, 특히 블록체인 C2를 이용한 RAT 배포 및 SVG 이미지 파일을 이용한 악성코드 숨기기 등이 주요 트렌드로 나타나고 있다.</div>
+      </div>
+      <div class="trend-row">
+        <div class="trend-num">03</div>
+        <div class="trend-text"><strong>취약점 패치 지연</strong> — 취약점이 발견된 후 패치가 지연되거나, CVE 번호 및 공지가 누락되는 경우가 많아, 많은 시스템이 취약점으로 인해 공격에 노출되고 있다.</div>
+      </div>
+      <div class="trend-row">
+        <div class="trend-num">04</div>
+        <div class="trend-text"><strong>제3자 시스템 침해</strong> — 제3자 시스템의 침해가 주요 사고의 원인이 되고 있으며, 이는 조직의 보안 관리에서 제3자 시스템의 보안을 강화할 필요가 있음을 시사한다.</div>
+      </div>
+    </div>
+  </div>
+  <div class="footer">
+    <div>출처: The Hacker News · BleepingComputer · SecurityWeek · KrebsOnSecurity · CISA · NCSC UK · Unit 42 · 보안뉴스 · 데일리시큐 · 전자신문</div>
+    <div class="footer-meta">
+      <span>© 2026 Felix · SecuLog. 본 브리핑은 공개된 보안 뉴스를 기반으로 작성되었습니다.</span>
+    </div>
+  </div>
+</div>
+</body>
+</html>
