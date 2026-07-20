@@ -1,5 +1,88 @@
 [
   {
+    "id": "CVE-2026-64625",
+    "published": "2026-07-20",
+    "last_modified": "2026-07-20",
+    "status": "Received",
+    "description": "AVideo before 29.0 contains an incomplete fix for CVE-2026-45578 where execAsync() re-wraps escaped commands in double-quoted sh -c, allowing command substitution via $() and backticks. Attackers can inject arbitrary OS commands through the Live plugin on_publish.php endpoint despite escapeshellarg() protection.",
+    "cvss": {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "score": 9.8,
+      "severity": "CRITICAL",
+      "attack_vector": "네트워크",
+      "attack_complexity": "낮음",
+      "privileges_required": "없음",
+      "user_interaction": "없음"
+    },
+    "cwes": [
+      "CWE-78"
+    ],
+    "affected": [],
+    "references": [
+      "https://github.com/WWBN/AVideo/security/advisories/GHSA-rc5x-vh5v-473f",
+      "https://www.vulncheck.com/advisories/avideo-before-os-command-injection-via-execasync"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-64625",
+    "added_at": "2026-07-21T08:00:23+09:00"
+  },
+  {
+    "id": "CVE-2026-63767",
+    "published": "2026-07-20",
+    "last_modified": "2026-07-20",
+    "status": "Received",
+    "description": "ktransformers through 0.6.3, fixed in commit def0f93, contains an unauthenticated pickle deserialization vulnerability that allows remote attackers to execute arbitrary commands by sending crafted pickle payloads to the SchedulerServer ZMQ ROUTER socket bound to all interfaces. Attackers can exploit malicious __reduce__ methods embedded in crafted pickle payloads to execute arbitrary shell commands as the server process.",
+    "cvss": {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "score": 9.8,
+      "severity": "CRITICAL",
+      "attack_vector": "네트워크",
+      "attack_complexity": "낮음",
+      "privileges_required": "없음",
+      "user_interaction": "없음"
+    },
+    "cwes": [
+      "CWE-502"
+    ],
+    "affected": [],
+    "references": [
+      "https://github.com/kvcache-ai/ktransformers/commit/def0f9313d6e063b5c5ccdfa1f6707f7a40dfdca",
+      "https://github.com/kvcache-ai/ktransformers/issues/2087",
+      "https://github.com/kvcache-ai/ktransformers/pull/2091",
+      "https://www.vulncheck.com/advisories/ktransformers-unauthenticated-pickle-deserialization-rce-via-zmq"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-63767",
+    "added_at": "2026-07-21T08:00:23+09:00"
+  },
+  {
+    "id": "CVE-2026-63766",
+    "published": "2026-07-20",
+    "last_modified": "2026-07-20",
+    "status": "Received",
+    "description": "GPT-SoVITS through 20250606v2pro contains an OS command injection vulnerability in webui.py where ASR, slice, denoise, and uvr5 functions interpolate unsanitized Gradio textbox values directly into shell commands executed with shell=True. Attackers can inject shell metacharacters through path parameters to execute arbitrary OS commands as the server process user without authentication.",
+    "cvss": {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "score": 9.8,
+      "severity": "CRITICAL",
+      "attack_vector": "네트워크",
+      "attack_complexity": "낮음",
+      "privileges_required": "없음",
+      "user_interaction": "없음"
+    },
+    "cwes": [
+      "CWE-78"
+    ],
+    "affected": [],
+    "references": [
+      "https://github.com/RVC-Boss/GPT-SoVITS/issues/2793",
+      "https://www.vulncheck.com/advisories/gpt-sovits-20250606v2pro-os-command-injection-via-webui-py"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-63766",
+    "added_at": "2026-07-21T08:00:23+09:00"
+  },
+  {
     "id": "CVE-2026-16242",
     "published": "2026-07-20",
     "last_modified": "2026-07-20",
