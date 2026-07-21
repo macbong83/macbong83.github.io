@@ -1,5 +1,36 @@
 [
   {
+    "id": "CVE-2026-13439",
+    "published": "2026-07-21",
+    "last_modified": "2026-07-21",
+    "status": "Received",
+    "description": "The Easy Form Builder by WhiteStudio plugin for WordPress is vulnerable to Unauthenticated Privilege Escalation to Administrator in versions up to, and including, 4.0.11 This is due to the password recovery flow using the publicly-visible session identifier ('sid') as the password reset token stored in wp_emsfb_temp_links, combined with a publicly-accessible nonce refresh endpoint (Emsfb/v1/nonce/refresh) that issues valid WordPress REST nonces to unauthenticated visitors. This makes it possible for unauthenticated attackers to reset the password of any WordPress user — including administrators — by scraping the public sid from a published login form page, submitting a recovery request for any known user email via Emsfb/v1/forms/message/add, and then calling Emsfb/v1/forms/recovery/efb_set_password with the known sid to set an arbitrary new password and gain full administrator access.",
+    "cvss": {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "score": 9.8,
+      "severity": "CRITICAL",
+      "attack_vector": "네트워크",
+      "attack_complexity": "낮음",
+      "privileges_required": "없음",
+      "user_interaction": "없음"
+    },
+    "cwes": [
+      "CWE-269"
+    ],
+    "affected": [],
+    "references": [
+      "https://plugins.trac.wordpress.org/browser/easy-form-builder/trunk/includes/class-Emsfb-public.php#L1587",
+      "https://plugins.trac.wordpress.org/browser/easy-form-builder/trunk/includes/class-Emsfb-public.php#L5024",
+      "https://plugins.trac.wordpress.org/browser/easy-form-builder/trunk/includes/class-Emsfb-public.php#L5060",
+      "https://plugins.trac.wordpress.org/browser/easy-form-builder/trunk/includes/class-Emsfb-public.php#L623",
+      "https://plugins.trac.wordpress.org/browser/easy-form-builder/trunk/includes/class-Emsfb-public.php#L96",
+      "https://plugins.trac.wordpress.org/changeset/3588226/easy-form-builder/trunk/includes/class-Emsfb-public.php"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-13439",
+    "added_at": "2026-07-21T20:00:53+09:00"
+  },
+  {
     "id": "CVE-2026-64625",
     "published": "2026-07-20",
     "last_modified": "2026-07-20",

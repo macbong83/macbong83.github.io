@@ -41,13 +41,36 @@
     <h1>CVE Archive</h1>
     <p>NVD 기반 Critical CVE를 누적 관리하는 별도 페이지입니다. 블로그에는 CVE 자동 글을 발행하지 않고, 이 페이지에만 기록합니다.</p>
     <div class="meta">
-      <span>Total 127</span>
-      <span>Updated 2026-07-21 08:00 KST</span>
+      <span>Total 128</span>
+      <span>Updated 2026-07-21 20:00 KST</span>
       <span>Source NVD API</span>
     </div>
   </section>
   <div class="notice">중복 제거 기준은 CVE ID입니다. 동일 CVE는 다시 추가하지 않습니다. 실제 악용 여부와 패치 우선순위는 CISA KEV, 벤더 권고, 자산 노출 여부와 함께 검토해야 합니다.</div>
 
+    <article class="cve-card" id="CVE-2026-13439">
+      <div class="cve-top">
+        <a class="cve-id" href="https://nvd.nist.gov/vuln/detail/CVE-2026-13439" target="_blank" rel="noopener">CVE-2026-13439</a>
+        <span class="score">CVSS 9.8 CRITICAL</span>
+      </div>
+      <p class="desc">The Easy Form Builder by WhiteStudio plugin for WordPress is vulnerable to Unauthenticated Privilege Escalation to Administrator in versions up to, and including, 4.0.11 This is due to the password recovery flow using the publicly-visible session identifier (&#x27;sid&#x27;) as the password reset token stored in wp_emsfb_temp_links, combined with a publicly-accessible nonce refresh endpoint (Emsfb/v1/nonce/refresh) that issues valid WordPress REST nonces to unauthenticated visitors. This makes it possible for unauthenticated attackers to reset the password of any WordPress user — including administrators — by scraping the public sid from a published login form page, submitting a recovery request for any known user email via Emsfb/v1/forms/message/add, and then calling Emsfb/v1/forms/recovery/efb_set_password with the known sid to set an arbitrary new password and gain full administrator access.</p>
+      <dl>
+        <div><dt>Published</dt><dd>2026-07-21</dd></div>
+        <div><dt>Last Modified</dt><dd>2026-07-21</dd></div>
+        <div><dt>Status</dt><dd>Received</dd></div>
+        <div><dt>Attack Vector</dt><dd>네트워크</dd></div>
+        <div><dt>Attack Complexity</dt><dd>낮음</dd></div>
+        <div><dt>Privileges</dt><dd>없음</dd></div>
+        <div><dt>User Interaction</dt><dd>없음</dd></div>
+        <div><dt>CWE</dt><dd>CWE-269</dd></div>
+        <div><dt>Affected</dt><dd>NVD CPE 기준 확인 필요</dd></div>
+      </dl>
+      <div class="vector"><code>CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H</code></div>
+      <details>
+        <summary>References</summary>
+        <ul><li><a href="https://plugins.trac.wordpress.org/browser/easy-form-builder/trunk/includes/class-Emsfb-public.php#L1587" target="_blank" rel="noopener">https://plugins.trac.wordpress.org/browser/easy-form-builder/trunk/includes/class-Emsfb-public.php#L1587</a></li><li><a href="https://plugins.trac.wordpress.org/browser/easy-form-builder/trunk/includes/class-Emsfb-public.php#L5024" target="_blank" rel="noopener">https://plugins.trac.wordpress.org/browser/easy-form-builder/trunk/includes/class-Emsfb-public.php#L5024</a></li><li><a href="https://plugins.trac.wordpress.org/browser/easy-form-builder/trunk/includes/class-Emsfb-public.php#L5060" target="_blank" rel="noopener">https://plugins.trac.wordpress.org/browser/easy-form-builder/trunk/includes/class-Emsfb-public.php#L5060</a></li><li><a href="https://plugins.trac.wordpress.org/browser/easy-form-builder/trunk/includes/class-Emsfb-public.php#L623" target="_blank" rel="noopener">https://plugins.trac.wordpress.org/browser/easy-form-builder/trunk/includes/class-Emsfb-public.php#L623</a></li></ul>
+      </details>
+    </article>
     <article class="cve-card" id="CVE-2026-64625">
       <div class="cve-top">
         <a class="cve-id" href="https://nvd.nist.gov/vuln/detail/CVE-2026-64625" target="_blank" rel="noopener">CVE-2026-64625</a>
