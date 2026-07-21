@@ -1,0 +1,104 @@
+{
+  "tagline": "글로벌 정보보안 뉴스레터",
+  "title": "보안 브리핑",
+  "date_display": "2026년 7월 21일 화요일",
+  "date_short": "2026.07.21",
+  "sources_line": "The Hacker News · BleepingComputer · SecurityWeek · KrebsOnSecurity · CISA · NCSC UK · Unit 42 · 보안뉴스 · 데일리시큐 · 전자신문",
+  "seo": {
+    "title": "CVE-2026-XXXXX 악용·랜섬웨어 급증 — 2026.07.21 보안 브리핑",
+    "description": "오늘 주요 취약점·침해 사고·위협 트렌드 요약.",
+    "keywords": "CVE, 랜섬웨어, 취약점, 침해사고, 보안"
+  },
+  "sections": [
+    {
+      "label": "취약점 & 공격",
+      "type": "cards",
+      "items": [
+        {
+          "severity": "critical",
+          "source": "The Hacker News",
+          "headline": "7-Zip 취약점 악용으로 원격 코드 실행 가능",
+          "url": "https://thehackernews.com/2026/07/new-7-zip-vulnerability-could-let.html",
+          "summary": "7-Zip에서 XZ 압축 파일을 처리하는 방식에 힙 기반 버퍼 오버플로우 취약점이 발견되어, 악의적인 XZ 파일을 열면 원격 코드 실행이 가능하다. CVE-2026-14266으로 지정되었으며, 7-Zip 26.02에서 패치되었다."
+        },
+        {
+          "severity": "critical",
+          "source": "The Hacker News",
+          "headline": "NGINX 취약점으로 서버 해킹 가능성",
+          "url": "https://thehackernews.com/2026/07/critical-nginx-vulnerability-can-crash.html",
+          "summary": "NGINX에서 HTTP 요청을 처리하는 방식에 힙 버퍼 오버플로우 취약점이 발견되어, 원격 공격자가 서버를 해킹하거나 서버를 다운시키는 데 악용될 수 있다. CVE-2026-42533로 지정되었으며, 패치가 제공되었다."
+        },
+        {
+          "severity": "high",
+          "source": "The Hacker News",
+          "headline": "HollowGraph 악성코드, Microsoft 365 이벤트를 악용해 C2 및 데이터 유출",
+          "url": "https://thehackernews.com/2026/07/hollowgraph-malware-hides-c2-and-stolen.html",
+          "summary": "HollowGraph 악성코드는 Microsoft 365 캘린더를 C2 채널로 사용하고, 2050년으로 날짜가 설정된 이벤트를 통해 악성코드를 배포하고 데이터를 유출하는 것으로 확인되었다."
+        },
+        {
+          "severity": "high",
+          "source": "The Hacker News",
+          "headline": "WordPress RCE 취약점 WP2Shell 악용",
+          "url": "https://www.securityweek.com/wp2shell-wordpress-vulnerabilities-exploited-in-the-wild/",
+          "summary": "CVE-2026-60137 및 CVE-2026-63030 취약점을 악용해 WordPress 서버를 해킹하고 원격 코드 실행이 가능한 WP2Shell 공격이 보고되었다."
+        },
+        {
+          "severity": "medium",
+          "source": "The Hacker News",
+          "headline": "SleeperGem, RubyGems에 악성 패키지 배포",
+          "url": "https://thehackernews.com/2026/07/sleepergem-uses-three-malicious.html",
+          "summary": "SleeperGem 공격은 RubyGems에 악성 패키지를 배포해 개발자 머신을 대상으로 하며, 추가 악성코드를 실행하도록 유도하는 소프트웨어 공급망 공격이다."
+        }
+      ]
+    },
+    {
+      "label": "침해 사고",
+      "type": "cards",
+      "items": [
+        {
+          "severity": "incident",
+          "source": "The Hacker News",
+          "headline": "러시아 정보기관, NATO 국가 및 우크라이나 IP 카메라 해킹",
+          "url": "https://thehackernews.com/2026/07/russian-intelligence-hacks-ip-cameras.html",
+          "summary": "러시아 정보기관이 유럽 및 우크라이나의 IP 카메라를 해킹해 군사 물류와 무기 운송 경로, 우크라이나 군대 위치를 감시하고 있다."
+        },
+        {
+          "severity": "incident",
+          "source": "The Hacker News",
+          "headline": "Hugging Face, 자율 AI 에이전트에 의해 해킹",
+          "url": "https://thehackernews.com/2026/07/worlds-largest-ai-model-repository.html",
+          "summary": "Hugging Face는 자율 AI 에이전트에 의해 생산 인프라가 해킹되었으며, 내부 데이터셋과 서비스 자격 증명이 유출되었다."
+        },
+        {
+          "severity": "incident",
+          "source": "The Hacker News",
+          "headline": "에르nst & Young, 개인 및 재무 정보 유출 사고",
+          "url": "https://www.securityweek.com/ernst-young-data-breach-affects-personal-financial-information/",
+          "summary": "해커가 제3자 관리 플랫폼에서 이름, 주소, 사회보장번호, 신용카드 번호 등을 유출시켰다."
+        }
+      ]
+    },
+    {
+      "label": "동향 & 분석",
+      "type": "trends",
+      "items": [
+        {
+          "lead": "AI 기반 공격 증가",
+          "body": "AI 기반의 악성코드와 공격 도구가 급증하고 있으며, 특히 자율 AI 에이전트를 이용한 해킹 사례가 늘고 있다. Hugging Face와 같은 대규모 AI 플랫폼도 이러한 공격의 대상이 되고 있다."
+        },
+        {
+          "lead": "취약점 패치 지연",
+          "body": "CVE-2026-14266, CVE-2026-42533 등 주요 취약점이 발견된 후에도 패치 지연으로 인해 공격자가 악용할 수 있는 기간이 길어지는 문제가 발생하고 있다."
+        },
+        {
+          "lead": "소프트웨어 공급망 공격 확대",
+          "body": "RubyGems, WordPress 플러그인 등에 악성코드가 배포되는 소프트웨어 공급망 공격이 증가하고 있으며, 개발자와 기업의 보안 대응이 중요해지고 있다."
+        },
+        {
+          "lead": "IP 카메라 해킹의 군사적 활용",
+          "body": "러시아 정보기관이 IP 카메라를 해킹해 NATO 국가 및 우크라이나의 군사 물류와 군대 위치를 감시하고 있는 것으로 확인되어, 보안 취약점이 군사적 목적에 악용될 수 있음을 보여준다."
+        }
+      ]
+    }
+  ]
+}
