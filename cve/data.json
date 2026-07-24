@@ -1,5 +1,187 @@
 [
   {
+    "id": "CVE-2026-62825",
+    "published": "2026-07-24",
+    "last_modified": "2026-07-24",
+    "status": "Received",
+    "description": "Improper authentication in Azure Key Vault allows an unauthorized attacker to elevate privileges over a network.",
+    "cvss": {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:N/I:H/A:H",
+      "score": 10.0,
+      "severity": "CRITICAL",
+      "attack_vector": "네트워크",
+      "attack_complexity": "낮음",
+      "privileges_required": "없음",
+      "user_interaction": "없음"
+    },
+    "cwes": [
+      "CWE-287"
+    ],
+    "affected": [],
+    "references": [
+      "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-62825"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-62825",
+    "added_at": "2026-07-24T20:00:44+09:00"
+  },
+  {
+    "id": "CVE-2026-58275",
+    "published": "2026-07-24",
+    "last_modified": "2026-07-24",
+    "status": "Received",
+    "description": "Missing authorization in Azure DNS allows an unauthorized attacker to elevate privileges over a network.",
+    "cvss": {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:N/I:H/A:H",
+      "score": 10.0,
+      "severity": "CRITICAL",
+      "attack_vector": "네트워크",
+      "attack_complexity": "낮음",
+      "privileges_required": "없음",
+      "user_interaction": "없음"
+    },
+    "cwes": [
+      "CWE-862"
+    ],
+    "affected": [],
+    "references": [
+      "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-58275"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-58275",
+    "added_at": "2026-07-24T20:00:44+09:00"
+  },
+  {
+    "id": "CVE-2026-56191",
+    "published": "2026-07-24",
+    "last_modified": "2026-07-24",
+    "status": "Received",
+    "description": "Improper authentication in Microsoft Exchange Online allows an unauthorized attacker to perform tampering over a network.",
+    "cvss": {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:H",
+      "score": 10.0,
+      "severity": "CRITICAL",
+      "attack_vector": "네트워크",
+      "attack_complexity": "낮음",
+      "privileges_required": "없음",
+      "user_interaction": "없음"
+    },
+    "cwes": [
+      "CWE-287"
+    ],
+    "affected": [],
+    "references": [
+      "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-56191"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-56191",
+    "added_at": "2026-07-24T20:00:44+09:00"
+  },
+  {
+    "id": "CVE-2026-56165",
+    "published": "2026-07-24",
+    "last_modified": "2026-07-24",
+    "status": "Received",
+    "description": "Heap-based buffer overflow in Microsoft Account allows an unauthorized attacker to execute code over a network.",
+    "cvss": {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "score": 9.8,
+      "severity": "CRITICAL",
+      "attack_vector": "네트워크",
+      "attack_complexity": "낮음",
+      "privileges_required": "없음",
+      "user_interaction": "없음"
+    },
+    "cwes": [
+      "CWE-122"
+    ],
+    "affected": [],
+    "references": [
+      "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-56165"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-56165",
+    "added_at": "2026-07-24T20:00:44+09:00"
+  },
+  {
+    "id": "CVE-2026-56160",
+    "published": "2026-07-24",
+    "last_modified": "2026-07-24",
+    "status": "Received",
+    "description": "Improper authorization in Azure Red Hat OpenShift (ARO) allows an authorized attacker to elevate privileges over a network.",
+    "cvss": {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:C/C:H/I:H/A:H",
+      "score": 9.1,
+      "severity": "CRITICAL",
+      "attack_vector": "네트워크",
+      "attack_complexity": "낮음",
+      "privileges_required": "높음",
+      "user_interaction": "없음"
+    },
+    "cwes": [
+      "CWE-285"
+    ],
+    "affected": [],
+    "references": [
+      "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-56160"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-56160",
+    "added_at": "2026-07-24T20:00:44+09:00"
+  },
+  {
+    "id": "CVE-2026-54120",
+    "published": "2026-07-24",
+    "last_modified": "2026-07-24",
+    "status": "Received",
+    "description": "Improper input validation in Microsoft Surface allows an authorized attacker to execute code over a network.",
+    "cvss": {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H",
+      "score": 9.9,
+      "severity": "CRITICAL",
+      "attack_vector": "네트워크",
+      "attack_complexity": "낮음",
+      "privileges_required": "낮음",
+      "user_interaction": "없음"
+    },
+    "cwes": [
+      "CWE-20"
+    ],
+    "affected": [],
+    "references": [
+      "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-54120"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-54120",
+    "added_at": "2026-07-24T20:00:44+09:00"
+  },
+  {
+    "id": "CVE-2026-50517",
+    "published": "2026-07-24",
+    "last_modified": "2026-07-24",
+    "status": "Received",
+    "description": "Deserialization of untrusted data in M365 Copilot allows an authorized attacker to execute code over a network.",
+    "cvss": {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H",
+      "score": 9.9,
+      "severity": "CRITICAL",
+      "attack_vector": "네트워크",
+      "attack_complexity": "낮음",
+      "privileges_required": "낮음",
+      "user_interaction": "없음"
+    },
+    "cwes": [
+      "CWE-502"
+    ],
+    "affected": [],
+    "references": [
+      "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-50517"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-50517",
+    "added_at": "2026-07-24T20:00:44+09:00"
+  },
+  {
     "id": "CVE-2026-65700",
     "published": "2026-07-23",
     "last_modified": "2026-07-23",
