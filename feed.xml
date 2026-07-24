@@ -5,34 +5,41 @@
     <link>https://macbong83.github.io/</link>
     <description>EDR · SASE · CTEM · 취약점 관리 중심의 매일 보안 브리핑</description>
     <language>ko</language>
-    <lastBuildDate>Fri, 24 Jul 2026 08:00:30 +0900</lastBuildDate>
+    <lastBuildDate>Fri, 24 Jul 2026 09:03:26 +0900</lastBuildDate>
     <item>
       <title>SecuLog 보안 브리핑 — vendor-weekly-2026-07-20</title>
       <link>https://macbong83.github.io/posts/vendor-weekly-2026-07-20.html</link>
       <guid isPermaLink="true">https://macbong83.github.io/posts/vendor-weekly-2026-07-20.html</guid>
-      <pubDate>Fri, 24 Jul 2026 08:00:30 +0900</pubDate>
+      <pubDate>Fri, 24 Jul 2026 09:03:26 +0900</pubDate>
       <description></description>
     </item>
     <item>
       <title>SecuLog 보안 브리핑 — vendor-weekly-2026-07-06</title>
       <link>https://macbong83.github.io/posts/vendor-weekly-2026-07-06.html</link>
       <guid isPermaLink="true">https://macbong83.github.io/posts/vendor-weekly-2026-07-06.html</guid>
-      <pubDate>Fri, 24 Jul 2026 08:00:30 +0900</pubDate>
+      <pubDate>Fri, 24 Jul 2026 09:03:26 +0900</pubDate>
       <description></description>
     </item>
     <item>
       <title>SecuLog 보안 브리핑 — vendor-weekly-2026-06-30</title>
       <link>https://macbong83.github.io/posts/vendor-weekly-2026-06-30.html</link>
       <guid isPermaLink="true">https://macbong83.github.io/posts/vendor-weekly-2026-06-30.html</guid>
-      <pubDate>Fri, 24 Jul 2026 08:00:30 +0900</pubDate>
+      <pubDate>Fri, 24 Jul 2026 09:03:26 +0900</pubDate>
       <description></description>
     </item>
     <item>
       <title>SecuLog 보안 브리핑 — startup-radar-2026-07-13</title>
       <link>https://macbong83.github.io/posts/startup-radar-2026-07-13.html</link>
       <guid isPermaLink="true">https://macbong83.github.io/posts/startup-radar-2026-07-13.html</guid>
-      <pubDate>Fri, 24 Jul 2026 08:00:30 +0900</pubDate>
+      <pubDate>Fri, 24 Jul 2026 09:03:26 +0900</pubDate>
       <description></description>
+    </item>
+    <item>
+      <title>SecuLog 보안 브리핑 — 2026.07.24</title>
+      <link>https://macbong83.github.io/posts/2026-07-24.html</link>
+      <guid isPermaLink="true">https://macbong83.github.io/posts/2026-07-24.html</guid>
+      <pubDate>Fri, 24 Jul 2026 08:00:00 +0900</pubDate>
+      <description>러시아 해킹 집단, Zimbra 제로데이 악용해 이메일 및 2FA 코드 유출 / Check Point SmartConsole 취약점, 완전한 관리자 접근 허용 / Chaos 랜섬웨어, 브라우저 기반 msaRAT 사용해 네트워크 감지 회피 / Claude Cowork, 가상 머신 탈출 취약점으로 맥 파일 접근 가능</description>
     </item>
     <item>
       <title>SecuLog 보안 브리핑 — 2026.07.23</title>

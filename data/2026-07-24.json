@@ -1,0 +1,104 @@
+{
+  "tagline": "글로벌 정보보안 뉴스레터",
+  "title": "보안 브리핑",
+  "date_display": "2026년 7월 24일 금요일",
+  "date_short": "2026.07.24",
+  "sources_line": "The Hacker News · BleepingComputer · SecurityWeek · KrebsOnSecurity · CISA · NCSC UK · Unit 42 · 보안뉴스 · 데일리시큐 · 전자신문",
+  "seo": {
+    "title": "CVE-2026-XXXXX 악용·랜섬웨어 급증 — 2026.07.24 보안 브리핑",
+    "description": "오늘 주요 취약점·침해 사고·위협 트렌드 요약.",
+    "keywords": "CVE, 랜섬웨어, 취약점, 침해사고, 보안"
+  },
+  "sections": [
+    {
+      "label": "취약점 & 공격",
+      "type": "cards",
+      "items": [
+        {
+          "severity": "critical",
+          "source": "The Hacker News",
+          "headline": "러시아 해킹 집단, Zimbra 제로데이 악용해 이메일 및 2FA 코드 유출",
+          "url": "https://thehackernews.com/2026/07/russian-espionage-group-exploited.html",
+          "summary": "러시아 정부 지원 해킹 집단이 Zimbra 웹메일 클라이언트의 알려지지 않은 취약점을 악용해 서양의 이메일 박스를 해킹하고 2FA 코드를 유출했다."
+        },
+        {
+          "severity": "critical",
+          "source": "SecurityWeek",
+          "headline": "Check Point SmartConsole 취약점, 완전한 관리자 접근 허용",
+          "url": "https://www.securityweek.com/new-check-point-zero-day-vulnerability-exploited-in-the-wild/",
+          "summary": "Check Point의 SmartConsole 취약점(CVE-2026-16232)이 악용되어 완전한 관리자 접근이 가능해졌으며, CVSS 점수는 9.3이다."
+        },
+        {
+          "severity": "high",
+          "source": "The Hacker News",
+          "headline": "Chaos 랜섬웨어, 브라우저 기반 msaRAT 사용해 네트워크 감지 회피",
+          "url": "https://thehackernews.com/2026/07/chaos-ransomware-uses-msarat-to-route.html",
+          "summary": "Chaos 랜섬웨어 그룹이 브라우저 기반의 msaRAT를 사용해 C2 트래픽을 라우팅하고 네트워크 감지를 회피하는 방식을 사용했다."
+        },
+        {
+          "severity": "high",
+          "source": "The Hacker News",
+          "headline": "Claude Cowork, 가상 머신 탈출 취약점으로 맥 파일 접근 가능",
+          "url": "https://thehackernews.com/2026/07/claude-cowork-flaw-could-let-ai-agent.html",
+          "summary": "Anthropic의 Claude Cowork에서 가상 머신을 벗어나 맥의 전체 파일에 접근할 수 있는 취약점이 발견되었다."
+        },
+        {
+          "severity": "medium",
+          "source": "The Hacker News",
+          "headline": "Nine-Year-Old RefluXFS Linux Flaw, 기본 RHEL 설치에서 루트 접근 허용",
+          "url": "https://thehackernews.com/2026/07/nine-year-old-refluxfs-linux-flaw-gives.html",
+          "summary": "RefluXFS Linux 커널 취약점(CVE-2026-64600)이 발견되어 기본 RHEL 설치에서 로컬 사용자가 루트 접근을 얻을 수 있다."
+        }
+      ]
+    },
+    {
+      "label": "침해 사고",
+      "type": "cards",
+      "items": [
+        {
+          "severity": "incident",
+          "source": "보안뉴스",
+          "headline": "한국 외교관 정보 전원 유출 추정, 최대 1만건",
+          "url": "http://www.boannews.com/media/view.asp?idx=144776",
+          "summary": "국립외교원 온라인 교육 시스템에서 한국 외교관의 신상 정보가 전원 유출된 것으로 추정된다."
+        },
+        {
+          "severity": "incident",
+          "source": "SecurityWeek",
+          "headline": "Chick-fil-A 계정, 자격 증명 채우기 공격으로 해킹",
+          "url": "https://www.securityweek.com/chick-fil-a-accounts-get-fried-in-credential-stuffing-attack/",
+          "summary": "해커가 다른 회사에서 얻은 자격 증명을 사용해 Chick-fil-A One 계정을 해킹했다."
+        },
+        {
+          "severity": "incident",
+          "source": "SecurityWeek",
+          "headline": "Upbound 그룹, 데이터 유출로 1300만 달러 규모의 사기 계약 손실",
+          "url": "https://www.securityweek.com/upbound-group-says-data-breach-led-to-13-million-in-fraudulent-contract-losses/",
+          "summary": "해커가 Upbound 그룹의 비민감한 고객 정보와 문서를 유출해 1300만 달러 규모의 사기 계약 손실을 초래했다."
+        }
+      ]
+    },
+    {
+      "label": "동향 & 분석",
+      "type": "trends",
+      "items": [
+        {
+          "lead": "AI 기반 악성코드 증가",
+          "body": "AI 기반의 봇넷 및 랜섬웨어가 급증하며, AI 기술이 악용되는 사례가 늘고 있다. 예를 들어, Tuxbot V3는 대규모 언어 모델을 활용해 코드를 작성했다."
+        },
+        {
+          "lead": "취약점 관리의 중요성",
+          "body": "취약점 관리의 필요성이 강조되고 있으며, 패치가 지연될 경우 보안 위험이 증가한다. 특히, CISA가 알려진 악용 취약점을 포함한 제품에 대한 패치가 시급하다."
+        },
+        {
+          "lead": "IoT 기기의 보안 취약점",
+          "body": "패치 기능이 부재한 저가형 IoT 기기들이 봇넷의 포섭 대상이 되며, 사후 조치가 불가능한 '영원한 취약점'으로 작용하고 있다."
+        },
+        {
+          "lead": "AI 기반 보안 대응의 필요성",
+          "body": "AI 기술이 보안 분야에서 활용되며, AI 자체의 맹점을 파고드는 공격이 증가하고 있어, AI 기반의 보안 대응이 필수적이다."
+        }
+      ]
+    }
+  ]
+}
