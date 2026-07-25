@@ -41,13 +41,36 @@
     <h1>CVE Archive</h1>
     <p>NVD 기반 Critical CVE를 누적 관리하는 별도 페이지입니다. 블로그에는 CVE 자동 글을 발행하지 않고, 이 페이지에만 기록합니다.</p>
     <div class="meta">
-      <span>Total 324</span>
-      <span>Updated 2026-07-25 08:00 KST</span>
+      <span>Total 325</span>
+      <span>Updated 2026-07-26 08:00 KST</span>
       <span>Source NVD API</span>
     </div>
   </section>
   <div class="notice">중복 제거 기준은 CVE ID입니다. 동일 CVE는 다시 추가하지 않습니다. 실제 악용 여부와 패치 우선순위는 CISA KEV, 벤더 권고, 자산 노출 여부와 함께 검토해야 합니다.</div>
 
+    <article class="cve-card" id="CVE-2026-66012">
+      <div class="cve-top">
+        <a class="cve-id" href="https://nvd.nist.gov/vuln/detail/CVE-2026-66012" target="_blank" rel="noopener">CVE-2026-66012</a>
+        <span class="score">CVSS 10.0 CRITICAL</span>
+      </div>
+      <p class="desc">SiYuan before v3.7.2 contains a missing authorization vulnerability in the POST /mcp kernel endpoint, which is gated only by a general auth check (model.CheckAuth) with no admin-role or read-only enforcement. This exposes 31 MCP tools, including a file tool with list/read/write/delete/rename/copy actions across the entire workspace. When the Publish server is enabled in anonymous mode (Conf.Publish.Enable=true and Conf.Publish.Auth.Enable=false), the Publish reverse proxy attaches an anonymous RoleReader JWT to proxied requests, allowing a remote unauthenticated attacker to reach /mcp. The attacker can read conf/conf.json to extract accessAuthCode, api.token, and cookieKey in plaintext, write arbitrary files in the workspace, and plant a plugin into data/plugins/ that executes with nodeIntegration:true and no contextIsolation on the next desktop launch, leading to administrator takeover.</p>
+      <dl>
+        <div><dt>Published</dt><dd>2026-07-25</dd></div>
+        <div><dt>Last Modified</dt><dd>2026-07-25</dd></div>
+        <div><dt>Status</dt><dd>Received</dd></div>
+        <div><dt>Attack Vector</dt><dd>네트워크</dd></div>
+        <div><dt>Attack Complexity</dt><dd>낮음</dd></div>
+        <div><dt>Privileges</dt><dd>없음</dd></div>
+        <div><dt>User Interaction</dt><dd>없음</dd></div>
+        <div><dt>CWE</dt><dd>CWE-862</dd></div>
+        <div><dt>Affected</dt><dd>NVD CPE 기준 확인 필요</dd></div>
+      </dl>
+      <div class="vector"><code>CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:H</code></div>
+      <details>
+        <summary>References</summary>
+        <ul><li><a href="https://github.com/siyuan-note/siyuan/commit/c72ca4cd09019e5f64afdee8f8c6ec5ef34858db" target="_blank" rel="noopener">https://github.com/siyuan-note/siyuan/commit/c72ca4cd09019e5f64afdee8f8c6ec5ef34858db</a></li><li><a href="https://github.com/siyuan-note/siyuan/security/advisories/GHSA-cvhv-7xhj-xjp8" target="_blank" rel="noopener">https://github.com/siyuan-note/siyuan/security/advisories/GHSA-cvhv-7xhj-xjp8</a></li><li><a href="https://www.vulncheck.com/advisories/siyuan-before-unauthenticated-administrator-takeover-via-mcp" target="_blank" rel="noopener">https://www.vulncheck.com/advisories/siyuan-before-unauthenticated-administrator-takeover-via-mcp</a></li></ul>
+      </details>
+    </article>
     <article class="cve-card" id="CVE-2026-62835">
       <div class="cve-top">
         <a class="cve-id" href="https://nvd.nist.gov/vuln/detail/CVE-2026-62835" target="_blank" rel="noopener">CVE-2026-62835</a>
