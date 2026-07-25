@@ -5,34 +5,41 @@
     <link>https://macbong83.github.io/</link>
     <description>EDR · SASE · CTEM · 취약점 관리 중심의 매일 보안 브리핑</description>
     <language>ko</language>
-    <lastBuildDate>Sat, 25 Jul 2026 08:00:21 +0900</lastBuildDate>
+    <lastBuildDate>Sat, 25 Jul 2026 09:03:35 +0900</lastBuildDate>
     <item>
       <title>SecuLog 보안 브리핑 — vendor-weekly-2026-07-20</title>
       <link>https://macbong83.github.io/posts/vendor-weekly-2026-07-20.html</link>
       <guid isPermaLink="true">https://macbong83.github.io/posts/vendor-weekly-2026-07-20.html</guid>
-      <pubDate>Sat, 25 Jul 2026 08:00:21 +0900</pubDate>
+      <pubDate>Sat, 25 Jul 2026 09:03:35 +0900</pubDate>
       <description></description>
     </item>
     <item>
       <title>SecuLog 보안 브리핑 — vendor-weekly-2026-07-06</title>
       <link>https://macbong83.github.io/posts/vendor-weekly-2026-07-06.html</link>
       <guid isPermaLink="true">https://macbong83.github.io/posts/vendor-weekly-2026-07-06.html</guid>
-      <pubDate>Sat, 25 Jul 2026 08:00:21 +0900</pubDate>
+      <pubDate>Sat, 25 Jul 2026 09:03:35 +0900</pubDate>
       <description></description>
     </item>
     <item>
       <title>SecuLog 보안 브리핑 — vendor-weekly-2026-06-30</title>
       <link>https://macbong83.github.io/posts/vendor-weekly-2026-06-30.html</link>
       <guid isPermaLink="true">https://macbong83.github.io/posts/vendor-weekly-2026-06-30.html</guid>
-      <pubDate>Sat, 25 Jul 2026 08:00:21 +0900</pubDate>
+      <pubDate>Sat, 25 Jul 2026 09:03:35 +0900</pubDate>
       <description></description>
     </item>
     <item>
       <title>SecuLog 보안 브리핑 — startup-radar-2026-07-13</title>
       <link>https://macbong83.github.io/posts/startup-radar-2026-07-13.html</link>
       <guid isPermaLink="true">https://macbong83.github.io/posts/startup-radar-2026-07-13.html</guid>
-      <pubDate>Sat, 25 Jul 2026 08:00:21 +0900</pubDate>
+      <pubDate>Sat, 25 Jul 2026 09:03:35 +0900</pubDate>
       <description></description>
+    </item>
+    <item>
+      <title>SecuLog 보안 브리핑 — 2026.07.25</title>
+      <link>https://macbong83.github.io/posts/2026-07-25.html</link>
+      <guid isPermaLink="true">https://macbong83.github.io/posts/2026-07-25.html</guid>
+      <pubDate>Sat, 25 Jul 2026 08:00:00 +0900</pubDate>
+      <description>Certighost 취약점: 일반 사용자가 도메인 컨트롤러로 위장 가능 / ChatGPT AgentForger 취약점: 피싱 링크로 AI 에이전트 생성 가능 / Bing 이미지 검색 취약점: SVG 파일을 통해 시스템 권한 획득 가능 / Golden Chickens: 새로운 악성코드 4종 출시</description>
     </item>
     <item>
       <title>SecuLog 보안 브리핑 — 2026.07.24</title>
