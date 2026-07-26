@@ -1,0 +1,111 @@
+{
+  "tagline": "글로벌 정보보안 뉴스레터",
+  "title": "보안 브리핑",
+  "date_display": "2026년 7월 26일 일요일",
+  "date_short": "2026.07.26",
+  "sources_line": "The Hacker News · BleepingComputer · SecurityWeek · KrebsOnSecurity · CISA · NCSC UK · Unit 42 · 보안뉴스 · 데일리시큐 · 전자신문",
+  "seo": {
+    "title": "CVE-2026-XXXXX 악용·랜섬웨어 급증 — 2026.07.26 보안 브리핑",
+    "description": "오늘 주요 취약점·침해 사고·위협 트렌드 요약.",
+    "keywords": "CVE, 랜섬웨어, 취약점, 침해사고, 보안"
+  },
+  "sections": [
+    {
+      "label": "취약점 & 공격",
+      "type": "cards",
+      "items": [
+        {
+          "severity": "critical",
+          "source": "The Hacker News",
+          "headline": "Fastjson 1.x 원격 코드 실행 취약점 악용 증가",
+          "url": "https://thehackernews.com/2026/07/fastjson-1x-rce-vulnerability-targeted.html",
+          "summary": "Fastjson 1.x의 원격 코드 실행 취약점(CVE-2026-16723)이 악용되고 있다. 인증 없이 악의적인 JSON 요청을 통해 코드를 실행할 수 있다."
+        },
+        {
+          "severity": "critical",
+          "source": "The Hacker News",
+          "headline": "GitLab 원격 코드 실행 취약점 악용",
+          "url": "https://thehackernews.com/2026/07/researcher-publishes-gitlab-rce-poc.html",
+          "summary": "GitLab의 원격 코드 실행 취약점이 공개되어, 인증된 사용자가 명령을 실행할 수 있다. 패치가 필요한 상황이다."
+        },
+        {
+          "severity": "high",
+          "source": "The Hacker News",
+          "headline": "PTC Windchill 및 FlexPLM 원격 코드 실행 취약점 악용",
+          "url": "https://thehackernews.com/2026/07/cl0p-affiliates-target-internet-exposed.html",
+          "summary": "Cl0p 랜섬웨어와 연관된 해커들이 PTC Windchill 및 FlexPLM의 원격 코드 실행 취약점을 악용해 데이터 유출을 시도하고 있다."
+        },
+        {
+          "severity": "high",
+          "source": "The Hacker News",
+          "headline": "SourTrade 랜섬웨어, 브라우저로 악성코드 생성",
+          "url": "https://thehackernews.com/2026/07/malvertising-sends-malware-in-pieces.html",
+          "summary": "SourTrade 랜섬웨어는 브라우저를 통해 악성코드를 생성하는 방식으로 공격을 진행하고 있다."
+        },
+        {
+          "severity": "medium",
+          "source": "보안뉴스",
+          "headline": "Tuxbot V3, AI 기반 봇넷 발견",
+          "url": "http://www.boannews.com/media/view.asp?idx=144747",
+          "summary": "AI 기반의 Tuxbot V3 봇넷이 사물인터넷 기기를 공격하고 있으며, 대규모 언어 모델을 활용해 코드를 생성하는 것으로 확인되었다."
+        },
+        {
+          "severity": "medium",
+          "source": "보안뉴스",
+          "headline": "NadMesh 봇넷, AI 생태계 공격",
+          "url": "http://www.boannews.com/media/view.asp?idx=144769",
+          "summary": "AI 생태계를 표적으로 하는 NadMesh 봇넷이 발견되었으며, 다형성 빌드 기법을 사용해 보안 탐지를 우회하고 있다."
+        }
+      ]
+    },
+    {
+      "label": "침해 사고",
+      "type": "cards",
+      "items": [
+        {
+          "severity": "incident",
+          "source": "보안뉴스",
+          "headline": "외교부 국립외교원, 9개월간 해킹 사실 미공개",
+          "url": "http://www.boannews.com/media/view.asp?idx=144765",
+          "summary": "외교부 국립외교원 온라인 교육 시스템이 해킹당했으나, 9개월간 사실을 공개하지 않았다."
+        },
+        {
+          "severity": "incident",
+          "source": "보안뉴스",
+          "headline": "서울시설공단, 따릉이 462만명 개인정보 유출",
+          "url": "http://www.boannews.com/media/view.asp?idx=144773",
+          "summary": "서울시설공단의 따릉이 시스템에서 462만명의 개인정보가 유출되었으며, 전방위 후속 조치가 진행 중이다."
+        },
+        {
+          "severity": "incident",
+          "source": "보안뉴스",
+          "headline": "Origin Energy, 200만명 고객 정보 유출",
+          "url": "https://securityaffairs.com/195973/data-breach/australian-energy-provider-origin-energy-disclosed-a-data-breach-impacting-customer-data.html",
+          "summary": "호주 Origin Energy에서 해커가 200만명의 고객 정보를 유출했다고 발표하며, 데이터 유출 사고가 발생했다."
+        }
+      ]
+    },
+    {
+      "label": "동향 & 분석",
+      "type": "trends",
+      "items": [
+        {
+          "lead": "AI 기반 악성코드 증가",
+          "body": "AI 기반의 봇넷과 악성코드가 급증하고 있으며, 대규모 언어 모델을 활용해 코드를 생성하는 것으로 보인다."
+        },
+        {
+          "lead": "랜섬웨어 공격 확대",
+          "body": "랜섬웨어 공격이 증가하고 있으며, 특히 취약점을 악용해 공격 표면을 확장하는 사례가 늘고 있다."
+        },
+        {
+          "lead": "침해 사고 대응 지연",
+          "body": "침해 사고 발생 시 대응이 지연되고 있으며, 이는 보안 체계의 취약성을 드러내는 것으로 보인다."
+        },
+        {
+          "lead": "보안 기술 발전",
+          "body": "구글과 같은 기업이 보안 특화 AI 모델을 출시하며, 보안 기술의 발전이 가속화되고 있다."
+        }
+      ]
+    }
+  ]
+}
