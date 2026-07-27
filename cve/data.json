@@ -1,5 +1,126 @@
 [
   {
+    "id": "CVE-2026-58662",
+    "published": "2026-07-27",
+    "last_modified": "2026-07-27",
+    "status": "Analyzed",
+    "description": "Improper Validation of Specified Quantity in Input, Out-of-bounds Read vulnerability in Apache Thrift C++ bindings.\n\nThis issue affects Apache Thrift: before 0.24.0.\n\nUsers are recommended to upgrade to version 0.24.0, which fixes the issue.",
+    "cvss": {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:H",
+      "score": 9.1,
+      "severity": "CRITICAL",
+      "attack_vector": "네트워크",
+      "attack_complexity": "낮음",
+      "privileges_required": "없음",
+      "user_interaction": "없음"
+    },
+    "cwes": [
+      "CWE-125",
+      "CWE-1284"
+    ],
+    "affected": [
+      "apache thrift"
+    ],
+    "references": [
+      "https://lists.apache.org/thread/13mzvylr3r3nktxrh5k1h30ng1t1sw1d",
+      "https://lists.apache.org/thread/7v3jhgwfbmhx42424phydlnzb109g8b9",
+      "http://www.openwall.com/lists/oss-security/2026/07/24/45"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-58662",
+    "added_at": "2026-07-28T08:00:29+09:00"
+  },
+  {
+    "id": "CVE-2026-58023",
+    "published": "2026-07-27",
+    "last_modified": "2026-07-27",
+    "status": "Analyzed",
+    "description": "Out-of-bounds Read vulnerability in Apache Thrift c_glib bindings.\n\nThis issue affects Apache Thrift: before 0.24.0.\n\nUsers are recommended to upgrade to version 0.24.0, which fixes the issue.",
+    "cvss": {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:H",
+      "score": 9.1,
+      "severity": "CRITICAL",
+      "attack_vector": "네트워크",
+      "attack_complexity": "낮음",
+      "privileges_required": "없음",
+      "user_interaction": "없음"
+    },
+    "cwes": [
+      "CWE-125"
+    ],
+    "affected": [
+      "apache thrift"
+    ],
+    "references": [
+      "https://lists.apache.org/thread/7v3jhgwfbmhx42424phydlnzb109g8b9",
+      "https://lists.apache.org/thread/z2myopbovxngfvchdz8hddots9p5ffbt",
+      "http://www.openwall.com/lists/oss-security/2026/07/24/43"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-58023",
+    "added_at": "2026-07-28T08:00:29+09:00"
+  },
+  {
+    "id": "CVE-2026-55971",
+    "published": "2026-07-27",
+    "last_modified": "2026-07-27",
+    "status": "Analyzed",
+    "description": "Heap-based Buffer Overflow vulnerability in Apache Thrift C++ bindings.\n\nThis issue affects Apache Thrift: before 0.24.0.\n\nUsers are recommended to upgrade to version 0.24.0, which fixes the issue.",
+    "cvss": {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "score": 9.8,
+      "severity": "CRITICAL",
+      "attack_vector": "네트워크",
+      "attack_complexity": "낮음",
+      "privileges_required": "없음",
+      "user_interaction": "없음"
+    },
+    "cwes": [
+      "CWE-122"
+    ],
+    "affected": [
+      "apache thrift"
+    ],
+    "references": [
+      "https://lists.apache.org/thread/7v3jhgwfbmhx42424phydlnzb109g8b9",
+      "https://lists.apache.org/thread/xjs36m6kjxpmrmzwck636msg3nvoqnmx",
+      "http://www.openwall.com/lists/oss-security/2026/07/24/42"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-55971",
+    "added_at": "2026-07-28T08:00:29+09:00"
+  },
+  {
+    "id": "CVE-2026-48144",
+    "published": "2026-07-27",
+    "last_modified": "2026-07-27",
+    "status": "Analyzed",
+    "description": "Improper Validation of Certificate with Host Mismatch vulnerability in Apache Thrift c_glib bindings.\n\nThis issue affects Apache Thrift: before 0.24.0.\n\nUsers are recommended to upgrade to version 0.24.0, which fixes the issue.",
+    "cvss": {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N",
+      "score": 9.1,
+      "severity": "CRITICAL",
+      "attack_vector": "네트워크",
+      "attack_complexity": "낮음",
+      "privileges_required": "없음",
+      "user_interaction": "없음"
+    },
+    "cwes": [
+      "CWE-297"
+    ],
+    "affected": [
+      "apache thrift"
+    ],
+    "references": [
+      "https://lists.apache.org/thread/2xoltfxgzf5jyhcwq6y07spts5cn6ppj",
+      "https://lists.apache.org/thread/7v3jhgwfbmhx42424phydlnzb109g8b9",
+      "http://www.openwall.com/lists/oss-security/2026/07/24/35"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-48144",
+    "added_at": "2026-07-28T08:00:29+09:00"
+  },
+  {
     "id": "CVE-2026-66012",
     "published": "2026-07-25",
     "last_modified": "2026-07-25",
