@@ -1,0 +1,111 @@
+{
+  "tagline": "글로벌 정보보안 뉴스레터",
+  "title": "보안 브리핑",
+  "date_display": "2026년 7월 29일 수요일",
+  "date_short": "2026.07.29",
+  "sources_line": "The Hacker News · BleepingComputer · SecurityWeek · KrebsOnSecurity · CISA · NCSC UK · Unit 42 · 보안뉴스 · 데일리시큐 · 전자신문",
+  "seo": {
+    "title": "CVE-2026-XXXXX 악용·랜섬웨어 급증 — 2026.07.29 보안 브리핑",
+    "description": "오늘 주요 취약점·침해 사고·위협 트렌드 요약.",
+    "keywords": "CVE, 랜섬웨어, 취약점, 침해사고, 보안"
+  },
+  "sections": [
+    {
+      "label": "취약점 & 공격",
+      "type": "cards",
+      "items": [
+        {
+          "severity": "critical",
+          "source": "The Hacker News",
+          "headline": "CVE-2026-53921: OpenWrt DHCPv6 취약점으로 루트 권한 획득 가능",
+          "url": "https://thehackernews.com/2026/07/critical-openwrt-dhcpv6-flaw-could-let.html",
+          "summary": "OpenWrt의 DHCPv6 스택 오버플로우 취약점(CVE-2026-53921, CVSS 9.8)이 발견되어, 인증 없이도 루트 권한을 얻을 수 있다. 이 취약점은 네트워크 서비스의 기본 설정으로 인해 공개 인터넷에 노출된 서버 관리 인터페이스에 영향을 줄 수 있다."
+        },
+        {
+          "severity": "critical",
+          "source": "The Hacker News",
+          "headline": "CVE-2026-63077: TeamCity에서 인증 없이 시스템 명령 실행 가능",
+          "url": "https://thehackernews.com/2026/07/critical-teamcity-flaw-could-let.html",
+          "summary": "TeamCity On-Premises의 중대한 취약점(CVE-2026-63077, CVSS 9.8)이 발견되어, 인증 없이도 시스템 명령을 실행할 수 있다. 이 취약점은 모든 TeamCity On-Premises 버전에 영향을 줄 수 있다."
+        },
+        {
+          "severity": "high",
+          "source": "The Hacker News",
+          "headline": "CVE-2026-16812: Arista VeloCloud Orchestrator 명령 주입 취약점 악용",
+          "url": "https://thehackernews.com/2026/07/attackers-exploit-arista-velocloud.html",
+          "summary": "Arista VeloCloud Orchestrator의 OS 명령 주입 취약점(CVE-2026-16812, CVSS 10.0)이 발견되어, 공격자가 임의의 명령을 실행할 수 있다. 이 취약점은 현재 악용되고 있으며, 공개 인터넷에 노출된 시스템에 영향을 줄 수 있다."
+        },
+        {
+          "severity": "high",
+          "source": "The Hacker News",
+          "headline": "CVE-2026-53264: Linux 키널에서 로컬 권한 상승 취약점 발견",
+          "url": "https://thehackernews.com/2026/07/researcher-says-ai-helped-develop-linux.html",
+          "summary": "Linux 키널의 네트워크 트래픽 제어 서브시스템에서 발견된 use-after-free 취약점(CVE-2026-53264, CVSS 7.8)이 AI 도움으로 개발되었다. 이 취약점은 로컬 사용자가 루트 권한을 얻을 수 있다."
+        },
+        {
+          "severity": "medium",
+          "source": "보안뉴스",
+          "headline": "우분투 스냅-컨파인 취약점(CVE-2026-8933)으로 일반 사용자도 루트 권한 획득 가능",
+          "url": "http://www.boannews.com/media/view.asp?idx=144838",
+          "summary": "우분투 데스크톱 24.04, 25.10, 26.04의 스냅-컨파인 구성 요소에서 고위험 권한 상승 취약점(CVE-2026-8933)이 발견되어, 일반 사용자가 루트 권한을 얻을 수 있다. 이 취약점은 패치가 권장된다."
+        },
+        {
+          "severity": "medium",
+          "source": "보안뉴스",
+          "headline": "허깅페이스 디퓨저스에서 커스텀 코드 보호 우회 취약점 발견",
+          "url": "https://www.infosecurity-magazine.com/news/hugging-face-diffusers-trust/",
+          "summary": "허깅페이스 디퓨저스의 3개 CVE 취약점이 발견되어, 악의적인 모델 저장소가 로드될 때 코드를 실행할 수 있다. 이 취약점은 패치가 권장된다."
+        }
+      ]
+    },
+    {
+      "label": "침해 사고",
+      "type": "cards",
+      "items": [
+        {
+          "severity": "incident",
+          "source": "보안뉴스",
+          "headline": "에이엠비트, 스노우플레이크와 협력해 AI 에이전트 간의 신뢰성 향상",
+          "url": "http://www.boannews.com/media/view.asp?idx=144788",
+          "summary": "에이엠비트는 스노우플레이크와 협력해 제3자 AI 에이전트가 기업 시스템에 접근할 때의 신원 위험을 줄이기 위한 새로운 통합을 발표했다."
+        },
+        {
+          "severity": "incident",
+          "source": "보안뉴스",
+          "headline": "에이엠비트, 스노우플레이크와 협력해 AI 에이전트 간의 신뢰성 향상",
+          "url": "http://www.boannews.com/media/view.asp?idx=144788",
+          "summary": "에이엠비트는 스노우플레이크와 협력해 제3자 AI 에이전트가 기업 시스템에 접근할 때의 신원 위험을 줄이기 위한 새로운 통합을 발표했다."
+        },
+        {
+          "severity": "incident",
+          "source": "보안뉴스",
+          "headline": "에이엠비트, 스노우플레이크와 협력해 AI 에이전트 간의 신뢰성 향상",
+          "url": "http://www.boannews.com/media/view.asp?idx=144788",
+          "summary": "에이엠비트는 스노우플레이크와 협력해 제3자 AI 에이전트가 기업 시스템에 접근할 때의 신원 위험을 줄이기 위한 새로운 통합을 발표했다."
+        }
+      ]
+    },
+    {
+      "label": "동향 & 분석",
+      "type": "trends",
+      "items": [
+        {
+          "lead": "AI 기반 공격 증가",
+          "body": "AI 기술이 보안 위협에 활용되고 있으며, AI가 취약점을 발견하거나 공격을 자동화하는 사례가 늘고 있다. 이는 보안 대응의 복잡성을 높이고 있다."
+        },
+        {
+          "lead": "랜섬웨어 활동 확대",
+          "body": "랜섬웨어 조직이 백도어를 통해 산업 정보를 수집하고, 랜섬웨어 공격이 광범위하게 확산되고 있다. 이는 기업의 데이터 보호 체계에 대한 경고를 준다."
+        },
+        {
+          "lead": "취약점 패치 지연",
+          "body": "최신 취약점이 발견되더라도 패치가 지연되거나, 기업이 취약점을 무시하는 경우가 많아, 보안 위협이 지속적으로 증가하고 있다."
+        },
+        {
+          "lead": "AI 기반 보안 솔루션 확대",
+          "body": "AI 기반 보안 솔루션이 급속히 발전하고 있으며, Microsoft, Google 등이 AI를 활용한 보안 모델을 출시하며, 보안 분야의 혁신이 가속화되고 있다."
+        }
+      ]
+    }
+  ]
+}
