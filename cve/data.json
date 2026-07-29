@@ -1,5 +1,63 @@
 [
   {
+    "id": "CVE-2026-60113",
+    "published": "2026-07-29",
+    "last_modified": "2026-07-29",
+    "status": "Received",
+    "description": "AMMOS Instrument Toolkit (AIT) Deep Space Network (DSN) Interface before 2.2.2 contains a missing authentication vulnerability in the Space Link Extension (SLE) interface manager that allows unauthenticated network attackers to access seven unprotected API routes by sending direct HTTP requests with no credentials. Attackers can reach the exposed SLE endpoints to start or stop Deep Space Network communication sessions, retrieve telemetry frame data, and inject arbitrary frames into active spacecraft links.",
+    "cvss": {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "score": 9.8,
+      "severity": "CRITICAL",
+      "attack_vector": "네트워크",
+      "attack_complexity": "낮음",
+      "privileges_required": "없음",
+      "user_interaction": "없음"
+    },
+    "cwes": [
+      "CWE-306"
+    ],
+    "affected": [],
+    "references": [
+      "https://github.com/NASA-AMMOS/AIT-DSN/blob/master/CHANGELOG.md#222---2026-07-13",
+      "https://github.com/NASA-AMMOS/AIT-DSN/commit/06d07d1a525602c62c6eaeaeff2544196f430340",
+      "https://github.com/NASA-AMMOS/AIT-DSN/releases/tag/2.2.2",
+      "https://github.com/NASA-AMMOS/AIT-DSN/security/advisories/GHSA-gj83-67wr-82mv",
+      "https://www.vulncheck.com/advisories/ait-dsn-missing-authentication-via-sle-api-routes"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-60113",
+    "added_at": "2026-07-30T08:00:11+09:00"
+  },
+  {
+    "id": "CVE-2026-41939",
+    "published": "2026-07-29",
+    "last_modified": "2026-07-29",
+    "status": "Received",
+    "description": "Care Everywhere Gateway 14.3.10 contains a hard-coded credentials vulnerability in the bundled WildFly 8.2.0.Final management interface that allows unauthenticated remote attackers to gain administrative access by using default credentials identical across all installations. Attackers can authenticate to the exposed WildFly management console on port 20990 and deploy a malicious Web Application Archive file through the Deployments interface to achieve remote code execution as the Windows machine account. Version 14.x.x was declared end-of-life (EOL) in 2017 and future releases have addressed the vulnerable finding.",
+    "cvss": {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "score": 9.8,
+      "severity": "CRITICAL",
+      "attack_vector": "네트워크",
+      "attack_complexity": "낮음",
+      "privileges_required": "없음",
+      "user_interaction": "없음"
+    },
+    "cwes": [
+      "CWE-1392"
+    ],
+    "affected": [],
+    "references": [
+      "https://gist.github.com/VAMorales/95874f23e27e17362b87133013834c0a",
+      "https://www.intuvie.com/products-overview",
+      "https://www.vulncheck.com/advisories/care-everywhere-gateway-hard-coded-credentials-rce-via-wildfly"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-41939",
+    "added_at": "2026-07-30T08:00:11+09:00"
+  },
+  {
     "id": "CVE-2026-18191",
     "published": "2026-07-29",
     "last_modified": "2026-07-29",
