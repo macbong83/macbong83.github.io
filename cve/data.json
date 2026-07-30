@@ -26,6 +26,116 @@
     "added_at": "2026-07-30T20:00:25+09:00"
   },
   {
+    "id": "CVE-2026-67594",
+    "published": "2026-07-30",
+    "last_modified": "2026-07-30",
+    "status": "Deferred",
+    "description": "Spikster through commit e1cdf8c contains a missing authentication vulnerability that allows unauthenticated remote attackers to access all API routes by exploiting the unattached CipiAuth middleware, which is registered but never applied to any route in the API routing configuration. Attackers can invoke approximately 50 unprotected API endpoints to enumerate and provision servers, reset root passwords, read and write arbitrary files on the host, and create database users.",
+    "cvss": {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "score": 9.8,
+      "severity": "CRITICAL",
+      "attack_vector": "네트워크",
+      "attack_complexity": "낮음",
+      "privileges_required": "없음",
+      "user_interaction": "없음"
+    },
+    "cwes": [
+      "CWE-306"
+    ],
+    "affected": [],
+    "references": [
+      "https://github.com/yolanmees/Spikster/issues/24",
+      "https://www.vulncheck.com/advisories/spikster-missing-authentication-via-api-route-group"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-67594",
+    "added_at": "2026-07-31T08:00:45+09:00"
+  },
+  {
+    "id": "CVE-2026-67208",
+    "published": "2026-07-30",
+    "last_modified": "2026-07-30",
+    "status": "Deferred",
+    "description": "Juggle through 1.6.0 contains a remote code execution vulnerability that allows unauthenticated remote attackers to execute arbitrary OS commands by connecting to the exposed H2 database web console using default shipped credentials. Attackers can access the unprotected /h2-console endpoint, authenticate with default credentials, and leverage the H2 CREATE ALIAS Runtime.exec() technique to execute arbitrary commands, resulting in root-level code execution when running the stock Docker image.",
+    "cvss": {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "score": 9.8,
+      "severity": "CRITICAL",
+      "attack_vector": "네트워크",
+      "attack_complexity": "낮음",
+      "privileges_required": "없음",
+      "user_interaction": "없음"
+    },
+    "cwes": [
+      "CWE-306",
+      "CWE-1188"
+    ],
+    "affected": [],
+    "references": [
+      "https://github.com/somta/Juggle/issues/86",
+      "https://www.vulncheck.com/advisories/juggle-unauthenticated-rce-via-exposed-h2-console",
+      "https://github.com/somta/Juggle/issues/86"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-67208",
+    "added_at": "2026-07-31T08:00:45+09:00"
+  },
+  {
+    "id": "CVE-2026-66418",
+    "published": "2026-07-30",
+    "last_modified": "2026-07-30",
+    "status": "Received",
+    "description": "OpenClaw Dashboard v3.0.0 contains a stored cross-site scripting vulnerability that allows unauthenticated remote attackers to inject arbitrary HTML and script payloads by submitting a crafted username in a failed login POST request, which is recorded verbatim in the audit log. When an administrator opens the notification panel, the unescaped log entry is rendered via innerHTML with a permissive Content-Security-Policy allowing inline event handlers, enabling the attacker-supplied payload to execute in the administrator's session and interact with authenticated endpoints including agent instruction file editing and configuration changes.",
+    "cvss": {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:H/I:H/A:N",
+      "score": 9.3,
+      "severity": "CRITICAL",
+      "attack_vector": "네트워크",
+      "attack_complexity": "낮음",
+      "privileges_required": "없음",
+      "user_interaction": "필요"
+    },
+    "cwes": [
+      "CWE-79"
+    ],
+    "affected": [],
+    "references": [
+      "https://github.com/theopaid/Unauthenticated-Stored-Cross-Site-Scripting-Leading-To-Administrator-Account-Takeover",
+      "https://github.com/tugcantopaloglu/openclaw-dashboard",
+      "https://www.vulncheck.com/advisories/openclaw-dashboard-stored-xss-via-failed-login-username-field"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-66418",
+    "added_at": "2026-07-31T08:00:45+09:00"
+  },
+  {
+    "id": "CVE-2026-4978",
+    "published": "2026-07-30",
+    "last_modified": "2026-07-30",
+    "status": "Deferred",
+    "description": "Improper neutralization of special elements used in an SQL command ('SQL injection') vulnerability in UMAI Vision Traffic Analysis System allows SQL Injection.\n\nThis issue affects Traffic Analysis System: from 30 before 34.",
+    "cvss": {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "score": 9.8,
+      "severity": "CRITICAL",
+      "attack_vector": "네트워크",
+      "attack_complexity": "낮음",
+      "privileges_required": "없음",
+      "user_interaction": "없음"
+    },
+    "cwes": [
+      "CWE-89"
+    ],
+    "affected": [],
+    "references": [
+      "https://siberguvenlik.gov.tr/guvenlik-bildirimleri/detay/tr-26-0703"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-4978",
+    "added_at": "2026-07-31T08:00:45+09:00"
+  },
+  {
     "id": "CVE-2026-48449",
     "published": "2026-07-30",
     "last_modified": "2026-07-30",
@@ -259,6 +369,110 @@
     ],
     "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-16610",
     "added_at": "2026-07-30T20:00:25+09:00"
+  },
+  {
+    "id": "CVE-2026-15435",
+    "published": "2026-07-30",
+    "last_modified": "2026-07-30",
+    "status": "Undergoing Analysis",
+    "description": "IBM App Connect Enterprise 13.0.1.0 through 13.0.7.2, and 12.0.1.0 through 12.0.12.27 could allow a remote attacker to traverse directories on the system. An attacker could send a specially crafted URL request containing \"dot dot\" sequences (/../) to write arbitrary files on the system.",
+    "cvss": {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "score": 9.8,
+      "severity": "CRITICAL",
+      "attack_vector": "네트워크",
+      "attack_complexity": "낮음",
+      "privileges_required": "없음",
+      "user_interaction": "없음"
+    },
+    "cwes": [
+      "CWE-22"
+    ],
+    "affected": [],
+    "references": [
+      "https://www.ibm.com/support/pages/node/7281896"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-15435",
+    "added_at": "2026-07-31T08:00:45+09:00"
+  },
+  {
+    "id": "CVE-2026-13435",
+    "published": "2026-07-30",
+    "last_modified": "2026-07-30",
+    "status": "Awaiting Analysis",
+    "description": "IBM Langflow OSS 1.0.0 through 1.10.1 contains an improper input validation vulnerability in the PythonREPL sandbox implementation.",
+    "cvss": {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H",
+      "score": 9.9,
+      "severity": "CRITICAL",
+      "attack_vector": "네트워크",
+      "attack_complexity": "낮음",
+      "privileges_required": "낮음",
+      "user_interaction": "없음"
+    },
+    "cwes": [
+      "CWE-94"
+    ],
+    "affected": [],
+    "references": [
+      "https://www.ibm.com/support/pages/node/7279987"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-13435",
+    "added_at": "2026-07-31T08:00:45+09:00"
+  },
+  {
+    "id": "CVE-2026-12943",
+    "published": "2026-07-30",
+    "last_modified": "2026-07-30",
+    "status": "Awaiting Analysis",
+    "description": "IBM HMC V10.3.1050.0 through 10.3.1064.0 and IBM HMC V11.1.1110.0 through 11.1.1112.0 Management systems in IBM Power environments (HMC and Novalink) could allow an unauthenticated user to execute arbitrary commands with elevated privileges on the system due to improper validation of user supplied input.",
+    "cvss": {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "score": 9.8,
+      "severity": "CRITICAL",
+      "attack_vector": "네트워크",
+      "attack_complexity": "낮음",
+      "privileges_required": "없음",
+      "user_interaction": "없음"
+    },
+    "cwes": [
+      "CWE-78"
+    ],
+    "affected": [],
+    "references": [
+      "https://www.ibm.com/support/pages/node/7278667"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-12943",
+    "added_at": "2026-07-31T08:00:45+09:00"
+  },
+  {
+    "id": "CVE-2026-12118",
+    "published": "2026-07-30",
+    "last_modified": "2026-07-30",
+    "status": "Awaiting Analysis",
+    "description": "IBM webMethods Integration (on prem) 10.15, 10.11 could allow an unauthenticated remote attacker to execute arbitrary code on the system due to the deserialization of untrusted data.",
+    "cvss": {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "score": 9.8,
+      "severity": "CRITICAL",
+      "attack_vector": "네트워크",
+      "attack_complexity": "낮음",
+      "privileges_required": "없음",
+      "user_interaction": "없음"
+    },
+    "cwes": [
+      "CWE-502"
+    ],
+    "affected": [],
+    "references": [
+      "https://www.ibm.com/support/pages/node/7278857"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-12118",
+    "added_at": "2026-07-31T08:00:45+09:00"
   },
   {
     "id": "CVE-2026-60113",
