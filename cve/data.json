@@ -1,5 +1,266 @@
 [
   {
+    "id": "CVE-2026-7849",
+    "published": "2026-07-30",
+    "last_modified": "2026-07-30",
+    "status": "Received",
+    "description": "Due to improper neutralization of special elements, an unauthenticated remote attacker is able to inject a command into the system configuration which is subsequently executed as root.",
+    "cvss": {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "score": 9.8,
+      "severity": "CRITICAL",
+      "attack_vector": "네트워크",
+      "attack_complexity": "낮음",
+      "privileges_required": "없음",
+      "user_interaction": "없음"
+    },
+    "cwes": [
+      "CWE-77"
+    ],
+    "affected": [],
+    "references": [
+      "https://www.certvde.com/en/advisories/VDE-2026-008/"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-7849",
+    "added_at": "2026-07-30T20:00:25+09:00"
+  },
+  {
+    "id": "CVE-2026-48449",
+    "published": "2026-07-30",
+    "last_modified": "2026-07-30",
+    "status": "Received",
+    "description": "Adobe Campaign Classic (ACC) is affected by an Incorrect Authorization vulnerability that could result in arbitrary code execution in the context of the current user. Exploitation of this issue does not require user interaction. Scope is changed.",
+    "cvss": {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:H",
+      "score": 10.0,
+      "severity": "CRITICAL",
+      "attack_vector": "네트워크",
+      "attack_complexity": "낮음",
+      "privileges_required": "없음",
+      "user_interaction": "없음"
+    },
+    "cwes": [
+      "CWE-863"
+    ],
+    "affected": [],
+    "references": [
+      "https://helpx.adobe.com/security/products/campaign/apsb26-114.html"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-48449",
+    "added_at": "2026-07-30T20:00:25+09:00"
+  },
+  {
+    "id": "CVE-2026-44108",
+    "published": "2026-07-30",
+    "last_modified": "2026-07-30",
+    "status": "Received",
+    "description": "Due to a flaw in the execution order of scripts during shutdown, the firewall is terminated prematurely during system shutdown. This creates a temporary window in which internal services may become externally accessible, potentially allowing an unauthenticated remote attacker to connect to these services, resulting in full system compromise.",
+    "cvss": {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "score": 9.8,
+      "severity": "CRITICAL",
+      "attack_vector": "네트워크",
+      "attack_complexity": "낮음",
+      "privileges_required": "없음",
+      "user_interaction": "없음"
+    },
+    "cwes": [
+      "CWE-696"
+    ],
+    "affected": [],
+    "references": [
+      "https://www.certvde.com/en/advisories/VDE-2026-008/"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-44108",
+    "added_at": "2026-07-30T20:00:25+09:00"
+  },
+  {
+    "id": "CVE-2026-44104",
+    "published": "2026-07-30",
+    "last_modified": "2026-07-30",
+    "status": "Received",
+    "description": "The firmware update process for the basemodule of the charging controller only validates the\nCRC32 checksum without cryptographic signature verification. This allows an unauthenticated remote attacker to install a modified firmware, resulting in full system compromise.",
+    "cvss": {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "score": 9.8,
+      "severity": "CRITICAL",
+      "attack_vector": "네트워크",
+      "attack_complexity": "낮음",
+      "privileges_required": "없음",
+      "user_interaction": "없음"
+    },
+    "cwes": [
+      "CWE-347"
+    ],
+    "affected": [],
+    "references": [
+      "https://www.certvde.com/en/advisories/VDE-2026-008/"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-44104",
+    "added_at": "2026-07-30T20:00:25+09:00"
+  },
+  {
+    "id": "CVE-2026-44101",
+    "published": "2026-07-30",
+    "last_modified": "2026-07-30",
+    "status": "Received",
+    "description": "Due to missing authentication the CHARX OCPP Agent service allows an unauthenticated remote attacker to reconfigure the backend connection. This can lead to Denial-of-Service and confidential data being disclosed to the attacker.",
+    "cvss": {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "score": 9.8,
+      "severity": "CRITICAL",
+      "attack_vector": "네트워크",
+      "attack_complexity": "낮음",
+      "privileges_required": "없음",
+      "user_interaction": "없음"
+    },
+    "cwes": [
+      "CWE-306"
+    ],
+    "affected": [],
+    "references": [
+      "https://www.certvde.com/en/advisories/VDE-2026-008/"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-44101",
+    "added_at": "2026-07-30T20:00:25+09:00"
+  },
+  {
+    "id": "CVE-2026-44100",
+    "published": "2026-07-30",
+    "last_modified": "2026-07-30",
+    "status": "Received",
+    "description": "The CHARX JupiCore service allows an unauthenticated remote attacker to reconfigure charging points. This can lead to disclosure of charging point UIDs, Denial-of-Service and files tampering.",
+    "cvss": {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:H/A:H",
+      "score": 9.4,
+      "severity": "CRITICAL",
+      "attack_vector": "네트워크",
+      "attack_complexity": "낮음",
+      "privileges_required": "없음",
+      "user_interaction": "없음"
+    },
+    "cwes": [
+      "CWE-306"
+    ],
+    "affected": [],
+    "references": [
+      "https://www.certvde.com/en/advisories/VDE-2026-008/"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-44100",
+    "added_at": "2026-07-30T20:00:25+09:00"
+  },
+  {
+    "id": "CVE-2026-44092",
+    "published": "2026-07-30",
+    "last_modified": "2026-07-30",
+    "status": "Received",
+    "description": "An unauthenticated remote attacker can inject malicious input into the ModbusServer application because it does not validate the input it fetches from MQTT. This may lead to integrity and availability loss.",
+    "cvss": {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:H",
+      "score": 9.1,
+      "severity": "CRITICAL",
+      "attack_vector": "네트워크",
+      "attack_complexity": "낮음",
+      "privileges_required": "없음",
+      "user_interaction": "없음"
+    },
+    "cwes": [
+      "CWE-93"
+    ],
+    "affected": [],
+    "references": [
+      "https://www.certvde.com/en/advisories/VDE-2026-008/"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-44092",
+    "added_at": "2026-07-30T20:00:25+09:00"
+  },
+  {
+    "id": "CVE-2026-44091",
+    "published": "2026-07-30",
+    "last_modified": "2026-07-30",
+    "status": "Received",
+    "description": "An unauthenticated remote attacker can post a malicious ID to the MQTT Broker results in the creation of a new configuration entry in the system configuration. This may lead to integrity and availability loss.",
+    "cvss": {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:H",
+      "score": 9.1,
+      "severity": "CRITICAL",
+      "attack_vector": "네트워크",
+      "attack_complexity": "낮음",
+      "privileges_required": "없음",
+      "user_interaction": "없음"
+    },
+    "cwes": [
+      "CWE-501"
+    ],
+    "affected": [],
+    "references": [
+      "https://www.certvde.com/en/advisories/VDE-2026-008/"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-44091",
+    "added_at": "2026-07-30T20:00:25+09:00"
+  },
+  {
+    "id": "CVE-2026-44090",
+    "published": "2026-07-30",
+    "last_modified": "2026-07-30",
+    "status": "Received",
+    "description": "Due to missing authentication, an unauthenticated remote attacker may access the MQTT broker, which is only protected from external access by a firewall. This may lead to the device being fully compromised.",
+    "cvss": {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "score": 9.8,
+      "severity": "CRITICAL",
+      "attack_vector": "네트워크",
+      "attack_complexity": "낮음",
+      "privileges_required": "없음",
+      "user_interaction": "없음"
+    },
+    "cwes": [
+      "CWE-306"
+    ],
+    "affected": [],
+    "references": [
+      "https://www.certvde.com/en/advisories/VDE-2026-008/"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-44090",
+    "added_at": "2026-07-30T20:00:25+09:00"
+  },
+  {
+    "id": "CVE-2026-16610",
+    "published": "2026-07-30",
+    "last_modified": "2026-07-30",
+    "status": "Received",
+    "description": "The Admin and Site Enhancements (ASE) Pro plugin for WordPress is vulnerable to Remote Code Execution in all versions up to, and including, 8.9.0 via the recursive_html function. This is due to the frontend save handler enforces only a publicly emitted nonce with no authentication check, CAPTCHA validation is bypassable by omitting an attacker-supplied key, and repeater row keys from cfgroup[input] are stored verbatim and later spliced into an eval() call in recursive_html without any sanitization or identifier validation. This makes it possible for unauthenticated attackers to execute code on the server. This requires the [post_cf_form] shortcode to be present on at least one publicly accessible page, as the nonce and session ID needed to reach the vulnerable save handler are emitted to unauthenticated visitors by that shortcode.",
+    "cvss": {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "score": 9.8,
+      "severity": "CRITICAL",
+      "attack_vector": "네트워크",
+      "attack_complexity": "낮음",
+      "privileges_required": "없음",
+      "user_interaction": "없음"
+    },
+    "cwes": [
+      "CWE-434"
+    ],
+    "affected": [],
+    "references": [
+      "https://www.wordfence.com/threat-intel/vulnerabilities/id/2ef21a44-6d03-4197-b49c-d881f9831f46?source=cve",
+      "https://www.wpase.com/"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-16610",
+    "added_at": "2026-07-30T20:00:25+09:00"
+  },
+  {
     "id": "CVE-2026-60113",
     "published": "2026-07-29",
     "last_modified": "2026-07-29",
