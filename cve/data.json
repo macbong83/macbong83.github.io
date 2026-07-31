@@ -1,5 +1,63 @@
 [
   {
+    "id": "CVE-2026-18452",
+    "published": "2026-07-31",
+    "last_modified": "2026-07-31",
+    "status": "Received",
+    "description": "DMS+ (Non-Mobile) developed by Rich Source has a Use of Hard-coded Credentials vulnerability. Unauthenticated remote attackers can exploit a fixed API key to gain control over all installed DMS+ devices.",
+    "cvss": {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:H",
+      "score": 10.0,
+      "severity": "CRITICAL",
+      "attack_vector": "네트워크",
+      "attack_complexity": "낮음",
+      "privileges_required": "없음",
+      "user_interaction": "없음"
+    },
+    "cwes": [
+      "CWE-798"
+    ],
+    "affected": [],
+    "references": [
+      "https://www.twcert.org.tw/en/cp-139-11073-de184-2.html",
+      "https://www.twcert.org.tw/tw/cp-132-11072-3a4d4-1.html"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-18452",
+    "added_at": "2026-07-31T20:00:41+09:00"
+  },
+  {
+    "id": "CVE-2026-14483",
+    "published": "2026-07-31",
+    "last_modified": "2026-07-31",
+    "status": "Received",
+    "description": "The Realtyna Organic IDX plugin + WPL Real Estate plugin for WordPress is vulnerable to Arbitrary File Upload in all versions up to, and including, 5.2.0 via the upload function. This is due to missing file type validation in the upload function, combined with a publicly accessible I/O endpoint authenticated solely by static, plugin-seeded API credentials that are identical across all installations. This makes it possible for unauthenticated attackers to upload files that may be executable, which makes remote code execution possible. The WPL I/O service endpoint is registered on the public WordPress init hook with no WordPress capability check, and the required api_key and api_secret values are static defaults seeded by the plugin's own SQL migration files, meaning any unauthenticated attacker who knows these publicly documented defaults can reach and exploit the vulnerable upload path.",
+    "cvss": {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "score": 9.8,
+      "severity": "CRITICAL",
+      "attack_vector": "네트워크",
+      "attack_complexity": "낮음",
+      "privileges_required": "없음",
+      "user_interaction": "없음"
+    },
+    "cwes": [
+      "CWE-434"
+    ],
+    "affected": [],
+    "references": [
+      "https://plugins.trac.wordpress.org/browser/real-estate-listing-realtyna-wpl/trunk/assets/migrations/basic/1.0.0.sql#L1119",
+      "https://plugins.trac.wordpress.org/browser/real-estate-listing-realtyna-wpl/trunk/libraries/file.php#L217",
+      "https://plugins.trac.wordpress.org/browser/real-estate-listing-realtyna-wpl/trunk/libraries/io/global.php#L142",
+      "https://plugins.trac.wordpress.org/browser/real-estate-listing-realtyna-wpl/trunk/libraries/io/mobile_application/set_property.php#L39",
+      "https://plugins.trac.wordpress.org/browser/real-estate-listing-realtyna-wpl/trunk/libraries/services/io.php#L20",
+      "https://www.wordfence.com/threat-intel/vulnerabilities/id/23068a98-623d-4eb3-a7c5-6af410de4320?source=cve"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-14483",
+    "added_at": "2026-07-31T20:00:41+09:00"
+  },
+  {
     "id": "CVE-2026-7849",
     "published": "2026-07-30",
     "last_modified": "2026-07-30",
@@ -80,6 +138,34 @@
     ],
     "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-67208",
     "added_at": "2026-07-31T08:00:45+09:00"
+  },
+  {
+    "id": "CVE-2026-66421",
+    "published": "2026-07-30",
+    "last_modified": "2026-07-30",
+    "status": "Received",
+    "description": "OpenClaw Dashboard contains a stored cross-site scripting vulnerability that allows unauthenticated remote attackers to execute arbitrary JavaScript in the administrator's browser session by injecting HTML markup into agent transcript messages processed through the sessions API. Attackers can craft a message containing inline event handler payloads such as an img tag with an onerror attribute within the 60-character rendering budget, which is stored in the session transcript and interpolated unsanitized into innerHTML on the default landing page, allowing theft of session tokens and unauthorized calls to authenticated administrative endpoints including agent instruction file modification.",
+    "cvss": {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:H/I:H/A:N",
+      "score": 9.3,
+      "severity": "CRITICAL",
+      "attack_vector": "네트워크",
+      "attack_complexity": "낮음",
+      "privileges_required": "없음",
+      "user_interaction": "필요"
+    },
+    "cwes": [
+      "CWE-79"
+    ],
+    "affected": [],
+    "references": [
+      "https://github.com/theopaid/Stored-Cross-Site-Scripting-Via-Agent-Messages-Leading-To-Session-Token-Theft-openclaw-dashboard-",
+      "https://github.com/tugcantopaloglu/openclaw-dashboard",
+      "https://www.vulncheck.com/advisories/openclaw-dashboard-stored-xss-via-lastmessage-session-field"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-66421",
+    "added_at": "2026-07-31T20:00:41+09:00"
   },
   {
     "id": "CVE-2026-66418",

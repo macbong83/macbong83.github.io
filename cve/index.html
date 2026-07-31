@@ -41,13 +41,59 @@
     <h1>CVE Archive</h1>
     <p>NVD 기반 Critical CVE를 누적 관리하는 별도 페이지입니다. 블로그에는 CVE 자동 글을 발행하지 않고, 이 페이지에만 기록합니다.</p>
     <div class="meta">
-      <span>Total 359</span>
-      <span>Updated 2026-07-31 08:00 KST</span>
+      <span>Total 362</span>
+      <span>Updated 2026-07-31 20:00 KST</span>
       <span>Source NVD API</span>
     </div>
   </section>
   <div class="notice">중복 제거 기준은 CVE ID입니다. 동일 CVE는 다시 추가하지 않습니다. 실제 악용 여부와 패치 우선순위는 CISA KEV, 벤더 권고, 자산 노출 여부와 함께 검토해야 합니다.</div>
 
+    <article class="cve-card" id="CVE-2026-18452">
+      <div class="cve-top">
+        <a class="cve-id" href="https://nvd.nist.gov/vuln/detail/CVE-2026-18452" target="_blank" rel="noopener">CVE-2026-18452</a>
+        <span class="score">CVSS 10.0 CRITICAL</span>
+      </div>
+      <p class="desc">DMS+ (Non-Mobile) developed by Rich Source has a Use of Hard-coded Credentials vulnerability. Unauthenticated remote attackers can exploit a fixed API key to gain control over all installed DMS+ devices.</p>
+      <dl>
+        <div><dt>Published</dt><dd>2026-07-31</dd></div>
+        <div><dt>Last Modified</dt><dd>2026-07-31</dd></div>
+        <div><dt>Status</dt><dd>Received</dd></div>
+        <div><dt>Attack Vector</dt><dd>네트워크</dd></div>
+        <div><dt>Attack Complexity</dt><dd>낮음</dd></div>
+        <div><dt>Privileges</dt><dd>없음</dd></div>
+        <div><dt>User Interaction</dt><dd>없음</dd></div>
+        <div><dt>CWE</dt><dd>CWE-798</dd></div>
+        <div><dt>Affected</dt><dd>NVD CPE 기준 확인 필요</dd></div>
+      </dl>
+      <div class="vector"><code>CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:H</code></div>
+      <details>
+        <summary>References</summary>
+        <ul><li><a href="https://www.twcert.org.tw/en/cp-139-11073-de184-2.html" target="_blank" rel="noopener">https://www.twcert.org.tw/en/cp-139-11073-de184-2.html</a></li><li><a href="https://www.twcert.org.tw/tw/cp-132-11072-3a4d4-1.html" target="_blank" rel="noopener">https://www.twcert.org.tw/tw/cp-132-11072-3a4d4-1.html</a></li></ul>
+      </details>
+    </article>
+    <article class="cve-card" id="CVE-2026-14483">
+      <div class="cve-top">
+        <a class="cve-id" href="https://nvd.nist.gov/vuln/detail/CVE-2026-14483" target="_blank" rel="noopener">CVE-2026-14483</a>
+        <span class="score">CVSS 9.8 CRITICAL</span>
+      </div>
+      <p class="desc">The Realtyna Organic IDX plugin + WPL Real Estate plugin for WordPress is vulnerable to Arbitrary File Upload in all versions up to, and including, 5.2.0 via the upload function. This is due to missing file type validation in the upload function, combined with a publicly accessible I/O endpoint authenticated solely by static, plugin-seeded API credentials that are identical across all installations. This makes it possible for unauthenticated attackers to upload files that may be executable, which makes remote code execution possible. The WPL I/O service endpoint is registered on the public WordPress init hook with no WordPress capability check, and the required api_key and api_secret values are static defaults seeded by the plugin&#x27;s own SQL migration files, meaning any unauthenticated attacker who knows these publicly documented defaults can reach and exploit the vulnerable upload path.</p>
+      <dl>
+        <div><dt>Published</dt><dd>2026-07-31</dd></div>
+        <div><dt>Last Modified</dt><dd>2026-07-31</dd></div>
+        <div><dt>Status</dt><dd>Received</dd></div>
+        <div><dt>Attack Vector</dt><dd>네트워크</dd></div>
+        <div><dt>Attack Complexity</dt><dd>낮음</dd></div>
+        <div><dt>Privileges</dt><dd>없음</dd></div>
+        <div><dt>User Interaction</dt><dd>없음</dd></div>
+        <div><dt>CWE</dt><dd>CWE-434</dd></div>
+        <div><dt>Affected</dt><dd>NVD CPE 기준 확인 필요</dd></div>
+      </dl>
+      <div class="vector"><code>CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H</code></div>
+      <details>
+        <summary>References</summary>
+        <ul><li><a href="https://plugins.trac.wordpress.org/browser/real-estate-listing-realtyna-wpl/trunk/assets/migrations/basic/1.0.0.sql#L1119" target="_blank" rel="noopener">https://plugins.trac.wordpress.org/browser/real-estate-listing-realtyna-wpl/trunk/assets/migrations/basic/1.0.0.sql#L1119</a></li><li><a href="https://plugins.trac.wordpress.org/browser/real-estate-listing-realtyna-wpl/trunk/libraries/file.php#L217" target="_blank" rel="noopener">https://plugins.trac.wordpress.org/browser/real-estate-listing-realtyna-wpl/trunk/libraries/file.php#L217</a></li><li><a href="https://plugins.trac.wordpress.org/browser/real-estate-listing-realtyna-wpl/trunk/libraries/io/global.php#L142" target="_blank" rel="noopener">https://plugins.trac.wordpress.org/browser/real-estate-listing-realtyna-wpl/trunk/libraries/io/global.php#L142</a></li><li><a href="https://plugins.trac.wordpress.org/browser/real-estate-listing-realtyna-wpl/trunk/libraries/io/mobile_application/set_property.php#L39" target="_blank" rel="noopener">https://plugins.trac.wordpress.org/browser/real-estate-listing-realtyna-wpl/trunk/libraries/io/mobile_application/set_property.php#L39</a></li></ul>
+      </details>
+    </article>
     <article class="cve-card" id="CVE-2026-7849">
       <div class="cve-top">
         <a class="cve-id" href="https://nvd.nist.gov/vuln/detail/CVE-2026-7849" target="_blank" rel="noopener">CVE-2026-7849</a>
@@ -115,6 +161,29 @@
       <details>
         <summary>References</summary>
         <ul><li><a href="https://github.com/somta/Juggle/issues/86" target="_blank" rel="noopener">https://github.com/somta/Juggle/issues/86</a></li><li><a href="https://www.vulncheck.com/advisories/juggle-unauthenticated-rce-via-exposed-h2-console" target="_blank" rel="noopener">https://www.vulncheck.com/advisories/juggle-unauthenticated-rce-via-exposed-h2-console</a></li><li><a href="https://github.com/somta/Juggle/issues/86" target="_blank" rel="noopener">https://github.com/somta/Juggle/issues/86</a></li></ul>
+      </details>
+    </article>
+    <article class="cve-card" id="CVE-2026-66421">
+      <div class="cve-top">
+        <a class="cve-id" href="https://nvd.nist.gov/vuln/detail/CVE-2026-66421" target="_blank" rel="noopener">CVE-2026-66421</a>
+        <span class="score">CVSS 9.3 CRITICAL</span>
+      </div>
+      <p class="desc">OpenClaw Dashboard contains a stored cross-site scripting vulnerability that allows unauthenticated remote attackers to execute arbitrary JavaScript in the administrator&#x27;s browser session by injecting HTML markup into agent transcript messages processed through the sessions API. Attackers can craft a message containing inline event handler payloads such as an img tag with an onerror attribute within the 60-character rendering budget, which is stored in the session transcript and interpolated unsanitized into innerHTML on the default landing page, allowing theft of session tokens and unauthorized calls to authenticated administrative endpoints including agent instruction file modification.</p>
+      <dl>
+        <div><dt>Published</dt><dd>2026-07-30</dd></div>
+        <div><dt>Last Modified</dt><dd>2026-07-30</dd></div>
+        <div><dt>Status</dt><dd>Received</dd></div>
+        <div><dt>Attack Vector</dt><dd>네트워크</dd></div>
+        <div><dt>Attack Complexity</dt><dd>낮음</dd></div>
+        <div><dt>Privileges</dt><dd>없음</dd></div>
+        <div><dt>User Interaction</dt><dd>필요</dd></div>
+        <div><dt>CWE</dt><dd>CWE-79</dd></div>
+        <div><dt>Affected</dt><dd>NVD CPE 기준 확인 필요</dd></div>
+      </dl>
+      <div class="vector"><code>CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:H/I:H/A:N</code></div>
+      <details>
+        <summary>References</summary>
+        <ul><li><a href="https://github.com/theopaid/Stored-Cross-Site-Scripting-Via-Agent-Messages-Leading-To-Session-Token-Theft-openclaw-dashboard-" target="_blank" rel="noopener">https://github.com/theopaid/Stored-Cross-Site-Scripting-Via-Agent-Messages-Leading-To-Session-Token-Theft-openclaw-dashboard-</a></li><li><a href="https://github.com/tugcantopaloglu/openclaw-dashboard" target="_blank" rel="noopener">https://github.com/tugcantopaloglu/openclaw-dashboard</a></li><li><a href="https://www.vulncheck.com/advisories/openclaw-dashboard-stored-xss-via-lastmessage-session-field" target="_blank" rel="noopener">https://www.vulncheck.com/advisories/openclaw-dashboard-stored-xss-via-lastmessage-session-field</a></li></ul>
       </details>
     </article>
     <article class="cve-card" id="CVE-2026-66418">
