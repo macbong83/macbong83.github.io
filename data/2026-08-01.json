@@ -1,0 +1,111 @@
+{
+  "tagline": "글로벌 정보보안 뉴스레터",
+  "title": "보안 브리핑",
+  "date_display": "2026년 8월 1일 토요일",
+  "date_short": "2026.08.01",
+  "sources_line": "The Hacker News · BleepingComputer · SecurityWeek · KrebsOnSecurity · CISA · NCSC UK · Unit 42 · 보안뉴스 · 데일리시큐 · 전자신문",
+  "seo": {
+    "title": "CVE-2026-XXXXX 악용·랜섬웨어 급증 — 2026.08.01 보안 브리핑",
+    "description": "오늘 주요 취약점·침해 사고·위협 트렌드 요약.",
+    "keywords": "CVE, 랜섬웨어, 취약점, 침해사고, 보안"
+  },
+  "sections": [
+    {
+      "label": "취약점 & 공격",
+      "type": "cards",
+      "items": [
+        {
+          "severity": "critical",
+          "source": "The Hacker News",
+          "headline": "CVE-2026-63077: TeamCity 원격 코드 실행 취약점",
+          "url": "https://www.securityweek.com/critical-code-execution-vulnerability-patched-in-teamcity/",
+          "summary": "JetBrains TeamCity의 unauthenticated remote code execution 취약점(CVE-2026-63077)이 발견되어, CI/CD 환경에서의 보안 취약점으로 주목받고 있다. 패치가 제공되었으나, 노출된 서버는 즉시 보호해야 한다."
+        },
+        {
+          "severity": "critical",
+          "source": "The Hacker News",
+          "headline": "우분투 스냅-컨파인 권한 상승 취약점 (CVE-2026-8933)",
+          "url": "http://www.boannews.com/media/view.asp?idx=144838",
+          "summary": "우분투의 스냅-컨파인 구성 요소에서 고위험 권한 상승 취약점이 발견되어, 일반 사용자가 루트 권한을 획득할 수 있는 위험이 있다. 즉시 패치가 필요하다."
+        },
+        {
+          "severity": "critical",
+          "source": "The Hacker News",
+          "headline": "4G/5G 코어 네트워크 세션 해킹 취약점 발견",
+          "url": "https://thehackernews.com/2026/07/researchers-report-84-flaws-in-4g-and.html",
+          "summary": "4G 및 5G 코어 네트워크에 영향을 주는 84개의 취약점이 발견되었으며, 이는 DoS 공격 및 세션 해킹을 유발할 수 있다. 이는 네트워크 보안에 심각한 위협이다."
+        },
+        {
+          "severity": "high",
+          "source": "The Hacker News",
+          "headline": "HollowFrame 로더와 Matryoshka 백도어 사용",
+          "url": "https://thehackernews.com/2026/07/hollowframe-loader-deploys-matryoshka.html",
+          "summary": "HollowFrame 로더와 Matryoshka 백도어가 사용되어, 법무사 사무실을 대상으로 한 spear-phishing 공격이 발생했다. 이는 높은 위험 수준의 공격으로 주목받고 있다."
+        },
+        {
+          "severity": "high",
+          "source": "The Hacker News",
+          "headline": "DPRK 연계 macOS 악성 광고 캠페인",
+          "url": "https://thehackernews.com/2026/07/dprk-linked-macos-malvertising-uses.html",
+          "summary": "북한과 연계된 악성 광고 캠페인을 통해 가짜 업데이트를 제공하며 암호화폐 도둑맞는 악성코드를 배포하고 있다. 이는 높은 위험 수준의 공격이다."
+        },
+        {
+          "severity": "medium",
+          "source": "The Hacker News",
+          "headline": "Keycloak 액세스 제어 취약점 (CVE-2026-17059)",
+          "url": "https://gbhackers.com/keycloak-flaw-exposes-users-personal-data/",
+          "summary": "Keycloak의 broken access control 취약점으로 인해 관리자 계정이 사용자의 개인 정보에 접근할 수 있다. 이는 즉시 패치가 필요한 중간 수준의 취약점이다."
+        }
+      ]
+    },
+    {
+      "label": "침해 사고",
+      "type": "cards",
+      "items": [
+        {
+          "severity": "incident",
+          "source": "보안뉴스",
+          "headline": "전기차 충전 플랫폼 채비 개인정보 유출 사고",
+          "url": "http://www.boannews.com/media/view.asp?idx=144842",
+          "summary": "전기차 충전 플랫폼 채비가 해킹되어 약 30만 건의 개인정보가 유출되었으며, 이메일 악용 피싱에 주의가 필요하다."
+        },
+        {
+          "severity": "incident",
+          "source": "보안뉴스",
+          "headline": "CareCloud 데이터 유출 사고, 35만 명 영향",
+          "url": "https://www.securityweek.com/carecloud-data-breach-impacts-over-350000/",
+          "summary": "2026년 3월, 해커가 AWS 환경에서 개인, 재정, 의료 정보를 도난한 사고가 발생했다. 이는 심각한 데이터 유출 사고이다."
+        },
+        {
+          "severity": "incident",
+          "source": "보안뉴스",
+          "headline": "미네소타 물 시스템 해킹 조사, 이란 해커 의심",
+          "url": "https://www.securityweek.com/cyberattacks-on-minnesota-water-systems-investigated-as-officials-warn-about-iranian-hackers/",
+          "summary": "미네소타 물 시스템에 대한 해킹 조사가 진행 중이며, 이란 해커가 연루된 것으로 의심된다. 이는 물 인프라에 대한 심각한 위협이다."
+        }
+      ]
+    },
+    {
+      "label": "동향 & 분석",
+      "type": "trends",
+      "items": [
+        {
+          "lead": "AI 기반 공격 증가",
+          "body": "AI 기반의 보안 취약점 및 공격이 급증하고 있으며, 특히 Claude 모델이 실사 기업에 침투한 사례가 보고되었다. AI 기술의 발전은 보안 위협의 새로운 형태로 주목받고 있다."
+        },
+        {
+          "lead": "랜섬웨어 공격의 진화",
+          "body": "랜섬웨어 작전이 진화하며, 보안 프로세스 메모리에 직접 오버라이팅하는 'ransomware killers'가 사용되고 있다. 이는 기존의 랜섬웨어와는 다른 방식으로 보안을 우회하고 있다."
+        },
+        {
+          "lead": "4G/5G 네트워크 취약점",
+          "body": "4G 및 5G 코어 네트워크의 취약점이 발견되며, 이는 네트워크 보안에 심각한 위협으로 작용하고 있다. 이는 기존의 보안 대응 방식을 재검토하게 만든다."
+        },
+        {
+          "lead": "AI 기반 보안 강화",
+          "body": "AI 기술이 보안 취약점 탐지 및 패치 과정을 혁신적으로 개선하고 있다. Google은 AI를 통해 Chrome의 1,072개 취약점을 해결했다. 이는 보안 분야의 중요한 트렌드이다."
+        }
+      ]
+    }
+  ]
+}
