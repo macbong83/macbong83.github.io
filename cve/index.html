@@ -41,13 +41,197 @@
     <h1>CVE Archive</h1>
     <p>NVD 기반 Critical CVE를 누적 관리하는 별도 페이지입니다. 블로그에는 CVE 자동 글을 발행하지 않고, 이 페이지에만 기록합니다.</p>
     <div class="meta">
-      <span>Total 366</span>
-      <span>Updated 2026-08-01 20:00 KST</span>
+      <span>Total 374</span>
+      <span>Updated 2026-08-02 08:00 KST</span>
       <span>Source NVD API</span>
     </div>
   </section>
   <div class="notice">중복 제거 기준은 CVE ID입니다. 동일 CVE는 다시 추가하지 않습니다. 실제 악용 여부와 패치 우선순위는 CISA KEV, 벤더 권고, 자산 노출 여부와 함께 검토해야 합니다.</div>
 
+    <article class="cve-card" id="CVE-2026-67342">
+      <div class="cve-top">
+        <a class="cve-id" href="https://nvd.nist.gov/vuln/detail/CVE-2026-67342" target="_blank" rel="noopener">CVE-2026-67342</a>
+        <span class="score">CVSS 9.8 CRITICAL</span>
+      </div>
+      <p class="desc">ArcadeDB versions before 26.7.2 contain an authorization bypass vulnerability in HTTP handlers for time series, batch, Prometheus, and Grafana endpoints that fail to validate database access permissions. Attackers can access and modify databases they are not authorized to use by directly calling affected endpoints with arbitrary database parameters.</p>
+      <dl>
+        <div><dt>Published</dt><dd>2026-08-01</dd></div>
+        <div><dt>Last Modified</dt><dd>2026-08-01</dd></div>
+        <div><dt>Status</dt><dd>Received</dd></div>
+        <div><dt>Attack Vector</dt><dd>네트워크</dd></div>
+        <div><dt>Attack Complexity</dt><dd>낮음</dd></div>
+        <div><dt>Privileges</dt><dd>없음</dd></div>
+        <div><dt>User Interaction</dt><dd>없음</dd></div>
+        <div><dt>CWE</dt><dd>CWE-639</dd></div>
+        <div><dt>Affected</dt><dd>NVD CPE 기준 확인 필요</dd></div>
+      </dl>
+      <div class="vector"><code>CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H</code></div>
+      <details>
+        <summary>References</summary>
+        <ul><li><a href="https://github.com/ArcadeData/arcadedb/security/advisories/GHSA-x8mg-6r4p-87pf" target="_blank" rel="noopener">https://github.com/ArcadeData/arcadedb/security/advisories/GHSA-x8mg-6r4p-87pf</a></li><li><a href="https://www.vulncheck.com/advisories/arcadedb-before-authorization-bypass-via-database-handlers" target="_blank" rel="noopener">https://www.vulncheck.com/advisories/arcadedb-before-authorization-bypass-via-database-handlers</a></li></ul>
+      </details>
+    </article>
+    <article class="cve-card" id="CVE-2026-67341">
+      <div class="cve-top">
+        <a class="cve-id" href="https://nvd.nist.gov/vuln/detail/CVE-2026-67341" target="_blank" rel="noopener">CVE-2026-67341</a>
+        <span class="score">CVSS 9.8 CRITICAL</span>
+      </div>
+      <p class="desc">ArcadeDB versions before 26.7.2 fail to enforce scripting authorization checks on the SQL DEFINE FUNCTION statement with LANGUAGE js. Attackers with database access can execute arbitrary JavaScript code by submitting DEFINE FUNCTION statements, bypassing security controls intended to restrict scripting to administrators.</p>
+      <dl>
+        <div><dt>Published</dt><dd>2026-08-01</dd></div>
+        <div><dt>Last Modified</dt><dd>2026-08-01</dd></div>
+        <div><dt>Status</dt><dd>Received</dd></div>
+        <div><dt>Attack Vector</dt><dd>네트워크</dd></div>
+        <div><dt>Attack Complexity</dt><dd>낮음</dd></div>
+        <div><dt>Privileges</dt><dd>없음</dd></div>
+        <div><dt>User Interaction</dt><dd>없음</dd></div>
+        <div><dt>CWE</dt><dd>CWE-863</dd></div>
+        <div><dt>Affected</dt><dd>NVD CPE 기준 확인 필요</dd></div>
+      </dl>
+      <div class="vector"><code>CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H</code></div>
+      <details>
+        <summary>References</summary>
+        <ul><li><a href="https://github.com/ArcadeData/arcadedb/security/advisories/GHSA-vwjc-v7x7-cm6g" target="_blank" rel="noopener">https://github.com/ArcadeData/arcadedb/security/advisories/GHSA-vwjc-v7x7-cm6g</a></li><li><a href="https://www.vulncheck.com/advisories/arcadedb-before-authorization-bypass-via-sql-define-function" target="_blank" rel="noopener">https://www.vulncheck.com/advisories/arcadedb-before-authorization-bypass-via-sql-define-function</a></li></ul>
+      </details>
+    </article>
+    <article class="cve-card" id="CVE-2026-67340">
+      <div class="cve-top">
+        <a class="cve-id" href="https://nvd.nist.gov/vuln/detail/CVE-2026-67340" target="_blank" rel="noopener">CVE-2026-67340</a>
+        <span class="score">CVSS 9.8 CRITICAL</span>
+      </div>
+      <p class="desc">ArcadeDB before 26.7.2 (arcadedb-engine) allows trigger scripts to look up host classes in java.lang.* (via Java.type) because ScriptTriggerExecutor adds java.lang.* to the allowed packages. An authenticated user with UPDATE_SCHEMA permission can create a JavaScript trigger that invokes java.lang.Runtime.getRuntime().exec() (or ProcessBuilder), achieving OS command execution when the trigger fires.</p>
+      <dl>
+        <div><dt>Published</dt><dd>2026-08-01</dd></div>
+        <div><dt>Last Modified</dt><dd>2026-08-01</dd></div>
+        <div><dt>Status</dt><dd>Received</dd></div>
+        <div><dt>Attack Vector</dt><dd>네트워크</dd></div>
+        <div><dt>Attack Complexity</dt><dd>낮음</dd></div>
+        <div><dt>Privileges</dt><dd>없음</dd></div>
+        <div><dt>User Interaction</dt><dd>없음</dd></div>
+        <div><dt>CWE</dt><dd>CWE-94</dd></div>
+        <div><dt>Affected</dt><dd>NVD CPE 기준 확인 필요</dd></div>
+      </dl>
+      <div class="vector"><code>CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H</code></div>
+      <details>
+        <summary>References</summary>
+        <ul><li><a href="https://github.com/ArcadeData/arcadedb/security/advisories/GHSA-x9f9-r4m8-9xc2" target="_blank" rel="noopener">https://github.com/ArcadeData/arcadedb/security/advisories/GHSA-x9f9-r4m8-9xc2</a></li><li><a href="https://www.vulncheck.com/advisories/arcadedb-before-remote-code-execution-via-trigger-scripts" target="_blank" rel="noopener">https://www.vulncheck.com/advisories/arcadedb-before-remote-code-execution-via-trigger-scripts</a></li></ul>
+      </details>
+    </article>
+    <article class="cve-card" id="CVE-2026-67330">
+      <div class="cve-top">
+        <a class="cve-id" href="https://nvd.nist.gov/vuln/detail/CVE-2026-67330" target="_blank" rel="noopener">CVE-2026-67330</a>
+        <span class="score">CVSS 9.9 CRITICAL</span>
+      </div>
+      <p class="desc">@better-auth/scim (a better-auth plugin) versions &gt;= 1.4.0-beta.27 through &lt;= 1.6.21 and &gt;= 1.7.0-beta.0 through &lt;= 1.7.0-beta.9 contain an authorization bypass. SCIM token issuance did not reject provider IDs already used by existing SSO, SAML, OIDC, generic OAuth, or social account providers, and the same logical provider ID was used for both SCIM provider configuration and account ownership. An authenticated user could mint a SCIM token whose provider ID collided with an existing provider namespace, causing SCIM user routes to resolve account rows the token never provisioned. This allowed listing, reading, updating (including rewriting global profile/email fields without uniqueness checks), and deleting global user accounts and sessions, resulting in account takeover and unauthorized deprovisioning. Fixed in 1.6.22 and 1.7.0-beta.10 (1.7.0-rc.0).</p>
+      <dl>
+        <div><dt>Published</dt><dd>2026-08-01</dd></div>
+        <div><dt>Last Modified</dt><dd>2026-08-01</dd></div>
+        <div><dt>Status</dt><dd>Received</dd></div>
+        <div><dt>Attack Vector</dt><dd>네트워크</dd></div>
+        <div><dt>Attack Complexity</dt><dd>낮음</dd></div>
+        <div><dt>Privileges</dt><dd>낮음</dd></div>
+        <div><dt>User Interaction</dt><dd>없음</dd></div>
+        <div><dt>CWE</dt><dd>CWE-20</dd></div>
+        <div><dt>Affected</dt><dd>NVD CPE 기준 확인 필요</dd></div>
+      </dl>
+      <div class="vector"><code>CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H</code></div>
+      <details>
+        <summary>References</summary>
+        <ul><li><a href="https://github.com/better-auth/better-auth/security/advisories/GHSA-rjg6-39jm-rgg4" target="_blank" rel="noopener">https://github.com/better-auth/better-auth/security/advisories/GHSA-rjg6-39jm-rgg4</a></li><li><a href="https://www.vulncheck.com/advisories/better-auth-scim-beta-27-through-account-takeover-via-provider-id-collision" target="_blank" rel="noopener">https://www.vulncheck.com/advisories/better-auth-scim-beta-27-through-account-takeover-via-provider-id-collision</a></li></ul>
+      </details>
+    </article>
+    <article class="cve-card" id="CVE-2026-67324">
+      <div class="cve-top">
+        <a class="cve-id" href="https://nvd.nist.gov/vuln/detail/CVE-2026-67324" target="_blank" rel="noopener">CVE-2026-67324</a>
+        <span class="score">CVSS 9.8 CRITICAL</span>
+      </div>
+      <p class="desc">GitPython 3.1.50 fails to recognize joined short-option forms such as -u&lt;value&gt; (the short form of --upload-pack=&lt;value&gt;) when enforcing its default unsafe-option gate. When an application passes attacker-influenced clone options into Repo.clone_from(..., multi_options=..., allow_unsafe_options=False), an attacker can supply -u&lt;helper&gt; to bypass the gate that blocks --upload-pack/-u, causing Git to execute the specified helper command during clone. Fixed in 3.1.51.</p>
+      <dl>
+        <div><dt>Published</dt><dd>2026-08-01</dd></div>
+        <div><dt>Last Modified</dt><dd>2026-08-01</dd></div>
+        <div><dt>Status</dt><dd>Received</dd></div>
+        <div><dt>Attack Vector</dt><dd>네트워크</dd></div>
+        <div><dt>Attack Complexity</dt><dd>낮음</dd></div>
+        <div><dt>Privileges</dt><dd>없음</dd></div>
+        <div><dt>User Interaction</dt><dd>없음</dd></div>
+        <div><dt>CWE</dt><dd>CWE-78</dd></div>
+        <div><dt>Affected</dt><dd>NVD CPE 기준 확인 필요</dd></div>
+      </dl>
+      <div class="vector"><code>CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H</code></div>
+      <details>
+        <summary>References</summary>
+        <ul><li><a href="https://github.com/gitpython-developers/GitPython/security/advisories/GHSA-v396-v7q4-x2qj" target="_blank" rel="noopener">https://github.com/gitpython-developers/GitPython/security/advisories/GHSA-v396-v7q4-x2qj</a></li><li><a href="https://www.vulncheck.com/advisories/gitpython-authentication-bypass-via-joined-short-options" target="_blank" rel="noopener">https://www.vulncheck.com/advisories/gitpython-authentication-bypass-via-joined-short-options</a></li></ul>
+      </details>
+    </article>
+    <article class="cve-card" id="CVE-2026-67308">
+      <div class="cve-top">
+        <a class="cve-id" href="https://nvd.nist.gov/vuln/detail/CVE-2026-67308" target="_blank" rel="noopener">CVE-2026-67308</a>
+        <span class="score">CVSS 10.0 CRITICAL</span>
+      </div>
+      <p class="desc">Wazuh workflows before 44bf114 contain a shell injection vulnerability in GitHub Actions that allows attackers to execute arbitrary commands by submitting pull requests with crafted VERSION.json files. Attackers can inject shell metacharacters into environment variables that are directly interpolated into run steps, enabling command execution and exfiltration of secrets including GITHUB_TOKEN and AWS credentials on self-hosted runners.</p>
+      <dl>
+        <div><dt>Published</dt><dd>2026-08-01</dd></div>
+        <div><dt>Last Modified</dt><dd>2026-08-01</dd></div>
+        <div><dt>Status</dt><dd>Received</dd></div>
+        <div><dt>Attack Vector</dt><dd>네트워크</dd></div>
+        <div><dt>Attack Complexity</dt><dd>낮음</dd></div>
+        <div><dt>Privileges</dt><dd>없음</dd></div>
+        <div><dt>User Interaction</dt><dd>없음</dd></div>
+        <div><dt>CWE</dt><dd>CWE-78</dd></div>
+        <div><dt>Affected</dt><dd>NVD CPE 기준 확인 필요</dd></div>
+      </dl>
+      <div class="vector"><code>CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:H</code></div>
+      <details>
+        <summary>References</summary>
+        <ul><li><a href="https://github.com/wazuh/wazuh/security/advisories/GHSA-95w2-gpvr-q4jh" target="_blank" rel="noopener">https://github.com/wazuh/wazuh/security/advisories/GHSA-95w2-gpvr-q4jh</a></li><li><a href="https://www.vulncheck.com/advisories/wazuh-github-actions-shell-injection-via-fork-pull-request" target="_blank" rel="noopener">https://www.vulncheck.com/advisories/wazuh-github-actions-shell-injection-via-fork-pull-request</a></li></ul>
+      </details>
+    </article>
+    <article class="cve-card" id="CVE-2026-67289">
+      <div class="cve-top">
+        <a class="cve-id" href="https://nvd.nist.gov/vuln/detail/CVE-2026-67289" target="_blank" rel="noopener">CVE-2026-67289</a>
+        <span class="score">CVSS 9.8 CRITICAL</span>
+      </div>
+      <p class="desc">FreeRDP before 3.29.0 (affected versions &lt;= 3.28.0) does not validate CRLF and control characters in the server-controlled RDP redirection TargetNetAddress field. This value is copied into the client&#x27;s ServerHostname and, when the client connects through an HTTP proxy, is written directly into the proxy CONNECT request line and Host header by http_proxy_connect() without filtering. A malicious or compromised RDP server can send a crafted redirection PDU containing embedded control characters to inject arbitrary headers/requests into the HTTP proxy CONNECT request.</p>
+      <dl>
+        <div><dt>Published</dt><dd>2026-08-01</dd></div>
+        <div><dt>Last Modified</dt><dd>2026-08-01</dd></div>
+        <div><dt>Status</dt><dd>Received</dd></div>
+        <div><dt>Attack Vector</dt><dd>네트워크</dd></div>
+        <div><dt>Attack Complexity</dt><dd>낮음</dd></div>
+        <div><dt>Privileges</dt><dd>없음</dd></div>
+        <div><dt>User Interaction</dt><dd>없음</dd></div>
+        <div><dt>CWE</dt><dd>CWE-113</dd></div>
+        <div><dt>Affected</dt><dd>NVD CPE 기준 확인 필요</dd></div>
+      </dl>
+      <div class="vector"><code>CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H</code></div>
+      <details>
+        <summary>References</summary>
+        <ul><li><a href="https://github.com/FreeRDP/FreeRDP/commit/f3b4347105114fe7453828736bea069999af319f" target="_blank" rel="noopener">https://github.com/FreeRDP/FreeRDP/commit/f3b4347105114fe7453828736bea069999af319f</a></li><li><a href="https://github.com/FreeRDP/FreeRDP/security/advisories/GHSA-mwwh-mhp9-q7vm" target="_blank" rel="noopener">https://github.com/FreeRDP/FreeRDP/security/advisories/GHSA-mwwh-mhp9-q7vm</a></li><li><a href="https://www.vulncheck.com/advisories/freerdp-before-http-proxy-request-injection-via-redirection" target="_blank" rel="noopener">https://www.vulncheck.com/advisories/freerdp-before-http-proxy-request-injection-via-redirection</a></li></ul>
+      </details>
+    </article>
+    <article class="cve-card" id="CVE-2026-66402">
+      <div class="cve-top">
+        <a class="cve-id" href="https://nvd.nist.gov/vuln/detail/CVE-2026-66402" target="_blank" rel="noopener">CVE-2026-66402</a>
+        <span class="score">CVSS 9.8 CRITICAL</span>
+      </div>
+      <p class="desc">FreeRDP before 3.29.0 (affected versions &lt;= 3.28.0) contains multiple TLS certificate identity validation weaknesses in tls_verify_certificate(), tls_match_hostname(), and x509_utils_get_dns_names(). Because FreeRDP performs custom Common Name and DNS SAN string matching instead of using OpenSSL&#x27;s length-aware identity validation APIs, it (1) truncates DNS SAN values at embedded NUL bytes (accepting e.g. &#x27;victim.example\0.attacker.example&#x27; as &#x27;victim.example&#x27;), (2) accepts a matching Common Name even when non-matching DNS SAN entries are present, and (3) accepts IP-literal targets via DNS/CN matching without comparing iPAddress SANs. Under a trusted or misissued certificate chain, an attacker positioned to present such a certificate can bypass server identity verification, weakening TLS server authentication.</p>
+      <dl>
+        <div><dt>Published</dt><dd>2026-08-01</dd></div>
+        <div><dt>Last Modified</dt><dd>2026-08-01</dd></div>
+        <div><dt>Status</dt><dd>Received</dd></div>
+        <div><dt>Attack Vector</dt><dd>네트워크</dd></div>
+        <div><dt>Attack Complexity</dt><dd>낮음</dd></div>
+        <div><dt>Privileges</dt><dd>없음</dd></div>
+        <div><dt>User Interaction</dt><dd>없음</dd></div>
+        <div><dt>CWE</dt><dd>CWE-295</dd></div>
+        <div><dt>Affected</dt><dd>NVD CPE 기준 확인 필요</dd></div>
+      </dl>
+      <div class="vector"><code>CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H</code></div>
+      <details>
+        <summary>References</summary>
+        <ul><li><a href="https://github.com/FreeRDP/FreeRDP/commit/b9533f07f98c25ed01c5f543b4d0ce73e120f5fd" target="_blank" rel="noopener">https://github.com/FreeRDP/FreeRDP/commit/b9533f07f98c25ed01c5f543b4d0ce73e120f5fd</a></li><li><a href="https://github.com/FreeRDP/FreeRDP/security/advisories/GHSA-43hh-p3vw-hfx3" target="_blank" rel="noopener">https://github.com/FreeRDP/FreeRDP/security/advisories/GHSA-43hh-p3vw-hfx3</a></li><li><a href="https://www.vulncheck.com/advisories/freerdp-before-tls-certificate-identity-validation-bypass" target="_blank" rel="noopener">https://www.vulncheck.com/advisories/freerdp-before-tls-certificate-identity-validation-bypass</a></li></ul>
+      </details>
+    </article>
     <article class="cve-card" id="CVE-2026-3141">
       <div class="cve-top">
         <a class="cve-id" href="https://nvd.nist.gov/vuln/detail/CVE-2026-3141" target="_blank" rel="noopener">CVE-2026-3141</a>
