@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CVE-2026-XXXXX 악용·랜섬웨어 급증 — 2026.08.02 보안 브리핑 | SecuLog</title>
+<meta name="description" content="오늘 주요 취약점·침해 사고·위협 트렌드 요약.">
+<meta name="keywords" content="CVE, 랜섬웨어, 취약점, 침해사고, 보안">
+<meta name="author" content="Felix">
+<meta property="og:type" content="article">
+<meta property="og:title" content="CVE-2026-XXXXX 악용·랜섬웨어 급증 — 2026.08.02 보안 브리핑">
+<meta property="og:description" content="오늘 주요 취약점·침해 사고·위협 트렌드 요약.">
+<meta property="og:url" content="https://macbong83.github.io/posts/2026-08-02.html">
+<meta property="og:site_name" content="SecuLog">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="CVE-2026-XXXXX 악용·랜섬웨어 급증 — 2026.08.02 보안 브리핑">
+<meta name="twitter:description" content="오늘 주요 취약점·침해 사고·위협 트렌드 요약.">
+<link rel="canonical" href="https://macbong83.github.io/posts/2026-08-02.html">
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: -apple-system, 'Malgun Gothic', 'Apple SD Gothic Neo', Arial, sans-serif; background: #f4f5f7; color: #1a1a2e; line-height: 1.6; }
+  a { text-decoration: none; color: inherit; }
+  .wrapper { max-width: 700px; margin: 32px auto; background: #ffffff; border-radius: 12px; overflow: hidden; box-shadow: 0 2px 20px rgba(0,0,0,0.08); }
+  .header { background: #eef0f4; padding: 28px 36px 24px; display: flex; align-items: center; justify-content: space-between; gap: 16px; border-bottom: 3px solid #0d1b3e; }
+  .wordmark { font-size: 26px; font-weight: 800; letter-spacing: -0.02em; color: #0d1b3e; }
+  .wordmark .accent { color: #2563eb; }
+  .header-meta { text-align: right; }
+  .header-meta .nl-label { font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase; color: #6b7488; margin-bottom: 4px; }
+  .header-meta .nl-title { font-size: 17px; font-weight: 700; color: #0d1b3e; }
+  .header-meta .nl-date { font-size: 12px; color: #8a93a8; margin-top: 3px; }
+  .body { padding: 28px 36px 32px; }
+  .section-label { font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase; color: #8a93a8; font-weight: 600; padding-bottom: 8px; border-bottom: 1px solid #e8eaed; margin-bottom: 4px; margin-top: 28px; }
+  .section-label:first-child { margin-top: 0; }
+  .card { display: block; padding: 16px 0; border-bottom: 1px solid #f0f1f3; transition: background 0.15s; }
+  .card:last-child { border-bottom: none; }
+  .card:hover { background: #f8f9fc; margin: 0 -36px; padding: 16px 36px; }
+  .card-top { display: flex; align-items: center; gap: 8px; margin-bottom: 6px; flex-wrap: wrap; }
+  .badge { font-size: 10px; font-weight: 700; padding: 3px 9px; border-radius: 4px; letter-spacing: 0.04em; }
+  .badge-critical { background: #fff0f0; color: #c0392b; border: 1px solid #f5c6c6; }
+  .badge-high { background: #fff7ee; color: #b94d00; border: 1px solid #fdd5a8; }
+  .badge-medium { background: #fff9e6; color: #856900; border: 1px solid #f9e0a0; }
+  .badge-incident { background: #f3f0ff; color: #6133c0; border: 1px solid #cfc0f5; }
+  .source { font-size: 11px; color: #a0a8b8; }
+  .card-headline { font-size: 14px; font-weight: 600; color: #0d1b3e; margin-bottom: 5px; line-height: 1.45; }
+  .card-headline .arrow { font-size: 12px; color: #2563eb; margin-left: 4px; opacity: 0; transition: opacity 0.15s; }
+  .card:hover .card-headline .arrow { opacity: 1; }
+  .card-summary { font-size: 13px; color: #4a5568; line-height: 1.65; }
+  .trend-box { background: #f8f9fc; border-radius: 10px; padding: 18px 20px; margin-top: 6px; }
+  .trend-row { display: flex; gap: 12px; padding: 10px 0; border-bottom: 1px solid #e8eaed; align-items: flex-start; }
+  .trend-row:last-child { border-bottom: none; padding-bottom: 0; }
+  .trend-num { font-size: 11px; font-weight: 700; color: #2563eb; min-width: 22px; padding-top: 2px; }
+  .trend-text { font-size: 13px; color: #4a5568; line-height: 1.6; }
+  .trend-text strong { color: #0d1b3e; font-weight: 600; }
+  .footer { background: #f4f5f7; border-top: 1px solid #e8eaed; padding: 16px 36px; font-size: 11px; color: #9aa0b0; line-height: 1.6; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 8px; }
+  .footer-meta { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; justify-content: flex-end; }
+  .linkedin-link { display: inline-flex; align-items: center; justify-content: center; min-height: 28px; padding: 6px 12px; border-radius: 6px; background: #0a66c2; color: #fff; font-size: 12px; font-weight: 800; letter-spacing: 0.01em; box-shadow: 0 6px 14px rgba(10,102,194,0.16); }
+  .linkedin-link:hover { background: #004182; color: #fff; }
+  .card-inner { display: flex; gap: 14px; }
+  .sev-bar { width: 3px; border-radius: 2px; flex-shrink: 0; margin: 3px 0; }
+  .sev-critical { background: #e74c3c; }
+  .sev-high { background: #e67e22; }
+  .sev-medium { background: #f0b429; }
+  .sev-incident { background: #7c3aed; }
+  .card-content { flex: 1; }
+  @media (max-width: 600px) {
+    .wrapper { margin: 0; border-radius: 0; box-shadow: none; }
+    .header { padding: 18px 20px 16px; flex-direction: column; align-items: flex-start; gap: 8px; }
+    .header-meta { text-align: left; }
+    .body { padding: 18px 20px 24px; }
+    .card:hover { margin: 0 -20px; padding: 16px 20px; }
+    .footer { padding: 14px 20px; flex-direction: column; align-items: flex-start; }
+    .footer-meta { justify-content: flex-start; }
+    .wordmark { font-size: 22px; }
+    .card-headline { font-size: 13px; }
+    .card-summary { font-size: 12px; }
+    .card-headline .arrow { opacity: 1; }
+  }
+</style>
+</head>
+<body>
+<div class="wrapper">
+  <div class="header">
+    <div class="header-logo">
+      <span class="wordmark">Secu<span class="accent">Log</span></span>
+    </div>
+    <div class="header-meta">
+      <div class="nl-label">글로벌 정보보안 뉴스레터</div>
+      <div class="nl-title">보안 브리핑</div>
+      <div class="nl-date">2026년 8월 2일 일요일</div>
+    </div>
+  </div>
+  <div class="body">
+    <div class="section-label">취약점 &amp; 공격</div>
+
+    <a class="card" href="https://www.securityweek.com/ruby-on-rails-patches-critical-vulnerability/" target="_blank">
+      <div class="card-inner"><div class="sev-bar sev-critical"></div><div class="card-content">
+        <div class="card-top"><span class="badge badge-critical">긴급</span><span class="source">The Hacker News</span></div>
+        <div class="card-headline">레일스에서 원격 코드 실행(RCE) 취약점 발견 (CVE-2026-66066)<span class="arrow">↗</span></div>
+        <div class="card-summary">오픈소스 웹 애플리케이션 프레임워크 레일스에서 이미지 업로드만으로 서버 장악 가능한 원격 코드 실행(RCE) 취약점이 발견됐다. 공격자는 로그인하지 않은 상태에서도 특수하게 제작한 이미지 파일을 업로드해 서버 내부 파일을 읽을 수 있으며, 환경에 따라 애플리케이션을 완전히 장악할 가능성도 확인됐다. 레일스 개발팀은 최고 수준인 ‘치명적(Critical)’ 등급으로 분류하고 긴급 보안 업데이트를 배포했다.</div>
+      </div></div>
+    </a>
+
+    <a class="card" href="https://thehackernews.com/2026/08/adobe-campaign-classic-cvss-100-flaw.html" target="_blank">
+      <div class="card-inner"><div class="sev-bar sev-critical"></div><div class="card-content">
+        <div class="card-top"><span class="badge badge-critical">긴급</span><span class="source">The Hacker News</span></div>
+        <div class="card-headline">Adobe Campaign Classic CVSS 10.0 취약점 발견 (CVE-2026-48449)<span class="arrow">↗</span></div>
+        <div class="card-summary">Adobe는 Campaign Classic에서 사용자 상호작용 없이 임의 코드 실행이 가능한 최대 심각도 취약점을 수정했다. 이 취약점은 CVSS 10.0 점수를 받았으며, Adobe는 기업용 마케팅 자동화 플랫폼의 보안을 강화하기 위해 긴급 패치를 배포했다.</div>
+      </div></div>
+    </a>
+
+    <a class="card" href="https://thehackernews.com/2026/08/hackers-poison-adform-script-to-swap.html" target="_blank">
+      <div class="card-inner"><div class="sev-bar sev-high"></div><div class="card-content">
+        <div class="card-top"><span class="badge badge-high">높음</span><span class="source">The Hacker News</span></div>
+        <div class="card-headline">Adform 스크립트 조작으로 암호화폐 지갑 주소 교체<span class="arrow">↗</span></div>
+        <div class="card-summary">Adform의 JavaScript 파일이 해커에 의해 조작되어 암호화폐 지갑 주소를 고객 사이트에서 교체하는 공격이 발생했다. Adform은 이 사례를 발견하고 악성 코드를 제거하며 관련 고객에게 알림을 전달했다.</div>
+      </div></div>
+    </a>
+
+    <a class="card" href="https://thehackernews.com/2026/08/hijacked-hotel-wi-fi-pushes-fake.html" target="_blank">
+      <div class="card-inner"><div class="sev-bar sev-high"></div><div class="card-content">
+        <div class="card-top"><span class="badge badge-high">높음</span><span class="source">The Hacker News</span></div>
+        <div class="card-headline">호텔 Wi-Fi 해킹으로 Malware 배포 및 자격 증명 도난<span class="arrow">↗</span></div>
+        <div class="card-summary">해커는 해킹된 호텔 Wi-Fi를 통해 가짜 브라우저 업데이트를 제공해 CornFlake RAT을 배포하고 웹캠 영상, 마이크 음성, 키보드 입력 등을 수집하는 공격이 발생했다. 이 공격은 Microsoft의 보고서에 따르면 CaptiveCrunch로 명명되었으며 Storm-2945 그룹에 귀속된다.</div>
+      </div></div>
+    </a>
+
+    <a class="card" href="https://www.dailysecu.com/news/articleView.html?idxno=207875" target="_blank">
+      <div class="card-inner"><div class="sev-bar sev-medium"></div><div class="card-content">
+        <div class="card-top"><span class="badge badge-medium">중간</span><span class="source">보안뉴스</span></div>
+        <div class="card-headline">암젠, 제3자 클라우드 해킹으로 의료정보 유출<span class="arrow">↗</span></div>
+        <div class="card-summary">미국 바이오 제약기업 암젠이 제3자 클라우드 서비스 환경을 노린 사이버 공격으로 환자 의료정보와 기업 기밀이 외부로 유출됐다. 공격자는 암젠이 직접 운영하는 시스템이 아닌 외부 클라우드 서비스 제공업체의 저장 환경을 침해해 민감한 데이터를 탈취한 것으로 조사됐다.</div>
+      </div></div>
+    </a>
+
+    <div class="section-label">침해 사고</div>
+
+    <a class="card" href="https://www.ddaily.co.kr/page/view/2026073110571088500" target="_blank">
+      <div class="card-inner"><div class="sev-bar sev-incident"></div><div class="card-content">
+        <div class="card-top"><span class="badge badge-incident">사고</span><span class="source">보안뉴스</span></div>
+        <div class="card-headline">KT 유출사고, 과징금 540억 결론<span class="arrow">↗</span></div>
+        <div class="card-summary">KT 유출사고에 대해 정부가 고발한 후 추가 처분이 예상되고 있다. KT는 해당 사고로 과징금 540억 원의 처분을 받았으며, 정부의 추가 조치 가능성에 대해 우려가 커지고 있다.</div>
+      </div></div>
+    </a>
+
+    <a class="card" href="https://gbhackers.com/crpx0-ransomware-claims-hyundai-turkey-breach/" target="_blank">
+      <div class="card-inner"><div class="sev-bar sev-incident"></div><div class="card-content">
+        <div class="card-top"><span class="badge badge-incident">사고</span><span class="source">보안뉴스</span></div>
+        <div class="card-headline">CRPx0 랜섬웨어, 현대차 터키 운영부문 침해<span class="arrow">↗</span></div>
+        <div class="card-summary">CRPx0 랜섬웨어 그룹은 현대차 터키 운영부문을 침해해 1.5GB의 인사 및 채용 데이터를 유출했다. 이 그룹은 랜섬웨어와 데이터 유출을 동시에 진행하는 이중 압박 전략을 사용하고 있다.</div>
+      </div></div>
+    </a>
+
+    <a class="card" href="https://gbhackers.com/crpx0-ransomware-claims-hyundai-turkey-breach/" target="_blank">
+      <div class="card-inner"><div class="sev-bar sev-incident"></div><div class="card-content">
+        <div class="card-top"><span class="badge badge-incident">사고</span><span class="source">보안뉴스</span></div>
+        <div class="card-headline">현대차 터키 운영부문 데이터 유출<span class="arrow">↗</span></div>
+        <div class="card-summary">CRPx0 랜섬웨어 그룹은 현대차 터키 운영부문을 침해해 1.5GB의 인사 및 채용 데이터를 유출했다. 이 그룹은 랜섬웨어와 데이터 유출을 동시에 진행하는 이중 압박 전략을 사용하고 있다.</div>
+      </div></div>
+    </a>
+
+    <div class="section-label">동향 &amp; 분석</div>
+    <div class="trend-box">
+      <div class="trend-row">
+        <div class="trend-num">01</div>
+        <div class="trend-text"><strong>AI 기반 공격 증가</strong> — 2026년 상반기에는 AI를 활용한 공격이 4건 중 1건에 달하며, 전년 대비 56% 증가했다. AI는 공격 비용은 수백만 원이지만 피해 비용은 86억 원에 달하는 것으로 나타났다.</div>
+      </div>
+      <div class="trend-row">
+        <div class="trend-num">02</div>
+        <div class="trend-text"><strong>국제적 보안 협력 강화</strong> — 국내외 보안 기관들이 AI 위협 대응을 위한 협력 강화를 추진하고 있다. 특히, 러시아와 중국 해커들의 구형 VPN 악용에 대한 대응이 강화되고 있다.</div>
+      </div>
+      <div class="trend-row">
+        <div class="trend-num">03</div>
+        <div class="trend-text"><strong>취약점 패치 지연</strong> — 최근 발견된 취약점들 중 일부는 공개된 공격 코드(PoC)가 빠르게 확산되고 있어 패치가 지연될 경우 심각한 보안 사고로 이어질 수 있다.</div>
+      </div>
+      <div class="trend-row">
+        <div class="trend-num">04</div>
+        <div class="trend-text"><strong>랜섬웨어 및 데이터 유출 사고 증가</strong> — 랜섬웨어 및 데이터 유출 사고가 지속적으로 증가하고 있으며, 특히 제3자 클라우드 환경을 노리는 공격이 늘고 있다. 이에 따라 기업의 보안 대응 체계가 강화되고 있다.</div>
+      </div>
+    </div>
+  </div>
+  <div class="footer">
+    <div>출처: The Hacker News · BleepingComputer · SecurityWeek · KrebsOnSecurity · CISA · NCSC UK · Unit 42 · 보안뉴스 · 데일리시큐 · 전자신문</div>
+    <div class="footer-meta">
+      <span>© 2026 Felix · SecuLog. 본 브리핑은 공개된 보안 뉴스를 기반으로 작성되었습니다.</span>
+    </div>
+  </div>
+</div>
+</body>
+</html>

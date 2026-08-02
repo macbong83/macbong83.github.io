@@ -1,0 +1,104 @@
+{
+  "tagline": "글로벌 정보보안 뉴스레터",
+  "title": "보안 브리핑",
+  "date_display": "2026년 8월 2일 일요일",
+  "date_short": "2026.08.02",
+  "sources_line": "The Hacker News · BleepingComputer · SecurityWeek · KrebsOnSecurity · CISA · NCSC UK · Unit 42 · 보안뉴스 · 데일리시큐 · 전자신문",
+  "seo": {
+    "title": "CVE-2026-XXXXX 악용·랜섬웨어 급증 — 2026.08.02 보안 브리핑",
+    "description": "오늘 주요 취약점·침해 사고·위협 트렌드 요약.",
+    "keywords": "CVE, 랜섬웨어, 취약점, 침해사고, 보안"
+  },
+  "sections": [
+    {
+      "label": "취약점 & 공격",
+      "type": "cards",
+      "items": [
+        {
+          "severity": "critical",
+          "source": "The Hacker News",
+          "headline": "레일스에서 원격 코드 실행(RCE) 취약점 발견 (CVE-2026-66066)",
+          "url": "https://www.securityweek.com/ruby-on-rails-patches-critical-vulnerability/",
+          "summary": "오픈소스 웹 애플리케이션 프레임워크 레일스에서 이미지 업로드만으로 서버 장악 가능한 원격 코드 실행(RCE) 취약점이 발견됐다. 공격자는 로그인하지 않은 상태에서도 특수하게 제작한 이미지 파일을 업로드해 서버 내부 파일을 읽을 수 있으며, 환경에 따라 애플리케이션을 완전히 장악할 가능성도 확인됐다. 레일스 개발팀은 최고 수준인 ‘치명적(Critical)’ 등급으로 분류하고 긴급 보안 업데이트를 배포했다."
+        },
+        {
+          "severity": "critical",
+          "source": "The Hacker News",
+          "headline": "Adobe Campaign Classic CVSS 10.0 취약점 발견 (CVE-2026-48449)",
+          "url": "https://thehackernews.com/2026/08/adobe-campaign-classic-cvss-100-flaw.html",
+          "summary": "Adobe는 Campaign Classic에서 사용자 상호작용 없이 임의 코드 실행이 가능한 최대 심각도 취약점을 수정했다. 이 취약점은 CVSS 10.0 점수를 받았으며, Adobe는 기업용 마케팅 자동화 플랫폼의 보안을 강화하기 위해 긴급 패치를 배포했다."
+        },
+        {
+          "severity": "high",
+          "source": "The Hacker News",
+          "headline": "Adform 스크립트 조작으로 암호화폐 지갑 주소 교체",
+          "url": "https://thehackernews.com/2026/08/hackers-poison-adform-script-to-swap.html",
+          "summary": "Adform의 JavaScript 파일이 해커에 의해 조작되어 암호화폐 지갑 주소를 고객 사이트에서 교체하는 공격이 발생했다. Adform은 이 사례를 발견하고 악성 코드를 제거하며 관련 고객에게 알림을 전달했다."
+        },
+        {
+          "severity": "high",
+          "source": "The Hacker News",
+          "headline": "호텔 Wi-Fi 해킹으로 Malware 배포 및 자격 증명 도난",
+          "url": "https://thehackernews.com/2026/08/hijacked-hotel-wi-fi-pushes-fake.html",
+          "summary": "해커는 해킹된 호텔 Wi-Fi를 통해 가짜 브라우저 업데이트를 제공해 CornFlake RAT을 배포하고 웹캠 영상, 마이크 음성, 키보드 입력 등을 수집하는 공격이 발생했다. 이 공격은 Microsoft의 보고서에 따르면 CaptiveCrunch로 명명되었으며 Storm-2945 그룹에 귀속된다."
+        },
+        {
+          "severity": "medium",
+          "source": "보안뉴스",
+          "headline": "암젠, 제3자 클라우드 해킹으로 의료정보 유출",
+          "url": "https://www.dailysecu.com/news/articleView.html?idxno=207875",
+          "summary": "미국 바이오 제약기업 암젠이 제3자 클라우드 서비스 환경을 노린 사이버 공격으로 환자 의료정보와 기업 기밀이 외부로 유출됐다. 공격자는 암젠이 직접 운영하는 시스템이 아닌 외부 클라우드 서비스 제공업체의 저장 환경을 침해해 민감한 데이터를 탈취한 것으로 조사됐다."
+        }
+      ]
+    },
+    {
+      "label": "침해 사고",
+      "type": "cards",
+      "items": [
+        {
+          "severity": "incident",
+          "source": "보안뉴스",
+          "headline": "KT 유출사고, 과징금 540억 결론",
+          "url": "https://www.ddaily.co.kr/page/view/2026073110571088500",
+          "summary": "KT 유출사고에 대해 정부가 고발한 후 추가 처분이 예상되고 있다. KT는 해당 사고로 과징금 540억 원의 처분을 받았으며, 정부의 추가 조치 가능성에 대해 우려가 커지고 있다."
+        },
+        {
+          "severity": "incident",
+          "source": "보안뉴스",
+          "headline": "CRPx0 랜섬웨어, 현대차 터키 운영부문 침해",
+          "url": "https://gbhackers.com/crpx0-ransomware-claims-hyundai-turkey-breach/",
+          "summary": "CRPx0 랜섬웨어 그룹은 현대차 터키 운영부문을 침해해 1.5GB의 인사 및 채용 데이터를 유출했다. 이 그룹은 랜섬웨어와 데이터 유출을 동시에 진행하는 이중 압박 전략을 사용하고 있다."
+        },
+        {
+          "severity": "incident",
+          "source": "보안뉴스",
+          "headline": "현대차 터키 운영부문 데이터 유출",
+          "url": "https://gbhackers.com/crpx0-ransomware-claims-hyundai-turkey-breach/",
+          "summary": "CRPx0 랜섬웨어 그룹은 현대차 터키 운영부문을 침해해 1.5GB의 인사 및 채용 데이터를 유출했다. 이 그룹은 랜섬웨어와 데이터 유출을 동시에 진행하는 이중 압박 전략을 사용하고 있다."
+        }
+      ]
+    },
+    {
+      "label": "동향 & 분석",
+      "type": "trends",
+      "items": [
+        {
+          "lead": "AI 기반 공격 증가",
+          "body": "2026년 상반기에는 AI를 활용한 공격이 4건 중 1건에 달하며, 전년 대비 56% 증가했다. AI는 공격 비용은 수백만 원이지만 피해 비용은 86억 원에 달하는 것으로 나타났다."
+        },
+        {
+          "lead": "국제적 보안 협력 강화",
+          "body": "국내외 보안 기관들이 AI 위협 대응을 위한 협력 강화를 추진하고 있다. 특히, 러시아와 중국 해커들의 구형 VPN 악용에 대한 대응이 강화되고 있다."
+        },
+        {
+          "lead": "취약점 패치 지연",
+          "body": "최근 발견된 취약점들 중 일부는 공개된 공격 코드(PoC)가 빠르게 확산되고 있어 패치가 지연될 경우 심각한 보안 사고로 이어질 수 있다."
+        },
+        {
+          "lead": "랜섬웨어 및 데이터 유출 사고 증가",
+          "body": "랜섬웨어 및 데이터 유출 사고가 지속적으로 증가하고 있으며, 특히 제3자 클라우드 환경을 노리는 공격이 늘고 있다. 이에 따라 기업의 보안 대응 체계가 강화되고 있다."
+        }
+      ]
+    }
+  ]
+}
