@@ -27,6 +27,63 @@
     "added_at": "2026-08-02T20:00:37+09:00"
   },
   {
+    "id": "CVE-2026-68579",
+    "published": "2026-08-02",
+    "last_modified": "2026-08-02",
+    "status": "Received",
+    "description": "FreeRDP before 3.30.0 (<= 3.29.0) contains a heap-based buffer overflow in the Windows clipboard client's CliprdrStream_Read function (client/Windows/wf_cliprdr.c). When an OLE paste consumer (e.g. explorer.exe) calls IStream::Read with a fixed-size buffer of cb bytes, CliprdrStream_Read requests file contents from the RDP server and then copies the response into the caller's buffer using the server-supplied length (req_fsize) instead of cb. A malicious or compromised RDP server can return an oversized CB_FILECONTENTS_RESPONSE, causing an out-of-bounds write of attacker-controlled data into the paste consumer's heap buffer when a user pastes server-offered clipboard file contents.",
+    "cvss": {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:H/A:H",
+      "score": 9.6,
+      "severity": "CRITICAL",
+      "attack_vector": "네트워크",
+      "attack_complexity": "낮음",
+      "privileges_required": "없음",
+      "user_interaction": "필요"
+    },
+    "cwes": [
+      "CWE-787"
+    ],
+    "affected": [],
+    "references": [
+      "https://github.com/FreeRDP/FreeRDP/commit/5e8e987b469b60a3bafadf8f5afc40f91c09f458",
+      "https://github.com/FreeRDP/FreeRDP/security/advisories/GHSA-m37j-jcr2-8gcc",
+      "https://www.vulncheck.com/advisories/freerdp-before-heap-overflow-via-cliprdrstream-read"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-68579",
+    "added_at": "2026-08-03T08:00:45+09:00"
+  },
+  {
+    "id": "CVE-2026-65321",
+    "published": "2026-08-02",
+    "last_modified": "2026-08-02",
+    "status": "Received",
+    "description": "PyAthena prior to 3.35.4 contains a sql injection vulnerability that allows unauthenticated attackers to inject arbitrary SQL by exploiting improper quote-escaping in DefaultParameterFormatter.format(), which routes DELETE and CTAS statements to the _escape_hive function that backslash-escapes single quotes rather than doubling them. Because Athena and Trino do not treat backslashes as escape characters inside string literals, attacker-supplied input such as a single quote followed by SQL syntax causes the parser to terminate the string literal prematurely, enabling data exfiltration via UNION SELECT, execution of destructive statements, and attacker-controlled CTAS destination and content.",
+    "cvss": {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "score": 9.8,
+      "severity": "CRITICAL",
+      "attack_vector": "네트워크",
+      "attack_complexity": "낮음",
+      "privileges_required": "없음",
+      "user_interaction": "없음"
+    },
+    "cwes": [
+      "CWE-89"
+    ],
+    "affected": [],
+    "references": [
+      "https://github.com/laughingman7743/PyAthena",
+      "https://github.com/laughingman7743/PyAthena/security/advisories/GHSA-xwj5-g6cv-4r5c",
+      "https://github.com/pyathena-dev/PyAthena/commit/27901d12245ea722b3b4e211c60e2ade4e7c8efd",
+      "https://www.vulncheck.com/advisories/pyathena-sql-injection-via-defaultparameterformatter-delete-ctas"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-65321",
+    "added_at": "2026-08-03T08:00:45+09:00"
+  },
+  {
     "id": "CVE-2026-67342",
     "published": "2026-08-01",
     "last_modified": "2026-08-01",
