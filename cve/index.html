@@ -41,13 +41,59 @@
     <h1>CVE Archive</h1>
     <p>NVD 기반 Critical CVE를 누적 관리하는 별도 페이지입니다. 블로그에는 CVE 자동 글을 발행하지 않고, 이 페이지에만 기록합니다.</p>
     <div class="meta">
-      <span>Total 377</span>
-      <span>Updated 2026-08-03 08:00 KST</span>
+      <span>Total 379</span>
+      <span>Updated 2026-08-03 20:00 KST</span>
       <span>Source NVD API</span>
     </div>
   </section>
   <div class="notice">중복 제거 기준은 CVE ID입니다. 동일 CVE는 다시 추가하지 않습니다. 실제 악용 여부와 패치 우선순위는 CISA KEV, 벤더 권고, 자산 노출 여부와 함께 검토해야 합니다.</div>
 
+    <article class="cve-card" id="CVE-2026-18589">
+      <div class="cve-top">
+        <a class="cve-id" href="https://nvd.nist.gov/vuln/detail/CVE-2026-18589" target="_blank" rel="noopener">CVE-2026-18589</a>
+        <span class="score">CVSS 9.8 CRITICAL</span>
+      </div>
+      <p class="desc">A vulnerability was found in Wavlink WL-NU516U1 708c073-mt7628. This impacts the function change_password of the file nas.cgi. The manipulation of the argument User1Passwd results in stack-based buffer overflow. The attack can be executed remotely. The exploit has been made public and could be used. The affected component should be upgraded. The vendor was contacted early, responded in a very professional manner and quickly released a fixed version of the affected product.</p>
+      <dl>
+        <div><dt>Published</dt><dd>2026-08-03</dd></div>
+        <div><dt>Last Modified</dt><dd>2026-08-03</dd></div>
+        <div><dt>Status</dt><dd>Received</dd></div>
+        <div><dt>Attack Vector</dt><dd>네트워크</dd></div>
+        <div><dt>Attack Complexity</dt><dd>낮음</dd></div>
+        <div><dt>Privileges</dt><dd>없음</dd></div>
+        <div><dt>User Interaction</dt><dd>없음</dd></div>
+        <div><dt>CWE</dt><dd>CWE-119, CWE-121</dd></div>
+        <div><dt>Affected</dt><dd>NVD CPE 기준 확인 필요</dd></div>
+      </dl>
+      <div class="vector"><code>CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H</code></div>
+      <details>
+        <summary>References</summary>
+        <ul><li><a href="https://dl.wavlink.com/firmware/RD/WINSTAR_NU516U1-WO-A-2026-07-13-4b8a21f-mt7628-squashfs-sysupgrade.bin" target="_blank" rel="noopener">https://dl.wavlink.com/firmware/RD/WINSTAR_NU516U1-WO-A-2026-07-13-4b8a21f-mt7628-squashfs-sysupgrade.bin</a></li><li><a href="https://github.com/oduoke567/WAVLINK-NU516U1-2026-05-1/blob/main/report2.md" target="_blank" rel="noopener">https://github.com/oduoke567/WAVLINK-NU516U1-2026-05-1/blob/main/report2.md</a></li><li><a href="https://vuldb.com/cve/CVE-2026-18589" target="_blank" rel="noopener">https://vuldb.com/cve/CVE-2026-18589</a></li><li><a href="https://vuldb.com/submit/850501" target="_blank" rel="noopener">https://vuldb.com/submit/850501</a></li></ul>
+      </details>
+    </article>
+    <article class="cve-card" id="CVE-2026-18588">
+      <div class="cve-top">
+        <a class="cve-id" href="https://nvd.nist.gov/vuln/detail/CVE-2026-18588" target="_blank" rel="noopener">CVE-2026-18588</a>
+        <span class="score">CVSS 9.8 CRITICAL</span>
+      </div>
+      <p class="desc">A vulnerability has been found in Wavlink WL-NU516U1 708c073-mt7628. This affects the function fgets of the file nas.cgi. The manipulation of the argument CONTENT_LENGTH leads to stack-based buffer overflow. Remote exploitation of the attack is possible. You should upgrade the affected component. The vendor was contacted early, responded in a very professional manner and quickly released a fixed version of the affected product.</p>
+      <dl>
+        <div><dt>Published</dt><dd>2026-08-03</dd></div>
+        <div><dt>Last Modified</dt><dd>2026-08-03</dd></div>
+        <div><dt>Status</dt><dd>Received</dd></div>
+        <div><dt>Attack Vector</dt><dd>네트워크</dd></div>
+        <div><dt>Attack Complexity</dt><dd>낮음</dd></div>
+        <div><dt>Privileges</dt><dd>없음</dd></div>
+        <div><dt>User Interaction</dt><dd>없음</dd></div>
+        <div><dt>CWE</dt><dd>CWE-119, CWE-121</dd></div>
+        <div><dt>Affected</dt><dd>NVD CPE 기준 확인 필요</dd></div>
+      </dl>
+      <div class="vector"><code>CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H</code></div>
+      <details>
+        <summary>References</summary>
+        <ul><li><a href="https://dl.wavlink.com/firmware/RD/WINSTAR_NU516U1-WO-A-2026-07-13-4b8a21f-mt7628-squashfs-sysupgrade.bin" target="_blank" rel="noopener">https://dl.wavlink.com/firmware/RD/WINSTAR_NU516U1-WO-A-2026-07-13-4b8a21f-mt7628-squashfs-sysupgrade.bin</a></li><li><a href="https://github.com/oduoke567/WAVLINK-NU516U1-2026-05-1/blob/main/report2.md" target="_blank" rel="noopener">https://github.com/oduoke567/WAVLINK-NU516U1-2026-05-1/blob/main/report2.md</a></li><li><a href="https://vuldb.com/cve/CVE-2026-18588" target="_blank" rel="noopener">https://vuldb.com/cve/CVE-2026-18588</a></li><li><a href="https://vuldb.com/submit/850500" target="_blank" rel="noopener">https://vuldb.com/submit/850500</a></li></ul>
+      </details>
+    </article>
     <article class="cve-card" id="CVE-2026-8457">
       <div class="cve-top">
         <a class="cve-id" href="https://nvd.nist.gov/vuln/detail/CVE-2026-8457" target="_blank" rel="noopener">CVE-2026-8457</a>
