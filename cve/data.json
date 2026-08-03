@@ -1,5 +1,152 @@
 [
   {
+    "id": "CVE-2026-41452",
+    "published": "2026-08-03",
+    "last_modified": "2026-08-03",
+    "status": "Received",
+    "description": "Krayin CRM 2.2.4 contains a missing authentication vulnerability in the installer middleware that allows unauthenticated remote attackers to overwrite the primary administrator account by sending a crafted HTTP POST request with the X-Requested-With: XMLHttpRequest header to bypass the CanInstall middleware redirect check. Attackers can supply arbitrary name, email, and password values to the admin-config-setup endpoint, which performs an unauthenticated updateOrInsert targeting the hardcoded administrator user ID, enabling full administrative access to all CRM data.",
+    "cvss": {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "score": 9.8,
+      "severity": "CRITICAL",
+      "attack_vector": "네트워크",
+      "attack_complexity": "낮음",
+      "privileges_required": "없음",
+      "user_interaction": "없음"
+    },
+    "cwes": [
+      "CWE-306"
+    ],
+    "affected": [],
+    "references": [
+      "https://jivasecurity.com/writeups/krayin-installer-bypass-account-takeover-cve-2026-41452",
+      "https://www.vulncheck.com/advisories/krayin-crm-missing-authentication-via-install-api-admin-config-setup"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-41452",
+    "added_at": "2026-08-04T08:00:33+09:00"
+  },
+  {
+    "id": "CVE-2026-39932",
+    "published": "2026-08-03",
+    "last_modified": "2026-08-03",
+    "status": "Received",
+    "description": "OpenEMR through 8.2.0 contains a remote code execution vulnerability in the document category tree component (library/classes/Tree.class.php) that allows authenticated administrators to execute arbitrary operating system commands by injecting PHP payloads into the categories database table. Attackers can chain arbitrary SQL execution to alter the id column type to VARCHAR and insert a malicious PHP payload, which is then executed via an unsanitized eval() call whenever any page instantiates CategoryTree, including unauthenticated and low-privilege pages, resulting in command execution as the web server user.",
+    "cvss": {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:C/C:H/I:H/A:H",
+      "score": 9.1,
+      "severity": "CRITICAL",
+      "attack_vector": "네트워크",
+      "attack_complexity": "낮음",
+      "privileges_required": "높음",
+      "user_interaction": "없음"
+    },
+    "cwes": [
+      "CWE-95"
+    ],
+    "affected": [],
+    "references": [
+      "https://jivasecurity.com/writeups/openemr-eval-rce-category-tree-cve-2026-39932",
+      "https://www.vulncheck.com/advisories/openemr-remote-code-execution-via-categorytree-eval-injection"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-39932",
+    "added_at": "2026-08-04T08:00:33+09:00"
+  },
+  {
+    "id": "CVE-2026-18616",
+    "published": "2026-08-03",
+    "last_modified": "2026-08-03",
+    "status": "Received",
+    "description": "A vulnerability was identified in GL-iNet GL-MT3000 up to 4.4.5. The impacted element is the function server.set_peer of the file /cgi-bin/glc of the component wg-server.so Native Plugin. The manipulation of the argument public_key leads to command injection. Remote exploitation of the attack is possible. The exploit is publicly available and might be used. The vendor was contacted early about this disclosure and confirmed the existence of the vulnerability.",
+    "cvss": {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "score": 9.8,
+      "severity": "CRITICAL",
+      "attack_vector": "네트워크",
+      "attack_complexity": "낮음",
+      "privileges_required": "없음",
+      "user_interaction": "없음"
+    },
+    "cwes": [
+      "CWE-74",
+      "CWE-77"
+    ],
+    "affected": [],
+    "references": [
+      "https://github.com/StrTzz123/iot_vul/blob/main/GL-iNet/MT3000/4.4.5/wg_set_peer_rce/CVE.md",
+      "https://vuldb.com/cve/CVE-2026-18616",
+      "https://vuldb.com/submit/851580",
+      "https://vuldb.com/vuln/385536",
+      "https://vuldb.com/vuln/385536/cti"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-18616",
+    "added_at": "2026-08-04T08:00:33+09:00"
+  },
+  {
+    "id": "CVE-2026-18614",
+    "published": "2026-08-03",
+    "last_modified": "2026-08-03",
+    "status": "Received",
+    "description": "A vulnerability was found in GL-iNet GL-MT3000 up to 4.4.5. Impacted is the function s2s.enable_echo_server of the file /cgi-bin/glc of the component s2s.so Native Plugin. Performing a manipulation of the argument port results in command injection. The attack may be initiated remotely. The exploit has been made public and could be used. The vendor was contacted early about this disclosure and confirmed the existence of the vulnerability.",
+    "cvss": {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "score": 9.8,
+      "severity": "CRITICAL",
+      "attack_vector": "네트워크",
+      "attack_complexity": "낮음",
+      "privileges_required": "없음",
+      "user_interaction": "없음"
+    },
+    "cwes": [
+      "CWE-74",
+      "CWE-77"
+    ],
+    "affected": [],
+    "references": [
+      "https://github.com/StrTzz123/iot_vul/blob/main/GL-iNet/MT3000/4.4.5/s2s_enable_echo_server_glc_rce/CVE.md",
+      "https://vuldb.com/cve/CVE-2026-18614",
+      "https://vuldb.com/submit/851558",
+      "https://vuldb.com/vuln/385534",
+      "https://vuldb.com/vuln/385534/cti"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-18614",
+    "added_at": "2026-08-04T08:00:33+09:00"
+  },
+  {
+    "id": "CVE-2026-18602",
+    "published": "2026-08-03",
+    "last_modified": "2026-08-03",
+    "status": "Received",
+    "description": "A vulnerability was determined in GL.iNet GL-MT3000 up to 4.4.5. Affected is the function ovpn-client.get_recommend_config of the file /cgi-bin/glc of the component ovpn-client.so Native Plugin. Executing a manipulation of the argument Hostname can lead to command injection. The attack can be executed remotely. The exploit has been publicly disclosed and may be utilized. The vendor was contacted early about this disclosure and confirmed the existence of the vulnerability.",
+    "cvss": {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "score": 9.8,
+      "severity": "CRITICAL",
+      "attack_vector": "네트워크",
+      "attack_complexity": "낮음",
+      "privileges_required": "없음",
+      "user_interaction": "없음"
+    },
+    "cwes": [
+      "CWE-74",
+      "CWE-77"
+    ],
+    "affected": [],
+    "references": [
+      "https://github.com/StrTzz123/iot_vul/blob/main/GL-iNet/MT3000/4.4.5/ovpn_get_recommend_config_glc_rce/CVE.md",
+      "https://vuldb.com/cve/CVE-2026-18602",
+      "https://vuldb.com/submit/851542",
+      "https://vuldb.com/vuln/385517",
+      "https://vuldb.com/vuln/385517/cti"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-18602",
+    "added_at": "2026-08-04T08:00:33+09:00"
+  },
+  {
     "id": "CVE-2026-18589",
     "published": "2026-08-03",
     "last_modified": "2026-08-03",

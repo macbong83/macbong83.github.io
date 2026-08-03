@@ -41,13 +41,128 @@
     <h1>CVE Archive</h1>
     <p>NVD 기반 Critical CVE를 누적 관리하는 별도 페이지입니다. 블로그에는 CVE 자동 글을 발행하지 않고, 이 페이지에만 기록합니다.</p>
     <div class="meta">
-      <span>Total 379</span>
-      <span>Updated 2026-08-03 20:00 KST</span>
+      <span>Total 384</span>
+      <span>Updated 2026-08-04 08:00 KST</span>
       <span>Source NVD API</span>
     </div>
   </section>
   <div class="notice">중복 제거 기준은 CVE ID입니다. 동일 CVE는 다시 추가하지 않습니다. 실제 악용 여부와 패치 우선순위는 CISA KEV, 벤더 권고, 자산 노출 여부와 함께 검토해야 합니다.</div>
 
+    <article class="cve-card" id="CVE-2026-41452">
+      <div class="cve-top">
+        <a class="cve-id" href="https://nvd.nist.gov/vuln/detail/CVE-2026-41452" target="_blank" rel="noopener">CVE-2026-41452</a>
+        <span class="score">CVSS 9.8 CRITICAL</span>
+      </div>
+      <p class="desc">Krayin CRM 2.2.4 contains a missing authentication vulnerability in the installer middleware that allows unauthenticated remote attackers to overwrite the primary administrator account by sending a crafted HTTP POST request with the X-Requested-With: XMLHttpRequest header to bypass the CanInstall middleware redirect check. Attackers can supply arbitrary name, email, and password values to the admin-config-setup endpoint, which performs an unauthenticated updateOrInsert targeting the hardcoded administrator user ID, enabling full administrative access to all CRM data.</p>
+      <dl>
+        <div><dt>Published</dt><dd>2026-08-03</dd></div>
+        <div><dt>Last Modified</dt><dd>2026-08-03</dd></div>
+        <div><dt>Status</dt><dd>Received</dd></div>
+        <div><dt>Attack Vector</dt><dd>네트워크</dd></div>
+        <div><dt>Attack Complexity</dt><dd>낮음</dd></div>
+        <div><dt>Privileges</dt><dd>없음</dd></div>
+        <div><dt>User Interaction</dt><dd>없음</dd></div>
+        <div><dt>CWE</dt><dd>CWE-306</dd></div>
+        <div><dt>Affected</dt><dd>NVD CPE 기준 확인 필요</dd></div>
+      </dl>
+      <div class="vector"><code>CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H</code></div>
+      <details>
+        <summary>References</summary>
+        <ul><li><a href="https://jivasecurity.com/writeups/krayin-installer-bypass-account-takeover-cve-2026-41452" target="_blank" rel="noopener">https://jivasecurity.com/writeups/krayin-installer-bypass-account-takeover-cve-2026-41452</a></li><li><a href="https://www.vulncheck.com/advisories/krayin-crm-missing-authentication-via-install-api-admin-config-setup" target="_blank" rel="noopener">https://www.vulncheck.com/advisories/krayin-crm-missing-authentication-via-install-api-admin-config-setup</a></li></ul>
+      </details>
+    </article>
+    <article class="cve-card" id="CVE-2026-39932">
+      <div class="cve-top">
+        <a class="cve-id" href="https://nvd.nist.gov/vuln/detail/CVE-2026-39932" target="_blank" rel="noopener">CVE-2026-39932</a>
+        <span class="score">CVSS 9.1 CRITICAL</span>
+      </div>
+      <p class="desc">OpenEMR through 8.2.0 contains a remote code execution vulnerability in the document category tree component (library/classes/Tree.class.php) that allows authenticated administrators to execute arbitrary operating system commands by injecting PHP payloads into the categories database table. Attackers can chain arbitrary SQL execution to alter the id column type to VARCHAR and insert a malicious PHP payload, which is then executed via an unsanitized eval() call whenever any page instantiates CategoryTree, including unauthenticated and low-privilege pages, resulting in command execution as the web server user.</p>
+      <dl>
+        <div><dt>Published</dt><dd>2026-08-03</dd></div>
+        <div><dt>Last Modified</dt><dd>2026-08-03</dd></div>
+        <div><dt>Status</dt><dd>Received</dd></div>
+        <div><dt>Attack Vector</dt><dd>네트워크</dd></div>
+        <div><dt>Attack Complexity</dt><dd>낮음</dd></div>
+        <div><dt>Privileges</dt><dd>높음</dd></div>
+        <div><dt>User Interaction</dt><dd>없음</dd></div>
+        <div><dt>CWE</dt><dd>CWE-95</dd></div>
+        <div><dt>Affected</dt><dd>NVD CPE 기준 확인 필요</dd></div>
+      </dl>
+      <div class="vector"><code>CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:C/C:H/I:H/A:H</code></div>
+      <details>
+        <summary>References</summary>
+        <ul><li><a href="https://jivasecurity.com/writeups/openemr-eval-rce-category-tree-cve-2026-39932" target="_blank" rel="noopener">https://jivasecurity.com/writeups/openemr-eval-rce-category-tree-cve-2026-39932</a></li><li><a href="https://www.vulncheck.com/advisories/openemr-remote-code-execution-via-categorytree-eval-injection" target="_blank" rel="noopener">https://www.vulncheck.com/advisories/openemr-remote-code-execution-via-categorytree-eval-injection</a></li></ul>
+      </details>
+    </article>
+    <article class="cve-card" id="CVE-2026-18616">
+      <div class="cve-top">
+        <a class="cve-id" href="https://nvd.nist.gov/vuln/detail/CVE-2026-18616" target="_blank" rel="noopener">CVE-2026-18616</a>
+        <span class="score">CVSS 9.8 CRITICAL</span>
+      </div>
+      <p class="desc">A vulnerability was identified in GL-iNet GL-MT3000 up to 4.4.5. The impacted element is the function server.set_peer of the file /cgi-bin/glc of the component wg-server.so Native Plugin. The manipulation of the argument public_key leads to command injection. Remote exploitation of the attack is possible. The exploit is publicly available and might be used. The vendor was contacted early about this disclosure and confirmed the existence of the vulnerability.</p>
+      <dl>
+        <div><dt>Published</dt><dd>2026-08-03</dd></div>
+        <div><dt>Last Modified</dt><dd>2026-08-03</dd></div>
+        <div><dt>Status</dt><dd>Received</dd></div>
+        <div><dt>Attack Vector</dt><dd>네트워크</dd></div>
+        <div><dt>Attack Complexity</dt><dd>낮음</dd></div>
+        <div><dt>Privileges</dt><dd>없음</dd></div>
+        <div><dt>User Interaction</dt><dd>없음</dd></div>
+        <div><dt>CWE</dt><dd>CWE-74, CWE-77</dd></div>
+        <div><dt>Affected</dt><dd>NVD CPE 기준 확인 필요</dd></div>
+      </dl>
+      <div class="vector"><code>CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H</code></div>
+      <details>
+        <summary>References</summary>
+        <ul><li><a href="https://github.com/StrTzz123/iot_vul/blob/main/GL-iNet/MT3000/4.4.5/wg_set_peer_rce/CVE.md" target="_blank" rel="noopener">https://github.com/StrTzz123/iot_vul/blob/main/GL-iNet/MT3000/4.4.5/wg_set_peer_rce/CVE.md</a></li><li><a href="https://vuldb.com/cve/CVE-2026-18616" target="_blank" rel="noopener">https://vuldb.com/cve/CVE-2026-18616</a></li><li><a href="https://vuldb.com/submit/851580" target="_blank" rel="noopener">https://vuldb.com/submit/851580</a></li><li><a href="https://vuldb.com/vuln/385536" target="_blank" rel="noopener">https://vuldb.com/vuln/385536</a></li></ul>
+      </details>
+    </article>
+    <article class="cve-card" id="CVE-2026-18614">
+      <div class="cve-top">
+        <a class="cve-id" href="https://nvd.nist.gov/vuln/detail/CVE-2026-18614" target="_blank" rel="noopener">CVE-2026-18614</a>
+        <span class="score">CVSS 9.8 CRITICAL</span>
+      </div>
+      <p class="desc">A vulnerability was found in GL-iNet GL-MT3000 up to 4.4.5. Impacted is the function s2s.enable_echo_server of the file /cgi-bin/glc of the component s2s.so Native Plugin. Performing a manipulation of the argument port results in command injection. The attack may be initiated remotely. The exploit has been made public and could be used. The vendor was contacted early about this disclosure and confirmed the existence of the vulnerability.</p>
+      <dl>
+        <div><dt>Published</dt><dd>2026-08-03</dd></div>
+        <div><dt>Last Modified</dt><dd>2026-08-03</dd></div>
+        <div><dt>Status</dt><dd>Received</dd></div>
+        <div><dt>Attack Vector</dt><dd>네트워크</dd></div>
+        <div><dt>Attack Complexity</dt><dd>낮음</dd></div>
+        <div><dt>Privileges</dt><dd>없음</dd></div>
+        <div><dt>User Interaction</dt><dd>없음</dd></div>
+        <div><dt>CWE</dt><dd>CWE-74, CWE-77</dd></div>
+        <div><dt>Affected</dt><dd>NVD CPE 기준 확인 필요</dd></div>
+      </dl>
+      <div class="vector"><code>CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H</code></div>
+      <details>
+        <summary>References</summary>
+        <ul><li><a href="https://github.com/StrTzz123/iot_vul/blob/main/GL-iNet/MT3000/4.4.5/s2s_enable_echo_server_glc_rce/CVE.md" target="_blank" rel="noopener">https://github.com/StrTzz123/iot_vul/blob/main/GL-iNet/MT3000/4.4.5/s2s_enable_echo_server_glc_rce/CVE.md</a></li><li><a href="https://vuldb.com/cve/CVE-2026-18614" target="_blank" rel="noopener">https://vuldb.com/cve/CVE-2026-18614</a></li><li><a href="https://vuldb.com/submit/851558" target="_blank" rel="noopener">https://vuldb.com/submit/851558</a></li><li><a href="https://vuldb.com/vuln/385534" target="_blank" rel="noopener">https://vuldb.com/vuln/385534</a></li></ul>
+      </details>
+    </article>
+    <article class="cve-card" id="CVE-2026-18602">
+      <div class="cve-top">
+        <a class="cve-id" href="https://nvd.nist.gov/vuln/detail/CVE-2026-18602" target="_blank" rel="noopener">CVE-2026-18602</a>
+        <span class="score">CVSS 9.8 CRITICAL</span>
+      </div>
+      <p class="desc">A vulnerability was determined in GL.iNet GL-MT3000 up to 4.4.5. Affected is the function ovpn-client.get_recommend_config of the file /cgi-bin/glc of the component ovpn-client.so Native Plugin. Executing a manipulation of the argument Hostname can lead to command injection. The attack can be executed remotely. The exploit has been publicly disclosed and may be utilized. The vendor was contacted early about this disclosure and confirmed the existence of the vulnerability.</p>
+      <dl>
+        <div><dt>Published</dt><dd>2026-08-03</dd></div>
+        <div><dt>Last Modified</dt><dd>2026-08-03</dd></div>
+        <div><dt>Status</dt><dd>Received</dd></div>
+        <div><dt>Attack Vector</dt><dd>네트워크</dd></div>
+        <div><dt>Attack Complexity</dt><dd>낮음</dd></div>
+        <div><dt>Privileges</dt><dd>없음</dd></div>
+        <div><dt>User Interaction</dt><dd>없음</dd></div>
+        <div><dt>CWE</dt><dd>CWE-74, CWE-77</dd></div>
+        <div><dt>Affected</dt><dd>NVD CPE 기준 확인 필요</dd></div>
+      </dl>
+      <div class="vector"><code>CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H</code></div>
+      <details>
+        <summary>References</summary>
+        <ul><li><a href="https://github.com/StrTzz123/iot_vul/blob/main/GL-iNet/MT3000/4.4.5/ovpn_get_recommend_config_glc_rce/CVE.md" target="_blank" rel="noopener">https://github.com/StrTzz123/iot_vul/blob/main/GL-iNet/MT3000/4.4.5/ovpn_get_recommend_config_glc_rce/CVE.md</a></li><li><a href="https://vuldb.com/cve/CVE-2026-18602" target="_blank" rel="noopener">https://vuldb.com/cve/CVE-2026-18602</a></li><li><a href="https://vuldb.com/submit/851542" target="_blank" rel="noopener">https://vuldb.com/submit/851542</a></li><li><a href="https://vuldb.com/vuln/385517" target="_blank" rel="noopener">https://vuldb.com/vuln/385517</a></li></ul>
+      </details>
+    </article>
     <article class="cve-card" id="CVE-2026-18589">
       <div class="cve-top">
         <a class="cve-id" href="https://nvd.nist.gov/vuln/detail/CVE-2026-18589" target="_blank" rel="noopener">CVE-2026-18589</a>
