@@ -1,5 +1,301 @@
 [
   {
+    "id": "CVE-2026-18686",
+    "published": "2026-08-04",
+    "last_modified": "2026-08-04",
+    "status": "Received",
+    "description": "A vulnerability was detected in GL.iNet GL-MT3000 up to 4.4.5. The affected element is the function nas-web.add_user of the file /cgi-bin/glc of the component nas-web RPC Wrapper. Performing a manipulation results in command injection. The attack can be initiated remotely. The exploit is now public and may be used. The vendor was contacted early about this disclosure and confirmed the existence of the vulnerability.",
+    "cvss": {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "score": 9.8,
+      "severity": "CRITICAL",
+      "attack_vector": "네트워크",
+      "attack_complexity": "낮음",
+      "privileges_required": "없음",
+      "user_interaction": "없음"
+    },
+    "cwes": [
+      "CWE-74",
+      "CWE-77"
+    ],
+    "affected": [],
+    "references": [
+      "https://github.com/coconut652-7/IOT_Vul_Public/tree/main/Glinet/MT3000/nas-web/ADD_USER_ADD_SHARE",
+      "https://vuldb.com/cve/CVE-2026-18686",
+      "https://vuldb.com/submit/856139",
+      "https://vuldb.com/vuln/385612",
+      "https://vuldb.com/vuln/385612/cti"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-18686",
+    "added_at": "2026-08-04T20:00:06+09:00"
+  },
+  {
+    "id": "CVE-2026-18685",
+    "published": "2026-08-04",
+    "last_modified": "2026-08-04",
+    "status": "Received",
+    "description": "A security vulnerability has been detected in GL.iNet GL-MT3000 up to 4.4.5. Impacted is the function set_upgrade of the file /cgi-bin/glc of the component modem.so. Such manipulation leads to command injection. It is possible to launch the attack remotely. The exploit has been disclosed publicly and may be used. The vendor was contacted early about this disclosure and confirmed the existence of the vulnerability.",
+    "cvss": {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "score": 9.8,
+      "severity": "CRITICAL",
+      "attack_vector": "네트워크",
+      "attack_complexity": "낮음",
+      "privileges_required": "없음",
+      "user_interaction": "없음"
+    },
+    "cwes": [
+      "CWE-74",
+      "CWE-77"
+    ],
+    "affected": [],
+    "references": [
+      "https://github.com/StrTzz123/iot_vul/tree/main/GL-iNet/MT3000/4.4.5/modem_set_upgrade_glc_rce",
+      "https://vuldb.com/cve/CVE-2026-18685",
+      "https://vuldb.com/submit/851593",
+      "https://vuldb.com/vuln/385611",
+      "https://vuldb.com/vuln/385611/cti"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-18685",
+    "added_at": "2026-08-04T20:00:06+09:00"
+  },
+  {
+    "id": "CVE-2026-15721",
+    "published": "2026-08-04",
+    "last_modified": "2026-08-04",
+    "status": "Received",
+    "description": "Cleartext storage of sensitive information vulnerability in Bilin Software and Informatics Consultancy Inc. HUMANIST Digital Human Resources allows SQL Injection.\n\nThis issue affects HUMANIST Digital Human Resources: from 26.0 before 26.1.",
+    "cvss": {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "score": 9.8,
+      "severity": "CRITICAL",
+      "attack_vector": "네트워크",
+      "attack_complexity": "낮음",
+      "privileges_required": "없음",
+      "user_interaction": "없음"
+    },
+    "cwes": [
+      "CWE-312"
+    ],
+    "affected": [],
+    "references": [
+      "https://siberguvenlik.gov.tr/guvenlik-bildirimleri/detay/tr-26-0737"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-15721",
+    "added_at": "2026-08-04T20:00:06+09:00"
+  },
+  {
+    "id": "CVE-2026-14804",
+    "published": "2026-08-04",
+    "last_modified": "2026-08-04",
+    "status": "Received",
+    "description": "Use of hard-coded cryptographic key vulnerability in Bilin Software and Informatics Consultancy Inc. HUMANIST Digital Human Resources allows Read Sensitive Constants Within an Executable.\n\nThis issue affects HUMANIST Digital Human Resources: from 26.0 before 26.1.",
+    "cvss": {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N",
+      "score": 9.1,
+      "severity": "CRITICAL",
+      "attack_vector": "네트워크",
+      "attack_complexity": "낮음",
+      "privileges_required": "없음",
+      "user_interaction": "없음"
+    },
+    "cwes": [
+      "CWE-321"
+    ],
+    "affected": [],
+    "references": [
+      "https://siberguvenlik.gov.tr/guvenlik-bildirimleri/detay/tr-26-0737"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-14804",
+    "added_at": "2026-08-04T20:00:06+09:00"
+  },
+  {
+    "id": "CVE-2026-14175",
+    "published": "2026-08-04",
+    "last_modified": "2026-08-04",
+    "status": "Received",
+    "description": "Unrestricted upload of file with dangerous type vulnerability in Bilin Software and Informatics Consultancy Inc. HUMANIST Digital Human Resources allows Upload a Web Shell to a Web Server.\n\nThis issue affects HUMANIST Digital Human Resources: from 26.0 before 26.1.",
+    "cvss": {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "score": 9.8,
+      "severity": "CRITICAL",
+      "attack_vector": "네트워크",
+      "attack_complexity": "낮음",
+      "privileges_required": "없음",
+      "user_interaction": "없음"
+    },
+    "cwes": [
+      "CWE-434"
+    ],
+    "affected": [],
+    "references": [
+      "https://siberguvenlik.gov.tr/guvenlik-bildirimleri/detay/tr-26-0737"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-14175",
+    "added_at": "2026-08-04T20:00:06+09:00"
+  },
+  {
+    "id": "CVE-2026-48333",
+    "published": "2026-08-03",
+    "last_modified": "2026-08-03",
+    "status": "Received",
+    "description": "Adobe Campaign Classic (ACC) is affected by an Incorrect Authorization vulnerability that could result in privilege escalation. An attacker could exploit this vulnerability to gain elevated privileges. Exploitation of this issue does not require user interaction.",
+    "cvss": {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "score": 9.8,
+      "severity": "CRITICAL",
+      "attack_vector": "네트워크",
+      "attack_complexity": "낮음",
+      "privileges_required": "없음",
+      "user_interaction": "없음"
+    },
+    "cwes": [
+      "CWE-863"
+    ],
+    "affected": [],
+    "references": [
+      "https://helpx.adobe.com/security/products/campaign/apsb26-120.html"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-48333",
+    "added_at": "2026-08-04T20:00:06+09:00"
+  },
+  {
+    "id": "CVE-2026-48331",
+    "published": "2026-08-03",
+    "last_modified": "2026-08-03",
+    "status": "Received",
+    "description": "Adobe Campaign Classic (ACC) is affected by a Server-Side Request Forgery (SSRF) vulnerability that could result in privilege escalation. Exploitation of this issue does not require user interaction. Scope is changed.",
+    "cvss": {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:H",
+      "score": 10.0,
+      "severity": "CRITICAL",
+      "attack_vector": "네트워크",
+      "attack_complexity": "낮음",
+      "privileges_required": "없음",
+      "user_interaction": "없음"
+    },
+    "cwes": [
+      "CWE-918"
+    ],
+    "affected": [],
+    "references": [
+      "https://helpx.adobe.com/security/products/campaign/apsb26-120.html"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-48331",
+    "added_at": "2026-08-04T20:00:06+09:00"
+  },
+  {
+    "id": "CVE-2026-48330",
+    "published": "2026-08-03",
+    "last_modified": "2026-08-03",
+    "status": "Received",
+    "description": "Adobe Campaign Classic (ACC) is affected by an Improper Neutralization of Special Elements used in an SQL Command ('SQL Injection') vulnerability that could result in arbitrary code execution in the context of the current user. An attacker could exploit this vulnerability to execute arbitrary SQL commands, potentially gaining elevated access or control over the application. Exploitation of this issue does not require user interaction. Scope is changed.",
+    "cvss": {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:H",
+      "score": 10.0,
+      "severity": "CRITICAL",
+      "attack_vector": "네트워크",
+      "attack_complexity": "낮음",
+      "privileges_required": "없음",
+      "user_interaction": "없음"
+    },
+    "cwes": [
+      "CWE-89"
+    ],
+    "affected": [],
+    "references": [
+      "https://helpx.adobe.com/security/products/campaign/apsb26-120.html"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-48330",
+    "added_at": "2026-08-04T20:00:06+09:00"
+  },
+  {
+    "id": "CVE-2026-48326",
+    "published": "2026-08-03",
+    "last_modified": "2026-08-03",
+    "status": "Received",
+    "description": "Adobe Campaign Classic (ACC) is affected by an Improper Neutralization of Special Elements used in an SQL Command ('SQL Injection') vulnerability that could result in arbitrary code execution in the context of the current user. A low-privileged attacker could exploit this vulnerability to execute arbitrary code. Exploitation of this issue does not require user interaction. Scope is changed.",
+    "cvss": {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H",
+      "score": 9.9,
+      "severity": "CRITICAL",
+      "attack_vector": "네트워크",
+      "attack_complexity": "낮음",
+      "privileges_required": "낮음",
+      "user_interaction": "없음"
+    },
+    "cwes": [
+      "CWE-89"
+    ],
+    "affected": [],
+    "references": [
+      "https://helpx.adobe.com/security/products/campaign/apsb26-120.html"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-48326",
+    "added_at": "2026-08-04T20:00:06+09:00"
+  },
+  {
+    "id": "CVE-2026-48323",
+    "published": "2026-08-03",
+    "last_modified": "2026-08-03",
+    "status": "Received",
+    "description": "Adobe Campaign Classic (ACC) is affected by an Improper Neutralization of Special Elements Used in a Template Engine vulnerability that could result in arbitrary code execution in the context of the current user. An attacker could exploit this vulnerability to execute arbitrary code. Exploitation of this issue does not require user interaction. Scope is changed.",
+    "cvss": {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:H",
+      "score": 10.0,
+      "severity": "CRITICAL",
+      "attack_vector": "네트워크",
+      "attack_complexity": "낮음",
+      "privileges_required": "없음",
+      "user_interaction": "없음"
+    },
+    "cwes": [
+      "CWE-1336"
+    ],
+    "affected": [],
+    "references": [
+      "https://helpx.adobe.com/security/products/campaign/apsb26-120.html"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-48323",
+    "added_at": "2026-08-04T20:00:06+09:00"
+  },
+  {
+    "id": "CVE-2026-48317",
+    "published": "2026-08-03",
+    "last_modified": "2026-08-03",
+    "status": "Received",
+    "description": "Adobe Campaign Classic (ACC) is affected by an Improper Neutralization of Directives in Dynamically Evaluated Code ('Eval Injection') vulnerability that could result in arbitrary code execution in the context of the current user. A low-privileged attacker could exploit this vulnerability to execute arbitrary code. Exploitation of this issue does not require user interaction. Scope is changed.",
+    "cvss": {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:N",
+      "score": 9.6,
+      "severity": "CRITICAL",
+      "attack_vector": "네트워크",
+      "attack_complexity": "낮음",
+      "privileges_required": "낮음",
+      "user_interaction": "없음"
+    },
+    "cwes": [
+      "CWE-95"
+    ],
+    "affected": [],
+    "references": [
+      "https://helpx.adobe.com/security/products/campaign/apsb26-120.html"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-48317",
+    "added_at": "2026-08-04T20:00:06+09:00"
+  },
+  {
     "id": "CVE-2026-41452",
     "published": "2026-08-03",
     "last_modified": "2026-08-03",
@@ -52,6 +348,37 @@
     ],
     "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-39932",
     "added_at": "2026-08-04T08:00:33+09:00"
+  },
+  {
+    "id": "CVE-2026-18684",
+    "published": "2026-08-03",
+    "last_modified": "2026-08-03",
+    "status": "Received",
+    "description": "A weakness has been identified in GL.iNet GL-MT3000 up to 4.4.5. This issue affects the function remove_profile of the file /cgi-bin/glc of the component modem.so. This manipulation causes command injection. It is possible to initiate the attack remotely. The exploit has been made available to the public and could be used for attacks. The vendor was contacted early about this disclosure and confirmed the existence of the vulnerability.",
+    "cvss": {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "score": 9.8,
+      "severity": "CRITICAL",
+      "attack_vector": "네트워크",
+      "attack_complexity": "낮음",
+      "privileges_required": "없음",
+      "user_interaction": "없음"
+    },
+    "cwes": [
+      "CWE-74",
+      "CWE-77"
+    ],
+    "affected": [],
+    "references": [
+      "https://github.com/StrTzz123/iot_vul/tree/main/GL-iNet/MT3000/4.4.5/modem_remove_profile_glc_rce",
+      "https://vuldb.com/cve/CVE-2026-18684",
+      "https://vuldb.com/submit/851581",
+      "https://vuldb.com/vuln/385610",
+      "https://vuldb.com/vuln/385610/cti"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-18684",
+    "added_at": "2026-08-04T20:00:06+09:00"
   },
   {
     "id": "CVE-2026-18616",
