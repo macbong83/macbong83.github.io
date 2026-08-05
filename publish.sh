@@ -4,6 +4,13 @@
 set -e
 cd "$(dirname "$0")"
 
+# 생성 단계가 실패(날조 차단 등)하면 오늘자 JSON이 없다 → 발행 시도 자체를 중단
+DATE=$(date +%Y-%m-%d)
+if [ ! -f "data/${DATE}.json" ]; then
+  echo "❌ data/${DATE}.json 없음 — 생성 단계 실패로 판단해 발행을 중단합니다."
+  exit 1
+fi
+
 echo "[1/3] 사이트 빌드..."
 python3 build_site.py
 
