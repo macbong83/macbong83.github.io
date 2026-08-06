@@ -1,5 +1,88 @@
 [
   {
+    "id": "CVE-2026-70558",
+    "published": "2026-08-06",
+    "last_modified": "2026-08-06",
+    "status": "Received",
+    "description": "Dinky's POST /download/uploadFromRsByLocal handler passes the caller-supplied path parameter directly to new File(path) and file.transferTo(dest) with no path validation. The route is marked @SaIgnore and /download/** is excluded from the Sa-Token interceptor, so the only guard is a header equality check against a dinkyToken value whose default (efda1551-7958-4e0f-80a8-dfd107df3e38) is hardcoded in source and shipped to every deployment. Anyone who can reach Dinky's HTTP port (8888 by default) and supplies the hardcoded token can write arbitrary files as the Dinky service account. The default Docker image runs on 8888 with no proxy or authentication and chmod 777 on /opt/dinky, so the application's own classpath, launch scripts, and static assets are writable. Demonstrated impact: overwriting /opt/dinky/config/static/index.html served attacker JavaScript to admin browsers immediately, and writing /opt/dinky/org/dinky/Dinky.class executed attacker code as the Dinky service account at the next JVM start via a classpath-shadow launched by script/bin/auto.sh. Writes are uid 9999 (flink), not root, so /etc, /root, /home, and /usr are refused. Affects Dinky v1.2.5 (the current release) and the development branch, where the code is byte-identical.",
+    "cvss": {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "score": 9.8,
+      "severity": "CRITICAL",
+      "attack_vector": "네트워크",
+      "attack_complexity": "낮음",
+      "privileges_required": "없음",
+      "user_interaction": "없음"
+    },
+    "cwes": [
+      "CWE-434"
+    ],
+    "affected": [],
+    "references": [
+      "https://github.com/DataLinkDC/dinky",
+      "https://github.com/DataLinkDC/dinky/issues/4566",
+      "https://github.com/DataLinkDC/dinky/security/advisories/GHSA-2p66-w3p3-5226"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-70558",
+    "added_at": "2026-08-07T08:00:59+09:00"
+  },
+  {
+    "id": "CVE-2026-67622",
+    "published": "2026-08-06",
+    "last_modified": "2026-08-06",
+    "status": "Received",
+    "description": "Flowise through 3.1.4 contains an insecure direct object reference vulnerability in the OpenAI Assistants integration that allows authenticated attackers to access credentials belonging to other workspaces by supplying an arbitrary credential UUID to Assistants endpoints without workspace ownership verification. Attackers can enumerate cross-workspace assistant metadata, retrieve file and vector store listings, and upload files into victim workspaces by exploiting the missing workspace-scoped authorization check in the credential lookup logic.",
+    "cvss": {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:L",
+      "score": 9.9,
+      "severity": "CRITICAL",
+      "attack_vector": "네트워크",
+      "attack_complexity": "낮음",
+      "privileges_required": "낮음",
+      "user_interaction": "없음"
+    },
+    "cwes": [
+      "CWE-639"
+    ],
+    "affected": [],
+    "references": [
+      "https://flowiseai.com/sunset",
+      "https://github.com/Caycon/cve-advisories/blob/main/2026/Flowise/CVE-2026-67622.md"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-67622",
+    "added_at": "2026-08-07T08:00:59+09:00"
+  },
+  {
+    "id": "CVE-2026-53984",
+    "published": "2026-08-06",
+    "last_modified": "2026-08-06",
+    "status": "Received",
+    "description": "Ground Station prior to 0.6.0 contains an unauthenticated database-destruction and arbitrary-data-injection vulnerability in the Socket.IO server's database_backup event handler that allows any unauthenticated network peer to wipe or replace the entire SQLite database by sending a single full_restore command with a caller-supplied SQL blob. Attackers can connect to the Socket.IO server on port 7000 without credentials due to disabled authentication enforcement and a wildcard CORS policy, then emit the database_backup event to drop every existing table and recreate the database from attacker-controlled CREATE TABLE and INSERT INTO statements executed via raw exec_driver_sql, permanently destroying all satellite records, orbital sources, hardware configurations, and observation schedules, or planting fabricated orbital-source URLs and observation entries that redirect the ground station to attacker-controlled servers on the next scheduled sync.",
+    "cvss": {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:H",
+      "score": 9.1,
+      "severity": "CRITICAL",
+      "attack_vector": "네트워크",
+      "attack_complexity": "낮음",
+      "privileges_required": "없음",
+      "user_interaction": "없음"
+    },
+    "cwes": [
+      "CWE-306"
+    ],
+    "affected": [],
+    "references": [
+      "https://github.com/sgoudelis/ground-station",
+      "https://github.com/sgoudelis/ground-station/commit/2ecde82a8814cbea18883ce023bf45cbf06172eb",
+      "https://github.com/sgoudelis/ground-station/security/advisories/GHSA-mjp8-x6h7-229q"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-53984",
+    "added_at": "2026-08-07T08:00:59+09:00"
+  },
+  {
     "id": "CVE-2026-9273",
     "published": "2026-08-05",
     "last_modified": "2026-08-05",

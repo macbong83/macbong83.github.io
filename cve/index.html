@@ -41,13 +41,82 @@
     <h1>CVE Archive</h1>
     <p>NVD 기반 Critical CVE를 누적 관리하는 별도 페이지입니다. 블로그에는 CVE 자동 글을 발행하지 않고, 이 페이지에만 기록합니다.</p>
     <div class="meta">
-      <span>Total 409</span>
-      <span>Updated 2026-08-06 08:00 KST</span>
+      <span>Total 412</span>
+      <span>Updated 2026-08-07 08:00 KST</span>
       <span>Source NVD API</span>
     </div>
   </section>
   <div class="notice">중복 제거 기준은 CVE ID입니다. 동일 CVE는 다시 추가하지 않습니다. 실제 악용 여부와 패치 우선순위는 CISA KEV, 벤더 권고, 자산 노출 여부와 함께 검토해야 합니다.</div>
 
+    <article class="cve-card" id="CVE-2026-70558">
+      <div class="cve-top">
+        <a class="cve-id" href="https://nvd.nist.gov/vuln/detail/CVE-2026-70558" target="_blank" rel="noopener">CVE-2026-70558</a>
+        <span class="score">CVSS 9.8 CRITICAL</span>
+      </div>
+      <p class="desc">Dinky&#x27;s POST /download/uploadFromRsByLocal handler passes the caller-supplied path parameter directly to new File(path) and file.transferTo(dest) with no path validation. The route is marked @SaIgnore and /download/** is excluded from the Sa-Token interceptor, so the only guard is a header equality check against a dinkyToken value whose default (efda1551-7958-4e0f-80a8-dfd107df3e38) is hardcoded in source and shipped to every deployment. Anyone who can reach Dinky&#x27;s HTTP port (8888 by default) and supplies the hardcoded token can write arbitrary files as the Dinky service account. The default Docker image runs on 8888 with no proxy or authentication and chmod 777 on /opt/dinky, so the application&#x27;s own classpath, launch scripts, and static assets are writable. Demonstrated impact: overwriting /opt/dinky/config/static/index.html served attacker JavaScript to admin browsers immediately, and writing /opt/dinky/org/dinky/Dinky.class executed attacker code as the Dinky service account at the next JVM start via a classpath-shadow launched by script/bin/auto.sh. Writes are uid 9999 (flink), not root, so /etc, /root, /home, and /usr are refused. Affects Dinky v1.2.5 (the current release) and the development branch, where the code is byte-identical.</p>
+      <dl>
+        <div><dt>Published</dt><dd>2026-08-06</dd></div>
+        <div><dt>Last Modified</dt><dd>2026-08-06</dd></div>
+        <div><dt>Status</dt><dd>Received</dd></div>
+        <div><dt>Attack Vector</dt><dd>네트워크</dd></div>
+        <div><dt>Attack Complexity</dt><dd>낮음</dd></div>
+        <div><dt>Privileges</dt><dd>없음</dd></div>
+        <div><dt>User Interaction</dt><dd>없음</dd></div>
+        <div><dt>CWE</dt><dd>CWE-434</dd></div>
+        <div><dt>Affected</dt><dd>NVD CPE 기준 확인 필요</dd></div>
+      </dl>
+      <div class="vector"><code>CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H</code></div>
+      <details>
+        <summary>References</summary>
+        <ul><li><a href="https://github.com/DataLinkDC/dinky" target="_blank" rel="noopener">https://github.com/DataLinkDC/dinky</a></li><li><a href="https://github.com/DataLinkDC/dinky/issues/4566" target="_blank" rel="noopener">https://github.com/DataLinkDC/dinky/issues/4566</a></li><li><a href="https://github.com/DataLinkDC/dinky/security/advisories/GHSA-2p66-w3p3-5226" target="_blank" rel="noopener">https://github.com/DataLinkDC/dinky/security/advisories/GHSA-2p66-w3p3-5226</a></li></ul>
+      </details>
+    </article>
+    <article class="cve-card" id="CVE-2026-67622">
+      <div class="cve-top">
+        <a class="cve-id" href="https://nvd.nist.gov/vuln/detail/CVE-2026-67622" target="_blank" rel="noopener">CVE-2026-67622</a>
+        <span class="score">CVSS 9.9 CRITICAL</span>
+      </div>
+      <p class="desc">Flowise through 3.1.4 contains an insecure direct object reference vulnerability in the OpenAI Assistants integration that allows authenticated attackers to access credentials belonging to other workspaces by supplying an arbitrary credential UUID to Assistants endpoints without workspace ownership verification. Attackers can enumerate cross-workspace assistant metadata, retrieve file and vector store listings, and upload files into victim workspaces by exploiting the missing workspace-scoped authorization check in the credential lookup logic.</p>
+      <dl>
+        <div><dt>Published</dt><dd>2026-08-06</dd></div>
+        <div><dt>Last Modified</dt><dd>2026-08-06</dd></div>
+        <div><dt>Status</dt><dd>Received</dd></div>
+        <div><dt>Attack Vector</dt><dd>네트워크</dd></div>
+        <div><dt>Attack Complexity</dt><dd>낮음</dd></div>
+        <div><dt>Privileges</dt><dd>낮음</dd></div>
+        <div><dt>User Interaction</dt><dd>없음</dd></div>
+        <div><dt>CWE</dt><dd>CWE-639</dd></div>
+        <div><dt>Affected</dt><dd>NVD CPE 기준 확인 필요</dd></div>
+      </dl>
+      <div class="vector"><code>CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:L</code></div>
+      <details>
+        <summary>References</summary>
+        <ul><li><a href="https://flowiseai.com/sunset" target="_blank" rel="noopener">https://flowiseai.com/sunset</a></li><li><a href="https://github.com/Caycon/cve-advisories/blob/main/2026/Flowise/CVE-2026-67622.md" target="_blank" rel="noopener">https://github.com/Caycon/cve-advisories/blob/main/2026/Flowise/CVE-2026-67622.md</a></li></ul>
+      </details>
+    </article>
+    <article class="cve-card" id="CVE-2026-53984">
+      <div class="cve-top">
+        <a class="cve-id" href="https://nvd.nist.gov/vuln/detail/CVE-2026-53984" target="_blank" rel="noopener">CVE-2026-53984</a>
+        <span class="score">CVSS 9.1 CRITICAL</span>
+      </div>
+      <p class="desc">Ground Station prior to 0.6.0 contains an unauthenticated database-destruction and arbitrary-data-injection vulnerability in the Socket.IO server&#x27;s database_backup event handler that allows any unauthenticated network peer to wipe or replace the entire SQLite database by sending a single full_restore command with a caller-supplied SQL blob. Attackers can connect to the Socket.IO server on port 7000 without credentials due to disabled authentication enforcement and a wildcard CORS policy, then emit the database_backup event to drop every existing table and recreate the database from attacker-controlled CREATE TABLE and INSERT INTO statements executed via raw exec_driver_sql, permanently destroying all satellite records, orbital sources, hardware configurations, and observation schedules, or planting fabricated orbital-source URLs and observation entries that redirect the ground station to attacker-controlled servers on the next scheduled sync.</p>
+      <dl>
+        <div><dt>Published</dt><dd>2026-08-06</dd></div>
+        <div><dt>Last Modified</dt><dd>2026-08-06</dd></div>
+        <div><dt>Status</dt><dd>Received</dd></div>
+        <div><dt>Attack Vector</dt><dd>네트워크</dd></div>
+        <div><dt>Attack Complexity</dt><dd>낮음</dd></div>
+        <div><dt>Privileges</dt><dd>없음</dd></div>
+        <div><dt>User Interaction</dt><dd>없음</dd></div>
+        <div><dt>CWE</dt><dd>CWE-306</dd></div>
+        <div><dt>Affected</dt><dd>NVD CPE 기준 확인 필요</dd></div>
+      </dl>
+      <div class="vector"><code>CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:H</code></div>
+      <details>
+        <summary>References</summary>
+        <ul><li><a href="https://github.com/sgoudelis/ground-station" target="_blank" rel="noopener">https://github.com/sgoudelis/ground-station</a></li><li><a href="https://github.com/sgoudelis/ground-station/commit/2ecde82a8814cbea18883ce023bf45cbf06172eb" target="_blank" rel="noopener">https://github.com/sgoudelis/ground-station/commit/2ecde82a8814cbea18883ce023bf45cbf06172eb</a></li><li><a href="https://github.com/sgoudelis/ground-station/security/advisories/GHSA-mjp8-x6h7-229q" target="_blank" rel="noopener">https://github.com/sgoudelis/ground-station/security/advisories/GHSA-mjp8-x6h7-229q</a></li></ul>
+      </details>
+    </article>
     <article class="cve-card" id="CVE-2026-9273">
       <div class="cve-top">
         <a class="cve-id" href="https://nvd.nist.gov/vuln/detail/CVE-2026-9273" target="_blank" rel="noopener">CVE-2026-9273</a>
