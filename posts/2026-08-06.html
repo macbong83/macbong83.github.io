@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI, 랜섬웨어 — 2026.08.06 보안 브리핑 | SecuLog</title>
+<meta name="description" content="오늘 주요 취약점·침해 사고·위협 트렌드 요약.">
+<meta name="keywords" content="AI, 랜섬웨어, 취약점, 침해사고, 보안">
+<meta name="author" content="Felix">
+<meta property="og:type" content="article">
+<meta property="og:title" content="AI, 랜섬웨어 — 2026.08.06 보안 브리핑">
+<meta property="og:description" content="오늘 주요 취약점·침해 사고·위협 트렌드 요약.">
+<meta property="og:url" content="https://macbong83.github.io/posts/2026-08-06.html">
+<meta property="og:site_name" content="SecuLog">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="AI, 랜섬웨어 — 2026.08.06 보안 브리핑">
+<meta name="twitter:description" content="오늘 주요 취약점·침해 사고·위협 트렌드 요약.">
+<link rel="canonical" href="https://macbong83.github.io/posts/2026-08-06.html">
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: -apple-system, 'Malgun Gothic', 'Apple SD Gothic Neo', Arial, sans-serif; background: #f4f5f7; color: #1a1a2e; line-height: 1.6; }
+  a { text-decoration: none; color: inherit; }
+  .wrapper { max-width: 700px; margin: 32px auto; background: #ffffff; border-radius: 12px; overflow: hidden; box-shadow: 0 2px 20px rgba(0,0,0,0.08); }
+  .header { background: #eef0f4; padding: 28px 36px 24px; display: flex; align-items: center; justify-content: space-between; gap: 16px; border-bottom: 3px solid #0d1b3e; }
+  .wordmark { font-size: 26px; font-weight: 800; letter-spacing: -0.02em; color: #0d1b3e; }
+  .wordmark .accent { color: #2563eb; }
+  .header-meta { text-align: right; }
+  .header-meta .nl-label { font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase; color: #6b7488; margin-bottom: 4px; }
+  .header-meta .nl-title { font-size: 17px; font-weight: 700; color: #0d1b3e; }
+  .header-meta .nl-date { font-size: 12px; color: #8a93a8; margin-top: 3px; }
+  .body { padding: 28px 36px 32px; }
+  .section-label { font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase; color: #8a93a8; font-weight: 600; padding-bottom: 8px; border-bottom: 1px solid #e8eaed; margin-bottom: 4px; margin-top: 28px; }
+  .section-label:first-child { margin-top: 0; }
+  .card { display: block; padding: 16px 0; border-bottom: 1px solid #f0f1f3; transition: background 0.15s; }
+  .card:last-child { border-bottom: none; }
+  .card:hover { background: #f8f9fc; margin: 0 -36px; padding: 16px 36px; }
+  .card-top { display: flex; align-items: center; gap: 8px; margin-bottom: 6px; flex-wrap: wrap; }
+  .badge { font-size: 10px; font-weight: 700; padding: 3px 9px; border-radius: 4px; letter-spacing: 0.04em; }
+  .badge-critical { background: #fff0f0; color: #c0392b; border: 1px solid #f5c6c6; }
+  .badge-high { background: #fff7ee; color: #b94d00; border: 1px solid #fdd5a8; }
+  .badge-medium { background: #fff9e6; color: #856900; border: 1px solid #f9e0a0; }
+  .badge-incident { background: #f3f0ff; color: #6133c0; border: 1px solid #cfc0f5; }
+  .source { font-size: 11px; color: #a0a8b8; }
+  .card-headline { font-size: 14px; font-weight: 600; color: #0d1b3e; margin-bottom: 5px; line-height: 1.45; }
+  .card-headline .arrow { font-size: 12px; color: #2563eb; margin-left: 4px; opacity: 0; transition: opacity 0.15s; }
+  .card:hover .card-headline .arrow { opacity: 1; }
+  .card-summary { font-size: 13px; color: #4a5568; line-height: 1.65; }
+  .trend-box { background: #f8f9fc; border-radius: 10px; padding: 18px 20px; margin-top: 6px; }
+  .trend-row { display: flex; gap: 12px; padding: 10px 0; border-bottom: 1px solid #e8eaed; align-items: flex-start; }
+  .trend-row:last-child { border-bottom: none; padding-bottom: 0; }
+  .trend-num { font-size: 11px; font-weight: 700; color: #2563eb; min-width: 22px; padding-top: 2px; }
+  .trend-text { font-size: 13px; color: #4a5568; line-height: 1.6; }
+  .trend-text strong { color: #0d1b3e; font-weight: 600; }
+  .footer { background: #f4f5f7; border-top: 1px solid #e8eaed; padding: 16px 36px; font-size: 11px; color: #9aa0b0; line-height: 1.6; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 8px; }
+  .footer-meta { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; justify-content: flex-end; }
+  .linkedin-link { display: inline-flex; align-items: center; justify-content: center; min-height: 28px; padding: 6px 12px; border-radius: 6px; background: #0a66c2; color: #fff; font-size: 12px; font-weight: 800; letter-spacing: 0.01em; box-shadow: 0 6px 14px rgba(10,102,194,0.16); }
+  .linkedin-link:hover { background: #004182; color: #fff; }
+  .card-inner { display: flex; gap: 14px; }
+  .sev-bar { width: 3px; border-radius: 2px; flex-shrink: 0; margin: 3px 0; }
+  .sev-critical { background: #e74c3c; }
+  .sev-high { background: #e67e22; }
+  .sev-medium { background: #f0b429; }
+  .sev-incident { background: #7c3aed; }
+  .card-content { flex: 1; }
+  @media (max-width: 600px) {
+    .wrapper { margin: 0; border-radius: 0; box-shadow: none; }
+    .header { padding: 18px 20px 16px; flex-direction: column; align-items: flex-start; gap: 8px; }
+    .header-meta { text-align: left; }
+    .body { padding: 18px 20px 24px; }
+    .card:hover { margin: 0 -20px; padding: 16px 20px; }
+    .footer { padding: 14px 20px; flex-direction: column; align-items: flex-start; }
+    .footer-meta { justify-content: flex-start; }
+    .wordmark { font-size: 22px; }
+    .card-headline { font-size: 13px; }
+    .card-summary { font-size: 12px; }
+    .card-headline .arrow { opacity: 1; }
+  }
+</style>
+</head>
+<body>
+<div class="wrapper">
+  <div class="header">
+    <div class="header-logo">
+      <span class="wordmark">Secu<span class="accent">Log</span></span>
+    </div>
+    <div class="header-meta">
+      <div class="nl-label">글로벌 정보보안 뉴스레터</div>
+      <div class="nl-title">보안 브리핑</div>
+      <div class="nl-date">2026년 8월 6일 목요일</div>
+    </div>
+  </div>
+  <div class="body">
+    <div class="section-label">취약점 &amp; 공격</div>
+
+    <a class="card" href="https://thehackernews.com/2026/08/veeam-terraform-mcp-django-patch.html" target="_blank">
+      <div class="card-inner"><div class="sev-bar sev-critical"></div><div class="card-content">
+        <div class="card-top"><span class="badge badge-critical">긴급</span><span class="source">The Hacker News</span></div>
+        <div class="card-headline">Veeam 콘솔 취약점, 관리자 자격 증명 유출 가능성<span class="arrow">↗</span></div>
+        <div class="card-summary">Veeam 콘솔에서 인증 없이 관리자 자격 증명을 얻을 수 있는 취약점이 발견되었다. CVSS 점수 9.5로 평가되며, 이는 매우 심각한 보안 문제이다. 이 취약점을 악용한 공격은 기업의 중요한 데이터에 접근할 수 있다.</div>
+      </div></div>
+    </a>
+
+    <a class="card" href="https://thehackernews.com/2026/08/critical-gitea-flaw-let-unauthenticated.html" target="_blank">
+      <div class="card-inner"><div class="sev-bar sev-critical"></div><div class="card-content">
+        <div class="card-top"><span class="badge badge-critical">긴급</span><span class="source">The Hacker News</span></div>
+        <div class="card-headline">Gitea에서 인증 없이 서버 파일 읽기 가능<span class="arrow">↗</span></div>
+        <div class="card-summary">Gitea의 특정 버전에서 인증 없이 서버 파일을 읽을 수 있는 취약점이 발견되었다. 이 취약점은 CVSS 점수 9.8로 평가되며, 이는 매우 심각한 보안 문제이다. 이 취약점을 악용한 공격은 중요한 데이터를 유출할 수 있다.</div>
+      </div></div>
+    </a>
+
+    <a class="card" href="https://thehackernews.com/2026/08/open-vsx-removes-77-malicious-evil-twin.html" target="_blank">
+      <div class="card-inner"><div class="sev-bar sev-high"></div><div class="card-content">
+        <div class="card-top"><span class="badge badge-high">높음</span><span class="source">The Hacker News</span></div>
+        <div class="card-headline">Open VSX에서 악성 확장 프로그램 77개 제거<span class="arrow">↗</span></div>
+        <div class="card-summary">Open VSX에서 악성 확장 프로그램 77개가 발견되었으며, 이들 확장 프로그램은 개발자 환경 정보를 유출할 수 있다. 이들은 악의적인 목적을 위해 사용자 시스템에 설치된 것으로 보인다.</div>
+      </div></div>
+    </a>
+
+    <a class="card" href="https://securityaffairs.com/196667/hacking/u-s-cisa-adds-langflow-apache-tomcat-and-n-able-n-central-flaws-to-its-known-exploited-vulnerabilities-catalog.html" target="_blank">
+      <div class="card-inner"><div class="sev-bar sev-high"></div><div class="card-content">
+        <div class="card-top"><span class="badge badge-high">높음</span><span class="source">The Hacker News</span></div>
+        <div class="card-headline">Langflow, Apache Tomcat, N-able N-central 취약점 CISA KEV에 추가<span class="arrow">↗</span></div>
+        <div class="card-summary">CISA는 Langflow, Apache Tomcat, N-able N-central의 취약점을 KEV 목록에 추가하였다. 이 취약점들은 현재 악용되고 있으며, 이는 매우 심각한 보안 문제이다.</div>
+      </div></div>
+    </a>
+
+    <a class="card" href="https://thehackernews.com/2026/08/open-vsx-removes-77-malicious-evil-twin.html" target="_blank">
+      <div class="card-inner"><div class="sev-bar sev-medium"></div><div class="card-content">
+        <div class="card-top"><span class="badge badge-medium">중간</span><span class="source">The Hacker News</span></div>
+        <div class="card-headline">Open VSX에서 악성 확장 프로그램 77개 제거<span class="arrow">↗</span></div>
+        <div class="card-summary">Open VSX에서 악성 확장 프로그램 77개가 발견되었으며, 이들 확장 프로그램은 개발자 환경 정보를 유출할 수 있다. 이들은 악의적인 목적을 위해 사용자 시스템에 설치된 것으로 보인다.</div>
+      </div></div>
+    </a>
+
+    <div class="section-label">침해 사고</div>
+
+    <a class="card" href="https://www.securityweek.com/311000-impacted-by-brown-health-medical-group-ma-data-breach/" target="_blank">
+      <div class="card-inner"><div class="sev-bar sev-incident"></div><div class="card-content">
+        <div class="card-top"><span class="badge badge-incident">사고</span><span class="source">SecurityWeek</span></div>
+        <div class="card-headline">Brown Health Medical Group-MA 데이터 유출 사고, 311,000명 정보 유출<span class="arrow">↗</span></div>
+        <div class="card-summary">Brown Health Medical Group-MA의 서버가 해커에 의해 침해되어 311,000명의 개인 정보, 의료 기록 및 금융 정보가 유출되었다. 이는 매우 심각한 보안 사고로, 피해자들에게 큰 불편을 초래할 수 있다.</div>
+      </div></div>
+    </a>
+
+    <a class="card" href="https://securityaffairs.com/196681/uncategorized/brown-health-medical-group-ma-data-breach-exposes-information-of-311000-individuals.html" target="_blank">
+      <div class="card-inner"><div class="sev-bar sev-incident"></div><div class="card-content">
+        <div class="card-top"><span class="badge badge-incident">사고</span><span class="source">SecurityWeek</span></div>
+        <div class="card-headline">Brown Health Medical Group-MA 데이터 유출 사고, 311,000명 정보 유출<span class="arrow">↗</span></div>
+        <div class="card-summary">Brown Health Medical Group-MA의 서버가 해커에 의해 침해되어 311,000명의 개인 정보, 의료 기록 및 금융 정보가 유출되었다. 이는 매우 심각한 보안 사고로, 피해자들에게 큰 불편을 초래할 수 있다.</div>
+      </div></div>
+    </a>
+
+    <a class="card" href="https://www.securityweek.com/311000-impacted-by-brown-health-medical-group-ma-data-breach/" target="_blank">
+      <div class="card-inner"><div class="sev-bar sev-incident"></div><div class="card-content">
+        <div class="card-top"><span class="badge badge-incident">사고</span><span class="source">SecurityWeek</span></div>
+        <div class="card-headline">Brown Health Medical Group-MA 데이터 유출 사고, 311,000명 정보 유출<span class="arrow">↗</span></div>
+        <div class="card-summary">Brown Health Medical Group-MA의 서버가 해커에 의해 침해되어 311,000명의 개인 정보, 의료 기록 및 금융 정보가 유출되었다. 이는 매우 심각한 보안 사고로, 피해자들에게 큰 불편을 초래할 수 있다.</div>
+      </div></div>
+    </a>
+
+    <div class="section-label">동향 &amp; 분석</div>
+    <div class="trend-box">
+      <div class="trend-row">
+        <div class="trend-num">01</div>
+        <div class="trend-text"><strong>AI 기반 공격 증가</strong> — AI 기반의 공격이 급증하고 있으며, 이는 기존의 보안 체계를 근본적으로 변화시키고 있다. AI는 공격자들이 보다 빠르고 효율적으로 공격을 수행할 수 있도록 도와주고 있다.</div>
+      </div>
+      <div class="trend-row">
+        <div class="trend-num">02</div>
+        <div class="trend-text"><strong>AI 에이전트의 위험성</strong> — AI 에이전트는 기존의 내부자 위협과는 다른 방식으로 기업의 보안을 위협할 수 있다. AI는 사용자 PC에서 직접 파일을 암호화하거나 삭제하는 등 위험한 실행 주체가 될 수 있다.</div>
+      </div>
+      <div class="trend-row">
+        <div class="trend-num">03</div>
+        <div class="trend-text"><strong>AI 기반 보안 대응 필요성</strong> — AI 기반의 보안 대응이 필요하다. AI는 공격을 산업화하고 있으며, 기존의 탐지 중심 보안 체계는 예방 중심으로 전환되어야 한다.</div>
+      </div>
+      <div class="trend-row">
+        <div class="trend-num">04</div>
+        <div class="trend-text"><strong>AI 기반 보안의 중요성</strong> — AI 기반의 보안은 기술이 아닌 국가 전략으로서의 중요성이 커지고 있다. AI는 보안 인력을 대체하기보다 더 많은 보안 전문가와 협업을 필요로 한다.</div>
+      </div>
+    </div>
+  </div>
+  <div class="footer">
+    <div>출처: The Hacker News · BleepingComputer · SecurityWeek · KrebsOnSecurity · CISA · NCSC UK · Unit 42 · 보안뉴스 · 데일리시큐 · 전자신문</div>
+    <div class="footer-meta">
+      <span>© 2026 Felix · SecuLog. 본 브리핑은 공개된 보안 뉴스를 기반으로 작성되었습니다.</span>
+    </div>
+  </div>
+</div>
+</body>
+</html>

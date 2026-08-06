@@ -1,0 +1,104 @@
+{
+  "tagline": "글로벌 정보보안 뉴스레터",
+  "title": "보안 브리핑",
+  "date_display": "2026년 8월 6일 목요일",
+  "date_short": "2026.08.06",
+  "sources_line": "The Hacker News · BleepingComputer · SecurityWeek · KrebsOnSecurity · CISA · NCSC UK · Unit 42 · 보안뉴스 · 데일리시큐 · 전자신문",
+  "seo": {
+    "title": "AI, 랜섬웨어 — 2026.08.06 보안 브리핑",
+    "description": "오늘 주요 취약점·침해 사고·위협 트렌드 요약.",
+    "keywords": "AI, 랜섬웨어, 취약점, 침해사고, 보안"
+  },
+  "sections": [
+    {
+      "label": "취약점 & 공격",
+      "type": "cards",
+      "items": [
+        {
+          "severity": "critical",
+          "source": "The Hacker News",
+          "headline": "Veeam 콘솔 취약점, 관리자 자격 증명 유출 가능성",
+          "url": "https://thehackernews.com/2026/08/veeam-terraform-mcp-django-patch.html",
+          "summary": "Veeam 콘솔에서 인증 없이 관리자 자격 증명을 얻을 수 있는 취약점이 발견되었다. CVSS 점수 9.5로 평가되며, 이는 매우 심각한 보안 문제이다. 이 취약점을 악용한 공격은 기업의 중요한 데이터에 접근할 수 있다."
+        },
+        {
+          "severity": "critical",
+          "source": "The Hacker News",
+          "headline": "Gitea에서 인증 없이 서버 파일 읽기 가능",
+          "url": "https://thehackernews.com/2026/08/critical-gitea-flaw-let-unauthenticated.html",
+          "summary": "Gitea의 특정 버전에서 인증 없이 서버 파일을 읽을 수 있는 취약점이 발견되었다. 이 취약점은 CVSS 점수 9.8로 평가되며, 이는 매우 심각한 보안 문제이다. 이 취약점을 악용한 공격은 중요한 데이터를 유출할 수 있다."
+        },
+        {
+          "severity": "high",
+          "source": "The Hacker News",
+          "headline": "Open VSX에서 악성 확장 프로그램 77개 제거",
+          "url": "https://thehackernews.com/2026/08/open-vsx-removes-77-malicious-evil-twin.html",
+          "summary": "Open VSX에서 악성 확장 프로그램 77개가 발견되었으며, 이들 확장 프로그램은 개발자 환경 정보를 유출할 수 있다. 이들은 악의적인 목적을 위해 사용자 시스템에 설치된 것으로 보인다."
+        },
+        {
+          "severity": "high",
+          "source": "The Hacker News",
+          "headline": "Langflow, Apache Tomcat, N-able N-central 취약점 CISA KEV에 추가",
+          "url": "https://securityaffairs.com/196667/hacking/u-s-cisa-adds-langflow-apache-tomcat-and-n-able-n-central-flaws-to-its-known-exploited-vulnerabilities-catalog.html",
+          "summary": "CISA는 Langflow, Apache Tomcat, N-able N-central의 취약점을 KEV 목록에 추가하였다. 이 취약점들은 현재 악용되고 있으며, 이는 매우 심각한 보안 문제이다."
+        },
+        {
+          "severity": "medium",
+          "source": "The Hacker News",
+          "headline": "Open VSX에서 악성 확장 프로그램 77개 제거",
+          "url": "https://thehackernews.com/2026/08/open-vsx-removes-77-malicious-evil-twin.html",
+          "summary": "Open VSX에서 악성 확장 프로그램 77개가 발견되었으며, 이들 확장 프로그램은 개발자 환경 정보를 유출할 수 있다. 이들은 악의적인 목적을 위해 사용자 시스템에 설치된 것으로 보인다."
+        }
+      ]
+    },
+    {
+      "label": "침해 사고",
+      "type": "cards",
+      "items": [
+        {
+          "severity": "incident",
+          "source": "SecurityWeek",
+          "headline": "Brown Health Medical Group-MA 데이터 유출 사고, 311,000명 정보 유출",
+          "url": "https://www.securityweek.com/311000-impacted-by-brown-health-medical-group-ma-data-breach/",
+          "summary": "Brown Health Medical Group-MA의 서버가 해커에 의해 침해되어 311,000명의 개인 정보, 의료 기록 및 금융 정보가 유출되었다. 이는 매우 심각한 보안 사고로, 피해자들에게 큰 불편을 초래할 수 있다."
+        },
+        {
+          "severity": "incident",
+          "source": "SecurityWeek",
+          "headline": "Brown Health Medical Group-MA 데이터 유출 사고, 311,000명 정보 유출",
+          "url": "https://securityaffairs.com/196681/uncategorized/brown-health-medical-group-ma-data-breach-exposes-information-of-311000-individuals.html",
+          "summary": "Brown Health Medical Group-MA의 서버가 해커에 의해 침해되어 311,000명의 개인 정보, 의료 기록 및 금융 정보가 유출되었다. 이는 매우 심각한 보안 사고로, 피해자들에게 큰 불편을 초래할 수 있다."
+        },
+        {
+          "severity": "incident",
+          "source": "SecurityWeek",
+          "headline": "Brown Health Medical Group-MA 데이터 유출 사고, 311,000명 정보 유출",
+          "url": "https://www.securityweek.com/311000-impacted-by-brown-health-medical-group-ma-data-breach/",
+          "summary": "Brown Health Medical Group-MA의 서버가 해커에 의해 침해되어 311,000명의 개인 정보, 의료 기록 및 금융 정보가 유출되었다. 이는 매우 심각한 보안 사고로, 피해자들에게 큰 불편을 초래할 수 있다."
+        }
+      ]
+    },
+    {
+      "label": "동향 & 분석",
+      "type": "trends",
+      "items": [
+        {
+          "lead": "AI 기반 공격 증가",
+          "body": "AI 기반의 공격이 급증하고 있으며, 이는 기존의 보안 체계를 근본적으로 변화시키고 있다. AI는 공격자들이 보다 빠르고 효율적으로 공격을 수행할 수 있도록 도와주고 있다."
+        },
+        {
+          "lead": "AI 에이전트의 위험성",
+          "body": "AI 에이전트는 기존의 내부자 위협과는 다른 방식으로 기업의 보안을 위협할 수 있다. AI는 사용자 PC에서 직접 파일을 암호화하거나 삭제하는 등 위험한 실행 주체가 될 수 있다."
+        },
+        {
+          "lead": "AI 기반 보안 대응 필요성",
+          "body": "AI 기반의 보안 대응이 필요하다. AI는 공격을 산업화하고 있으며, 기존의 탐지 중심 보안 체계는 예방 중심으로 전환되어야 한다."
+        },
+        {
+          "lead": "AI 기반 보안의 중요성",
+          "body": "AI 기반의 보안은 기술이 아닌 국가 전략으로서의 중요성이 커지고 있다. AI는 보안 인력을 대체하기보다 더 많은 보안 전문가와 협업을 필요로 한다."
+        }
+      ]
+    }
+  ]
+}
