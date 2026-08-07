@@ -239,6 +239,34 @@
     "added_at": "2026-08-07T08:00:59+09:00"
   },
   {
+    "id": "CVE-2026-54489",
+    "published": "2026-08-06",
+    "last_modified": "2026-08-07",
+    "status": "Analyzed",
+    "description": "Dell Virtual Storage Integrator for VMware vSphere Client, versions prior to 10.11.1.0, contain(s) a Sensitive Information Disclosure vulnerability. An unauthenticated remote attacker could potentially exploit this vulnerability, leading to information disclosure and session hijacking. This vulnerability is considered critical as it allows an unauthenticated attacker to obtain active session credentials and fully impersonate authenticated users, including administrators. Dell recommends customers to upgrade at the earliest opportunity.",
+    "cvss": {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N",
+      "score": 9.1,
+      "severity": "CRITICAL",
+      "attack_vector": "네트워크",
+      "attack_complexity": "낮음",
+      "privileges_required": "없음",
+      "user_interaction": "없음"
+    },
+    "cwes": [
+      "CWE-200"
+    ],
+    "affected": [
+      "dell virtual_storage_integrator"
+    ],
+    "references": [
+      "https://www.dell.com/support/kbdoc/en-us/000496035/dsa-2026-335-security-update-for-dell-virtual-storage-integrator-for-vmware-vsphere-client-multiple-vulnerabilities"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-54489",
+    "added_at": "2026-08-08T08:00:46+09:00"
+  },
+  {
     "id": "CVE-2026-53984",
     "published": "2026-08-06",
     "last_modified": "2026-08-06",
