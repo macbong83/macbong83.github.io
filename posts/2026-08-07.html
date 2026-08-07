@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>취약점, 랜섬웨어 — 2026.08.07 보안 브리핑 | SecuLog</title>
+<meta name="description" content="오늘 주요 취약점·침해 사고·위협 트렌드 요약.">
+<meta name="keywords" content="CVE, 랜섬웨어, 취약점, 침해사고, 보안">
+<meta name="author" content="Felix">
+<meta property="og:type" content="article">
+<meta property="og:title" content="취약점, 랜섬웨어 — 2026.08.07 보안 브리핑">
+<meta property="og:description" content="오늘 주요 취약점·침해 사고·위협 트렌드 요약.">
+<meta property="og:url" content="https://macbong83.github.io/posts/2026-08-07.html">
+<meta property="og:site_name" content="SecuLog">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="취약점, 랜섬웨어 — 2026.08.07 보안 브리핑">
+<meta name="twitter:description" content="오늘 주요 취약점·침해 사고·위협 트렌드 요약.">
+<link rel="canonical" href="https://macbong83.github.io/posts/2026-08-07.html">
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: -apple-system, 'Malgun Gothic', 'Apple SD Gothic Neo', Arial, sans-serif; background: #f4f5f7; color: #1a1a2e; line-height: 1.6; }
+  a { text-decoration: none; color: inherit; }
+  .wrapper { max-width: 700px; margin: 32px auto; background: #ffffff; border-radius: 12px; overflow: hidden; box-shadow: 0 2px 20px rgba(0,0,0,0.08); }
+  .header { background: #eef0f4; padding: 28px 36px 24px; display: flex; align-items: center; justify-content: space-between; gap: 16px; border-bottom: 3px solid #0d1b3e; }
+  .wordmark { font-size: 26px; font-weight: 800; letter-spacing: -0.02em; color: #0d1b3e; }
+  .wordmark .accent { color: #2563eb; }
+  .header-meta { text-align: right; }
+  .header-meta .nl-label { font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase; color: #6b7488; margin-bottom: 4px; }
+  .header-meta .nl-title { font-size: 17px; font-weight: 700; color: #0d1b3e; }
+  .header-meta .nl-date { font-size: 12px; color: #8a93a8; margin-top: 3px; }
+  .body { padding: 28px 36px 32px; }
+  .section-label { font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase; color: #8a93a8; font-weight: 600; padding-bottom: 8px; border-bottom: 1px solid #e8eaed; margin-bottom: 4px; margin-top: 28px; }
+  .section-label:first-child { margin-top: 0; }
+  .card { display: block; padding: 16px 0; border-bottom: 1px solid #f0f1f3; transition: background 0.15s; }
+  .card:last-child { border-bottom: none; }
+  .card:hover { background: #f8f9fc; margin: 0 -36px; padding: 16px 36px; }
+  .card-top { display: flex; align-items: center; gap: 8px; margin-bottom: 6px; flex-wrap: wrap; }
+  .badge { font-size: 10px; font-weight: 700; padding: 3px 9px; border-radius: 4px; letter-spacing: 0.04em; }
+  .badge-critical { background: #fff0f0; color: #c0392b; border: 1px solid #f5c6c6; }
+  .badge-high { background: #fff7ee; color: #b94d00; border: 1px solid #fdd5a8; }
+  .badge-medium { background: #fff9e6; color: #856900; border: 1px solid #f9e0a0; }
+  .badge-incident { background: #f3f0ff; color: #6133c0; border: 1px solid #cfc0f5; }
+  .source { font-size: 11px; color: #a0a8b8; }
+  .card-headline { font-size: 14px; font-weight: 600; color: #0d1b3e; margin-bottom: 5px; line-height: 1.45; }
+  .card-headline .arrow { font-size: 12px; color: #2563eb; margin-left: 4px; opacity: 0; transition: opacity 0.15s; }
+  .card:hover .card-headline .arrow { opacity: 1; }
+  .card-summary { font-size: 13px; color: #4a5568; line-height: 1.65; }
+  .trend-box { background: #f8f9fc; border-radius: 10px; padding: 18px 20px; margin-top: 6px; }
+  .trend-row { display: flex; gap: 12px; padding: 10px 0; border-bottom: 1px solid #e8eaed; align-items: flex-start; }
+  .trend-row:last-child { border-bottom: none; padding-bottom: 0; }
+  .trend-num { font-size: 11px; font-weight: 700; color: #2563eb; min-width: 22px; padding-top: 2px; }
+  .trend-text { font-size: 13px; color: #4a5568; line-height: 1.6; }
+  .trend-text strong { color: #0d1b3e; font-weight: 600; }
+  .footer { background: #f4f5f7; border-top: 1px solid #e8eaed; padding: 16px 36px; font-size: 11px; color: #9aa0b0; line-height: 1.6; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 8px; }
+  .footer-meta { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; justify-content: flex-end; }
+  .linkedin-link { display: inline-flex; align-items: center; justify-content: center; min-height: 28px; padding: 6px 12px; border-radius: 6px; background: #0a66c2; color: #fff; font-size: 12px; font-weight: 800; letter-spacing: 0.01em; box-shadow: 0 6px 14px rgba(10,102,194,0.16); }
+  .linkedin-link:hover { background: #004182; color: #fff; }
+  .card-inner { display: flex; gap: 14px; }
+  .sev-bar { width: 3px; border-radius: 2px; flex-shrink: 0; margin: 3px 0; }
+  .sev-critical { background: #e74c3c; }
+  .sev-high { background: #e67e22; }
+  .sev-medium { background: #f0b429; }
+  .sev-incident { background: #7c3aed; }
+  .card-content { flex: 1; }
+  @media (max-width: 600px) {
+    .wrapper { margin: 0; border-radius: 0; box-shadow: none; }
+    .header { padding: 18px 20px 16px; flex-direction: column; align-items: flex-start; gap: 8px; }
+    .header-meta { text-align: left; }
+    .body { padding: 18px 20px 24px; }
+    .card:hover { margin: 0 -20px; padding: 16px 20px; }
+    .footer { padding: 14px 20px; flex-direction: column; align-items: flex-start; }
+    .footer-meta { justify-content: flex-start; }
+    .wordmark { font-size: 22px; }
+    .card-headline { font-size: 13px; }
+    .card-summary { font-size: 12px; }
+    .card-headline .arrow { opacity: 1; }
+  }
+</style>
+</head>
+<body>
+<div class="wrapper">
+  <div class="header">
+    <div class="header-logo">
+      <span class="wordmark">Secu<span class="accent">Log</span></span>
+    </div>
+    <div class="header-meta">
+      <div class="nl-label">글로벌 정보보안 뉴스레터</div>
+      <div class="nl-title">보안 브리핑</div>
+      <div class="nl-date">2026년 8월 7일 금요일</div>
+    </div>
+  </div>
+  <div class="body">
+    <div class="section-label">취약점 &amp; 공격</div>
+
+    <a class="card" href="https://thehackernews.com/2026/08/new-zapscape-kvm-flaw-could-let.html" target="_blank">
+      <div class="card-inner"><div class="sev-bar sev-critical"></div><div class="card-content">
+        <div class="card-top"><span class="badge badge-critical">긴급</span><span class="source">The Hacker News</span></div>
+        <div class="card-headline">Zapscape KVM 취약점, L1 가상 머신에서 호스트로 코드 실행 가능<span class="arrow">↗</span></div>
+        <div class="card-summary">Zapscape 취약점(CVE-2026-6)은 L1 가상 머신 내에서 커널 권한을 가진 공격자가 KVM 격리 범위를 벗어나 호스트에서 코드를 실행할 수 있게 해주는 심각한 취약점이다. 중첩 가상화가 비신뢰 가상 머신에 노출될 경우 영향을 받는다.</div>
+      </div></div>
+    </a>
+
+    <a class="card" href="https://thehackernews.com/2026/08/cisco-patches-12-sd-wan-and-ios-xe.html" target="_blank">
+      <div class="card-inner"><div class="sev-bar sev-critical"></div><div class="card-content">
+        <div class="card-top"><span class="badge badge-critical">긴급</span><span class="source">The Hacker News</span></div>
+        <div class="card-headline">Cisco, SD-WAN 및 IOS XE 소프트웨어 12개 취약점 패치<span class="arrow">↗</span></div>
+        <div class="card-summary">Cisco는 Catalyst SD-WAN 및 IOS XE 소프트웨어에 영향을 주는 12개의 심각한 보안 취약점을 패치했다. 이 중 일부 취약점은 CVSS 점수 9.8을 기록하며 실제 악용 사례가 확인되었다.</div>
+      </div></div>
+    </a>
+
+    <a class="card" href="https://thehackernews.com/2026/08/new-interrupt-injection-attack-can.html" target="_blank">
+      <div class="card-inner"><div class="sev-bar sev-critical"></div><div class="card-content">
+        <div class="card-top"><span class="badge badge-critical">긴급</span><span class="source">The Hacker News</span></div>
+        <div class="card-headline">인터럽트 주입 공격, Spectre v2 방어 우회<span class="arrow">↗</span></div>
+        <div class="card-summary">MIT CSAIL 연구팀은 인터럽트 주입 공격을 통해 Intel 및 AMD CPU의 Spectre v2 방어를 우회할 수 있는 새로운 취약점을 발견했다. 이는 프로세서가 브랜치 예측기를 정화하는 과정에서 발생하는 간극을 악용하는 방식이다.</div>
+      </div></div>
+    </a>
+
+    <a class="card" href="https://thehackernews.com/2026/08/cisa-flags-teamcity-cve-2026-63077-rce.html" target="_blank">
+      <div class="card-inner"><div class="sev-bar sev-high"></div><div class="card-content">
+        <div class="card-top"><span class="badge badge-high">높음</span><span class="source">The Hacker News</span></div>
+        <div class="card-headline">TeamCity RCE 취약점(CVE-2026-63077) 악용 중<span class="arrow">↗</span></div>
+        <div class="card-summary">CISA는 JetBrains TeamCity의 RCE 취약점(CVE-2026-63077)이 악용되고 있다고 경고했다. CVSS 점수 9.8을 기록하며, 이 취약점은 인증 없이 원격 코드 실행이 가능하다.</div>
+      </div></div>
+    </a>
+
+    <a class="card" href="https://www.infosecurity-magazine.com/news/khunt-toolkit-oracle-database-sql/" target="_blank">
+      <div class="card-inner"><div class="sev-bar sev-high"></div><div class="card-content">
+        <div class="card-top"><span class="badge badge-high">높음</span><span class="source">The Hacker News</span></div>
+        <div class="card-headline">Oracle DB 내 SQL 주입을 통한 post-exploitation 툴킷 설치<span class="arrow">↗</span></div>
+        <div class="card-summary">공격자는 SQL 주입을 통해 Oracle 데이터베이스 내에 post-exploitation 툴킷을 설치해 Windows SYSTEM 권한을 얻는 공격이 발생했다. 이는 실행 파일을 디스크에 쓰지 않고 Java 소스 코드를 데이터베이스에 컴파일해 실행하는 방식이다.</div>
+      </div></div>
+    </a>
+
+    <a class="card" href="https://thehackernews.com/2026/08/cryptojs-weak-rng-behind-57-million-in.html" target="_blank">
+      <div class="card-inner"><div class="sev-bar sev-medium"></div><div class="card-content">
+        <div class="card-top"><span class="badge badge-medium">중간</span><span class="source">The Hacker News</span></div>
+        <div class="card-headline">CryptoJS 약한 난수 생성기로 인한 570만 달러 손실<span class="arrow">↗</span></div>
+        <div class="card-summary">CryptoJS의 약한 난수 생성기로 인해 다섯 개의 암호 지갑 앱에서 복구 문구 생성에 영향을 받았다. 이로 인해 570만 달러 규모의 자금 유출이 발생했다.</div>
+      </div></div>
+    </a>
+
+    <div class="section-label">침해 사고</div>
+
+    <a class="card" href="https://securityaffairs.com/196766/data-breach/exposed-sisvisa-database-leaks-102000-brazilian-health-surveillance-records.html" target="_blank">
+      <div class="card-inner"><div class="sev-bar sev-incident"></div><div class="card-content">
+        <div class="card-top"><span class="badge badge-incident">사고</span><span class="source">Security Affairs</span></div>
+        <div class="card-headline">SISVISA 데이터베이스 노출로 10만 건의 건강 기록 유출<span class="arrow">↗</span></div>
+        <div class="card-summary">SISVISA 데이터베이스가 노출되어 102,215건의 브라질 건강 기록이 유출되었다. 이는 인증 없이 접근 가능한 데이터베이스로 인해 발생했으며, ID, 세금 정보, 규제 문서가 포함되어 있다.</div>
+      </div></div>
+    </a>
+
+    <a class="card" href="https://securityaffairs.com/196746/cyber-crime/ransom-cartel-leader-sentenced-to-16-years-in-u-s.html" target="_blank">
+      <div class="card-inner"><div class="sev-bar sev-incident"></div><div class="card-content">
+        <div class="card-top"><span class="badge badge-incident">사고</span><span class="source">Security Affairs</span></div>
+        <div class="card-headline">랜섬카르텔 창시자, 16년형 선고<span class="arrow">↗</span></div>
+        <div class="card-summary">랜섬카르텔의 창시자 Maksim Silnikau는 랜섬웨어-as-a-service 운영으로 인해 미국 법원에서 16년형을 선고받았다. 이 그룹은 2021년부터 2023년까지 최소 18개 기업을 공격했다.</div>
+      </div></div>
+    </a>
+
+    <a class="card" href="https://thehackernews.com/2026/08/snowflake-hacker-pleads-guilty-over.html" target="_blank">
+      <div class="card-inner"><div class="sev-bar sev-incident"></div><div class="card-content">
+        <div class="card-top"><span class="badge badge-incident">사고</span><span class="source">SecurityWeek</span></div>
+        <div class="card-headline">Snowflake 해커, 1억 명 이상 영향<span class="arrow">↗</span></div>
+        <div class="card-summary">Connor Riley Moucka는 2024년 Snowflake 고객 계정 침해 사건에 대해 유죄를 인정했다. 이 사건은 최소 165개 기관에 영향을 미쳤으며, 1억 명 이상의 기록이 노출되었다.</div>
+      </div></div>
+    </a>
+
+    <div class="section-label">동향 &amp; 분석</div>
+    <div class="trend-box">
+      <div class="trend-row">
+        <div class="trend-num">01</div>
+        <div class="trend-text"><strong>AI 기반 보안 위협 증가</strong> — AI 에이전트는 기존 보안 체계를 우회할 수 있는 새로운 위협으로 부상하고 있다. AI 에이전트가 자율적으로 행동하며 데이터에 접근하는 방식은 기존의 인력 중심 보안 체계에 새로운 도전을 제기한다.</div>
+      </div>
+      <div class="trend-row">
+        <div class="trend-num">02</div>
+        <div class="trend-text"><strong>취약점 발견 속도 증가</strong> — AI는 기존의 취약점 발견 속도를 10배 이상으로 높이고 있다. 이는 기존의 취약점 검증, 패치, 책임 있는 공개 체계를 재설계해야 한다는 요구로 이어지고 있다.</div>
+      </div>
+      <div class="trend-row">
+        <div class="trend-num">03</div>
+        <div class="trend-text"><strong>보안 인프라의 분절화</strong> — AI 에이전트의 확산으로 인해 기존의 분절화된 보안 체계는 새로운 위협을 효과적으로 추적하기 어렵다. 이는 보안의 초점을 사람에서 AI 에이전트의 권한과 행동으로 확대해야 한다는 필요성을 강조한다.</div>
+      </div>
+      <div class="trend-row">
+        <div class="trend-num">04</div>
+        <div class="trend-text"><strong>AI 도구의 악용 가능성</strong> — AI 도구는 악의적인 목적에 악용될 수 있는 잠재력을 가지고 있다. 예를 들어, &#x27;Ask AI&#x27; 버튼을 통해 LLM 메모리가 조작될 수 있는 새로운 공격 방식이 등장하고 있다.</div>
+      </div>
+    </div>
+  </div>
+  <div class="footer">
+    <div>출처: The Hacker News · BleepingComputer · SecurityWeek · KrebsOnSecurity · CISA · NCSC UK · Unit 42 · 보안뉴스 · 데일리시큐 · 전자신문</div>
+    <div class="footer-meta">
+      <span>© 2026 Felix · SecuLog. 본 브리핑은 공개된 보안 뉴스를 기반으로 작성되었습니다.</span>
+    </div>
+  </div>
+</div>
+</body>
+</html>

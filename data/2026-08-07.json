@@ -1,0 +1,111 @@
+{
+  "tagline": "글로벌 정보보안 뉴스레터",
+  "title": "보안 브리핑",
+  "date_display": "2026년 8월 7일 금요일",
+  "date_short": "2026.08.07",
+  "sources_line": "The Hacker News · BleepingComputer · SecurityWeek · KrebsOnSecurity · CISA · NCSC UK · Unit 42 · 보안뉴스 · 데일리시큐 · 전자신문",
+  "seo": {
+    "title": "취약점, 랜섬웨어 — 2026.08.07 보안 브리핑",
+    "description": "오늘 주요 취약점·침해 사고·위협 트렌드 요약.",
+    "keywords": "CVE, 랜섬웨어, 취약점, 침해사고, 보안"
+  },
+  "sections": [
+    {
+      "label": "취약점 & 공격",
+      "type": "cards",
+      "items": [
+        {
+          "severity": "critical",
+          "source": "The Hacker News",
+          "headline": "Zapscape KVM 취약점, L1 가상 머신에서 호스트로 코드 실행 가능",
+          "url": "https://thehackernews.com/2026/08/new-zapscape-kvm-flaw-could-let.html",
+          "summary": "Zapscape 취약점(CVE-2026-6)은 L1 가상 머신 내에서 커널 권한을 가진 공격자가 KVM 격리 범위를 벗어나 호스트에서 코드를 실행할 수 있게 해주는 심각한 취약점이다. 중첩 가상화가 비신뢰 가상 머신에 노출될 경우 영향을 받는다."
+        },
+        {
+          "severity": "critical",
+          "source": "The Hacker News",
+          "headline": "Cisco, SD-WAN 및 IOS XE 소프트웨어 12개 취약점 패치",
+          "url": "https://thehackernews.com/2026/08/cisco-patches-12-sd-wan-and-ios-xe.html",
+          "summary": "Cisco는 Catalyst SD-WAN 및 IOS XE 소프트웨어에 영향을 주는 12개의 심각한 보안 취약점을 패치했다. 이 중 일부 취약점은 CVSS 점수 9.8을 기록하며 실제 악용 사례가 확인되었다."
+        },
+        {
+          "severity": "critical",
+          "source": "The Hacker News",
+          "headline": "인터럽트 주입 공격, Spectre v2 방어 우회",
+          "url": "https://thehackernews.com/2026/08/new-interrupt-injection-attack-can.html",
+          "summary": "MIT CSAIL 연구팀은 인터럽트 주입 공격을 통해 Intel 및 AMD CPU의 Spectre v2 방어를 우회할 수 있는 새로운 취약점을 발견했다. 이는 프로세서가 브랜치 예측기를 정화하는 과정에서 발생하는 간극을 악용하는 방식이다."
+        },
+        {
+          "severity": "high",
+          "source": "The Hacker News",
+          "headline": "TeamCity RCE 취약점(CVE-2026-63077) 악용 중",
+          "url": "https://thehackernews.com/2026/08/cisa-flags-teamcity-cve-2026-63077-rce.html",
+          "summary": "CISA는 JetBrains TeamCity의 RCE 취약점(CVE-2026-63077)이 악용되고 있다고 경고했다. CVSS 점수 9.8을 기록하며, 이 취약점은 인증 없이 원격 코드 실행이 가능하다."
+        },
+        {
+          "severity": "high",
+          "source": "The Hacker News",
+          "headline": "Oracle DB 내 SQL 주입을 통한 post-exploitation 툴킷 설치",
+          "url": "https://www.infosecurity-magazine.com/news/khunt-toolkit-oracle-database-sql/",
+          "summary": "공격자는 SQL 주입을 통해 Oracle 데이터베이스 내에 post-exploitation 툴킷을 설치해 Windows SYSTEM 권한을 얻는 공격이 발생했다. 이는 실행 파일을 디스크에 쓰지 않고 Java 소스 코드를 데이터베이스에 컴파일해 실행하는 방식이다."
+        },
+        {
+          "severity": "medium",
+          "source": "The Hacker News",
+          "headline": "CryptoJS 약한 난수 생성기로 인한 570만 달러 손실",
+          "url": "https://thehackernews.com/2026/08/cryptojs-weak-rng-behind-57-million-in.html",
+          "summary": "CryptoJS의 약한 난수 생성기로 인해 다섯 개의 암호 지갑 앱에서 복구 문구 생성에 영향을 받았다. 이로 인해 570만 달러 규모의 자금 유출이 발생했다."
+        }
+      ]
+    },
+    {
+      "label": "침해 사고",
+      "type": "cards",
+      "items": [
+        {
+          "severity": "incident",
+          "source": "Security Affairs",
+          "headline": "SISVISA 데이터베이스 노출로 10만 건의 건강 기록 유출",
+          "url": "https://securityaffairs.com/196766/data-breach/exposed-sisvisa-database-leaks-102000-brazilian-health-surveillance-records.html",
+          "summary": "SISVISA 데이터베이스가 노출되어 102,215건의 브라질 건강 기록이 유출되었다. 이는 인증 없이 접근 가능한 데이터베이스로 인해 발생했으며, ID, 세금 정보, 규제 문서가 포함되어 있다."
+        },
+        {
+          "severity": "incident",
+          "source": "Security Affairs",
+          "headline": "랜섬카르텔 창시자, 16년형 선고",
+          "url": "https://securityaffairs.com/196746/cyber-crime/ransom-cartel-leader-sentenced-to-16-years-in-u-s.html",
+          "summary": "랜섬카르텔의 창시자 Maksim Silnikau는 랜섬웨어-as-a-service 운영으로 인해 미국 법원에서 16년형을 선고받았다. 이 그룹은 2021년부터 2023년까지 최소 18개 기업을 공격했다."
+        },
+        {
+          "severity": "incident",
+          "source": "SecurityWeek",
+          "headline": "Snowflake 해커, 1억 명 이상 영향",
+          "url": "https://thehackernews.com/2026/08/snowflake-hacker-pleads-guilty-over.html",
+          "summary": "Connor Riley Moucka는 2024년 Snowflake 고객 계정 침해 사건에 대해 유죄를 인정했다. 이 사건은 최소 165개 기관에 영향을 미쳤으며, 1억 명 이상의 기록이 노출되었다."
+        }
+      ]
+    },
+    {
+      "label": "동향 & 분석",
+      "type": "trends",
+      "items": [
+        {
+          "lead": "AI 기반 보안 위협 증가",
+          "body": "AI 에이전트는 기존 보안 체계를 우회할 수 있는 새로운 위협으로 부상하고 있다. AI 에이전트가 자율적으로 행동하며 데이터에 접근하는 방식은 기존의 인력 중심 보안 체계에 새로운 도전을 제기한다."
+        },
+        {
+          "lead": "취약점 발견 속도 증가",
+          "body": "AI는 기존의 취약점 발견 속도를 10배 이상으로 높이고 있다. 이는 기존의 취약점 검증, 패치, 책임 있는 공개 체계를 재설계해야 한다는 요구로 이어지고 있다."
+        },
+        {
+          "lead": "보안 인프라의 분절화",
+          "body": "AI 에이전트의 확산으로 인해 기존의 분절화된 보안 체계는 새로운 위협을 효과적으로 추적하기 어렵다. 이는 보안의 초점을 사람에서 AI 에이전트의 권한과 행동으로 확대해야 한다는 필요성을 강조한다."
+        },
+        {
+          "lead": "AI 도구의 악용 가능성",
+          "body": "AI 도구는 악의적인 목적에 악용될 수 있는 잠재력을 가지고 있다. 예를 들어, 'Ask AI' 버튼을 통해 LLM 메모리가 조작될 수 있는 새로운 공격 방식이 등장하고 있다."
+        }
+      ]
+    }
+  ]
+}
