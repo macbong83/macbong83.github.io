@@ -1,0 +1,111 @@
+{
+  "tagline": "글로벌 정보보안 뉴스레터",
+  "title": "보안 브리핑",
+  "date_display": "2026년 8월 8일 토요일",
+  "date_short": "2026.08.08",
+  "sources_line": "The Hacker News · BleepingComputer · SecurityWeek · KrebsOnSecurity · CISA · NCSC UK · Unit 42 · 보안뉴스 · 데일리시큐 · 전자신문",
+  "seo": {
+    "title": "취약점, 랜섬웨어 — 2026.08.08 보안 브리핑",
+    "description": "오늘 주요 취약점·침해 사고·위협 트렌드 요약.",
+    "keywords": "CVE, 랜섬웨어, 취약점, 침해사고, 보안"
+  },
+  "sections": [
+    {
+      "label": "취약점 & 공격",
+      "type": "cards",
+      "items": [
+        {
+          "severity": "high",
+          "source": "The Hacker News",
+          "headline": "800개 이상의 악성 npm 패키지, 크로스 플랫폼 RAT 유포",
+          "url": "https://thehackernews.com/2026/08/nearly-800-malicious-npm-packages.html",
+          "summary": "800개 이상의 악성 npm 패키지가 유포되어 Windows, Mac, Linux 시스템을 대상으로 한 크로스 플랫폼 RAT 및 정보 도둑 소프트웨어를 전달하고 있다. 이 패키지들은 AI 기반의 타이포 스퀙팅 이름을 사용하여 사용자를 속이고 있다."
+        },
+        {
+          "severity": "high",
+          "source": "The Hacker News",
+          "headline": "ClickFix 공격, macOS 기반 악성코드로 암호화폐 도난",
+          "url": "https://thehackernews.com/2026/08/clickfix-attacks-deliver-macos-stealer.html",
+          "summary": "ClickFix 스타일의 공격이 macOS 기반 악성코드를 전달하여 암호화폐 자산, 브라우저 저장 비밀번호, Apple iCloud Keychain 데이터, 캐시된 자격 증명을 도난하고 있다. 이 악성코드는 호스트를 분석하고 악성코드를 설치하는 스크립트를 전달한다."
+        },
+        {
+          "severity": "high",
+          "source": "The Hacker News",
+          "headline": "UNC6671, 전화 피싱으로 SaaS 데이터 도난",
+          "url": "https://thehackernews.com/2026/08/unc6671-vishing-attacks-target-personal.html",
+          "summary": "UNC6671이라는 데이터 강탈 그룹이 금융 서비스, 사적 자산, 전문 서비스 기업을 대상으로 전화 피싱 공격을 사용하여 SaaS 데이터를 도난하고 있다. 이 그룹은 기업 직원을 대상으로 IT 지원 직원으로 위장하여 강제로 암호를 요구하고 있다."
+        },
+        {
+          "severity": "high",
+          "source": "Security Affairs",
+          "headline": "WordPress XSS2Shell 취약점, 서버 전체 점령 가능",
+          "url": "https://securityaffairs.com/196820/hacking/wordpress-xss2shell-flaw-turns-simple-login-bug-into-full-server-takeover.html",
+          "summary": "WordPress의 XSS2Shell 취약점은 관리자 권한을 얻고 원격 코드 실행을 가능하게 한다. 사용자는 패치된 버전으로 업데이트해야 한다. 이 취약점은 간단한 존재하지 않는 사용자 이름 입력으로부터 시작된다."
+        },
+        {
+          "severity": "high",
+          "source": "Security Affairs",
+          "headline": "가짜 IT 지원으로 금융 기업 침입",
+          "url": "https://securityaffairs.com/196800/security/hackers-impersonate-it-support-to-breach-leading-financial-companies.html",
+          "summary": "해커들이 가짜 IT 지원팀을 위장하여 MFA 자격 증명을 도난하고 있으며, 200개 이상의 기업, 주요 금융 회사들을 대상으로 하고 있다. Redact, Pink, Falcon, Helix 등의 이름으로 운영되는 해킹 캠페인은 Blackstone, Bridgewater Associates 등에 대한 자격 증명 도둑 웹사이트를 구축하고 있다."
+        },
+        {
+          "severity": "high",
+          "source": "The Hacker News",
+          "headline": "Microsoft 365 AitM 피싱, 금융 이메일 수집",
+          "url": "https://thehackernews.com/2026/08/microsoft-365-aitm-phishing-hijacks.html",
+          "summary": "Microsoft 365 계정을 해킹하여 금융 업무에 관여하는 주요 인력의 이메일을 수집하는 대규모 이메일 기반 피싱 캠페인을 발견했다. 이 공격은 중간자 공격(AitM) 기법을 사용하여 Microsoft 365 계정을 해킹하고 있다."
+        }
+      ]
+    },
+    {
+      "label": "침해 사고",
+      "type": "cards",
+      "items": [
+        {
+          "severity": "incident",
+          "source": "SecurityWeek",
+          "headline": "Unlimited Technology Systems, 380만 명의 데이터 유출",
+          "url": "https://www.securityweek.com/3-8-million-impacted-by-unlimited-technology-systems-data-breach/",
+          "summary": "해커들이 데이터 센터에서 개인, 의료, 보험 정보를 도난한 것으로 나타났으며, 380만 명이 영향을 받았다."
+        },
+        {
+          "severity": "incident",
+          "source": "SecurityWeek",
+          "headline": "UNC6671, 재브랜딩 후 수백만 달러 수익",
+          "url": "https://www.securityweek.com/vishing-extortion-group-unc6671-rebrands-after-making-millions/",
+          "summary": "UNC6671이라는 그룹이 BlackFile에서 Redact, Pink, Helix, Falcon 등으로 재브랜딩하여 운영 확장 중이며, 수백만 달러의 수익을 얻었다."
+        },
+        {
+          "severity": "incident",
+          "source": "SecurityWeek",
+          "headline": "QuickFox VPN, 공급망 공격으로 해킹",
+          "url": "https://www.securityweek.com/in-other-news-ai-slop-limits-apple-bounties-north-carolina-port-attacks-hackers-target-wall-street/",
+          "summary": "QuickFox VPN이 공급망 공격을 통해 해킹되었으며, 이는 중국 데이터 센터 기술 사용 금지와 함께 주목받고 있다."
+        }
+      ]
+    },
+    {
+      "label": "동향 & 분석",
+      "type": "trends",
+      "items": [
+        {
+          "lead": "AI 기반 공격 증가",
+          "body": "AI 기반의 공격 기법이 증가하고 있으며, 이는 타이포 스퀙팅, 자동화된 피싱, 악성코드 유포 등 다양한 형태로 나타나고 있다. 특히, AI가 생성한 콘텐츠를 이용한 공격은 기존의 방어 체계를 우회하는 데 효과적이다."
+        },
+        {
+          "lead": "공급망 취약점 심화",
+          "body": "공급망 취약점이 지속적으로 발견되고 있으며, 이는 소프트웨어 개발 과정에서의 보안 검증 부족과 관련이 있다. 특히, AI 기반의 코드 생성 도구는 공급망 공격에 취약할 수 있다."
+        },
+        {
+          "lead": "보안 업데이트의 중요성 강조",
+          "body": "최근의 보안 취약점과 공격 사례에서 보안 업데이트의 중요성이 강조되고 있다. 특히, Chrome, Microsoft, Apple 등 주요 플랫폼의 보안 패치는 시스템의 안정성과 보안성을 유지하는 데 필수적이다."
+        },
+        {
+          "lead": "국제 규제 강화",
+          "body": "국제적으로 사이버 보안 규제가 강화되고 있으며, EU CRA, 국가 사이버보안 기본지침 등이 시행되고 있다. 이는 기업들이 보안 체계를 업그레이드하고, EDR, NDR, XDR 등 탐지 및 대응 체계를 도입하도록 유도하고 있다."
+        }
+      ]
+    }
+  ]
+}
