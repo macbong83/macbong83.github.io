@@ -1,5 +1,313 @@
 [
   {
+    "id": "CVE-2026-71993",
+    "published": "2026-08-09",
+    "last_modified": "2026-08-09",
+    "status": "Received",
+    "description": "MSI Radix AXE6600 router firmware version v781521 contains a command injection vulnerability in the openvpn function that allows remote attackers to execute arbitrary commands on the affected device. Attackers can exploit the macfilter function to inject malicious commands and obtain root privileges on the underlying system.",
+    "cvss": {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "score": 9.8,
+      "severity": "CRITICAL",
+      "attack_vector": "네트워크",
+      "attack_complexity": "낮음",
+      "privileges_required": "없음",
+      "user_interaction": "없음"
+    },
+    "cwes": [
+      "CWE-78"
+    ],
+    "affected": [],
+    "references": [
+      "https://us.msi.com/Networking/RadiX-AXE6600-WiFi-6E-Tri-Band-Gaming-Router/support",
+      "https://www.msi.com/",
+      "https://www.vulncheck.com/advisories/msi-radix-axe6600-v781521-command-injection-via-openvpn-function"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-71993",
+    "added_at": "2026-08-09T20:00:28+09:00"
+  },
+  {
+    "id": "CVE-2026-71992",
+    "published": "2026-08-09",
+    "last_modified": "2026-08-09",
+    "status": "Received",
+    "description": "MSI Radix AXE6600 router firmware version v781521 contains a command injection vulnerability in the macfilter function that allows remote attackers to execute arbitrary commands on the affected device. Attackers can exploit the macfilter function to inject malicious commands and obtain root privileges on the underlying system.",
+    "cvss": {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "score": 9.8,
+      "severity": "CRITICAL",
+      "attack_vector": "네트워크",
+      "attack_complexity": "낮음",
+      "privileges_required": "없음",
+      "user_interaction": "없음"
+    },
+    "cwes": [
+      "CWE-78"
+    ],
+    "affected": [],
+    "references": [
+      "https://us.msi.com/Networking/RadiX-AXE6600-WiFi-6E-Tri-Band-Gaming-Router/support",
+      "https://www.msi.com/",
+      "https://www.vulncheck.com/advisories/msi-radix-axe6600-v781521-command-injection-via-macfilter"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-71992",
+    "added_at": "2026-08-09T20:00:28+09:00"
+  },
+  {
+    "id": "CVE-2026-71991",
+    "published": "2026-08-09",
+    "last_modified": "2026-08-09",
+    "status": "Received",
+    "description": "MSI Radix AXE6600 router firmware version v781521 contains a command injection vulnerability in the TelnetSSH function used for Telnet configuration that allows remote attackers to execute arbitrary commands on the affected device. Attackers can exploit this vulnerability through the Telnet configuration interface to inject malicious commands and obtain root privileges on the underlying system.",
+    "cvss": {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "score": 9.8,
+      "severity": "CRITICAL",
+      "attack_vector": "네트워크",
+      "attack_complexity": "낮음",
+      "privileges_required": "없음",
+      "user_interaction": "없음"
+    },
+    "cwes": [
+      "CWE-78"
+    ],
+    "affected": [],
+    "references": [
+      "https://us.msi.com/Networking/RadiX-AXE6600-WiFi-6E-Tri-Band-Gaming-Router/support",
+      "https://www.msi.com/",
+      "https://www.vulncheck.com/advisories/msi-radix-axe6600-v781521-command-injection-via-telnetssh-function-used-for-telnet-configuration"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-71991",
+    "added_at": "2026-08-09T20:00:28+09:00"
+  },
+  {
+    "id": "CVE-2026-71990",
+    "published": "2026-08-09",
+    "last_modified": "2026-08-09",
+    "status": "Received",
+    "description": "MSI Radix AXE6600 router firmware version v781521 contains a command injection vulnerability in the TelnetSSH function used for SSH configuration that allows remote attackers to execute arbitrary commands on the affected device. Attackers can exploit this vulnerability through the SSH configuration interface to inject malicious commands and obtain root privileges on the underlying system.",
+    "cvss": {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "score": 9.8,
+      "severity": "CRITICAL",
+      "attack_vector": "네트워크",
+      "attack_complexity": "낮음",
+      "privileges_required": "없음",
+      "user_interaction": "없음"
+    },
+    "cwes": [
+      "CWE-78"
+    ],
+    "affected": [],
+    "references": [
+      "https://us.msi.com/Networking/RadiX-AXE6600-WiFi-6E-Tri-Band-Gaming-Router/support",
+      "https://www.msi.com/",
+      "https://www.vulncheck.com/advisories/msi-radix-axe6600-v781521-command-injection-via-telnetssh-function"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-71990",
+    "added_at": "2026-08-09T20:00:28+09:00"
+  },
+  {
+    "id": "CVE-2026-71989",
+    "published": "2026-08-09",
+    "last_modified": "2026-08-09",
+    "status": "Received",
+    "description": "MSI Radix AXE6600 router firmware version v781521 contains a command injection vulnerability in the porTrigger function that allows remote attackers to execute arbitrary commands on the affected device. Attackers can exploit this vulnerability through the alg function to execute malicious commands and obtain root privileges on the underlying system.",
+    "cvss": {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "score": 9.8,
+      "severity": "CRITICAL",
+      "attack_vector": "네트워크",
+      "attack_complexity": "낮음",
+      "privileges_required": "없음",
+      "user_interaction": "없음"
+    },
+    "cwes": [
+      "CWE-78"
+    ],
+    "affected": [],
+    "references": [
+      "https://us.msi.com/Networking/RadiX-AXE6600-WiFi-6E-Tri-Band-Gaming-Router/support",
+      "https://www.msi.com/",
+      "https://www.vulncheck.com/advisories/msi-radix-axe6600-v781521-command-injection-via-portrigger-function"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-71989",
+    "added_at": "2026-08-09T20:00:28+09:00"
+  },
+  {
+    "id": "CVE-2026-71988",
+    "published": "2026-08-09",
+    "last_modified": "2026-08-09",
+    "status": "Received",
+    "description": "MSI Radix AXE6600 router firmware version v781521 contains a command injection vulnerability in the portFw function that allows remote attackers to execute arbitrary commands on the affected device. Attackers can exploit this vulnerability through the alg function to execute malicious commands and obtain root privileges on the underlying system.",
+    "cvss": {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "score": 9.8,
+      "severity": "CRITICAL",
+      "attack_vector": "네트워크",
+      "attack_complexity": "낮음",
+      "privileges_required": "없음",
+      "user_interaction": "없음"
+    },
+    "cwes": [
+      "CWE-78"
+    ],
+    "affected": [],
+    "references": [
+      "https://us.msi.com/Networking/RadiX-AXE6600-WiFi-6E-Tri-Band-Gaming-Router/support",
+      "https://www.msi.com/",
+      "https://www.vulncheck.com/advisories/msi-radix-axe6600-v781521-command-injection-via-portfw-function"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-71988",
+    "added_at": "2026-08-09T20:00:28+09:00"
+  },
+  {
+    "id": "CVE-2026-71987",
+    "published": "2026-08-09",
+    "last_modified": "2026-08-09",
+    "status": "Received",
+    "description": "MSI Radix AXE6600 router firmware version v781521 contains a command injection vulnerability in the alg function that allows remote attackers to execute arbitrary commands on the affected device. Attackers can exploit this vulnerability through the alg function to execute malicious commands and obtain root privileges on the underlying system.",
+    "cvss": {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "score": 9.8,
+      "severity": "CRITICAL",
+      "attack_vector": "네트워크",
+      "attack_complexity": "낮음",
+      "privileges_required": "없음",
+      "user_interaction": "없음"
+    },
+    "cwes": [
+      "CWE-78"
+    ],
+    "affected": [],
+    "references": [
+      "https://us.msi.com/Networking/RadiX-AXE6600-WiFi-6E-Tri-Band-Gaming-Router/support",
+      "https://www.msi.com/",
+      "https://www.vulncheck.com/advisories/msi-radix-axe6600-v781521-command-injection-via-alg-function"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-71987",
+    "added_at": "2026-08-09T20:00:28+09:00"
+  },
+  {
+    "id": "CVE-2026-71986",
+    "published": "2026-08-09",
+    "last_modified": "2026-08-09",
+    "status": "Received",
+    "description": "MSI Radix AXE6600 router firmware version v781521 contains a command injection vulnerability in the dmz function that allows remote attackers to execute arbitrary commands on the affected device. Attackers can exploit this vulnerability through the dmz function to execute malicious commands and obtain root privileges on the underlying system.",
+    "cvss": {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "score": 9.8,
+      "severity": "CRITICAL",
+      "attack_vector": "네트워크",
+      "attack_complexity": "낮음",
+      "privileges_required": "없음",
+      "user_interaction": "없음"
+    },
+    "cwes": [
+      "CWE-78"
+    ],
+    "affected": [],
+    "references": [
+      "https://us.msi.com/Networking/RadiX-AXE6600-WiFi-6E-Tri-Band-Gaming-Router/support",
+      "https://www.msi.com/",
+      "https://www.vulncheck.com/advisories/msi-radix-axe6600-v781521-command-injection-via-dmz-function"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-71986",
+    "added_at": "2026-08-09T20:00:28+09:00"
+  },
+  {
+    "id": "CVE-2026-71985",
+    "published": "2026-08-09",
+    "last_modified": "2026-08-09",
+    "status": "Received",
+    "description": "MSI Radix AXE6600 router firmware version v781521 contains a command injection vulnerability in the accesscontrol function that allows remote attackers to execute arbitrary commands on the affected device. Attackers can exploit this vulnerability through the accesscontrol function to execute malicious commands and obtain root privileges on the underlying system.",
+    "cvss": {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "score": 9.8,
+      "severity": "CRITICAL",
+      "attack_vector": "네트워크",
+      "attack_complexity": "낮음",
+      "privileges_required": "없음",
+      "user_interaction": "없음"
+    },
+    "cwes": [
+      "CWE-78"
+    ],
+    "affected": [],
+    "references": [
+      "https://us.msi.com/Networking/RadiX-AXE6600-WiFi-6E-Tri-Band-Gaming-Router/support",
+      "https://www.msi.com/",
+      "https://www.vulncheck.com/advisories/msi-radix-axe6600-v781521-command-injection-via-accesscontrol-function"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-71985",
+    "added_at": "2026-08-09T20:00:28+09:00"
+  },
+  {
+    "id": "CVE-2026-71984",
+    "published": "2026-08-09",
+    "last_modified": "2026-08-09",
+    "status": "Received",
+    "description": "MSI Radix AXE6600 router firmware version v781521 contains a command injection vulnerability in the urlfilter function that allows remote attackers to execute arbitrary commands on the affected device. Attackers can exploit the urlfilter function to inject malicious commands and obtain root privileges on the underlying system.",
+    "cvss": {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "score": 9.8,
+      "severity": "CRITICAL",
+      "attack_vector": "네트워크",
+      "attack_complexity": "낮음",
+      "privileges_required": "없음",
+      "user_interaction": "없음"
+    },
+    "cwes": [
+      "CWE-78"
+    ],
+    "affected": [],
+    "references": [
+      "https://us.msi.com/Networking/RadiX-AXE6600-WiFi-6E-Tri-Band-Gaming-Router/support",
+      "https://www.msi.com/",
+      "https://www.vulncheck.com/advisories/msi-radix-axe6600-v781521-command-injection-via-urlfilter"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-71984",
+    "added_at": "2026-08-09T20:00:28+09:00"
+  },
+  {
+    "id": "CVE-2026-71983",
+    "published": "2026-08-08",
+    "last_modified": "2026-08-08",
+    "status": "Received",
+    "description": "MSI Radix AXE6600 router firmware version v781521 contains a command injection vulnerability in the wps.cgi interface that allows remote attackers to execute arbitrary commands by injecting malicious input through the pin2g, pin5g, or pin6g parameters. Attackers can exploit these unsanitized parameters to execute arbitrary commands on the affected device and obtain root privileges.",
+    "cvss": {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "score": 9.8,
+      "severity": "CRITICAL",
+      "attack_vector": "네트워크",
+      "attack_complexity": "낮음",
+      "privileges_required": "없음",
+      "user_interaction": "없음"
+    },
+    "cwes": [
+      "CWE-78"
+    ],
+    "affected": [],
+    "references": [
+      "https://us.msi.com/Networking/RadiX-AXE6600-WiFi-6E-Tri-Band-Gaming-Router/support",
+      "https://www.msi.com/",
+      "https://www.vulncheck.com/advisories/msi-radix-axe6600-v781521-command-injection-via-wps-cgi"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-71983",
+    "added_at": "2026-08-09T20:00:28+09:00"
+  },
+  {
     "id": "CVE-2026-71958",
     "published": "2026-08-08",
     "last_modified": "2026-08-08",
