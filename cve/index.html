@@ -41,13 +41,59 @@
     <h1>CVE Archive</h1>
     <p>NVD 기반 Critical CVE를 누적 관리하는 별도 페이지입니다. 블로그에는 CVE 자동 글을 발행하지 않고, 이 페이지에만 기록합니다.</p>
     <div class="meta">
-      <span>Total 437</span>
-      <span>Updated 2026-08-10 08:00 KST</span>
+      <span>Total 439</span>
+      <span>Updated 2026-08-11 08:00 KST</span>
       <span>Source NVD API</span>
     </div>
   </section>
   <div class="notice">중복 제거 기준은 CVE ID입니다. 동일 CVE는 다시 추가하지 않습니다. 실제 악용 여부와 패치 우선순위는 CISA KEV, 벤더 권고, 자산 노출 여부와 함께 검토해야 합니다.</div>
 
+    <article class="cve-card" id="CVE-2026-18948">
+      <div class="cve-top">
+        <a class="cve-id" href="https://nvd.nist.gov/vuln/detail/CVE-2026-18948" target="_blank" rel="noopener">CVE-2026-18948</a>
+        <span class="score">CVSS 9.9 CRITICAL</span>
+      </div>
+      <p class="desc">A flaw was found in Feast. The system improperly deserializes user-defined functions (UDFs) stored in its registry, which are serialized using the &#x27;dill&#x27; library. This allows a remote attacker to store a malicious UDF, leading to unauthenticated arbitrary code execution on the feature server in default configurations. An authenticated attacker can also achieve arbitrary code execution on the registry server by bypassing authorization checks during deserialization. This vulnerability can result in cross-tenant data access and lateral movement within the system.</p>
+      <dl>
+        <div><dt>Published</dt><dd>2026-08-10</dd></div>
+        <div><dt>Last Modified</dt><dd>2026-08-10</dd></div>
+        <div><dt>Status</dt><dd>Received</dd></div>
+        <div><dt>Attack Vector</dt><dd>네트워크</dd></div>
+        <div><dt>Attack Complexity</dt><dd>낮음</dd></div>
+        <div><dt>Privileges</dt><dd>낮음</dd></div>
+        <div><dt>User Interaction</dt><dd>없음</dd></div>
+        <div><dt>CWE</dt><dd>NVD 기준 확인 필요</dd></div>
+        <div><dt>Affected</dt><dd>NVD CPE 기준 확인 필요</dd></div>
+      </dl>
+      <div class="vector"><code>CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H</code></div>
+      <details>
+        <summary>References</summary>
+        <ul><li><a href="https://access.redhat.com/security/cve/CVE-2026-18948" target="_blank" rel="noopener">https://access.redhat.com/security/cve/CVE-2026-18948</a></li><li><a href="https://bugzilla.redhat.com/show_bug.cgi?id=2511167" target="_blank" rel="noopener">https://bugzilla.redhat.com/show_bug.cgi?id=2511167</a></li></ul>
+      </details>
+    </article>
+    <article class="cve-card" id="CVE-2026-14450">
+      <div class="cve-top">
+        <a class="cve-id" href="https://nvd.nist.gov/vuln/detail/CVE-2026-14450" target="_blank" rel="noopener">CVE-2026-14450</a>
+        <span class="score">CVSS 9.9 CRITICAL</span>
+      </div>
+      <p class="desc">A flaw was found in the MaaS API. This vulnerability allows any pod within the cluster to bypass the Kuadrant AuthPolicy gateway by forging HTTP headers, specifically `X-MaaS-Username` and `X-MaaS-Group`, which are trusted verbatim. This lack of first-party authentication enables an attacker to gain unauthorized access and escalate privileges. The concrete consequences include the ability to mint Kubernetes ServiceAccount tokens in other tenants&#x27; namespaces, revoke API keys, and exfiltrate sensitive model access configuration.</p>
+      <dl>
+        <div><dt>Published</dt><dd>2026-08-10</dd></div>
+        <div><dt>Last Modified</dt><dd>2026-08-10</dd></div>
+        <div><dt>Status</dt><dd>Received</dd></div>
+        <div><dt>Attack Vector</dt><dd>네트워크</dd></div>
+        <div><dt>Attack Complexity</dt><dd>낮음</dd></div>
+        <div><dt>Privileges</dt><dd>낮음</dd></div>
+        <div><dt>User Interaction</dt><dd>없음</dd></div>
+        <div><dt>CWE</dt><dd>CWE-290</dd></div>
+        <div><dt>Affected</dt><dd>NVD CPE 기준 확인 필요</dd></div>
+      </dl>
+      <div class="vector"><code>CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H</code></div>
+      <details>
+        <summary>References</summary>
+        <ul><li><a href="https://access.redhat.com/security/cve/CVE-2026-14450" target="_blank" rel="noopener">https://access.redhat.com/security/cve/CVE-2026-14450</a></li><li><a href="https://bugzilla.redhat.com/show_bug.cgi?id=2496373" target="_blank" rel="noopener">https://bugzilla.redhat.com/show_bug.cgi?id=2496373</a></li></ul>
+      </details>
+    </article>
     <article class="cve-card" id="CVE-2026-71993">
       <div class="cve-top">
         <a class="cve-id" href="https://nvd.nist.gov/vuln/detail/CVE-2026-71993" target="_blank" rel="noopener">CVE-2026-71993</a>
