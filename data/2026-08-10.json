@@ -1,0 +1,79 @@
+{
+  "tagline": "글로벌 정보보안 뉴스레터",
+  "title": "보안 브리핑",
+  "date_display": "2026년 8월 10일 월요일",
+  "date_short": "2026.08.10",
+  "sources_line": "The Hacker News · BleepingComputer · SecurityWeek · KrebsOnSecurity · CISA · NCSC UK · Unit 42 · 보안뉴스 · 데일리시큐 · 전자신문",
+  "seo": {
+    "title": "러시아 해커, 랜섬웨어 — 2026.08.10 보안 브리핑",
+    "description": "오늘 주요 취약점·침해 사고·위협 트렌드 요약.",
+    "keywords": "러시아 해커, 랜섬웨어, 취약점, 침해사고, 보안"
+  },
+  "sections": [
+    {
+      "label": "취약점 & 공격",
+      "type": "cards",
+      "items": [
+        {
+          "severity": "high",
+          "source": "보안뉴스",
+          "headline": "러시아 해커, 호텔 와이파이를 통해 감시 악성코드 유포",
+          "url": "http://www.boannews.com/media/view.asp?idx=145007",
+          "summary": "러시아 해커들이 호텔 와이파이를 무단 장악한 후 가짜 브라우저 업데이트를 통해 원격제어 악성코드 ‘콘플레이크’를 유포한 것으로 나타났다. 이는 특정 장소에 대한 감시 및 정보 수집을 위한 공격으로 보인다."
+        },
+        {
+          "severity": "medium",
+          "source": "보안뉴스",
+          "headline": "무결성 점검 미흡 시 기업 자산 위협",
+          "url": "http://www.boannews.com/media/view.asp?idx=145071",
+          "summary": "무료 리소스 링크를 가장한 트로이 목마형 악성코드가 기업 디지털 자산을 위협하고 있다. 단순 방화벽을 넘어 엔드포인트 백신, 무결성 점검 등 다층 방어 체계가 필요하다."
+        },
+        {
+          "severity": "medium",
+          "source": "보안뉴스",
+          "headline": "국가 사이버보안 기본지침 개정, EDR/XDR 도입 의무화",
+          "url": "http://www.boannews.com/media/view.asp?idx=144905",
+          "summary": "국가정보원이 ‘국가 사이버보안 기본지침’을 개정하며 EDR, NDR, XDR 등 탐지 및 대응 체계 도입을 의무화했다. 이는 기업의 보안 체계를 업그레이드하는 계기가 될 것으로 보인다."
+        }
+      ]
+    },
+    {
+      "label": "침해 사고",
+      "type": "cards",
+      "items": [
+        {
+          "severity": "incident",
+          "source": "데일리시큐",
+          "headline": "삼프로TV 앱 46만건의 계좌정보 유출 사고 발생",
+          "url": "https://www.ddaily.co.kr/page/view/2026080917003780400",
+          "summary": "삼프로TV 앱에서 46만건의 계좌정보가 유출된 것으로 나타났다. 구체적인 유출 경로와 피해 규모는 아직 명확하지 않다."
+        },
+        {
+          "severity": "incident",
+          "source": "데일리시큐",
+          "headline": "신종 보이스피싱 사기로 피의자 될 위험",
+          "url": "https://www.ddaily.co.kr/page/view/2026080916014006389",
+          "summary": "‘상품권 사면 대출해준다’는 유혹을 통해 피해자가 속아 피해를 입는 신종 보이스피싱이 경보 수준으로 확대되고 있다."
+        }
+      ]
+    },
+    {
+      "label": "동향 & 분석",
+      "type": "trends",
+      "items": [
+        {
+          "lead": "러시아 해커 활동 증가",
+          "body": "러시아 해커들이 호텔 와이파이를 통해 악성코드를 유포하는 등 지속적인 활동이 확인되고 있다. 이는 특정 장소에 대한 감시 및 정보 수집을 위한 전략으로 보인다."
+        },
+        {
+          "lead": "국가 차원의 보안 지침 강화",
+          "body": "국가정보원이 ‘국가 사이버보안 기본지침’을 개정하며 EDR, NDR, XDR 등 탐지 및 대응 체계 도입을 의무화했다. 이는 기업의 보안 체계를 업그레이드하는 계기가 될 것으로 보인다."
+        },
+        {
+          "lead": "유럽 사이버 보안법 강화",
+          "body": "유럽연합(EU)이 디지털 제품에 대한 사이버보안을 강화하는 ‘사이버복원력법(CRA)’을 시행하고 있다. 이에 따라 기업들은 EU CRA에 대한 준비가 필요하다."
+        }
+      ]
+    }
+  ]
+}
