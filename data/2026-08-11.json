@@ -1,0 +1,104 @@
+{
+  "tagline": "글로벌 정보보안 뉴스레터",
+  "title": "보안 브리핑",
+  "date_display": "2026년 8월 11일 화요일",
+  "date_short": "2026.08.11",
+  "sources_line": "The Hacker News · BleepingComputer · SecurityWeek · KrebsOnSecurity · CISA · NCSC UK · Unit 42 · 보안뉴스 · 데일리시큐 · 전자신문",
+  "seo": {
+    "title": "AI, 랜섬웨어 — 2026.08.11 보안 브리핑",
+    "description": "오늘 주요 취약점·침해 사고·위협 트렌드 요약.",
+    "keywords": "AI, 랜섬웨어, 취약점, 침해사고, 보안"
+  },
+  "sections": [
+    {
+      "label": "취약점 & 공격",
+      "type": "cards",
+      "items": [
+        {
+          "severity": "critical",
+          "source": "SecurityWeek",
+          "headline": "Progress LoadMaster 명령 주입 취약점(CVE-2026-8037) 악용",
+          "url": "https://www.securityweek.com/cisa-urges-immediate-patching-of-exploited-progress-loadmaster-vulnerability/",
+          "summary": "CISA는 Progress LoadMaster의 critical-severity 취약점이 악용되고 있음을 확인하고 즉각적인 패치를 권고했다. 이 취약점은 인증 없이 원격 공격자가 임의 명령을 실행할 수 있다."
+        },
+        {
+          "severity": "high",
+          "source": "SecurityWeek",
+          "headline": "Metabase 제로데이 취약점 패치",
+          "url": "https://www.securityweek.com/metabase-patches-vulnerability-exploited-as-zero-day/",
+          "summary": "Metabase는 인증 없이 원격 공격자가 관리자 권한을 얻을 수 있는 제로데이 취약점을 패치했다. 이 취약점은 악용되고 있었으며, 보안 업데이트가 제공되었다."
+        },
+        {
+          "severity": "high",
+          "source": "SecurityWeek",
+          "headline": "Atlassian Rovo AI 취약점(RovoBlast) 발견",
+          "url": "https://gbhackers.com/atlassian-rovo-ai-vulnerability/",
+          "summary": "Atlassian의 Rovo AI는 단일 악성 링크로 기업 데이터를 유출할 수 있는 취약점이 발견되었다. 이 취약점은 URL을 통해 제공된 프롬프트를 악용하여 발생한다."
+        },
+        {
+          "severity": "medium",
+          "source": "SecurityWeek",
+          "headline": "Cisco ClamAV 취약점 공개",
+          "url": "https://www.securityweek.com/cisco-warns-of-high-severity-clamav-vulnerabilities-with-public-poc/",
+          "summary": "Cisco는 공개된 PoC와 함께 고위험 ClamAV 취약점을 경고했다. 원격 공격자가 DoS 조건을 유발할 수 있으며, 패치가 권고된다."
+        },
+        {
+          "severity": "medium",
+          "source": "SecurityWeek",
+          "headline": "HP ThinPro TPM 설계 결함 발견",
+          "url": "https://gbhackers.com/hp-thinpro-tpm-flaw/",
+          "summary": "HP ThinPro의 TPM 설계 결함으로 인해 공격자가 물리적 접근을 통해 LUKS 디스크 암호화 키를 유출할 수 있다. 이는 부팅 정책의 불완전함으로 인한 문제이다."
+        }
+      ]
+    },
+    {
+      "label": "침해 사고",
+      "type": "cards",
+      "items": [
+        {
+          "severity": "incident",
+          "source": "SecurityWeek",
+          "headline": "Levi Strauss 데이터 유출 사고 발생",
+          "url": "https://www.securityweek.com/corporate-data-stolen-in-levi-strauss-cyberattack/",
+          "summary": "사회공학 공격을 통해 Levi Strauss의 직원 3명의 컴퓨터에 접근하여 데이터를 유출한 사건이 발생했다. 이는 내부 보안 절차의 취약점으로 인한 사고이다."
+        },
+        {
+          "severity": "incident",
+          "source": "SecurityWeek",
+          "headline": "체코의 C-ITS 시스템 침해 사고 발생",
+          "url": "http://www.boannews.com/media/view.asp?idx=145011",
+          "summary": "체코의 차세대 지능형 교통체계(C-ITS) 시스템이 침해되어 데이터 유출 및 시스템 장애가 발생했다. 이는 AI 교통 분석 및 사이버보안 시장 확대에 영향을 미쳤다."
+        },
+        {
+          "severity": "incident",
+          "source": "SecurityWeek",
+          "headline": "이스라엘 인구 기록 920만 건 유출",
+          "url": "https://securityaffairs.com/196942/cyber-crime/9-2-million-israeli-records-sold-as-a-new-breach-are-20-years-old.html",
+          "summary": "이스라엘의 인구 기록 920만 건이 유출되었으며, 이는 2005년에 수집된 데이터로 확인되었다. 이는 해킹 및 데이터 거래의 심각성을 보여주는 사례이다."
+        }
+      ]
+    },
+    {
+      "label": "동향 & 분석",
+      "type": "trends",
+      "items": [
+        {
+          "lead": "AI 기반 보안 위협 증가",
+          "body": "AI 기술이 보안 위협으로 악용되고 있으며, 특히 랜섬웨어 및 피싱 공격에서 AI의 활용이 늘고 있다. 이는 보안 대응 전략에 변화를 요구하고 있다."
+        },
+        {
+          "lead": "취약점 패치의 중요성 강조",
+          "body": "최근의 취약점 사례에서 패치 지연이 공격에 악용되는 경우가 많아졌다. 이에 따라 기업 및 기관은 취약점 관리 및 패치 프로세스의 신속성에 주목해야 한다."
+        },
+        {
+          "lead": "공급망 보안의 중요성 재확인",
+          "body": "소프트웨어 및 플러그인의 공급망 취약점이 지속적으로 발견되고 있으며, 이는 보안 전략에서 공급망 보안의 중요성을 강조하고 있다."
+        },
+        {
+          "lead": "AI 기반 보안 솔루션의 발전",
+          "body": "AI 기술이 보안 분석 및 위협 탐지에 활용되고 있으며, 이는 보안 인프라의 현대화를 촉진하고 있다. 그러나 AI 기술의 악용 가능성도 동시에 증가하고 있다."
+        }
+      ]
+    }
+  ]
+}
