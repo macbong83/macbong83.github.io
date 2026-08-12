@@ -41,13 +41,59 @@
     <h1>CVE Archive</h1>
     <p>NVD 기반 Critical CVE를 누적 관리하는 별도 페이지입니다. 블로그에는 CVE 자동 글을 발행하지 않고, 이 페이지에만 기록합니다.</p>
     <div class="meta">
-      <span>Total 454</span>
-      <span>Updated 2026-08-12 20:00 KST</span>
+      <span>Total 460</span>
+      <span>Updated 2026-08-13 08:00 KST</span>
       <span>Source NVD API</span>
     </div>
   </section>
   <div class="notice">중복 제거 기준은 CVE ID입니다. 동일 CVE는 다시 추가하지 않습니다. 실제 악용 여부와 패치 우선순위는 CISA KEV, 벤더 권고, 자산 노출 여부와 함께 검토해야 합니다.</div>
 
+    <article class="cve-card" id="CVE-2026-73519">
+      <div class="cve-top">
+        <a class="cve-id" href="https://nvd.nist.gov/vuln/detail/CVE-2026-73519" target="_blank" rel="noopener">CVE-2026-73519</a>
+        <span class="score">CVSS 9.8 CRITICAL</span>
+      </div>
+      <p class="desc">WolfStack before 25.9.2 contains a hard-coded cluster-authentication secret compiled into every build and published as a constant in src/auth/mod.rs, allowing remote unauthenticated attackers to bypass authentication by supplying this value in the X-WolfStack-Secret header to the require_auth() gate without any session, API key, or user account. Attackers can reach an affected node&#x27;s management port to enumerate all Docker and LXC containers on the host and execute arbitrary commands as root inside any container via the POST /api/containers/{runtime}/{id}/exec endpoint.</p>
+      <dl>
+        <div><dt>Published</dt><dd>2026-08-12</dd></div>
+        <div><dt>Last Modified</dt><dd>2026-08-12</dd></div>
+        <div><dt>Status</dt><dd>Received</dd></div>
+        <div><dt>Attack Vector</dt><dd>네트워크</dd></div>
+        <div><dt>Attack Complexity</dt><dd>낮음</dd></div>
+        <div><dt>Privileges</dt><dd>없음</dd></div>
+        <div><dt>User Interaction</dt><dd>없음</dd></div>
+        <div><dt>CWE</dt><dd>CWE-798</dd></div>
+        <div><dt>Affected</dt><dd>NVD CPE 기준 확인 필요</dd></div>
+      </dl>
+      <div class="vector"><code>CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H</code></div>
+      <details>
+        <summary>References</summary>
+        <ul><li><a href="https://github.com/wolfsoftwaresystemsltd/WolfStack/releases?page=7#release-v25.9.2" target="_blank" rel="noopener">https://github.com/wolfsoftwaresystemsltd/WolfStack/releases?page=7#release-v25.9.2</a></li><li><a href="https://github.com/wolfsoftwaresystemsltd/WolfStack/security/advisories/GHSA-r3mw-2wmq-j6jg" target="_blank" rel="noopener">https://github.com/wolfsoftwaresystemsltd/WolfStack/security/advisories/GHSA-r3mw-2wmq-j6jg</a></li><li><a href="https://www.vulncheck.com/advisories/wolfstack-hard-coded-secret-authentication-bypass-via-x-wolfstack-secret" target="_blank" rel="noopener">https://www.vulncheck.com/advisories/wolfstack-hard-coded-secret-authentication-bypass-via-x-wolfstack-secret</a></li></ul>
+      </details>
+    </article>
+    <article class="cve-card" id="CVE-2026-73268">
+      <div class="cve-top">
+        <a class="cve-id" href="https://nvd.nist.gov/vuln/detail/CVE-2026-73268" target="_blank" rel="noopener">CVE-2026-73268</a>
+        <span class="score">CVSS 9.9 CRITICAL</span>
+      </div>
+      <p class="desc">A flaw was found in the cluster-curator-controller component of multicluster engine (MCE). A tenant with create or update permissions on ClusterCurator resources can inject an arbitrary Job specification. This is possible because the CreateJob() function does not validate user-controlled input when unmarshaling the spec.install.overrideJob raw extension. Successful exploitation allows the injected Job to run with the controller&#x27;s elevated privileges, leading to arbitrary code execution and privilege escalation, potentially accessing cluster-wide secrets.</p>
+      <dl>
+        <div><dt>Published</dt><dd>2026-08-12</dd></div>
+        <div><dt>Last Modified</dt><dd>2026-08-12</dd></div>
+        <div><dt>Status</dt><dd>Received</dd></div>
+        <div><dt>Attack Vector</dt><dd>네트워크</dd></div>
+        <div><dt>Attack Complexity</dt><dd>낮음</dd></div>
+        <div><dt>Privileges</dt><dd>낮음</dd></div>
+        <div><dt>User Interaction</dt><dd>없음</dd></div>
+        <div><dt>CWE</dt><dd>CWE-94</dd></div>
+        <div><dt>Affected</dt><dd>NVD CPE 기준 확인 필요</dd></div>
+      </dl>
+      <div class="vector"><code>CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H</code></div>
+      <details>
+        <summary>References</summary>
+        <ul><li><a href="https://access.redhat.com/security/cve/CVE-2026-73268" target="_blank" rel="noopener">https://access.redhat.com/security/cve/CVE-2026-73268</a></li><li><a href="https://bugzilla.redhat.com/show_bug.cgi?id=2514219" target="_blank" rel="noopener">https://bugzilla.redhat.com/show_bug.cgi?id=2514219</a></li></ul>
+      </details>
+    </article>
     <article class="cve-card" id="CVE-2026-72526">
       <div class="cve-top">
         <a class="cve-id" href="https://nvd.nist.gov/vuln/detail/CVE-2026-72526" target="_blank" rel="noopener">CVE-2026-72526</a>
@@ -69,6 +115,52 @@
       <details>
         <summary>References</summary>
         <ul><li><a href="https://access.redhat.com/security/cve/CVE-2026-72526" target="_blank" rel="noopener">https://access.redhat.com/security/cve/CVE-2026-72526</a></li><li><a href="https://bugzilla.redhat.com/show_bug.cgi?id=2514227" target="_blank" rel="noopener">https://bugzilla.redhat.com/show_bug.cgi?id=2514227</a></li></ul>
+      </details>
+    </article>
+    <article class="cve-card" id="CVE-2026-72508">
+      <div class="cve-top">
+        <a class="cve-id" href="https://nvd.nist.gov/vuln/detail/CVE-2026-72508" target="_blank" rel="noopener">CVE-2026-72508</a>
+        <span class="score">CVSS 9.9 CRITICAL</span>
+      </div>
+      <p class="desc">A flaw was found in the multicloud-operators-subscription component of Red Hat Advanced Cluster Management (RHACM). This vulnerability allows a namespace-admin tenant to perform a confused-deputy attack by creating Subscription Custom Resources (CRs) that leverage a highly privileged ServiceAccount (SA). This enables the tenant to deploy arbitrary cluster-scoped resources, leading to privilege escalation and potential arbitrary code execution across the cluster.</p>
+      <dl>
+        <div><dt>Published</dt><dd>2026-08-12</dd></div>
+        <div><dt>Last Modified</dt><dd>2026-08-12</dd></div>
+        <div><dt>Status</dt><dd>Received</dd></div>
+        <div><dt>Attack Vector</dt><dd>네트워크</dd></div>
+        <div><dt>Attack Complexity</dt><dd>낮음</dd></div>
+        <div><dt>Privileges</dt><dd>낮음</dd></div>
+        <div><dt>User Interaction</dt><dd>없음</dd></div>
+        <div><dt>CWE</dt><dd>CWE-250</dd></div>
+        <div><dt>Affected</dt><dd>NVD CPE 기준 확인 필요</dd></div>
+      </dl>
+      <div class="vector"><code>CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H</code></div>
+      <details>
+        <summary>References</summary>
+        <ul><li><a href="https://access.redhat.com/security/cve/CVE-2026-72508" target="_blank" rel="noopener">https://access.redhat.com/security/cve/CVE-2026-72508</a></li><li><a href="https://bugzilla.redhat.com/show_bug.cgi?id=2514225" target="_blank" rel="noopener">https://bugzilla.redhat.com/show_bug.cgi?id=2514225</a></li></ul>
+      </details>
+    </article>
+    <article class="cve-card" id="CVE-2026-71471">
+      <div class="cve-top">
+        <a class="cve-id" href="https://nvd.nist.gov/vuln/detail/CVE-2026-71471" target="_blank" rel="noopener">CVE-2026-71471</a>
+        <span class="score">CVSS 9.0 CRITICAL</span>
+      </div>
+      <p class="desc">A flaw was found in acm-search-v2-rhel9. An attacker with administrative privileges on the hub cluster, specifically with patch access to the Search Custom Resource (CR), could exploit a vulnerability in the `Collector.ImageOverride` field. This allows the attacker to deploy an arbitrary container image across all managed clusters. The consequence is remote code execution (RCE), enabling the attacker to execute commands and potentially access sensitive information across the entire fleet of managed clusters.</p>
+      <dl>
+        <div><dt>Published</dt><dd>2026-08-12</dd></div>
+        <div><dt>Last Modified</dt><dd>2026-08-12</dd></div>
+        <div><dt>Status</dt><dd>Received</dd></div>
+        <div><dt>Attack Vector</dt><dd>네트워크</dd></div>
+        <div><dt>Attack Complexity</dt><dd>낮음</dd></div>
+        <div><dt>Privileges</dt><dd>높음</dd></div>
+        <div><dt>User Interaction</dt><dd>없음</dd></div>
+        <div><dt>CWE</dt><dd>CWE-829</dd></div>
+        <div><dt>Affected</dt><dd>NVD CPE 기준 확인 필요</dd></div>
+      </dl>
+      <div class="vector"><code>CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:C/C:H/I:H/A:L</code></div>
+      <details>
+        <summary>References</summary>
+        <ul><li><a href="https://access.redhat.com/security/cve/CVE-2026-71471" target="_blank" rel="noopener">https://access.redhat.com/security/cve/CVE-2026-71471</a></li><li><a href="https://bugzilla.redhat.com/show_bug.cgi?id=2512150" target="_blank" rel="noopener">https://bugzilla.redhat.com/show_bug.cgi?id=2512150</a></li></ul>
       </details>
     </article>
     <article class="cve-card" id="CVE-2026-70398">
@@ -94,6 +186,29 @@
         <ul><li><a href="https://access.redhat.com/security/cve/CVE-2026-70398" target="_blank" rel="noopener">https://access.redhat.com/security/cve/CVE-2026-70398</a></li><li><a href="https://bugzilla.redhat.com/show_bug.cgi?id=2514228" target="_blank" rel="noopener">https://bugzilla.redhat.com/show_bug.cgi?id=2514228</a></li></ul>
       </details>
     </article>
+    <article class="cve-card" id="CVE-2026-17083">
+      <div class="cve-top">
+        <a class="cve-id" href="https://nvd.nist.gov/vuln/detail/CVE-2026-17083" target="_blank" rel="noopener">CVE-2026-17083</a>
+        <span class="score">CVSS 9.8 CRITICAL</span>
+      </div>
+      <p class="desc">IBM i 7.6, 7.5, 7.4, and 7.3 could allow a remote attacker to execute arbitrary code due to a stack-based buffer overflow.</p>
+      <dl>
+        <div><dt>Published</dt><dd>2026-08-12</dd></div>
+        <div><dt>Last Modified</dt><dd>2026-08-12</dd></div>
+        <div><dt>Status</dt><dd>Awaiting Analysis</dd></div>
+        <div><dt>Attack Vector</dt><dd>네트워크</dd></div>
+        <div><dt>Attack Complexity</dt><dd>낮음</dd></div>
+        <div><dt>Privileges</dt><dd>없음</dd></div>
+        <div><dt>User Interaction</dt><dd>없음</dd></div>
+        <div><dt>CWE</dt><dd>CWE-787</dd></div>
+        <div><dt>Affected</dt><dd>NVD CPE 기준 확인 필요</dd></div>
+      </dl>
+      <div class="vector"><code>CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H</code></div>
+      <details>
+        <summary>References</summary>
+        <ul><li><a href="https://www.ibm.com/support/pages/node/7283276" target="_blank" rel="noopener">https://www.ibm.com/support/pages/node/7283276</a></li></ul>
+      </details>
+    </article>
     <article class="cve-card" id="CVE-2025-41769">
       <div class="cve-top">
         <a class="cve-id" href="https://nvd.nist.gov/vuln/detail/CVE-2025-41769" target="_blank" rel="noopener">CVE-2025-41769</a>
@@ -115,6 +230,29 @@
       <details>
         <summary>References</summary>
         <ul><li><a href="https://phoenixcontact.csaf-tp.certvde.com/.well-known/csaf/white/2026/vde-2025-056.json" target="_blank" rel="noopener">https://phoenixcontact.csaf-tp.certvde.com/.well-known/csaf/white/2026/vde-2025-056.json</a></li></ul>
+      </details>
+    </article>
+    <article class="cve-card" id="CVE-2024-27253">
+      <div class="cve-top">
+        <a class="cve-id" href="https://nvd.nist.gov/vuln/detail/CVE-2024-27253" target="_blank" rel="noopener">CVE-2024-27253</a>
+        <span class="score">CVSS 10.0 CRITICAL</span>
+      </div>
+      <p class="desc">IBM DOORS Next 7.0.3 through 7.0.3 Interim Fix 018 could allow an authenticated user to bypass security logic to perform unauthorized activities.</p>
+      <dl>
+        <div><dt>Published</dt><dd>2026-08-12</dd></div>
+        <div><dt>Last Modified</dt><dd>2026-08-12</dd></div>
+        <div><dt>Status</dt><dd>Received</dd></div>
+        <div><dt>Attack Vector</dt><dd>네트워크</dd></div>
+        <div><dt>Attack Complexity</dt><dd>낮음</dd></div>
+        <div><dt>Privileges</dt><dd>없음</dd></div>
+        <div><dt>User Interaction</dt><dd>없음</dd></div>
+        <div><dt>CWE</dt><dd>CWE-287</dd></div>
+        <div><dt>Affected</dt><dd>NVD CPE 기준 확인 필요</dd></div>
+      </dl>
+      <div class="vector"><code>CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:H</code></div>
+      <details>
+        <summary>References</summary>
+        <ul><li><a href="https://www.ibm.com/support/pages/node/7282705" target="_blank" rel="noopener">https://www.ibm.com/support/pages/node/7282705</a></li></ul>
       </details>
     </article>
     <article class="cve-card" id="CVE-2026-73034">

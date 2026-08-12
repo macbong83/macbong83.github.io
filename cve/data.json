@@ -1,5 +1,60 @@
 [
   {
+    "id": "CVE-2026-73519",
+    "published": "2026-08-12",
+    "last_modified": "2026-08-12",
+    "status": "Received",
+    "description": "WolfStack before 25.9.2 contains a hard-coded cluster-authentication secret compiled into every build and published as a constant in src/auth/mod.rs, allowing remote unauthenticated attackers to bypass authentication by supplying this value in the X-WolfStack-Secret header to the require_auth() gate without any session, API key, or user account. Attackers can reach an affected node's management port to enumerate all Docker and LXC containers on the host and execute arbitrary commands as root inside any container via the POST /api/containers/{runtime}/{id}/exec endpoint.",
+    "cvss": {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "score": 9.8,
+      "severity": "CRITICAL",
+      "attack_vector": "네트워크",
+      "attack_complexity": "낮음",
+      "privileges_required": "없음",
+      "user_interaction": "없음"
+    },
+    "cwes": [
+      "CWE-798"
+    ],
+    "affected": [],
+    "references": [
+      "https://github.com/wolfsoftwaresystemsltd/WolfStack/releases?page=7#release-v25.9.2",
+      "https://github.com/wolfsoftwaresystemsltd/WolfStack/security/advisories/GHSA-r3mw-2wmq-j6jg",
+      "https://www.vulncheck.com/advisories/wolfstack-hard-coded-secret-authentication-bypass-via-x-wolfstack-secret"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-73519",
+    "added_at": "2026-08-13T08:00:27+09:00"
+  },
+  {
+    "id": "CVE-2026-73268",
+    "published": "2026-08-12",
+    "last_modified": "2026-08-12",
+    "status": "Received",
+    "description": "A flaw was found in the cluster-curator-controller component of multicluster engine (MCE). A tenant with create or update permissions on ClusterCurator resources can inject an arbitrary Job specification. This is possible because the CreateJob() function does not validate user-controlled input when unmarshaling the spec.install.overrideJob raw extension. Successful exploitation allows the injected Job to run with the controller's elevated privileges, leading to arbitrary code execution and privilege escalation, potentially accessing cluster-wide secrets.",
+    "cvss": {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H",
+      "score": 9.9,
+      "severity": "CRITICAL",
+      "attack_vector": "네트워크",
+      "attack_complexity": "낮음",
+      "privileges_required": "낮음",
+      "user_interaction": "없음"
+    },
+    "cwes": [
+      "CWE-94"
+    ],
+    "affected": [],
+    "references": [
+      "https://access.redhat.com/security/cve/CVE-2026-73268",
+      "https://bugzilla.redhat.com/show_bug.cgi?id=2514219"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-73268",
+    "added_at": "2026-08-13T08:00:27+09:00"
+  },
+  {
     "id": "CVE-2026-72526",
     "published": "2026-08-12",
     "last_modified": "2026-08-12",
@@ -25,6 +80,60 @@
     ],
     "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-72526",
     "added_at": "2026-08-12T20:00:55+09:00"
+  },
+  {
+    "id": "CVE-2026-72508",
+    "published": "2026-08-12",
+    "last_modified": "2026-08-12",
+    "status": "Received",
+    "description": "A flaw was found in the multicloud-operators-subscription component of Red Hat Advanced Cluster Management (RHACM). This vulnerability allows a namespace-admin tenant to perform a confused-deputy attack by creating Subscription Custom Resources (CRs) that leverage a highly privileged ServiceAccount (SA). This enables the tenant to deploy arbitrary cluster-scoped resources, leading to privilege escalation and potential arbitrary code execution across the cluster.",
+    "cvss": {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H",
+      "score": 9.9,
+      "severity": "CRITICAL",
+      "attack_vector": "네트워크",
+      "attack_complexity": "낮음",
+      "privileges_required": "낮음",
+      "user_interaction": "없음"
+    },
+    "cwes": [
+      "CWE-250"
+    ],
+    "affected": [],
+    "references": [
+      "https://access.redhat.com/security/cve/CVE-2026-72508",
+      "https://bugzilla.redhat.com/show_bug.cgi?id=2514225"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-72508",
+    "added_at": "2026-08-13T08:00:27+09:00"
+  },
+  {
+    "id": "CVE-2026-71471",
+    "published": "2026-08-12",
+    "last_modified": "2026-08-12",
+    "status": "Received",
+    "description": "A flaw was found in acm-search-v2-rhel9. An attacker with administrative privileges on the hub cluster, specifically with patch access to the Search Custom Resource (CR), could exploit a vulnerability in the `Collector.ImageOverride` field. This allows the attacker to deploy an arbitrary container image across all managed clusters. The consequence is remote code execution (RCE), enabling the attacker to execute commands and potentially access sensitive information across the entire fleet of managed clusters.",
+    "cvss": {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:C/C:H/I:H/A:L",
+      "score": 9.0,
+      "severity": "CRITICAL",
+      "attack_vector": "네트워크",
+      "attack_complexity": "낮음",
+      "privileges_required": "높음",
+      "user_interaction": "없음"
+    },
+    "cwes": [
+      "CWE-829"
+    ],
+    "affected": [],
+    "references": [
+      "https://access.redhat.com/security/cve/CVE-2026-71471",
+      "https://bugzilla.redhat.com/show_bug.cgi?id=2512150"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-71471",
+    "added_at": "2026-08-13T08:00:27+09:00"
   },
   {
     "id": "CVE-2026-70398",
@@ -54,6 +163,32 @@
     "added_at": "2026-08-12T20:00:55+09:00"
   },
   {
+    "id": "CVE-2026-17083",
+    "published": "2026-08-12",
+    "last_modified": "2026-08-12",
+    "status": "Awaiting Analysis",
+    "description": "IBM i 7.6, 7.5, 7.4, and 7.3 could allow a remote attacker to execute arbitrary code due to a stack-based buffer overflow.",
+    "cvss": {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "score": 9.8,
+      "severity": "CRITICAL",
+      "attack_vector": "네트워크",
+      "attack_complexity": "낮음",
+      "privileges_required": "없음",
+      "user_interaction": "없음"
+    },
+    "cwes": [
+      "CWE-787"
+    ],
+    "affected": [],
+    "references": [
+      "https://www.ibm.com/support/pages/node/7283276"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-17083",
+    "added_at": "2026-08-13T08:00:27+09:00"
+  },
+  {
     "id": "CVE-2025-41769",
     "published": "2026-08-12",
     "last_modified": "2026-08-12",
@@ -78,6 +213,32 @@
     ],
     "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2025-41769",
     "added_at": "2026-08-12T20:00:55+09:00"
+  },
+  {
+    "id": "CVE-2024-27253",
+    "published": "2026-08-12",
+    "last_modified": "2026-08-12",
+    "status": "Received",
+    "description": "IBM DOORS Next 7.0.3 through 7.0.3 Interim Fix 018 could allow an authenticated user to bypass security logic to perform unauthorized activities.",
+    "cvss": {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:H",
+      "score": 10.0,
+      "severity": "CRITICAL",
+      "attack_vector": "네트워크",
+      "attack_complexity": "낮음",
+      "privileges_required": "없음",
+      "user_interaction": "없음"
+    },
+    "cwes": [
+      "CWE-287"
+    ],
+    "affected": [],
+    "references": [
+      "https://www.ibm.com/support/pages/node/7282705"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2024-27253",
+    "added_at": "2026-08-13T08:00:27+09:00"
   },
   {
     "id": "CVE-2026-73034",
