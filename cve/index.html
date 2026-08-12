@@ -41,13 +41,82 @@
     <h1>CVE Archive</h1>
     <p>NVD 기반 Critical CVE를 누적 관리하는 별도 페이지입니다. 블로그에는 CVE 자동 글을 발행하지 않고, 이 페이지에만 기록합니다.</p>
     <div class="meta">
-      <span>Total 451</span>
-      <span>Updated 2026-08-12 08:00 KST</span>
+      <span>Total 454</span>
+      <span>Updated 2026-08-12 20:00 KST</span>
       <span>Source NVD API</span>
     </div>
   </section>
   <div class="notice">중복 제거 기준은 CVE ID입니다. 동일 CVE는 다시 추가하지 않습니다. 실제 악용 여부와 패치 우선순위는 CISA KEV, 벤더 권고, 자산 노출 여부와 함께 검토해야 합니다.</div>
 
+    <article class="cve-card" id="CVE-2026-72526">
+      <div class="cve-top">
+        <a class="cve-id" href="https://nvd.nist.gov/vuln/detail/CVE-2026-72526" target="_blank" rel="noopener">CVE-2026-72526</a>
+        <span class="score">CVSS 9.9 CRITICAL</span>
+      </div>
+      <p class="desc">A flaw was found in the multicloud-integrations component. The Application propagation controller processes the `ocm-managed-cluster` annotation from an Application Custom Resource (CR) without proper validation. A tenant with permissions to create Applications on the hub cluster can exploit this to target arbitrary managed clusters. This can force ArgoCD on the spoke clusters to synchronize attacker-controlled manifests, leading to arbitrary code execution or privilege escalation on those clusters.</p>
+      <dl>
+        <div><dt>Published</dt><dd>2026-08-12</dd></div>
+        <div><dt>Last Modified</dt><dd>2026-08-12</dd></div>
+        <div><dt>Status</dt><dd>Received</dd></div>
+        <div><dt>Attack Vector</dt><dd>네트워크</dd></div>
+        <div><dt>Attack Complexity</dt><dd>낮음</dd></div>
+        <div><dt>Privileges</dt><dd>낮음</dd></div>
+        <div><dt>User Interaction</dt><dd>없음</dd></div>
+        <div><dt>CWE</dt><dd>CWE-441</dd></div>
+        <div><dt>Affected</dt><dd>NVD CPE 기준 확인 필요</dd></div>
+      </dl>
+      <div class="vector"><code>CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H</code></div>
+      <details>
+        <summary>References</summary>
+        <ul><li><a href="https://access.redhat.com/security/cve/CVE-2026-72526" target="_blank" rel="noopener">https://access.redhat.com/security/cve/CVE-2026-72526</a></li><li><a href="https://bugzilla.redhat.com/show_bug.cgi?id=2514227" target="_blank" rel="noopener">https://bugzilla.redhat.com/show_bug.cgi?id=2514227</a></li></ul>
+      </details>
+    </article>
+    <article class="cve-card" id="CVE-2026-70398">
+      <div class="cve-top">
+        <a class="cve-id" href="https://nvd.nist.gov/vuln/detail/CVE-2026-70398" target="_blank" rel="noopener">CVE-2026-70398</a>
+        <span class="score">CVSS 9.6 CRITICAL</span>
+      </div>
+      <p class="desc">A flaw was found in multicloud-integrations, a component of Red Hat Advanced Cluster Management (RHACM). This vulnerability allows an authenticated user, referred to as a tenant, to manipulate the GitOpsCluster controller. By exploiting this, a tenant can redirect sensitive spoke cluster bearer tokens from secure locations to a namespace they control. This unauthorized access to tokens can lead to the disclosure of critical information and bypass security policies within ArgoCD AppProjects.</p>
+      <dl>
+        <div><dt>Published</dt><dd>2026-08-12</dd></div>
+        <div><dt>Last Modified</dt><dd>2026-08-12</dd></div>
+        <div><dt>Status</dt><dd>Received</dd></div>
+        <div><dt>Attack Vector</dt><dd>네트워크</dd></div>
+        <div><dt>Attack Complexity</dt><dd>낮음</dd></div>
+        <div><dt>Privileges</dt><dd>낮음</dd></div>
+        <div><dt>User Interaction</dt><dd>없음</dd></div>
+        <div><dt>CWE</dt><dd>CWE-441</dd></div>
+        <div><dt>Affected</dt><dd>NVD CPE 기준 확인 필요</dd></div>
+      </dl>
+      <div class="vector"><code>CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:N</code></div>
+      <details>
+        <summary>References</summary>
+        <ul><li><a href="https://access.redhat.com/security/cve/CVE-2026-70398" target="_blank" rel="noopener">https://access.redhat.com/security/cve/CVE-2026-70398</a></li><li><a href="https://bugzilla.redhat.com/show_bug.cgi?id=2514228" target="_blank" rel="noopener">https://bugzilla.redhat.com/show_bug.cgi?id=2514228</a></li></ul>
+      </details>
+    </article>
+    <article class="cve-card" id="CVE-2025-41769">
+      <div class="cve-top">
+        <a class="cve-id" href="https://nvd.nist.gov/vuln/detail/CVE-2025-41769" target="_blank" rel="noopener">CVE-2025-41769</a>
+        <span class="score">CVSS 9.8 CRITICAL</span>
+      </div>
+      <p class="desc">The device&#x27;s PROFINET service is affected by a buffer overflow vulnerability that exists in the default configuration. An unauthenticated remote attacker could exploit this vulnerability to reboot the device or execute arbitrary code.</p>
+      <dl>
+        <div><dt>Published</dt><dd>2026-08-12</dd></div>
+        <div><dt>Last Modified</dt><dd>2026-08-12</dd></div>
+        <div><dt>Status</dt><dd>Received</dd></div>
+        <div><dt>Attack Vector</dt><dd>네트워크</dd></div>
+        <div><dt>Attack Complexity</dt><dd>낮음</dd></div>
+        <div><dt>Privileges</dt><dd>없음</dd></div>
+        <div><dt>User Interaction</dt><dd>없음</dd></div>
+        <div><dt>CWE</dt><dd>CWE-120</dd></div>
+        <div><dt>Affected</dt><dd>NVD CPE 기준 확인 필요</dd></div>
+      </dl>
+      <div class="vector"><code>CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H</code></div>
+      <details>
+        <summary>References</summary>
+        <ul><li><a href="https://phoenixcontact.csaf-tp.certvde.com/.well-known/csaf/white/2026/vde-2025-056.json" target="_blank" rel="noopener">https://phoenixcontact.csaf-tp.certvde.com/.well-known/csaf/white/2026/vde-2025-056.json</a></li></ul>
+      </details>
+    </article>
     <article class="cve-card" id="CVE-2026-73034">
       <div class="cve-top">
         <a class="cve-id" href="https://nvd.nist.gov/vuln/detail/CVE-2026-73034" target="_blank" rel="noopener">CVE-2026-73034</a>

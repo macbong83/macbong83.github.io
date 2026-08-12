@@ -1,5 +1,85 @@
 [
   {
+    "id": "CVE-2026-72526",
+    "published": "2026-08-12",
+    "last_modified": "2026-08-12",
+    "status": "Received",
+    "description": "A flaw was found in the multicloud-integrations component. The Application propagation controller processes the `ocm-managed-cluster` annotation from an Application Custom Resource (CR) without proper validation. A tenant with permissions to create Applications on the hub cluster can exploit this to target arbitrary managed clusters. This can force ArgoCD on the spoke clusters to synchronize attacker-controlled manifests, leading to arbitrary code execution or privilege escalation on those clusters.",
+    "cvss": {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H",
+      "score": 9.9,
+      "severity": "CRITICAL",
+      "attack_vector": "네트워크",
+      "attack_complexity": "낮음",
+      "privileges_required": "낮음",
+      "user_interaction": "없음"
+    },
+    "cwes": [
+      "CWE-441"
+    ],
+    "affected": [],
+    "references": [
+      "https://access.redhat.com/security/cve/CVE-2026-72526",
+      "https://bugzilla.redhat.com/show_bug.cgi?id=2514227"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-72526",
+    "added_at": "2026-08-12T20:00:55+09:00"
+  },
+  {
+    "id": "CVE-2026-70398",
+    "published": "2026-08-12",
+    "last_modified": "2026-08-12",
+    "status": "Received",
+    "description": "A flaw was found in multicloud-integrations, a component of Red Hat Advanced Cluster Management (RHACM). This vulnerability allows an authenticated user, referred to as a tenant, to manipulate the GitOpsCluster controller. By exploiting this, a tenant can redirect sensitive spoke cluster bearer tokens from secure locations to a namespace they control. This unauthorized access to tokens can lead to the disclosure of critical information and bypass security policies within ArgoCD AppProjects.",
+    "cvss": {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:N",
+      "score": 9.6,
+      "severity": "CRITICAL",
+      "attack_vector": "네트워크",
+      "attack_complexity": "낮음",
+      "privileges_required": "낮음",
+      "user_interaction": "없음"
+    },
+    "cwes": [
+      "CWE-441"
+    ],
+    "affected": [],
+    "references": [
+      "https://access.redhat.com/security/cve/CVE-2026-70398",
+      "https://bugzilla.redhat.com/show_bug.cgi?id=2514228"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-70398",
+    "added_at": "2026-08-12T20:00:55+09:00"
+  },
+  {
+    "id": "CVE-2025-41769",
+    "published": "2026-08-12",
+    "last_modified": "2026-08-12",
+    "status": "Received",
+    "description": "The device's PROFINET service is affected by a buffer overflow vulnerability that exists in the default configuration. An unauthenticated remote attacker could exploit this vulnerability to reboot the device or execute arbitrary code.",
+    "cvss": {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "score": 9.8,
+      "severity": "CRITICAL",
+      "attack_vector": "네트워크",
+      "attack_complexity": "낮음",
+      "privileges_required": "없음",
+      "user_interaction": "없음"
+    },
+    "cwes": [
+      "CWE-120"
+    ],
+    "affected": [],
+    "references": [
+      "https://phoenixcontact.csaf-tp.certvde.com/.well-known/csaf/white/2026/vde-2025-056.json"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2025-41769",
+    "added_at": "2026-08-12T20:00:55+09:00"
+  },
+  {
     "id": "CVE-2026-73034",
     "published": "2026-08-11",
     "last_modified": "2026-08-11",
