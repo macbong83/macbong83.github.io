@@ -41,13 +41,335 @@
     <h1>CVE Archive</h1>
     <p>NVD 기반 Critical CVE를 누적 관리하는 별도 페이지입니다. 블로그에는 CVE 자동 글을 발행하지 않고, 이 페이지에만 기록합니다.</p>
     <div class="meta">
-      <span>Total 460</span>
-      <span>Updated 2026-08-13 08:00 KST</span>
+      <span>Total 476</span>
+      <span>Updated 2026-08-14 08:00 KST</span>
       <span>Source NVD API</span>
     </div>
   </section>
   <div class="notice">중복 제거 기준은 CVE ID입니다. 동일 CVE는 다시 추가하지 않습니다. 실제 악용 여부와 패치 우선순위는 CISA KEV, 벤더 권고, 자산 노출 여부와 함께 검토해야 합니다.</div>
 
+    <article class="cve-card" id="CVE-2026-73533">
+      <div class="cve-top">
+        <a class="cve-id" href="https://nvd.nist.gov/vuln/detail/CVE-2026-73533" target="_blank" rel="noopener">CVE-2026-73533</a>
+        <span class="score">CVSS 9.8 CRITICAL</span>
+      </div>
+      <p class="desc">Ninja Tables Pro 5.2.11 contains an embedded malicious code vulnerability introduced via a tampered plugin build served through a decommissioned update server. The tampered build introduced a rogue PHP file (app/Library/updater/NinjaTableDataSync.php) that established a backdoor REST API endpoint, dropped persistent PHP files in mu-plugins and uploads directories, installed a passwordless administrator account, and registered scheduled tasks that survived plugin removal.</p>
+      <dl>
+        <div><dt>Published</dt><dd>2026-08-13</dd></div>
+        <div><dt>Last Modified</dt><dd>2026-08-13</dd></div>
+        <div><dt>Status</dt><dd>Received</dd></div>
+        <div><dt>Attack Vector</dt><dd>네트워크</dd></div>
+        <div><dt>Attack Complexity</dt><dd>낮음</dd></div>
+        <div><dt>Privileges</dt><dd>없음</dd></div>
+        <div><dt>User Interaction</dt><dd>없음</dd></div>
+        <div><dt>CWE</dt><dd>CWE-506</dd></div>
+        <div><dt>Affected</dt><dd>NVD CPE 기준 확인 필요</dd></div>
+      </dl>
+      <div class="vector"><code>CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H</code></div>
+      <details>
+        <summary>References</summary>
+        <ul><li><a href="https://wordpress.org/plugins/ninja-tables/" target="_blank" rel="noopener">https://wordpress.org/plugins/ninja-tables/</a></li><li><a href="https://wpmanageninja.com/security-incident-on-31-july-2026/" target="_blank" rel="noopener">https://wpmanageninja.com/security-incident-on-31-july-2026/</a></li><li><a href="https://www.vulncheck.com/advisories/ninja-tables-pro-embedded-malicious-code-via-tampered-plugin-build" target="_blank" rel="noopener">https://www.vulncheck.com/advisories/ninja-tables-pro-embedded-malicious-code-via-tampered-plugin-build</a></li></ul>
+      </details>
+    </article>
+    <article class="cve-card" id="CVE-2026-73532">
+      <div class="cve-top">
+        <a class="cve-id" href="https://nvd.nist.gov/vuln/detail/CVE-2026-73532" target="_blank" rel="noopener">CVE-2026-73532</a>
+        <span class="score">CVSS 9.8 CRITICAL</span>
+      </div>
+      <p class="desc">Fluent Forms Pro 6.2.7 contains an embedded malicious code vulnerability introduced via a tampered plugin build served through a decommissioned update server. The tampered build introduced a rogue PHP file (libs/class-license-sync.php), loaded via a require_once directive added to fluentformpro.php, that established a backdoor REST API endpoint, dropped persistent PHP files in mu-plugins and uploads directories, installed a passwordless administrator account, and registered scheduled tasks that survived plugin removal.</p>
+      <dl>
+        <div><dt>Published</dt><dd>2026-08-13</dd></div>
+        <div><dt>Last Modified</dt><dd>2026-08-13</dd></div>
+        <div><dt>Status</dt><dd>Received</dd></div>
+        <div><dt>Attack Vector</dt><dd>네트워크</dd></div>
+        <div><dt>Attack Complexity</dt><dd>낮음</dd></div>
+        <div><dt>Privileges</dt><dd>없음</dd></div>
+        <div><dt>User Interaction</dt><dd>없음</dd></div>
+        <div><dt>CWE</dt><dd>CWE-506</dd></div>
+        <div><dt>Affected</dt><dd>NVD CPE 기준 확인 필요</dd></div>
+      </dl>
+      <div class="vector"><code>CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H</code></div>
+      <details>
+        <summary>References</summary>
+        <ul><li><a href="https://patchstack.com/database/wordpress/plugin/fluentformpro/vulnerability/wordpress-fluent-forms-pro-add-on-pack-plugin-6-2-7-6-2-7-remote-code-execution-vulnerability" target="_blank" rel="noopener">https://patchstack.com/database/wordpress/plugin/fluentformpro/vulnerability/wordpress-fluent-forms-pro-add-on-pack-plugin-6-2-7-6-2-7-remote-code-execution-vulnerability</a></li><li><a href="https://wordpress.org/plugins/fluentform/" target="_blank" rel="noopener">https://wordpress.org/plugins/fluentform/</a></li><li><a href="https://wpmanageninja.com/security-incident-on-31-july-2026/" target="_blank" rel="noopener">https://wpmanageninja.com/security-incident-on-31-july-2026/</a></li><li><a href="https://www.vulncheck.com/advisories/fluent-forms-pro-embedded-malicious-code-via-tampered-plugin-build" target="_blank" rel="noopener">https://www.vulncheck.com/advisories/fluent-forms-pro-embedded-malicious-code-via-tampered-plugin-build</a></li></ul>
+      </details>
+    </article>
+    <article class="cve-card" id="CVE-2026-72851">
+      <div class="cve-top">
+        <a class="cve-id" href="https://nvd.nist.gov/vuln/detail/CVE-2026-72851" target="_blank" rel="noopener">CVE-2026-72851</a>
+        <span class="score">CVSS 10.0 CRITICAL</span>
+      </div>
+      <p class="desc">Budibase before 3.40.0 contains an unauthenticated SQL injection vulnerability in webhook-triggered automations with EXECUTE_QUERY steps. Attackers can POST attacker-controlled JSON to the webhook trigger endpoint to inject SQL payloads that execute with builder-configured database credentials, enabling data exfiltration, modification, and persistence in connected datasources like Snowflake.</p>
+      <dl>
+        <div><dt>Published</dt><dd>2026-08-13</dd></div>
+        <div><dt>Last Modified</dt><dd>2026-08-13</dd></div>
+        <div><dt>Status</dt><dd>Received</dd></div>
+        <div><dt>Attack Vector</dt><dd>네트워크</dd></div>
+        <div><dt>Attack Complexity</dt><dd>낮음</dd></div>
+        <div><dt>Privileges</dt><dd>없음</dd></div>
+        <div><dt>User Interaction</dt><dd>없음</dd></div>
+        <div><dt>CWE</dt><dd>CWE-89</dd></div>
+        <div><dt>Affected</dt><dd>NVD CPE 기준 확인 필요</dd></div>
+      </dl>
+      <div class="vector"><code>CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:H</code></div>
+      <details>
+        <summary>References</summary>
+        <ul><li><a href="https://github.com/Budibase/budibase/security/advisories/GHSA-x7h8-ww3q-xv7c" target="_blank" rel="noopener">https://github.com/Budibase/budibase/security/advisories/GHSA-x7h8-ww3q-xv7c</a></li><li><a href="https://www.vulncheck.com/advisories/budibase-before-sql-injection-via-unauthenticated-webhook" target="_blank" rel="noopener">https://www.vulncheck.com/advisories/budibase-before-sql-injection-via-unauthenticated-webhook</a></li></ul>
+      </details>
+    </article>
+    <article class="cve-card" id="CVE-2026-72850">
+      <div class="cve-top">
+        <a class="cve-id" href="https://nvd.nist.gov/vuln/detail/CVE-2026-72850" target="_blank" rel="noopener">CVE-2026-72850</a>
+        <span class="score">CVSS 9.1 CRITICAL</span>
+      </div>
+      <p class="desc">Budibase before 3.40.0 fails to properly sanitize S3 object keys, allowing authenticated builders to upload files with traversal sequences that are preserved during export. Attackers can craft filenames containing .. segments that escape the temporary directory during workspace export, writing arbitrary content to any path writable by the Budibase process.</p>
+      <dl>
+        <div><dt>Published</dt><dd>2026-08-13</dd></div>
+        <div><dt>Last Modified</dt><dd>2026-08-13</dd></div>
+        <div><dt>Status</dt><dd>Received</dd></div>
+        <div><dt>Attack Vector</dt><dd>네트워크</dd></div>
+        <div><dt>Attack Complexity</dt><dd>낮음</dd></div>
+        <div><dt>Privileges</dt><dd>높음</dd></div>
+        <div><dt>User Interaction</dt><dd>없음</dd></div>
+        <div><dt>CWE</dt><dd>CWE-22</dd></div>
+        <div><dt>Affected</dt><dd>NVD CPE 기준 확인 필요</dd></div>
+      </dl>
+      <div class="vector"><code>CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:C/C:H/I:H/A:H</code></div>
+      <details>
+        <summary>References</summary>
+        <ul><li><a href="https://github.com/Budibase/budibase/security/advisories/GHSA-pxwc-66g3-5f27" target="_blank" rel="noopener">https://github.com/Budibase/budibase/security/advisories/GHSA-pxwc-66g3-5f27</a></li><li><a href="https://www.vulncheck.com/advisories/budibase-before-arbitrary-file-write-via-path-traversal" target="_blank" rel="noopener">https://www.vulncheck.com/advisories/budibase-before-arbitrary-file-write-via-path-traversal</a></li></ul>
+      </details>
+    </article>
+    <article class="cve-card" id="CVE-2026-72842">
+      <div class="cve-top">
+        <a class="cve-id" href="https://nvd.nist.gov/vuln/detail/CVE-2026-72842" target="_blank" rel="noopener">CVE-2026-72842</a>
+        <span class="score">CVSS 9.9 CRITICAL</span>
+      </div>
+      <p class="desc">luci-app-lxc contains an ACL inconsistency vulnerability that allows low-privileged authenticated LuCI users to access backend container management routes without proper authorization checks. Attackers can exploit path traversal via `/.%2E` in the `lxc_name` parameter to escape container directories and control host-side scripts executed through `lxc.hook.start-host`, achieving root code execution on the OpenWrt host.</p>
+      <dl>
+        <div><dt>Published</dt><dd>2026-08-13</dd></div>
+        <div><dt>Last Modified</dt><dd>2026-08-13</dd></div>
+        <div><dt>Status</dt><dd>Received</dd></div>
+        <div><dt>Attack Vector</dt><dd>네트워크</dd></div>
+        <div><dt>Attack Complexity</dt><dd>낮음</dd></div>
+        <div><dt>Privileges</dt><dd>낮음</dd></div>
+        <div><dt>User Interaction</dt><dd>없음</dd></div>
+        <div><dt>CWE</dt><dd>CWE-73</dd></div>
+        <div><dt>Affected</dt><dd>NVD CPE 기준 확인 필요</dd></div>
+      </dl>
+      <div class="vector"><code>CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H</code></div>
+      <details>
+        <summary>References</summary>
+        <ul><li><a href="https://github.com/openwrt/luci/security/advisories/GHSA-jf59-v86x-fwf2" target="_blank" rel="noopener">https://github.com/openwrt/luci/security/advisories/GHSA-jf59-v86x-fwf2</a></li><li><a href="https://www.vulncheck.com/advisories/openwrt-luci-app-lxc-acl-inconsistency-authentication-bypass" target="_blank" rel="noopener">https://www.vulncheck.com/advisories/openwrt-luci-app-lxc-acl-inconsistency-authentication-bypass</a></li></ul>
+      </details>
+    </article>
+    <article class="cve-card" id="CVE-2026-72841">
+      <div class="cve-top">
+        <a class="cve-id" href="https://nvd.nist.gov/vuln/detail/CVE-2026-72841" target="_blank" rel="noopener">CVE-2026-72841</a>
+        <span class="score">CVSS 9.9 CRITICAL</span>
+      </div>
+      <p class="desc">luci-app-openvpn fails to properly validate the instance_name2 parameter during file upload, allowing authenticated users to perform path traversal and write arbitrary files outside the intended directory. Attackers can upload malicious payloads to gain persistent root code execution by placing SSH keys in system directories accessible on reboot.</p>
+      <dl>
+        <div><dt>Published</dt><dd>2026-08-13</dd></div>
+        <div><dt>Last Modified</dt><dd>2026-08-13</dd></div>
+        <div><dt>Status</dt><dd>Received</dd></div>
+        <div><dt>Attack Vector</dt><dd>네트워크</dd></div>
+        <div><dt>Attack Complexity</dt><dd>낮음</dd></div>
+        <div><dt>Privileges</dt><dd>낮음</dd></div>
+        <div><dt>User Interaction</dt><dd>없음</dd></div>
+        <div><dt>CWE</dt><dd>CWE-73</dd></div>
+        <div><dt>Affected</dt><dd>NVD CPE 기준 확인 필요</dd></div>
+      </dl>
+      <div class="vector"><code>CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H</code></div>
+      <details>
+        <summary>References</summary>
+        <ul><li><a href="https://github.com/openwrt/luci/security/advisories/GHSA-jjcx-c284-2qv8" target="_blank" rel="noopener">https://github.com/openwrt/luci/security/advisories/GHSA-jjcx-c284-2qv8</a></li><li><a href="https://www.vulncheck.com/advisories/luci-app-openvpn-path-traversal-rce-via-instance-name2" target="_blank" rel="noopener">https://www.vulncheck.com/advisories/luci-app-openvpn-path-traversal-rce-via-instance-name2</a></li></ul>
+      </details>
+    </article>
+    <article class="cve-card" id="CVE-2026-72839">
+      <div class="cve-top">
+        <a class="cve-id" href="https://nvd.nist.gov/vuln/detail/CVE-2026-72839" target="_blank" rel="noopener">CVE-2026-72839</a>
+        <span class="score">CVSS 9.8 CRITICAL</span>
+      </div>
+      <p class="desc">filebrowser through 2.63.16 fails to properly restrict scope and permissions when self-signup is enabled with default CreateUserDir setting. Unauthenticated attackers can register accounts that inherit the server root scope with full create, modify, delete, rename, share, and download permissions, allowing unrestricted access to all files.</p>
+      <dl>
+        <div><dt>Published</dt><dd>2026-08-13</dd></div>
+        <div><dt>Last Modified</dt><dd>2026-08-13</dd></div>
+        <div><dt>Status</dt><dd>Received</dd></div>
+        <div><dt>Attack Vector</dt><dd>네트워크</dd></div>
+        <div><dt>Attack Complexity</dt><dd>낮음</dd></div>
+        <div><dt>Privileges</dt><dd>없음</dd></div>
+        <div><dt>User Interaction</dt><dd>없음</dd></div>
+        <div><dt>CWE</dt><dd>CWE-266</dd></div>
+        <div><dt>Affected</dt><dd>NVD CPE 기준 확인 필요</dd></div>
+      </dl>
+      <div class="vector"><code>CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H</code></div>
+      <details>
+        <summary>References</summary>
+        <ul><li><a href="https://github.com/filebrowser/filebrowser/security/advisories/GHSA-6759-996p-gpj6" target="_blank" rel="noopener">https://github.com/filebrowser/filebrowser/security/advisories/GHSA-6759-996p-gpj6</a></li><li><a href="https://www.vulncheck.com/advisories/filebrowser-through-privilege-escalation-via-signup" target="_blank" rel="noopener">https://www.vulncheck.com/advisories/filebrowser-through-privilege-escalation-via-signup</a></li></ul>
+      </details>
+    </article>
+    <article class="cve-card" id="CVE-2026-72776">
+      <div class="cve-top">
+        <a class="cve-id" href="https://nvd.nist.gov/vuln/detail/CVE-2026-72776" target="_blank" rel="noopener">CVE-2026-72776</a>
+        <span class="score">CVSS 9.8 CRITICAL</span>
+      </div>
+      <p class="desc">AgenticSeek (commit fc242c7) contains an unauthenticated remote code execution vulnerability that allows any network-adjacent attacker to execute arbitrary commands by submitting crafted queries to the unprotected POST /query API endpoint bound to 0.0.0.0:7777 with wildcard CORS. Attackers can send unauthenticated HTTP requests that cause the autonomous agent to generate and execute shell commands through BashInterpreter using subprocess.Popen with shell=True and safety=False, bypassing the incomplete command blocklist to achieve full host-level code execution.</p>
+      <dl>
+        <div><dt>Published</dt><dd>2026-08-13</dd></div>
+        <div><dt>Last Modified</dt><dd>2026-08-13</dd></div>
+        <div><dt>Status</dt><dd>Received</dd></div>
+        <div><dt>Attack Vector</dt><dd>네트워크</dd></div>
+        <div><dt>Attack Complexity</dt><dd>낮음</dd></div>
+        <div><dt>Privileges</dt><dd>없음</dd></div>
+        <div><dt>User Interaction</dt><dd>없음</dd></div>
+        <div><dt>CWE</dt><dd>CWE-306</dd></div>
+        <div><dt>Affected</dt><dd>NVD CPE 기준 확인 필요</dd></div>
+      </dl>
+      <div class="vector"><code>CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H</code></div>
+      <details>
+        <summary>References</summary>
+        <ul><li><a href="https://github.com/Fosowl/agenticSeek" target="_blank" rel="noopener">https://github.com/Fosowl/agenticSeek</a></li><li><a href="https://github.com/Fosowl/agenticSeek/issues/520" target="_blank" rel="noopener">https://github.com/Fosowl/agenticSeek/issues/520</a></li><li><a href="https://github.com/Fosowl/agenticSeek/pull/534/changes/f1eb2cfc721f8a21dd16a8b048a9ca89f3259f6f" target="_blank" rel="noopener">https://github.com/Fosowl/agenticSeek/pull/534/changes/f1eb2cfc721f8a21dd16a8b048a9ca89f3259f6f</a></li><li><a href="https://www.vulncheck.com/advisories/agenticseek-unauthenticated-rce-via-query-api-endpoint" target="_blank" rel="noopener">https://www.vulncheck.com/advisories/agenticseek-unauthenticated-rce-via-query-api-endpoint</a></li></ul>
+      </details>
+    </article>
+    <article class="cve-card" id="CVE-2026-67614">
+      <div class="cve-top">
+        <a class="cve-id" href="https://nvd.nist.gov/vuln/detail/CVE-2026-67614" target="_blank" rel="noopener">CVE-2026-67614</a>
+        <span class="score">CVSS 9.8 CRITICAL</span>
+      </div>
+      <p class="desc">CyberPanel before 3.0.0 contains a hard-coded JWT secret vulnerability in the WebTerminal FastAPI SSH service that allows unauthenticated remote attackers to forge valid authentication tokens and obtain an interactive root shell via WebSocket on port 8888. Attackers can craft a forged JWT signed with the hardcoded secret value, specifying ssh_user=root, to authenticate to the terminal service without any valid credentials and receive a root shell.</p>
+      <dl>
+        <div><dt>Published</dt><dd>2026-08-13</dd></div>
+        <div><dt>Last Modified</dt><dd>2026-08-13</dd></div>
+        <div><dt>Status</dt><dd>Received</dd></div>
+        <div><dt>Attack Vector</dt><dd>네트워크</dd></div>
+        <div><dt>Attack Complexity</dt><dd>낮음</dd></div>
+        <div><dt>Privileges</dt><dd>없음</dd></div>
+        <div><dt>User Interaction</dt><dd>없음</dd></div>
+        <div><dt>CWE</dt><dd>CWE-798</dd></div>
+        <div><dt>Affected</dt><dd>NVD CPE 기준 확인 필요</dd></div>
+      </dl>
+      <div class="vector"><code>CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H</code></div>
+      <details>
+        <summary>References</summary>
+        <ul><li><a href="https://cyberpanel.net/KnowledgeBase/home/change-logs/" target="_blank" rel="noopener">https://cyberpanel.net/KnowledgeBase/home/change-logs/</a></li><li><a href="https://github.com/usmannasir/cyberpanel/issues/1858" target="_blank" rel="noopener">https://github.com/usmannasir/cyberpanel/issues/1858</a></li><li><a href="https://www.vulncheck.com/advisories/cyberpanel-hard-coded-jwt-secret-authentication-bypass-via-webterminal" target="_blank" rel="noopener">https://www.vulncheck.com/advisories/cyberpanel-hard-coded-jwt-secret-authentication-bypass-via-webterminal</a></li></ul>
+      </details>
+    </article>
+    <article class="cve-card" id="CVE-2026-53791">
+      <div class="cve-top">
+        <a class="cve-id" href="https://nvd.nist.gov/vuln/detail/CVE-2026-53791" target="_blank" rel="noopener">CVE-2026-53791</a>
+        <span class="score">CVSS 9.1 CRITICAL</span>
+      </div>
+      <p class="desc">rsync daemon before 3.5.0 contains an IP address spoofing vulnerability that allows unauthenticated remote attackers to bypass IP-based access controls by sending a crafted PROXY protocol header with a forged source address. Attackers who can connect directly to the rsync daemon can inject a spoofed source IP in the PROXY protocol header to circumvent hosts allow/deny rules, gaining unauthorized access that would otherwise be blocked based on their real source address.</p>
+      <dl>
+        <div><dt>Published</dt><dd>2026-08-13</dd></div>
+        <div><dt>Last Modified</dt><dd>2026-08-13</dd></div>
+        <div><dt>Status</dt><dd>Received</dd></div>
+        <div><dt>Attack Vector</dt><dd>네트워크</dd></div>
+        <div><dt>Attack Complexity</dt><dd>낮음</dd></div>
+        <div><dt>Privileges</dt><dd>없음</dd></div>
+        <div><dt>User Interaction</dt><dd>없음</dd></div>
+        <div><dt>CWE</dt><dd>CWE-290</dd></div>
+        <div><dt>Affected</dt><dd>NVD CPE 기준 확인 필요</dd></div>
+      </dl>
+      <div class="vector"><code>CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N</code></div>
+      <details>
+        <summary>References</summary>
+        <ul><li><a href="https://github.com/RsyncProject/rsync/releases/tag/v3.5.0" target="_blank" rel="noopener">https://github.com/RsyncProject/rsync/releases/tag/v3.5.0</a></li><li><a href="https://github.com/RsyncProject/rsync/security/advisories/GHSA-h2q9-5fr8-w635" target="_blank" rel="noopener">https://github.com/RsyncProject/rsync/security/advisories/GHSA-h2q9-5fr8-w635</a></li><li><a href="https://www.vulncheck.com/advisories/rsync-daemon-ip-spoofing-via-proxy-protocol-header" target="_blank" rel="noopener">https://www.vulncheck.com/advisories/rsync-daemon-ip-spoofing-via-proxy-protocol-header</a></li></ul>
+      </details>
+    </article>
+    <article class="cve-card" id="CVE-2026-19747">
+      <div class="cve-top">
+        <a class="cve-id" href="https://nvd.nist.gov/vuln/detail/CVE-2026-19747" target="_blank" rel="noopener">CVE-2026-19747</a>
+        <span class="score">CVSS 9.8 CRITICAL</span>
+      </div>
+      <p class="desc">A weakness has been identified in Tenda CH7, CH7G, CH10, CP3, CP3 Pro, CP7, TC3B14C, TC3B15C, TC3T14C and TC3T15C up to 20260625. This impacts the function CAte::HandleCmd of the file Kylin of the component ATE Module. This manipulation causes command injection. The attack is possible to be carried out remotely.</p>
+      <dl>
+        <div><dt>Published</dt><dd>2026-08-13</dd></div>
+        <div><dt>Last Modified</dt><dd>2026-08-13</dd></div>
+        <div><dt>Status</dt><dd>Received</dd></div>
+        <div><dt>Attack Vector</dt><dd>네트워크</dd></div>
+        <div><dt>Attack Complexity</dt><dd>낮음</dd></div>
+        <div><dt>Privileges</dt><dd>없음</dd></div>
+        <div><dt>User Interaction</dt><dd>없음</dd></div>
+        <div><dt>CWE</dt><dd>CWE-74, CWE-77</dd></div>
+        <div><dt>Affected</dt><dd>NVD CPE 기준 확인 필요</dd></div>
+      </dl>
+      <div class="vector"><code>CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H</code></div>
+      <details>
+        <summary>References</summary>
+        <ul><li><a href="https://github.com/howitouchyou/Tenda-Smart-Camera-Vulnerability/blob/main/Tenda%20Command%20Injection/Tenda%20Command%20Injection.md" target="_blank" rel="noopener">https://github.com/howitouchyou/Tenda-Smart-Camera-Vulnerability/blob/main/Tenda%20Command%20Injection/Tenda%20Command%20Injection.md</a></li><li><a href="https://vuldb.com/cve/CVE-2026-19747" target="_blank" rel="noopener">https://vuldb.com/cve/CVE-2026-19747</a></li><li><a href="https://vuldb.com/submit/868463" target="_blank" rel="noopener">https://vuldb.com/submit/868463</a></li><li><a href="https://vuldb.com/vuln/389498" target="_blank" rel="noopener">https://vuldb.com/vuln/389498</a></li></ul>
+      </details>
+    </article>
+    <article class="cve-card" id="CVE-2026-19297">
+      <div class="cve-top">
+        <a class="cve-id" href="https://nvd.nist.gov/vuln/detail/CVE-2026-19297" target="_blank" rel="noopener">CVE-2026-19297</a>
+        <span class="score">CVSS 9.1 CRITICAL</span>
+      </div>
+      <p class="desc">IBM Langflow OSS 1.0.0 through 1.9.6 could allow a remote attacker to obtain unauthorized access to user accounts due to improper restriction of excessive authentication attempts.</p>
+      <dl>
+        <div><dt>Published</dt><dd>2026-08-13</dd></div>
+        <div><dt>Last Modified</dt><dd>2026-08-13</dd></div>
+        <div><dt>Status</dt><dd>Received</dd></div>
+        <div><dt>Attack Vector</dt><dd>네트워크</dd></div>
+        <div><dt>Attack Complexity</dt><dd>낮음</dd></div>
+        <div><dt>Privileges</dt><dd>없음</dd></div>
+        <div><dt>User Interaction</dt><dd>없음</dd></div>
+        <div><dt>CWE</dt><dd>CWE-307</dd></div>
+        <div><dt>Affected</dt><dd>NVD CPE 기준 확인 필요</dd></div>
+      </dl>
+      <div class="vector"><code>CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N</code></div>
+      <details>
+        <summary>References</summary>
+        <ul><li><a href="https://www.ibm.com/support/pages/node/7283558" target="_blank" rel="noopener">https://www.ibm.com/support/pages/node/7283558</a></li></ul>
+      </details>
+    </article>
+    <article class="cve-card" id="CVE-2026-17482">
+      <div class="cve-top">
+        <a class="cve-id" href="https://nvd.nist.gov/vuln/detail/CVE-2026-17482" target="_blank" rel="noopener">CVE-2026-17482</a>
+        <span class="score">CVSS 9.8 CRITICAL</span>
+      </div>
+      <p class="desc">IBM Documentation Offline 1.0.0 through 1.4.1 could allow a remote attacker to execute arbitrary code due to improper control of file paths.</p>
+      <dl>
+        <div><dt>Published</dt><dd>2026-08-13</dd></div>
+        <div><dt>Last Modified</dt><dd>2026-08-13</dd></div>
+        <div><dt>Status</dt><dd>Received</dd></div>
+        <div><dt>Attack Vector</dt><dd>네트워크</dd></div>
+        <div><dt>Attack Complexity</dt><dd>낮음</dd></div>
+        <div><dt>Privileges</dt><dd>없음</dd></div>
+        <div><dt>User Interaction</dt><dd>없음</dd></div>
+        <div><dt>CWE</dt><dd>CWE-73</dd></div>
+        <div><dt>Affected</dt><dd>NVD CPE 기준 확인 필요</dd></div>
+      </dl>
+      <div class="vector"><code>CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H</code></div>
+      <details>
+        <summary>References</summary>
+        <ul><li><a href="https://www.ibm.com/support/pages/node/7283484" target="_blank" rel="noopener">https://www.ibm.com/support/pages/node/7283484</a></li></ul>
+      </details>
+    </article>
+    <article class="cve-card" id="CVE-2026-14525">
+      <div class="cve-top">
+        <a class="cve-id" href="https://nvd.nist.gov/vuln/detail/CVE-2026-14525" target="_blank" rel="noopener">CVE-2026-14525</a>
+        <span class="score">CVSS 9.4 CRITICAL</span>
+      </div>
+      <p class="desc">IBM WebSphere Application Server - Liberty 17.0.0.3 through 26.0.0.8 IBM WebSphere Application Server Liberty is vulnerable to an authentication bypass when the rtcomm-1.0 or rtcommGateway-1.0 feature is enabled.</p>
+      <dl>
+        <div><dt>Published</dt><dd>2026-08-13</dd></div>
+        <div><dt>Last Modified</dt><dd>2026-08-13</dd></div>
+        <div><dt>Status</dt><dd>Awaiting Analysis</dd></div>
+        <div><dt>Attack Vector</dt><dd>네트워크</dd></div>
+        <div><dt>Attack Complexity</dt><dd>낮음</dd></div>
+        <div><dt>Privileges</dt><dd>없음</dd></div>
+        <div><dt>User Interaction</dt><dd>없음</dd></div>
+        <div><dt>CWE</dt><dd>CWE-306</dd></div>
+        <div><dt>Affected</dt><dd>NVD CPE 기준 확인 필요</dd></div>
+      </dl>
+      <div class="vector"><code>CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:L</code></div>
+      <details>
+        <summary>References</summary>
+        <ul><li><a href="https://www.ibm.com/support/pages/node/7283488" target="_blank" rel="noopener">https://www.ibm.com/support/pages/node/7283488</a></li></ul>
+      </details>
+    </article>
     <article class="cve-card" id="CVE-2026-73519">
       <div class="cve-top">
         <a class="cve-id" href="https://nvd.nist.gov/vuln/detail/CVE-2026-73519" target="_blank" rel="noopener">CVE-2026-73519</a>
@@ -186,6 +508,29 @@
         <ul><li><a href="https://access.redhat.com/security/cve/CVE-2026-70398" target="_blank" rel="noopener">https://access.redhat.com/security/cve/CVE-2026-70398</a></li><li><a href="https://bugzilla.redhat.com/show_bug.cgi?id=2514228" target="_blank" rel="noopener">https://bugzilla.redhat.com/show_bug.cgi?id=2514228</a></li></ul>
       </details>
     </article>
+    <article class="cve-card" id="CVE-2026-17276">
+      <div class="cve-top">
+        <a class="cve-id" href="https://nvd.nist.gov/vuln/detail/CVE-2026-17276" target="_blank" rel="noopener">CVE-2026-17276</a>
+        <span class="score">CVSS 9.6 CRITICAL</span>
+      </div>
+      <p class="desc">IBM i 7.6, 7.5, 7.4, and 7.3 could allow a remote authenticated attacker to escalate privileges due to improper authorization in the handling of high-authority threads.</p>
+      <dl>
+        <div><dt>Published</dt><dd>2026-08-12</dd></div>
+        <div><dt>Last Modified</dt><dd>2026-08-13</dd></div>
+        <div><dt>Status</dt><dd>Analyzed</dd></div>
+        <div><dt>Attack Vector</dt><dd>네트워크</dd></div>
+        <div><dt>Attack Complexity</dt><dd>낮음</dd></div>
+        <div><dt>Privileges</dt><dd>낮음</dd></div>
+        <div><dt>User Interaction</dt><dd>없음</dd></div>
+        <div><dt>CWE</dt><dd>CWE-269</dd></div>
+        <div><dt>Affected</dt><dd>ibm i</dd></div>
+      </dl>
+      <div class="vector"><code>CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:N</code></div>
+      <details>
+        <summary>References</summary>
+        <ul><li><a href="https://www.ibm.com/support/pages/node/7283292" target="_blank" rel="noopener">https://www.ibm.com/support/pages/node/7283292</a></li></ul>
+      </details>
+    </article>
     <article class="cve-card" id="CVE-2026-17083">
       <div class="cve-top">
         <a class="cve-id" href="https://nvd.nist.gov/vuln/detail/CVE-2026-17083" target="_blank" rel="noopener">CVE-2026-17083</a>
@@ -207,6 +552,29 @@
       <details>
         <summary>References</summary>
         <ul><li><a href="https://www.ibm.com/support/pages/node/7283276" target="_blank" rel="noopener">https://www.ibm.com/support/pages/node/7283276</a></li></ul>
+      </details>
+    </article>
+    <article class="cve-card" id="CVE-2026-16860">
+      <div class="cve-top">
+        <a class="cve-id" href="https://nvd.nist.gov/vuln/detail/CVE-2026-16860" target="_blank" rel="noopener">CVE-2026-16860</a>
+        <span class="score">CVSS 9.9 CRITICAL</span>
+      </div>
+      <p class="desc">IBM i 7.6, 7.5, 7.4, and 7.3 could allow a remote authenticated attacker to execute arbitrary code due to an uncontrolled search path element.</p>
+      <dl>
+        <div><dt>Published</dt><dd>2026-08-12</dd></div>
+        <div><dt>Last Modified</dt><dd>2026-08-13</dd></div>
+        <div><dt>Status</dt><dd>Analyzed</dd></div>
+        <div><dt>Attack Vector</dt><dd>네트워크</dd></div>
+        <div><dt>Attack Complexity</dt><dd>낮음</dd></div>
+        <div><dt>Privileges</dt><dd>낮음</dd></div>
+        <div><dt>User Interaction</dt><dd>없음</dd></div>
+        <div><dt>CWE</dt><dd>CWE-427</dd></div>
+        <div><dt>Affected</dt><dd>ibm i</dd></div>
+      </dl>
+      <div class="vector"><code>CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:L</code></div>
+      <details>
+        <summary>References</summary>
+        <ul><li><a href="https://www.ibm.com/support/pages/node/7283282" target="_blank" rel="noopener">https://www.ibm.com/support/pages/node/7283282</a></li></ul>
       </details>
     </article>
     <article class="cve-card" id="CVE-2025-41769">

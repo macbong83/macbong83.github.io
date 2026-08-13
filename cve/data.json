@@ -1,5 +1,392 @@
 [
   {
+    "id": "CVE-2026-73533",
+    "published": "2026-08-13",
+    "last_modified": "2026-08-13",
+    "status": "Received",
+    "description": "Ninja Tables Pro 5.2.11 contains an embedded malicious code vulnerability introduced via a tampered plugin build served through a decommissioned update server. The tampered build introduced a rogue PHP file (app/Library/updater/NinjaTableDataSync.php) that established a backdoor REST API endpoint, dropped persistent PHP files in mu-plugins and uploads directories, installed a passwordless administrator account, and registered scheduled tasks that survived plugin removal.",
+    "cvss": {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "score": 9.8,
+      "severity": "CRITICAL",
+      "attack_vector": "네트워크",
+      "attack_complexity": "낮음",
+      "privileges_required": "없음",
+      "user_interaction": "없음"
+    },
+    "cwes": [
+      "CWE-506"
+    ],
+    "affected": [],
+    "references": [
+      "https://wordpress.org/plugins/ninja-tables/",
+      "https://wpmanageninja.com/security-incident-on-31-july-2026/",
+      "https://www.vulncheck.com/advisories/ninja-tables-pro-embedded-malicious-code-via-tampered-plugin-build"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-73533",
+    "added_at": "2026-08-14T08:00:51+09:00"
+  },
+  {
+    "id": "CVE-2026-73532",
+    "published": "2026-08-13",
+    "last_modified": "2026-08-13",
+    "status": "Received",
+    "description": "Fluent Forms Pro 6.2.7 contains an embedded malicious code vulnerability introduced via a tampered plugin build served through a decommissioned update server. The tampered build introduced a rogue PHP file (libs/class-license-sync.php), loaded via a require_once directive added to fluentformpro.php, that established a backdoor REST API endpoint, dropped persistent PHP files in mu-plugins and uploads directories, installed a passwordless administrator account, and registered scheduled tasks that survived plugin removal.",
+    "cvss": {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "score": 9.8,
+      "severity": "CRITICAL",
+      "attack_vector": "네트워크",
+      "attack_complexity": "낮음",
+      "privileges_required": "없음",
+      "user_interaction": "없음"
+    },
+    "cwes": [
+      "CWE-506"
+    ],
+    "affected": [],
+    "references": [
+      "https://patchstack.com/database/wordpress/plugin/fluentformpro/vulnerability/wordpress-fluent-forms-pro-add-on-pack-plugin-6-2-7-6-2-7-remote-code-execution-vulnerability",
+      "https://wordpress.org/plugins/fluentform/",
+      "https://wpmanageninja.com/security-incident-on-31-july-2026/",
+      "https://www.vulncheck.com/advisories/fluent-forms-pro-embedded-malicious-code-via-tampered-plugin-build"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-73532",
+    "added_at": "2026-08-14T08:00:51+09:00"
+  },
+  {
+    "id": "CVE-2026-72851",
+    "published": "2026-08-13",
+    "last_modified": "2026-08-13",
+    "status": "Received",
+    "description": "Budibase before 3.40.0 contains an unauthenticated SQL injection vulnerability in webhook-triggered automations with EXECUTE_QUERY steps. Attackers can POST attacker-controlled JSON to the webhook trigger endpoint to inject SQL payloads that execute with builder-configured database credentials, enabling data exfiltration, modification, and persistence in connected datasources like Snowflake.",
+    "cvss": {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:H",
+      "score": 10.0,
+      "severity": "CRITICAL",
+      "attack_vector": "네트워크",
+      "attack_complexity": "낮음",
+      "privileges_required": "없음",
+      "user_interaction": "없음"
+    },
+    "cwes": [
+      "CWE-89"
+    ],
+    "affected": [],
+    "references": [
+      "https://github.com/Budibase/budibase/security/advisories/GHSA-x7h8-ww3q-xv7c",
+      "https://www.vulncheck.com/advisories/budibase-before-sql-injection-via-unauthenticated-webhook"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-72851",
+    "added_at": "2026-08-14T08:00:51+09:00"
+  },
+  {
+    "id": "CVE-2026-72850",
+    "published": "2026-08-13",
+    "last_modified": "2026-08-13",
+    "status": "Received",
+    "description": "Budibase before 3.40.0 fails to properly sanitize S3 object keys, allowing authenticated builders to upload files with traversal sequences that are preserved during export. Attackers can craft filenames containing .. segments that escape the temporary directory during workspace export, writing arbitrary content to any path writable by the Budibase process.",
+    "cvss": {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:C/C:H/I:H/A:H",
+      "score": 9.1,
+      "severity": "CRITICAL",
+      "attack_vector": "네트워크",
+      "attack_complexity": "낮음",
+      "privileges_required": "높음",
+      "user_interaction": "없음"
+    },
+    "cwes": [
+      "CWE-22"
+    ],
+    "affected": [],
+    "references": [
+      "https://github.com/Budibase/budibase/security/advisories/GHSA-pxwc-66g3-5f27",
+      "https://www.vulncheck.com/advisories/budibase-before-arbitrary-file-write-via-path-traversal"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-72850",
+    "added_at": "2026-08-14T08:00:51+09:00"
+  },
+  {
+    "id": "CVE-2026-72842",
+    "published": "2026-08-13",
+    "last_modified": "2026-08-13",
+    "status": "Received",
+    "description": "luci-app-lxc contains an ACL inconsistency vulnerability that allows low-privileged authenticated LuCI users to access backend container management routes without proper authorization checks. Attackers can exploit path traversal via `/.%2E` in the `lxc_name` parameter to escape container directories and control host-side scripts executed through `lxc.hook.start-host`, achieving root code execution on the OpenWrt host.",
+    "cvss": {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H",
+      "score": 9.9,
+      "severity": "CRITICAL",
+      "attack_vector": "네트워크",
+      "attack_complexity": "낮음",
+      "privileges_required": "낮음",
+      "user_interaction": "없음"
+    },
+    "cwes": [
+      "CWE-73"
+    ],
+    "affected": [],
+    "references": [
+      "https://github.com/openwrt/luci/security/advisories/GHSA-jf59-v86x-fwf2",
+      "https://www.vulncheck.com/advisories/openwrt-luci-app-lxc-acl-inconsistency-authentication-bypass"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-72842",
+    "added_at": "2026-08-14T08:00:51+09:00"
+  },
+  {
+    "id": "CVE-2026-72841",
+    "published": "2026-08-13",
+    "last_modified": "2026-08-13",
+    "status": "Received",
+    "description": "luci-app-openvpn fails to properly validate the instance_name2 parameter during file upload, allowing authenticated users to perform path traversal and write arbitrary files outside the intended directory. Attackers can upload malicious payloads to gain persistent root code execution by placing SSH keys in system directories accessible on reboot.",
+    "cvss": {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H",
+      "score": 9.9,
+      "severity": "CRITICAL",
+      "attack_vector": "네트워크",
+      "attack_complexity": "낮음",
+      "privileges_required": "낮음",
+      "user_interaction": "없음"
+    },
+    "cwes": [
+      "CWE-73"
+    ],
+    "affected": [],
+    "references": [
+      "https://github.com/openwrt/luci/security/advisories/GHSA-jjcx-c284-2qv8",
+      "https://www.vulncheck.com/advisories/luci-app-openvpn-path-traversal-rce-via-instance-name2"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-72841",
+    "added_at": "2026-08-14T08:00:51+09:00"
+  },
+  {
+    "id": "CVE-2026-72839",
+    "published": "2026-08-13",
+    "last_modified": "2026-08-13",
+    "status": "Received",
+    "description": "filebrowser through 2.63.16 fails to properly restrict scope and permissions when self-signup is enabled with default CreateUserDir setting. Unauthenticated attackers can register accounts that inherit the server root scope with full create, modify, delete, rename, share, and download permissions, allowing unrestricted access to all files.",
+    "cvss": {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "score": 9.8,
+      "severity": "CRITICAL",
+      "attack_vector": "네트워크",
+      "attack_complexity": "낮음",
+      "privileges_required": "없음",
+      "user_interaction": "없음"
+    },
+    "cwes": [
+      "CWE-266"
+    ],
+    "affected": [],
+    "references": [
+      "https://github.com/filebrowser/filebrowser/security/advisories/GHSA-6759-996p-gpj6",
+      "https://www.vulncheck.com/advisories/filebrowser-through-privilege-escalation-via-signup"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-72839",
+    "added_at": "2026-08-14T08:00:51+09:00"
+  },
+  {
+    "id": "CVE-2026-72776",
+    "published": "2026-08-13",
+    "last_modified": "2026-08-13",
+    "status": "Received",
+    "description": "AgenticSeek (commit fc242c7) contains an unauthenticated remote code execution vulnerability that allows any network-adjacent attacker to execute arbitrary commands by submitting crafted queries to the unprotected POST /query API endpoint bound to 0.0.0.0:7777 with wildcard CORS. Attackers can send unauthenticated HTTP requests that cause the autonomous agent to generate and execute shell commands through BashInterpreter using subprocess.Popen with shell=True and safety=False, bypassing the incomplete command blocklist to achieve full host-level code execution.",
+    "cvss": {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "score": 9.8,
+      "severity": "CRITICAL",
+      "attack_vector": "네트워크",
+      "attack_complexity": "낮음",
+      "privileges_required": "없음",
+      "user_interaction": "없음"
+    },
+    "cwes": [
+      "CWE-306"
+    ],
+    "affected": [],
+    "references": [
+      "https://github.com/Fosowl/agenticSeek",
+      "https://github.com/Fosowl/agenticSeek/issues/520",
+      "https://github.com/Fosowl/agenticSeek/pull/534/changes/f1eb2cfc721f8a21dd16a8b048a9ca89f3259f6f",
+      "https://www.vulncheck.com/advisories/agenticseek-unauthenticated-rce-via-query-api-endpoint"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-72776",
+    "added_at": "2026-08-14T08:00:51+09:00"
+  },
+  {
+    "id": "CVE-2026-67614",
+    "published": "2026-08-13",
+    "last_modified": "2026-08-13",
+    "status": "Received",
+    "description": "CyberPanel before 3.0.0 contains a hard-coded JWT secret vulnerability in the WebTerminal FastAPI SSH service that allows unauthenticated remote attackers to forge valid authentication tokens and obtain an interactive root shell via WebSocket on port 8888. Attackers can craft a forged JWT signed with the hardcoded secret value, specifying ssh_user=root, to authenticate to the terminal service without any valid credentials and receive a root shell.",
+    "cvss": {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "score": 9.8,
+      "severity": "CRITICAL",
+      "attack_vector": "네트워크",
+      "attack_complexity": "낮음",
+      "privileges_required": "없음",
+      "user_interaction": "없음"
+    },
+    "cwes": [
+      "CWE-798"
+    ],
+    "affected": [],
+    "references": [
+      "https://cyberpanel.net/KnowledgeBase/home/change-logs/",
+      "https://github.com/usmannasir/cyberpanel/issues/1858",
+      "https://www.vulncheck.com/advisories/cyberpanel-hard-coded-jwt-secret-authentication-bypass-via-webterminal"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-67614",
+    "added_at": "2026-08-14T08:00:51+09:00"
+  },
+  {
+    "id": "CVE-2026-53791",
+    "published": "2026-08-13",
+    "last_modified": "2026-08-13",
+    "status": "Received",
+    "description": "rsync daemon before 3.5.0 contains an IP address spoofing vulnerability that allows unauthenticated remote attackers to bypass IP-based access controls by sending a crafted PROXY protocol header with a forged source address. Attackers who can connect directly to the rsync daemon can inject a spoofed source IP in the PROXY protocol header to circumvent hosts allow/deny rules, gaining unauthorized access that would otherwise be blocked based on their real source address.",
+    "cvss": {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N",
+      "score": 9.1,
+      "severity": "CRITICAL",
+      "attack_vector": "네트워크",
+      "attack_complexity": "낮음",
+      "privileges_required": "없음",
+      "user_interaction": "없음"
+    },
+    "cwes": [
+      "CWE-290"
+    ],
+    "affected": [],
+    "references": [
+      "https://github.com/RsyncProject/rsync/releases/tag/v3.5.0",
+      "https://github.com/RsyncProject/rsync/security/advisories/GHSA-h2q9-5fr8-w635",
+      "https://www.vulncheck.com/advisories/rsync-daemon-ip-spoofing-via-proxy-protocol-header"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-53791",
+    "added_at": "2026-08-14T08:00:51+09:00"
+  },
+  {
+    "id": "CVE-2026-19747",
+    "published": "2026-08-13",
+    "last_modified": "2026-08-13",
+    "status": "Received",
+    "description": "A weakness has been identified in Tenda CH7, CH7G, CH10, CP3, CP3 Pro, CP7, TC3B14C, TC3B15C, TC3T14C and TC3T15C up to 20260625. This impacts the function CAte::HandleCmd of the file Kylin of the component ATE Module. This manipulation causes command injection. The attack is possible to be carried out remotely.",
+    "cvss": {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "score": 9.8,
+      "severity": "CRITICAL",
+      "attack_vector": "네트워크",
+      "attack_complexity": "낮음",
+      "privileges_required": "없음",
+      "user_interaction": "없음"
+    },
+    "cwes": [
+      "CWE-74",
+      "CWE-77"
+    ],
+    "affected": [],
+    "references": [
+      "https://github.com/howitouchyou/Tenda-Smart-Camera-Vulnerability/blob/main/Tenda%20Command%20Injection/Tenda%20Command%20Injection.md",
+      "https://vuldb.com/cve/CVE-2026-19747",
+      "https://vuldb.com/submit/868463",
+      "https://vuldb.com/vuln/389498",
+      "https://vuldb.com/vuln/389498/cti",
+      "https://www.tenda.com.cn/"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-19747",
+    "added_at": "2026-08-14T08:00:51+09:00"
+  },
+  {
+    "id": "CVE-2026-19297",
+    "published": "2026-08-13",
+    "last_modified": "2026-08-13",
+    "status": "Received",
+    "description": "IBM Langflow OSS 1.0.0 through 1.9.6 could allow a remote attacker to obtain unauthorized access to user accounts due to improper restriction of excessive authentication attempts.",
+    "cvss": {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N",
+      "score": 9.1,
+      "severity": "CRITICAL",
+      "attack_vector": "네트워크",
+      "attack_complexity": "낮음",
+      "privileges_required": "없음",
+      "user_interaction": "없음"
+    },
+    "cwes": [
+      "CWE-307"
+    ],
+    "affected": [],
+    "references": [
+      "https://www.ibm.com/support/pages/node/7283558"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-19297",
+    "added_at": "2026-08-14T08:00:51+09:00"
+  },
+  {
+    "id": "CVE-2026-17482",
+    "published": "2026-08-13",
+    "last_modified": "2026-08-13",
+    "status": "Received",
+    "description": "IBM Documentation Offline 1.0.0 through 1.4.1 could allow a remote attacker to execute arbitrary code due to improper control of file paths.",
+    "cvss": {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "score": 9.8,
+      "severity": "CRITICAL",
+      "attack_vector": "네트워크",
+      "attack_complexity": "낮음",
+      "privileges_required": "없음",
+      "user_interaction": "없음"
+    },
+    "cwes": [
+      "CWE-73"
+    ],
+    "affected": [],
+    "references": [
+      "https://www.ibm.com/support/pages/node/7283484"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-17482",
+    "added_at": "2026-08-14T08:00:51+09:00"
+  },
+  {
+    "id": "CVE-2026-14525",
+    "published": "2026-08-13",
+    "last_modified": "2026-08-13",
+    "status": "Awaiting Analysis",
+    "description": "IBM WebSphere Application Server - Liberty 17.0.0.3 through 26.0.0.8 IBM WebSphere Application Server Liberty is vulnerable to an authentication bypass when the rtcomm-1.0 or rtcommGateway-1.0 feature is enabled.",
+    "cvss": {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:L",
+      "score": 9.4,
+      "severity": "CRITICAL",
+      "attack_vector": "네트워크",
+      "attack_complexity": "낮음",
+      "privileges_required": "없음",
+      "user_interaction": "없음"
+    },
+    "cwes": [
+      "CWE-306"
+    ],
+    "affected": [],
+    "references": [
+      "https://www.ibm.com/support/pages/node/7283488"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-14525",
+    "added_at": "2026-08-14T08:00:51+09:00"
+  },
+  {
     "id": "CVE-2026-73519",
     "published": "2026-08-12",
     "last_modified": "2026-08-12",
@@ -163,6 +550,34 @@
     "added_at": "2026-08-12T20:00:55+09:00"
   },
   {
+    "id": "CVE-2026-17276",
+    "published": "2026-08-12",
+    "last_modified": "2026-08-13",
+    "status": "Analyzed",
+    "description": "IBM i 7.6, 7.5, 7.4, and 7.3 could allow a remote authenticated attacker to escalate privileges due to improper authorization in the handling of high-authority threads.",
+    "cvss": {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:N",
+      "score": 9.6,
+      "severity": "CRITICAL",
+      "attack_vector": "네트워크",
+      "attack_complexity": "낮음",
+      "privileges_required": "낮음",
+      "user_interaction": "없음"
+    },
+    "cwes": [
+      "CWE-269"
+    ],
+    "affected": [
+      "ibm i"
+    ],
+    "references": [
+      "https://www.ibm.com/support/pages/node/7283292"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-17276",
+    "added_at": "2026-08-14T08:00:51+09:00"
+  },
+  {
     "id": "CVE-2026-17083",
     "published": "2026-08-12",
     "last_modified": "2026-08-12",
@@ -187,6 +602,34 @@
     ],
     "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-17083",
     "added_at": "2026-08-13T08:00:27+09:00"
+  },
+  {
+    "id": "CVE-2026-16860",
+    "published": "2026-08-12",
+    "last_modified": "2026-08-13",
+    "status": "Analyzed",
+    "description": "IBM i 7.6, 7.5, 7.4, and 7.3 could allow a remote authenticated attacker to execute arbitrary code due to an uncontrolled search path element.",
+    "cvss": {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:L",
+      "score": 9.9,
+      "severity": "CRITICAL",
+      "attack_vector": "네트워크",
+      "attack_complexity": "낮음",
+      "privileges_required": "낮음",
+      "user_interaction": "없음"
+    },
+    "cwes": [
+      "CWE-427"
+    ],
+    "affected": [
+      "ibm i"
+    ],
+    "references": [
+      "https://www.ibm.com/support/pages/node/7283282"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-16860",
+    "added_at": "2026-08-14T08:00:51+09:00"
   },
   {
     "id": "CVE-2025-41769",
