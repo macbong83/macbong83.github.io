@@ -1,0 +1,111 @@
+{
+  "tagline": "글로벌 정보보안 뉴스레터",
+  "title": "보안 브리핑",
+  "date_display": "2026년 8월 14일 금요일",
+  "date_short": "2026.08.14",
+  "sources_line": "The Hacker News · BleepingComputer · SecurityWeek · KrebsOnSecurity · CISA · NCSC UK · Unit 42 · 보안뉴스 · 데일리시큐 · 전자신문",
+  "seo": {
+    "title": "취약점, 랜섬웨어 — 2026.08.14 보안 브리핑",
+    "description": "오늘 주요 취약점·침해 사고·위협 트렌드 요약.",
+    "keywords": "CVE, 랜섬웨어, 취약점, 침해사고, 보안"
+  },
+  "sections": [
+    {
+      "label": "취약점 & 공격",
+      "type": "cards",
+      "items": [
+        {
+          "severity": "critical",
+          "source": "SecurityWeek",
+          "headline": "Adobe Commerce 취약점 CVE-2026-71362 악용 시도",
+          "url": "https://www.securityweek.com/adobe-commerce-bug-targeted-immediately-after-disclosure/",
+          "summary": "CVE-2026-71362 취약점은 인증 없이 고객 계정을 해킹하고 개인 데이터에 접근할 수 있는 심각한 문제로, CVSS 점수 9.1을 기록했다. 공개 직후 악용이 시작되어 즉각적인 패치 및 보안 조치가 필요하다."
+        },
+        {
+          "severity": "critical",
+          "source": "SecurityWeek",
+          "headline": "SharePoint 인증 우회 취약점 CVE-2026-55040 악용",
+          "url": "https://thehackernews.com/2026/08/attackers-exploit-sharepoint.html",
+          "summary": "CVE-2026-55040 취약점은 인증 없이 관리자 계정으로 변위할 수 있는 문제로 CVSS 점수 9.1을 기록했다. 공개 직후 악용이 시작되어 즉각적인 패치 및 보안 조치가 필요하다."
+        },
+        {
+          "severity": "critical",
+          "source": "CISA",
+          "headline": "Metabase, Windows, Cisco Secure Firewall 취약점 KEV 목록에 추가",
+          "url": "https://securityaffairs.com/197110/uncategorized/u-s-cisa-adds-metabase-windows-and-cisco-secure-firewall-flaws-to-its-known-exploited-vulnerabilities-catalog.html",
+          "summary": "CISA는 KEV 목록에 Metabase, Windows, Cisco Secure Firewall의 취약점을 추가했다. 이 취약점들은 실제 악용 사례가 확인되어 즉각적인 패치 및 보안 조치가 필요하다."
+        },
+        {
+          "severity": "high",
+          "source": "SecurityWeek",
+          "headline": "Lazarus 그룹, Windows 제로데이 악용하여 백도어 배포",
+          "url": "https://thehackernews.com/2026/08/lazarus-exploits-windows-zero-day-to.html",
+          "summary": "Lazarus 그룹은 Windows 제로데이 취약점을 악용하여 SYSTEM 권한을 얻고 백도어를 배포했다. 프랑스, 독일, 브라질, 인도의 방위 및 항공우주 기업을 대상으로 한 것으로 보인다."
+        },
+        {
+          "severity": "high",
+          "source": "SecurityWeek",
+          "headline": "vCenter 취약점 CVE-2026-59310 공개 후 5일 만에 악용",
+          "url": "https://www.infosecurity-magazine.com/news/vcenter-cve-2026-59310-exploited/",
+          "summary": "CVE-2026-59310 취약점은 디렉토리 트래버셜 문제로 원격 공격자가 임의 코드를 실행할 수 있다. 공개 후 5일 만에 악용이 시작되어 즉각적인 패치 및 보안 조치가 필요하다."
+        },
+        {
+          "severity": "medium",
+          "source": "SecurityWeek",
+          "headline": "WordPress 7.0.4, 원격 코드 실행 취약점 패치",
+          "url": "https://www.securityweek.com/wordpress-7-0-4-patches-remote-code-execution-vulnerability/",
+          "summary": "WordPress 7.0.4는 Author 레벨 사용자 이상이 악의적인 Postscript 파일을 통해 취약점을 악용할 수 있는 문제를 패치했다. 즉각적인 업데이트가 권장된다."
+        }
+      ]
+    },
+    {
+      "label": "침해 사고",
+      "type": "cards",
+      "items": [
+        {
+          "severity": "incident",
+          "source": "Infosecurity Magazine",
+          "headline": "1500개 이상의 영국 비영리 단체 데이터 유출 사고",
+          "url": "https://www.infosecurity-magazine.com/news/exposed-aws-key-data-charities/",
+          "summary": "Beacon CRM 제공업체는 AWS 액세스 키 유출로 인해 1500개 이상의 영국 비영리 단체 데이터가 유출된 사고가 발생했다. 즉각적인 보안 조치와 데이터 보호가 필요하다."
+        },
+        {
+          "severity": "incident",
+          "source": "SecurityWeek",
+          "headline": "CEVA Logistics, 유럽 물류 시스템 침해",
+          "url": "https://securityaffairs.com/197086/data-breach/ceva-logistics-cyberattack-disrupts-european-warehouses-and-shipments.html",
+          "summary": "CEVA Logistics는 유럽 물류 시스템을 침해하여 8개 창고에 영향을 주고 운송을 중단시켰다. 즉각적인 보안 조치와 데이터 보호가 필요하다."
+        },
+        {
+          "severity": "incident",
+          "source": "Infosecurity Magazine",
+          "headline": "ACRO 기록 사무소, 2023년 데이터 유출 사고로 ICO 경고",
+          "url": "https://www.infosecurity-magazine.com/news/ico-reprimands-acro-records-office/",
+          "summary": "ACRO 기록 사무소는 패치 및 보안 모니터링 실패로 인해 2023년 데이터 유출 사고가 발생했으며, ICO로부터 공식 경고를 받았다."
+        }
+      ]
+    },
+    {
+      "label": "동향 & 분석",
+      "type": "trends",
+      "items": [
+        {
+          "lead": "AI 기반 자율 보안",
+          "body": "AI 기술이 보안 분야에서 주목받고 있으며, 자율 보안의 미래를 위한 다양한 기술들이 개발되고 있다. ISEC 2026에서는 AI를 활용한 보안 솔루션에 대한 논의가 활발히 이루어졌다."
+        },
+        {
+          "lead": "제로데이 취약점 악용 증가",
+          "body": "제로데이 취약점이 빠르게 공개되고 악용되는 사례가 증가하고 있다. 특히, Windows 및 SharePoint와 같은 주요 플랫폼에서의 취약점이 빠르게 악용되고 있다."
+        },
+        {
+          "lead": "국제 협력 강화",
+          "body": "국제적으로 사이버 보안 협력이 강화되고 있으며, 미국 정부는 민간 기업과의 협력을 통해 해외 사이버 범죄 조직에 대응하고 있다."
+        },
+        {
+          "lead": "랜섬웨어 진화",
+          "body": "랜섬웨어 그룹이 새로운 악성코드를 지속적으로 개발하고 있으며, Storm-1175는 Medusa 대신 StormEncryptor를 사용하여 공격을 수행하고 있다."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>취약점, 랜섬웨어 — 2026.08.14 보안 브리핑 | SecuLog</title>
+<meta name="description" content="오늘 주요 취약점·침해 사고·위협 트렌드 요약.">
+<meta name="keywords" content="CVE, 랜섬웨어, 취약점, 침해사고, 보안">
+<meta name="author" content="Felix">
+<meta property="og:type" content="article">
+<meta property="og:title" content="취약점, 랜섬웨어 — 2026.08.14 보안 브리핑">
+<meta property="og:description" content="오늘 주요 취약점·침해 사고·위협 트렌드 요약.">
+<meta property="og:url" content="https://macbong83.github.io/posts/2026-08-14.html">
+<meta property="og:site_name" content="SecuLog">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="취약점, 랜섬웨어 — 2026.08.14 보안 브리핑">
+<meta name="twitter:description" content="오늘 주요 취약점·침해 사고·위협 트렌드 요약.">
+<link rel="canonical" href="https://macbong83.github.io/posts/2026-08-14.html">
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: -apple-system, 'Malgun Gothic', 'Apple SD Gothic Neo', Arial, sans-serif; background: #f4f5f7; color: #1a1a2e; line-height: 1.6; }
+  a { text-decoration: none; color: inherit; }
+  .wrapper { max-width: 700px; margin: 32px auto; background: #ffffff; border-radius: 12px; overflow: hidden; box-shadow: 0 2px 20px rgba(0,0,0,0.08); }
+  .header { background: #eef0f4; padding: 28px 36px 24px; display: flex; align-items: center; justify-content: space-between; gap: 16px; border-bottom: 3px solid #0d1b3e; }
+  .wordmark { font-size: 26px; font-weight: 800; letter-spacing: -0.02em; color: #0d1b3e; }
+  .wordmark .accent { color: #2563eb; }
+  .header-meta { text-align: right; }
+  .header-meta .nl-label { font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase; color: #6b7488; margin-bottom: 4px; }
+  .header-meta .nl-title { font-size: 17px; font-weight: 700; color: #0d1b3e; }
+  .header-meta .nl-date { font-size: 12px; color: #8a93a8; margin-top: 3px; }
+  .body { padding: 28px 36px 32px; }
+  .section-label { font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase; color: #8a93a8; font-weight: 600; padding-bottom: 8px; border-bottom: 1px solid #e8eaed; margin-bottom: 4px; margin-top: 28px; }
+  .section-label:first-child { margin-top: 0; }
+  .card { display: block; padding: 16px 0; border-bottom: 1px solid #f0f1f3; transition: background 0.15s; }
+  .card:last-child { border-bottom: none; }
+  .card:hover { background: #f8f9fc; margin: 0 -36px; padding: 16px 36px; }
+  .card-top { display: flex; align-items: center; gap: 8px; margin-bottom: 6px; flex-wrap: wrap; }
+  .badge { font-size: 10px; font-weight: 700; padding: 3px 9px; border-radius: 4px; letter-spacing: 0.04em; }
+  .badge-critical { background: #fff0f0; color: #c0392b; border: 1px solid #f5c6c6; }
+  .badge-high { background: #fff7ee; color: #b94d00; border: 1px solid #fdd5a8; }
+  .badge-medium { background: #fff9e6; color: #856900; border: 1px solid #f9e0a0; }
+  .badge-incident { background: #f3f0ff; color: #6133c0; border: 1px solid #cfc0f5; }
+  .source { font-size: 11px; color: #a0a8b8; }
+  .card-headline { font-size: 14px; font-weight: 600; color: #0d1b3e; margin-bottom: 5px; line-height: 1.45; }
+  .card-headline .arrow { font-size: 12px; color: #2563eb; margin-left: 4px; opacity: 0; transition: opacity 0.15s; }
+  .card:hover .card-headline .arrow { opacity: 1; }
+  .card-summary { font-size: 13px; color: #4a5568; line-height: 1.65; }
+  .trend-box { background: #f8f9fc; border-radius: 10px; padding: 18px 20px; margin-top: 6px; }
+  .trend-row { display: flex; gap: 12px; padding: 10px 0; border-bottom: 1px solid #e8eaed; align-items: flex-start; }
+  .trend-row:last-child { border-bottom: none; padding-bottom: 0; }
+  .trend-num { font-size: 11px; font-weight: 700; color: #2563eb; min-width: 22px; padding-top: 2px; }
+  .trend-text { font-size: 13px; color: #4a5568; line-height: 1.6; }
+  .trend-text strong { color: #0d1b3e; font-weight: 600; }
+  .footer { background: #f4f5f7; border-top: 1px solid #e8eaed; padding: 16px 36px; font-size: 11px; color: #9aa0b0; line-height: 1.6; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 8px; }
+  .footer-meta { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; justify-content: flex-end; }
+  .linkedin-link { display: inline-flex; align-items: center; justify-content: center; min-height: 28px; padding: 6px 12px; border-radius: 6px; background: #0a66c2; color: #fff; font-size: 12px; font-weight: 800; letter-spacing: 0.01em; box-shadow: 0 6px 14px rgba(10,102,194,0.16); }
+  .linkedin-link:hover { background: #004182; color: #fff; }
+  .card-inner { display: flex; gap: 14px; }
+  .sev-bar { width: 3px; border-radius: 2px; flex-shrink: 0; margin: 3px 0; }
+  .sev-critical { background: #e74c3c; }
+  .sev-high { background: #e67e22; }
+  .sev-medium { background: #f0b429; }
+  .sev-incident { background: #7c3aed; }
+  .card-content { flex: 1; }
+  @media (max-width: 600px) {
+    .wrapper { margin: 0; border-radius: 0; box-shadow: none; }
+    .header { padding: 18px 20px 16px; flex-direction: column; align-items: flex-start; gap: 8px; }
+    .header-meta { text-align: left; }
+    .body { padding: 18px 20px 24px; }
+    .card:hover { margin: 0 -20px; padding: 16px 20px; }
+    .footer { padding: 14px 20px; flex-direction: column; align-items: flex-start; }
+    .footer-meta { justify-content: flex-start; }
+    .wordmark { font-size: 22px; }
+    .card-headline { font-size: 13px; }
+    .card-summary { font-size: 12px; }
+    .card-headline .arrow { opacity: 1; }
+  }
+</style>
+</head>
+<body>
+<div class="wrapper">
+  <div class="header">
+    <div class="header-logo">
+      <span class="wordmark">Secu<span class="accent">Log</span></span>
+    </div>
+    <div class="header-meta">
+      <div class="nl-label">글로벌 정보보안 뉴스레터</div>
+      <div class="nl-title">보안 브리핑</div>
+      <div class="nl-date">2026년 8월 14일 금요일</div>
+    </div>
+  </div>
+  <div class="body">
+    <div class="section-label">취약점 &amp; 공격</div>
+
+    <a class="card" href="https://www.securityweek.com/adobe-commerce-bug-targeted-immediately-after-disclosure/" target="_blank">
+      <div class="card-inner"><div class="sev-bar sev-critical"></div><div class="card-content">
+        <div class="card-top"><span class="badge badge-critical">긴급</span><span class="source">SecurityWeek</span></div>
+        <div class="card-headline">Adobe Commerce 취약점 CVE-2026-71362 악용 시도<span class="arrow">↗</span></div>
+        <div class="card-summary">CVE-2026-71362 취약점은 인증 없이 고객 계정을 해킹하고 개인 데이터에 접근할 수 있는 심각한 문제로, CVSS 점수 9.1을 기록했다. 공개 직후 악용이 시작되어 즉각적인 패치 및 보안 조치가 필요하다.</div>
+      </div></div>
+    </a>
+
+    <a class="card" href="https://thehackernews.com/2026/08/attackers-exploit-sharepoint.html" target="_blank">
+      <div class="card-inner"><div class="sev-bar sev-critical"></div><div class="card-content">
+        <div class="card-top"><span class="badge badge-critical">긴급</span><span class="source">SecurityWeek</span></div>
+        <div class="card-headline">SharePoint 인증 우회 취약점 CVE-2026-55040 악용<span class="arrow">↗</span></div>
+        <div class="card-summary">CVE-2026-55040 취약점은 인증 없이 관리자 계정으로 변위할 수 있는 문제로 CVSS 점수 9.1을 기록했다. 공개 직후 악용이 시작되어 즉각적인 패치 및 보안 조치가 필요하다.</div>
+      </div></div>
+    </a>
+
+    <a class="card" href="https://securityaffairs.com/197110/uncategorized/u-s-cisa-adds-metabase-windows-and-cisco-secure-firewall-flaws-to-its-known-exploited-vulnerabilities-catalog.html" target="_blank">
+      <div class="card-inner"><div class="sev-bar sev-critical"></div><div class="card-content">
+        <div class="card-top"><span class="badge badge-critical">긴급</span><span class="source">CISA</span></div>
+        <div class="card-headline">Metabase, Windows, Cisco Secure Firewall 취약점 KEV 목록에 추가<span class="arrow">↗</span></div>
+        <div class="card-summary">CISA는 KEV 목록에 Metabase, Windows, Cisco Secure Firewall의 취약점을 추가했다. 이 취약점들은 실제 악용 사례가 확인되어 즉각적인 패치 및 보안 조치가 필요하다.</div>
+      </div></div>
+    </a>
+
+    <a class="card" href="https://thehackernews.com/2026/08/lazarus-exploits-windows-zero-day-to.html" target="_blank">
+      <div class="card-inner"><div class="sev-bar sev-high"></div><div class="card-content">
+        <div class="card-top"><span class="badge badge-high">높음</span><span class="source">SecurityWeek</span></div>
+        <div class="card-headline">Lazarus 그룹, Windows 제로데이 악용하여 백도어 배포<span class="arrow">↗</span></div>
+        <div class="card-summary">Lazarus 그룹은 Windows 제로데이 취약점을 악용하여 SYSTEM 권한을 얻고 백도어를 배포했다. 프랑스, 독일, 브라질, 인도의 방위 및 항공우주 기업을 대상으로 한 것으로 보인다.</div>
+      </div></div>
+    </a>
+
+    <a class="card" href="https://www.infosecurity-magazine.com/news/vcenter-cve-2026-59310-exploited/" target="_blank">
+      <div class="card-inner"><div class="sev-bar sev-high"></div><div class="card-content">
+        <div class="card-top"><span class="badge badge-high">높음</span><span class="source">SecurityWeek</span></div>
+        <div class="card-headline">vCenter 취약점 CVE-2026-59310 공개 후 5일 만에 악용<span class="arrow">↗</span></div>
+        <div class="card-summary">CVE-2026-59310 취약점은 디렉토리 트래버셜 문제로 원격 공격자가 임의 코드를 실행할 수 있다. 공개 후 5일 만에 악용이 시작되어 즉각적인 패치 및 보안 조치가 필요하다.</div>
+      </div></div>
+    </a>
+
+    <a class="card" href="https://www.securityweek.com/wordpress-7-0-4-patches-remote-code-execution-vulnerability/" target="_blank">
+      <div class="card-inner"><div class="sev-bar sev-medium"></div><div class="card-content">
+        <div class="card-top"><span class="badge badge-medium">중간</span><span class="source">SecurityWeek</span></div>
+        <div class="card-headline">WordPress 7.0.4, 원격 코드 실행 취약점 패치<span class="arrow">↗</span></div>
+        <div class="card-summary">WordPress 7.0.4는 Author 레벨 사용자 이상이 악의적인 Postscript 파일을 통해 취약점을 악용할 수 있는 문제를 패치했다. 즉각적인 업데이트가 권장된다.</div>
+      </div></div>
+    </a>
+
+    <div class="section-label">침해 사고</div>
+
+    <a class="card" href="https://www.infosecurity-magazine.com/news/exposed-aws-key-data-charities/" target="_blank">
+      <div class="card-inner"><div class="sev-bar sev-incident"></div><div class="card-content">
+        <div class="card-top"><span class="badge badge-incident">사고</span><span class="source">Infosecurity Magazine</span></div>
+        <div class="card-headline">1500개 이상의 영국 비영리 단체 데이터 유출 사고<span class="arrow">↗</span></div>
+        <div class="card-summary">Beacon CRM 제공업체는 AWS 액세스 키 유출로 인해 1500개 이상의 영국 비영리 단체 데이터가 유출된 사고가 발생했다. 즉각적인 보안 조치와 데이터 보호가 필요하다.</div>
+      </div></div>
+    </a>
+
+    <a class="card" href="https://securityaffairs.com/197086/data-breach/ceva-logistics-cyberattack-disrupts-european-warehouses-and-shipments.html" target="_blank">
+      <div class="card-inner"><div class="sev-bar sev-incident"></div><div class="card-content">
+        <div class="card-top"><span class="badge badge-incident">사고</span><span class="source">SecurityWeek</span></div>
+        <div class="card-headline">CEVA Logistics, 유럽 물류 시스템 침해<span class="arrow">↗</span></div>
+        <div class="card-summary">CEVA Logistics는 유럽 물류 시스템을 침해하여 8개 창고에 영향을 주고 운송을 중단시켰다. 즉각적인 보안 조치와 데이터 보호가 필요하다.</div>
+      </div></div>
+    </a>
+
+    <a class="card" href="https://www.infosecurity-magazine.com/news/ico-reprimands-acro-records-office/" target="_blank">
+      <div class="card-inner"><div class="sev-bar sev-incident"></div><div class="card-content">
+        <div class="card-top"><span class="badge badge-incident">사고</span><span class="source">Infosecurity Magazine</span></div>
+        <div class="card-headline">ACRO 기록 사무소, 2023년 데이터 유출 사고로 ICO 경고<span class="arrow">↗</span></div>
+        <div class="card-summary">ACRO 기록 사무소는 패치 및 보안 모니터링 실패로 인해 2023년 데이터 유출 사고가 발생했으며, ICO로부터 공식 경고를 받았다.</div>
+      </div></div>
+    </a>
+
+    <div class="section-label">동향 &amp; 분석</div>
+    <div class="trend-box">
+      <div class="trend-row">
+        <div class="trend-num">01</div>
+        <div class="trend-text"><strong>AI 기반 자율 보안</strong> — AI 기술이 보안 분야에서 주목받고 있으며, 자율 보안의 미래를 위한 다양한 기술들이 개발되고 있다. ISEC 2026에서는 AI를 활용한 보안 솔루션에 대한 논의가 활발히 이루어졌다.</div>
+      </div>
+      <div class="trend-row">
+        <div class="trend-num">02</div>
+        <div class="trend-text"><strong>제로데이 취약점 악용 증가</strong> — 제로데이 취약점이 빠르게 공개되고 악용되는 사례가 증가하고 있다. 특히, Windows 및 SharePoint와 같은 주요 플랫폼에서의 취약점이 빠르게 악용되고 있다.</div>
+      </div>
+      <div class="trend-row">
+        <div class="trend-num">03</div>
+        <div class="trend-text"><strong>국제 협력 강화</strong> — 국제적으로 사이버 보안 협력이 강화되고 있으며, 미국 정부는 민간 기업과의 협력을 통해 해외 사이버 범죄 조직에 대응하고 있다.</div>
+      </div>
+      <div class="trend-row">
+        <div class="trend-num">04</div>
+        <div class="trend-text"><strong>랜섬웨어 진화</strong> — 랜섬웨어 그룹이 새로운 악성코드를 지속적으로 개발하고 있으며, Storm-1175는 Medusa 대신 StormEncryptor를 사용하여 공격을 수행하고 있다.</div>
+      </div>
+    </div>
+  </div>
+  <div class="footer">
+    <div>출처: The Hacker News · BleepingComputer · SecurityWeek · KrebsOnSecurity · CISA · NCSC UK · Unit 42 · 보안뉴스 · 데일리시큐 · 전자신문</div>
+    <div class="footer-meta">
+      <span>© 2026 Felix · SecuLog. 본 브리핑은 공개된 보안 뉴스를 기반으로 작성되었습니다.</span>
+    </div>
+  </div>
+</div>
+</body>
+</html>
