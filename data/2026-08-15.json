@@ -1,0 +1,104 @@
+{
+  "tagline": "글로벌 정보보안 뉴스레터",
+  "title": "보안 브리핑",
+  "date_display": "2026년 8월 15일 토요일",
+  "date_short": "2026.08.15",
+  "sources_line": "The Hacker News · BleepingComputer · SecurityWeek · KrebsOnSecurity · CISA · NCSC UK · Unit 42 · 보안뉴스 · 데일리시큐 · 전자신문",
+  "seo": {
+    "title": "랜섬웨어, 취약점 — 2026.08.15 보안 브리핑",
+    "description": "오늘 주요 취약점·침해 사고·위협 트렌드 요약.",
+    "keywords": "CVE, 랜섬웨어, 취약점, 침해사고, 보안"
+  },
+  "sections": [
+    {
+      "label": "취약점 & 공격",
+      "type": "cards",
+      "items": [
+        {
+          "severity": "critical",
+          "source": "SecurityWeek",
+          "headline": "Adobe Commerce 취약점(CVE-2026-71362) 악용 시도",
+          "url": "https://securityaffairs.com/197149/hacking/adobe-commerce-cve-2026-71362-comes-under-attack-shortly-after-public-disclosure.html",
+          "summary": "CVE-2026-71362 취약점은 인증 없이도 고객 계정을 해킹하고 개인 데이터에 접근할 수 있는 심각한 문제로, 공개 직후 악용 시도가 확인되었다. CVSS 점수 9.1로 CISA KEV 목록에 포함되어 있다."
+        },
+        {
+          "severity": "high",
+          "source": "SecurityWeek",
+          "headline": "Geoserver 제로데이 취약점 악용",
+          "url": "https://www.securityweek.com/hackers-exploiting-unpatched-geoserver-zero-day/",
+          "summary": "Geoserver의 SQL 인젝션 취약점이 공개되지 않은 상태에서 악용되고 있으며, 원격 코드 실행이 가능하다. 패치가 필요한 상황으로, 주요 인프라에 영향을 줄 수 있다."
+        },
+        {
+          "severity": "medium",
+          "source": "SecurityWeek",
+          "headline": "Microsoft 365 AitM 악용 피싱 공격",
+          "url": "http://www.boannews.com/media/view.asp?idx=145076",
+          "summary": "Microsoft 365 계정을 대상으로 한 중간자 공격(AitM) 기법을 사용한 피싱 캠페인 진행 중이다. 재무 워크플로에 관련된 주요 담당자의 이메일을 수집하는 것으로 보인다."
+        },
+        {
+          "severity": "high",
+          "source": "SecurityWeek",
+          "headline": "라자루스 그룹, 윈도우 미패치 취약점 악용",
+          "url": "http://www.boannews.com/media/view.asp?idx=145147",
+          "summary": "북한 연계 해킹그룹 라자루스가 윈도우 커널 제로데이 취약점(CVE-2026-68820)을 악용해 ‘푸드모듈’ 루트킷을 유포하고 있다. 악용이 적발되었으며, 주요 인프라에 영향을 줄 수 있다."
+        },
+        {
+          "severity": "medium",
+          "source": "SecurityWeek",
+          "headline": "Beacon CRM 데이터 유출, AWS 액세스 키 노출로 인한 사고",
+          "url": "https://www.securityweek.com/over-1000-charities-hit-by-beacon-crm-data-breach/",
+          "summary": "1,000개 이상의 비영리 단체가 Beacon CRM 데이터 유출 사고에 피해를 입었다. 원인은 공개된 JavaScript 빌드 아티팩트에 노출된 AWS 액세스 키로 추정된다."
+        }
+      ]
+    },
+    {
+      "label": "침해 사고",
+      "type": "cards",
+      "items": [
+        {
+          "severity": "incident",
+          "source": "SecurityWeek",
+          "headline": "RingCentral 데이터 유출, 160만 명 영향",
+          "url": "https://www.securityweek.com/1-6-million-likely-impacted-by-ringcentral-data-breach/",
+          "summary": "RingCentral 데이터 유출 사고로 160만 명의 이름, 주소, 이메일, 전화번호 등이 유출되었다. 해커가 정보를 공개한 것으로 보인다."
+        },
+        {
+          "severity": "incident",
+          "source": "SecurityWeek",
+          "headline": "ShipMonk 데이터 유출, 14,000명의 Trezor 고객 영향",
+          "url": "https://www.securityweek.com/14000-trezor-customers-impacted-by-data-breach-at-shipmonk/",
+          "summary": "ShipMonk 데이터 유출 사고로 14,000명의 Trezor 고객의 배송 정보가 유출되었다. 해커가 고객의 이름, 주소, 이메일, 전화번호를 수집한 것으로 보인다."
+        },
+        {
+          "severity": "incident",
+          "source": "SecurityWeek",
+          "headline": "Chess.com 730만 명의 사용자 정보 유출",
+          "url": "https://securityaffairs.com/197174/breaking-news/chess-com-leak-exposes-7-3-million-users-evidence-points-to-scraping.html",
+          "summary": "Chess.com에서 730만 명의 사용자 정보가 유출되었으며, 이는 대규모 스크래핑으로 인한 것으로 보인다. 서버 침해보다는 데이터 수집이 주요 원인으로 추정된다."
+        }
+      ]
+    },
+    {
+      "label": "동향 & 분석",
+      "type": "trends",
+      "items": [
+        {
+          "lead": "AI 기반 위협 증가",
+          "body": "AI 기반의 악성코드 재구성, 봇넷 확장, 해킹 조직의 AI 활용 등 AI 기술이 악용되는 사례가 증가하고 있다. 특히, AI 에이전트가 시스템을 조작하거나 데이터를 수집하는 사례가 늘고 있다."
+        },
+        {
+          "lead": "제로데이 취약점 악용 증가",
+          "body": "제로데이 취약점이 공개되기 전에 악용되는 사례가 늘고 있으며, 특히 주요 인프라에 영향을 주는 취약점이 주목받고 있다. 이는 보안 패치가 지연되거나 악용이 빠르게 이루어지는 것으로 보인다."
+        },
+        {
+          "lead": "데이터 유출 사고 증가",
+          "body": "AWS 액세스 키 노출, 스크래핑, 내부 실수 등으로 인한 데이터 유출 사고가 증가하고 있다. 특히, 비영리 단체와 기업의 데이터 유출 사례가 주목받고 있다."
+        },
+        {
+          "lead": "AI 기반 보안 솔루션 확대",
+          "body": "AI 기반의 보안 솔루션이 확대되고 있으며, 특히 랜섬웨어 대응, 개인정보 유출 탐지, 네트워크 보안 강화 등에 활용되고 있다. 이는 AI 기술이 보안 분야에서 중요한 역할을 할 것으로 기대된다."
+        }
+      ]
+    }
+  ]
+}
