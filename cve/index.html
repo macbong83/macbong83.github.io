@@ -41,13 +41,243 @@
     <h1>CVE Archive</h1>
     <p>NVD 기반 Critical CVE를 누적 관리하는 별도 페이지입니다. 블로그에는 CVE 자동 글을 발행하지 않고, 이 페이지에만 기록합니다.</p>
     <div class="meta">
-      <span>Total 488</span>
-      <span>Updated 2026-08-15 20:00 KST</span>
+      <span>Total 498</span>
+      <span>Updated 2026-08-16 08:00 KST</span>
       <span>Source NVD API</span>
     </div>
   </section>
   <div class="notice">중복 제거 기준은 CVE ID입니다. 동일 CVE는 다시 추가하지 않습니다. 실제 악용 여부와 패치 우선순위는 CISA KEV, 벤더 권고, 자산 노출 여부와 함께 검토해야 합니다.</div>
 
+    <article class="cve-card" id="CVE-2026-73053">
+      <div class="cve-top">
+        <a class="cve-id" href="https://nvd.nist.gov/vuln/detail/CVE-2026-73053" target="_blank" rel="noopener">CVE-2026-73053</a>
+        <span class="score">CVSS 9.0 CRITICAL</span>
+      </div>
+      <p class="desc">SiYuan versions before v3.7.4 contain a cross-site scripting vulnerability in the unicode2Emoji function that fails to sanitize codepoint branch output. Attackers can craft document icons with hex-encoded markup that executes in the renderer with Node integration enabled, achieving arbitrary code execution on the host system.</p>
+      <dl>
+        <div><dt>Published</dt><dd>2026-08-15</dd></div>
+        <div><dt>Last Modified</dt><dd>2026-08-15</dd></div>
+        <div><dt>Status</dt><dd>Received</dd></div>
+        <div><dt>Attack Vector</dt><dd>네트워크</dd></div>
+        <div><dt>Attack Complexity</dt><dd>낮음</dd></div>
+        <div><dt>Privileges</dt><dd>낮음</dd></div>
+        <div><dt>User Interaction</dt><dd>필요</dd></div>
+        <div><dt>CWE</dt><dd>CWE-79</dd></div>
+        <div><dt>Affected</dt><dd>NVD CPE 기준 확인 필요</dd></div>
+      </dl>
+      <div class="vector"><code>CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:C/C:H/I:H/A:H</code></div>
+      <details>
+        <summary>References</summary>
+        <ul><li><a href="https://github.com/siyuan-note/siyuan/security/advisories/GHSA-vx5w-qrvp-mmcq" target="_blank" rel="noopener">https://github.com/siyuan-note/siyuan/security/advisories/GHSA-vx5w-qrvp-mmcq</a></li><li><a href="https://www.vulncheck.com/advisories/siyuan-before-cross-site-scripting-via-unicode2emoji" target="_blank" rel="noopener">https://www.vulncheck.com/advisories/siyuan-before-cross-site-scripting-via-unicode2emoji</a></li></ul>
+      </details>
+    </article>
+    <article class="cve-card" id="CVE-2026-73052">
+      <div class="cve-top">
+        <a class="cve-id" href="https://nvd.nist.gov/vuln/detail/CVE-2026-73052" target="_blank" rel="noopener">CVE-2026-73052</a>
+        <span class="score">CVSS 9.0 CRITICAL</span>
+      </div>
+      <p class="desc">SiYuan before v3.7.4 stores attribute-view field names without HTML escaping and interpolates them directly into option elements via innerHTML in the sort menu. Attackers can inject markup by renaming a database field to execute arbitrary JavaScript when users open the sort menu, with Node integration enabled in the desktop client enabling code execution.</p>
+      <dl>
+        <div><dt>Published</dt><dd>2026-08-15</dd></div>
+        <div><dt>Last Modified</dt><dd>2026-08-15</dd></div>
+        <div><dt>Status</dt><dd>Received</dd></div>
+        <div><dt>Attack Vector</dt><dd>네트워크</dd></div>
+        <div><dt>Attack Complexity</dt><dd>낮음</dd></div>
+        <div><dt>Privileges</dt><dd>낮음</dd></div>
+        <div><dt>User Interaction</dt><dd>필요</dd></div>
+        <div><dt>CWE</dt><dd>CWE-79</dd></div>
+        <div><dt>Affected</dt><dd>NVD CPE 기준 확인 필요</dd></div>
+      </dl>
+      <div class="vector"><code>CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:C/C:H/I:H/A:H</code></div>
+      <details>
+        <summary>References</summary>
+        <ul><li><a href="https://github.com/siyuan-note/siyuan/security/advisories/GHSA-g3jx-227v-x2x4" target="_blank" rel="noopener">https://github.com/siyuan-note/siyuan/security/advisories/GHSA-g3jx-227v-x2x4</a></li><li><a href="https://www.vulncheck.com/advisories/siyuan-before-stored-xss-via-attribute-view-field-names" target="_blank" rel="noopener">https://www.vulncheck.com/advisories/siyuan-before-stored-xss-via-attribute-view-field-names</a></li></ul>
+      </details>
+    </article>
+    <article class="cve-card" id="CVE-2026-73050">
+      <div class="cve-top">
+        <a class="cve-id" href="https://nvd.nist.gov/vuln/detail/CVE-2026-73050" target="_blank" rel="noopener">CVE-2026-73050</a>
+        <span class="score">CVSS 9.0 CRITICAL</span>
+      </div>
+      <p class="desc">SiYuan versions before v3.7.4 fail to validate or escape the color field in attribute-view select options, allowing stored cross-site scripting through eight unescaped render sites. Attackers can inject event-handler attributes by including quotation marks in the color value, executing arbitrary JavaScript when viewing databases containing the malicious select field.</p>
+      <dl>
+        <div><dt>Published</dt><dd>2026-08-15</dd></div>
+        <div><dt>Last Modified</dt><dd>2026-08-15</dd></div>
+        <div><dt>Status</dt><dd>Received</dd></div>
+        <div><dt>Attack Vector</dt><dd>네트워크</dd></div>
+        <div><dt>Attack Complexity</dt><dd>낮음</dd></div>
+        <div><dt>Privileges</dt><dd>낮음</dd></div>
+        <div><dt>User Interaction</dt><dd>필요</dd></div>
+        <div><dt>CWE</dt><dd>CWE-79</dd></div>
+        <div><dt>Affected</dt><dd>NVD CPE 기준 확인 필요</dd></div>
+      </dl>
+      <div class="vector"><code>CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:C/C:H/I:H/A:H</code></div>
+      <details>
+        <summary>References</summary>
+        <ul><li><a href="https://github.com/siyuan-note/siyuan/security/advisories/GHSA-m7cc-jh9q-wxg8" target="_blank" rel="noopener">https://github.com/siyuan-note/siyuan/security/advisories/GHSA-m7cc-jh9q-wxg8</a></li><li><a href="https://www.vulncheck.com/advisories/siyuan-before-stored-xss-via-select-option-color" target="_blank" rel="noopener">https://www.vulncheck.com/advisories/siyuan-before-stored-xss-via-select-option-color</a></li></ul>
+      </details>
+    </article>
+    <article class="cve-card" id="CVE-2026-73046">
+      <div class="cve-top">
+        <a class="cve-id" href="https://nvd.nist.gov/vuln/detail/CVE-2026-73046" target="_blank" rel="noopener">CVE-2026-73046</a>
+        <span class="score">CVSS 9.8 CRITICAL</span>
+      </div>
+      <p class="desc">SiYuan before v3.7.4 improperly restricts excessive authentication attempts in the CheckAuth() middleware. The HTTP Basic Authentication branch, which guards nearly the entire /api/* surface, accepts the workspace access code (Conf.AccessAuthCode) as the Basic Auth password but never consults the CAPTCHA/lockout gate or increments the failure counter used by the cookie/session login path. This allows unauthenticated remote attackers to brute-force the admin access code with unlimited automated requests and obtain full RoleAdministrator access to the kernel. A secondary weakness exists because the access code is compared using a non-constant-time string comparison.</p>
+      <dl>
+        <div><dt>Published</dt><dd>2026-08-15</dd></div>
+        <div><dt>Last Modified</dt><dd>2026-08-15</dd></div>
+        <div><dt>Status</dt><dd>Received</dd></div>
+        <div><dt>Attack Vector</dt><dd>네트워크</dd></div>
+        <div><dt>Attack Complexity</dt><dd>낮음</dd></div>
+        <div><dt>Privileges</dt><dd>없음</dd></div>
+        <div><dt>User Interaction</dt><dd>없음</dd></div>
+        <div><dt>CWE</dt><dd>CWE-307</dd></div>
+        <div><dt>Affected</dt><dd>NVD CPE 기준 확인 필요</dd></div>
+      </dl>
+      <div class="vector"><code>CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H</code></div>
+      <details>
+        <summary>References</summary>
+        <ul><li><a href="https://github.com/siyuan-note/siyuan/security/advisories/GHSA-w3xh-mmmh-r54v" target="_blank" rel="noopener">https://github.com/siyuan-note/siyuan/security/advisories/GHSA-w3xh-mmmh-r54v</a></li><li><a href="https://www.vulncheck.com/advisories/siyuan-before-authentication-bypass-via-http-basic-auth" target="_blank" rel="noopener">https://www.vulncheck.com/advisories/siyuan-before-authentication-bypass-via-http-basic-auth</a></li></ul>
+      </details>
+    </article>
+    <article class="cve-card" id="CVE-2026-73044">
+      <div class="cve-top">
+        <a class="cve-id" href="https://nvd.nist.gov/vuln/detail/CVE-2026-73044" target="_blank" rel="noopener">CVE-2026-73044</a>
+        <span class="score">CVSS 9.0 CRITICAL</span>
+      </div>
+      <p class="desc">SiYuan versions before v3.7.4 fail to validate or escape table column width values, allowing stored cross-site scripting injection into style attributes. Attackers can inject malicious payloads through the setAttrViewColWidth API that break out of style attributes and inject event handlers on every table cell, executing arbitrary code in the Electron renderer with Node integration enabled.</p>
+      <dl>
+        <div><dt>Published</dt><dd>2026-08-15</dd></div>
+        <div><dt>Last Modified</dt><dd>2026-08-15</dd></div>
+        <div><dt>Status</dt><dd>Received</dd></div>
+        <div><dt>Attack Vector</dt><dd>네트워크</dd></div>
+        <div><dt>Attack Complexity</dt><dd>낮음</dd></div>
+        <div><dt>Privileges</dt><dd>낮음</dd></div>
+        <div><dt>User Interaction</dt><dd>필요</dd></div>
+        <div><dt>CWE</dt><dd>CWE-79</dd></div>
+        <div><dt>Affected</dt><dd>NVD CPE 기준 확인 필요</dd></div>
+      </dl>
+      <div class="vector"><code>CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:C/C:H/I:H/A:H</code></div>
+      <details>
+        <summary>References</summary>
+        <ul><li><a href="https://github.com/siyuan-note/siyuan/security/advisories/GHSA-rj55-w3xr-gj62" target="_blank" rel="noopener">https://github.com/siyuan-note/siyuan/security/advisories/GHSA-rj55-w3xr-gj62</a></li><li><a href="https://www.vulncheck.com/advisories/siyuan-before-stored-cross-site-scripting-via-column-width" target="_blank" rel="noopener">https://www.vulncheck.com/advisories/siyuan-before-stored-cross-site-scripting-via-column-width</a></li></ul>
+      </details>
+    </article>
+    <article class="cve-card" id="CVE-2026-73043">
+      <div class="cve-top">
+        <a class="cve-id" href="https://nvd.nist.gov/vuln/detail/CVE-2026-73043" target="_blank" rel="noopener">CVE-2026-73043</a>
+        <span class="score">CVSS 9.0 CRITICAL</span>
+      </div>
+      <p class="desc">SiYuan versions before v3.7.4 contain a remote code execution vulnerability in the Template calculation operator, which renders user-authored Go templates and stores output verbatim without sanitization. Attackers can inject malicious HTML and JavaScript into template calculations that execute in the desktop client renderer with Node integration enabled, allowing arbitrary code execution when the database is opened.</p>
+      <dl>
+        <div><dt>Published</dt><dd>2026-08-15</dd></div>
+        <div><dt>Last Modified</dt><dd>2026-08-15</dd></div>
+        <div><dt>Status</dt><dd>Received</dd></div>
+        <div><dt>Attack Vector</dt><dd>네트워크</dd></div>
+        <div><dt>Attack Complexity</dt><dd>낮음</dd></div>
+        <div><dt>Privileges</dt><dd>낮음</dd></div>
+        <div><dt>User Interaction</dt><dd>필요</dd></div>
+        <div><dt>CWE</dt><dd>CWE-79</dd></div>
+        <div><dt>Affected</dt><dd>NVD CPE 기준 확인 필요</dd></div>
+      </dl>
+      <div class="vector"><code>CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:C/C:H/I:H/A:H</code></div>
+      <details>
+        <summary>References</summary>
+        <ul><li><a href="https://github.com/siyuan-note/siyuan/security/advisories/GHSA-rwh7-gm74-67h6" target="_blank" rel="noopener">https://github.com/siyuan-note/siyuan/security/advisories/GHSA-rwh7-gm74-67h6</a></li><li><a href="https://www.vulncheck.com/advisories/siyuan-before-remote-code-execution-via-template-calculation" target="_blank" rel="noopener">https://www.vulncheck.com/advisories/siyuan-before-remote-code-execution-via-template-calculation</a></li></ul>
+      </details>
+    </article>
+    <article class="cve-card" id="CVE-2026-73042">
+      <div class="cve-top">
+        <a class="cve-id" href="https://nvd.nist.gov/vuln/detail/CVE-2026-73042" target="_blank" rel="noopener">CVE-2026-73042</a>
+        <span class="score">CVSS 9.0 CRITICAL</span>
+      </div>
+      <p class="desc">SiYuan before v3.7.4 fails to properly escape database menu metadata in HTML interpolation, allowing stored values to execute script when users open group, view, or field-edit menus. Attackers can inject markup through field descriptions or names that close containing elements and execute arbitrary code via event handlers, reaching Node built-ins due to Electron&#x27;s insecure configuration.</p>
+      <dl>
+        <div><dt>Published</dt><dd>2026-08-15</dd></div>
+        <div><dt>Last Modified</dt><dd>2026-08-15</dd></div>
+        <div><dt>Status</dt><dd>Received</dd></div>
+        <div><dt>Attack Vector</dt><dd>네트워크</dd></div>
+        <div><dt>Attack Complexity</dt><dd>낮음</dd></div>
+        <div><dt>Privileges</dt><dd>낮음</dd></div>
+        <div><dt>User Interaction</dt><dd>필요</dd></div>
+        <div><dt>CWE</dt><dd>CWE-79</dd></div>
+        <div><dt>Affected</dt><dd>NVD CPE 기준 확인 필요</dd></div>
+      </dl>
+      <div class="vector"><code>CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:C/C:H/I:H/A:H</code></div>
+      <details>
+        <summary>References</summary>
+        <ul><li><a href="https://github.com/siyuan-note/siyuan/security/advisories/GHSA-gcm3-qcq3-72rv" target="_blank" rel="noopener">https://github.com/siyuan-note/siyuan/security/advisories/GHSA-gcm3-qcq3-72rv</a></li><li><a href="https://www.vulncheck.com/advisories/siyuan-before-remote-code-execution-via-menu-metadata" target="_blank" rel="noopener">https://www.vulncheck.com/advisories/siyuan-before-remote-code-execution-via-menu-metadata</a></li></ul>
+      </details>
+    </article>
+    <article class="cve-card" id="CVE-2026-73041">
+      <div class="cve-top">
+        <a class="cve-id" href="https://nvd.nist.gov/vuln/detail/CVE-2026-73041" target="_blank" rel="noopener">CVE-2026-73041</a>
+        <span class="score">CVSS 9.0 CRITICAL</span>
+      </div>
+      <p class="desc">SiYuan versions before v3.7.4 fail to validate or escape annotation fields written to disk by the setFileAnnotation endpoint. Attackers can inject malicious markup into annotation fields that execute as script in the PDF renderer with full Node.js access when a user opens an annotated PDF.</p>
+      <dl>
+        <div><dt>Published</dt><dd>2026-08-15</dd></div>
+        <div><dt>Last Modified</dt><dd>2026-08-15</dd></div>
+        <div><dt>Status</dt><dd>Received</dd></div>
+        <div><dt>Attack Vector</dt><dd>네트워크</dd></div>
+        <div><dt>Attack Complexity</dt><dd>낮음</dd></div>
+        <div><dt>Privileges</dt><dd>낮음</dd></div>
+        <div><dt>User Interaction</dt><dd>필요</dd></div>
+        <div><dt>CWE</dt><dd>CWE-79</dd></div>
+        <div><dt>Affected</dt><dd>NVD CPE 기준 확인 필요</dd></div>
+      </dl>
+      <div class="vector"><code>CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:C/C:H/I:H/A:H</code></div>
+      <details>
+        <summary>References</summary>
+        <ul><li><a href="https://github.com/siyuan-note/siyuan/security/advisories/GHSA-fqpw-c3pj-w8g9" target="_blank" rel="noopener">https://github.com/siyuan-note/siyuan/security/advisories/GHSA-fqpw-c3pj-w8g9</a></li><li><a href="https://www.vulncheck.com/advisories/siyuan-before-remote-code-execution-via-pdf-annotations" target="_blank" rel="noopener">https://www.vulncheck.com/advisories/siyuan-before-remote-code-execution-via-pdf-annotations</a></li></ul>
+      </details>
+    </article>
+    <article class="cve-card" id="CVE-2026-19598">
+      <div class="cve-top">
+        <a class="cve-id" href="https://nvd.nist.gov/vuln/detail/CVE-2026-19598" target="_blank" rel="noopener">CVE-2026-19598</a>
+        <span class="score">CVSS 9.8 CRITICAL</span>
+      </div>
+      <p class="desc">The Pods – Custom Content Types and Fields plugin for WordPress is vulnerable to Privilege Escalation via Authorization Bypass in all versions up to, and including, 3.3.9. The vulnerability exists because the pods_admin AJAX router funnels every access check — including the method allowlist, nonce verification, login enforcement, and capability gate — through pods_error(), which under the JSON meta-box-loader compatibility path only writes failures to the PHP error log and returns false instead of terminating the request, rendering all guards ineffective.  This makes it possible for unauthenticated attackers to escalate their privileges to Administrator or overwrite the password of any user account, including the site owner&#x27;s, enabling complete site takeover, or perform another administrator action.</p>
+      <dl>
+        <div><dt>Published</dt><dd>2026-08-15</dd></div>
+        <div><dt>Last Modified</dt><dd>2026-08-15</dd></div>
+        <div><dt>Status</dt><dd>Received</dd></div>
+        <div><dt>Attack Vector</dt><dd>네트워크</dd></div>
+        <div><dt>Attack Complexity</dt><dd>낮음</dd></div>
+        <div><dt>Privileges</dt><dd>없음</dd></div>
+        <div><dt>User Interaction</dt><dd>없음</dd></div>
+        <div><dt>CWE</dt><dd>CWE-863</dd></div>
+        <div><dt>Affected</dt><dd>NVD CPE 기준 확인 필요</dd></div>
+      </dl>
+      <div class="vector"><code>CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H</code></div>
+      <details>
+        <summary>References</summary>
+        <ul><li><a href="https://plugins.trac.wordpress.org/browser/pods/tags/3.3.9/includes/general.php#L400" target="_blank" rel="noopener">https://plugins.trac.wordpress.org/browser/pods/tags/3.3.9/includes/general.php#L400</a></li><li><a href="https://www.wordfence.com/threat-intel/vulnerabilities/id/3628032a-3121-45a7-8a78-cfcd8ba6af2f?source=cve" target="_blank" rel="noopener">https://www.wordfence.com/threat-intel/vulnerabilities/id/3628032a-3121-45a7-8a78-cfcd8ba6af2f?source=cve</a></li></ul>
+      </details>
+    </article>
+    <article class="cve-card" id="CVE-2026-18855">
+      <div class="cve-top">
+        <a class="cve-id" href="https://nvd.nist.gov/vuln/detail/CVE-2026-18855" target="_blank" rel="noopener">CVE-2026-18855</a>
+        <span class="score">CVSS 9.1 CRITICAL</span>
+      </div>
+      <p class="desc">The Link Library plugin for WordPress is vulnerable to arbitrary file deletion due to insufficient file path validation in the ll_delete_link_fields function in all versions up to, and including, 7.9.4 This makes it possible for unauthenticated attackers to delete arbitrary files on the server, which can easily lead to remote code execution when the right file is deleted (such as wp-config.php). Exploitation requires the administrator to have enabled the &#x27;Delete local file on link deletion&#x27; plugin option (disabled by default) and to subsequently permanently delete the attacker-submitted link, which is a routine moderation action.</p>
+      <dl>
+        <div><dt>Published</dt><dd>2026-08-15</dd></div>
+        <div><dt>Last Modified</dt><dd>2026-08-15</dd></div>
+        <div><dt>Status</dt><dd>Received</dd></div>
+        <div><dt>Attack Vector</dt><dd>네트워크</dd></div>
+        <div><dt>Attack Complexity</dt><dd>낮음</dd></div>
+        <div><dt>Privileges</dt><dd>없음</dd></div>
+        <div><dt>User Interaction</dt><dd>없음</dd></div>
+        <div><dt>CWE</dt><dd>CWE-22</dd></div>
+        <div><dt>Affected</dt><dd>NVD CPE 기준 확인 필요</dd></div>
+      </dl>
+      <div class="vector"><code>CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:H</code></div>
+      <details>
+        <summary>References</summary>
+        <ul><li><a href="https://plugins.trac.wordpress.org/browser/link-library/tags/7.9.4/link-library-admin.php#L7865" target="_blank" rel="noopener">https://plugins.trac.wordpress.org/browser/link-library/tags/7.9.4/link-library-admin.php#L7865</a></li><li><a href="https://plugins.trac.wordpress.org/browser/link-library/tags/7.9.4/link-library-admin.php#L7874" target="_blank" rel="noopener">https://plugins.trac.wordpress.org/browser/link-library/tags/7.9.4/link-library-admin.php#L7874</a></li><li><a href="https://plugins.trac.wordpress.org/browser/link-library/tags/7.9.4/link-library.php#L2288" target="_blank" rel="noopener">https://plugins.trac.wordpress.org/browser/link-library/tags/7.9.4/link-library.php#L2288</a></li><li><a href="https://plugins.trac.wordpress.org/browser/link-library/tags/7.9.4/usersubmission.php#L476" target="_blank" rel="noopener">https://plugins.trac.wordpress.org/browser/link-library/tags/7.9.4/usersubmission.php#L476</a></li></ul>
+      </details>
+    </article>
     <article class="cve-card" id="CVE-2026-16142">
       <div class="cve-top">
         <a class="cve-id" href="https://nvd.nist.gov/vuln/detail/CVE-2026-16142" target="_blank" rel="noopener">CVE-2026-16142</a>

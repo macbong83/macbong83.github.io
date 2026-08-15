@@ -1,5 +1,279 @@
 [
   {
+    "id": "CVE-2026-73053",
+    "published": "2026-08-15",
+    "last_modified": "2026-08-15",
+    "status": "Received",
+    "description": "SiYuan versions before v3.7.4 contain a cross-site scripting vulnerability in the unicode2Emoji function that fails to sanitize codepoint branch output. Attackers can craft document icons with hex-encoded markup that executes in the renderer with Node integration enabled, achieving arbitrary code execution on the host system.",
+    "cvss": {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:C/C:H/I:H/A:H",
+      "score": 9.0,
+      "severity": "CRITICAL",
+      "attack_vector": "네트워크",
+      "attack_complexity": "낮음",
+      "privileges_required": "낮음",
+      "user_interaction": "필요"
+    },
+    "cwes": [
+      "CWE-79"
+    ],
+    "affected": [],
+    "references": [
+      "https://github.com/siyuan-note/siyuan/security/advisories/GHSA-vx5w-qrvp-mmcq",
+      "https://www.vulncheck.com/advisories/siyuan-before-cross-site-scripting-via-unicode2emoji"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-73053",
+    "added_at": "2026-08-16T08:00:33+09:00"
+  },
+  {
+    "id": "CVE-2026-73052",
+    "published": "2026-08-15",
+    "last_modified": "2026-08-15",
+    "status": "Received",
+    "description": "SiYuan before v3.7.4 stores attribute-view field names without HTML escaping and interpolates them directly into option elements via innerHTML in the sort menu. Attackers can inject markup by renaming a database field to execute arbitrary JavaScript when users open the sort menu, with Node integration enabled in the desktop client enabling code execution.",
+    "cvss": {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:C/C:H/I:H/A:H",
+      "score": 9.0,
+      "severity": "CRITICAL",
+      "attack_vector": "네트워크",
+      "attack_complexity": "낮음",
+      "privileges_required": "낮음",
+      "user_interaction": "필요"
+    },
+    "cwes": [
+      "CWE-79"
+    ],
+    "affected": [],
+    "references": [
+      "https://github.com/siyuan-note/siyuan/security/advisories/GHSA-g3jx-227v-x2x4",
+      "https://www.vulncheck.com/advisories/siyuan-before-stored-xss-via-attribute-view-field-names"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-73052",
+    "added_at": "2026-08-16T08:00:33+09:00"
+  },
+  {
+    "id": "CVE-2026-73050",
+    "published": "2026-08-15",
+    "last_modified": "2026-08-15",
+    "status": "Received",
+    "description": "SiYuan versions before v3.7.4 fail to validate or escape the color field in attribute-view select options, allowing stored cross-site scripting through eight unescaped render sites. Attackers can inject event-handler attributes by including quotation marks in the color value, executing arbitrary JavaScript when viewing databases containing the malicious select field.",
+    "cvss": {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:C/C:H/I:H/A:H",
+      "score": 9.0,
+      "severity": "CRITICAL",
+      "attack_vector": "네트워크",
+      "attack_complexity": "낮음",
+      "privileges_required": "낮음",
+      "user_interaction": "필요"
+    },
+    "cwes": [
+      "CWE-79"
+    ],
+    "affected": [],
+    "references": [
+      "https://github.com/siyuan-note/siyuan/security/advisories/GHSA-m7cc-jh9q-wxg8",
+      "https://www.vulncheck.com/advisories/siyuan-before-stored-xss-via-select-option-color"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-73050",
+    "added_at": "2026-08-16T08:00:33+09:00"
+  },
+  {
+    "id": "CVE-2026-73046",
+    "published": "2026-08-15",
+    "last_modified": "2026-08-15",
+    "status": "Received",
+    "description": "SiYuan before v3.7.4 improperly restricts excessive authentication attempts in the CheckAuth() middleware. The HTTP Basic Authentication branch, which guards nearly the entire /api/* surface, accepts the workspace access code (Conf.AccessAuthCode) as the Basic Auth password but never consults the CAPTCHA/lockout gate or increments the failure counter used by the cookie/session login path. This allows unauthenticated remote attackers to brute-force the admin access code with unlimited automated requests and obtain full RoleAdministrator access to the kernel. A secondary weakness exists because the access code is compared using a non-constant-time string comparison.",
+    "cvss": {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "score": 9.8,
+      "severity": "CRITICAL",
+      "attack_vector": "네트워크",
+      "attack_complexity": "낮음",
+      "privileges_required": "없음",
+      "user_interaction": "없음"
+    },
+    "cwes": [
+      "CWE-307"
+    ],
+    "affected": [],
+    "references": [
+      "https://github.com/siyuan-note/siyuan/security/advisories/GHSA-w3xh-mmmh-r54v",
+      "https://www.vulncheck.com/advisories/siyuan-before-authentication-bypass-via-http-basic-auth"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-73046",
+    "added_at": "2026-08-16T08:00:33+09:00"
+  },
+  {
+    "id": "CVE-2026-73044",
+    "published": "2026-08-15",
+    "last_modified": "2026-08-15",
+    "status": "Received",
+    "description": "SiYuan versions before v3.7.4 fail to validate or escape table column width values, allowing stored cross-site scripting injection into style attributes. Attackers can inject malicious payloads through the setAttrViewColWidth API that break out of style attributes and inject event handlers on every table cell, executing arbitrary code in the Electron renderer with Node integration enabled.",
+    "cvss": {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:C/C:H/I:H/A:H",
+      "score": 9.0,
+      "severity": "CRITICAL",
+      "attack_vector": "네트워크",
+      "attack_complexity": "낮음",
+      "privileges_required": "낮음",
+      "user_interaction": "필요"
+    },
+    "cwes": [
+      "CWE-79"
+    ],
+    "affected": [],
+    "references": [
+      "https://github.com/siyuan-note/siyuan/security/advisories/GHSA-rj55-w3xr-gj62",
+      "https://www.vulncheck.com/advisories/siyuan-before-stored-cross-site-scripting-via-column-width"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-73044",
+    "added_at": "2026-08-16T08:00:33+09:00"
+  },
+  {
+    "id": "CVE-2026-73043",
+    "published": "2026-08-15",
+    "last_modified": "2026-08-15",
+    "status": "Received",
+    "description": "SiYuan versions before v3.7.4 contain a remote code execution vulnerability in the Template calculation operator, which renders user-authored Go templates and stores output verbatim without sanitization. Attackers can inject malicious HTML and JavaScript into template calculations that execute in the desktop client renderer with Node integration enabled, allowing arbitrary code execution when the database is opened.",
+    "cvss": {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:C/C:H/I:H/A:H",
+      "score": 9.0,
+      "severity": "CRITICAL",
+      "attack_vector": "네트워크",
+      "attack_complexity": "낮음",
+      "privileges_required": "낮음",
+      "user_interaction": "필요"
+    },
+    "cwes": [
+      "CWE-79"
+    ],
+    "affected": [],
+    "references": [
+      "https://github.com/siyuan-note/siyuan/security/advisories/GHSA-rwh7-gm74-67h6",
+      "https://www.vulncheck.com/advisories/siyuan-before-remote-code-execution-via-template-calculation"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-73043",
+    "added_at": "2026-08-16T08:00:33+09:00"
+  },
+  {
+    "id": "CVE-2026-73042",
+    "published": "2026-08-15",
+    "last_modified": "2026-08-15",
+    "status": "Received",
+    "description": "SiYuan before v3.7.4 fails to properly escape database menu metadata in HTML interpolation, allowing stored values to execute script when users open group, view, or field-edit menus. Attackers can inject markup through field descriptions or names that close containing elements and execute arbitrary code via event handlers, reaching Node built-ins due to Electron's insecure configuration.",
+    "cvss": {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:C/C:H/I:H/A:H",
+      "score": 9.0,
+      "severity": "CRITICAL",
+      "attack_vector": "네트워크",
+      "attack_complexity": "낮음",
+      "privileges_required": "낮음",
+      "user_interaction": "필요"
+    },
+    "cwes": [
+      "CWE-79"
+    ],
+    "affected": [],
+    "references": [
+      "https://github.com/siyuan-note/siyuan/security/advisories/GHSA-gcm3-qcq3-72rv",
+      "https://www.vulncheck.com/advisories/siyuan-before-remote-code-execution-via-menu-metadata"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-73042",
+    "added_at": "2026-08-16T08:00:33+09:00"
+  },
+  {
+    "id": "CVE-2026-73041",
+    "published": "2026-08-15",
+    "last_modified": "2026-08-15",
+    "status": "Received",
+    "description": "SiYuan versions before v3.7.4 fail to validate or escape annotation fields written to disk by the setFileAnnotation endpoint. Attackers can inject malicious markup into annotation fields that execute as script in the PDF renderer with full Node.js access when a user opens an annotated PDF.",
+    "cvss": {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:C/C:H/I:H/A:H",
+      "score": 9.0,
+      "severity": "CRITICAL",
+      "attack_vector": "네트워크",
+      "attack_complexity": "낮음",
+      "privileges_required": "낮음",
+      "user_interaction": "필요"
+    },
+    "cwes": [
+      "CWE-79"
+    ],
+    "affected": [],
+    "references": [
+      "https://github.com/siyuan-note/siyuan/security/advisories/GHSA-fqpw-c3pj-w8g9",
+      "https://www.vulncheck.com/advisories/siyuan-before-remote-code-execution-via-pdf-annotations"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-73041",
+    "added_at": "2026-08-16T08:00:33+09:00"
+  },
+  {
+    "id": "CVE-2026-19598",
+    "published": "2026-08-15",
+    "last_modified": "2026-08-15",
+    "status": "Received",
+    "description": "The Pods – Custom Content Types and Fields plugin for WordPress is vulnerable to Privilege Escalation via Authorization Bypass in all versions up to, and including, 3.3.9. The vulnerability exists because the pods_admin AJAX router funnels every access check — including the method allowlist, nonce verification, login enforcement, and capability gate — through pods_error(), which under the JSON meta-box-loader compatibility path only writes failures to the PHP error log and returns false instead of terminating the request, rendering all guards ineffective.  This makes it possible for unauthenticated attackers to escalate their privileges to Administrator or overwrite the password of any user account, including the site owner's, enabling complete site takeover, or perform another administrator action.",
+    "cvss": {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "score": 9.8,
+      "severity": "CRITICAL",
+      "attack_vector": "네트워크",
+      "attack_complexity": "낮음",
+      "privileges_required": "없음",
+      "user_interaction": "없음"
+    },
+    "cwes": [
+      "CWE-863"
+    ],
+    "affected": [],
+    "references": [
+      "https://plugins.trac.wordpress.org/browser/pods/tags/3.3.9/includes/general.php#L400",
+      "https://www.wordfence.com/threat-intel/vulnerabilities/id/3628032a-3121-45a7-8a78-cfcd8ba6af2f?source=cve"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-19598",
+    "added_at": "2026-08-16T08:00:33+09:00"
+  },
+  {
+    "id": "CVE-2026-18855",
+    "published": "2026-08-15",
+    "last_modified": "2026-08-15",
+    "status": "Received",
+    "description": "The Link Library plugin for WordPress is vulnerable to arbitrary file deletion due to insufficient file path validation in the ll_delete_link_fields function in all versions up to, and including, 7.9.4 This makes it possible for unauthenticated attackers to delete arbitrary files on the server, which can easily lead to remote code execution when the right file is deleted (such as wp-config.php). Exploitation requires the administrator to have enabled the 'Delete local file on link deletion' plugin option (disabled by default) and to subsequently permanently delete the attacker-submitted link, which is a routine moderation action.",
+    "cvss": {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:H",
+      "score": 9.1,
+      "severity": "CRITICAL",
+      "attack_vector": "네트워크",
+      "attack_complexity": "낮음",
+      "privileges_required": "없음",
+      "user_interaction": "없음"
+    },
+    "cwes": [
+      "CWE-22"
+    ],
+    "affected": [],
+    "references": [
+      "https://plugins.trac.wordpress.org/browser/link-library/tags/7.9.4/link-library-admin.php#L7865",
+      "https://plugins.trac.wordpress.org/browser/link-library/tags/7.9.4/link-library-admin.php#L7874",
+      "https://plugins.trac.wordpress.org/browser/link-library/tags/7.9.4/link-library.php#L2288",
+      "https://plugins.trac.wordpress.org/browser/link-library/tags/7.9.4/usersubmission.php#L476",
+      "https://plugins.trac.wordpress.org/browser/link-library/tags/7.9.4/usersubmission.php#L52",
+      "https://plugins.trac.wordpress.org/changeset/3646360/link-library/trunk/link-library-admin.php"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-18855",
+    "added_at": "2026-08-16T08:00:33+09:00"
+  },
+  {
     "id": "CVE-2026-16142",
     "published": "2026-08-15",
     "last_modified": "2026-08-15",
