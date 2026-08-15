@@ -1,5 +1,154 @@
 [
   {
+    "id": "CVE-2026-16142",
+    "published": "2026-08-15",
+    "last_modified": "2026-08-15",
+    "status": "Received",
+    "description": "The TrueBooker plugin for WordPress is vulnerable to Account Takeover in all versions up to, and including, 1.2.6. This is due to the add_front_user_update() AJAX handler being registered for unauthenticated users and accepting an arbitrary truebooker_wp_user_id value, which is passed directly to wp_update_user() without verifying authentication or ownership. This makes it possible for unauthenticated attackers to change any WordPress user account email address, including an administrator, by submitting the target user ID and an attacker-controlled email address. An attacker can then use the native WordPress password reset flow to receive the reset link at the attacker-controlled email address and take over the account.",
+    "cvss": {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "score": 9.8,
+      "severity": "CRITICAL",
+      "attack_vector": "네트워크",
+      "attack_complexity": "낮음",
+      "privileges_required": "없음",
+      "user_interaction": "없음"
+    },
+    "cwes": [
+      "CWE-639"
+    ],
+    "affected": [],
+    "references": [
+      "https://plugins.trac.wordpress.org/changeset/3640018/truebooker-appointment-booking",
+      "https://www.wordfence.com/threat-intel/vulnerabilities/id/f0d3f7cb-4974-4b0f-9658-1895e5966276?source=cve"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-16142",
+    "added_at": "2026-08-15T20:00:06+09:00"
+  },
+  {
+    "id": "CVE-2026-15826",
+    "published": "2026-08-15",
+    "last_modified": "2026-08-15",
+    "status": "Received",
+    "description": "The User Profile Builder plugin for WordPress is vulnerable to Authentication Bypass via Type Confusion in versions up to, and including, 3.16.4. This is due to the wppb_log_in_user() function calling absint() on the return value of wp_insert_user() before performing an is_wp_error() check — when a registration is submitted with a 61–70 character username, WordPress core rejects it with a WP_Error object, but absint() coerces that object to the integer 1 before the error check can short-circuit execution, causing the plugin to bind and return a transient-backed autologin nonce tied to user ID 1. This makes it possible for unauthenticated attackers to log in as the site's Administrator account (user ID 1), resulting in full administrative takeover of the site.",
+    "cvss": {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "score": 9.8,
+      "severity": "CRITICAL",
+      "attack_vector": "네트워크",
+      "attack_complexity": "낮음",
+      "privileges_required": "없음",
+      "user_interaction": "없음"
+    },
+    "cwes": [
+      "CWE-704"
+    ],
+    "affected": [],
+    "references": [
+      "https://plugins.trac.wordpress.org/browser/profile-builder/tags/3.16.4/features/functions.php#L1481",
+      "https://plugins.trac.wordpress.org/browser/profile-builder/tags/3.16.4/front-end/class-formbuilder.php#L262",
+      "https://plugins.trac.wordpress.org/browser/profile-builder/tags/3.16.4/front-end/class-formbuilder.php#L364",
+      "https://plugins.trac.wordpress.org/browser/profile-builder/tags/3.16.4/front-end/class-formbuilder.php#L742",
+      "https://plugins.trac.wordpress.org/browser/profile-builder/tags/3.16.4/front-end/class-formbuilder.php#L945",
+      "https://plugins.trac.wordpress.org/browser/profile-builder/tags/3.16.4/front-end/default-fields/username/username.php#L28"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-15826",
+    "added_at": "2026-08-15T20:00:06+09:00"
+  },
+  {
+    "id": "CVE-2026-15341",
+    "published": "2026-08-15",
+    "last_modified": "2026-08-15",
+    "status": "Received",
+    "description": "The User Session Synchronizer plugin for WordPress is vulnerable to Authentication Bypass leading to Account Takeover in all versions up to, and including, 1.4.0. The `synchronize_session()` function, hooked on `init` and therefore executed on every request, performs no nonce, capability, or shared-secret validation against the attacker-supplied `ussync-key`, `ussync-token`, and `ussync-ref` parameters; when `ussync-key` references an unregistered slot, `get_option()` returns `false` for both the secret key and the domain list, causing the AES-256-CBC encryption key to degrade to the fully predictable `md5('')` and the referer allowlist to collapse to an empty-string match, while the AES IV is unconditionally hard-coded as `md5('another-secret')`. This makes it possible for unauthenticated attackers to supply a crafted request encrypting any known or guessable user email address in the `ussync-ref` parameter, causing the handler to call `wp_set_auth_cookie()` for the matched user and granting full authentication as that user — including administrators — with no prior knowledge of site secrets.",
+    "cvss": {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "score": 9.8,
+      "severity": "CRITICAL",
+      "attack_vector": "네트워크",
+      "attack_complexity": "낮음",
+      "privileges_required": "없음",
+      "user_interaction": "없음"
+    },
+    "cwes": [
+      "CWE-287"
+    ],
+    "affected": [],
+    "references": [
+      "https://plugins.trac.wordpress.org/browser/user-session-synchronizer/tags/1.4.0/includes/class-user-session-synchronizer.php#L117",
+      "https://plugins.trac.wordpress.org/browser/user-session-synchronizer/tags/1.4.0/includes/class-user-session-synchronizer.php#L286",
+      "https://plugins.trac.wordpress.org/browser/user-session-synchronizer/tags/1.4.0/includes/class-user-session-synchronizer.php#L310",
+      "https://plugins.trac.wordpress.org/browser/user-session-synchronizer/tags/1.4.0/includes/class-user-session-synchronizer.php#L422",
+      "https://plugins.trac.wordpress.org/browser/user-session-synchronizer/tags/1.4.0/includes/class-user-session-synchronizer.php#L598",
+      "https://plugins.trac.wordpress.org/browser/user-session-synchronizer/tags/1.4.0/includes/class-user-session-synchronizer.php#L631"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-15341",
+    "added_at": "2026-08-15T20:00:06+09:00"
+  },
+  {
+    "id": "CVE-2026-15303",
+    "published": "2026-08-15",
+    "last_modified": "2026-08-15",
+    "status": "Received",
+    "description": "The 6Storage Rentals plugin for WordPress is vulnerable to authentication bypass in versions up to, and including, 2.27.0. This is due to the six_storage_create_wp_user() AJAX handler being registered on wp_ajax_nopriv_six_storage_create_wp_user without any nonce, capability, credential, or ownership verification, while calling wp_set_current_user() and wp_set_auth_cookie() for any WordPress user resolved by the attacker-supplied email address. This makes it possible for unauthenticated attackers to log in as any existing WordPress user, including administrators, by submitting that user's email address.",
+    "cvss": {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "score": 9.8,
+      "severity": "CRITICAL",
+      "attack_vector": "네트워크",
+      "attack_complexity": "낮음",
+      "privileges_required": "없음",
+      "user_interaction": "없음"
+    },
+    "cwes": [
+      "CWE-287"
+    ],
+    "affected": [],
+    "references": [
+      "https://plugins.trac.wordpress.org/browser/6storage-rentals/tags/2.27.0/inc/Base/Six_Storage_DashboardController.php#L14",
+      "https://plugins.trac.wordpress.org/browser/6storage-rentals/tags/2.27.0/inc/Base/Six_Storage_DashboardController.php#L3834",
+      "https://plugins.trac.wordpress.org/browser/6storage-rentals/tags/2.27.0/inc/Base/Six_Storage_DashboardController.php#L3905",
+      "https://www.wordfence.com/threat-intel/vulnerabilities/id/94e987be-bdfc-4691-b250-2b7d7249df0a?source=cve"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-15303",
+    "added_at": "2026-08-15T20:00:06+09:00"
+  },
+  {
+    "id": "CVE-2026-14484",
+    "published": "2026-08-15",
+    "last_modified": "2026-08-15",
+    "status": "Received",
+    "description": "The RapiSafe – Secure Multi File Upload for Contact Form 7 plugin for WordPress is vulnerable to arbitrary file deletion due to insufficient file path validation in the handleAjaxRemoveUpload function in all versions up to, and including, 1.0.4. This makes it possible for unauthenticated attackers to delete arbitrary files on the server, which can easily lead to remote code execution when the right file is deleted (such as wp-config.php). The nonce required to invoke the removal handler is exposed in public-facing JavaScript as RSMFCF7Vars.nonce on every Contact Form 7 page rendering a RapiSafe upload field, making it obtainable by any unauthenticated visitor.",
+    "cvss": {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:H",
+      "score": 9.1,
+      "severity": "CRITICAL",
+      "attack_vector": "네트워크",
+      "attack_complexity": "낮음",
+      "privileges_required": "없음",
+      "user_interaction": "없음"
+    },
+    "cwes": [
+      "CWE-22"
+    ],
+    "affected": [],
+    "references": [
+      "https://plugins.trac.wordpress.org/browser/rapisafe-multi-file-cf7/trunk/src/RSMFCF7_Assets.php#L201",
+      "https://plugins.trac.wordpress.org/browser/rapisafe-multi-file-cf7/trunk/src/RSMFCF7_Assets.php#L235",
+      "https://plugins.trac.wordpress.org/browser/rapisafe-multi-file-cf7/trunk/src/RSMFCF7_Assets.php#L237",
+      "https://plugins.trac.wordpress.org/browser/rapisafe-multi-file-cf7/trunk/src/RSMFCF7_Assets.php#L244",
+      "https://plugins.trac.wordpress.org/browser/rapisafe-multi-file-cf7/trunk/src/RSMFCF7_Assets.php#L264",
+      "https://plugins.trac.wordpress.org/browser/rapisafe-multi-file-cf7/trunk/src/RSMFCF7_Plugin.php#L49"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-14484",
+    "added_at": "2026-08-15T20:00:06+09:00"
+  },
+  {
     "id": "CVE-2026-73678",
     "published": "2026-08-14",
     "last_modified": "2026-08-14",
