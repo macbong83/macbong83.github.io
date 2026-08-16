@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI, 취약점 — 2026.08.16 보안 브리핑 | SecuLog</title>
+<meta name="description" content="오늘 주요 취약점·침해 사고·위협 트렌드 요약.">
+<meta name="keywords" content="AI, 취약점, 랜섬웨어, 침해사고, 보안">
+<meta name="author" content="Felix">
+<meta property="og:type" content="article">
+<meta property="og:title" content="AI, 취약점 — 2026.08.16 보안 브리핑">
+<meta property="og:description" content="오늘 주요 취약점·침해 사고·위협 트렌드 요약.">
+<meta property="og:url" content="https://macbong83.github.io/posts/2026-08-16.html">
+<meta property="og:site_name" content="SecuLog">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="AI, 취약점 — 2026.08.16 보안 브리핑">
+<meta name="twitter:description" content="오늘 주요 취약점·침해 사고·위협 트렌드 요약.">
+<link rel="canonical" href="https://macbong83.github.io/posts/2026-08-16.html">
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: -apple-system, 'Malgun Gothic', 'Apple SD Gothic Neo', Arial, sans-serif; background: #f4f5f7; color: #1a1a2e; line-height: 1.6; }
+  a { text-decoration: none; color: inherit; }
+  .wrapper { max-width: 700px; margin: 32px auto; background: #ffffff; border-radius: 12px; overflow: hidden; box-shadow: 0 2px 20px rgba(0,0,0,0.08); }
+  .header { background: #eef0f4; padding: 28px 36px 24px; display: flex; align-items: center; justify-content: space-between; gap: 16px; border-bottom: 3px solid #0d1b3e; }
+  .wordmark { font-size: 26px; font-weight: 800; letter-spacing: -0.02em; color: #0d1b3e; }
+  .wordmark .accent { color: #2563eb; }
+  .header-meta { text-align: right; }
+  .header-meta .nl-label { font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase; color: #6b7488; margin-bottom: 4px; }
+  .header-meta .nl-title { font-size: 17px; font-weight: 700; color: #0d1b3e; }
+  .header-meta .nl-date { font-size: 12px; color: #8a93a8; margin-top: 3px; }
+  .body { padding: 28px 36px 32px; }
+  .section-label { font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase; color: #8a93a8; font-weight: 600; padding-bottom: 8px; border-bottom: 1px solid #e8eaed; margin-bottom: 4px; margin-top: 28px; }
+  .section-label:first-child { margin-top: 0; }
+  .card { display: block; padding: 16px 0; border-bottom: 1px solid #f0f1f3; transition: background 0.15s; }
+  .card:last-child { border-bottom: none; }
+  .card:hover { background: #f8f9fc; margin: 0 -36px; padding: 16px 36px; }
+  .card-top { display: flex; align-items: center; gap: 8px; margin-bottom: 6px; flex-wrap: wrap; }
+  .badge { font-size: 10px; font-weight: 700; padding: 3px 9px; border-radius: 4px; letter-spacing: 0.04em; }
+  .badge-critical { background: #fff0f0; color: #c0392b; border: 1px solid #f5c6c6; }
+  .badge-high { background: #fff7ee; color: #b94d00; border: 1px solid #fdd5a8; }
+  .badge-medium { background: #fff9e6; color: #856900; border: 1px solid #f9e0a0; }
+  .badge-incident { background: #f3f0ff; color: #6133c0; border: 1px solid #cfc0f5; }
+  .source { font-size: 11px; color: #a0a8b8; }
+  .card-headline { font-size: 14px; font-weight: 600; color: #0d1b3e; margin-bottom: 5px; line-height: 1.45; }
+  .card-headline .arrow { font-size: 12px; color: #2563eb; margin-left: 4px; opacity: 0; transition: opacity 0.15s; }
+  .card:hover .card-headline .arrow { opacity: 1; }
+  .card-summary { font-size: 13px; color: #4a5568; line-height: 1.65; }
+  .trend-box { background: #f8f9fc; border-radius: 10px; padding: 18px 20px; margin-top: 6px; }
+  .trend-row { display: flex; gap: 12px; padding: 10px 0; border-bottom: 1px solid #e8eaed; align-items: flex-start; }
+  .trend-row:last-child { border-bottom: none; padding-bottom: 0; }
+  .trend-num { font-size: 11px; font-weight: 700; color: #2563eb; min-width: 22px; padding-top: 2px; }
+  .trend-text { font-size: 13px; color: #4a5568; line-height: 1.6; }
+  .trend-text strong { color: #0d1b3e; font-weight: 600; }
+  .footer { background: #f4f5f7; border-top: 1px solid #e8eaed; padding: 16px 36px; font-size: 11px; color: #9aa0b0; line-height: 1.6; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 8px; }
+  .footer-meta { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; justify-content: flex-end; }
+  .linkedin-link { display: inline-flex; align-items: center; justify-content: center; min-height: 28px; padding: 6px 12px; border-radius: 6px; background: #0a66c2; color: #fff; font-size: 12px; font-weight: 800; letter-spacing: 0.01em; box-shadow: 0 6px 14px rgba(10,102,194,0.16); }
+  .linkedin-link:hover { background: #004182; color: #fff; }
+  .card-inner { display: flex; gap: 14px; }
+  .sev-bar { width: 3px; border-radius: 2px; flex-shrink: 0; margin: 3px 0; }
+  .sev-critical { background: #e74c3c; }
+  .sev-high { background: #e67e22; }
+  .sev-medium { background: #f0b429; }
+  .sev-incident { background: #7c3aed; }
+  .card-content { flex: 1; }
+  @media (max-width: 600px) {
+    .wrapper { margin: 0; border-radius: 0; box-shadow: none; }
+    .header { padding: 18px 20px 16px; flex-direction: column; align-items: flex-start; gap: 8px; }
+    .header-meta { text-align: left; }
+    .body { padding: 18px 20px 24px; }
+    .card:hover { margin: 0 -20px; padding: 16px 20px; }
+    .footer { padding: 14px 20px; flex-direction: column; align-items: flex-start; }
+    .footer-meta { justify-content: flex-start; }
+    .wordmark { font-size: 22px; }
+    .card-headline { font-size: 13px; }
+    .card-summary { font-size: 12px; }
+    .card-headline .arrow { opacity: 1; }
+  }
+</style>
+</head>
+<body>
+<div class="wrapper">
+  <div class="header">
+    <div class="header-logo">
+      <span class="wordmark">Secu<span class="accent">Log</span></span>
+    </div>
+    <div class="header-meta">
+      <div class="nl-label">글로벌 정보보안 뉴스레터</div>
+      <div class="nl-title">보안 브리핑</div>
+      <div class="nl-date">2026년 8월 16일 일요일</div>
+    </div>
+  </div>
+  <div class="body">
+    <div class="section-label">취약점 &amp; 공격</div>
+
+    <a class="card" href="https://securityaffairs.com/197244/security/sap-commerce-cloud-cve-2026-58231-exploited-in-the-wild.html" target="_blank">
+      <div class="card-inner"><div class="sev-bar sev-critical"></div><div class="card-content">
+        <div class="card-top"><span class="badge badge-critical">긴급</span><span class="source">SecurityAffairs</span></div>
+        <div class="card-headline">SAP 커머스 클라우드 치명적 취약점(CVE-2026-58231) 악용<span class="arrow">↗</span></div>
+        <div class="card-summary">SAP 커머스 클라우드의 최고 위험도 취약점 CVE-2026-58231이 패치 발표 후 3일 만에 악용되고 있다. 인증 없이 임의 코드 실행이 가능해 시스템 장악 위험이 있다.</div>
+      </div></div>
+    </a>
+
+    <a class="card" href="https://securityaffairs.com/197234/uncategorized/macos-screen-sharing-flaw-exploited-to-deploy-monero-miners.html" target="_blank">
+      <div class="card-inner"><div class="sev-bar sev-critical"></div><div class="card-content">
+        <div class="card-top"><span class="badge badge-critical">긴급</span><span class="source">SecurityAffairs</span></div>
+        <div class="card-headline">맥OS 화면 공유 기능 취약점(CVE-2026-65400) 악용<span class="arrow">↗</span></div>
+        <div class="card-summary">맥OS의 화면 공유 기능에 존재하는 취약점 CVE-2026-65400이 악용되어 Monero 마이너가 설치되고 있다. CVSS 점수 9.8으로 매우 심각한 취약점이다.</div>
+      </div></div>
+    </a>
+
+    <a class="card" href="https://securityaffairs.com/197216/hacking/geoserver-zero-day-is-already-being-probed-thats-the-problem.html" target="_blank">
+      <div class="card-inner"><div class="sev-bar sev-high"></div><div class="card-content">
+        <div class="card-top"><span class="badge badge-high">높음</span><span class="source">SecurityAffairs</span></div>
+        <div class="card-headline">GeoServer 제로데이 취약점 공격 시도 증가<span class="arrow">↗</span></div>
+        <div class="card-summary">GeoServer의 제로데이 취약점이 공개된 직후 공격자가 노출된 서버를 탐색하며 공격을 시도하고 있다. SQL 인젝션 및 원격 코드 실행(RCE) 가능성이 있다.</div>
+      </div></div>
+    </a>
+
+    <a class="card" href="https://securityaffairs.com/197251/uncategorized/crooks-are-buying-your-expired-domains-and-using-them-to-deliver-malware.html" target="_blank">
+      <div class="card-inner"><div class="sev-bar sev-high"></div><div class="card-content">
+        <div class="card-top"><span class="badge badge-high">높음</span><span class="source">SecurityAffairs</span></div>
+        <div class="card-headline">사기 도메인을 통한 악성코드 유포 증가<span class="arrow">↗</span></div>
+        <div class="card-summary">공격자가 만료된 도메인을 구매해 악성코드 유포, 사기 및 C2 인프라를 구축하고 있다. 하루 평균 65,000개의 도메인이 재등록되고 있다.</div>
+      </div></div>
+    </a>
+
+    <a class="card" href="https://gbhackers.com/ruby-4-0-marshal-load-rce-gadget-chain/" target="_blank">
+      <div class="card-inner"><div class="sev-bar sev-medium"></div><div class="card-content">
+        <div class="card-top"><span class="badge badge-medium">중간</span><span class="source">GBHackers</span></div>
+        <div class="card-headline">Ruby 4.0 Marshal.load RCE 취약점 발견<span class="arrow">↗</span></div>
+        <div class="card-summary">Ruby 4.0의 Marshal.load 기능에 존재하는 원격 코드 실행(RCE) 취약점이 발견되었다. 악의적인 데이터 입력을 통해 공격이 가능하다.</div>
+      </div></div>
+    </a>
+
+    <div class="section-label">침해 사고</div>
+
+    <a class="card" href="https://www.dailysecu.com/news/articleView.html?idxno=208066" target="_blank">
+      <div class="card-inner"><div class="sev-bar sev-incident"></div><div class="card-content">
+        <div class="card-top"><span class="badge badge-incident">사고</span><span class="source">DailySecu</span></div>
+        <div class="card-headline">애플, 110개국 사용자에 용병 스파이웨어 공격 경고<span class="arrow">↗</span></div>
+        <div class="card-summary">애플은 특정 사용자에게 용병 스파이웨어 공격의 위협을 경고했다. 주로 기자, 정치인, 외교관 등 특정 인물을 표적으로 공격이 이루어지고 있다.</div>
+      </div></div>
+    </a>
+
+    <a class="card" href="https://www.dailysecu.com/news/articleView.html?idxno=208065" target="_blank">
+      <div class="card-inner"><div class="sev-bar sev-incident"></div><div class="card-content">
+        <div class="card-top"><span class="badge badge-incident">사고</span><span class="source">DailySecu</span></div>
+        <div class="card-headline">중국 해커 무스탕 판다, 정부기관 공격에 루트킷 활용<span class="arrow">↗</span></div>
+        <div class="card-summary">중국 해커 무스탕 판다 그룹이 윈도우 커널 루트킷을 이용해 정부기관을 공격한 것으로 확인되었다. 백도어 ‘쿨클라이언트’를 사용해 시스템을 조종하고 있다.</div>
+      </div></div>
+    </a>
+
+    <a class="card" href="http://www.boannews.com/media/view.asp?idx=145089" target="_blank">
+      <div class="card-inner"><div class="sev-bar sev-incident"></div><div class="card-content">
+        <div class="card-top"><span class="badge badge-incident">사고</span><span class="source">DailySecu</span></div>
+        <div class="card-headline">북한 해킹조직 김수키, 생성형 AI 기반 공격 강화<span class="arrow">↗</span></div>
+        <div class="card-summary">북한 해킹조직 김수키가 생성형 AI 기반 도구를 활용해 공격 체계를 강화하고 있다. AI를 통해 공격을 자동화하고 있다.</div>
+      </div></div>
+    </a>
+
+    <div class="section-label">동향 &amp; 분석</div>
+    <div class="trend-box">
+      <div class="trend-row">
+        <div class="trend-num">01</div>
+        <div class="trend-text"><strong>AI 기반 보안 기술 확산</strong> — AI 기술이 보안 분야에 급속히 확산되고 있으며, 특히 자동화된 공격 방어 및 침투 탐지에 활용되고 있다. 마이크로소프트는 AI를 활용한 에이전틱 보안 시스템 개발에 집중하고 있다.</div>
+      </div>
+      <div class="trend-row">
+        <div class="trend-num">02</div>
+        <div class="trend-text"><strong>제로데이 취약점 공격 증가</strong> — 최근 여러 제로데이 취약점이 공개된 후, 공격자들이 이를 즉시 악용하고 있는 것으로 확인되었다. 특히 GeoServer와 SAP 커머스 클라우드의 취약점이 빠르게 공격에 활용되고 있다.</div>
+      </div>
+      <div class="trend-row">
+        <div class="trend-num">03</div>
+        <div class="trend-text"><strong>AI 기반 해킹 도구의 진화</strong> — 북한 해킹 조직은 생성형 AI 기반 도구를 활용해 공격을 자동화하고 있으며, 이는 해킹 기술의 진화를 나타낸다. AI 기술이 보안과 해킹 양쪽 모두에 영향을 미치고 있다.</div>
+      </div>
+      <div class="trend-row">
+        <div class="trend-num">04</div>
+        <div class="trend-text"><strong>스파이웨어 공격의 특정 인물 타겟화</strong> — 용병 스파이웨어 공격은 특정 인물, 예를 들어 기자, 정치인, 외교관 등을 타겟으로 하며, 일반적인 악성코드와 달리 불특정 다수를 공격하지 않는다.</div>
+      </div>
+    </div>
+  </div>
+  <div class="footer">
+    <div>출처: The Hacker News · BleepingComputer · SecurityWeek · KrebsOnSecurity · CISA · NCSC UK · Unit 42 · 보안뉴스 · 데일리시큐 · 전자신문</div>
+    <div class="footer-meta">
+      <span>© 2026 Felix · SecuLog. 본 브리핑은 공개된 보안 뉴스를 기반으로 작성되었습니다.</span>
+    </div>
+  </div>
+</div>
+</body>
+</html>

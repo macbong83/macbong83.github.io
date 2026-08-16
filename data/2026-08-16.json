@@ -1,0 +1,104 @@
+{
+  "tagline": "글로벌 정보보안 뉴스레터",
+  "title": "보안 브리핑",
+  "date_display": "2026년 8월 16일 일요일",
+  "date_short": "2026.08.16",
+  "sources_line": "The Hacker News · BleepingComputer · SecurityWeek · KrebsOnSecurity · CISA · NCSC UK · Unit 42 · 보안뉴스 · 데일리시큐 · 전자신문",
+  "seo": {
+    "title": "AI, 취약점 — 2026.08.16 보안 브리핑",
+    "description": "오늘 주요 취약점·침해 사고·위협 트렌드 요약.",
+    "keywords": "AI, 취약점, 랜섬웨어, 침해사고, 보안"
+  },
+  "sections": [
+    {
+      "label": "취약점 & 공격",
+      "type": "cards",
+      "items": [
+        {
+          "severity": "critical",
+          "source": "SecurityAffairs",
+          "headline": "SAP 커머스 클라우드 치명적 취약점(CVE-2026-58231) 악용",
+          "url": "https://securityaffairs.com/197244/security/sap-commerce-cloud-cve-2026-58231-exploited-in-the-wild.html",
+          "summary": "SAP 커머스 클라우드의 최고 위험도 취약점 CVE-2026-58231이 패치 발표 후 3일 만에 악용되고 있다. 인증 없이 임의 코드 실행이 가능해 시스템 장악 위험이 있다."
+        },
+        {
+          "severity": "critical",
+          "source": "SecurityAffairs",
+          "headline": "맥OS 화면 공유 기능 취약점(CVE-2026-65400) 악용",
+          "url": "https://securityaffairs.com/197234/uncategorized/macos-screen-sharing-flaw-exploited-to-deploy-monero-miners.html",
+          "summary": "맥OS의 화면 공유 기능에 존재하는 취약점 CVE-2026-65400이 악용되어 Monero 마이너가 설치되고 있다. CVSS 점수 9.8으로 매우 심각한 취약점이다."
+        },
+        {
+          "severity": "high",
+          "source": "SecurityAffairs",
+          "headline": "GeoServer 제로데이 취약점 공격 시도 증가",
+          "url": "https://securityaffairs.com/197216/hacking/geoserver-zero-day-is-already-being-probed-thats-the-problem.html",
+          "summary": "GeoServer의 제로데이 취약점이 공개된 직후 공격자가 노출된 서버를 탐색하며 공격을 시도하고 있다. SQL 인젝션 및 원격 코드 실행(RCE) 가능성이 있다."
+        },
+        {
+          "severity": "high",
+          "source": "SecurityAffairs",
+          "headline": "사기 도메인을 통한 악성코드 유포 증가",
+          "url": "https://securityaffairs.com/197251/uncategorized/crooks-are-buying-your-expired-domains-and-using-them-to-deliver-malware.html",
+          "summary": "공격자가 만료된 도메인을 구매해 악성코드 유포, 사기 및 C2 인프라를 구축하고 있다. 하루 평균 65,000개의 도메인이 재등록되고 있다."
+        },
+        {
+          "severity": "medium",
+          "source": "GBHackers",
+          "headline": "Ruby 4.0 Marshal.load RCE 취약점 발견",
+          "url": "https://gbhackers.com/ruby-4-0-marshal-load-rce-gadget-chain/",
+          "summary": "Ruby 4.0의 Marshal.load 기능에 존재하는 원격 코드 실행(RCE) 취약점이 발견되었다. 악의적인 데이터 입력을 통해 공격이 가능하다."
+        }
+      ]
+    },
+    {
+      "label": "침해 사고",
+      "type": "cards",
+      "items": [
+        {
+          "severity": "incident",
+          "source": "DailySecu",
+          "headline": "애플, 110개국 사용자에 용병 스파이웨어 공격 경고",
+          "url": "https://www.dailysecu.com/news/articleView.html?idxno=208066",
+          "summary": "애플은 특정 사용자에게 용병 스파이웨어 공격의 위협을 경고했다. 주로 기자, 정치인, 외교관 등 특정 인물을 표적으로 공격이 이루어지고 있다."
+        },
+        {
+          "severity": "incident",
+          "source": "DailySecu",
+          "headline": "중국 해커 무스탕 판다, 정부기관 공격에 루트킷 활용",
+          "url": "https://www.dailysecu.com/news/articleView.html?idxno=208065",
+          "summary": "중국 해커 무스탕 판다 그룹이 윈도우 커널 루트킷을 이용해 정부기관을 공격한 것으로 확인되었다. 백도어 ‘쿨클라이언트’를 사용해 시스템을 조종하고 있다."
+        },
+        {
+          "severity": "incident",
+          "source": "DailySecu",
+          "headline": "북한 해킹조직 김수키, 생성형 AI 기반 공격 강화",
+          "url": "http://www.boannews.com/media/view.asp?idx=145089",
+          "summary": "북한 해킹조직 김수키가 생성형 AI 기반 도구를 활용해 공격 체계를 강화하고 있다. AI를 통해 공격을 자동화하고 있다."
+        }
+      ]
+    },
+    {
+      "label": "동향 & 분석",
+      "type": "trends",
+      "items": [
+        {
+          "lead": "AI 기반 보안 기술 확산",
+          "body": "AI 기술이 보안 분야에 급속히 확산되고 있으며, 특히 자동화된 공격 방어 및 침투 탐지에 활용되고 있다. 마이크로소프트는 AI를 활용한 에이전틱 보안 시스템 개발에 집중하고 있다."
+        },
+        {
+          "lead": "제로데이 취약점 공격 증가",
+          "body": "최근 여러 제로데이 취약점이 공개된 후, 공격자들이 이를 즉시 악용하고 있는 것으로 확인되었다. 특히 GeoServer와 SAP 커머스 클라우드의 취약점이 빠르게 공격에 활용되고 있다."
+        },
+        {
+          "lead": "AI 기반 해킹 도구의 진화",
+          "body": "북한 해킹 조직은 생성형 AI 기반 도구를 활용해 공격을 자동화하고 있으며, 이는 해킹 기술의 진화를 나타낸다. AI 기술이 보안과 해킹 양쪽 모두에 영향을 미치고 있다."
+        },
+        {
+          "lead": "스파이웨어 공격의 특정 인물 타겟화",
+          "body": "용병 스파이웨어 공격은 특정 인물, 예를 들어 기자, 정치인, 외교관 등을 타겟으로 하며, 일반적인 악성코드와 달리 불특정 다수를 공격하지 않는다."
+        }
+      ]
+    }
+  ]
+}
