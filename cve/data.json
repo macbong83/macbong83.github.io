@@ -1,5 +1,86 @@
 [
   {
+    "id": "CVE-2026-74790",
+    "published": "2026-08-16",
+    "last_modified": "2026-08-16",
+    "status": "Received",
+    "description": "Scriban before 7.0.0 caches TypedObjectAccessor by Type only without considering MemberFilter changes, allowing reused TemplateContext instances to expose members that should be hidden. Attackers can access filtered properties and fields by reusing a TemplateContext after tightening its MemberFilter, bypassing sandbox policies across requests or tenants.",
+    "cvss": {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N",
+      "score": 9.1,
+      "severity": "CRITICAL",
+      "attack_vector": "네트워크",
+      "attack_complexity": "낮음",
+      "privileges_required": "없음",
+      "user_interaction": "없음"
+    },
+    "cwes": [
+      "CWE-693"
+    ],
+    "affected": [],
+    "references": [
+      "https://github.com/scriban/scriban/security/advisories/GHSA-5wr9-m6jw-xx44",
+      "https://www.vulncheck.com/advisories/scriban-before-memberfilter-bypass-via-templatecontext-cache"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-74790",
+    "added_at": "2026-08-17T08:00:26+09:00"
+  },
+  {
+    "id": "CVE-2026-73061",
+    "published": "2026-08-16",
+    "last_modified": "2026-08-16",
+    "status": "Received",
+    "description": "Scriban before 7.2.2 contains an access-modifier bypass vulnerability in TypedObjectAccessor that allows template code to write CLR object properties without setter-visibility checks. Attackers can modify properties with private, internal, or init-only setters, and perform mass assignment on public-setter properties, permanently altering live host objects after template rendering.",
+    "cvss": {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "score": 9.8,
+      "severity": "CRITICAL",
+      "attack_vector": "네트워크",
+      "attack_complexity": "낮음",
+      "privileges_required": "없음",
+      "user_interaction": "없음"
+    },
+    "cwes": [
+      "CWE-284"
+    ],
+    "affected": [],
+    "references": [
+      "https://github.com/scriban/scriban/security/advisories/GHSA-7jvp-hj45-2f2m",
+      "https://www.vulncheck.com/advisories/scriban-before-arbitrary-property-write-via-typedobjectaccessor"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-73061",
+    "added_at": "2026-08-17T08:00:26+09:00"
+  },
+  {
+    "id": "CVE-2026-73056",
+    "published": "2026-08-16",
+    "last_modified": "2026-08-16",
+    "status": "Received",
+    "description": "SiYuan kernel versions before 3.7.4 contain an improper restriction of excessive authentication attempts vulnerability in the CheckAuth() middleware. The middleware accepts the API token (Conf.Api.Token) via an Authorization header (Token/Bearer) or a ?token= query parameter, and neither path is protected by the application's CAPTCHA/lockout mechanism (NeedCaptcha/WrongAuthCount). As a result, an unauthenticated remote attacker can perform unlimited automated guesses of the API token, particularly when a short or weak custom token has been configured, and upon success gains full RoleAdministrator access enabling arbitrary file operations and SQL queries.",
+    "cvss": {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "score": 9.8,
+      "severity": "CRITICAL",
+      "attack_vector": "네트워크",
+      "attack_complexity": "낮음",
+      "privileges_required": "없음",
+      "user_interaction": "없음"
+    },
+    "cwes": [
+      "CWE-307"
+    ],
+    "affected": [],
+    "references": [
+      "https://github.com/siyuan-note/siyuan/security/advisories/GHSA-m6w6-p7pc-fpg2",
+      "https://www.vulncheck.com/advisories/siyuan-kernel-before-unthrottled-brute-force-via-api-token"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-73056",
+    "added_at": "2026-08-17T08:00:26+09:00"
+  },
+  {
     "id": "CVE-2026-19924",
     "published": "2026-08-16",
     "last_modified": "2026-08-16",

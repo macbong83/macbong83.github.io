@@ -41,13 +41,82 @@
     <h1>CVE Archive</h1>
     <p>NVD 기반 Critical CVE를 누적 관리하는 별도 페이지입니다. 블로그에는 CVE 자동 글을 발행하지 않고, 이 페이지에만 기록합니다.</p>
     <div class="meta">
-      <span>Total 504</span>
-      <span>Updated 2026-08-16 20:00 KST</span>
+      <span>Total 507</span>
+      <span>Updated 2026-08-17 08:00 KST</span>
       <span>Source NVD API</span>
     </div>
   </section>
   <div class="notice">중복 제거 기준은 CVE ID입니다. 동일 CVE는 다시 추가하지 않습니다. 실제 악용 여부와 패치 우선순위는 CISA KEV, 벤더 권고, 자산 노출 여부와 함께 검토해야 합니다.</div>
 
+    <article class="cve-card" id="CVE-2026-74790">
+      <div class="cve-top">
+        <a class="cve-id" href="https://nvd.nist.gov/vuln/detail/CVE-2026-74790" target="_blank" rel="noopener">CVE-2026-74790</a>
+        <span class="score">CVSS 9.1 CRITICAL</span>
+      </div>
+      <p class="desc">Scriban before 7.0.0 caches TypedObjectAccessor by Type only without considering MemberFilter changes, allowing reused TemplateContext instances to expose members that should be hidden. Attackers can access filtered properties and fields by reusing a TemplateContext after tightening its MemberFilter, bypassing sandbox policies across requests or tenants.</p>
+      <dl>
+        <div><dt>Published</dt><dd>2026-08-16</dd></div>
+        <div><dt>Last Modified</dt><dd>2026-08-16</dd></div>
+        <div><dt>Status</dt><dd>Received</dd></div>
+        <div><dt>Attack Vector</dt><dd>네트워크</dd></div>
+        <div><dt>Attack Complexity</dt><dd>낮음</dd></div>
+        <div><dt>Privileges</dt><dd>없음</dd></div>
+        <div><dt>User Interaction</dt><dd>없음</dd></div>
+        <div><dt>CWE</dt><dd>CWE-693</dd></div>
+        <div><dt>Affected</dt><dd>NVD CPE 기준 확인 필요</dd></div>
+      </dl>
+      <div class="vector"><code>CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N</code></div>
+      <details>
+        <summary>References</summary>
+        <ul><li><a href="https://github.com/scriban/scriban/security/advisories/GHSA-5wr9-m6jw-xx44" target="_blank" rel="noopener">https://github.com/scriban/scriban/security/advisories/GHSA-5wr9-m6jw-xx44</a></li><li><a href="https://www.vulncheck.com/advisories/scriban-before-memberfilter-bypass-via-templatecontext-cache" target="_blank" rel="noopener">https://www.vulncheck.com/advisories/scriban-before-memberfilter-bypass-via-templatecontext-cache</a></li></ul>
+      </details>
+    </article>
+    <article class="cve-card" id="CVE-2026-73061">
+      <div class="cve-top">
+        <a class="cve-id" href="https://nvd.nist.gov/vuln/detail/CVE-2026-73061" target="_blank" rel="noopener">CVE-2026-73061</a>
+        <span class="score">CVSS 9.8 CRITICAL</span>
+      </div>
+      <p class="desc">Scriban before 7.2.2 contains an access-modifier bypass vulnerability in TypedObjectAccessor that allows template code to write CLR object properties without setter-visibility checks. Attackers can modify properties with private, internal, or init-only setters, and perform mass assignment on public-setter properties, permanently altering live host objects after template rendering.</p>
+      <dl>
+        <div><dt>Published</dt><dd>2026-08-16</dd></div>
+        <div><dt>Last Modified</dt><dd>2026-08-16</dd></div>
+        <div><dt>Status</dt><dd>Received</dd></div>
+        <div><dt>Attack Vector</dt><dd>네트워크</dd></div>
+        <div><dt>Attack Complexity</dt><dd>낮음</dd></div>
+        <div><dt>Privileges</dt><dd>없음</dd></div>
+        <div><dt>User Interaction</dt><dd>없음</dd></div>
+        <div><dt>CWE</dt><dd>CWE-284</dd></div>
+        <div><dt>Affected</dt><dd>NVD CPE 기준 확인 필요</dd></div>
+      </dl>
+      <div class="vector"><code>CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H</code></div>
+      <details>
+        <summary>References</summary>
+        <ul><li><a href="https://github.com/scriban/scriban/security/advisories/GHSA-7jvp-hj45-2f2m" target="_blank" rel="noopener">https://github.com/scriban/scriban/security/advisories/GHSA-7jvp-hj45-2f2m</a></li><li><a href="https://www.vulncheck.com/advisories/scriban-before-arbitrary-property-write-via-typedobjectaccessor" target="_blank" rel="noopener">https://www.vulncheck.com/advisories/scriban-before-arbitrary-property-write-via-typedobjectaccessor</a></li></ul>
+      </details>
+    </article>
+    <article class="cve-card" id="CVE-2026-73056">
+      <div class="cve-top">
+        <a class="cve-id" href="https://nvd.nist.gov/vuln/detail/CVE-2026-73056" target="_blank" rel="noopener">CVE-2026-73056</a>
+        <span class="score">CVSS 9.8 CRITICAL</span>
+      </div>
+      <p class="desc">SiYuan kernel versions before 3.7.4 contain an improper restriction of excessive authentication attempts vulnerability in the CheckAuth() middleware. The middleware accepts the API token (Conf.Api.Token) via an Authorization header (Token/Bearer) or a ?token= query parameter, and neither path is protected by the application&#x27;s CAPTCHA/lockout mechanism (NeedCaptcha/WrongAuthCount). As a result, an unauthenticated remote attacker can perform unlimited automated guesses of the API token, particularly when a short or weak custom token has been configured, and upon success gains full RoleAdministrator access enabling arbitrary file operations and SQL queries.</p>
+      <dl>
+        <div><dt>Published</dt><dd>2026-08-16</dd></div>
+        <div><dt>Last Modified</dt><dd>2026-08-16</dd></div>
+        <div><dt>Status</dt><dd>Received</dd></div>
+        <div><dt>Attack Vector</dt><dd>네트워크</dd></div>
+        <div><dt>Attack Complexity</dt><dd>낮음</dd></div>
+        <div><dt>Privileges</dt><dd>없음</dd></div>
+        <div><dt>User Interaction</dt><dd>없음</dd></div>
+        <div><dt>CWE</dt><dd>CWE-307</dd></div>
+        <div><dt>Affected</dt><dd>NVD CPE 기준 확인 필요</dd></div>
+      </dl>
+      <div class="vector"><code>CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H</code></div>
+      <details>
+        <summary>References</summary>
+        <ul><li><a href="https://github.com/siyuan-note/siyuan/security/advisories/GHSA-m6w6-p7pc-fpg2" target="_blank" rel="noopener">https://github.com/siyuan-note/siyuan/security/advisories/GHSA-m6w6-p7pc-fpg2</a></li><li><a href="https://www.vulncheck.com/advisories/siyuan-kernel-before-unthrottled-brute-force-via-api-token" target="_blank" rel="noopener">https://www.vulncheck.com/advisories/siyuan-kernel-before-unthrottled-brute-force-via-api-token</a></li></ul>
+      </details>
+    </article>
     <article class="cve-card" id="CVE-2026-19924">
       <div class="cve-top">
         <a class="cve-id" href="https://nvd.nist.gov/vuln/detail/CVE-2026-19924" target="_blank" rel="noopener">CVE-2026-19924</a>
