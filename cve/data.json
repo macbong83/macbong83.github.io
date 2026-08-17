@@ -1,5 +1,199 @@
 [
   {
+    "id": "CVE-2026-75110",
+    "published": "2026-08-17",
+    "last_modified": "2026-08-17",
+    "status": "Received",
+    "description": "MemOS is a memory operating system for LLMs and AI agents. In deployments where authentication is enabled (AUTH_ENABLED=true) but the undocumented, defaultless INTERNAL_SERVICE_SECRET environment variable is unset, the is_internal_request() check in src/memos/api/middleware/auth.py fails open: os.getenv(\"INTERNAL_SERVICE_SECRET\") returns None and a request omitting the X-Internal-Service header also yields None, so the comparison None == None evaluates true. The request is then treated as a trusted internal principal and granted scopes: [\"all\"]. As a result, an unauthenticated remote attacker can reach the admin API-key management endpoints to mint API keys for any user, enumerate keys, revoke keys, and generate a master key for persistent privileged access, as well as all data endpoints.",
+    "cvss": {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "score": 9.8,
+      "severity": "CRITICAL",
+      "attack_vector": "네트워크",
+      "attack_complexity": "낮음",
+      "privileges_required": "없음",
+      "user_interaction": "없음"
+    },
+    "cwes": [
+      "CWE-697"
+    ],
+    "affected": [],
+    "references": [
+      "https://github.com/MemTensor/MemOS",
+      "https://github.com/MemTensor/MemOS/blob/main/src/memos/api/middleware/auth.py",
+      "https://github.com/MemTensor/MemOS/issues/2259",
+      "https://www.vulncheck.com/advisories/memos-authentication-bypass-via-unset-internal-service-secret"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-75110",
+    "added_at": "2026-08-18T08:00:36+09:00"
+  },
+  {
+    "id": "CVE-2026-75106",
+    "published": "2026-08-17",
+    "last_modified": "2026-08-17",
+    "status": "Received",
+    "description": "OpnForm derives editable-submission secrets from sequential row identifiers using Hashids with an empty default salt, allowing unauthenticated attackers to compute hashes for any submission. Attackers can read other respondents' full submission data through the submission-fetch endpoint or overwrite submissions by supplying predicted hashes to the answer endpoint.",
+    "cvss": {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N",
+      "score": 9.1,
+      "severity": "CRITICAL",
+      "attack_vector": "네트워크",
+      "attack_complexity": "낮음",
+      "privileges_required": "없음",
+      "user_interaction": "없음"
+    },
+    "cwes": [
+      "CWE-340"
+    ],
+    "affected": [],
+    "references": [
+      "https://github.com/OpnForm/OpnForm",
+      "https://github.com/OpnForm/OpnForm/commit/6c67ff0a9bc0ac27ae26b32b8e108a176f8161b1",
+      "https://github.com/OpnForm/OpnForm/issues/1259",
+      "https://github.com/OpnForm/OpnForm/releases/tag/v2.0.2",
+      "https://www.vulncheck.com/advisories/opnform-editable-submission-secret-derivation-via-empty-hashids-salt"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-75106",
+    "added_at": "2026-08-18T08:00:36+09:00"
+  },
+  {
+    "id": "CVE-2026-74899",
+    "published": "2026-08-17",
+    "last_modified": "2026-08-17",
+    "status": "Received",
+    "description": "openssl_encrypt versions before 1.4.0 contain a sandbox escape vulnerability in IsolatedPluginExecutor that exposes Python type objects in restricted exec() builtins. Attackers can traverse the Python class hierarchy via __class__.__mro__.__subclasses__() to access system functions and execute arbitrary OS commands.",
+    "cvss": {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "score": 9.8,
+      "severity": "CRITICAL",
+      "attack_vector": "네트워크",
+      "attack_complexity": "낮음",
+      "privileges_required": "없음",
+      "user_interaction": "없음"
+    },
+    "cwes": [
+      "CWE-95"
+    ],
+    "affected": [],
+    "references": [
+      "https://github.com/jahlives/openssl_encrypt/security/advisories/GHSA-m25m-ggxg-239c",
+      "https://www.vulncheck.com/advisories/openssl-encrypt-before-sandbox-escape-via-type-hierarchy"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-74899",
+    "added_at": "2026-08-18T08:00:36+09:00"
+  },
+  {
+    "id": "CVE-2026-74872",
+    "published": "2026-08-17",
+    "last_modified": "2026-08-17",
+    "status": "Received",
+    "description": "openssl_encrypt versions before 1.4.0 contain an arbitrary code execution vulnerability in the Whirlpool hash implementation that uses broad glob patterns to load .so modules without integrity verification. Attackers can place malicious .so files matching the whirlpool*py313*.so pattern in site-packages directories to achieve native code execution when the module is loaded.",
+    "cvss": {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "score": 9.8,
+      "severity": "CRITICAL",
+      "attack_vector": "네트워크",
+      "attack_complexity": "낮음",
+      "privileges_required": "없음",
+      "user_interaction": "없음"
+    },
+    "cwes": [
+      "CWE-426"
+    ],
+    "affected": [],
+    "references": [
+      "https://github.com/jahlives/openssl_encrypt/security/advisories/GHSA-j48q-4c78-rhf9",
+      "https://www.vulncheck.com/advisories/openssl-encrypt-before-arbitrary-code-execution-via-whirlpool"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-74872",
+    "added_at": "2026-08-18T08:00:36+09:00"
+  },
+  {
+    "id": "CVE-2026-71472",
+    "published": "2026-08-17",
+    "last_modified": "2026-08-17",
+    "status": "Received",
+    "description": "A flaw was found in acm-search-v2-rhel9. This vulnerability allows an authenticated attacker, such as a hub administrator or a Search Custom Resource (CR) editor, to inject malicious shell commands or SQL statements. This occurs because the WORK_MEM string provided in the Search CR is not properly validated before being used in a bash script and an SQL query. Successful exploitation could lead to arbitrary code execution within the privileged postgres pod, potentially compromising the system.",
+    "cvss": {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:C/C:H/I:H/A:H",
+      "score": 9.1,
+      "severity": "CRITICAL",
+      "attack_vector": "네트워크",
+      "attack_complexity": "낮음",
+      "privileges_required": "높음",
+      "user_interaction": "없음"
+    },
+    "cwes": [
+      "CWE-78"
+    ],
+    "affected": [],
+    "references": [
+      "https://access.redhat.com/security/cve/CVE-2026-71472",
+      "https://bugzilla.redhat.com/show_bug.cgi?id=2512151"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-71472",
+    "added_at": "2026-08-18T08:00:36+09:00"
+  },
+  {
+    "id": "CVE-2026-66795",
+    "published": "2026-08-17",
+    "last_modified": "2026-08-17",
+    "status": "Received",
+    "description": "A flaw was found in the managedcluster-import-controller. The Certificate Signing Request (CSR) auto-approval logic improperly validates incoming CSRs, specifically by not inspecting the signer name or decoding the PEM-encoded x509 CSR. This vulnerability allows a privileged service account on a spoke cluster to submit a malicious CSR. Successful exploitation can lead to privilege escalation, enabling the attacker to obtain administrative credentials on the hub cluster.",
+    "cvss": {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:C/C:H/I:H/A:H",
+      "score": 9.1,
+      "severity": "CRITICAL",
+      "attack_vector": "네트워크",
+      "attack_complexity": "낮음",
+      "privileges_required": "높음",
+      "user_interaction": "없음"
+    },
+    "cwes": [
+      "CWE-295"
+    ],
+    "affected": [],
+    "references": [
+      "https://access.redhat.com/security/cve/CVE-2026-66795",
+      "https://bugzilla.redhat.com/show_bug.cgi?id=2507540"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-66795",
+    "added_at": "2026-08-18T08:00:36+09:00"
+  },
+  {
+    "id": "CVE-2026-66792",
+    "published": "2026-08-17",
+    "last_modified": "2026-08-17",
+    "status": "Received",
+    "description": "A flaw was found in the multicloud-operators-subscription component. This vulnerability allows a user on a managed cluster to escalate their privileges by creating a Subscription with specific, crafted annotations. Successful exploitation grants the attacker the ability to deploy resources into any namespace with the elevated permissions of the controller's Service Account, potentially leading to unauthorized access and control over cluster resources.",
+    "cvss": {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H",
+      "score": 9.9,
+      "severity": "CRITICAL",
+      "attack_vector": "네트워크",
+      "attack_complexity": "낮음",
+      "privileges_required": "낮음",
+      "user_interaction": "없음"
+    },
+    "cwes": [
+      "CWE-863"
+    ],
+    "affected": [],
+    "references": [
+      "https://access.redhat.com/security/cve/CVE-2026-66792",
+      "https://bugzilla.redhat.com/show_bug.cgi?id=2507537"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-66792",
+    "added_at": "2026-08-18T08:00:36+09:00"
+  },
+  {
     "id": "CVE-2026-19977",
     "published": "2026-08-17",
     "last_modified": "2026-08-17",

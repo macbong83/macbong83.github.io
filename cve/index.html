@@ -41,13 +41,174 @@
     <h1>CVE Archive</h1>
     <p>NVD 기반 Critical CVE를 누적 관리하는 별도 페이지입니다. 블로그에는 CVE 자동 글을 발행하지 않고, 이 페이지에만 기록합니다.</p>
     <div class="meta">
-      <span>Total 510</span>
-      <span>Updated 2026-08-17 20:00 KST</span>
+      <span>Total 517</span>
+      <span>Updated 2026-08-18 08:00 KST</span>
       <span>Source NVD API</span>
     </div>
   </section>
   <div class="notice">중복 제거 기준은 CVE ID입니다. 동일 CVE는 다시 추가하지 않습니다. 실제 악용 여부와 패치 우선순위는 CISA KEV, 벤더 권고, 자산 노출 여부와 함께 검토해야 합니다.</div>
 
+    <article class="cve-card" id="CVE-2026-75110">
+      <div class="cve-top">
+        <a class="cve-id" href="https://nvd.nist.gov/vuln/detail/CVE-2026-75110" target="_blank" rel="noopener">CVE-2026-75110</a>
+        <span class="score">CVSS 9.8 CRITICAL</span>
+      </div>
+      <p class="desc">MemOS is a memory operating system for LLMs and AI agents. In deployments where authentication is enabled (AUTH_ENABLED=true) but the undocumented, defaultless INTERNAL_SERVICE_SECRET environment variable is unset, the is_internal_request() check in src/memos/api/middleware/auth.py fails open: os.getenv(&quot;INTERNAL_SERVICE_SECRET&quot;) returns None and a request omitting the X-Internal-Service header also yields None, so the comparison None == None evaluates true. The request is then treated as a trusted internal principal and granted scopes: [&quot;all&quot;]. As a result, an unauthenticated remote attacker can reach the admin API-key management endpoints to mint API keys for any user, enumerate keys, revoke keys, and generate a master key for persistent privileged access, as well as all data endpoints.</p>
+      <dl>
+        <div><dt>Published</dt><dd>2026-08-17</dd></div>
+        <div><dt>Last Modified</dt><dd>2026-08-17</dd></div>
+        <div><dt>Status</dt><dd>Received</dd></div>
+        <div><dt>Attack Vector</dt><dd>네트워크</dd></div>
+        <div><dt>Attack Complexity</dt><dd>낮음</dd></div>
+        <div><dt>Privileges</dt><dd>없음</dd></div>
+        <div><dt>User Interaction</dt><dd>없음</dd></div>
+        <div><dt>CWE</dt><dd>CWE-697</dd></div>
+        <div><dt>Affected</dt><dd>NVD CPE 기준 확인 필요</dd></div>
+      </dl>
+      <div class="vector"><code>CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H</code></div>
+      <details>
+        <summary>References</summary>
+        <ul><li><a href="https://github.com/MemTensor/MemOS" target="_blank" rel="noopener">https://github.com/MemTensor/MemOS</a></li><li><a href="https://github.com/MemTensor/MemOS/blob/main/src/memos/api/middleware/auth.py" target="_blank" rel="noopener">https://github.com/MemTensor/MemOS/blob/main/src/memos/api/middleware/auth.py</a></li><li><a href="https://github.com/MemTensor/MemOS/issues/2259" target="_blank" rel="noopener">https://github.com/MemTensor/MemOS/issues/2259</a></li><li><a href="https://www.vulncheck.com/advisories/memos-authentication-bypass-via-unset-internal-service-secret" target="_blank" rel="noopener">https://www.vulncheck.com/advisories/memos-authentication-bypass-via-unset-internal-service-secret</a></li></ul>
+      </details>
+    </article>
+    <article class="cve-card" id="CVE-2026-75106">
+      <div class="cve-top">
+        <a class="cve-id" href="https://nvd.nist.gov/vuln/detail/CVE-2026-75106" target="_blank" rel="noopener">CVE-2026-75106</a>
+        <span class="score">CVSS 9.1 CRITICAL</span>
+      </div>
+      <p class="desc">OpnForm derives editable-submission secrets from sequential row identifiers using Hashids with an empty default salt, allowing unauthenticated attackers to compute hashes for any submission. Attackers can read other respondents&#x27; full submission data through the submission-fetch endpoint or overwrite submissions by supplying predicted hashes to the answer endpoint.</p>
+      <dl>
+        <div><dt>Published</dt><dd>2026-08-17</dd></div>
+        <div><dt>Last Modified</dt><dd>2026-08-17</dd></div>
+        <div><dt>Status</dt><dd>Received</dd></div>
+        <div><dt>Attack Vector</dt><dd>네트워크</dd></div>
+        <div><dt>Attack Complexity</dt><dd>낮음</dd></div>
+        <div><dt>Privileges</dt><dd>없음</dd></div>
+        <div><dt>User Interaction</dt><dd>없음</dd></div>
+        <div><dt>CWE</dt><dd>CWE-340</dd></div>
+        <div><dt>Affected</dt><dd>NVD CPE 기준 확인 필요</dd></div>
+      </dl>
+      <div class="vector"><code>CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N</code></div>
+      <details>
+        <summary>References</summary>
+        <ul><li><a href="https://github.com/OpnForm/OpnForm" target="_blank" rel="noopener">https://github.com/OpnForm/OpnForm</a></li><li><a href="https://github.com/OpnForm/OpnForm/commit/6c67ff0a9bc0ac27ae26b32b8e108a176f8161b1" target="_blank" rel="noopener">https://github.com/OpnForm/OpnForm/commit/6c67ff0a9bc0ac27ae26b32b8e108a176f8161b1</a></li><li><a href="https://github.com/OpnForm/OpnForm/issues/1259" target="_blank" rel="noopener">https://github.com/OpnForm/OpnForm/issues/1259</a></li><li><a href="https://github.com/OpnForm/OpnForm/releases/tag/v2.0.2" target="_blank" rel="noopener">https://github.com/OpnForm/OpnForm/releases/tag/v2.0.2</a></li></ul>
+      </details>
+    </article>
+    <article class="cve-card" id="CVE-2026-74899">
+      <div class="cve-top">
+        <a class="cve-id" href="https://nvd.nist.gov/vuln/detail/CVE-2026-74899" target="_blank" rel="noopener">CVE-2026-74899</a>
+        <span class="score">CVSS 9.8 CRITICAL</span>
+      </div>
+      <p class="desc">openssl_encrypt versions before 1.4.0 contain a sandbox escape vulnerability in IsolatedPluginExecutor that exposes Python type objects in restricted exec() builtins. Attackers can traverse the Python class hierarchy via __class__.__mro__.__subclasses__() to access system functions and execute arbitrary OS commands.</p>
+      <dl>
+        <div><dt>Published</dt><dd>2026-08-17</dd></div>
+        <div><dt>Last Modified</dt><dd>2026-08-17</dd></div>
+        <div><dt>Status</dt><dd>Received</dd></div>
+        <div><dt>Attack Vector</dt><dd>네트워크</dd></div>
+        <div><dt>Attack Complexity</dt><dd>낮음</dd></div>
+        <div><dt>Privileges</dt><dd>없음</dd></div>
+        <div><dt>User Interaction</dt><dd>없음</dd></div>
+        <div><dt>CWE</dt><dd>CWE-95</dd></div>
+        <div><dt>Affected</dt><dd>NVD CPE 기준 확인 필요</dd></div>
+      </dl>
+      <div class="vector"><code>CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H</code></div>
+      <details>
+        <summary>References</summary>
+        <ul><li><a href="https://github.com/jahlives/openssl_encrypt/security/advisories/GHSA-m25m-ggxg-239c" target="_blank" rel="noopener">https://github.com/jahlives/openssl_encrypt/security/advisories/GHSA-m25m-ggxg-239c</a></li><li><a href="https://www.vulncheck.com/advisories/openssl-encrypt-before-sandbox-escape-via-type-hierarchy" target="_blank" rel="noopener">https://www.vulncheck.com/advisories/openssl-encrypt-before-sandbox-escape-via-type-hierarchy</a></li></ul>
+      </details>
+    </article>
+    <article class="cve-card" id="CVE-2026-74872">
+      <div class="cve-top">
+        <a class="cve-id" href="https://nvd.nist.gov/vuln/detail/CVE-2026-74872" target="_blank" rel="noopener">CVE-2026-74872</a>
+        <span class="score">CVSS 9.8 CRITICAL</span>
+      </div>
+      <p class="desc">openssl_encrypt versions before 1.4.0 contain an arbitrary code execution vulnerability in the Whirlpool hash implementation that uses broad glob patterns to load .so modules without integrity verification. Attackers can place malicious .so files matching the whirlpool*py313*.so pattern in site-packages directories to achieve native code execution when the module is loaded.</p>
+      <dl>
+        <div><dt>Published</dt><dd>2026-08-17</dd></div>
+        <div><dt>Last Modified</dt><dd>2026-08-17</dd></div>
+        <div><dt>Status</dt><dd>Received</dd></div>
+        <div><dt>Attack Vector</dt><dd>네트워크</dd></div>
+        <div><dt>Attack Complexity</dt><dd>낮음</dd></div>
+        <div><dt>Privileges</dt><dd>없음</dd></div>
+        <div><dt>User Interaction</dt><dd>없음</dd></div>
+        <div><dt>CWE</dt><dd>CWE-426</dd></div>
+        <div><dt>Affected</dt><dd>NVD CPE 기준 확인 필요</dd></div>
+      </dl>
+      <div class="vector"><code>CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H</code></div>
+      <details>
+        <summary>References</summary>
+        <ul><li><a href="https://github.com/jahlives/openssl_encrypt/security/advisories/GHSA-j48q-4c78-rhf9" target="_blank" rel="noopener">https://github.com/jahlives/openssl_encrypt/security/advisories/GHSA-j48q-4c78-rhf9</a></li><li><a href="https://www.vulncheck.com/advisories/openssl-encrypt-before-arbitrary-code-execution-via-whirlpool" target="_blank" rel="noopener">https://www.vulncheck.com/advisories/openssl-encrypt-before-arbitrary-code-execution-via-whirlpool</a></li></ul>
+      </details>
+    </article>
+    <article class="cve-card" id="CVE-2026-71472">
+      <div class="cve-top">
+        <a class="cve-id" href="https://nvd.nist.gov/vuln/detail/CVE-2026-71472" target="_blank" rel="noopener">CVE-2026-71472</a>
+        <span class="score">CVSS 9.1 CRITICAL</span>
+      </div>
+      <p class="desc">A flaw was found in acm-search-v2-rhel9. This vulnerability allows an authenticated attacker, such as a hub administrator or a Search Custom Resource (CR) editor, to inject malicious shell commands or SQL statements. This occurs because the WORK_MEM string provided in the Search CR is not properly validated before being used in a bash script and an SQL query. Successful exploitation could lead to arbitrary code execution within the privileged postgres pod, potentially compromising the system.</p>
+      <dl>
+        <div><dt>Published</dt><dd>2026-08-17</dd></div>
+        <div><dt>Last Modified</dt><dd>2026-08-17</dd></div>
+        <div><dt>Status</dt><dd>Received</dd></div>
+        <div><dt>Attack Vector</dt><dd>네트워크</dd></div>
+        <div><dt>Attack Complexity</dt><dd>낮음</dd></div>
+        <div><dt>Privileges</dt><dd>높음</dd></div>
+        <div><dt>User Interaction</dt><dd>없음</dd></div>
+        <div><dt>CWE</dt><dd>CWE-78</dd></div>
+        <div><dt>Affected</dt><dd>NVD CPE 기준 확인 필요</dd></div>
+      </dl>
+      <div class="vector"><code>CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:C/C:H/I:H/A:H</code></div>
+      <details>
+        <summary>References</summary>
+        <ul><li><a href="https://access.redhat.com/security/cve/CVE-2026-71472" target="_blank" rel="noopener">https://access.redhat.com/security/cve/CVE-2026-71472</a></li><li><a href="https://bugzilla.redhat.com/show_bug.cgi?id=2512151" target="_blank" rel="noopener">https://bugzilla.redhat.com/show_bug.cgi?id=2512151</a></li></ul>
+      </details>
+    </article>
+    <article class="cve-card" id="CVE-2026-66795">
+      <div class="cve-top">
+        <a class="cve-id" href="https://nvd.nist.gov/vuln/detail/CVE-2026-66795" target="_blank" rel="noopener">CVE-2026-66795</a>
+        <span class="score">CVSS 9.1 CRITICAL</span>
+      </div>
+      <p class="desc">A flaw was found in the managedcluster-import-controller. The Certificate Signing Request (CSR) auto-approval logic improperly validates incoming CSRs, specifically by not inspecting the signer name or decoding the PEM-encoded x509 CSR. This vulnerability allows a privileged service account on a spoke cluster to submit a malicious CSR. Successful exploitation can lead to privilege escalation, enabling the attacker to obtain administrative credentials on the hub cluster.</p>
+      <dl>
+        <div><dt>Published</dt><dd>2026-08-17</dd></div>
+        <div><dt>Last Modified</dt><dd>2026-08-17</dd></div>
+        <div><dt>Status</dt><dd>Received</dd></div>
+        <div><dt>Attack Vector</dt><dd>네트워크</dd></div>
+        <div><dt>Attack Complexity</dt><dd>낮음</dd></div>
+        <div><dt>Privileges</dt><dd>높음</dd></div>
+        <div><dt>User Interaction</dt><dd>없음</dd></div>
+        <div><dt>CWE</dt><dd>CWE-295</dd></div>
+        <div><dt>Affected</dt><dd>NVD CPE 기준 확인 필요</dd></div>
+      </dl>
+      <div class="vector"><code>CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:C/C:H/I:H/A:H</code></div>
+      <details>
+        <summary>References</summary>
+        <ul><li><a href="https://access.redhat.com/security/cve/CVE-2026-66795" target="_blank" rel="noopener">https://access.redhat.com/security/cve/CVE-2026-66795</a></li><li><a href="https://bugzilla.redhat.com/show_bug.cgi?id=2507540" target="_blank" rel="noopener">https://bugzilla.redhat.com/show_bug.cgi?id=2507540</a></li></ul>
+      </details>
+    </article>
+    <article class="cve-card" id="CVE-2026-66792">
+      <div class="cve-top">
+        <a class="cve-id" href="https://nvd.nist.gov/vuln/detail/CVE-2026-66792" target="_blank" rel="noopener">CVE-2026-66792</a>
+        <span class="score">CVSS 9.9 CRITICAL</span>
+      </div>
+      <p class="desc">A flaw was found in the multicloud-operators-subscription component. This vulnerability allows a user on a managed cluster to escalate their privileges by creating a Subscription with specific, crafted annotations. Successful exploitation grants the attacker the ability to deploy resources into any namespace with the elevated permissions of the controller&#x27;s Service Account, potentially leading to unauthorized access and control over cluster resources.</p>
+      <dl>
+        <div><dt>Published</dt><dd>2026-08-17</dd></div>
+        <div><dt>Last Modified</dt><dd>2026-08-17</dd></div>
+        <div><dt>Status</dt><dd>Received</dd></div>
+        <div><dt>Attack Vector</dt><dd>네트워크</dd></div>
+        <div><dt>Attack Complexity</dt><dd>낮음</dd></div>
+        <div><dt>Privileges</dt><dd>낮음</dd></div>
+        <div><dt>User Interaction</dt><dd>없음</dd></div>
+        <div><dt>CWE</dt><dd>CWE-863</dd></div>
+        <div><dt>Affected</dt><dd>NVD CPE 기준 확인 필요</dd></div>
+      </dl>
+      <div class="vector"><code>CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H</code></div>
+      <details>
+        <summary>References</summary>
+        <ul><li><a href="https://access.redhat.com/security/cve/CVE-2026-66792" target="_blank" rel="noopener">https://access.redhat.com/security/cve/CVE-2026-66792</a></li><li><a href="https://bugzilla.redhat.com/show_bug.cgi?id=2507537" target="_blank" rel="noopener">https://bugzilla.redhat.com/show_bug.cgi?id=2507537</a></li></ul>
+      </details>
+    </article>
     <article class="cve-card" id="CVE-2026-19977">
       <div class="cve-top">
         <a class="cve-id" href="https://nvd.nist.gov/vuln/detail/CVE-2026-19977" target="_blank" rel="noopener">CVE-2026-19977</a>
