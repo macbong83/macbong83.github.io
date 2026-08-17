@@ -5,34 +5,41 @@
     <link>https://macbong83.github.io/</link>
     <description>EDR · SASE · CTEM · 취약점 관리 중심의 매일 보안 브리핑</description>
     <language>ko</language>
-    <lastBuildDate>Mon, 17 Aug 2026 08:00:30 +0900</lastBuildDate>
+    <lastBuildDate>Mon, 17 Aug 2026 09:02:44 +0900</lastBuildDate>
     <item>
       <title>SecuLog 보안 브리핑 — vendor-weekly-2026-07-20</title>
       <link>https://macbong83.github.io/posts/vendor-weekly-2026-07-20.html</link>
       <guid isPermaLink="true">https://macbong83.github.io/posts/vendor-weekly-2026-07-20.html</guid>
-      <pubDate>Mon, 17 Aug 2026 08:00:30 +0900</pubDate>
+      <pubDate>Mon, 17 Aug 2026 09:02:44 +0900</pubDate>
       <description></description>
     </item>
     <item>
       <title>SecuLog 보안 브리핑 — vendor-weekly-2026-07-06</title>
       <link>https://macbong83.github.io/posts/vendor-weekly-2026-07-06.html</link>
       <guid isPermaLink="true">https://macbong83.github.io/posts/vendor-weekly-2026-07-06.html</guid>
-      <pubDate>Mon, 17 Aug 2026 08:00:30 +0900</pubDate>
+      <pubDate>Mon, 17 Aug 2026 09:02:44 +0900</pubDate>
       <description></description>
     </item>
     <item>
       <title>SecuLog 보안 브리핑 — vendor-weekly-2026-06-30</title>
       <link>https://macbong83.github.io/posts/vendor-weekly-2026-06-30.html</link>
       <guid isPermaLink="true">https://macbong83.github.io/posts/vendor-weekly-2026-06-30.html</guid>
-      <pubDate>Mon, 17 Aug 2026 08:00:30 +0900</pubDate>
+      <pubDate>Mon, 17 Aug 2026 09:02:44 +0900</pubDate>
       <description></description>
     </item>
     <item>
       <title>SecuLog 보안 브리핑 — startup-radar-2026-07-13</title>
       <link>https://macbong83.github.io/posts/startup-radar-2026-07-13.html</link>
       <guid isPermaLink="true">https://macbong83.github.io/posts/startup-radar-2026-07-13.html</guid>
-      <pubDate>Mon, 17 Aug 2026 08:00:30 +0900</pubDate>
+      <pubDate>Mon, 17 Aug 2026 09:02:44 +0900</pubDate>
       <description></description>
+    </item>
+    <item>
+      <title>SecuLog 보안 브리핑 — 2026.08.17</title>
+      <link>https://macbong83.github.io/posts/2026-08-17.html</link>
+      <guid isPermaLink="true">https://macbong83.github.io/posts/2026-08-17.html</guid>
+      <pubDate>Mon, 17 Aug 2026 08:00:00 +0900</pubDate>
+      <description>북한 해킹조직, AI 기반 도구로 공격 체계 전반 활용 / 라자루스, 윈도우 미패치 취약점 노려 고도화된 ‘푸드모듈’ 루트킷 유포 / 미국 CISA, 북한 해커 조직이 악용한 윈도우 제로데이 취약점 패치 권고 / SAP Commerce Cloud 취약점(CVE-2026-58231)이 야기한 공격 발생</description>
     </item>
     <item>
       <title>SecuLog 보안 브리핑 — 2026.08.16</title>

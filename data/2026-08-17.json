@@ -1,0 +1,111 @@
+{
+  "tagline": "글로벌 정보보안 뉴스레터",
+  "title": "보안 브리핑",
+  "date_display": "2026년 8월 17일 월요일",
+  "date_short": "2026.08.17",
+  "sources_line": "The Hacker News · BleepingComputer · SecurityWeek · KrebsOnSecurity · CISA · NCSC UK · Unit 42 · 보안뉴스 · 데일리시큐 · 전자신문",
+  "seo": {
+    "title": "취약점, 랜섬웨어 — 2026.08.17 보안 브리핑",
+    "description": "오늘 주요 취약점·침해 사고·위협 트렌드 요약.",
+    "keywords": "CVE, 랜섬웨어, 취약점, 침해사고, 보안"
+  },
+  "sections": [
+    {
+      "label": "취약점 & 공격",
+      "type": "cards",
+      "items": [
+        {
+          "severity": "critical",
+          "source": "보안뉴스",
+          "headline": "북한 해킹조직, AI 기반 도구로 공격 체계 전반 활용",
+          "url": "http://www.boannews.com/media/view.asp?idx=145089",
+          "summary": "지니언스는 북한 정찰총국 산하 해킹조직 ‘김수키’가 생성형 AI 기반 도구를 공격 체계 전반에 활용하고 있다고 밝혔다. 이는 공격의 자동화와 정밀도를 높이는 것으로, 보안 대응에 주의가 필요하다."
+        },
+        {
+          "severity": "critical",
+          "source": "보안뉴스",
+          "headline": "라자루스, 윈도우 미패치 취약점 노려 고도화된 ‘푸드모듈’ 루트킷 유포",
+          "url": "http://www.boannews.com/media/view.asp?idx=145147",
+          "summary": "북한 연계 해킹그룹 라자루스가 윈도우 커널 제로데이 취약점(CVE-2026-68820)을 악용해 고도화된 ‘푸드모듈’ 루트킷을 유포했다. 이 취약점은 CISA에서 긴급 패치를 권고하고 있다."
+        },
+        {
+          "severity": "critical",
+          "source": "보안뉴스",
+          "headline": "미국 CISA, 북한 해커 조직이 악용한 윈도우 제로데이 취약점 패치 권고",
+          "url": "http://www.boannews.com/media/view.asp?idx=145162",
+          "summary": "미국 CISA는 북한 해커 조직이 실제 공격에 악용한 마이크로소프트 윈도우 취약점(CVE-2026-68820)에 대해 25일까지 보안 패치를 완료하라는 지침을 연방기관에 하달했다."
+        },
+        {
+          "severity": "high",
+          "source": "보안뉴스",
+          "headline": "SAP Commerce Cloud 취약점(CVE-2026-58231)이 야기한 공격 발생",
+          "url": "https://securityaffairs.com/197244/security/sap-commerce-cloud-cve-2026-58231-exploited-in-the-wild.html",
+          "summary": "SAP Commerce Cloud 취약점(CVE-2026-58231)이 공격에 악용되고 있으며, 이 취약점은 CVSS 점수 10.0을 기록한 최대 심각도의 취약점이다. SAP은 패치를 발표한 지 얼마 지나지 않았다."
+        },
+        {
+          "severity": "high",
+          "source": "데일리시큐",
+          "headline": "공유기 해킹 신종 미라이 봇넷 ‘Evooo1Bot’ 확산 중",
+          "url": "https://www.dailysecu.com/news/articleView.html?idxno=208073",
+          "summary": "미라이 악성코드를 기반으로 한 ‘Evooo1Bot’ 봇넷이 공유기와 네트워크 장비를 공격하고 있다. 보안 업데이트가 적용되지 않은 장비가 주요 공격 대상이다."
+        },
+        {
+          "severity": "medium",
+          "source": "보안뉴스",
+          "headline": "로봇청소기 라이다 센서, 실내 구조 정보 유출 취약점 발견",
+          "url": "http://www.boannews.com/media/view.asp?idx=145163",
+          "summary": "로봇청소기의 라이다 센서가 생성한 3D 공간 도면이 무암호화 상태로 전송되어 외부로 노출되는 취약점이 발견되었다. 이로 인해 침입자의 사전 정찰 정보로 오용될 수 있다."
+        }
+      ]
+    },
+    {
+      "label": "침해 사고",
+      "type": "cards",
+      "items": [
+        {
+          "severity": "incident",
+          "source": "데일리시큐",
+          "headline": "프랑스 국세청 해킹…납세자 67만8천명 세금·개인정보 유출",
+          "url": "https://www.dailysecu.com/news/articleView.html?idxno=208072",
+          "summary": "프랑스 국세청이 해킹을 당해 67만8천명의 세금 및 개인정보가 유출되었다. 공격자는 정상 사용자의 계정을 탈취한 뒤 내부 시스템에 접근해 정보를 유출했다."
+        },
+        {
+          "severity": "incident",
+          "source": "보안뉴스",
+          "headline": "링센트럴 해킹, 160만명 개인정보 유출…샤이니헌터스 623GB 탈취 주장",
+          "url": "https://www.dailysecu.com/news/articleView.html?idxno=208069",
+          "summary": "링센트럴은 사회공학 공격을 받아 160만명의 개인정보가 유출되었다. 외부에 공개된 데이터 분석 결과, 고유 이메일 주소, 이름, 전화번호 등이 포함된 것으로 확인되었다."
+        },
+        {
+          "severity": "incident",
+          "source": "보안뉴스",
+          "headline": "서강대 개인정보 18만건 유출…박근혜 전 대통령 등 정보 포함",
+          "url": "http://www.boannews.com/media/view.asp?idx=145172",
+          "summary": "서강대는 통합 로그인 계정 정보가 외부 공격으로 유출된 것으로 확인되었다. 유출된 정보에는 학번, 성명, 이메일 주소, 휴대전화 번호 등이 포함되었다."
+        }
+      ]
+    },
+    {
+      "label": "동향 & 분석",
+      "type": "trends",
+      "items": [
+        {
+          "lead": "AI 기반 공격 증가",
+          "body": "북한 해킹조직 ‘김수키’와 라자루스 등이 AI 기반 도구를 활용해 공격 체계를 자동화하고 있다. 이는 공격의 정밀도와 속도를 높이는 것으로, 보안 대응에 주의가 필요하다."
+        },
+        {
+          "lead": "취약점 패치 지연",
+          "body": "CISA와 SAP 등은 취약점에 대한 패치를 발표했지만, 실제 시스템에 적용이 지연되고 있다. 이는 공격자가 취약점을 악용해 피해를 입히는 주요 원인이다."
+        },
+        {
+          "lead": "개인정보 유출 사고 증가",
+          "body": "프랑스 국세청, 링센트럴, 서강대 등에서 개인정보 유출 사고가 발생하며, 이는 보안 관리의 취약성을 드러내고 있다. 기관 및 기업의 보안 정책 강화가 시급하다."
+        },
+        {
+          "lead": "양자컴퓨터 대응 준비",
+          "body": "구글 클라우드는 2029년까지 양자내성암호(PQC) 체계로 전환할 계획이다. 이는 ‘지금 수집해 나중에 해독’ 공격에 대응하기 위한 전략이다."
+        }
+      ]
+    }
+  ]
+}
