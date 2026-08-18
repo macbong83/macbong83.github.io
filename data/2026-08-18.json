@@ -1,0 +1,104 @@
+{
+  "tagline": "글로벌 정보보안 뉴스레터",
+  "title": "보안 브리핑",
+  "date_display": "2026년 8월 18일 화요일",
+  "date_short": "2026.08.18",
+  "sources_line": "The Hacker News · BleepingComputer · SecurityWeek · KrebsOnSecurity · CISA · NCSC UK · Unit 42 · 보안뉴스 · 데일리시큐 · 전자신문",
+  "seo": {
+    "title": "취약점, 랜섬웨어 — 2026.08.18 보안 브리핑",
+    "description": "오늘 주요 취약점·침해 사고·위협 트렌드 요약.",
+    "keywords": "CVE, 랜섬웨어, 취약점, 침해사고, 보안"
+  },
+  "sections": [
+    {
+      "label": "취약점 & 공격",
+      "type": "cards",
+      "items": [
+        {
+          "severity": "critical",
+          "source": "The Hacker News",
+          "headline": "Forminator WordPress 플러그인에서 원격 코드 실행 취약점 발견",
+          "url": "https://thehackernews.com/2026/08/forminator-wordpress-flaw-can-enable.html",
+          "summary": "Forminator Forms 플러그인에 CVE-2026-15748 취약점이 발견되어 악의적인 PHP 업로드를 통해 임의 코드 실행이 가능하다. CVSS 점수는 9.8로 매우 심각한 수준이다."
+        },
+        {
+          "severity": "critical",
+          "source": "The Hacker News",
+          "headline": "UNISOC 모뎀에서 영상 통화를 통해 커널 수준 코드 실행 가능",
+          "url": "https://www.infosecurity-magazine.com/news/unisoc-modem-flaw-rce-calls/",
+          "summary": "UNISOC 모뎀의 영상 통화 기능을 악용해 커널 수준의 코드 실행이 가능하다. 이 취약점은 장치의 보안을 크게 위협한다."
+        },
+        {
+          "severity": "high",
+          "source": "The Hacker News",
+          "headline": "Snowflake GitHub Actions 워크플로우 주입 취약점 발견",
+          "url": "https://thehackernews.com/2026/08/snowflake-github-actions-flaw-lets_0330881554.html",
+          "summary": "Wiz 보안 연구팀이 Snowflake의 GitHub Actions 워크플로우에 주입 취약점을 발견했다. 이 취약점은 악의적인 GitHub 이슈를 통해 내부 시스템에서 명령어 실행이 가능하다."
+        },
+        {
+          "severity": "high",
+          "source": "The Hacker News",
+          "headline": "VMware vCenter 취약점 악용해 Babuk 유사 랜섬웨어 배포",
+          "url": "https://thehackernews.com/2026/08/suspected-china-nexus-actor-exploits.html",
+          "summary": "중국과 연관된 APT 그룹이 VMware vCenter의 CVE-2026-59310 취약점을 악용해 Babuk 유사 랜섬웨어를 배포했다. CVSS 점수는 9.8으로 매우 심각하다."
+        },
+        {
+          "severity": "medium",
+          "source": "The Hacker News",
+          "headline": "GeoServer 사전 인증 SQL 주입 취약점 발견",
+          "url": "https://gbhackers.com/geoserver-pre-auth-sql-injection-flaw/",
+          "summary": "GeoServer에 사전 인증 SQL 주입 취약점이 발견되어 원격 코드 실행이 가능하다. 이 취약점은 PostgreSQL 호스트의 보안을 위협한다."
+        }
+      ]
+    },
+    {
+      "label": "침해 사고",
+      "type": "cards",
+      "items": [
+        {
+          "severity": "incident",
+          "source": "Security Affairs",
+          "headline": "SafePal 데이터 유출 사고, 39,798명의 고객 정보 노출",
+          "url": "https://securityaffairs.com/197391/data-breach/safepal-says-39798-customers-hit-by-data-breach.html",
+          "summary": "SafePal에서 주문 추적 플러그인의 취약점을 악용한 해커 공격으로 39,798명의 고객 정보가 노출되었다. 개인 정보는 노출되었으나 지갑 자격 증명은 유출되지 않았다."
+        },
+        {
+          "severity": "incident",
+          "source": "Security Affairs",
+          "headline": "프랑스 세금 당국 데이터 유출, 68만 명 영향",
+          "url": "https://www.securityweek.com/680000-impacted-by-french-tax-authority-data-breach/",
+          "summary": "해커가 인증된 자격 증명을 악용해 프랑스 세금 당국의 기업 및 개인 세금 관련 데이터를 유출했다. 이 사고로 68만 명이 영향을 받았다."
+        },
+        {
+          "severity": "incident",
+          "source": "보안뉴스",
+          "headline": "서강대학교 개인정보 18만 건 유출",
+          "url": "http://www.boannews.com/media/view.asp?idx=145172",
+          "summary": "서강대학교에서 외부 공격으로 인해 학생 및 졸업생 정보 18만 건이 유출되었다. 이 사고는 박근혜 전 대통령 등 주요 인물의 정보도 포함하고 있다."
+        }
+      ]
+    },
+    {
+      "label": "동향 & 분석",
+      "type": "trends",
+      "items": [
+        {
+          "lead": "AI 기반 공격 증가",
+          "body": "AI 모델이 악용되어 랜섬웨어 및 피싱 키트 생성이 가능해졌다. 예를 들어, MessiahGPT는 해커가 직접 요청하는 대로 랜섬웨어를 생성할 수 있는 AI 서비스이다."
+        },
+        {
+          "lead": "공급망 공격 확대",
+          "body": "LiteLLM 공급망 공격은 2,038개의 저장소에 영향을 미쳤으며, 기술, 금융, 의료 분야가 주요 피해 대상이었다. 이는 소스 코드 저장소의 악화로 인한 것이다."
+        },
+        {
+          "lead": "DDoS 공격 증가",
+          "body": "2026년 상반기 동안 시간당 5,300건 이상의 DDoS 공격이 발생했다. 이는 클라우드플레어의 보고서에 따르면 네트워크 계층 공격이 급증한 것으로 보인다."
+        },
+        {
+          "lead": "보안 제품의 취약점",
+          "body": "SafePal과 같은 보안 제품도 취약점이 존재해 고객 정보 유출 사고가 발생했다. 이는 보안 제품 자체의 보안이 강화되어야 함을 시사한다."
+        }
+      ]
+    }
+  ]
+}
