@@ -5,34 +5,41 @@
     <link>https://macbong83.github.io/</link>
     <description>EDR · SASE · CTEM · 취약점 관리 중심의 매일 보안 브리핑</description>
     <language>ko</language>
-    <lastBuildDate>Thu, 20 Aug 2026 08:00:46 +0900</lastBuildDate>
+    <lastBuildDate>Thu, 20 Aug 2026 09:03:11 +0900</lastBuildDate>
     <item>
       <title>SecuLog 보안 브리핑 — vendor-weekly-2026-07-20</title>
       <link>https://macbong83.github.io/posts/vendor-weekly-2026-07-20.html</link>
       <guid isPermaLink="true">https://macbong83.github.io/posts/vendor-weekly-2026-07-20.html</guid>
-      <pubDate>Thu, 20 Aug 2026 08:00:46 +0900</pubDate>
+      <pubDate>Thu, 20 Aug 2026 09:03:11 +0900</pubDate>
       <description></description>
     </item>
     <item>
       <title>SecuLog 보안 브리핑 — vendor-weekly-2026-07-06</title>
       <link>https://macbong83.github.io/posts/vendor-weekly-2026-07-06.html</link>
       <guid isPermaLink="true">https://macbong83.github.io/posts/vendor-weekly-2026-07-06.html</guid>
-      <pubDate>Thu, 20 Aug 2026 08:00:46 +0900</pubDate>
+      <pubDate>Thu, 20 Aug 2026 09:03:11 +0900</pubDate>
       <description></description>
     </item>
     <item>
       <title>SecuLog 보안 브리핑 — vendor-weekly-2026-06-30</title>
       <link>https://macbong83.github.io/posts/vendor-weekly-2026-06-30.html</link>
       <guid isPermaLink="true">https://macbong83.github.io/posts/vendor-weekly-2026-06-30.html</guid>
-      <pubDate>Thu, 20 Aug 2026 08:00:46 +0900</pubDate>
+      <pubDate>Thu, 20 Aug 2026 09:03:11 +0900</pubDate>
       <description></description>
     </item>
     <item>
       <title>SecuLog 보안 브리핑 — startup-radar-2026-07-13</title>
       <link>https://macbong83.github.io/posts/startup-radar-2026-07-13.html</link>
       <guid isPermaLink="true">https://macbong83.github.io/posts/startup-radar-2026-07-13.html</guid>
-      <pubDate>Thu, 20 Aug 2026 08:00:46 +0900</pubDate>
+      <pubDate>Thu, 20 Aug 2026 09:03:11 +0900</pubDate>
       <description></description>
+    </item>
+    <item>
+      <title>SecuLog 보안 브리핑 — 2026.08.20</title>
+      <link>https://macbong83.github.io/posts/2026-08-20.html</link>
+      <guid isPermaLink="true">https://macbong83.github.io/posts/2026-08-20.html</guid>
+      <pubDate>Thu, 20 Aug 2026 08:00:00 +0900</pubDate>
+      <description>Cloudflare Workers Spectre 공격, JWT 정보 유출 / Critical macOS, SharePoint, vCenter, Microsoft IKE 취약점 활발히 악용 / SilkParasite 스파이 활동, 중앙아시아 정부 대상 / CISA, Microsoft IKE RCE 취약점에 대한 즉각적 패치 권고</description>
     </item>
     <item>
       <title>SecuLog 보안 브리핑 — 2026.08.19</title>
