@@ -1,5 +1,495 @@
 [
   {
+    "id": "CVE-2026-77022",
+    "published": "2026-08-20",
+    "last_modified": "2026-08-20",
+    "status": "Received",
+    "description": "A security flaw has been discovered in Comfast CF-N1-S 2.6.0.1. Affected by this issue is the function sub_44B438 of the file /cgi-bin/mbox-config?method=SET&section=ptest_ssid of the component SSID Configuration. The manipulation of the argument ssid results in stack-based buffer overflow. The attack can be executed remotely. The exploit has been released to the public and may be used for attacks.",
+    "cvss": {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H",
+      "score": 9.9,
+      "severity": "CRITICAL",
+      "attack_vector": "네트워크",
+      "attack_complexity": "낮음",
+      "privileges_required": "낮음",
+      "user_interaction": "없음"
+    },
+    "cwes": [
+      "CWE-119",
+      "CWE-121"
+    ],
+    "affected": [],
+    "references": [
+      "https://github.com/AdminSafe/CVE/issues/5",
+      "https://vuldb.com/cve/CVE-2026-77022",
+      "https://vuldb.com/submit/880599",
+      "https://vuldb.com/vuln/393637",
+      "https://vuldb.com/vuln/393637/cti"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-77022",
+    "added_at": "2026-08-21T08:01:01+09:00"
+  },
+  {
+    "id": "CVE-2026-66788",
+    "published": "2026-08-20",
+    "last_modified": "2026-08-20",
+    "status": "Received",
+    "description": "A flaw was found in Lighthouse. A remote attacker, by compromising a spoke cluster, can exploit a vulnerability where the destination namespace for resource injection is derived from an attacker-controlled label or annotation on the broker object. This allows the attacker to inject unauthorized EndpointSlices and ServiceImports into any namespace on peer clusters, including critical system namespaces like kube-system and openshift-*. This could lead to privilege escalation or other forms of system compromise within the cluster.",
+    "cvss": {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H",
+      "score": 9.9,
+      "severity": "CRITICAL",
+      "attack_vector": "네트워크",
+      "attack_complexity": "낮음",
+      "privileges_required": "낮음",
+      "user_interaction": "없음"
+    },
+    "cwes": [
+      "CWE-284"
+    ],
+    "affected": [],
+    "references": [
+      "https://access.redhat.com/security/cve/CVE-2026-66788",
+      "https://bugzilla.redhat.com/show_bug.cgi?id=2507533"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-66788",
+    "added_at": "2026-08-21T08:01:01+09:00"
+  },
+  {
+    "id": "CVE-2026-66785",
+    "published": "2026-08-20",
+    "last_modified": "2026-08-20",
+    "status": "Received",
+    "description": "A flaw was found in Submariner. This vulnerability allows a malicious cluster (spoke) to redirect network traffic from other connected clusters (peer clusters) by publishing a specially crafted network endpoint. The system fails to properly validate the network subnets provided by the malicious cluster, enabling it to declare arbitrary network ranges. Consequently, all network traffic intended for these arbitrary ranges from peer clusters will be rerouted through the attacker's tunnel, potentially leading to unauthorized information disclosure or network disruption.",
+    "cvss": {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H",
+      "score": 9.9,
+      "severity": "CRITICAL",
+      "attack_vector": "네트워크",
+      "attack_complexity": "낮음",
+      "privileges_required": "낮음",
+      "user_interaction": "없음"
+    },
+    "cwes": [
+      "CWE-20"
+    ],
+    "affected": [],
+    "references": [
+      "https://access.redhat.com/security/cve/CVE-2026-66785",
+      "https://bugzilla.redhat.com/show_bug.cgi?id=2507530"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-66785",
+    "added_at": "2026-08-21T08:01:01+09:00"
+  },
+  {
+    "id": "CVE-2026-16926",
+    "published": "2026-08-20",
+    "last_modified": "2026-08-20",
+    "status": "Received",
+    "description": "IBM AIX 7.2, and 7.3 and IBM PowerVM VIOS 4.1 could allow a remote attacker to overwrite arbitrary files due to improper neutralization of special elements in input.",
+    "cvss": {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:H",
+      "score": 9.1,
+      "severity": "CRITICAL",
+      "attack_vector": "네트워크",
+      "attack_complexity": "낮음",
+      "privileges_required": "없음",
+      "user_interaction": "없음"
+    },
+    "cwes": [
+      "CWE-73"
+    ],
+    "affected": [],
+    "references": [
+      "https://www.ibm.com/support/pages/node/7283858"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-16926",
+    "added_at": "2026-08-21T08:01:01+09:00"
+  },
+  {
+    "id": "CVE-2026-13097",
+    "published": "2026-08-20",
+    "last_modified": "2026-08-20",
+    "status": "Awaiting Analysis",
+    "description": "A privilege escalation flaw was found in FreeIPA. The uniqueness constraint enforced on Kerberos principal name attributes in the 389-ds directory server does not properly account for equivalent representations of the same principal name, allowing a user with sufficient LDAP write privileges to create a service principal that impersonates an existing privileged one. This can lead to unauthorized acquisition of Kerberos service tickets for sensitive services, potentially resulting in full domain compromise.",
+    "cvss": {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:C/C:H/I:H/A:H",
+      "score": 9.1,
+      "severity": "CRITICAL",
+      "attack_vector": "네트워크",
+      "attack_complexity": "낮음",
+      "privileges_required": "높음",
+      "user_interaction": "없음"
+    },
+    "cwes": [
+      "CWE-706"
+    ],
+    "affected": [],
+    "references": [
+      "https://access.redhat.com/security/cve/CVE-2026-13097",
+      "https://bugzilla.redhat.com/show_bug.cgi?id=2515974"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-13097",
+    "added_at": "2026-08-21T08:01:01+09:00"
+  },
+  {
+    "id": "CVE-2026-76590",
+    "published": "2026-08-19",
+    "last_modified": "2026-08-20",
+    "status": "Deferred",
+    "description": "A vulnerability was identified in TRENDnet TEW-755AP up to 20260702. Affected by this issue is some unknown functionality of the file /cgi-bin/wan.cgi of the component ssi. Such manipulation of the argument cameo.wan.wan_pppoe_password_00 leads to stack-based buffer overflow. The attack can be executed remotely. The exploit is publicly available and might be used.",
+    "cvss": {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H",
+      "score": 9.9,
+      "severity": "CRITICAL",
+      "attack_vector": "네트워크",
+      "attack_complexity": "낮음",
+      "privileges_required": "낮음",
+      "user_interaction": "없음"
+    },
+    "cwes": [
+      "CWE-119",
+      "CWE-121"
+    ],
+    "affected": [],
+    "references": [
+      "https://github.com/meishigana/CVE/blob/main/team15_20260702/15_755ap-ssi-bof/poc/poc-ssi-overflow.py",
+      "https://github.com/meishigana/CVE/tree/main/team15_20260702/15_755ap-ssi-bof",
+      "https://vuldb.com/cve/CVE-2026-76590",
+      "https://vuldb.com/submit/877850",
+      "https://vuldb.com/vuln/393087",
+      "https://vuldb.com/vuln/393087/cti"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-76590",
+    "added_at": "2026-08-21T08:01:01+09:00"
+  },
+  {
+    "id": "CVE-2026-76589",
+    "published": "2026-08-19",
+    "last_modified": "2026-08-20",
+    "status": "Deferred",
+    "description": "A vulnerability was found in TRENDnet TEW-755AP up to 20260702. Affected is the function FUN_401000 of the file /sbin/mycli. The manipulation of the argument ssid results in stack-based buffer overflow. The attack may be launched remotely. The exploit has been made public and could be used.",
+    "cvss": {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H",
+      "score": 9.9,
+      "severity": "CRITICAL",
+      "attack_vector": "네트워크",
+      "attack_complexity": "낮음",
+      "privileges_required": "낮음",
+      "user_interaction": "없음"
+    },
+    "cwes": [
+      "CWE-119",
+      "CWE-121"
+    ],
+    "affected": [],
+    "references": [
+      "https://github.com/meishigana/CVE/blob/main/team15_20260702/13_755ap-mycli-bof/poc/poc-mycli-overflow.py",
+      "https://github.com/meishigana/CVE/tree/main/team15_20260702/13_755ap-mycli-bof",
+      "https://vuldb.com/cve/CVE-2026-76589",
+      "https://vuldb.com/submit/877845",
+      "https://vuldb.com/vuln/393085",
+      "https://vuldb.com/vuln/393085/cti"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-76589",
+    "added_at": "2026-08-21T08:01:01+09:00"
+  },
+  {
+    "id": "CVE-2026-76312",
+    "published": "2026-08-19",
+    "last_modified": "2026-08-20",
+    "status": "Analyzed",
+    "description": "In Splunk Enterprise versions below 10.4.1, 10.2.6, 10.0.9, and 9.4.14, an unauthenticated user who can read the Hypertext Markup Language (HTML) source of a page that embeds a Splunk report could use exposed session material to access all relevant data and affect system integrity. The vulnerability is possible because the dispatch archive download path does not correctly enforce the embedded-report authorization boundary and includes sensitive session material in archived search-job data. For more information see Additional configuration for embedded reports (https://help.splunk.com/en/splunk-enterprise/create-dashboards-and-reports/reporting-manual/10.4/report-management/additional-configuration-for-embedded-reports) and Embed scheduled reports (https://help.splunk.com/en/splunk-enterprise/create-dashboards-and-reports/reporting-manual/10.4/report-management/embed-scheduled-reports) in the Splunk documentation.",
+    "cvss": {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:L",
+      "score": 9.4,
+      "severity": "CRITICAL",
+      "attack_vector": "네트워크",
+      "attack_complexity": "낮음",
+      "privileges_required": "없음",
+      "user_interaction": "없음"
+    },
+    "cwes": [
+      "CWE-284"
+    ],
+    "affected": [
+      "splunk splunk",
+      "splunk splunk 10.4.0"
+    ],
+    "references": [
+      "https://advisory.splunk.com/advisories/SVD-2026-0801"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-76312",
+    "added_at": "2026-08-21T08:01:01+09:00"
+  },
+  {
+    "id": "CVE-2026-76311",
+    "published": "2026-08-19",
+    "last_modified": "2026-08-20",
+    "status": "Analyzed",
+    "description": "In Splunk Enterprise versions below 10.4.2, 10.2.6, 10.0.9, and 9.4.14, an unauthenticated user who has an embedded report token could download the dispatch archive for an embedded report search job and use exposed session material to access all relevant data and affect system integrity on the Splunk platform instance. The vulnerability is possible because the embedded report authorization flow does not block dispatch archive download requests before Splunk Enterprise begins sending the archive to the requester. For more information see Additional configuration for embedded reports (https://help.splunk.com/en/splunk-enterprise/create-dashboards-and-reports/reporting-manual/10.4/report-management/additional-configuration-for-embedded-reports) and Embed scheduled reports (https://help.splunk.com/en/splunk-enterprise/create-dashboards-and-reports/reporting-manual/10.4/report-management/embed-scheduled-reports) in the Splunk documentation.",
+    "cvss": {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:L",
+      "score": 9.4,
+      "severity": "CRITICAL",
+      "attack_vector": "네트워크",
+      "attack_complexity": "낮음",
+      "privileges_required": "없음",
+      "user_interaction": "없음"
+    },
+    "cwes": [
+      "CWE-284"
+    ],
+    "affected": [
+      "splunk splunk"
+    ],
+    "references": [
+      "https://advisory.splunk.com/advisories/SVD-2026-0801"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-76311",
+    "added_at": "2026-08-21T08:01:01+09:00"
+  },
+  {
+    "id": "CVE-2026-76310",
+    "published": "2026-08-19",
+    "last_modified": "2026-08-20",
+    "status": "Analyzed",
+    "description": "In Splunk Enterprise versions below 10.4.2, 10.2.6, 10.0.9, and 9.4.14, an unauthenticated user who has an embedded report token could download the associated search job dispatch archive, recover session material, and use it to access all relevant data available to the report owner and affect system integrity, including by performing administrative actions when the owner holds the \"admin\" Splunk role. The vulnerability is possible because embedded report access does not block Representational State Transfer (REST) API dispatch archive download requests. For more information see Additional configuration for embedded reports (https://help.splunk.com/en/splunk-enterprise/create-dashboards-and-reports/reporting-manual/9.1/report-management/additional-configuration-for-embedded-reports) and About configuring role-based user access (https://help.splunk.com/en/splunk-enterprise/administer/manage-users-and-security/10.4/manage-splunk-platform-users-and-roles/about-configuring-role-based-user-access) in the Splunk documentation.",
+    "cvss": {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:L",
+      "score": 9.4,
+      "severity": "CRITICAL",
+      "attack_vector": "네트워크",
+      "attack_complexity": "낮음",
+      "privileges_required": "없음",
+      "user_interaction": "없음"
+    },
+    "cwes": [
+      "CWE-284"
+    ],
+    "affected": [
+      "splunk splunk"
+    ],
+    "references": [
+      "https://advisory.splunk.com/advisories/SVD-2026-0801"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-76310",
+    "added_at": "2026-08-21T08:01:01+09:00"
+  },
+  {
+    "id": "CVE-2026-76003",
+    "published": "2026-08-19",
+    "last_modified": "2026-08-20",
+    "status": "Deferred",
+    "description": "A weakness has been identified in UTT HiPER 1200GW up to 2.5.3-170306. Affected is the function strcpy of the file /goform/formGroupConfig. Executing a manipulation of the argument timestart can lead to stack-based buffer overflow. The attack may be performed from remote. The exploit has been made available to the public and could be used for attacks.",
+    "cvss": {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H",
+      "score": 9.9,
+      "severity": "CRITICAL",
+      "attack_vector": "네트워크",
+      "attack_complexity": "낮음",
+      "privileges_required": "낮음",
+      "user_interaction": "없음"
+    },
+    "cwes": [
+      "CWE-119",
+      "CWE-121"
+    ],
+    "affected": [],
+    "references": [
+      "https://github.com/7wkajk/CVE-VUL/blob/main/105.md",
+      "https://vuldb.com/cve/CVE-2026-76003",
+      "https://vuldb.com/submit/877884",
+      "https://vuldb.com/vuln/391919",
+      "https://vuldb.com/vuln/391919/cti"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-76003",
+    "added_at": "2026-08-21T08:01:01+09:00"
+  },
+  {
+    "id": "CVE-2026-75976",
+    "published": "2026-08-19",
+    "last_modified": "2026-08-20",
+    "status": "Deferred",
+    "description": "A weakness has been identified in TRENDnet TEW-823DRU 1.1.02b01. Impacted is the function strcpy of the file /cgi-bin/wan.cgi of the component NVRAM. This manipulation of the argument wan_l2tp_password causes stack-based buffer overflow. The attack can be initiated remotely. The exploit has been made available to the public and could be used for attacks.",
+    "cvss": {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H",
+      "score": 9.9,
+      "severity": "CRITICAL",
+      "attack_vector": "네트워크",
+      "attack_complexity": "낮음",
+      "privileges_required": "낮음",
+      "user_interaction": "없음"
+    },
+    "cwes": [
+      "CWE-119",
+      "CWE-121"
+    ],
+    "affected": [],
+    "references": [
+      "https://github.com/meishigana/CVE/blob/main/team15_20260702/10_823dru-rc-bof/poc/poc-rc-overflow.py",
+      "https://github.com/meishigana/CVE/tree/main/team15_20260702/10_823dru-rc-bof",
+      "https://vuldb.com/cve/CVE-2026-75976",
+      "https://vuldb.com/submit/877796",
+      "https://vuldb.com/vuln/391892",
+      "https://vuldb.com/vuln/391892/cti"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-75976",
+    "added_at": "2026-08-21T08:01:01+09:00"
+  },
+  {
+    "id": "CVE-2026-71960",
+    "published": "2026-08-19",
+    "last_modified": "2026-08-19",
+    "status": "Received",
+    "description": "Cudy WR3000 2.0 running firmware before 2.5.24 contains a hard-coded JWT HMAC signing secret vulnerability in the Mosquitto MQTT broker's authentication plugin that allows unauthenticated attackers to forge valid JWT tokens by extracting the secret from the firmware image. Attackers can use the extracted secret to craft arbitrary JWT tokens and authenticate to the MQTT broker without legitimate credentials, gaining unauthorized access to the device's mesh networking interface.",
+    "cvss": {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N",
+      "score": 9.1,
+      "severity": "CRITICAL",
+      "attack_vector": "네트워크",
+      "attack_complexity": "낮음",
+      "privileges_required": "없음",
+      "user_interaction": "없음"
+    },
+    "cwes": [
+      "CWE-798"
+    ],
+    "affected": [],
+    "references": [
+      "https://www.cudy.com/en-us/pages/download-center/wr3000-2-0",
+      "https://www.vulncheck.com/advisories/cudy-wr3000-hard-coded-jwt-secret-authentication-bypass-via-mqtt"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-71960",
+    "added_at": "2026-08-21T08:01:01+09:00"
+  },
+  {
+    "id": "CVE-2026-70496",
+    "published": "2026-08-19",
+    "last_modified": "2026-08-20",
+    "status": "Awaiting Analysis",
+    "description": "A flaw was found in search-v2-operator. The operator's ClusterRole has permissions equivalent to a cluster administrator, allowing it to impersonate other entities, write Role-Based Access Control (RBAC) configurations, approve Certificate Signing Requests (CSRs), and manage ManifestWork. This grants excessive privileges beyond what is necessary for the operator's intended function, potentially leading to privilege escalation within the cluster.",
+    "cvss": {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H",
+      "score": 9.9,
+      "severity": "CRITICAL",
+      "attack_vector": "네트워크",
+      "attack_complexity": "낮음",
+      "privileges_required": "낮음",
+      "user_interaction": "없음"
+    },
+    "cwes": [
+      "CWE-250"
+    ],
+    "affected": [],
+    "references": [
+      "https://access.redhat.com/security/cve/CVE-2026-70496",
+      "https://bugzilla.redhat.com/show_bug.cgi?id=2511032"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-70496",
+    "added_at": "2026-08-21T08:01:01+09:00"
+  },
+  {
+    "id": "CVE-2026-66794",
+    "published": "2026-08-19",
+    "last_modified": "2026-08-20",
+    "status": "Awaiting Analysis",
+    "description": "A flaw was found in the `cluster-proxy-addon` component of Multicluster Engine for Kubernetes. This vulnerability allows an unauthenticated attacker, who can access the user-facing route, to bypass authentication and authorization checks. By manipulating URL path segments, the attacker can proxy requests to arbitrary services across any managed cluster. This enables unauthorized access to internal services that would otherwise be protected, potentially leading to information disclosure or further compromise of the cluster environment.",
+    "cvss": {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:L/A:N",
+      "score": 9.3,
+      "severity": "CRITICAL",
+      "attack_vector": "네트워크",
+      "attack_complexity": "낮음",
+      "privileges_required": "없음",
+      "user_interaction": "없음"
+    },
+    "cwes": [
+      "CWE-918"
+    ],
+    "affected": [],
+    "references": [
+      "https://access.redhat.com/security/cve/CVE-2026-66794",
+      "https://bugzilla.redhat.com/show_bug.cgi?id=2507539"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-66794",
+    "added_at": "2026-08-21T08:01:01+09:00"
+  },
+  {
+    "id": "CVE-2026-18315",
+    "published": "2026-08-19",
+    "last_modified": "2026-08-20",
+    "status": "Deferred",
+    "description": "The TrueBooker – Appointment Booking and Scheduler System plugin for WordPress is vulnerable to Authorization Bypass Through User-Controlled Key leading to Account Takeover in all versions up to, and including, 1.2.6. This is due to the admin_user_create_cus AJAX handler lacking any authentication or capability check before passing the attacker-supplied truebooker_wp_user_id parameter directly to wp_update_user. This makes it possible for unauthenticated attackers to overwrite the email address of any WordPress user — including an administrator — and then complete the standard WordPress lost-password flow to fully take over the targeted account.",
+    "cvss": {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "score": 9.8,
+      "severity": "CRITICAL",
+      "attack_vector": "네트워크",
+      "attack_complexity": "낮음",
+      "privileges_required": "없음",
+      "user_interaction": "없음"
+    },
+    "cwes": [
+      "CWE-639"
+    ],
+    "affected": [],
+    "references": [
+      "https://plugins.svn.wordpress.org/truebooker-appointment-booking/tags/1.2.6/main/config/truebooker-style.php",
+      "https://plugins.svn.wordpress.org/truebooker-appointment-booking/tags/1.2.6/main/function_ajax.php",
+      "https://plugins.svn.wordpress.org/truebooker-appointment-booking/tags/1.2.6/templates/login-register.php",
+      "https://plugins.trac.wordpress.org/changeset/3640018/truebooker-appointment-booking",
+      "https://www.wordfence.com/threat-intel/vulnerabilities/id/73251a74-5be3-446b-8e0a-ff2d1484c467?source=cve"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-18315",
+    "added_at": "2026-08-21T08:01:01+09:00"
+  },
+  {
+    "id": "CVE-2026-16919",
+    "published": "2026-08-19",
+    "last_modified": "2026-08-20",
+    "status": "Analyzed",
+    "description": "IBM AIX 7.2, and 7.3 and IBM PowerVM VIOS 4.1 could allow a remote attacker to execute arbitrary code due to improper validation of network-supplied pointers.",
+    "cvss": {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "score": 9.8,
+      "severity": "CRITICAL",
+      "attack_vector": "네트워크",
+      "attack_complexity": "낮음",
+      "privileges_required": "없음",
+      "user_interaction": "없음"
+    },
+    "cwes": [
+      "CWE-843"
+    ],
+    "affected": [
+      "ibm aix",
+      "ibm vios"
+    ],
+    "references": [
+      "https://www.ibm.com/support/pages/node/7283858"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-16919",
+    "added_at": "2026-08-21T08:01:01+09:00"
+  },
+  {
     "id": "CVE-2026-75913",
     "published": "2026-08-18",
     "last_modified": "2026-08-18",
@@ -203,6 +693,262 @@
     ],
     "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-75094",
     "added_at": "2026-08-18T20:00:59+09:00"
+  },
+  {
+    "id": "CVE-2026-74944",
+    "published": "2026-08-18",
+    "last_modified": "2026-08-20",
+    "status": "Analyzed",
+    "description": "Use-after-free in the DOM: Core & HTML component. This vulnerability was fixed in Firefox 154, Firefox ESR 140.14, Firefox ESR 153.1, Thunderbird 154, Thunderbird 140.14, and Thunderbird 153.1.",
+    "cvss": {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "score": 9.8,
+      "severity": "CRITICAL",
+      "attack_vector": "네트워크",
+      "attack_complexity": "낮음",
+      "privileges_required": "없음",
+      "user_interaction": "없음"
+    },
+    "cwes": [
+      "CWE-416"
+    ],
+    "affected": [
+      "mozilla firefox",
+      "mozilla thunderbird"
+    ],
+    "references": [
+      "https://bugzilla.mozilla.org/show_bug.cgi?id=2057778",
+      "https://www.mozilla.org/security/advisories/mfsa2026-74/",
+      "https://www.mozilla.org/security/advisories/mfsa2026-76/",
+      "https://www.mozilla.org/security/advisories/mfsa2026-77/",
+      "https://www.mozilla.org/security/advisories/mfsa2026-78/",
+      "https://www.mozilla.org/security/advisories/mfsa2026-79/"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-74944",
+    "added_at": "2026-08-21T08:01:01+09:00"
+  },
+  {
+    "id": "CVE-2026-74943",
+    "published": "2026-08-18",
+    "last_modified": "2026-08-20",
+    "status": "Analyzed",
+    "description": "Use-after-free in the Graphics: ImageLib component. This vulnerability was fixed in Firefox 154, Firefox ESR 115.39, Firefox ESR 140.14, Firefox ESR 153.1, Thunderbird 154, Thunderbird 140.14, and Thunderbird 153.1.",
+    "cvss": {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "score": 9.8,
+      "severity": "CRITICAL",
+      "attack_vector": "네트워크",
+      "attack_complexity": "낮음",
+      "privileges_required": "없음",
+      "user_interaction": "없음"
+    },
+    "cwes": [
+      "CWE-416"
+    ],
+    "affected": [
+      "mozilla firefox",
+      "mozilla thunderbird"
+    ],
+    "references": [
+      "https://bugzilla.mozilla.org/show_bug.cgi?id=2057308",
+      "https://www.mozilla.org/security/advisories/mfsa2026-74/",
+      "https://www.mozilla.org/security/advisories/mfsa2026-75/",
+      "https://www.mozilla.org/security/advisories/mfsa2026-76/",
+      "https://www.mozilla.org/security/advisories/mfsa2026-77/",
+      "https://www.mozilla.org/security/advisories/mfsa2026-78/"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-74943",
+    "added_at": "2026-08-21T08:01:01+09:00"
+  },
+  {
+    "id": "CVE-2026-74940",
+    "published": "2026-08-18",
+    "last_modified": "2026-08-20",
+    "status": "Undergoing Analysis",
+    "description": "Use-after-free in the Graphics: Text component. This vulnerability was fixed in Firefox 154, Firefox ESR 115.39, Firefox ESR 140.14, Firefox ESR 153.1, Thunderbird 154, Thunderbird 140.14, and Thunderbird 153.1.",
+    "cvss": {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "score": 9.8,
+      "severity": "CRITICAL",
+      "attack_vector": "네트워크",
+      "attack_complexity": "낮음",
+      "privileges_required": "없음",
+      "user_interaction": "없음"
+    },
+    "cwes": [
+      "CWE-416"
+    ],
+    "affected": [
+      "mozilla firefox",
+      "mozilla thunderbird"
+    ],
+    "references": [
+      "https://bugzilla.mozilla.org/show_bug.cgi?id=2054842",
+      "https://www.mozilla.org/security/advisories/mfsa2026-74/",
+      "https://www.mozilla.org/security/advisories/mfsa2026-75/",
+      "https://www.mozilla.org/security/advisories/mfsa2026-76/",
+      "https://www.mozilla.org/security/advisories/mfsa2026-77/",
+      "https://www.mozilla.org/security/advisories/mfsa2026-78/"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-74940",
+    "added_at": "2026-08-21T08:01:01+09:00"
+  },
+  {
+    "id": "CVE-2026-74936",
+    "published": "2026-08-18",
+    "last_modified": "2026-08-20",
+    "status": "Analyzed",
+    "description": "Use-after-free in the JavaScript: WebAssembly component. This vulnerability was fixed in Firefox 154, Firefox ESR 140.14, Firefox ESR 153.1, Thunderbird 154, Thunderbird 140.14, and Thunderbird 153.1.",
+    "cvss": {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "score": 9.8,
+      "severity": "CRITICAL",
+      "attack_vector": "네트워크",
+      "attack_complexity": "낮음",
+      "privileges_required": "없음",
+      "user_interaction": "없음"
+    },
+    "cwes": [
+      "CWE-416"
+    ],
+    "affected": [
+      "mozilla firefox",
+      "mozilla thunderbird"
+    ],
+    "references": [
+      "https://bugzilla.mozilla.org/show_bug.cgi?id=2052688",
+      "https://www.mozilla.org/security/advisories/mfsa2026-74/",
+      "https://www.mozilla.org/security/advisories/mfsa2026-76/",
+      "https://www.mozilla.org/security/advisories/mfsa2026-77/",
+      "https://www.mozilla.org/security/advisories/mfsa2026-78/",
+      "https://www.mozilla.org/security/advisories/mfsa2026-79/"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-74936",
+    "added_at": "2026-08-21T08:01:01+09:00"
+  },
+  {
+    "id": "CVE-2026-71152",
+    "published": "2026-08-18",
+    "last_modified": "2026-08-20",
+    "status": "Undergoing Analysis",
+    "description": "Vulnerability in the Helidon product of Oracle Fusion Middleware (component: Imperative Web Server).   The supported version that is affected is 4.5.0. Easily exploitable vulnerability allows unauthenticated attacker with network access via HTTP to compromise Helidon.  Successful attacks of this vulnerability can result in takeover of Helidon. CVSS 3.1 Base Score 9.8 (Confidentiality, Integrity and Availability impacts).  CVSS Vector: (CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H).",
+    "cvss": {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "score": 9.8,
+      "severity": "CRITICAL",
+      "attack_vector": "네트워크",
+      "attack_complexity": "낮음",
+      "privileges_required": "없음",
+      "user_interaction": "없음"
+    },
+    "cwes": [],
+    "affected": [],
+    "references": [
+      "https://www.oracle.com/security-alerts/cspuaug2026.html"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-71152",
+    "added_at": "2026-08-21T08:01:01+09:00"
+  },
+  {
+    "id": "CVE-2026-71065",
+    "published": "2026-08-18",
+    "last_modified": "2026-08-20",
+    "status": "Undergoing Analysis",
+    "description": "Vulnerability in the Helidon product of Oracle Fusion Middleware (component: Imperative Web Server).   The supported version that is affected is 3.2.18. Easily exploitable vulnerability allows unauthenticated attacker with network access via HTTP to compromise Helidon.  While the vulnerability is in Helidon, attacks may significantly impact additional products (scope change).  Successful attacks of this vulnerability can result in  unauthorized access to critical data or complete access to all Helidon accessible data as well as  unauthorized update, insert or delete access to some of Helidon accessible data. CVSS 3.1 Base Score 9.3 (Confidentiality and Integrity impacts).  CVSS Vector: (CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:L/A:N).",
+    "cvss": {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:L/A:N",
+      "score": 9.3,
+      "severity": "CRITICAL",
+      "attack_vector": "네트워크",
+      "attack_complexity": "낮음",
+      "privileges_required": "없음",
+      "user_interaction": "없음"
+    },
+    "cwes": [],
+    "affected": [],
+    "references": [
+      "https://www.oracle.com/security-alerts/cspuaug2026.html"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-71065",
+    "added_at": "2026-08-21T08:01:01+09:00"
+  },
+  {
+    "id": "CVE-2026-71036",
+    "published": "2026-08-18",
+    "last_modified": "2026-08-20",
+    "status": "Undergoing Analysis",
+    "description": "Vulnerability in the Oracle Commerce Guided Search / Oracle Commerce Experience Manager product of Oracle Commerce (component: Experience Manager).   The supported version that is affected is 11.4.0. Easily exploitable vulnerability allows unauthenticated attacker with network access via HTTP to compromise Oracle Commerce Guided Search / Oracle Commerce Experience Manager.  Successful attacks of this vulnerability can result in  unauthorized creation, deletion or modification access to critical data or all Oracle Commerce Guided Search / Oracle Commerce Experience Manager accessible data as well as  unauthorized access to critical data or complete access to all Oracle Commerce Guided Search / Oracle Commerce Experience Manager accessible data. CVSS 3.1 Base Score 9.1 (Confidentiality and Integrity impacts).  CVSS Vector: (CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N).",
+    "cvss": {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N",
+      "score": 9.1,
+      "severity": "CRITICAL",
+      "attack_vector": "네트워크",
+      "attack_complexity": "낮음",
+      "privileges_required": "없음",
+      "user_interaction": "없음"
+    },
+    "cwes": [],
+    "affected": [],
+    "references": [
+      "https://www.oracle.com/security-alerts/cspuaug2026.html"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-71036",
+    "added_at": "2026-08-21T08:01:01+09:00"
+  },
+  {
+    "id": "CVE-2026-71015",
+    "published": "2026-08-18",
+    "last_modified": "2026-08-20",
+    "status": "Undergoing Analysis",
+    "description": "Vulnerability in the Oracle Commerce Guided Search / Oracle Commerce Experience Manager product of Oracle Commerce (component: Endeca Application Controller).   The supported version that is affected is 11.4.0. Easily exploitable vulnerability allows unauthenticated attacker with network access via HTTP to compromise Oracle Commerce Guided Search / Oracle Commerce Experience Manager.  Successful attacks of this vulnerability can result in  unauthorized creation, deletion or modification access to critical data or all Oracle Commerce Guided Search / Oracle Commerce Experience Manager accessible data as well as  unauthorized access to critical data or complete access to all Oracle Commerce Guided Search / Oracle Commerce Experience Manager accessible data. CVSS 3.1 Base Score 9.1 (Confidentiality and Integrity impacts).  CVSS Vector: (CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N).",
+    "cvss": {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N",
+      "score": 9.1,
+      "severity": "CRITICAL",
+      "attack_vector": "네트워크",
+      "attack_complexity": "낮음",
+      "privileges_required": "없음",
+      "user_interaction": "없음"
+    },
+    "cwes": [],
+    "affected": [],
+    "references": [
+      "https://www.oracle.com/security-alerts/cspuaug2026.html"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-71015",
+    "added_at": "2026-08-21T08:01:01+09:00"
+  },
+  {
+    "id": "CVE-2026-71014",
+    "published": "2026-08-18",
+    "last_modified": "2026-08-20",
+    "status": "Undergoing Analysis",
+    "description": "Vulnerability in the Oracle Commerce Guided Search / Oracle Commerce Experience Manager product of Oracle Commerce (component: Endeca Application Controller).   The supported version that is affected is 11.4.0. Easily exploitable vulnerability allows unauthenticated attacker with network access via HTTP to compromise Oracle Commerce Guided Search / Oracle Commerce Experience Manager.  Successful attacks of this vulnerability can result in  unauthorized creation, deletion or modification access to critical data or all Oracle Commerce Guided Search / Oracle Commerce Experience Manager accessible data as well as  unauthorized access to critical data or complete access to all Oracle Commerce Guided Search / Oracle Commerce Experience Manager accessible data. CVSS 3.1 Base Score 9.1 (Confidentiality and Integrity impacts).  CVSS Vector: (CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N).",
+    "cvss": {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N",
+      "score": 9.1,
+      "severity": "CRITICAL",
+      "attack_vector": "네트워크",
+      "attack_complexity": "낮음",
+      "privileges_required": "없음",
+      "user_interaction": "없음"
+    },
+    "cwes": [],
+    "affected": [],
+    "references": [
+      "https://www.oracle.com/security-alerts/cspuaug2026.html"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-71014",
+    "added_at": "2026-08-21T08:01:01+09:00"
   },
   {
     "id": "CVE-2026-70979",
