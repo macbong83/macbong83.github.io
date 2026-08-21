@@ -41,8 +41,8 @@
     <h1>CVE Archive</h1>
     <p>NVD 기반 Critical CVE를 누적 관리하는 별도 페이지입니다. 블로그에는 CVE 자동 글을 발행하지 않고, 이 페이지에만 기록합니다.</p>
     <div class="meta">
-      <span>Total 661</span>
-      <span>Updated 2026-08-21 08:01 KST</span>
+      <span>Total 665</span>
+      <span>Updated 2026-08-21 20:00 KST</span>
       <span>Source NVD API</span>
     </div>
   </section>
@@ -69,6 +69,29 @@
       <details>
         <summary>References</summary>
         <ul><li><a href="https://github.com/AdminSafe/CVE/issues/5" target="_blank" rel="noopener">https://github.com/AdminSafe/CVE/issues/5</a></li><li><a href="https://vuldb.com/cve/CVE-2026-77022" target="_blank" rel="noopener">https://vuldb.com/cve/CVE-2026-77022</a></li><li><a href="https://vuldb.com/submit/880599" target="_blank" rel="noopener">https://vuldb.com/submit/880599</a></li><li><a href="https://vuldb.com/vuln/393637" target="_blank" rel="noopener">https://vuldb.com/vuln/393637</a></li></ul>
+      </details>
+    </article>
+    <article class="cve-card" id="CVE-2026-67567">
+      <div class="cve-top">
+        <a class="cve-id" href="https://nvd.nist.gov/vuln/detail/CVE-2026-67567" target="_blank" rel="noopener">CVE-2026-67567</a>
+        <span class="score">CVSS 9.9 CRITICAL</span>
+      </div>
+      <p class="desc">A flaw was found in the multicloud-operators-subscription component. This vulnerability allows a tenant, who has the ability to create HelmRelease custom resources (CRs), to bypass existing security controls. The system&#x27;s HelmRelease controller processes Helm chart templates using its own elevated ServiceAccount privileges without proper validation. This enables the tenant to deploy arbitrary resources across the entire cluster, leading to a significant security compromise.</p>
+      <dl>
+        <div><dt>Published</dt><dd>2026-08-20</dd></div>
+        <div><dt>Last Modified</dt><dd>2026-08-20</dd></div>
+        <div><dt>Status</dt><dd>Received</dd></div>
+        <div><dt>Attack Vector</dt><dd>네트워크</dd></div>
+        <div><dt>Attack Complexity</dt><dd>낮음</dd></div>
+        <div><dt>Privileges</dt><dd>낮음</dd></div>
+        <div><dt>User Interaction</dt><dd>없음</dd></div>
+        <div><dt>CWE</dt><dd>CWE-441</dd></div>
+        <div><dt>Affected</dt><dd>NVD CPE 기준 확인 필요</dd></div>
+      </dl>
+      <div class="vector"><code>CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H</code></div>
+      <details>
+        <summary>References</summary>
+        <ul><li><a href="https://access.redhat.com/security/cve/CVE-2026-67567" target="_blank" rel="noopener">https://access.redhat.com/security/cve/CVE-2026-67567</a></li><li><a href="https://bugzilla.redhat.com/show_bug.cgi?id=2514224" target="_blank" rel="noopener">https://bugzilla.redhat.com/show_bug.cgi?id=2514224</a></li></ul>
       </details>
     </article>
     <article class="cve-card" id="CVE-2026-66788">
@@ -115,6 +138,75 @@
       <details>
         <summary>References</summary>
         <ul><li><a href="https://access.redhat.com/security/cve/CVE-2026-66785" target="_blank" rel="noopener">https://access.redhat.com/security/cve/CVE-2026-66785</a></li><li><a href="https://bugzilla.redhat.com/show_bug.cgi?id=2507530" target="_blank" rel="noopener">https://bugzilla.redhat.com/show_bug.cgi?id=2507530</a></li></ul>
+      </details>
+    </article>
+    <article class="cve-card" id="CVE-2026-17122">
+      <div class="cve-top">
+        <a class="cve-id" href="https://nvd.nist.gov/vuln/detail/CVE-2026-17122" target="_blank" rel="noopener">CVE-2026-17122</a>
+        <span class="score">CVSS 9.8 CRITICAL</span>
+      </div>
+      <p class="desc">IBM AIX 7.2, and 7.3 and IBM PowerVM VIOS 4.1 could allow a remote attacker to execute arbitrary code due to a stack-based buffer overflow.</p>
+      <dl>
+        <div><dt>Published</dt><dd>2026-08-20</dd></div>
+        <div><dt>Last Modified</dt><dd>2026-08-20</dd></div>
+        <div><dt>Status</dt><dd>Received</dd></div>
+        <div><dt>Attack Vector</dt><dd>네트워크</dd></div>
+        <div><dt>Attack Complexity</dt><dd>낮음</dd></div>
+        <div><dt>Privileges</dt><dd>없음</dd></div>
+        <div><dt>User Interaction</dt><dd>없음</dd></div>
+        <div><dt>CWE</dt><dd>CWE-787</dd></div>
+        <div><dt>Affected</dt><dd>NVD CPE 기준 확인 필요</dd></div>
+      </dl>
+      <div class="vector"><code>CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H</code></div>
+      <details>
+        <summary>References</summary>
+        <ul><li><a href="https://www.ibm.com/support/pages/node/7283858" target="_blank" rel="noopener">https://www.ibm.com/support/pages/node/7283858</a></li></ul>
+      </details>
+    </article>
+    <article class="cve-card" id="CVE-2026-17118">
+      <div class="cve-top">
+        <a class="cve-id" href="https://nvd.nist.gov/vuln/detail/CVE-2026-17118" target="_blank" rel="noopener">CVE-2026-17118</a>
+        <span class="score">CVSS 9.8 CRITICAL</span>
+      </div>
+      <p class="desc">IBM AIX 7.2, and 7.3 and IBM PowerVM VIOS 4.1 could allow a remote attacker to execute arbitrary code due to a use-after-free vulnerability.</p>
+      <dl>
+        <div><dt>Published</dt><dd>2026-08-20</dd></div>
+        <div><dt>Last Modified</dt><dd>2026-08-20</dd></div>
+        <div><dt>Status</dt><dd>Received</dd></div>
+        <div><dt>Attack Vector</dt><dd>네트워크</dd></div>
+        <div><dt>Attack Complexity</dt><dd>낮음</dd></div>
+        <div><dt>Privileges</dt><dd>없음</dd></div>
+        <div><dt>User Interaction</dt><dd>없음</dd></div>
+        <div><dt>CWE</dt><dd>CWE-416</dd></div>
+        <div><dt>Affected</dt><dd>NVD CPE 기준 확인 필요</dd></div>
+      </dl>
+      <div class="vector"><code>CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H</code></div>
+      <details>
+        <summary>References</summary>
+        <ul><li><a href="https://www.ibm.com/support/pages/node/7283858" target="_blank" rel="noopener">https://www.ibm.com/support/pages/node/7283858</a></li></ul>
+      </details>
+    </article>
+    <article class="cve-card" id="CVE-2026-17040">
+      <div class="cve-top">
+        <a class="cve-id" href="https://nvd.nist.gov/vuln/detail/CVE-2026-17040" target="_blank" rel="noopener">CVE-2026-17040</a>
+        <span class="score">CVSS 9.8 CRITICAL</span>
+      </div>
+      <p class="desc">IBM AIX 7.2, and 7.3 and IBM PowerVM VIOS 4.1 could allow a remote attacker to execute arbitrary code due to a buffer overflow.</p>
+      <dl>
+        <div><dt>Published</dt><dd>2026-08-20</dd></div>
+        <div><dt>Last Modified</dt><dd>2026-08-20</dd></div>
+        <div><dt>Status</dt><dd>Received</dd></div>
+        <div><dt>Attack Vector</dt><dd>네트워크</dd></div>
+        <div><dt>Attack Complexity</dt><dd>낮음</dd></div>
+        <div><dt>Privileges</dt><dd>없음</dd></div>
+        <div><dt>User Interaction</dt><dd>없음</dd></div>
+        <div><dt>CWE</dt><dd>CWE-120</dd></div>
+        <div><dt>Affected</dt><dd>NVD CPE 기준 확인 필요</dd></div>
+      </dl>
+      <div class="vector"><code>CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H</code></div>
+      <details>
+        <summary>References</summary>
+        <ul><li><a href="https://www.ibm.com/support/pages/node/7283858" target="_blank" rel="noopener">https://www.ibm.com/support/pages/node/7283858</a></li></ul>
       </details>
     </article>
     <article class="cve-card" id="CVE-2026-16926">
