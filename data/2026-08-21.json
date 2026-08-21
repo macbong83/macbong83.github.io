@@ -1,0 +1,104 @@
+{
+  "tagline": "글로벌 정보보안 뉴스레터",
+  "title": "보안 브리핑",
+  "date_display": "2026년 8월 21일 금요일",
+  "date_short": "2026.08.21",
+  "sources_line": "The Hacker News · BleepingComputer · SecurityWeek · KrebsOnSecurity · CISA · NCSC UK · Unit 42 · 보안뉴스 · 데일리시큐 · 전자신문",
+  "seo": {
+    "title": "AI, 랜섬웨어 — 2026.08.21 보안 브리핑",
+    "description": "오늘 주요 취약점·침해 사고·위협 트렌드 요약.",
+    "keywords": "AI, 랜섬웨어, 취약점, 침해사고, 보안"
+  },
+  "sections": [
+    {
+      "label": "취약점 & 공격",
+      "type": "cards",
+      "items": [
+        {
+          "severity": "critical",
+          "source": "The Hacker News",
+          "headline": "시트릭스 넷스케일러 인증 우회 취약점 공개…“인터넷 노출 장비 신속 패치 필요”",
+          "url": "https://www.dailysecu.com/news/articleView.html?idxno=208135",
+          "summary": "시트릭스는 CVE-2026-19490과 CVE-2026-19489 취약점을 공개하고 보안 업데이트를 배포했다. CVSS 9.3점의 인증 우회 취약점으로, 공격자가 별도의 로그인 없이 네트워크를 통해 공격할 수 있다."
+        },
+        {
+          "severity": "critical",
+          "source": "The Hacker News",
+          "headline": "Elementor Pro Flaw Could Let Unauthenticated Attackers Upload PHP and Execute Code",
+          "url": "https://thehackernews.com/2026/08/elementor-pro-flaw-could-let.html",
+          "summary": "Elementor Pro WordPress 플러그인의 취약점 CVE-2026-32475은 CVSS 9.0점으로, 인증 없이 PHP 파일을 업로드하고 코드를 실행할 수 있는 원격 코드 실행 취약점이다."
+        },
+        {
+          "severity": "high",
+          "source": "The Hacker News",
+          "headline": "Zimbra SNMP Flaw Exploited for Unauthenticated Remote Code Execution",
+          "url": "https://thehackernews.com/2026/08/attackers-exploit-zimbra-snmp-flaw-for.html",
+          "summary": "Zimbra Collaboration의 취약점 CVE-2026-73570은 CVSS 8.9점으로, 인증 없이 원격 코드 실행이 가능한 취약점이다. 이 취약점은 현재 악용되고 있다."
+        },
+        {
+          "severity": "high",
+          "source": "The Hacker News",
+          "headline": "Critical GitLab Flaw Exploited Shortly After Disclosure",
+          "url": "https://www.securityweek.com/critical-gitlab-flaw-exploited-shortly-after-disclosure/",
+          "summary": "CVE-2026-19478 취약점은 인증 없이 공개 프로젝트 및 사용자 데이터를 수정하거나 삭제할 수 있는 취약점이다. 이 취약점은 공개 직후 악용되었다."
+        },
+        {
+          "severity": "medium",
+          "source": "The Hacker News",
+          "headline": "Cisco BroadWorks Vulnerability Allows Remote Attackers to Access Sensitive Files",
+          "url": "https://gbhackers.com/cisco-broadworks-vulnerability/",
+          "summary": "Cisco BroadWorks의 취약점 CVE-2026-20320은 인증 없이 민감한 구성 파일에 접근할 수 있는 취약점이다. 이 취약점은 고위험으로 분류되었다."
+        }
+      ]
+    },
+    {
+      "label": "침해 사고",
+      "type": "cards",
+      "items": [
+        {
+          "severity": "incident",
+          "source": "The Hacker News",
+          "headline": "Suspected Russian Hackers Abuse Google OAuth and WhatsApp Linking to Hijack Accounts",
+          "url": "https://thehackernews.com/2026/08/suspected-russian-hackers-abuse-google.html",
+          "summary": "러시아 해커들이 Google OAuth 및 WhatsApp 연동을 악용해 유럽과 미국의 학계, 방위, 정부 등에 속한 계정을 해킹한 사건이 발생했다."
+        },
+        {
+          "severity": "incident",
+          "source": "The Hacker News",
+          "headline": "AI-Generated Exploit Scripts Target Siemens S7 PLCs in U.S. Critical Infrastructure",
+          "url": "https://thehackernews.com/2026/08/ai-generated-exploit-scripts-target.html",
+          "summary": "미국 정부는 AI로 생성된 악성 스크립트가 Siemens S7 PLC를 대상으로 한 공격이 활발히 진행되고 있다고 경고했다."
+        },
+        {
+          "severity": "incident",
+          "source": "The Hacker News",
+          "headline": "Threat Actor Hacks 14,000 IP Cameras in Ukraine and Russia",
+          "url": "https://www.securityweek.com/threat-actor-hacks-14000-ip-cameras-in-ukraine-and-russia/",
+          "summary": "Operation CameraSwarm이라는 공격이 우크라이나와 러시아의 IP 카메라 14,000대를 해킹한 사건이 발생했다."
+        }
+      ]
+    },
+    {
+      "label": "동향 & 분석",
+      "type": "trends",
+      "items": [
+        {
+          "lead": "AI 기반 공격 증가",
+          "body": "AI 기반의 공격이 급증하고 있으며, 특히 Siemens S7 PLC와 같은 인프라 장비를 대상으로 한 공격이 주목받고 있다. 이는 AI가 보안 취약점을 자동으로 탐지하고 공격을 자동화하는 기능을 갖추고 있기 때문이다."
+        },
+        {
+          "lead": "모바일 악성코드 진화",
+          "body": "안드로이드 악성코드가 단순한 정보 탈취에서 넘어, 피해자의 기기에서 직접 금융 거래를 조작하는 '온디바이스 사기'로 진화하고 있다. 이는 악성코드가 접근성 서비스를 악용해 화면 정보를 읽고 버튼을 누르는 방식으로 작동한다."
+        },
+        {
+          "lead": "취약점 패치 지연",
+          "body": "CVE-2026-19490과 같은 고위험 취약점이 공개된 후에도 많은 기업이 패치를 지연시키고 있다. 이는 취약점의 영향 범위가 넓고, 패치 과정이 복잡하기 때문으로 보인다."
+        },
+        {
+          "lead": "NFC 기술의 보안 취약점",
+          "body": "NFC 기술의 보안 취약점이 드러나며, 유효기간이 끝난 카드도 결제에 사용할 수 있는 '좀비 카드' 공격이 발생하고 있다. 이는 카드와 결제 단말기 간의 정보 전달 과정에서 유효기간을 조작하는 방식으로 이루어진다."
+        }
+      ]
+    }
+  ]
+}
