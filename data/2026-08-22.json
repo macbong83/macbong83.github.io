@@ -1,0 +1,111 @@
+{
+  "tagline": "글로벌 정보보안 뉴스레터",
+  "title": "보안 브리핑",
+  "date_display": "2026년 8월 22일 토요일",
+  "date_short": "2026.08.22",
+  "sources_line": "The Hacker News · BleepingComputer · SecurityWeek · KrebsOnSecurity · CISA · NCSC UK · Unit 42 · 보안뉴스 · 데일리시큐 · 전자신문",
+  "seo": {
+    "title": "AI, 취약점 — 2026.08.22 보안 브리핑",
+    "description": "오늘 주요 취약점·침해 사고·위협 트렌드 요약.",
+    "keywords": "AI, 취약점, 랜섬웨어, 침해사고, 보안"
+  },
+  "sections": [
+    {
+      "label": "취약점 & 공격",
+      "type": "cards",
+      "items": [
+        {
+          "severity": "critical",
+          "source": "The Hacker News",
+          "headline": "AI 기반 RedC2 4.0 랜섬웨어, npm 패키지에 숨어 유포",
+          "url": "https://thehackernews.com/2026/08/14-trojanized-npm-packages-drop-redc2.html",
+          "summary": "AI 기반의 RedC2 4.0 랜섬웨어가 npm 패키지에 숨겨져 유포되고 있다. 이 랜섬웨어는 Linux 시스템에 백도어를 설치할 수 있다."
+        },
+        {
+          "severity": "critical",
+          "source": "The Hacker News",
+          "headline": "마이크로소프트 디펜더 드라이버, 보안 소프트웨어 삭제 가능성",
+          "url": "https://thehackernews.com/2026/08/microsoft-defenders-own-driver-can-be.html",
+          "summary": "마이크로소프트 디펜더의 자체 드라이버가 악용되어 부팅 시 보안 소프트웨어를 삭제할 수 있는 취약점이 발견되었다."
+        },
+        {
+          "severity": "high",
+          "source": "The Hacker News",
+          "headline": "안드로이드 차량용 악성코드, 광고 사기 및 프록시 봇넷 생성",
+          "url": "https://thehackernews.com/2026/08/android-car-malware-spreads-through.html",
+          "summary": "DoFun에서 개발한 차량용 헤드유닛 펌웨어에 감염된 악성코드가 광고 사기 및 프록시 봇넷을 생성하는 것으로 확인되었다."
+        },
+        {
+          "severity": "critical",
+          "source": "The Hacker News",
+          "headline": "GitLab, 공개 직후 CVE-2026-19478 취약점 악용",
+          "url": "https://thehackernews.com/2026/08/gitlab-cve-2026-19478-comes-under.html",
+          "summary": "GitLab의 CVE-2026-19478 취약점이 공개된 지 몇 일 만에 악용되고 있으며, CVSS 점수는 9.4이다."
+        },
+        {
+          "severity": "critical",
+          "source": "The Hacker News",
+          "headline": "마이크로소프트, Entra ID 심각한 취약점 패치",
+          "url": "https://thehackernews.com/2026/08/microsoft-entra-id-flaw-cvss-100.html",
+          "summary": "CVSS 10.0 점수를 받은 마이크로소프트 Entra ID 취약점이 패치되었으며, 원격 코드 실행을 허용한다."
+        },
+        {
+          "severity": "critical",
+          "source": "The Hacker News",
+          "headline": "러스트 공급망 공격, 2.45억 다운로드 받은 패키지에 악성코드 삽입",
+          "url": "https://thehackernews.com/2026/08/rust-supply-chain-attack-puts-build.html",
+          "summary": "러스트 프로젝트에서 악의적인 유지보수자 계정을 통해 빌드 시 악성코드가 삽입된 패키지가 삭제되었다."
+        }
+      ]
+    },
+    {
+      "label": "침해 사고",
+      "type": "cards",
+      "items": [
+        {
+          "severity": "incident",
+          "source": "GBHackers",
+          "headline": "US Bank, LockBit 랜섬웨어 그룹에 데이터 유출 주장",
+          "url": "https://gbhackers.com/us-bank-investigates-alleged-data-breach/",
+          "summary": "LockBit 랜섬웨어 그룹이 US Bank에 데이터 유출을 주장하며, 9월 3일까지 비밀금을 지불하도록 요구했다."
+        },
+        {
+          "severity": "incident",
+          "source": "GBHackers",
+          "headline": "가짜 투자 사기, 딥페이크 광고로 투자자 유인",
+          "url": "https://gbhackers.com/deepfake-investment-scam/",
+          "summary": "딥페이크 광고와 가짜 금융 전문가를 이용해 투자자들을 유인하는 투자 사기가 발생했다."
+        },
+        {
+          "severity": "incident",
+          "source": "GBHackers",
+          "headline": "UAT-10147, 웹 서버 해킹으로 BadIIS 악성코드 배포",
+          "url": "https://gbhackers.com/uat-10147-compromises-web-servers/",
+          "summary": "중국어를 사용하는 해킹 그룹 UAT-10147이 웹 서버를 해킹해 BadIIS 악성코드를 배포하고 있다."
+        }
+      ]
+    },
+    {
+      "label": "동향 & 분석",
+      "type": "trends",
+      "items": [
+        {
+          "lead": "AI 기반 공격 증가",
+          "body": "AI 기반의 랜섬웨어와 공격이 급증하고 있으며, 특히 Siemens S7 PLC에 대한 공격이 주목받고 있다."
+        },
+        {
+          "lead": "공급망 공격 확대",
+          "body": "러스트 및 npm 패키지에 대한 공급망 공격이 증가하고 있으며, 이는 보안 취약점을 악용한 공격으로 이어지고 있다."
+        },
+        {
+          "lead": "보안 패치 지연",
+          "body": "CVE-2026-19478와 같은 취약점이 패치되기 전에 이미 악용되고 있으며, 이는 보안 패치 지연의 위험성을 보여준다."
+        },
+        {
+          "lead": "인증 기술 악용",
+          "body": "Google OAuth와 WhatsApp 링킹 기능이 해커에 의해 악용되어 계정 해킹이 발생하고 있다."
+        }
+      ]
+    }
+  ]
+}
