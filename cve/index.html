@@ -41,13 +41,36 @@
     <h1>CVE Archive</h1>
     <p>NVD 기반 Critical CVE를 누적 관리하는 별도 페이지입니다. 블로그에는 CVE 자동 글을 발행하지 않고, 이 페이지에만 기록합니다.</p>
     <div class="meta">
-      <span>Total 666</span>
-      <span>Updated 2026-08-22 08:00 KST</span>
+      <span>Total 667</span>
+      <span>Updated 2026-08-22 20:00 KST</span>
       <span>Source NVD API</span>
     </div>
   </section>
   <div class="notice">중복 제거 기준은 CVE ID입니다. 동일 CVE는 다시 추가하지 않습니다. 실제 악용 여부와 패치 우선순위는 CISA KEV, 벤더 권고, 자산 노출 여부와 함께 검토해야 합니다.</div>
 
+    <article class="cve-card" id="CVE-2026-78003">
+      <div class="cve-top">
+        <a class="cve-id" href="https://nvd.nist.gov/vuln/detail/CVE-2026-78003" target="_blank" rel="noopener">CVE-2026-78003</a>
+        <span class="score">CVSS 9.8 CRITICAL</span>
+      </div>
+      <p class="desc">The Mailgun for WordPress plugin for WordPress is vulnerable to Server-Side Request Forgery (SSRF) via path traversal in versions up to and including 2.2.0. This is due to insufficient input validation in the add_list() function, which accepts user-controlled array keys from $_POST[&#x27;addresses&#x27;], passes them through sanitize_text_field(). This makes it possible for unauthenticated attackers to make authenticated POST requests to any Mailgun API endpoint using the WordPress site&#x27;s API key, including creating inbound email-forwarding routes that can intercept password reset emails, leading to administrator account takeover.</p>
+      <dl>
+        <div><dt>Published</dt><dd>2026-08-22</dd></div>
+        <div><dt>Last Modified</dt><dd>2026-08-22</dd></div>
+        <div><dt>Status</dt><dd>Received</dd></div>
+        <div><dt>Attack Vector</dt><dd>네트워크</dd></div>
+        <div><dt>Attack Complexity</dt><dd>낮음</dd></div>
+        <div><dt>Privileges</dt><dd>없음</dd></div>
+        <div><dt>User Interaction</dt><dd>없음</dd></div>
+        <div><dt>CWE</dt><dd>CWE-918</dd></div>
+        <div><dt>Affected</dt><dd>NVD CPE 기준 확인 필요</dd></div>
+      </dl>
+      <div class="vector"><code>CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H</code></div>
+      <details>
+        <summary>References</summary>
+        <ul><li><a href="https://plugins.trac.wordpress.org/browser/mailgun/tags/2.1.10/mailgun.php#L259" target="_blank" rel="noopener">https://plugins.trac.wordpress.org/browser/mailgun/tags/2.1.10/mailgun.php#L259</a></li><li><a href="https://plugins.trac.wordpress.org/browser/mailgun/tags/2.1.10/mailgun.php#L323" target="_blank" rel="noopener">https://plugins.trac.wordpress.org/browser/mailgun/tags/2.1.10/mailgun.php#L323</a></li><li><a href="https://plugins.trac.wordpress.org/browser/mailgun/tags/2.1.10/mailgun.php#L331" target="_blank" rel="noopener">https://plugins.trac.wordpress.org/browser/mailgun/tags/2.1.10/mailgun.php#L331</a></li><li><a href="https://plugins.trac.wordpress.org/browser/mailgun/tags/2.1.10/mailgun.php#L557" target="_blank" rel="noopener">https://plugins.trac.wordpress.org/browser/mailgun/tags/2.1.10/mailgun.php#L557</a></li></ul>
+      </details>
+    </article>
     <article class="cve-card" id="CVE-2026-77022">
       <div class="cve-top">
         <a class="cve-id" href="https://nvd.nist.gov/vuln/detail/CVE-2026-77022" target="_blank" rel="noopener">CVE-2026-77022</a>
