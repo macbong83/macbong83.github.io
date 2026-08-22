@@ -31,6 +31,66 @@
     "added_at": "2026-08-22T20:00:50+09:00"
   },
   {
+    "id": "CVE-2026-77946",
+    "published": "2026-08-22",
+    "last_modified": "2026-08-22",
+    "status": "Received",
+    "description": "A vulnerability was determined in TRENDnet TEW-821DAP 2.2.01b05. Affected by this vulnerability is the function uci_safe_get of the file /cgi-bin/apply_time.cgi of the component NTP Timezone Configuration Handler. Executing a manipulation of the argument system.ntp.server/system.ntp.enable_server/cameo.time.time_zone/cameo.cameo.syslog_server can lead to stack-based buffer overflow. The attack may be launched remotely. The exploit has been publicly disclosed and may be utilized.",
+    "cvss": {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:H",
+      "score": 10.0,
+      "severity": "CRITICAL",
+      "attack_vector": "네트워크",
+      "attack_complexity": "낮음",
+      "privileges_required": "없음",
+      "user_interaction": "없음"
+    },
+    "cwes": [
+      "CWE-119",
+      "CWE-121"
+    ],
+    "affected": [],
+    "references": [
+      "https://github.com/dxz0069/WAVLINK-WN530H4-Command-Injection-in-set_add_routing/blob/main/TEW-821DAP_ssi_NTP_Timezone_Config_Stack_Overflow.md",
+      "https://vuldb.com/cve/CVE-2026-77946",
+      "https://vuldb.com/submit/881252",
+      "https://vuldb.com/vuln/394175",
+      "https://vuldb.com/vuln/394175/cti"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-77946",
+    "added_at": "2026-08-23T08:00:19+09:00"
+  },
+  {
+    "id": "CVE-2026-4703",
+    "published": "2026-08-22",
+    "last_modified": "2026-08-22",
+    "status": "Received",
+    "description": "The WS Form LITE – Drag & Drop Contact Form Builder plugin for WordPress is vulnerable to PHP Object Injection in all versions up to, and including, 1.10.80 via deserialization of untrusted input from form submission meta values. This makes it possible for unauthenticated attackers to inject a PHP Object. No known POP chain is present in the vulnerable software, which means this vulnerability has no impact unless another plugin or theme containing a POP chain is installed on the site. If a POP chain is present via an additional plugin or theme installed on the target system, it may allow the attacker to perform actions like delete arbitrary files, retrieve sensitive data, or execute code depending on the POP chain present.",
+    "cvss": {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "score": 9.8,
+      "severity": "CRITICAL",
+      "attack_vector": "네트워크",
+      "attack_complexity": "낮음",
+      "privileges_required": "없음",
+      "user_interaction": "없음"
+    },
+    "cwes": [
+      "CWE-502"
+    ],
+    "affected": [],
+    "references": [
+      "https://plugins.trac.wordpress.org/browser/ws-form/trunk/includes/class-ws-form-common.php#L7154",
+      "https://plugins.trac.wordpress.org/browser/ws-form/trunk/includes/core/class-ws-form-submit.php#L1061",
+      "https://plugins.trac.wordpress.org/changeset/3489609/",
+      "https://www.wordfence.com/threat-intel/vulnerabilities/id/df36eae9-6f2b-432c-a765-57450939b344?source=cve"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-4703",
+    "added_at": "2026-08-23T08:00:19+09:00"
+  },
+  {
     "id": "CVE-2026-77022",
     "published": "2026-08-20",
     "last_modified": "2026-08-20",
