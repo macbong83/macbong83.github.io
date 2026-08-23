@@ -41,13 +41,59 @@
     <h1>CVE Archive</h1>
     <p>NVD 기반 Critical CVE를 누적 관리하는 별도 페이지입니다. 블로그에는 CVE 자동 글을 발행하지 않고, 이 페이지에만 기록합니다.</p>
     <div class="meta">
-      <span>Total 670</span>
-      <span>Updated 2026-08-23 20:00 KST</span>
+      <span>Total 673</span>
+      <span>Updated 2026-08-24 08:00 KST</span>
       <span>Source NVD API</span>
     </div>
   </section>
   <div class="notice">중복 제거 기준은 CVE ID입니다. 동일 CVE는 다시 추가하지 않습니다. 실제 악용 여부와 패치 우선순위는 CISA KEV, 벤더 권고, 자산 노출 여부와 함께 검토해야 합니다.</div>
 
+    <article class="cve-card" id="CVE-2026-8445">
+      <div class="cve-top">
+        <a class="cve-id" href="https://nvd.nist.gov/vuln/detail/CVE-2026-8445" target="_blank" rel="noopener">CVE-2026-8445</a>
+        <span class="score">CVSS 9.8 CRITICAL</span>
+      </div>
+      <p class="desc">justhtml versions &lt;= 1.11.0 (fixed in 1.12.0) do not sufficiently escape HTML-significant characters (angle brackets) in text nodes when converting a parsed document to Markdown via to_markdown(). While a small set of Markdown metacharacters are escaped, characters such as &lt; and &gt; are preserved, so untrusted input that is safe in to_html() — including entity-decoded text (e.g. &amp;lt;script&amp;gt;) or text from RCDATA/RAWTEXT-parsed elements like &lt;title&gt;, &lt;textarea&gt;, &lt;noscript&gt;, and &lt;plaintext&gt; — can be emitted as raw HTML in the Markdown output, enabling a sanitizer bypass and potential cross-site scripting when that output is rendered.</p>
+      <dl>
+        <div><dt>Published</dt><dd>2026-08-23</dd></div>
+        <div><dt>Last Modified</dt><dd>2026-08-23</dd></div>
+        <div><dt>Status</dt><dd>Received</dd></div>
+        <div><dt>Attack Vector</dt><dd>네트워크</dd></div>
+        <div><dt>Attack Complexity</dt><dd>낮음</dd></div>
+        <div><dt>Privileges</dt><dd>없음</dd></div>
+        <div><dt>User Interaction</dt><dd>없음</dd></div>
+        <div><dt>CWE</dt><dd>CWE-79</dd></div>
+        <div><dt>Affected</dt><dd>NVD CPE 기준 확인 필요</dd></div>
+      </dl>
+      <div class="vector"><code>CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H</code></div>
+      <details>
+        <summary>References</summary>
+        <ul><li><a href="https://github.com/EmilStenstrom/justhtml/security/advisories/GHSA-3rcm-vjrc-p45j" target="_blank" rel="noopener">https://github.com/EmilStenstrom/justhtml/security/advisories/GHSA-3rcm-vjrc-p45j</a></li><li><a href="https://www.vulncheck.com/advisories/justhtml-before-sanitizer-bypass-via-markdown" target="_blank" rel="noopener">https://www.vulncheck.com/advisories/justhtml-before-sanitizer-bypass-via-markdown</a></li></ul>
+      </details>
+    </article>
+    <article class="cve-card" id="CVE-2026-7808">
+      <div class="cve-top">
+        <a class="cve-id" href="https://nvd.nist.gov/vuln/detail/CVE-2026-7808" target="_blank" rel="noopener">CVE-2026-7808</a>
+        <span class="score">CVSS 9.8 CRITICAL</span>
+      </div>
+      <p class="desc">justhtml before 1.16.0 contains multiple HTML sanitization bypass issues that can allow active/dangerous content (e.g., script or style) to survive sanitization, potentially leading to cross-site scripting. The issues primarily affect advanced usage rather than the default JustHTML(..., sanitize=True) path for ordinary parsed HTML: mutating or reusing sanitization policy objects (including exported defaults) could weaken later sanitization; programmatic DOM input to sanitize()/sanitize_dom() could miss mixed-case tag names (e.g., ScRiPt, StYlE); crafted programmatic doctype names could serialize into active markup; and custom policies preserving SVG or MathML could allow animation elements, presentation attributes with external url(...) references, or DOM trees mislabeled as namespace=&quot;html&quot; to bypass foreign-content checks. Fixed in 1.16.0.</p>
+      <dl>
+        <div><dt>Published</dt><dd>2026-08-23</dd></div>
+        <div><dt>Last Modified</dt><dd>2026-08-23</dd></div>
+        <div><dt>Status</dt><dd>Received</dd></div>
+        <div><dt>Attack Vector</dt><dd>네트워크</dd></div>
+        <div><dt>Attack Complexity</dt><dd>낮음</dd></div>
+        <div><dt>Privileges</dt><dd>없음</dd></div>
+        <div><dt>User Interaction</dt><dd>없음</dd></div>
+        <div><dt>CWE</dt><dd>CWE-20</dd></div>
+        <div><dt>Affected</dt><dd>NVD CPE 기준 확인 필요</dd></div>
+      </dl>
+      <div class="vector"><code>CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H</code></div>
+      <details>
+        <summary>References</summary>
+        <ul><li><a href="https://github.com/EmilStenstrom/justhtml/security/advisories/GHSA-4p64-v8f5-r2gx" target="_blank" rel="noopener">https://github.com/EmilStenstrom/justhtml/security/advisories/GHSA-4p64-v8f5-r2gx</a></li><li><a href="https://www.vulncheck.com/advisories/justhtml-before-multiple-security-issues-via-sanitization" target="_blank" rel="noopener">https://www.vulncheck.com/advisories/justhtml-before-multiple-security-issues-via-sanitization</a></li></ul>
+      </details>
+    </article>
     <article class="cve-card" id="CVE-2026-78050">
       <div class="cve-top">
         <a class="cve-id" href="https://nvd.nist.gov/vuln/detail/CVE-2026-78050" target="_blank" rel="noopener">CVE-2026-78050</a>
@@ -69,6 +115,29 @@
       <details>
         <summary>References</summary>
         <ul><li><a href="https://github.com/AdminSafe/CVE/issues/9" target="_blank" rel="noopener">https://github.com/AdminSafe/CVE/issues/9</a></li><li><a href="https://vuldb.com/cve/CVE-2026-78050" target="_blank" rel="noopener">https://vuldb.com/cve/CVE-2026-78050</a></li><li><a href="https://vuldb.com/submit/881293" target="_blank" rel="noopener">https://vuldb.com/submit/881293</a></li><li><a href="https://vuldb.com/vuln/394291" target="_blank" rel="noopener">https://vuldb.com/vuln/394291</a></li></ul>
+      </details>
+    </article>
+    <article class="cve-card" id="CVE-2026-5388">
+      <div class="cve-top">
+        <a class="cve-id" href="https://nvd.nist.gov/vuln/detail/CVE-2026-5388" target="_blank" rel="noopener">CVE-2026-5388</a>
+        <span class="score">CVSS 9.8 CRITICAL</span>
+      </div>
+      <p class="desc">justhtml before 1.15.0 contains multiple security issues in URL sanitization helpers (clean_url_value/clean_url_in_js_string), HTML serialization, Markdown passthrough (html_passthrough=True), and several custom sanitization-policy edge cases. Depending on configuration, an attacker can bypass sanitization to inject active HTML and JavaScript — for example via encoded javascript: URLs, backslash-based relative URLs resolved as remote hosts, markup-breaking programmatic element/attribute names or HTML comments, raw &lt;/textarea&gt; reintroduction through Markdown passthrough, or preserved &lt;style&gt;/&lt;meta http-equiv=refresh&gt;/&lt;base href&gt; tags in custom policies. Most custom-policy issues do not affect the default sanitize=True configuration; they primarily affect helper APIs, programmatic DOM construction, html_passthrough=True, and custom policies/transform pipelines.</p>
+      <dl>
+        <div><dt>Published</dt><dd>2026-08-23</dd></div>
+        <div><dt>Last Modified</dt><dd>2026-08-23</dd></div>
+        <div><dt>Status</dt><dd>Received</dd></div>
+        <div><dt>Attack Vector</dt><dd>네트워크</dd></div>
+        <div><dt>Attack Complexity</dt><dd>낮음</dd></div>
+        <div><dt>Privileges</dt><dd>없음</dd></div>
+        <div><dt>User Interaction</dt><dd>없음</dd></div>
+        <div><dt>CWE</dt><dd>CWE-20</dd></div>
+        <div><dt>Affected</dt><dd>NVD CPE 기준 확인 필요</dd></div>
+      </dl>
+      <div class="vector"><code>CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H</code></div>
+      <details>
+        <summary>References</summary>
+        <ul><li><a href="https://github.com/EmilStenstrom/justhtml/security/advisories/GHSA-c9vm-hv86-f23r" target="_blank" rel="noopener">https://github.com/EmilStenstrom/justhtml/security/advisories/GHSA-c9vm-hv86-f23r</a></li><li><a href="https://www.vulncheck.com/advisories/justhtml-before-multiple-security-issues" target="_blank" rel="noopener">https://www.vulncheck.com/advisories/justhtml-before-multiple-security-issues</a></li></ul>
       </details>
     </article>
     <article class="cve-card" id="CVE-2026-78003">
