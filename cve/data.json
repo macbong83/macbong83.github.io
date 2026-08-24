@@ -1,5 +1,153 @@
 [
   {
+    "id": "CVE-2026-78211",
+    "published": "2026-08-24",
+    "last_modified": "2026-08-24",
+    "status": "Received",
+    "description": "4MOSAn GCB Doctor developed by 4MOSAn Security Technology has a OS Command Injection vulnerability. Unauthenticated remote attackers can inject malicious commands through an unremoved ADOdb test page parameter, thereby executing arbitrary system commands on the server.",
+    "cvss": {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "score": 9.8,
+      "severity": "CRITICAL",
+      "attack_vector": "네트워크",
+      "attack_complexity": "낮음",
+      "privileges_required": "없음",
+      "user_interaction": "없음"
+    },
+    "cwes": [
+      "CWE-78"
+    ],
+    "affected": [],
+    "references": [
+      "https://www.twcert.org.tw/en/cp-139-11122-3d95a-2.html",
+      "https://www.twcert.org.tw/tw/cp-132-11118-dfee4-1.html"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-78211",
+    "added_at": "2026-08-24T20:00:32+09:00"
+  },
+  {
+    "id": "CVE-2026-78207",
+    "published": "2026-08-24",
+    "last_modified": "2026-08-24",
+    "status": "Received",
+    "description": "exceljs-hardened before 5.0.0 contains a prototype pollution vulnerability in the deepMerge helper that fails to reject __proto__, constructor, or prototype keys when merging note objects. Attackers can assign parsed JSON with a malicious __proto__ property to cell notes, modifying Object.prototype and affecting all plain objects created in the process.",
+    "cvss": {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:L",
+      "score": 9.4,
+      "severity": "CRITICAL",
+      "attack_vector": "네트워크",
+      "attack_complexity": "낮음",
+      "privileges_required": "없음",
+      "user_interaction": "없음"
+    },
+    "cwes": [
+      "CWE-1321"
+    ],
+    "affected": [],
+    "references": [
+      "https://github.com/exceljs/exceljs",
+      "https://github.com/exceljs/exceljs/blob/v4.4.0/lib/utils/under-dash.js#L155-L181",
+      "https://github.com/mateocallec/exceljs-hardened/security/advisories/GHSA-qwr4-7h29-chpf",
+      "https://www.vulncheck.com/advisories/exceljs-through-prototype-pollution-via-deepmerge-reached-from-note-serialization"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-78207",
+    "added_at": "2026-08-24T20:00:32+09:00"
+  },
+  {
+    "id": "CVE-2026-78169",
+    "published": "2026-08-24",
+    "last_modified": "2026-08-24",
+    "status": "Received",
+    "description": "A vulnerability was detected in UTT HiPER 1250GW up to 3.2.7-210907-180535. This impacts the function strcpy of the file /goform/aspRemoteApConfTempSend of the component HTTP Request Handler. Performing a manipulation of the argument Profile results in stack-based buffer overflow. The attack is possible to be carried out remotely. The exploit is now public and may be used.",
+    "cvss": {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H",
+      "score": 9.9,
+      "severity": "CRITICAL",
+      "attack_vector": "네트워크",
+      "attack_complexity": "낮음",
+      "privileges_required": "낮음",
+      "user_interaction": "없음"
+    },
+    "cwes": [
+      "CWE-119",
+      "CWE-121"
+    ],
+    "affected": [],
+    "references": [
+      "https://github.com/7wkajk/CVE-VUL/blob/main/107.md",
+      "https://vuldb.com/cve/CVE-2026-78169",
+      "https://vuldb.com/submit/883900",
+      "https://vuldb.com/vuln/394558",
+      "https://vuldb.com/vuln/394558/cti"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-78169",
+    "added_at": "2026-08-24T20:00:32+09:00"
+  },
+  {
+    "id": "CVE-2026-78168",
+    "published": "2026-08-24",
+    "last_modified": "2026-08-24",
+    "status": "Received",
+    "description": "A security vulnerability has been detected in EFM ipTIME T24000M up to 14.20.0. This affects the function httpcon_check_session_url of the component Session Validation Handler. Such manipulation leads to improper authentication. The attack can be executed remotely. The exploit has been disclosed publicly and may be used. The vendor was contacted early about this disclosure but did not respond in any way.",
+    "cvss": {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "score": 9.8,
+      "severity": "CRITICAL",
+      "attack_vector": "네트워크",
+      "attack_complexity": "낮음",
+      "privileges_required": "없음",
+      "user_interaction": "없음"
+    },
+    "cwes": [
+      "CWE-287"
+    ],
+    "affected": [],
+    "references": [
+      "https://github.com/AdminSafe/CVE/issues/10",
+      "https://vuldb.com/cve/CVE-2026-78168",
+      "https://vuldb.com/submit/883766",
+      "https://vuldb.com/vuln/394557",
+      "https://vuldb.com/vuln/394557/cti"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-78168",
+    "added_at": "2026-08-24T20:00:32+09:00"
+  },
+  {
+    "id": "CVE-2026-78167",
+    "published": "2026-08-24",
+    "last_modified": "2026-08-24",
+    "status": "Received",
+    "description": "A weakness has been identified in EFM ipTIME T16000M 14.20.2. The impacted element is the function httpcon_check_session_url of the component Session Validation Handler. This manipulation causes improper authentication. Remote exploitation of the attack is possible. The exploit has been made available to the public and could be used for attacks. The vendor was contacted early about this disclosure but did not respond in any way.",
+    "cvss": {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:H",
+      "score": 10.0,
+      "severity": "CRITICAL",
+      "attack_vector": "네트워크",
+      "attack_complexity": "낮음",
+      "privileges_required": "없음",
+      "user_interaction": "없음"
+    },
+    "cwes": [
+      "CWE-287"
+    ],
+    "affected": [],
+    "references": [
+      "https://github.com/AdminSafe/CVE/issues/2",
+      "https://github.com/AdminSafe/CVE/issues/3",
+      "https://vuldb.com/cve/CVE-2026-78167",
+      "https://vuldb.com/submit/874154",
+      "https://vuldb.com/submit/874302",
+      "https://vuldb.com/vuln/394556"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-78167",
+    "added_at": "2026-08-24T20:00:32+09:00"
+  },
+  {
     "id": "CVE-2026-8445",
     "published": "2026-08-23",
     "last_modified": "2026-08-23",

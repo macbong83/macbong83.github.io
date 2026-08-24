@@ -41,13 +41,128 @@
     <h1>CVE Archive</h1>
     <p>NVD 기반 Critical CVE를 누적 관리하는 별도 페이지입니다. 블로그에는 CVE 자동 글을 발행하지 않고, 이 페이지에만 기록합니다.</p>
     <div class="meta">
-      <span>Total 673</span>
-      <span>Updated 2026-08-24 08:00 KST</span>
+      <span>Total 678</span>
+      <span>Updated 2026-08-24 20:00 KST</span>
       <span>Source NVD API</span>
     </div>
   </section>
   <div class="notice">중복 제거 기준은 CVE ID입니다. 동일 CVE는 다시 추가하지 않습니다. 실제 악용 여부와 패치 우선순위는 CISA KEV, 벤더 권고, 자산 노출 여부와 함께 검토해야 합니다.</div>
 
+    <article class="cve-card" id="CVE-2026-78211">
+      <div class="cve-top">
+        <a class="cve-id" href="https://nvd.nist.gov/vuln/detail/CVE-2026-78211" target="_blank" rel="noopener">CVE-2026-78211</a>
+        <span class="score">CVSS 9.8 CRITICAL</span>
+      </div>
+      <p class="desc">4MOSAn GCB Doctor developed by 4MOSAn Security Technology has a OS Command Injection vulnerability. Unauthenticated remote attackers can inject malicious commands through an unremoved ADOdb test page parameter, thereby executing arbitrary system commands on the server.</p>
+      <dl>
+        <div><dt>Published</dt><dd>2026-08-24</dd></div>
+        <div><dt>Last Modified</dt><dd>2026-08-24</dd></div>
+        <div><dt>Status</dt><dd>Received</dd></div>
+        <div><dt>Attack Vector</dt><dd>네트워크</dd></div>
+        <div><dt>Attack Complexity</dt><dd>낮음</dd></div>
+        <div><dt>Privileges</dt><dd>없음</dd></div>
+        <div><dt>User Interaction</dt><dd>없음</dd></div>
+        <div><dt>CWE</dt><dd>CWE-78</dd></div>
+        <div><dt>Affected</dt><dd>NVD CPE 기준 확인 필요</dd></div>
+      </dl>
+      <div class="vector"><code>CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H</code></div>
+      <details>
+        <summary>References</summary>
+        <ul><li><a href="https://www.twcert.org.tw/en/cp-139-11122-3d95a-2.html" target="_blank" rel="noopener">https://www.twcert.org.tw/en/cp-139-11122-3d95a-2.html</a></li><li><a href="https://www.twcert.org.tw/tw/cp-132-11118-dfee4-1.html" target="_blank" rel="noopener">https://www.twcert.org.tw/tw/cp-132-11118-dfee4-1.html</a></li></ul>
+      </details>
+    </article>
+    <article class="cve-card" id="CVE-2026-78207">
+      <div class="cve-top">
+        <a class="cve-id" href="https://nvd.nist.gov/vuln/detail/CVE-2026-78207" target="_blank" rel="noopener">CVE-2026-78207</a>
+        <span class="score">CVSS 9.4 CRITICAL</span>
+      </div>
+      <p class="desc">exceljs-hardened before 5.0.0 contains a prototype pollution vulnerability in the deepMerge helper that fails to reject __proto__, constructor, or prototype keys when merging note objects. Attackers can assign parsed JSON with a malicious __proto__ property to cell notes, modifying Object.prototype and affecting all plain objects created in the process.</p>
+      <dl>
+        <div><dt>Published</dt><dd>2026-08-24</dd></div>
+        <div><dt>Last Modified</dt><dd>2026-08-24</dd></div>
+        <div><dt>Status</dt><dd>Received</dd></div>
+        <div><dt>Attack Vector</dt><dd>네트워크</dd></div>
+        <div><dt>Attack Complexity</dt><dd>낮음</dd></div>
+        <div><dt>Privileges</dt><dd>없음</dd></div>
+        <div><dt>User Interaction</dt><dd>없음</dd></div>
+        <div><dt>CWE</dt><dd>CWE-1321</dd></div>
+        <div><dt>Affected</dt><dd>NVD CPE 기준 확인 필요</dd></div>
+      </dl>
+      <div class="vector"><code>CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:L</code></div>
+      <details>
+        <summary>References</summary>
+        <ul><li><a href="https://github.com/exceljs/exceljs" target="_blank" rel="noopener">https://github.com/exceljs/exceljs</a></li><li><a href="https://github.com/exceljs/exceljs/blob/v4.4.0/lib/utils/under-dash.js#L155-L181" target="_blank" rel="noopener">https://github.com/exceljs/exceljs/blob/v4.4.0/lib/utils/under-dash.js#L155-L181</a></li><li><a href="https://github.com/mateocallec/exceljs-hardened/security/advisories/GHSA-qwr4-7h29-chpf" target="_blank" rel="noopener">https://github.com/mateocallec/exceljs-hardened/security/advisories/GHSA-qwr4-7h29-chpf</a></li><li><a href="https://www.vulncheck.com/advisories/exceljs-through-prototype-pollution-via-deepmerge-reached-from-note-serialization" target="_blank" rel="noopener">https://www.vulncheck.com/advisories/exceljs-through-prototype-pollution-via-deepmerge-reached-from-note-serialization</a></li></ul>
+      </details>
+    </article>
+    <article class="cve-card" id="CVE-2026-78169">
+      <div class="cve-top">
+        <a class="cve-id" href="https://nvd.nist.gov/vuln/detail/CVE-2026-78169" target="_blank" rel="noopener">CVE-2026-78169</a>
+        <span class="score">CVSS 9.9 CRITICAL</span>
+      </div>
+      <p class="desc">A vulnerability was detected in UTT HiPER 1250GW up to 3.2.7-210907-180535. This impacts the function strcpy of the file /goform/aspRemoteApConfTempSend of the component HTTP Request Handler. Performing a manipulation of the argument Profile results in stack-based buffer overflow. The attack is possible to be carried out remotely. The exploit is now public and may be used.</p>
+      <dl>
+        <div><dt>Published</dt><dd>2026-08-24</dd></div>
+        <div><dt>Last Modified</dt><dd>2026-08-24</dd></div>
+        <div><dt>Status</dt><dd>Received</dd></div>
+        <div><dt>Attack Vector</dt><dd>네트워크</dd></div>
+        <div><dt>Attack Complexity</dt><dd>낮음</dd></div>
+        <div><dt>Privileges</dt><dd>낮음</dd></div>
+        <div><dt>User Interaction</dt><dd>없음</dd></div>
+        <div><dt>CWE</dt><dd>CWE-119, CWE-121</dd></div>
+        <div><dt>Affected</dt><dd>NVD CPE 기준 확인 필요</dd></div>
+      </dl>
+      <div class="vector"><code>CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H</code></div>
+      <details>
+        <summary>References</summary>
+        <ul><li><a href="https://github.com/7wkajk/CVE-VUL/blob/main/107.md" target="_blank" rel="noopener">https://github.com/7wkajk/CVE-VUL/blob/main/107.md</a></li><li><a href="https://vuldb.com/cve/CVE-2026-78169" target="_blank" rel="noopener">https://vuldb.com/cve/CVE-2026-78169</a></li><li><a href="https://vuldb.com/submit/883900" target="_blank" rel="noopener">https://vuldb.com/submit/883900</a></li><li><a href="https://vuldb.com/vuln/394558" target="_blank" rel="noopener">https://vuldb.com/vuln/394558</a></li></ul>
+      </details>
+    </article>
+    <article class="cve-card" id="CVE-2026-78168">
+      <div class="cve-top">
+        <a class="cve-id" href="https://nvd.nist.gov/vuln/detail/CVE-2026-78168" target="_blank" rel="noopener">CVE-2026-78168</a>
+        <span class="score">CVSS 9.8 CRITICAL</span>
+      </div>
+      <p class="desc">A security vulnerability has been detected in EFM ipTIME T24000M up to 14.20.0. This affects the function httpcon_check_session_url of the component Session Validation Handler. Such manipulation leads to improper authentication. The attack can be executed remotely. The exploit has been disclosed publicly and may be used. The vendor was contacted early about this disclosure but did not respond in any way.</p>
+      <dl>
+        <div><dt>Published</dt><dd>2026-08-24</dd></div>
+        <div><dt>Last Modified</dt><dd>2026-08-24</dd></div>
+        <div><dt>Status</dt><dd>Received</dd></div>
+        <div><dt>Attack Vector</dt><dd>네트워크</dd></div>
+        <div><dt>Attack Complexity</dt><dd>낮음</dd></div>
+        <div><dt>Privileges</dt><dd>없음</dd></div>
+        <div><dt>User Interaction</dt><dd>없음</dd></div>
+        <div><dt>CWE</dt><dd>CWE-287</dd></div>
+        <div><dt>Affected</dt><dd>NVD CPE 기준 확인 필요</dd></div>
+      </dl>
+      <div class="vector"><code>CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H</code></div>
+      <details>
+        <summary>References</summary>
+        <ul><li><a href="https://github.com/AdminSafe/CVE/issues/10" target="_blank" rel="noopener">https://github.com/AdminSafe/CVE/issues/10</a></li><li><a href="https://vuldb.com/cve/CVE-2026-78168" target="_blank" rel="noopener">https://vuldb.com/cve/CVE-2026-78168</a></li><li><a href="https://vuldb.com/submit/883766" target="_blank" rel="noopener">https://vuldb.com/submit/883766</a></li><li><a href="https://vuldb.com/vuln/394557" target="_blank" rel="noopener">https://vuldb.com/vuln/394557</a></li></ul>
+      </details>
+    </article>
+    <article class="cve-card" id="CVE-2026-78167">
+      <div class="cve-top">
+        <a class="cve-id" href="https://nvd.nist.gov/vuln/detail/CVE-2026-78167" target="_blank" rel="noopener">CVE-2026-78167</a>
+        <span class="score">CVSS 10.0 CRITICAL</span>
+      </div>
+      <p class="desc">A weakness has been identified in EFM ipTIME T16000M 14.20.2. The impacted element is the function httpcon_check_session_url of the component Session Validation Handler. This manipulation causes improper authentication. Remote exploitation of the attack is possible. The exploit has been made available to the public and could be used for attacks. The vendor was contacted early about this disclosure but did not respond in any way.</p>
+      <dl>
+        <div><dt>Published</dt><dd>2026-08-24</dd></div>
+        <div><dt>Last Modified</dt><dd>2026-08-24</dd></div>
+        <div><dt>Status</dt><dd>Received</dd></div>
+        <div><dt>Attack Vector</dt><dd>네트워크</dd></div>
+        <div><dt>Attack Complexity</dt><dd>낮음</dd></div>
+        <div><dt>Privileges</dt><dd>없음</dd></div>
+        <div><dt>User Interaction</dt><dd>없음</dd></div>
+        <div><dt>CWE</dt><dd>CWE-287</dd></div>
+        <div><dt>Affected</dt><dd>NVD CPE 기준 확인 필요</dd></div>
+      </dl>
+      <div class="vector"><code>CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:H</code></div>
+      <details>
+        <summary>References</summary>
+        <ul><li><a href="https://github.com/AdminSafe/CVE/issues/2" target="_blank" rel="noopener">https://github.com/AdminSafe/CVE/issues/2</a></li><li><a href="https://github.com/AdminSafe/CVE/issues/3" target="_blank" rel="noopener">https://github.com/AdminSafe/CVE/issues/3</a></li><li><a href="https://vuldb.com/cve/CVE-2026-78167" target="_blank" rel="noopener">https://vuldb.com/cve/CVE-2026-78167</a></li><li><a href="https://vuldb.com/submit/874154" target="_blank" rel="noopener">https://vuldb.com/submit/874154</a></li></ul>
+      </details>
+    </article>
     <article class="cve-card" id="CVE-2026-8445">
       <div class="cve-top">
         <a class="cve-id" href="https://nvd.nist.gov/vuln/detail/CVE-2026-8445" target="_blank" rel="noopener">CVE-2026-8445</a>
