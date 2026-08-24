@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>취약점, 랜섬웨어 — 2026.08.24 보안 브리핑 | SecuLog</title>
+<meta name="description" content="오늘 주요 취약점·침해 사고·위협 트렌드 요약.">
+<meta name="keywords" content="CVE, 랜섬웨어, 취약점, 침해사고, 보안">
+<meta name="author" content="Felix">
+<meta property="og:type" content="article">
+<meta property="og:title" content="취약점, 랜섬웨어 — 2026.08.24 보안 브리핑">
+<meta property="og:description" content="오늘 주요 취약점·침해 사고·위협 트렌드 요약.">
+<meta property="og:url" content="https://macbong83.github.io/posts/2026-08-24.html">
+<meta property="og:site_name" content="SecuLog">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="취약점, 랜섬웨어 — 2026.08.24 보안 브리핑">
+<meta name="twitter:description" content="오늘 주요 취약점·침해 사고·위협 트렌드 요약.">
+<link rel="canonical" href="https://macbong83.github.io/posts/2026-08-24.html">
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: -apple-system, 'Malgun Gothic', 'Apple SD Gothic Neo', Arial, sans-serif; background: #f4f5f7; color: #1a1a2e; line-height: 1.6; }
+  a { text-decoration: none; color: inherit; }
+  .wrapper { max-width: 700px; margin: 32px auto; background: #ffffff; border-radius: 12px; overflow: hidden; box-shadow: 0 2px 20px rgba(0,0,0,0.08); }
+  .header { background: #eef0f4; padding: 28px 36px 24px; display: flex; align-items: center; justify-content: space-between; gap: 16px; border-bottom: 3px solid #0d1b3e; }
+  .wordmark { font-size: 26px; font-weight: 800; letter-spacing: -0.02em; color: #0d1b3e; }
+  .wordmark .accent { color: #2563eb; }
+  .header-meta { text-align: right; }
+  .header-meta .nl-label { font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase; color: #6b7488; margin-bottom: 4px; }
+  .header-meta .nl-title { font-size: 17px; font-weight: 700; color: #0d1b3e; }
+  .header-meta .nl-date { font-size: 12px; color: #8a93a8; margin-top: 3px; }
+  .body { padding: 28px 36px 32px; }
+  .section-label { font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase; color: #8a93a8; font-weight: 600; padding-bottom: 8px; border-bottom: 1px solid #e8eaed; margin-bottom: 4px; margin-top: 28px; }
+  .section-label:first-child { margin-top: 0; }
+  .card { display: block; padding: 16px 0; border-bottom: 1px solid #f0f1f3; transition: background 0.15s; }
+  .card:last-child { border-bottom: none; }
+  .card:hover { background: #f8f9fc; margin: 0 -36px; padding: 16px 36px; }
+  .card-top { display: flex; align-items: center; gap: 8px; margin-bottom: 6px; flex-wrap: wrap; }
+  .badge { font-size: 10px; font-weight: 700; padding: 3px 9px; border-radius: 4px; letter-spacing: 0.04em; }
+  .badge-critical { background: #fff0f0; color: #c0392b; border: 1px solid #f5c6c6; }
+  .badge-high { background: #fff7ee; color: #b94d00; border: 1px solid #fdd5a8; }
+  .badge-medium { background: #fff9e6; color: #856900; border: 1px solid #f9e0a0; }
+  .badge-incident { background: #f3f0ff; color: #6133c0; border: 1px solid #cfc0f5; }
+  .source { font-size: 11px; color: #a0a8b8; }
+  .card-headline { font-size: 14px; font-weight: 600; color: #0d1b3e; margin-bottom: 5px; line-height: 1.45; }
+  .card-headline .arrow { font-size: 12px; color: #2563eb; margin-left: 4px; opacity: 0; transition: opacity 0.15s; }
+  .card:hover .card-headline .arrow { opacity: 1; }
+  .card-summary { font-size: 13px; color: #4a5568; line-height: 1.65; }
+  .trend-box { background: #f8f9fc; border-radius: 10px; padding: 18px 20px; margin-top: 6px; }
+  .trend-row { display: flex; gap: 12px; padding: 10px 0; border-bottom: 1px solid #e8eaed; align-items: flex-start; }
+  .trend-row:last-child { border-bottom: none; padding-bottom: 0; }
+  .trend-num { font-size: 11px; font-weight: 700; color: #2563eb; min-width: 22px; padding-top: 2px; }
+  .trend-text { font-size: 13px; color: #4a5568; line-height: 1.6; }
+  .trend-text strong { color: #0d1b3e; font-weight: 600; }
+  .footer { background: #f4f5f7; border-top: 1px solid #e8eaed; padding: 16px 36px; font-size: 11px; color: #9aa0b0; line-height: 1.6; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 8px; }
+  .footer-meta { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; justify-content: flex-end; }
+  .linkedin-link { display: inline-flex; align-items: center; justify-content: center; min-height: 28px; padding: 6px 12px; border-radius: 6px; background: #0a66c2; color: #fff; font-size: 12px; font-weight: 800; letter-spacing: 0.01em; box-shadow: 0 6px 14px rgba(10,102,194,0.16); }
+  .linkedin-link:hover { background: #004182; color: #fff; }
+  .card-inner { display: flex; gap: 14px; }
+  .sev-bar { width: 3px; border-radius: 2px; flex-shrink: 0; margin: 3px 0; }
+  .sev-critical { background: #e74c3c; }
+  .sev-high { background: #e67e22; }
+  .sev-medium { background: #f0b429; }
+  .sev-incident { background: #7c3aed; }
+  .card-content { flex: 1; }
+  @media (max-width: 600px) {
+    .wrapper { margin: 0; border-radius: 0; box-shadow: none; }
+    .header { padding: 18px 20px 16px; flex-direction: column; align-items: flex-start; gap: 8px; }
+    .header-meta { text-align: left; }
+    .body { padding: 18px 20px 24px; }
+    .card:hover { margin: 0 -20px; padding: 16px 20px; }
+    .footer { padding: 14px 20px; flex-direction: column; align-items: flex-start; }
+    .footer-meta { justify-content: flex-start; }
+    .wordmark { font-size: 22px; }
+    .card-headline { font-size: 13px; }
+    .card-summary { font-size: 12px; }
+    .card-headline .arrow { opacity: 1; }
+  }
+</style>
+</head>
+<body>
+<div class="wrapper">
+  <div class="header">
+    <div class="header-logo">
+      <span class="wordmark">Secu<span class="accent">Log</span></span>
+    </div>
+    <div class="header-meta">
+      <div class="nl-label">글로벌 정보보안 뉴스레터</div>
+      <div class="nl-title">보안 브리핑</div>
+      <div class="nl-date">2026년 8월 24일 월요일</div>
+    </div>
+  </div>
+  <div class="body">
+    <div class="section-label">취약점 &amp; 공격</div>
+
+    <a class="card" href="https://www.dailysecu.com/news/articleView.html?idxno=208156" target="_blank">
+      <div class="card-inner"><div class="sev-bar sev-critical"></div><div class="card-content">
+        <div class="card-top"><span class="badge badge-critical">긴급</span><span class="source">Security Affairs</span></div>
+        <div class="card-headline">NASA 우주선 오픈소스 소프트웨어에 치명적 취약점 발견<span class="arrow">↗</span></div>
+        <div class="card-summary">NASA 제트추진연구소(JPL)에서 공개한 우주 임무용 오픈소스 소프트웨어 AIT-GUI에 인증 없이 우주선이나 탑재 장비에 명령을 전달할 수 있는 치명적인 취약점이 발견됐다. CVSS 기준 9.4점으로 평가됐으며, 해당 취약점은 GHSA-p9r8-2q67-fp86으로 관리되고 있다.</div>
+      </div></div>
+    </a>
+
+    <a class="card" href="https://securityaffairs.com/197717/hacking/zero-click-grok-chat-history-theft-adversa-ai-demonstrates-cryptographic-context-injection.html" target="_blank">
+      <div class="card-inner"><div class="sev-bar sev-high"></div><div class="card-content">
+        <div class="card-top"><span class="badge badge-high">높음</span><span class="source">Security Affairs</span></div>
+        <div class="card-headline">Zero-Click Grok Chat History Theft 기법 발견<span class="arrow">↗</span></div>
+        <div class="card-summary">Adversa AI 연구원이 새로운 공격 기법인 &#x27;Cryptographic Context Injection&#x27;을 개발해 Grok 채팅 기록을 zero-click 방식으로 유출할 수 있는 것으로 확인됐다. AES 암호화된 페이로드를 사용해 AI 안전 필터를 우회하는 방식이다.</div>
+      </div></div>
+    </a>
+
+    <a class="card" href="https://securityaffairs.com/197681/breaking-news/toxicpanda-2-0-gets-a-major-upgrade.html" target="_blank">
+      <div class="card-inner"><div class="sev-bar sev-high"></div><div class="card-content">
+        <div class="card-top"><span class="badge badge-high">높음</span><span class="source">Security Affairs</span></div>
+        <div class="card-headline">ToxicPanda 2.0, 16개 국가에 걸쳐 확장된 공격<span class="arrow">↗</span></div>
+        <div class="card-summary">ToxicPanda 2.0은 349개의 금융 앱을 대상으로 하며, Android 무선 디버깅 기능을 악용해 장치에 대한 더 깊은 접근을 얻고, 은행 인증 정보를 도용하는 것으로 확인됐다.</div>
+      </div></div>
+    </a>
+
+    <a class="card" href="https://securityaffairs.com/197743/security/security-affairs-malware-newsletter-round-111.html" target="_blank">
+      <div class="card-inner"><div class="sev-bar sev-medium"></div><div class="card-content">
+        <div class="card-top"><span class="badge badge-medium">중간</span><span class="source">Security Affairs</span></div>
+        <div class="card-headline">Multi-Functional Linux Botnet &#x27;Evooo1Bot&#x27; 발견<span class="arrow">↗</span></div>
+        <div class="card-summary">Security Affairs Malware Newsletter에서 다룬 &#x27;Evooo1Bot&#x27;은 다기능 Linux 봇넷으로, 다양한 악성 활동을 수행할 수 있는 것으로 확인됐다.</div>
+      </div></div>
+    </a>
+
+    <div class="section-label">침해 사고</div>
+
+    <a class="card" href="https://www.dailysecu.com/news/articleView.html?idxno=208155" target="_blank">
+      <div class="card-inner"><div class="sev-bar sev-incident"></div><div class="card-content">
+        <div class="card-top"><span class="badge badge-incident">사고</span><span class="source">데일리시큐</span></div>
+        <div class="card-headline">플라이, 개인정보 유출 사고 발생<span class="arrow">↗</span></div>
+        <div class="card-summary">배달 플랫폼 플라이가 개인정보 유출 사실을 공식 확인했다. 의심되는 유출 건수는 약 33만건이며, 해외 해킹포럼에서 주장한 4,790만건은 과장된 것으로 보인다.</div>
+      </div></div>
+    </a>
+
+    <a class="card" href="https://www.daily시큐.com/news/articleView.html?idxno=208152" target="_blank">
+      <div class="card-inner"><div class="sev-bar sev-incident"></div><div class="card-content">
+        <div class="card-top"><span class="badge badge-incident">사고</span><span class="source">데일리시큐</span></div>
+        <div class="card-headline">델타항공 기내에 가짜 와이파이 네트워크 발견<span class="arrow">↗</span></div>
+        <div class="card-summary">델타항공 여객기 내에서 항공사 공식 서비스를 가장한 비인가 와이파이 네트워크가 발견돼 FBI와 항공당국이 조사에 나섰다. 승객을 유인해 계정 정보를 유출하려는 의도로 보인다.</div>
+      </div></div>
+    </a>
+
+    <a class="card" href="https://www.dailysecu.com/news/articleView.html?idxno=208151" target="_blank">
+      <div class="card-inner"><div class="sev-bar sev-incident"></div><div class="card-content">
+        <div class="card-top"><span class="badge badge-incident">사고</span><span class="source">데일리시큐</span></div>
+        <div class="card-headline">MS 팀즈 피싱 공격으로 &#x27;시놉로더&#x27; 유포<span class="arrow">↗</span></div>
+        <div class="card-summary">마이크로소프트 팀즈에서 기업 IT 지원팀을 사칭해 &#x27;시놉로더&#x27; 악성코드를 유포하는 공격이 확인됐다. 가짜 윈도 잠금 화면을 통해 비밀번호를 탈취하려는 것으로 보인다.</div>
+      </div></div>
+    </a>
+
+    <div class="section-label">동향 &amp; 분석</div>
+    <div class="trend-box">
+      <div class="trend-row">
+        <div class="trend-num">01</div>
+        <div class="trend-text"><strong>AI 보안 우회 기법 증가</strong> — AI 모델의 안전 필터를 우회하는 기법이 증가하고 있으며, 특히 암호화된 페이로드를 사용해 zero-click 방식으로 정보를 유출하는 공격이 주목받고 있다.</div>
+      </div>
+      <div class="trend-row">
+        <div class="trend-num">02</div>
+        <div class="trend-text"><strong>공개된 클라우드 자격 증명 여전히 활성화</strong> — AWS 접근키 수천 개가 수년이 지난 뒤에도 여전히 활성화된 것으로 확인됐으며, 일부는 기업 클라우드 관리자 권한을 갖고 있는 것으로 보인다.</div>
+      </div>
+      <div class="trend-row">
+        <div class="trend-num">03</div>
+        <div class="trend-text"><strong>국제적 사이버 공격 확대</strong> — 국제적으로 사이버 공격이 확대되고 있으며, 특히 우크라이나 전력 시설을 대상으로 한 공격과 미국 물류 인프라에 대한 공격이 동시에 발생한 것으로 보인다.</div>
+      </div>
+      <div class="trend-row">
+        <div class="trend-num">04</div>
+        <div class="trend-text"><strong>악성코드 진화 및 확장</strong> — 악성코드가 지속적으로 진화하고 있으며, 특히 Toxipanda 2.0과 같은 봇넷이 여러 국가에 걸쳐 확장되고 있다.</div>
+      </div>
+    </div>
+  </div>
+  <div class="footer">
+    <div>출처: The Hacker News · BleepingComputer · SecurityWeek · KrebsOnSecurity · CISA · NCSC UK · Unit 42 · 보안뉴스 · 데일리시큐 · 전자신문</div>
+    <div class="footer-meta">
+      <span>© 2026 Felix · SecuLog. 본 브리핑은 공개된 보안 뉴스를 기반으로 작성되었습니다.</span>
+    </div>
+  </div>
+</div>
+</body>
+</html>
