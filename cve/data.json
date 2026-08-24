@@ -148,6 +148,118 @@
     "added_at": "2026-08-24T20:00:32+09:00"
   },
   {
+    "id": "CVE-2026-77915",
+    "published": "2026-08-24",
+    "last_modified": "2026-08-24",
+    "status": "Received",
+    "description": "rConfig 8.0.0 before 8.2.13 contains an authentication bypass vulnerability that allows unauthenticated attackers to self-register accounts with full Administrator privileges due to a duplicate bare Auth::routes() call in routes/web.php that re-enables the POST /register route after it was explicitly disabled. Attackers can register a new account that is immediately authenticated with Admin-level access because the registration controller does not assign a role and the users.role column defaults to Admin, enabling access to stored device credentials, user data, and API token issuance.",
+    "cvss": {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "score": 9.8,
+      "severity": "CRITICAL",
+      "attack_vector": "네트워크",
+      "attack_complexity": "낮음",
+      "privileges_required": "없음",
+      "user_interaction": "없음"
+    },
+    "cwes": [
+      "CWE-306",
+      "CWE-1188"
+    ],
+    "affected": [],
+    "references": [
+      "https://github.com/rconfig/rconfig/releases#release-core-8.2.10",
+      "https://github.com/rconfig/rconfig/security/advisories/GHSA-w3hx-9cxg-5ccr",
+      "https://www.vulncheck.com/advisories/rconfig-unauthorized-admin-registration-via-web-php"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-77915",
+    "added_at": "2026-08-25T08:00:48+09:00"
+  },
+  {
+    "id": "CVE-2026-76071",
+    "published": "2026-08-24",
+    "last_modified": "2026-08-24",
+    "status": "Received",
+    "description": "Netis NC63 firmware through V3.0.0.3327 contains a stack-based buffer overflow vulnerability that allows unauthenticated remote attackers to overwrite saved stack state by supplying an oversized destHost parameter to the ipFilterList=mod action in netis.cgi. Attackers can exploit widthless sscanf conversions that copy user-supplied input into fixed-size stack buffers before authentication is verified, achieving remote code execution as root due to the Boa web server executing the CGI environment with root privileges.",
+    "cvss": {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "score": 9.8,
+      "severity": "CRITICAL",
+      "attack_vector": "네트워크",
+      "attack_complexity": "낮음",
+      "privileges_required": "없음",
+      "user_interaction": "없음"
+    },
+    "cwes": [
+      "CWE-121"
+    ],
+    "affected": [],
+    "references": [
+      "https://github.com/ozcanpng/CVE-2026-76071",
+      "https://ozcanpng.dev/blog/cve-2026-76071-netis-nc63-ipfilter-stack-buffer-overflow/",
+      "https://www.netis-systems.com/products/NC63.html",
+      "https://www.vulncheck.com/advisories/netis-nc63-stack-buffer-overflow-via-desthost-parameter"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-76071",
+    "added_at": "2026-08-25T08:00:48+09:00"
+  },
+  {
+    "id": "CVE-2026-71933",
+    "published": "2026-08-24",
+    "last_modified": "2026-08-24",
+    "status": "Received",
+    "description": "Multiple DrayTek VigorSwitch models contain unauthorized operation vulnerabilities in multiple syslog functions. The vulnerability is caused by missing authorization checks. A remote attacker can trigger these vulnerabilities via crafted requests to modify configuration, restart services, save startup configuration, or clear logs.",
+    "cvss": {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:H",
+      "score": 9.1,
+      "severity": "CRITICAL",
+      "attack_vector": "네트워크",
+      "attack_complexity": "낮음",
+      "privileges_required": "없음",
+      "user_interaction": "없음"
+    },
+    "cwes": [
+      "CWE-862"
+    ],
+    "affected": [],
+    "references": [
+      "https://www.draytek.com/about/security-advisory/multiple-vulnerabilities-in-vigorswitch-series-august-2026/",
+      "https://www.vulncheck.com/advisories/draytek-vigorswitch-multiple-models-missing-authorization-in-syslog-functions"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-71933",
+    "added_at": "2026-08-25T08:00:48+09:00"
+  },
+  {
+    "id": "CVE-2026-71921",
+    "published": "2026-08-24",
+    "last_modified": "2026-08-24",
+    "status": "Received",
+    "description": "Multiple DrayTek VigorSwitch models contain a pre-authentication command injection vulnerability in the setget.cgi interface. The vulnerability is caused by insufficient filtering of the pass field before command execution. A remote attacker can trigger this vulnerability via crafted input to execute arbitrary commands with root privileges.",
+    "cvss": {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "score": 9.8,
+      "severity": "CRITICAL",
+      "attack_vector": "네트워크",
+      "attack_complexity": "낮음",
+      "privileges_required": "없음",
+      "user_interaction": "없음"
+    },
+    "cwes": [
+      "CWE-78"
+    ],
+    "affected": [],
+    "references": [
+      "https://www.draytek.com/about/security-advisory/multiple-vulnerabilities-in-vigorswitch-series-august-2026/",
+      "https://www.vulncheck.com/advisories/draytek-vigorswitch-multiple-models-pre-authentication-os-command-injection-via-setget-cgi"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-71921",
+    "added_at": "2026-08-25T08:00:48+09:00"
+  },
+  {
     "id": "CVE-2026-8445",
     "published": "2026-08-23",
     "last_modified": "2026-08-23",
