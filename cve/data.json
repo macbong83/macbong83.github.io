@@ -1,5 +1,92 @@
 [
   {
+    "id": "CVE-2026-80104",
+    "published": "2026-08-25",
+    "last_modified": "2026-08-25",
+    "status": "Received",
+    "description": "DB-GPT builds the destination path for an uploaded skill from the multipart filename without constraining it to the upload directory. skill_upload in packages/dbgpt-app/src/dbgpt_app/openapi/api_v1/agentic_data_api.py takes file.filename as given and writes the request body to upload_dir / filename. A path composed with that operator discards the left operand when the right one is absolute and follows parent references otherwise, so a filename such as ../../../tmp/x or /tmp/x resolves outside the intended directory; nothing canonicalises the result, checks that it remains under the upload root, or prevents a .py suffix. The route's only dependency is get_user_from_headers in dbgpt_serve/utils/auth.py, which returns a request carrying the admin role whether or not a user_id header is supplied, so the endpoint is reachable without credentials. A remote attacker holding no account can therefore write attacker-controlled bytes to any path the server process can write, place a new Python module inside the application package or replace one the application already imports, and obtain code execution in the server process when that module is next imported.",
+    "cvss": {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "score": 9.8,
+      "severity": "CRITICAL",
+      "attack_vector": "네트워크",
+      "attack_complexity": "낮음",
+      "privileges_required": "없음",
+      "user_interaction": "없음"
+    },
+    "cwes": [
+      "CWE-22"
+    ],
+    "affected": [],
+    "references": [
+      "https://github.com/eosphoros-ai/DB-GPT",
+      "https://github.com/eosphoros-ai/DB-GPT/blob/v0.8.0/packages/dbgpt-app/src/dbgpt_app/openapi/api_v1/agentic_data_api.py",
+      "https://github.com/eosphoros-ai/DB-GPT/releases/tag/v0.8.1",
+      "https://pypi.org/project/dbgpt-app/",
+      "https://www.vulncheck.com/advisories/db-gpt-0.8.0-path-traversal-arbitrary-file-write-via-skill-upload-filename"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-80104",
+    "added_at": "2026-08-26T08:00:47+09:00"
+  },
+  {
+    "id": "CVE-2026-79787",
+    "published": "2026-08-25",
+    "last_modified": "2026-08-25",
+    "status": "Received",
+    "description": "Alluxio's S3 REST proxy fails to verify AWS Signature Version 4 signatures in its default configuration, allowing unauthenticated attackers to spoof user identity. Attackers can extract usernames from unsigned Authorization headers and impersonate any user, including service accounts, to read, write, and delete arbitrary data.",
+    "cvss": {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "score": 9.8,
+      "severity": "CRITICAL",
+      "attack_vector": "네트워크",
+      "attack_complexity": "낮음",
+      "privileges_required": "없음",
+      "user_interaction": "없음"
+    },
+    "cwes": [
+      "CWE-287"
+    ],
+    "affected": [],
+    "references": [
+      "https://github.com/Alluxio/alluxio",
+      "https://github.com/Alluxio/alluxio/blob/v2.9.5/core/server/proxy/src/main/java/alluxio/proxy/s3/S3RestUtils.java",
+      "https://github.com/Alluxio/alluxio/issues/18755",
+      "https://www.vulncheck.com/advisories/alluxio-through-2.9.5-s3-rest-proxy-authentication-bypass-via-unverified-request-signature",
+      "https://github.com/Alluxio/alluxio/issues/18755"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-79787",
+    "added_at": "2026-08-26T08:00:47+09:00"
+  },
+  {
+    "id": "CVE-2026-79675",
+    "published": "2026-08-25",
+    "last_modified": "2026-08-25",
+    "status": "Received",
+    "description": "NLTK before 3.10.3 fails to validate JVM options passed through the per-call options parameter in the java() function, allowing attackers to inject dangerous JVM flags. Attackers can supply malicious options like -agentpath, -javaagent, or @argfile to Stanford wrapper classes to achieve arbitrary code execution.",
+    "cvss": {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "score": 9.8,
+      "severity": "CRITICAL",
+      "attack_vector": "네트워크",
+      "attack_complexity": "낮음",
+      "privileges_required": "없음",
+      "user_interaction": "없음"
+    },
+    "cwes": [
+      "CWE-88"
+    ],
+    "affected": [],
+    "references": [
+      "https://github.com/nltk/nltk/security/advisories/GHSA-m4rf-3fr8-xwx3",
+      "https://www.vulncheck.com/advisories/nltk-before-jvm-argument-injection-via-per-call-options"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-79675",
+    "added_at": "2026-08-26T08:00:47+09:00"
+  },
+  {
     "id": "CVE-2026-78683",
     "published": "2026-08-25",
     "last_modified": "2026-08-25",
@@ -135,6 +222,84 @@
     "added_at": "2026-08-25T20:00:47+09:00"
   },
   {
+    "id": "CVE-2026-76197",
+    "published": "2026-08-25",
+    "last_modified": "2026-08-25",
+    "status": "Received",
+    "description": "Adobe Campaign Classic (ACC) is affected by an Improper Neutralization of Special Elements used in an OS Command ('OS Command Injection') vulnerability that could result in arbitrary code execution in the context of the current user. An attacker could exploit this vulnerability to execute arbitrary code. Exploitation of this issue does not require user interaction. Scope is changed.",
+    "cvss": {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:H",
+      "score": 10.0,
+      "severity": "CRITICAL",
+      "attack_vector": "네트워크",
+      "attack_complexity": "낮음",
+      "privileges_required": "없음",
+      "user_interaction": "없음"
+    },
+    "cwes": [
+      "CWE-78"
+    ],
+    "affected": [],
+    "references": [
+      "https://helpx-internal.corp.adobe.com/content/help/en/security/products/campaign/apsb26-134.html"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-76197",
+    "added_at": "2026-08-26T08:00:47+09:00"
+  },
+  {
+    "id": "CVE-2026-76195",
+    "published": "2026-08-25",
+    "last_modified": "2026-08-25",
+    "status": "Received",
+    "description": "Adobe Campaign Classic (ACC) is affected by an Improper Neutralization of Special Elements used in an OS Command ('OS Command Injection') vulnerability that could result in arbitrary code execution in the context of the current user. An attacker could exploit this vulnerability to execute arbitrary code. Exploitation of this issue does not require user interaction. Scope is changed.",
+    "cvss": {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:H",
+      "score": 10.0,
+      "severity": "CRITICAL",
+      "attack_vector": "네트워크",
+      "attack_complexity": "낮음",
+      "privileges_required": "없음",
+      "user_interaction": "없음"
+    },
+    "cwes": [
+      "CWE-78"
+    ],
+    "affected": [],
+    "references": [
+      "https://helpx-internal.corp.adobe.com/content/help/en/security/products/campaign/apsb26-134.html"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-76195",
+    "added_at": "2026-08-26T08:00:47+09:00"
+  },
+  {
+    "id": "CVE-2026-76193",
+    "published": "2026-08-25",
+    "last_modified": "2026-08-25",
+    "status": "Received",
+    "description": "Adobe Campaign Classic (ACC) is affected by a Server-Side Request Forgery (SSRF) vulnerability that could result in arbitrary code execution in the context of the current user. An attacker could exploit this vulnerability to execute arbitrary code. Exploitation of this issue does not require user interaction. Scope is changed.",
+    "cvss": {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:H",
+      "score": 10.0,
+      "severity": "CRITICAL",
+      "attack_vector": "네트워크",
+      "attack_complexity": "낮음",
+      "privileges_required": "없음",
+      "user_interaction": "없음"
+    },
+    "cwes": [
+      "CWE-918"
+    ],
+    "affected": [],
+    "references": [
+      "https://helpx-internal.corp.adobe.com/content/help/en/security/products/campaign/apsb26-134.html"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-76193",
+    "added_at": "2026-08-26T08:00:47+09:00"
+  },
+  {
     "id": "CVE-2026-63586",
     "published": "2026-08-25",
     "last_modified": "2026-08-25",
@@ -213,6 +378,89 @@
     ],
     "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-56705",
     "added_at": "2026-08-25T20:00:47+09:00"
+  },
+  {
+    "id": "CVE-2026-16286",
+    "published": "2026-08-25",
+    "last_modified": "2026-08-25",
+    "status": "Received",
+    "description": "Unrestricted upload of file with dangerous type vulnerability in TRtek Technological Products Computer Software Hardware Industry and Trade Limited Company Software Repository Management allows Upload a Web Shell to a Web Server.\n\nThis issue affects Software Repository Management: before 2fb4acee.",
+    "cvss": {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "score": 9.8,
+      "severity": "CRITICAL",
+      "attack_vector": "네트워크",
+      "attack_complexity": "낮음",
+      "privileges_required": "없음",
+      "user_interaction": "없음"
+    },
+    "cwes": [
+      "CWE-434"
+    ],
+    "affected": [],
+    "references": [
+      "https://siberguvenlik.gov.tr/guvenlik-bildirimleri/detay/tr-26-0899"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-16286",
+    "added_at": "2026-08-26T08:00:47+09:00"
+  },
+  {
+    "id": "CVE-2024-58378",
+    "published": "2026-08-25",
+    "last_modified": "2026-08-25",
+    "status": "Received",
+    "description": "Nokogiri before 1.15.6 and 1.16.x before 1.16.2 (CRuby, when using the packaged libxml2) is affected by a use-after-free vulnerability in libxml2 (CVE-2024-25062) in the xmlTextReader module, which underlies Nokogiri::XML::Reader. When using the XML Reader interface with DTD validation and XInclude expansion enabled, processing a crafted XML document can lead to an xmlValidatePopElement use-after-free. Nokogiri 1.15.6 and 1.16.2 resolve this by upgrading the packaged libxml2 to 2.11.7 and 2.12.5 respectively. JRuby and installations using system libxml2 are not affected.",
+    "cvss": {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "score": 9.8,
+      "severity": "CRITICAL",
+      "attack_vector": "네트워크",
+      "attack_complexity": "낮음",
+      "privileges_required": "없음",
+      "user_interaction": "없음"
+    },
+    "cwes": [
+      "CWE-416"
+    ],
+    "affected": [],
+    "references": [
+      "https://github.com/sparklemotion/nokogiri/commit/92721970",
+      "https://github.com/sparklemotion/nokogiri/security/advisories/GHSA-xc9x-jj77-9p9j",
+      "https://www.vulncheck.com/advisories/nokogiri-before-use-after-free-via-xmltextreader"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2024-58378",
+    "added_at": "2026-08-26T08:00:47+09:00"
+  },
+  {
+    "id": "CVE-2022-51000",
+    "published": "2026-08-25",
+    "last_modified": "2026-08-25",
+    "status": "Received",
+    "description": "Nokogiri before 1.13.2 (CRuby, when using packaged libraries) ships vendored libxml2 2.9.12 and libxslt 1.1.34, which are affected by two upstream CVEs. Via CVE-2021-30560 in libxslt, an application transforming XML with untrusted XSL stylesheets is vulnerable to a denial-of-service attack. Via CVE-2022-23308 in libxml2, an application parsing an untrusted document with parse option DTDVALID set to true and NOENT set to false may be vulnerable to denial of service, memory disclosure, or code execution. Nokogiri 1.13.2 upgrades vendored libxml2 to 2.9.13 and libxslt to 1.1.35.",
+    "cvss": {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "score": 9.8,
+      "severity": "CRITICAL",
+      "attack_vector": "네트워크",
+      "attack_complexity": "낮음",
+      "privileges_required": "없음",
+      "user_interaction": "없음"
+    },
+    "cwes": [
+      "CWE-416"
+    ],
+    "affected": [],
+    "references": [
+      "https://github.com/sparklemotion/nokogiri/commit/50f9c9c",
+      "https://github.com/sparklemotion/nokogiri/commit/652dd12",
+      "https://github.com/sparklemotion/nokogiri/security/advisories/GHSA-fq42-c5rg-92c2",
+      "https://www.vulncheck.com/advisories/nokogiri-before-multiple-vulnerabilities-via-libxml2-libxslt"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2022-51000",
+    "added_at": "2026-08-26T08:00:47+09:00"
   },
   {
     "id": "CVE-2026-78211",
