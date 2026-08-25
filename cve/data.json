@@ -1,5 +1,220 @@
 [
   {
+    "id": "CVE-2026-78683",
+    "published": "2026-08-25",
+    "last_modified": "2026-08-25",
+    "status": "Received",
+    "description": "NLTK before 3.10.0 (affected versions <=3.9.4) contains an unsafe pickle deserialization vulnerability in the TransitionParser.parse() method (nltk/parse/transitionparser.py). The method calls pickle_load() with the default restricted=False, routing deserialization through WarningUnpickler, which does not override find_class() and therefore permits arbitrary class resolution. When an application loads an attacker-crafted model file, embedded pickle gadget chains execute arbitrary Python code with the privileges of the user running the application. NLTK provides a RestrictedUnpickler for safe deserialization, but it is not used by production code paths. Fixed in 3.10.0.",
+    "cvss": {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:H/I:H/A:H",
+      "score": 9.6,
+      "severity": "CRITICAL",
+      "attack_vector": "네트워크",
+      "attack_complexity": "낮음",
+      "privileges_required": "없음",
+      "user_interaction": "필요"
+    },
+    "cwes": [
+      "CWE-502"
+    ],
+    "affected": [],
+    "references": [
+      "https://github.com/nltk/nltk/security/advisories/GHSA-rhp5-r9x4-f5g2",
+      "https://www.vulncheck.com/advisories/nltk-before-remote-code-execution-via-unsafe-pickle-deserialization"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-78683",
+    "added_at": "2026-08-25T20:00:47+09:00"
+  },
+  {
+    "id": "CVE-2026-78676",
+    "published": "2026-08-25",
+    "last_modified": "2026-08-25",
+    "status": "Received",
+    "description": "GitPython before 3.1.59 fails to safely re-serialize multi-line git-config values during write operations, corrupting dormant quoted values into injected directives like core.hooksPath. Attackers can craft config files with embedded newlines that become live git directives after any unrelated GitPython config write, enabling arbitrary code execution via hook invocation.",
+    "cvss": {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "score": 9.8,
+      "severity": "CRITICAL",
+      "attack_vector": "네트워크",
+      "attack_complexity": "낮음",
+      "privileges_required": "없음",
+      "user_interaction": "없음"
+    },
+    "cwes": [
+      "CWE-88"
+    ],
+    "affected": [],
+    "references": [
+      "https://github.com/gitpython-developers/GitPython/security/advisories/GHSA-284h-m62q-gf8w",
+      "https://www.vulncheck.com/advisories/gitpython-before-remote-code-execution-via-config-injection"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-78676",
+    "added_at": "2026-08-25T20:00:47+09:00"
+  },
+  {
+    "id": "CVE-2026-78570",
+    "published": "2026-08-25",
+    "last_modified": "2026-08-25",
+    "status": "Received",
+    "description": "The Total Donations plugin for WordPress is vulnerable to Privilege Escalation in all versions up to, and including, 2.0.5. This makes it possible for unauthenticated attackers to elevate their privileges to that of an adminsitrator.",
+    "cvss": {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "score": 9.8,
+      "severity": "CRITICAL",
+      "attack_vector": "네트워크",
+      "attack_complexity": "낮음",
+      "privileges_required": "없음",
+      "user_interaction": "없음"
+    },
+    "cwes": [
+      "CWE-269"
+    ],
+    "affected": [],
+    "references": [
+      "https://patchstack.com/database/wordpress/plugin/totaldonations/vulnerability/wordpress-total-donations-plugin-2-0-5-privilege-escalation-vulnerability",
+      "https://www.wordfence.com/threat-intel/vulnerabilities/id/fa910b80-a496-449c-8227-de7defa1f2ae?source=cve"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-78570",
+    "added_at": "2026-08-25T20:00:47+09:00"
+  },
+  {
+    "id": "CVE-2026-78568",
+    "published": "2026-08-25",
+    "last_modified": "2026-08-25",
+    "status": "Received",
+    "description": "The Total Donations plugin for WordPress is vulnerable to SQL Injection in all versions up to, and including, 2.0.5 due to insufficient escaping on the user supplied parameter and lack of sufficient preparation on the existing SQL query.  This makes it possible for unauthenticated attackers to append additional SQL queries into already existing queries that can be used to extract sensitive information from the database.",
+    "cvss": {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "score": 9.8,
+      "severity": "CRITICAL",
+      "attack_vector": "네트워크",
+      "attack_complexity": "낮음",
+      "privileges_required": "없음",
+      "user_interaction": "없음"
+    },
+    "cwes": [
+      "CWE-89"
+    ],
+    "affected": [],
+    "references": [
+      "https://patchstack.com/database/wordpress/plugin/totaldonations/vulnerability/wordpress-total-donations-plugin-2-0-5-sql-injection-vulnerability",
+      "https://www.wordfence.com/threat-intel/vulnerabilities/id/0c3ecf70-544f-49c1-a943-86df89685b58?source=cve"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-78568",
+    "added_at": "2026-08-25T20:00:47+09:00"
+  },
+  {
+    "id": "CVE-2026-78477",
+    "published": "2026-08-25",
+    "last_modified": "2026-08-25",
+    "status": "Received",
+    "description": "The Jawn theme for WordPress is vulnerable to Privilege Escalation in all versions up to, and including, 1.4.2. This makes it possible for unauthenticated attackers to elevate their privileges to that of an administrator.",
+    "cvss": {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "score": 9.8,
+      "severity": "CRITICAL",
+      "attack_vector": "네트워크",
+      "attack_complexity": "낮음",
+      "privileges_required": "없음",
+      "user_interaction": "없음"
+    },
+    "cwes": [
+      "CWE-266"
+    ],
+    "affected": [],
+    "references": [
+      "https://patchstack.com/database/wordpress/theme/jawn/vulnerability/wordpress-jawn-theme-1-4-2-privilege-escalation-vulnerability",
+      "https://www.wordfence.com/threat-intel/vulnerabilities/id/e0642c85-ee01-497c-8dc3-42e3ffc02995?source=cve"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-78477",
+    "added_at": "2026-08-25T20:00:47+09:00"
+  },
+  {
+    "id": "CVE-2026-63586",
+    "published": "2026-08-25",
+    "last_modified": "2026-08-25",
+    "status": "Received",
+    "description": "The web-based management interface uses a modified uhttpd server with CGI shell scripts. The HTTP Basic Authentication username, taken directly from the Authorization header without sanitization, is inserted into a shell command string executed via the system() function. By submitting a specially crafted username containing shell metacharacters, an unauthenticated attacker with network access to the device can escape the command context and execute arbitrary commands with root privileges.",
+    "cvss": {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "score": 9.8,
+      "severity": "CRITICAL",
+      "attack_vector": "네트워크",
+      "attack_complexity": "낮음",
+      "privileges_required": "없음",
+      "user_interaction": "없음"
+    },
+    "cwes": [
+      "CWE-78"
+    ],
+    "affected": [],
+    "references": [
+      "https://www.certvde.com/en/advisories/VDE-2026-083/"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-63586",
+    "added_at": "2026-08-25T20:00:47+09:00"
+  },
+  {
+    "id": "CVE-2026-56710",
+    "published": "2026-08-25",
+    "last_modified": "2026-08-25",
+    "status": "Received",
+    "description": "Grav Login plugin versions before 1.0.16 fail to validate the target account's privilege level in the onApiUserListRowAction unlock handler. An attacker with api.users.write permission can clear login lockout counters on admin.super accounts, removing brute-force protection from the highest-privilege accounts without requiring equivalent permissions.",
+    "cvss": {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "score": 9.8,
+      "severity": "CRITICAL",
+      "attack_vector": "네트워크",
+      "attack_complexity": "낮음",
+      "privileges_required": "없음",
+      "user_interaction": "없음"
+    },
+    "cwes": [
+      "CWE-863"
+    ],
+    "affected": [],
+    "references": [
+      "https://github.com/getgrav/grav/security/advisories/GHSA-985r-mpj8-5rqw",
+      "https://www.vulncheck.com/advisories/grav-login-plugin-before-privilege-escalation-via-unlock"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-56710",
+    "added_at": "2026-08-25T20:00:47+09:00"
+  },
+  {
+    "id": "CVE-2026-56705",
+    "published": "2026-08-25",
+    "last_modified": "2026-08-25",
+    "status": "Received",
+    "description": "Adminer before 5.4.3 fails to sanitize the server field before constructing a PDO DSN string, allowing unauthenticated attackers to inject ODBC parameters via semicolons. Attackers can inject TraceFile and TraceOn parameters to write PHP code to the web root, achieving remote code execution when the trace file is accessed.",
+    "cvss": {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "score": 9.8,
+      "severity": "CRITICAL",
+      "attack_vector": "네트워크",
+      "attack_complexity": "낮음",
+      "privileges_required": "없음",
+      "user_interaction": "없음"
+    },
+    "cwes": [
+      "CWE-73"
+    ],
+    "affected": [],
+    "references": [
+      "https://github.com/vrana/adminer/security/advisories/GHSA-r4x9-5m63-3vxw",
+      "https://www.vulncheck.com/advisories/adminer-before-remote-code-execution-via-mssql-pdo-dsn-injection"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-56705",
+    "added_at": "2026-08-25T20:00:47+09:00"
+  },
+  {
     "id": "CVE-2026-78211",
     "published": "2026-08-24",
     "last_modified": "2026-08-24",
