@@ -1,0 +1,104 @@
+{
+  "tagline": "글로벌 정보보안 뉴스레터",
+  "title": "보안 브리핑",
+  "date_display": "2026년 8월 26일 수요일",
+  "date_short": "2026.08.26",
+  "sources_line": "The Hacker News · BleepingComputer · SecurityWeek · KrebsOnSecurity · CISA · NCSC UK · Unit 42 · 보안뉴스 · 데일리시큐 · 전자신문",
+  "seo": {
+    "title": "취약점, 랜섬웨어 — 2026.08.26 보안 브리핑",
+    "description": "오늘 주요 취약점·침해 사고·위협 트렌드 요약.",
+    "keywords": "CVE, 랜섬웨어, 취약점, 침해사고, 보안"
+  },
+  "sections": [
+    {
+      "label": "취약점 & 공격",
+      "type": "cards",
+      "items": [
+        {
+          "severity": "critical",
+          "source": "The Hacker News",
+          "headline": "miniOrange SAML 플러그인의 심각한 인증 우회 취약점 발견",
+          "url": "https://thehackernews.com/2026/08/attackers-target-miniorange-saml-flaws.html",
+          "summary": "miniOrange SAML 2.0 플러그인의 두 가지 심각한 인증 우회 취약점(CVE-2026-61979, CVE-2026-15981)이 발견되었으며, 공격자는 이를 통해 WordPress 관리자 계정을 탈취할 수 있다. 패치가 권장된다."
+        },
+        {
+          "severity": "critical",
+          "source": "The Hacker News",
+          "headline": "Oracle WebLogic 서버의 최대 심각도 취약점 발견 및 악용",
+          "url": "https://thehackernews.com/2026/08/actively-exploited-oracle-weblogic-flaw.html",
+          "summary": "CISA가 CVE-2026-21962 취약점을 KEV 목록에 추가하며, 이 취약점이 현재 악용되고 있다고 경고했다. 무인증 공격자가 중요한 데이터에 접근할 수 있다."
+        },
+        {
+          "severity": "high",
+          "source": "The Hacker News",
+          "headline": "NVIDIA NemoClaw의 AI 모델 오염 취약점 발견",
+          "url": "https://thehackernews.com/2026/08/a-malicious-webpage-could-poison-your.html",
+          "summary": "Oasis Security은 NVIDIA NemoClaw의 취약점이 발견되었으며, 악의적인 웹페이지를 통해 로컬 AI 모델에 숨은 지시를 삽입할 수 있다고 밝혔다."
+        },
+        {
+          "severity": "high",
+          "source": "The Hacker News",
+          "headline": "Marimo 노트북의 고위험 취약점 발견",
+          "url": "https://thehackernews.com/2026/08/marimo-notebook-flaw-could-run-mcp.html",
+          "summary": "Marimo 노트북 소프트웨어의 취약점이 발견되었으며, 공격자가 MCP 명령을 실행시킬 수 있다. 수동 패치가 필요하다."
+        },
+        {
+          "severity": "medium",
+          "source": "The Hacker News",
+          "headline": "Zscaler Client Connector의 원격 코드 실행 취약점 발견",
+          "url": "https://gbhackers.com/multiple-zscaler-client-connector-flaws/",
+          "summary": "Zscaler Client Connector의 취약점(CVE-2026-59568)이 발견되었으며, 무인증 공격자가 임의 코드를 실행할 수 있다. 이 취약점은 Critical 등급이다."
+        }
+      ]
+    },
+    {
+      "label": "침해 사고",
+      "type": "cards",
+      "items": [
+        {
+          "severity": "incident",
+          "source": "SecurityWeek",
+          "headline": "ASOS 고객 정보 유출 사고 발생",
+          "url": "https://gbhackers.com/asos-warns-customers-of-data-breach/",
+          "summary": "ASOS는 외부에서 유출된 로그인 자격 증명을 통해 계정이 해킹된 사고가 발생했다고 발표했다. 고객 정보 유출이 확인되었다."
+        },
+        {
+          "severity": "incident",
+          "source": "SecurityWeek",
+          "headline": "ReliaQuest 해킹 사고 발생",
+          "url": "https://www.securityweek.com/reliaquest-confirms-shinyhunters-hack-but-says-impact-was-limited/",
+          "summary": "ReliaQuest 직원이 피싱 공격으로 인해 해커가 대시보드에 접근하게 되었으며, 피해는 제한적이었다고 밝혔다."
+        },
+        {
+          "severity": "incident",
+          "source": "SecurityWeek",
+          "headline": "ReliaQuest ShinyHunters 해킹 사고",
+          "url": "https://www.securityweek.com/reliaquest-confirms-shinyhunters-hack-but-says-impact-was-limited/",
+          "summary": "ReliaQuest는 ShinyHunters 해킹 사고가 발생했으며, 피해는 제한적이었지만, 공격자에게 접근권이 부여된 것으로 확인되었다."
+        }
+      ]
+    },
+    {
+      "label": "동향 & 분석",
+      "type": "trends",
+      "items": [
+        {
+          "lead": "AI 기반 공격 증가",
+          "body": "AI 기반의 ToxNetV2 봇넷이 LLM을 활용해 쉘 및 SSH 명령을 생성하는 등 AI 기술이 악용되는 사례가 증가하고 있다. 이는 보안 대응에 새로운 도전을 제기한다."
+        },
+        {
+          "lead": "취약점 패치 지연",
+          "body": "취약점이 발견된 후 패치가 지연되면서 공격자가 이를 악용하는 사례가 늘고 있다. 이는 보안 관리의 중요성을 다시 강조한다."
+        },
+        {
+          "lead": "AI 모델 보안 강화",
+          "body": "AI 모델 보안을 강화하기 위한 기술과 기업 투자도 증가하고 있다. 예를 들어, Alice는 AI 모델 보호 및 기업 보호 장벽 확대를 위한 1.4억 달러 투자금을 확보했다."
+        },
+        {
+          "lead": "불법 AI 서버 수출",
+          "body": "대만 정부는 중국으로의 불법 AI 서버 수출을 막기 위해 관련 인물을 기소하는 등 AI 인프라 보호에 대한 국제적 경쟁이 가속화되고 있다."
+        }
+      ]
+    }
+  ]
+}
