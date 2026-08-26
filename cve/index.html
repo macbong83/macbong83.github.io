@@ -41,13 +41,82 @@
     <h1>CVE Archive</h1>
     <p>NVD 기반 Critical CVE를 누적 관리하는 별도 페이지입니다. 블로그에는 CVE 자동 글을 발행하지 않고, 이 페이지에만 기록합니다.</p>
     <div class="meta">
-      <span>Total 701</span>
-      <span>Updated 2026-08-26 20:00 KST</span>
+      <span>Total 704</span>
+      <span>Updated 2026-08-27 08:00 KST</span>
       <span>Source NVD API</span>
     </div>
   </section>
   <div class="notice">중복 제거 기준은 CVE ID입니다. 동일 CVE는 다시 추가하지 않습니다. 실제 악용 여부와 패치 우선순위는 CISA KEV, 벤더 권고, 자산 노출 여부와 함께 검토해야 합니다.</div>
 
+    <article class="cve-card" id="CVE-2026-80428">
+      <div class="cve-top">
+        <a class="cve-id" href="https://nvd.nist.gov/vuln/detail/CVE-2026-80428" target="_blank" rel="noopener">CVE-2026-80428</a>
+        <span class="score">CVSS 9.8 CRITICAL</span>
+      </div>
+      <p class="desc">ILIAS deserialises stored session data for an unauthenticated caller. The Shibboleth back-channel endpoint at components/ILIAS/AuthShibboleth/resources/shib_logout.php runs in a context that ilInitialisation exempts from authentication, and its logout-notification handler locates the session to terminate by reading every live row of the session table and passing each row&#x27;s stored data to a hand-written parser that calls unserialize without restricting which classes may be constructed. Any serialised object present in any session row is therefore instantiated on behalf of an anonymous request, and object destructors run when those objects are discarded. A serialised object can be placed into a session row without logging in, because the LTI authentication entry point stores request parameters into the session and is reachable on a path the same initialisation code exempts from authentication. A class bundled with the application writes a JSON-encoded structure to a file named by one of its own properties when it is destroyed, which places attacker-controlled content at an attacker-chosen path below the web root and results in code execution as the web server user. Versions 9.22, 10.10 and 11.3 remove the endpoint&#x27;s logout-notification implementation.</p>
+      <dl>
+        <div><dt>Published</dt><dd>2026-08-26</dd></div>
+        <div><dt>Last Modified</dt><dd>2026-08-26</dd></div>
+        <div><dt>Status</dt><dd>Received</dd></div>
+        <div><dt>Attack Vector</dt><dd>네트워크</dd></div>
+        <div><dt>Attack Complexity</dt><dd>낮음</dd></div>
+        <div><dt>Privileges</dt><dd>없음</dd></div>
+        <div><dt>User Interaction</dt><dd>없음</dd></div>
+        <div><dt>CWE</dt><dd>CWE-502</dd></div>
+        <div><dt>Affected</dt><dd>NVD CPE 기준 확인 필요</dd></div>
+      </dl>
+      <div class="vector"><code>CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H</code></div>
+      <details>
+        <summary>References</summary>
+        <ul><li><a href="https://github.com/ILIAS-eLearning/ILIAS" target="_blank" rel="noopener">https://github.com/ILIAS-eLearning/ILIAS</a></li><li><a href="https://github.com/ILIAS-eLearning/ILIAS/commit/f36934a6f937d0fe837ca6e642986458b4069a95" target="_blank" rel="noopener">https://github.com/ILIAS-eLearning/ILIAS/commit/f36934a6f937d0fe837ca6e642986458b4069a95</a></li><li><a href="https://www.vulncheck.com/advisories/ilias-before-9.22-10.10-and-11.3-unauthenticated-php-object-injection-via-shibboleth-logout-endpoint" target="_blank" rel="noopener">https://www.vulncheck.com/advisories/ilias-before-9.22-10.10-and-11.3-unauthenticated-php-object-injection-via-shibboleth-logout-endpoint</a></li></ul>
+      </details>
+    </article>
+    <article class="cve-card" id="CVE-2026-80203">
+      <div class="cve-top">
+        <a class="cve-id" href="https://nvd.nist.gov/vuln/detail/CVE-2026-80203" target="_blank" rel="noopener">CVE-2026-80203</a>
+        <span class="score">CVSS 9.8 CRITICAL</span>
+      </div>
+      <p class="desc">The getgrav/grav-plugin-api plugin before 1.0.18 does not enforce API-key scope in the requireNotSuperTarget() function in UsersController.php across seven sensitive user-management endpoints. The check uses isSuperAdmin() on the acting account rather than verifying whether the specific API key carries super authority (via isSuperWithinScope()). As a result, an API key scoped below full super authority but belonging to a super-admin account can act against other super-admin accounts—disabling their 2FA, deleting their avatar, minting new API keys under their identity, or deleting their existing API keys.</p>
+      <dl>
+        <div><dt>Published</dt><dd>2026-08-26</dd></div>
+        <div><dt>Last Modified</dt><dd>2026-08-26</dd></div>
+        <div><dt>Status</dt><dd>Received</dd></div>
+        <div><dt>Attack Vector</dt><dd>네트워크</dd></div>
+        <div><dt>Attack Complexity</dt><dd>낮음</dd></div>
+        <div><dt>Privileges</dt><dd>없음</dd></div>
+        <div><dt>User Interaction</dt><dd>없음</dd></div>
+        <div><dt>CWE</dt><dd>CWE-863</dd></div>
+        <div><dt>Affected</dt><dd>NVD CPE 기준 확인 필요</dd></div>
+      </dl>
+      <div class="vector"><code>CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H</code></div>
+      <details>
+        <summary>References</summary>
+        <ul><li><a href="https://github.com/getgrav/grav/security/advisories/GHSA-94q7-vrqr-cx5v" target="_blank" rel="noopener">https://github.com/getgrav/grav/security/advisories/GHSA-94q7-vrqr-cx5v</a></li><li><a href="https://www.vulncheck.com/advisories/grav-before-1.0.18-authentication-bypass-via-scoped-api-key" target="_blank" rel="noopener">https://www.vulncheck.com/advisories/grav-before-1.0.18-authentication-bypass-via-scoped-api-key</a></li></ul>
+      </details>
+    </article>
+    <article class="cve-card" id="CVE-2026-18431">
+      <div class="cve-top">
+        <a class="cve-id" href="https://nvd.nist.gov/vuln/detail/CVE-2026-18431" target="_blank" rel="noopener">CVE-2026-18431</a>
+        <span class="score">CVSS 9.8 CRITICAL</span>
+      </div>
+      <p class="desc">The Avada theme for WordPress is vulnerable to Arbitrary File Write in all versions up to, and including, 7.16 when the Fusion Builder plugin is installed and active in versions up to, and including, 3.16. This is due to a chain of authorization and input validation weaknesses across the two components that makes it possible for unauthenticated attackers to write attacker-controlled files to the server. This can be used to create and execute arbitrary PHP files, resulting in remote code execution and complete site compromise. Successful exploitation requires both Avada and Fusion Builder to be installed and active, as well as certain administrator-authored content to be present.</p>
+      <dl>
+        <div><dt>Published</dt><dd>2026-08-26</dd></div>
+        <div><dt>Last Modified</dt><dd>2026-08-26</dd></div>
+        <div><dt>Status</dt><dd>Deferred</dd></div>
+        <div><dt>Attack Vector</dt><dd>네트워크</dd></div>
+        <div><dt>Attack Complexity</dt><dd>낮음</dd></div>
+        <div><dt>Privileges</dt><dd>없음</dd></div>
+        <div><dt>User Interaction</dt><dd>없음</dd></div>
+        <div><dt>CWE</dt><dd>CWE-862</dd></div>
+        <div><dt>Affected</dt><dd>NVD CPE 기준 확인 필요</dd></div>
+      </dl>
+      <div class="vector"><code>CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H</code></div>
+      <details>
+        <summary>References</summary>
+        <ul><li><a href="https://avada.com/documentation/avada-changelog/" target="_blank" rel="noopener">https://avada.com/documentation/avada-changelog/</a></li><li><a href="https://www.wordfence.com/threat-intel/vulnerabilities/id/5bef5bd3-8ec9-4a5b-bcdd-98952c7ef390?source=cve" target="_blank" rel="noopener">https://www.wordfence.com/threat-intel/vulnerabilities/id/5bef5bd3-8ec9-4a5b-bcdd-98952c7ef390?source=cve</a></li></ul>
+      </details>
+    </article>
     <article class="cve-card" id="CVE-2026-80138">
       <div class="cve-top">
         <a class="cve-id" href="https://nvd.nist.gov/vuln/detail/CVE-2026-80138" target="_blank" rel="noopener">CVE-2026-80138</a>
