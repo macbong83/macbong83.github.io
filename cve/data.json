@@ -1,5 +1,35 @@
 [
   {
+    "id": "CVE-2026-80138",
+    "published": "2026-08-25",
+    "last_modified": "2026-08-25",
+    "status": "Received",
+    "description": "ClipBucket V5's web installer fails to properly validate or escape the php_cli_filepath parameter before passing it to shell execution. Unauthenticated attackers can submit a crafted POST request to the installer with a malicious php_cli_filepath value to execute arbitrary commands as the web server user.",
+    "cvss": {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "score": 9.8,
+      "severity": "CRITICAL",
+      "attack_vector": "네트워크",
+      "attack_complexity": "낮음",
+      "privileges_required": "없음",
+      "user_interaction": "없음"
+    },
+    "cwes": [
+      "CWE-78"
+    ],
+    "affected": [],
+    "references": [
+      "https://github.com/MacWarrior/clipbucket-v5",
+      "https://github.com/MacWarrior/clipbucket-v5/blob/5.5.3-%23153/upload/cb_install/functions_install.php",
+      "https://github.com/MacWarrior/clipbucket-v5/blob/5.5.3-%23153/upload/includes/classes/system.class.php",
+      "https://github.com/MacWarrior/clipbucket-v5/commit/36e7c6cfd81f62a091d2aeef96a8fc2fc2d85dc4",
+      "https://www.vulncheck.com/advisories/clipbucket-v5-5.5.1-through-5.5.3-153-os-command-injection-via-installer-php-cli-filepath-parameter"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-80138",
+    "added_at": "2026-08-26T20:00:09+09:00"
+  },
+  {
     "id": "CVE-2026-80104",
     "published": "2026-08-25",
     "last_modified": "2026-08-25",
@@ -28,6 +58,38 @@
     ],
     "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-80104",
     "added_at": "2026-08-26T08:00:47+09:00"
+  },
+  {
+    "id": "CVE-2026-79911",
+    "published": "2026-08-25",
+    "last_modified": "2026-08-25",
+    "status": "Received",
+    "description": "A security vulnerability has been detected in TOTOLINK N600R 4.3.0cu.7647_B20210106. The affected element is the function setSystemConfig of the file /cgi-bin/cstecgi.cgi of the component CGI Handler. Such manipulation of the argument Hostname leads to stack-based buffer overflow. It is possible to launch the attack remotely. The exploit has been disclosed publicly and may be used.",
+    "cvss": {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:H",
+      "score": 10.0,
+      "severity": "CRITICAL",
+      "attack_vector": "네트워크",
+      "attack_complexity": "낮음",
+      "privileges_required": "없음",
+      "user_interaction": "없음"
+    },
+    "cwes": [
+      "CWE-119",
+      "CWE-121"
+    ],
+    "affected": [],
+    "references": [
+      "https://github.com/dxz0069/WAVLINK-WN530H4-Command-Injection-in-set_add_routing/blob/main/TOTOLINK_N600R_cstecgi_strcpy_sprintf_Multi_Function_Stack_Overflow.md",
+      "https://vuldb.com/cve/CVE-2026-79911",
+      "https://vuldb.com/submit/881258",
+      "https://vuldb.com/vuln/395061",
+      "https://vuldb.com/vuln/395061/cti",
+      "https://www.totolink.net/"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-79911",
+    "added_at": "2026-08-26T20:00:09+09:00"
   },
   {
     "id": "CVE-2026-79787",
