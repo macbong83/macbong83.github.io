@@ -41,13 +41,82 @@
     <h1>CVE Archive</h1>
     <p>NVD 기반 Critical CVE를 누적 관리하는 별도 페이지입니다. 블로그에는 CVE 자동 글을 발행하지 않고, 이 페이지에만 기록합니다.</p>
     <div class="meta">
-      <span>Total 704</span>
-      <span>Updated 2026-08-27 08:00 KST</span>
+      <span>Total 707</span>
+      <span>Updated 2026-08-28 08:00 KST</span>
       <span>Source NVD API</span>
     </div>
   </section>
   <div class="notice">중복 제거 기준은 CVE ID입니다. 동일 CVE는 다시 추가하지 않습니다. 실제 악용 여부와 패치 우선순위는 CISA KEV, 벤더 권고, 자산 노출 여부와 함께 검토해야 합니다.</div>
 
+    <article class="cve-card" id="CVE-2026-81735">
+      <div class="cve-top">
+        <a class="cve-id" href="https://nvd.nist.gov/vuln/detail/CVE-2026-81735" target="_blank" rel="noopener">CVE-2026-81735</a>
+        <span class="score">CVSS 10.0 CRITICAL</span>
+      </div>
+      <p class="desc">startServer.ts in the mcp-http-server package of UI-TARS-desktop defaulted its listen address to &#x27;::&#x27; when no host was given, so startSseAndStreamableHttpMcpServer bound the Streamable HTTP and SSE MCP transports to every interface, and its authentication middleware was optional: middlewares are applied only when a caller supplies them. The @agent-infra/mcp-server-commands and @agent-infra/mcp-server-filesystem entry points call startSseAndStreamableHttpMcpServer with a host and port alone and pass no middleware, so neither server required a credential. The commands server exposes a run_command tool that hands its caller-supplied command string to promisify(child_process.exec), so any unauthenticated client able to reach the port could run arbitrary commands as the user running the server, and the filesystem server exposed its file read and write tools on the same terms. The listen default became 127.0.0.1 in commit c2ad42e3eb9b27830db41a3e6f51ca7179d9b168; the package version stayed at 1.2.4 across that change, so the boundary is the commit rather than a release.</p>
+      <dl>
+        <div><dt>Published</dt><dd>2026-08-27</dd></div>
+        <div><dt>Last Modified</dt><dd>2026-08-27</dd></div>
+        <div><dt>Status</dt><dd>Received</dd></div>
+        <div><dt>Attack Vector</dt><dd>네트워크</dd></div>
+        <div><dt>Attack Complexity</dt><dd>낮음</dd></div>
+        <div><dt>Privileges</dt><dd>없음</dd></div>
+        <div><dt>User Interaction</dt><dd>없음</dd></div>
+        <div><dt>CWE</dt><dd>CWE-306</dd></div>
+        <div><dt>Affected</dt><dd>NVD CPE 기준 확인 필요</dd></div>
+      </dl>
+      <div class="vector"><code>CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:H</code></div>
+      <details>
+        <summary>References</summary>
+        <ul><li><a href="https://github.com/bytedance/UI-TARS-desktop" target="_blank" rel="noopener">https://github.com/bytedance/UI-TARS-desktop</a></li><li><a href="https://github.com/bytedance/UI-TARS-desktop/blob/e9f3387288da4af2ad99972da2ac916cdabce093/packages/agent-infra/mcp-http-server/src/startServer.ts#L263" target="_blank" rel="noopener">https://github.com/bytedance/UI-TARS-desktop/blob/e9f3387288da4af2ad99972da2ac916cdabce093/packages/agent-infra/mcp-http-server/src/startServer.ts#L263</a></li><li><a href="https://github.com/bytedance/UI-TARS-desktop/commit/c2ad42e3eb9b27830db41a3e6f51ca7179d9b168" target="_blank" rel="noopener">https://github.com/bytedance/UI-TARS-desktop/commit/c2ad42e3eb9b27830db41a3e6f51ca7179d9b168</a></li><li><a href="https://github.com/bytedance/UI-TARS-desktop/pull/1918" target="_blank" rel="noopener">https://github.com/bytedance/UI-TARS-desktop/pull/1918</a></li></ul>
+      </details>
+    </article>
+    <article class="cve-card" id="CVE-2026-81707">
+      <div class="cve-top">
+        <a class="cve-id" href="https://nvd.nist.gov/vuln/detail/CVE-2026-81707" target="_blank" rel="noopener">CVE-2026-81707</a>
+        <span class="score">CVSS 9.8 CRITICAL</span>
+      </div>
+      <p class="desc">openssl_encrypt before 1.4.9 fails to sanitize the email field of imported identity documents, allowing attackers to inject ANSI escape sequences that forge the fingerprint verification line displayed to users. Attackers can deliver a crafted identity bundle through normal contact-exchange flows or keyserver responses to manipulate terminal output and display a fraudulent fingerprint, bypassing the out-of-band verification mechanism that protects against key substitution attacks.</p>
+      <dl>
+        <div><dt>Published</dt><dd>2026-08-27</dd></div>
+        <div><dt>Last Modified</dt><dd>2026-08-27</dd></div>
+        <div><dt>Status</dt><dd>Received</dd></div>
+        <div><dt>Attack Vector</dt><dd>네트워크</dd></div>
+        <div><dt>Attack Complexity</dt><dd>낮음</dd></div>
+        <div><dt>Privileges</dt><dd>없음</dd></div>
+        <div><dt>User Interaction</dt><dd>없음</dd></div>
+        <div><dt>CWE</dt><dd>CWE-20</dd></div>
+        <div><dt>Affected</dt><dd>NVD CPE 기준 확인 필요</dd></div>
+      </dl>
+      <div class="vector"><code>CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H</code></div>
+      <details>
+        <summary>References</summary>
+        <ul><li><a href="https://github.com/jahlives/openssl_encrypt/security/advisories/GHSA-qjr2-x6mr-8xgf" target="_blank" rel="noopener">https://github.com/jahlives/openssl_encrypt/security/advisories/GHSA-qjr2-x6mr-8xgf</a></li><li><a href="https://www.vulncheck.com/advisories/openssl-encrypt-before-1.4.9-ansi-escape-injection-via-identity-email" target="_blank" rel="noopener">https://www.vulncheck.com/advisories/openssl-encrypt-before-1.4.9-ansi-escape-injection-via-identity-email</a></li></ul>
+      </details>
+    </article>
+    <article class="cve-card" id="CVE-2026-81702">
+      <div class="cve-top">
+        <a class="cve-id" href="https://nvd.nist.gov/vuln/detail/CVE-2026-81702" target="_blank" rel="noopener">CVE-2026-81702</a>
+        <span class="score">CVSS 9.8 CRITICAL</span>
+      </div>
+      <p class="desc">openssl_encrypt before 1.4.9 fails to re-derive and validate fingerprints when loading identities from identity.json, allowing attackers to substitute public keys in identity stores. Attackers can replace legitimate public keys with their own while maintaining the claimed fingerprint, enabling silent key substitution where encryption uses attacker keys and signature verification appears valid.</p>
+      <dl>
+        <div><dt>Published</dt><dd>2026-08-27</dd></div>
+        <div><dt>Last Modified</dt><dd>2026-08-27</dd></div>
+        <div><dt>Status</dt><dd>Received</dd></div>
+        <div><dt>Attack Vector</dt><dd>네트워크</dd></div>
+        <div><dt>Attack Complexity</dt><dd>낮음</dd></div>
+        <div><dt>Privileges</dt><dd>없음</dd></div>
+        <div><dt>User Interaction</dt><dd>없음</dd></div>
+        <div><dt>CWE</dt><dd>CWE-345</dd></div>
+        <div><dt>Affected</dt><dd>NVD CPE 기준 확인 필요</dd></div>
+      </dl>
+      <div class="vector"><code>CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H</code></div>
+      <details>
+        <summary>References</summary>
+        <ul><li><a href="https://github.com/jahlives/openssl_encrypt/security/advisories/GHSA-q8p3-7h6h-ghfr" target="_blank" rel="noopener">https://github.com/jahlives/openssl_encrypt/security/advisories/GHSA-q8p3-7h6h-ghfr</a></li><li><a href="https://www.vulncheck.com/advisories/openssl-encrypt-before-1.4.9-key-substitution-via-identity-load" target="_blank" rel="noopener">https://www.vulncheck.com/advisories/openssl-encrypt-before-1.4.9-key-substitution-via-identity-load</a></li></ul>
+      </details>
+    </article>
     <article class="cve-card" id="CVE-2026-80428">
       <div class="cve-top">
         <a class="cve-id" href="https://nvd.nist.gov/vuln/detail/CVE-2026-80428" target="_blank" rel="noopener">CVE-2026-80428</a>

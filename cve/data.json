@@ -1,5 +1,89 @@
 [
   {
+    "id": "CVE-2026-81735",
+    "published": "2026-08-27",
+    "last_modified": "2026-08-27",
+    "status": "Received",
+    "description": "startServer.ts in the mcp-http-server package of UI-TARS-desktop defaulted its listen address to '::' when no host was given, so startSseAndStreamableHttpMcpServer bound the Streamable HTTP and SSE MCP transports to every interface, and its authentication middleware was optional: middlewares are applied only when a caller supplies them. The @agent-infra/mcp-server-commands and @agent-infra/mcp-server-filesystem entry points call startSseAndStreamableHttpMcpServer with a host and port alone and pass no middleware, so neither server required a credential. The commands server exposes a run_command tool that hands its caller-supplied command string to promisify(child_process.exec), so any unauthenticated client able to reach the port could run arbitrary commands as the user running the server, and the filesystem server exposed its file read and write tools on the same terms. The listen default became 127.0.0.1 in commit c2ad42e3eb9b27830db41a3e6f51ca7179d9b168; the package version stayed at 1.2.4 across that change, so the boundary is the commit rather than a release.",
+    "cvss": {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:H",
+      "score": 10.0,
+      "severity": "CRITICAL",
+      "attack_vector": "네트워크",
+      "attack_complexity": "낮음",
+      "privileges_required": "없음",
+      "user_interaction": "없음"
+    },
+    "cwes": [
+      "CWE-306"
+    ],
+    "affected": [],
+    "references": [
+      "https://github.com/bytedance/UI-TARS-desktop",
+      "https://github.com/bytedance/UI-TARS-desktop/blob/e9f3387288da4af2ad99972da2ac916cdabce093/packages/agent-infra/mcp-http-server/src/startServer.ts#L263",
+      "https://github.com/bytedance/UI-TARS-desktop/commit/c2ad42e3eb9b27830db41a3e6f51ca7179d9b168",
+      "https://github.com/bytedance/UI-TARS-desktop/pull/1918",
+      "https://www.vulncheck.com/advisories/ui-tars-desktop-agent-infra-mcp-servers-bind-every-interface-without-authentication-exposing-arbitrary-command-execution"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-81735",
+    "added_at": "2026-08-28T08:00:34+09:00"
+  },
+  {
+    "id": "CVE-2026-81707",
+    "published": "2026-08-27",
+    "last_modified": "2026-08-27",
+    "status": "Received",
+    "description": "openssl_encrypt before 1.4.9 fails to sanitize the email field of imported identity documents, allowing attackers to inject ANSI escape sequences that forge the fingerprint verification line displayed to users. Attackers can deliver a crafted identity bundle through normal contact-exchange flows or keyserver responses to manipulate terminal output and display a fraudulent fingerprint, bypassing the out-of-band verification mechanism that protects against key substitution attacks.",
+    "cvss": {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "score": 9.8,
+      "severity": "CRITICAL",
+      "attack_vector": "네트워크",
+      "attack_complexity": "낮음",
+      "privileges_required": "없음",
+      "user_interaction": "없음"
+    },
+    "cwes": [
+      "CWE-20"
+    ],
+    "affected": [],
+    "references": [
+      "https://github.com/jahlives/openssl_encrypt/security/advisories/GHSA-qjr2-x6mr-8xgf",
+      "https://www.vulncheck.com/advisories/openssl-encrypt-before-1.4.9-ansi-escape-injection-via-identity-email"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-81707",
+    "added_at": "2026-08-28T08:00:34+09:00"
+  },
+  {
+    "id": "CVE-2026-81702",
+    "published": "2026-08-27",
+    "last_modified": "2026-08-27",
+    "status": "Received",
+    "description": "openssl_encrypt before 1.4.9 fails to re-derive and validate fingerprints when loading identities from identity.json, allowing attackers to substitute public keys in identity stores. Attackers can replace legitimate public keys with their own while maintaining the claimed fingerprint, enabling silent key substitution where encryption uses attacker keys and signature verification appears valid.",
+    "cvss": {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "score": 9.8,
+      "severity": "CRITICAL",
+      "attack_vector": "네트워크",
+      "attack_complexity": "낮음",
+      "privileges_required": "없음",
+      "user_interaction": "없음"
+    },
+    "cwes": [
+      "CWE-345"
+    ],
+    "affected": [],
+    "references": [
+      "https://github.com/jahlives/openssl_encrypt/security/advisories/GHSA-q8p3-7h6h-ghfr",
+      "https://www.vulncheck.com/advisories/openssl-encrypt-before-1.4.9-key-substitution-via-identity-load"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-81702",
+    "added_at": "2026-08-28T08:00:34+09:00"
+  },
+  {
     "id": "CVE-2026-80428",
     "published": "2026-08-26",
     "last_modified": "2026-08-26",
