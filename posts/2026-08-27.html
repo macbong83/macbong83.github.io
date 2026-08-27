@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>침해사고, 취약점 — 2026.08.27 보안 브리핑 | SecuLog</title>
+<meta name="description" content="오늘 주요 취약점·침해 사고·위협 트렌드 요약.">
+<meta name="keywords" content="CVE, 랜섬웨어, 취약점, 침해사고, 보안">
+<meta name="author" content="Felix">
+<meta property="og:type" content="article">
+<meta property="og:title" content="침해사고, 취약점 — 2026.08.27 보안 브리핑">
+<meta property="og:description" content="오늘 주요 취약점·침해 사고·위협 트렌드 요약.">
+<meta property="og:url" content="https://macbong83.github.io/posts/2026-08-27.html">
+<meta property="og:site_name" content="SecuLog">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="침해사고, 취약점 — 2026.08.27 보안 브리핑">
+<meta name="twitter:description" content="오늘 주요 취약점·침해 사고·위협 트렌드 요약.">
+<link rel="canonical" href="https://macbong83.github.io/posts/2026-08-27.html">
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: -apple-system, 'Malgun Gothic', 'Apple SD Gothic Neo', Arial, sans-serif; background: #f4f5f7; color: #1a1a2e; line-height: 1.6; }
+  a { text-decoration: none; color: inherit; }
+  .wrapper { max-width: 700px; margin: 32px auto; background: #ffffff; border-radius: 12px; overflow: hidden; box-shadow: 0 2px 20px rgba(0,0,0,0.08); }
+  .header { background: #eef0f4; padding: 28px 36px 24px; display: flex; align-items: center; justify-content: space-between; gap: 16px; border-bottom: 3px solid #0d1b3e; }
+  .wordmark { font-size: 26px; font-weight: 800; letter-spacing: -0.02em; color: #0d1b3e; }
+  .wordmark .accent { color: #2563eb; }
+  .header-meta { text-align: right; }
+  .header-meta .nl-label { font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase; color: #6b7488; margin-bottom: 4px; }
+  .header-meta .nl-title { font-size: 17px; font-weight: 700; color: #0d1b3e; }
+  .header-meta .nl-date { font-size: 12px; color: #8a93a8; margin-top: 3px; }
+  .body { padding: 28px 36px 32px; }
+  .section-label { font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase; color: #8a93a8; font-weight: 600; padding-bottom: 8px; border-bottom: 1px solid #e8eaed; margin-bottom: 4px; margin-top: 28px; }
+  .section-label:first-child { margin-top: 0; }
+  .card { display: block; padding: 16px 0; border-bottom: 1px solid #f0f1f3; transition: background 0.15s; }
+  .card:last-child { border-bottom: none; }
+  .card:hover { background: #f8f9fc; margin: 0 -36px; padding: 16px 36px; }
+  .card-top { display: flex; align-items: center; gap: 8px; margin-bottom: 6px; flex-wrap: wrap; }
+  .badge { font-size: 10px; font-weight: 700; padding: 3px 9px; border-radius: 4px; letter-spacing: 0.04em; }
+  .badge-critical { background: #fff0f0; color: #c0392b; border: 1px solid #f5c6c6; }
+  .badge-high { background: #fff7ee; color: #b94d00; border: 1px solid #fdd5a8; }
+  .badge-medium { background: #fff9e6; color: #856900; border: 1px solid #f9e0a0; }
+  .badge-incident { background: #f3f0ff; color: #6133c0; border: 1px solid #cfc0f5; }
+  .source { font-size: 11px; color: #a0a8b8; }
+  .card-headline { font-size: 14px; font-weight: 600; color: #0d1b3e; margin-bottom: 5px; line-height: 1.45; }
+  .card-headline .arrow { font-size: 12px; color: #2563eb; margin-left: 4px; opacity: 0; transition: opacity 0.15s; }
+  .card:hover .card-headline .arrow { opacity: 1; }
+  .card-summary { font-size: 13px; color: #4a5568; line-height: 1.65; }
+  .trend-box { background: #f8f9fc; border-radius: 10px; padding: 18px 20px; margin-top: 6px; }
+  .trend-row { display: flex; gap: 12px; padding: 10px 0; border-bottom: 1px solid #e8eaed; align-items: flex-start; }
+  .trend-row:last-child { border-bottom: none; padding-bottom: 0; }
+  .trend-num { font-size: 11px; font-weight: 700; color: #2563eb; min-width: 22px; padding-top: 2px; }
+  .trend-text { font-size: 13px; color: #4a5568; line-height: 1.6; }
+  .trend-text strong { color: #0d1b3e; font-weight: 600; }
+  .footer { background: #f4f5f7; border-top: 1px solid #e8eaed; padding: 16px 36px; font-size: 11px; color: #9aa0b0; line-height: 1.6; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 8px; }
+  .footer-meta { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; justify-content: flex-end; }
+  .linkedin-link { display: inline-flex; align-items: center; justify-content: center; min-height: 28px; padding: 6px 12px; border-radius: 6px; background: #0a66c2; color: #fff; font-size: 12px; font-weight: 800; letter-spacing: 0.01em; box-shadow: 0 6px 14px rgba(10,102,194,0.16); }
+  .linkedin-link:hover { background: #004182; color: #fff; }
+  .card-inner { display: flex; gap: 14px; }
+  .sev-bar { width: 3px; border-radius: 2px; flex-shrink: 0; margin: 3px 0; }
+  .sev-critical { background: #e74c3c; }
+  .sev-high { background: #e67e22; }
+  .sev-medium { background: #f0b429; }
+  .sev-incident { background: #7c3aed; }
+  .card-content { flex: 1; }
+  @media (max-width: 600px) {
+    .wrapper { margin: 0; border-radius: 0; box-shadow: none; }
+    .header { padding: 18px 20px 16px; flex-direction: column; align-items: flex-start; gap: 8px; }
+    .header-meta { text-align: left; }
+    .body { padding: 18px 20px 24px; }
+    .card:hover { margin: 0 -20px; padding: 16px 20px; }
+    .footer { padding: 14px 20px; flex-direction: column; align-items: flex-start; }
+    .footer-meta { justify-content: flex-start; }
+    .wordmark { font-size: 22px; }
+    .card-headline { font-size: 13px; }
+    .card-summary { font-size: 12px; }
+    .card-headline .arrow { opacity: 1; }
+  }
+</style>
+</head>
+<body>
+<div class="wrapper">
+  <div class="header">
+    <div class="header-logo">
+      <span class="wordmark">Secu<span class="accent">Log</span></span>
+    </div>
+    <div class="header-meta">
+      <div class="nl-label">글로벌 정보보안 뉴스레터</div>
+      <div class="nl-title">보안 브리핑</div>
+      <div class="nl-date">2026년 8월 27일 목요일</div>
+    </div>
+  </div>
+  <div class="body">
+    <div class="section-label">취약점 &amp; 공격</div>
+
+    <a class="card" href="https://thehackernews.com/2026/08/fbi-disrupts-china-linked-qtfy.html" target="_blank">
+      <div class="card-inner"><div class="sev-bar sev-critical"></div><div class="card-content">
+        <div class="card-top"><span class="badge badge-critical">긴급</span><span class="source">The Hacker News</span></div>
+        <div class="card-headline">중국 연결 해킹 플랫폼 QScan 및 QTRouter FBI 의해 차단<span class="arrow">↗</span></div>
+        <div class="card-summary">FBI는 중국과 연관된 해커들이 미국의 주요 인프라를 대상으로 한 QScan 및 QTRouter 플랫폼을 차단했다. 이 플랫폼은 침입을 숨기고 미국의 주요 인프라를 대상으로 했다.</div>
+      </div></div>
+    </a>
+
+    <a class="card" href="https://thehackernews.com/2026/08/critical-gitea-rce-actively-exploited.html" target="_blank">
+      <div class="card-inner"><div class="sev-bar sev-critical"></div><div class="card-content">
+        <div class="card-top"><span class="badge badge-critical">긴급</span><span class="source">The Hacker News</span></div>
+        <div class="card-headline">Gitea RCE 취약점(CVE-2026-60004) 활성 공격<span class="arrow">↗</span></div>
+        <div class="card-summary">CISA는 Gitea의 중대한 원격 코드 실행 취약점(CVE-2026-60004, CVSS 9.8)이 활성 공격으로 악용되고 있다고 경고했다. 이 취약점은 공격자가 원격으로 코드를 실행할 수 있게 한다.</div>
+      </div></div>
+    </a>
+
+    <a class="card" href="https://gbhackers.com/critical-watchguard-agent-flaws/" target="_blank">
+      <div class="card-inner"><div class="sev-bar sev-critical"></div><div class="card-content">
+        <div class="card-top"><span class="badge badge-critical">긴급</span><span class="source">The Hacker News</span></div>
+        <div class="card-headline">WatchGuard Agent 취약점(CVE-2026-57910, CVE-2026-57909) 공격 가능성<span class="arrow">↗</span></div>
+        <div class="card-summary">WatchGuard는 Windows WatchGuard Agent의 두 중대한 취약점(CVE-2026-57910, CVE-2026-57909)을 공개했다. 이 취약점은 인증 없이 공격자가 원격으로 코드를 실행할 수 있게 한다.</div>
+      </div></div>
+    </a>
+
+    <a class="card" href="https://thehackernews.com/2026/08/nimbus-manticore-expands-toolset-with.html" target="_blank">
+      <div class="card-inner"><div class="sev-bar sev-high"></div><div class="card-content">
+        <div class="card-top"><span class="badge badge-high">높음</span><span class="source">The Hacker News</span></div>
+        <div class="card-headline">Nimbus Manticore TWOSTROKE-유사 백도어 및 SSH 터널러 도입<span class="arrow">↗</span></div>
+        <div class="card-summary">Nimbus Manticore, 이란 정부 지원 해커 그룹이 TWOSTROKE-유사 백도어와 SSH 터널러를 도입했다. 이 도구는 내부 네트워크에 지속적인 액세스를 제공한다.</div>
+      </div></div>
+    </a>
+
+    <a class="card" href="https://gbhackers.com/critical-wordpress-translatepress-flaw/" target="_blank">
+      <div class="card-inner"><div class="sev-bar sev-high"></div><div class="card-content">
+        <div class="card-top"><span class="badge badge-high">높음</span><span class="source">The Hacker News</span></div>
+        <div class="card-headline">Critical WordPress TranslatePress Flaw (CVE-2026-19632) 공격 가능성<span class="arrow">↗</span></div>
+        <div class="card-summary">TranslatePress 플러그인의 중대한 취약점(CVE-2026-19632, CVSS 9.8)은 공격자가 관리자 계정을 탈취할 수 있게 한다. 이 취약점은 모든 TranslatePress 사용자에게 영향을 미친다.</div>
+      </div></div>
+    </a>
+
+    <a class="card" href="https://thehackernews.com/2026/08/unpatched-kaltura-mwembed-flaws-could.html" target="_blank">
+      <div class="card-inner"><div class="sev-bar sev-medium"></div><div class="card-content">
+        <div class="card-top"><span class="badge badge-medium">중간</span><span class="source">The Hacker News</span></div>
+        <div class="card-headline">Unpatched Kaltura mwEmbed Flaws (CVE-2026-19913, CVE-2026-19912) 공격 가능성<span class="arrow">↗</span></div>
+        <div class="card-summary">Kaltura의 mwEmbed 라이브러리에 보안 패치가 적용되지 않은 취약점(CVE-2026-19913, CVE-2026-19912)이 발견되었다. 이 취약점은 원격 공격자가 파일을 읽거나 코드를 실행할 수 있게 한다.</div>
+      </div></div>
+    </a>
+
+    <div class="section-label">침해 사고</div>
+
+    <a class="card" href="https://www.securityweek.com/sensitive-information-exposed-in-nutex-health-data-breach/" target="_blank">
+      <div class="card-inner"><div class="sev-bar sev-incident"></div><div class="card-content">
+        <div class="card-top"><span class="badge badge-incident">사고</span><span class="source">The Hacker News</span></div>
+        <div class="card-headline">Nutex Health 데이터 유출 사고 발생<span class="arrow">↗</span></div>
+        <div class="card-summary">Nutex Health은 비인가 접근 및 데이터 유출을 감지했다고 SEC에 알렸다. 이 사고로 민감한 정보가 노출되었으며, 보안 취약점이 원인일 것으로 추정된다.</div>
+      </div></div>
+    </a>
+
+    <a class="card" href="https://thehackernews.com/2026/08/interpol-operation-jackal-iv-arrests-58.html" target="_blank">
+      <div class="card-inner"><div class="sev-bar sev-incident"></div><div class="card-content">
+        <div class="card-top"><span class="badge badge-incident">사고</span><span class="source">The Hacker News</span></div>
+        <div class="card-headline">INTERPOL Operation Jackal IV, 58명 체포 및 263명 식별<span class="arrow">↗</span></div>
+        <div class="card-summary">INTERPOL은 서아프리카 범죄 조직을 대상으로 한 Operation Jackal IV에서 58명을 체포하고 263명을 식별했다. 이 작전은 글로벌 사이버 사기 및 사기 조직을 대상으로 했다.</div>
+      </div></div>
+    </a>
+
+    <a class="card" href="https://securityaffairs.com/197826/cyber-warfare-2/norway-s-digital-government-infrastructure-hit-by-a-new-ddos-attack.html" target="_blank">
+      <div class="card-inner"><div class="sev-bar sev-incident"></div><div class="card-content">
+        <div class="card-top"><span class="badge badge-incident">사고</span><span class="source">The Hacker News</span></div>
+        <div class="card-headline">Norway의 디지털 정부 인프라 DDoS 공격<span class="arrow">↗</span></div>
+        <div class="card-summary">Norway의 디지털 정부 인프라는 세 번째 DDoS 공격을 받았으며, 디지털 서비스가 중단되었지만 데이터 손실은 보고되지 않았다.</div>
+      </div></div>
+    </a>
+
+    <div class="section-label">동향 &amp; 분석</div>
+    <div class="trend-box">
+      <div class="trend-row">
+        <div class="trend-num">01</div>
+        <div class="trend-text"><strong>AI 기반 공격 증가</strong> — AI 기술이 악용되어 새로운 백도어, 랜섬웨어, 인증 우회 공격이 증가하고 있다. 특히, AI가 사용자 인터페이스를 모방하여 사기 행위를 수행하는 사례가 늘고 있다.</div>
+      </div>
+      <div class="trend-row">
+        <div class="trend-num">02</div>
+        <div class="trend-text"><strong>국가 지원 해커 활동 증가</strong> — 중국, 이란, 러시아 등 국가 지원 해커 그룹의 활동이 증가하고 있으며, 주요 인프라 및 정부 기관을 대상으로 한 공격이 빈번하다.</div>
+      </div>
+      <div class="trend-row">
+        <div class="trend-num">03</div>
+        <div class="trend-text"><strong>취약점 패치 지연</strong> — 중요한 취약점이 발견되었지만, 패치가 지연되거나 사용자가 패치를 적용하지 않아 공격이 악용되고 있다. 특히, Gitea 및 WordPress 플러그인의 취약점이 활성 공격으로 악용되고 있다.</div>
+      </div>
+      <div class="trend-row">
+        <div class="trend-num">04</div>
+        <div class="trend-text"><strong>AI 기반 보안 대응 강화</strong> — AI 기술이 보안 대응에 활용되고 있으며, Microsoft는 AI 인프라에 대한 보안을 강화하고 있다. 또한, AI 기반의 탐지 및 분석 도구가 보안 모니터링에 사용되고 있다.</div>
+      </div>
+    </div>
+  </div>
+  <div class="footer">
+    <div>출처: The Hacker News · BleepingComputer · SecurityWeek · KrebsOnSecurity · CISA · NCSC UK · Unit 42 · 보안뉴스 · 데일리시큐 · 전자신문</div>
+    <div class="footer-meta">
+      <span>© 2026 Felix · SecuLog. 본 브리핑은 공개된 보안 뉴스를 기반으로 작성되었습니다.</span>
+    </div>
+  </div>
+</div>
+</body>
+</html>
