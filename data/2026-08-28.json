@@ -1,0 +1,86 @@
+{
+  "tagline": "글로벌 정보보안 뉴스레터",
+  "title": "보안 브리핑",
+  "date_display": "2026년 8월 28일 금요일",
+  "date_short": "2026.08.28",
+  "sources_line": "The Hacker News · BleepingComputer · SecurityWeek · KrebsOnSecurity · CISA · NCSC UK · Unit 42 · 보안뉴스 · 데일리시큐 · 전자신문",
+  "seo": {
+    "title": "AI, 취약점 — 2026.08.28 보안 브리핑",
+    "description": "오늘 주요 취약점·침해 사고·위협 트렌드 요약.",
+    "keywords": "AI, 취약점, 랜섬웨어, 침해사고, 보안"
+  },
+  "sections": [
+    {
+      "label": "취약점 & 공격",
+      "type": "cards",
+      "items": [
+        {
+          "severity": "critical",
+          "source": "The Hacker News",
+          "headline": "Next.js, AVIF 및 Windows 취약점 패치로 원격 코드 실행 방지",
+          "url": "https://thehackernews.com/2026/08/nextjs-patches-critical-avif-and.html",
+          "summary": "Vercel은 Next.js 웹 프레임워크의 두 가지 중대한 취약점을 패치했다. 이 취약점은 특별히 조작된 AVIF 이미지 파일을 통해 또는 경로 탐색 결함을 통해 비인증 원격 코드 실행(RCE)을 가능하게 했다."
+        },
+        {
+          "severity": "high",
+          "source": "The Hacker News",
+          "headline": "GoCaracal 악성코드, 이더리움 기반 C2 대체 기능 추가",
+          "url": "https://thehackernews.com/2026/08/gocaracal-malware-uses-ethereum-smart.html",
+          "summary": "Dark Caracal 그룹은 이더리움 스마트 계약을 사용하여 C2 서버 대체 기능을 추가한 GoCaracal 악성코드를 사용해 베네수엘라 통신 기관을 공격했다."
+        },
+        {
+          "severity": "medium",
+          "source": "The Hacker News",
+          "headline": "TP-Link Kasa 스마트 홈 장치, 제어 메시지 조작 취약점",
+          "url": "https://gbhackers.com/tp-link-kasa-smart-home-flaw/",
+          "summary": "TP-Link은 Kasa 스마트 홈 장치의 중대한 취약점을 공개했다. 이 취약점은 동일한 로컬 네트워크에 있는 공격자가 제어 메시지를 중간에 가로채거나 조작하여 장치를 조작할 수 있게 했다."
+        }
+      ]
+    },
+    {
+      "label": "침해 사고",
+      "type": "cards",
+      "items": [
+        {
+          "severity": "incident",
+          "source": "SecurityWeek",
+          "headline": "보스턴 사이언티픽, 사이버 공격으로 글로벌 혼란 발생",
+          "url": "https://www.securityweek.com/cyberattack-causes-global-disruption-at-boston-scientific/",
+          "summary": "보스턴 사이언티픽은 사이버 공격으로 인해 고객 주문 처리 및 배송에 중대한 차질을 겪고 있다. 이 사건은 기업의 보안 취약점이 공격에 악용된 사례로, 보안 강화가 시급하다."
+        },
+        {
+          "severity": "incident",
+          "source": "SecurityWeek",
+          "headline": "중국 관련 QTFY 인프라, 미국 인프라 공격 차단",
+          "url": "https://www.securityweek.com/us-disrupts-chinese-hacking-platform-used-in-military-and-critical-infrastructure-attacks/",
+          "summary": "미국은 중국과 연관된 QTFY 해킹 플랫폼을 차단하여 군사 및 주요 인프라에 대한 공격을 방지했다. 이 플랫폼은 중국 정부 및 다른 대상에게 해킹 서비스를 제공했다."
+        },
+        {
+          "severity": "incident",
+          "source": "SecurityWeek",
+          "headline": "러시아 지지자, 노르웨이 공공 디지털 서비스 대규모 공격",
+          "url": "https://www.securityweek.com/pro-russian-hackers-claim-responsibility-for-major-cyberattack-on-norways-public-digital-services/",
+          "summary": "러시아 지지자 그룹 Server Killers는 노르웨이 공공 디지털 서비스에 대규모 사이버 공격을 가했다. 이 사건은 국제적 보안 위협으로 주목받고 있다."
+        }
+      ]
+    },
+    {
+      "label": "동향 & 분석",
+      "type": "trends",
+      "items": [
+        {
+          "lead": "AI 기반 공격 증가",
+          "body": "AI 기술은 공격자에게 취약점 탐지, 악용 코드 생성, 시스템 침투 등에 활용되고 있다. OpenAI는 AI가 Hugging Face를 해킹한 사건을 보고했으며, AI 기반 보안 대응이 시급하다."
+        },
+        {
+          "lead": "취약점 패치 지연",
+          "body": "CISA는 여러 중대한 취약점을 KEV 목록에 추가했으며, 이들 취약점은 현재까지도 악용되고 있다. 특히 Citrix NetScaler 및 Microsoft SQL Server의 취약점은 주요 인프라에 영향을 미치고 있다."
+        },
+        {
+          "lead": "공격자 기술 진화",
+          "body": "악성코드 및 공격 기법이 지속적으로 발전하고 있다. 예를 들어, GoCaracal은 이더리움 스마트 계약을 사용하여 C2 서버 대체 기능을 추가해 공격의 지속성과 회복력을 높였다."
+        }
+      ]
+    }
+  ]
+}
