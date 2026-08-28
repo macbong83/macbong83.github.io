@@ -41,13 +41,59 @@
     <h1>CVE Archive</h1>
     <p>NVD 기반 Critical CVE를 누적 관리하는 별도 페이지입니다. 블로그에는 CVE 자동 글을 발행하지 않고, 이 페이지에만 기록합니다.</p>
     <div class="meta">
-      <span>Total 710</span>
-      <span>Updated 2026-08-28 20:01 KST</span>
+      <span>Total 716</span>
+      <span>Updated 2026-08-29 08:00 KST</span>
       <span>Source NVD API</span>
     </div>
   </section>
   <div class="notice">중복 제거 기준은 CVE ID입니다. 동일 CVE는 다시 추가하지 않습니다. 실제 악용 여부와 패치 우선순위는 CISA KEV, 벤더 권고, 자산 노출 여부와 함께 검토해야 합니다.</div>
 
+    <article class="cve-card" id="CVE-2026-82277">
+      <div class="cve-top">
+        <a class="cve-id" href="https://nvd.nist.gov/vuln/detail/CVE-2026-82277" target="_blank" rel="noopener">CVE-2026-82277</a>
+        <span class="score">CVSS 9.8 CRITICAL</span>
+      </div>
+      <p class="desc">Argo Rollouts dashboard through 1.10.0 binds to all interfaces and exposes mutating Rollout operations without authentication, authorization, or CSRF protection. Attackers on the same network can invoke PromoteRollout, AbortRollout, RestartRollout, SetRolloutImage, UndoRollout, and RetryRollout operations across all namespaces accessible to the operator&#x27;s kubeconfig.</p>
+      <dl>
+        <div><dt>Published</dt><dd>2026-08-28</dd></div>
+        <div><dt>Last Modified</dt><dd>2026-08-28</dd></div>
+        <div><dt>Status</dt><dd>Received</dd></div>
+        <div><dt>Attack Vector</dt><dd>네트워크</dd></div>
+        <div><dt>Attack Complexity</dt><dd>낮음</dd></div>
+        <div><dt>Privileges</dt><dd>없음</dd></div>
+        <div><dt>User Interaction</dt><dd>없음</dd></div>
+        <div><dt>CWE</dt><dd>CWE-306</dd></div>
+        <div><dt>Affected</dt><dd>NVD CPE 기준 확인 필요</dd></div>
+      </dl>
+      <div class="vector"><code>CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H</code></div>
+      <details>
+        <summary>References</summary>
+        <ul><li><a href="https://github.com/argoproj/argo-rollouts" target="_blank" rel="noopener">https://github.com/argoproj/argo-rollouts</a></li><li><a href="https://github.com/argoproj/argo-rollouts/blob/4e6a2798688e22868340d9871a3c8d78371f1568/server/server.go" target="_blank" rel="noopener">https://github.com/argoproj/argo-rollouts/blob/4e6a2798688e22868340d9871a3c8d78371f1568/server/server.go</a></li><li><a href="https://github.com/argoproj/argo-rollouts/issues/4747" target="_blank" rel="noopener">https://github.com/argoproj/argo-rollouts/issues/4747</a></li><li><a href="https://www.vulncheck.com/advisories/argo-rollouts-dashboard-unauthenticated-mutating-operations" target="_blank" rel="noopener">https://www.vulncheck.com/advisories/argo-rollouts-dashboard-unauthenticated-mutating-operations</a></li></ul>
+      </details>
+    </article>
+    <article class="cve-card" id="CVE-2026-82266">
+      <div class="cve-top">
+        <a class="cve-id" href="https://nvd.nist.gov/vuln/detail/CVE-2026-82266" target="_blank" rel="noopener">CVE-2026-82266</a>
+        <span class="score">CVSS 9.8 CRITICAL</span>
+      </div>
+      <p class="desc">Redpanda through 26.2.2 binds the Admin API to 0.0.0.0:9644 with admin_api_require_auth defaulting to false, treating unauthenticated requests as superusers. Attackers can reach port 9644 without credentials to create and delete broker accounts, modify cluster configuration, and disrupt partition replication.</p>
+      <dl>
+        <div><dt>Published</dt><dd>2026-08-28</dd></div>
+        <div><dt>Last Modified</dt><dd>2026-08-28</dd></div>
+        <div><dt>Status</dt><dd>Received</dd></div>
+        <div><dt>Attack Vector</dt><dd>네트워크</dd></div>
+        <div><dt>Attack Complexity</dt><dd>낮음</dd></div>
+        <div><dt>Privileges</dt><dd>없음</dd></div>
+        <div><dt>User Interaction</dt><dd>없음</dd></div>
+        <div><dt>CWE</dt><dd>CWE-306</dd></div>
+        <div><dt>Affected</dt><dd>NVD CPE 기준 확인 필요</dd></div>
+      </dl>
+      <div class="vector"><code>CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H</code></div>
+      <details>
+        <summary>References</summary>
+        <ul><li><a href="https://github.com/redpanda-data/redpanda" target="_blank" rel="noopener">https://github.com/redpanda-data/redpanda</a></li><li><a href="https://github.com/redpanda-data/redpanda/blob/3cfce474a872090e7c74d14181885f5838c54cf2/conf/redpanda.yaml" target="_blank" rel="noopener">https://github.com/redpanda-data/redpanda/blob/3cfce474a872090e7c74d14181885f5838c54cf2/conf/redpanda.yaml</a></li><li><a href="https://github.com/redpanda-data/redpanda/blob/3cfce474a872090e7c74d14181885f5838c54cf2/src/v/security/request_auth.cc" target="_blank" rel="noopener">https://github.com/redpanda-data/redpanda/blob/3cfce474a872090e7c74d14181885f5838c54cf2/src/v/security/request_auth.cc</a></li><li><a href="https://github.com/redpanda-data/redpanda/issues/30989" target="_blank" rel="noopener">https://github.com/redpanda-data/redpanda/issues/30989</a></li></ul>
+      </details>
+    </article>
     <article class="cve-card" id="CVE-2026-82082">
       <div class="cve-top">
         <a class="cve-id" href="https://nvd.nist.gov/vuln/detail/CVE-2026-82082" target="_blank" rel="noopener">CVE-2026-82082</a>
@@ -115,6 +161,98 @@
       <details>
         <summary>References</summary>
         <ul><li><a href="https://www.synology.com/en-global/security/advisory/Synology_SA_26_10" target="_blank" rel="noopener">https://www.synology.com/en-global/security/advisory/Synology_SA_26_10</a></li></ul>
+      </details>
+    </article>
+    <article class="cve-card" id="CVE-2026-3627">
+      <div class="cve-top">
+        <a class="cve-id" href="https://nvd.nist.gov/vuln/detail/CVE-2026-3627" target="_blank" rel="noopener">CVE-2026-3627</a>
+        <span class="score">CVSS 9.1 CRITICAL</span>
+      </div>
+      <p class="desc">IBM Concert 1.0.0 through 2.3.1 is vulnerable to SQL injection. A remote attacker could send specially crafted SQL statements, which could allow the attacker to view, add, modify, or delete information in the back-end database.</p>
+      <dl>
+        <div><dt>Published</dt><dd>2026-08-28</dd></div>
+        <div><dt>Last Modified</dt><dd>2026-08-28</dd></div>
+        <div><dt>Status</dt><dd>Received</dd></div>
+        <div><dt>Attack Vector</dt><dd>네트워크</dd></div>
+        <div><dt>Attack Complexity</dt><dd>낮음</dd></div>
+        <div><dt>Privileges</dt><dd>없음</dd></div>
+        <div><dt>User Interaction</dt><dd>없음</dd></div>
+        <div><dt>CWE</dt><dd>NVD 기준 확인 필요</dd></div>
+        <div><dt>Affected</dt><dd>NVD CPE 기준 확인 필요</dd></div>
+      </dl>
+      <div class="vector"><code>CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N</code></div>
+      <details>
+        <summary>References</summary>
+        <ul><li><a href="https://www.ibm.com/support/pages/node/7285337" target="_blank" rel="noopener">https://www.ibm.com/support/pages/node/7285337</a></li></ul>
+      </details>
+    </article>
+    <article class="cve-card" id="CVE-2026-19295">
+      <div class="cve-top">
+        <a class="cve-id" href="https://nvd.nist.gov/vuln/detail/CVE-2026-19295" target="_blank" rel="noopener">CVE-2026-19295</a>
+        <span class="score">CVSS 9.9 CRITICAL</span>
+      </div>
+      <p class="desc">IBM Langflow OSS 1.0.0 through 1.11.1 allows an authenticated attacker to execute arbitrary operating system commands in the server process by saving a flow with a crafted type field value and triggering a build of a wrapper flow that references it. This allowed privilege escalation from &quot;authenticated flow user&quot; to arbitrary OS-level command execution under the server process identity, bypassing the LANGFLOW_ALLOW_CUSTOM_COMPONENTS=false policy control.</p>
+      <dl>
+        <div><dt>Published</dt><dd>2026-08-28</dd></div>
+        <div><dt>Last Modified</dt><dd>2026-08-28</dd></div>
+        <div><dt>Status</dt><dd>Received</dd></div>
+        <div><dt>Attack Vector</dt><dd>네트워크</dd></div>
+        <div><dt>Attack Complexity</dt><dd>낮음</dd></div>
+        <div><dt>Privileges</dt><dd>낮음</dd></div>
+        <div><dt>User Interaction</dt><dd>없음</dd></div>
+        <div><dt>CWE</dt><dd>CWE-95</dd></div>
+        <div><dt>Affected</dt><dd>NVD CPE 기준 확인 필요</dd></div>
+      </dl>
+      <div class="vector"><code>CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H</code></div>
+      <details>
+        <summary>References</summary>
+        <ul><li><a href="https://www.ibm.com/support/pages/node/7284733" target="_blank" rel="noopener">https://www.ibm.com/support/pages/node/7284733</a></li></ul>
+      </details>
+    </article>
+    <article class="cve-card" id="CVE-2026-19286">
+      <div class="cve-top">
+        <a class="cve-id" href="https://nvd.nist.gov/vuln/detail/CVE-2026-19286" target="_blank" rel="noopener">CVE-2026-19286</a>
+        <span class="score">CVSS 9.8 CRITICAL</span>
+      </div>
+      <p class="desc">IBM Langflow OSS 1.0.0 through 1.11.1 could allow a remote attacker to execute arbitrary code due to improper enforcement of security restrictions on the A2A public endpoint.</p>
+      <dl>
+        <div><dt>Published</dt><dd>2026-08-28</dd></div>
+        <div><dt>Last Modified</dt><dd>2026-08-28</dd></div>
+        <div><dt>Status</dt><dd>Received</dd></div>
+        <div><dt>Attack Vector</dt><dd>네트워크</dd></div>
+        <div><dt>Attack Complexity</dt><dd>낮음</dd></div>
+        <div><dt>Privileges</dt><dd>없음</dd></div>
+        <div><dt>User Interaction</dt><dd>없음</dd></div>
+        <div><dt>CWE</dt><dd>CWE-94</dd></div>
+        <div><dt>Affected</dt><dd>NVD CPE 기준 확인 필요</dd></div>
+      </dl>
+      <div class="vector"><code>CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H</code></div>
+      <details>
+        <summary>References</summary>
+        <ul><li><a href="https://www.ibm.com/support/pages/node/7284733" target="_blank" rel="noopener">https://www.ibm.com/support/pages/node/7284733</a></li></ul>
+      </details>
+    </article>
+    <article class="cve-card" id="CVE-2026-18527">
+      <div class="cve-top">
+        <a class="cve-id" href="https://nvd.nist.gov/vuln/detail/CVE-2026-18527" target="_blank" rel="noopener">CVE-2026-18527</a>
+        <span class="score">CVSS 9.9 CRITICAL</span>
+      </div>
+      <p class="desc">IBM Administration Runtime Expert for i 1R1M0 IBM Application Runtime Expert (ARE) for i could allow a remote attacker to gain elevated privileges, caused by ARE GUI component processing. An unauthenticated attacker can exploit this vulnerability to execute actions under another user&#x27;s authenticated profile gaining elevated privileges on the IBM i system.</p>
+      <dl>
+        <div><dt>Published</dt><dd>2026-08-28</dd></div>
+        <div><dt>Last Modified</dt><dd>2026-08-28</dd></div>
+        <div><dt>Status</dt><dd>Received</dd></div>
+        <div><dt>Attack Vector</dt><dd>네트워크</dd></div>
+        <div><dt>Attack Complexity</dt><dd>낮음</dd></div>
+        <div><dt>Privileges</dt><dd>낮음</dd></div>
+        <div><dt>User Interaction</dt><dd>없음</dd></div>
+        <div><dt>CWE</dt><dd>CWE-384</dd></div>
+        <div><dt>Affected</dt><dd>NVD CPE 기준 확인 필요</dd></div>
+      </dl>
+      <div class="vector"><code>CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H</code></div>
+      <details>
+        <summary>References</summary>
+        <ul><li><a href="https://www.ibm.com/support/pages/node/7284580" target="_blank" rel="noopener">https://www.ibm.com/support/pages/node/7284580</a></li></ul>
       </details>
     </article>
     <article class="cve-card" id="CVE-2026-81735">
