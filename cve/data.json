@@ -1,5 +1,85 @@
 [
   {
+    "id": "CVE-2026-82082",
+    "published": "2026-08-28",
+    "last_modified": "2026-08-28",
+    "status": "Received",
+    "description": "NUMail developed by Green-Computing has an OS Command Injection vulnerability. Unauthenticated remote attackers can inject arbitrary OS commands and execute them on the server.",
+    "cvss": {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "score": 9.8,
+      "severity": "CRITICAL",
+      "attack_vector": "네트워크",
+      "attack_complexity": "낮음",
+      "privileges_required": "없음",
+      "user_interaction": "없음"
+    },
+    "cwes": [
+      "CWE-78"
+    ],
+    "affected": [],
+    "references": [
+      "https://www.twcert.org.tw/en/cp-139-11145-5361d-2.html",
+      "https://www.twcert.org.tw/tw/cp-132-11144-45c6a-1.html"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-82082",
+    "added_at": "2026-08-28T20:01:00+09:00"
+  },
+  {
+    "id": "CVE-2026-76581",
+    "published": "2026-08-28",
+    "last_modified": "2026-08-28",
+    "status": "Received",
+    "description": "The WPMU DEV Dashboard plugin for WordPress is vulnerable to Authentication Bypass in all versions up to, and including, 5.0.1. This is due to inconsistent and ambiguous HMAC message construction between the unauthenticated `wdpsso_step1` and `wdpsso_step2` AJAX actions, where step 1 signs and discloses an unseparated concatenation of the token, state, redirect, and domain values, while step 2 verifies an unseparated concatenation that omits the domain field. This makes it possible for unauthenticated attackers, on sites connected to WPMU DEV with Hub SSO enabled and mapped to an administrator, to obtain a valid HMAC from step 1 and replay it to step 2 by moving the domain value into the redirect field, resulting in an authenticated administrator session.",
+    "cvss": {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "score": 9.8,
+      "severity": "CRITICAL",
+      "attack_vector": "네트워크",
+      "attack_complexity": "낮음",
+      "privileges_required": "없음",
+      "user_interaction": "없음"
+    },
+    "cwes": [
+      "CWE-347"
+    ],
+    "affected": [],
+    "references": [
+      "https://wpmudev.com/project/wpmu-dev-dashboard/",
+      "https://www.wordfence.com/threat-intel/vulnerabilities/id/3d4321c8-15a4-46f5-9b0e-2098a7fcfb5b?source=cve"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-76581",
+    "added_at": "2026-08-28T20:01:00+09:00"
+  },
+  {
+    "id": "CVE-2026-40541",
+    "published": "2026-08-28",
+    "last_modified": "2026-08-28",
+    "status": "Received",
+    "description": "An improper neutralization of input during web page generation ('Cross-site Scripting') vulnerability in extract domain in Synology Chat Server before 2.4.5-22148 allows remote authenticated users, via a UI interaction, to read or write arbitrary files and conduct denial-of-service attacks in DSM.",
+    "cvss": {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:C/C:H/I:H/A:H",
+      "score": 9.0,
+      "severity": "CRITICAL",
+      "attack_vector": "네트워크",
+      "attack_complexity": "낮음",
+      "privileges_required": "낮음",
+      "user_interaction": "필요"
+    },
+    "cwes": [
+      "CWE-79"
+    ],
+    "affected": [],
+    "references": [
+      "https://www.synology.com/en-global/security/advisory/Synology_SA_26_10"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-40541",
+    "added_at": "2026-08-28T20:01:00+09:00"
+  },
+  {
     "id": "CVE-2026-81735",
     "published": "2026-08-27",
     "last_modified": "2026-08-27",
