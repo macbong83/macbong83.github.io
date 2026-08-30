@@ -1,5 +1,68 @@
 [
   {
+    "id": "CVE-2026-82542",
+    "published": "2026-08-30",
+    "last_modified": "2026-08-30",
+    "status": "Received",
+    "description": "A weakness has been identified in Tenda HG10 300001138. Affected by this issue is the function formIPv6Routing of the file /boaform/admin/formIPv6Routing of the component Boa Web Server. This manipulation of the argument destNet causes buffer overflow. The attack is possible to be carried out remotely. The exploit has been made available to the public and could be used for attacks.",
+    "cvss": {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:H",
+      "score": 10.0,
+      "severity": "CRITICAL",
+      "attack_vector": "네트워크",
+      "attack_complexity": "낮음",
+      "privileges_required": "없음",
+      "user_interaction": "없음"
+    },
+    "cwes": [
+      "CWE-119",
+      "CWE-120"
+    ],
+    "affected": [],
+    "references": [
+      "https://github.com/SunnyYANGyaya/cuicuishark-sheep-fishIOT/blob/main/Tenda/HG10/bof-formIPv6Route-destNt.md",
+      "https://vuldb.com/cve/CVE-2026-82542",
+      "https://vuldb.com/submit/888876",
+      "https://vuldb.com/vuln/397058",
+      "https://vuldb.com/vuln/397058/cti",
+      "https://www.tenda.com.cn/"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-82542",
+    "added_at": "2026-08-31T08:00:55+09:00"
+  },
+  {
+    "id": "CVE-2026-82539",
+    "published": "2026-08-30",
+    "last_modified": "2026-08-30",
+    "status": "Received",
+    "description": "A vulnerability was determined in TOTOLINK A720R 4.1.5cu.630_B20250509. This impacts the function setMacFilterRules of the file cstecgi.cgi of the component MAC Filtering. Executing a manipulation of the argument desc can lead to memory corruption. The attack may be launched remotely. The exploit has been publicly disclosed and may be utilized.",
+    "cvss": {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:C/C:H/I:H/A:H",
+      "score": 9.1,
+      "severity": "CRITICAL",
+      "attack_vector": "네트워크",
+      "attack_complexity": "낮음",
+      "privileges_required": "높음",
+      "user_interaction": "없음"
+    },
+    "cwes": [
+      "CWE-119"
+    ],
+    "affected": [],
+    "references": [
+      "https://github.com/Xernary/CVE-2026-82539",
+      "https://vuldb.com/cve/CVE-2026-82539",
+      "https://vuldb.com/submit/888696",
+      "https://vuldb.com/vuln/397055",
+      "https://vuldb.com/vuln/397055/cti",
+      "https://www.totolink.net/"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-82539",
+    "added_at": "2026-08-31T08:00:55+09:00"
+  },
+  {
     "id": "CVE-2026-15980",
     "published": "2026-08-30",
     "last_modified": "2026-08-30",
