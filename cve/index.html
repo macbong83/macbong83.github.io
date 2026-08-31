@@ -41,13 +41,312 @@
     <h1>CVE Archive</h1>
     <p>NVD 기반 Critical CVE를 누적 관리하는 별도 페이지입니다. 블로그에는 CVE 자동 글을 발행하지 않고, 이 페이지에만 기록합니다.</p>
     <div class="meta">
-      <span>Total 726</span>
-      <span>Updated 2026-08-31 08:00 KST</span>
+      <span>Total 739</span>
+      <span>Updated 2026-08-31 20:00 KST</span>
       <span>Source NVD API</span>
     </div>
   </section>
   <div class="notice">중복 제거 기준은 CVE ID입니다. 동일 CVE는 다시 추가하지 않습니다. 실제 악용 여부와 패치 우선순위는 CISA KEV, 벤더 권고, 자산 노출 여부와 함께 검토해야 합니다.</div>
 
+    <article class="cve-card" id="CVE-2026-82874">
+      <div class="cve-top">
+        <a class="cve-id" href="https://nvd.nist.gov/vuln/detail/CVE-2026-82874" target="_blank" rel="noopener">CVE-2026-82874</a>
+        <span class="score">CVSS 9.9 CRITICAL</span>
+      </div>
+      <p class="desc">ToolJet before v3.16.208 fails to validate that authenticated users belong to the organization specified in the organizationId path parameter of tooljet-db endpoints, allowing any Builder user to read, modify, and delete tables across tenant boundaries. Attackers can extract victim organization IDs from public app endpoints, then exploit schema operation endpoints to disclose table schemas, plant malicious tables, corrupt existing schemas, or permanently destroy victim data without any relationship to the target organization.</p>
+      <dl>
+        <div><dt>Published</dt><dd>2026-08-31</dd></div>
+        <div><dt>Last Modified</dt><dd>2026-08-31</dd></div>
+        <div><dt>Status</dt><dd>Received</dd></div>
+        <div><dt>Attack Vector</dt><dd>네트워크</dd></div>
+        <div><dt>Attack Complexity</dt><dd>낮음</dd></div>
+        <div><dt>Privileges</dt><dd>낮음</dd></div>
+        <div><dt>User Interaction</dt><dd>없음</dd></div>
+        <div><dt>CWE</dt><dd>CWE-639</dd></div>
+        <div><dt>Affected</dt><dd>NVD CPE 기준 확인 필요</dd></div>
+      </dl>
+      <div class="vector"><code>CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H</code></div>
+      <details>
+        <summary>References</summary>
+        <ul><li><a href="https://github.com/ToolJet/ToolJet/security/advisories/GHSA-w3hx-rg9g-mw5c" target="_blank" rel="noopener">https://github.com/ToolJet/ToolJet/security/advisories/GHSA-w3hx-rg9g-mw5c</a></li><li><a href="https://www.vulncheck.com/advisories/tooljet-before-3.16.208-cross-tenant-authorization-bypass-via-tooljet-db" target="_blank" rel="noopener">https://www.vulncheck.com/advisories/tooljet-before-3.16.208-cross-tenant-authorization-bypass-via-tooljet-db</a></li></ul>
+      </details>
+    </article>
+    <article class="cve-card" id="CVE-2026-82872">
+      <div class="cve-top">
+        <a class="cve-id" href="https://nvd.nist.gov/vuln/detail/CVE-2026-82872" target="_blank" rel="noopener">CVE-2026-82872</a>
+        <span class="score">CVSS 9.1 CRITICAL</span>
+      </div>
+      <p class="desc">ToolJet before v3.16.208 fails to validate that the path organizationId matches the authenticated user&#x27;s workspace before performing ToolJet DB table operations. A workspace admin can create, view, and delete database tables in another workspace by replacing the organizationId parameter in table-management API requests.</p>
+      <dl>
+        <div><dt>Published</dt><dd>2026-08-31</dd></div>
+        <div><dt>Last Modified</dt><dd>2026-08-31</dd></div>
+        <div><dt>Status</dt><dd>Received</dd></div>
+        <div><dt>Attack Vector</dt><dd>네트워크</dd></div>
+        <div><dt>Attack Complexity</dt><dd>낮음</dd></div>
+        <div><dt>Privileges</dt><dd>높음</dd></div>
+        <div><dt>User Interaction</dt><dd>없음</dd></div>
+        <div><dt>CWE</dt><dd>CWE-639</dd></div>
+        <div><dt>Affected</dt><dd>NVD CPE 기준 확인 필요</dd></div>
+      </dl>
+      <div class="vector"><code>CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:C/C:H/I:H/A:H</code></div>
+      <details>
+        <summary>References</summary>
+        <ul><li><a href="https://github.com/ToolJet/ToolJet/security/advisories/GHSA-2jhv-482p-4php" target="_blank" rel="noopener">https://github.com/ToolJet/ToolJet/security/advisories/GHSA-2jhv-482p-4php</a></li><li><a href="https://www.vulncheck.com/advisories/tooljet-before-3.16.208-cross-workspace-authorization-bypass" target="_blank" rel="noopener">https://www.vulncheck.com/advisories/tooljet-before-3.16.208-cross-workspace-authorization-bypass</a></li></ul>
+      </details>
+    </article>
+    <article class="cve-card" id="CVE-2026-82870">
+      <div class="cve-top">
+        <a class="cve-id" href="https://nvd.nist.gov/vuln/detail/CVE-2026-82870" target="_blank" rel="noopener">CVE-2026-82870</a>
+        <span class="score">CVSS 9.6 CRITICAL</span>
+      </div>
+      <p class="desc">ToolJet before v3.16.208 fails to validate organizationId ownership in database write and destroy routes, allowing any builder-role user to create, alter, or drop tables in other organizations&#x27; databases. Attackers can exploit missing organization-resolving guards to permanently delete tables, insert arbitrary data, and modify schemas across tenant boundaries on shared instances.</p>
+      <dl>
+        <div><dt>Published</dt><dd>2026-08-31</dd></div>
+        <div><dt>Last Modified</dt><dd>2026-08-31</dd></div>
+        <div><dt>Status</dt><dd>Received</dd></div>
+        <div><dt>Attack Vector</dt><dd>네트워크</dd></div>
+        <div><dt>Attack Complexity</dt><dd>낮음</dd></div>
+        <div><dt>Privileges</dt><dd>낮음</dd></div>
+        <div><dt>User Interaction</dt><dd>없음</dd></div>
+        <div><dt>CWE</dt><dd>CWE-639</dd></div>
+        <div><dt>Affected</dt><dd>NVD CPE 기준 확인 필요</dd></div>
+      </dl>
+      <div class="vector"><code>CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:N/I:H/A:H</code></div>
+      <details>
+        <summary>References</summary>
+        <ul><li><a href="https://github.com/ToolJet/ToolJet/security/advisories/GHSA-xr3w-r926-xfmm" target="_blank" rel="noopener">https://github.com/ToolJet/ToolJet/security/advisories/GHSA-xr3w-r926-xfmm</a></li><li><a href="https://www.vulncheck.com/advisories/tooljet-before-3.16.208-cross-tenant-database-manipulation" target="_blank" rel="noopener">https://www.vulncheck.com/advisories/tooljet-before-3.16.208-cross-tenant-database-manipulation</a></li></ul>
+      </details>
+    </article>
+    <article class="cve-card" id="CVE-2026-82860">
+      <div class="cve-top">
+        <a class="cve-id" href="https://nvd.nist.gov/vuln/detail/CVE-2026-82860" target="_blank" rel="noopener">CVE-2026-82860</a>
+        <span class="score">CVSS 9.8 CRITICAL</span>
+      </div>
+      <p class="desc">@hulumi/policies versions before 1.3.2 fail to fully inspect inline and attached IAM policy evidence for the administrator-policy guardrail. Attackers can craft admin-equivalent policy paths that bypass policy evaluation controls.</p>
+      <dl>
+        <div><dt>Published</dt><dd>2026-08-31</dd></div>
+        <div><dt>Last Modified</dt><dd>2026-08-31</dd></div>
+        <div><dt>Status</dt><dd>Received</dd></div>
+        <div><dt>Attack Vector</dt><dd>네트워크</dd></div>
+        <div><dt>Attack Complexity</dt><dd>낮음</dd></div>
+        <div><dt>Privileges</dt><dd>없음</dd></div>
+        <div><dt>User Interaction</dt><dd>없음</dd></div>
+        <div><dt>CWE</dt><dd>CWE-269</dd></div>
+        <div><dt>Affected</dt><dd>NVD CPE 기준 확인 필요</dd></div>
+      </dl>
+      <div class="vector"><code>CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H</code></div>
+      <details>
+        <summary>References</summary>
+        <ul><li><a href="https://github.com/kerberosmansour/hulumi/security/advisories/GHSA-4xrh-5m3m-328w" target="_blank" rel="noopener">https://github.com/kerberosmansour/hulumi/security/advisories/GHSA-4xrh-5m3m-328w</a></li><li><a href="https://www.vulncheck.com/advisories/hulumi-policies-before-1.3.2-admin-policy-bypass" target="_blank" rel="noopener">https://www.vulncheck.com/advisories/hulumi-policies-before-1.3.2-admin-policy-bypass</a></li></ul>
+      </details>
+    </article>
+    <article class="cve-card" id="CVE-2026-82859">
+      <div class="cve-top">
+        <a class="cve-id" href="https://nvd.nist.gov/vuln/detail/CVE-2026-82859" target="_blank" rel="noopener">CVE-2026-82859</a>
+        <span class="score">CVSS 9.8 CRITICAL</span>
+      </div>
+      <p class="desc">hulumi versions before v1.3.2 contain a deployment SCP template that allows tag-on-create bypasses for hulumi:iac-role protections. Attackers can bypass intended IAM boundary restrictions by exploiting the weakened SCP template in downstream deployments.</p>
+      <dl>
+        <div><dt>Published</dt><dd>2026-08-31</dd></div>
+        <div><dt>Last Modified</dt><dd>2026-08-31</dd></div>
+        <div><dt>Status</dt><dd>Received</dd></div>
+        <div><dt>Attack Vector</dt><dd>네트워크</dd></div>
+        <div><dt>Attack Complexity</dt><dd>낮음</dd></div>
+        <div><dt>Privileges</dt><dd>없음</dd></div>
+        <div><dt>User Interaction</dt><dd>없음</dd></div>
+        <div><dt>CWE</dt><dd>CWE-284</dd></div>
+        <div><dt>Affected</dt><dd>NVD CPE 기준 확인 필요</dd></div>
+      </dl>
+      <div class="vector"><code>CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H</code></div>
+      <details>
+        <summary>References</summary>
+        <ul><li><a href="https://github.com/kerberosmansour/hulumi/security/advisories/GHSA-86q4-r5j3-ff5c" target="_blank" rel="noopener">https://github.com/kerberosmansour/hulumi/security/advisories/GHSA-86q4-r5j3-ff5c</a></li><li><a href="https://www.vulncheck.com/advisories/hulumi-before-1.3.2-scp-template-tag-on-create-bypass" target="_blank" rel="noopener">https://www.vulncheck.com/advisories/hulumi-before-1.3.2-scp-template-tag-on-create-bypass</a></li></ul>
+      </details>
+    </article>
+    <article class="cve-card" id="CVE-2026-82858">
+      <div class="cve-top">
+        <a class="cve-id" href="https://nvd.nist.gov/vuln/detail/CVE-2026-82858" target="_blank" rel="noopener">CVE-2026-82858</a>
+        <span class="score">CVSS 9.8 CRITICAL</span>
+      </div>
+      <p class="desc">@hulumi/drift versions before 1.3.2 accept externally supplied execute plans without sufficient provenance validation, allowing untrusted reconciliation input to be treated as trusted. Attackers can supply malicious execute plans that bypass security checks to perform unsafe reconciliation operations.</p>
+      <dl>
+        <div><dt>Published</dt><dd>2026-08-31</dd></div>
+        <div><dt>Last Modified</dt><dd>2026-08-31</dd></div>
+        <div><dt>Status</dt><dd>Received</dd></div>
+        <div><dt>Attack Vector</dt><dd>네트워크</dd></div>
+        <div><dt>Attack Complexity</dt><dd>낮음</dd></div>
+        <div><dt>Privileges</dt><dd>없음</dd></div>
+        <div><dt>User Interaction</dt><dd>없음</dd></div>
+        <div><dt>CWE</dt><dd>CWE-345</dd></div>
+        <div><dt>Affected</dt><dd>NVD CPE 기준 확인 필요</dd></div>
+      </dl>
+      <div class="vector"><code>CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H</code></div>
+      <details>
+        <summary>References</summary>
+        <ul><li><a href="https://github.com/kerberosmansour/hulumi/security/advisories/GHSA-2ffm-hxrq-qqmm" target="_blank" rel="noopener">https://github.com/kerberosmansour/hulumi/security/advisories/GHSA-2ffm-hxrq-qqmm</a></li><li><a href="https://www.vulncheck.com/advisories/hulumi-drift-before-1.3.2-unsafe-execute-plan-acceptance" target="_blank" rel="noopener">https://www.vulncheck.com/advisories/hulumi-drift-before-1.3.2-unsafe-execute-plan-acceptance</a></li></ul>
+      </details>
+    </article>
+    <article class="cve-card" id="CVE-2026-82857">
+      <div class="cve-top">
+        <a class="cve-id" href="https://nvd.nist.gov/vuln/detail/CVE-2026-82857" target="_blank" rel="noopener">CVE-2026-82857</a>
+        <span class="score">CVSS 9.8 CRITICAL</span>
+      </div>
+      <p class="desc">hulumi versions before v1.3.2 contain a privilege escalation vulnerability in the weekly integration IAM policy that allows role lifecycle operations on af-e2e-* roles without sufficient boundary restrictions. Attackers with the documented principal can create persistent higher-privilege roles in the sandbox account.</p>
+      <dl>
+        <div><dt>Published</dt><dd>2026-08-31</dd></div>
+        <div><dt>Last Modified</dt><dd>2026-08-31</dd></div>
+        <div><dt>Status</dt><dd>Received</dd></div>
+        <div><dt>Attack Vector</dt><dd>네트워크</dd></div>
+        <div><dt>Attack Complexity</dt><dd>낮음</dd></div>
+        <div><dt>Privileges</dt><dd>없음</dd></div>
+        <div><dt>User Interaction</dt><dd>없음</dd></div>
+        <div><dt>CWE</dt><dd>CWE-269</dd></div>
+        <div><dt>Affected</dt><dd>NVD CPE 기준 확인 필요</dd></div>
+      </dl>
+      <div class="vector"><code>CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H</code></div>
+      <details>
+        <summary>References</summary>
+        <ul><li><a href="https://github.com/kerberosmansour/hulumi/security/advisories/GHSA-35qr-vx94-m5x3" target="_blank" rel="noopener">https://github.com/kerberosmansour/hulumi/security/advisories/GHSA-35qr-vx94-m5x3</a></li><li><a href="https://www.vulncheck.com/advisories/hulumi-before-1.3.2-privilege-escalation-via-iam-policy" target="_blank" rel="noopener">https://www.vulncheck.com/advisories/hulumi-before-1.3.2-privilege-escalation-via-iam-policy</a></li></ul>
+      </details>
+    </article>
+    <article class="cve-card" id="CVE-2026-82856">
+      <div class="cve-top">
+        <a class="cve-id" href="https://nvd.nist.gov/vuln/detail/CVE-2026-82856" target="_blank" rel="noopener">CVE-2026-82856</a>
+        <span class="score">CVSS 9.8 CRITICAL</span>
+      </div>
+      <p class="desc">@hulumi/policies versions before 1.3.2 fail to properly validate set-qualified AWS IAM condition operators in GitHub OIDC trust policies. Attackers can use ForAnyValue:StringLike operators to hide wildcard GitHub Actions OIDC subject conditions from security guardrails.</p>
+      <dl>
+        <div><dt>Published</dt><dd>2026-08-31</dd></div>
+        <div><dt>Last Modified</dt><dd>2026-08-31</dd></div>
+        <div><dt>Status</dt><dd>Received</dd></div>
+        <div><dt>Attack Vector</dt><dd>네트워크</dd></div>
+        <div><dt>Attack Complexity</dt><dd>낮음</dd></div>
+        <div><dt>Privileges</dt><dd>없음</dd></div>
+        <div><dt>User Interaction</dt><dd>없음</dd></div>
+        <div><dt>CWE</dt><dd>CWE-284</dd></div>
+        <div><dt>Affected</dt><dd>NVD CPE 기준 확인 필요</dd></div>
+      </dl>
+      <div class="vector"><code>CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H</code></div>
+      <details>
+        <summary>References</summary>
+        <ul><li><a href="https://github.com/kerberosmansour/hulumi/security/advisories/GHSA-q2f7-m237-v562" target="_blank" rel="noopener">https://github.com/kerberosmansour/hulumi/security/advisories/GHSA-q2f7-m237-v562</a></li><li><a href="https://www.vulncheck.com/advisories/hulumi-policies-before-1.3.2-oidc-trust-policy-bypass" target="_blank" rel="noopener">https://www.vulncheck.com/advisories/hulumi-policies-before-1.3.2-oidc-trust-policy-bypass</a></li></ul>
+      </details>
+    </article>
+    <article class="cve-card" id="CVE-2026-82855">
+      <div class="cve-top">
+        <a class="cve-id" href="https://nvd.nist.gov/vuln/detail/CVE-2026-82855" target="_blank" rel="noopener">CVE-2026-82855</a>
+        <span class="score">CVSS 9.8 CRITICAL</span>
+      </div>
+      <p class="desc">@hulumi/policies versions before 1.3.2 contain an evidence validation bypass vulnerability in Cloudflare and deployment-governance validators that allows attackers to suppress violations by submitting unrelated compliant evidence. Attackers can use evidence from different zones, hostnames, origins, or repositories to bypass security guardrails for unrelated resources in the same stack.</p>
+      <dl>
+        <div><dt>Published</dt><dd>2026-08-31</dd></div>
+        <div><dt>Last Modified</dt><dd>2026-08-31</dd></div>
+        <div><dt>Status</dt><dd>Received</dd></div>
+        <div><dt>Attack Vector</dt><dd>네트워크</dd></div>
+        <div><dt>Attack Complexity</dt><dd>낮음</dd></div>
+        <div><dt>Privileges</dt><dd>없음</dd></div>
+        <div><dt>User Interaction</dt><dd>없음</dd></div>
+        <div><dt>CWE</dt><dd>CWE-693</dd></div>
+        <div><dt>Affected</dt><dd>NVD CPE 기준 확인 필요</dd></div>
+      </dl>
+      <div class="vector"><code>CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H</code></div>
+      <details>
+        <summary>References</summary>
+        <ul><li><a href="https://github.com/kerberosmansour/hulumi/security/advisories/GHSA-59f3-7227-wmh4" target="_blank" rel="noopener">https://github.com/kerberosmansour/hulumi/security/advisories/GHSA-59f3-7227-wmh4</a></li><li><a href="https://www.vulncheck.com/advisories/hulumi-policies-before-1.3.2-evidence-validation-bypass" target="_blank" rel="noopener">https://www.vulncheck.com/advisories/hulumi-policies-before-1.3.2-evidence-validation-bypass</a></li></ul>
+      </details>
+    </article>
+    <article class="cve-card" id="CVE-2026-82854">
+      <div class="cve-top">
+        <a class="cve-id" href="https://nvd.nist.gov/vuln/detail/CVE-2026-82854" target="_blank" rel="noopener">CVE-2026-82854</a>
+        <span class="score">CVSS 9.8 CRITICAL</span>
+      </div>
+      <p class="desc">Nodemailer before 8.0.4 is vulnerable to SMTP command injection through the unsanitized envelope.size parameter. When an application passes a custom envelope object with a size property containing CRLF characters to sendMail(), the value is concatenated into the SMTP MAIL FROM command (as SIZE=...) without sanitization, allowing injection of arbitrary SMTP commands such as RCPT TO to silently add attacker-controlled recipients. Exploitation requires the application to expose the envelope size to attacker-controlled input, as Nodemailer does not include size in the default auto-constructed envelope.</p>
+      <dl>
+        <div><dt>Published</dt><dd>2026-08-31</dd></div>
+        <div><dt>Last Modified</dt><dd>2026-08-31</dd></div>
+        <div><dt>Status</dt><dd>Received</dd></div>
+        <div><dt>Attack Vector</dt><dd>네트워크</dd></div>
+        <div><dt>Attack Complexity</dt><dd>낮음</dd></div>
+        <div><dt>Privileges</dt><dd>없음</dd></div>
+        <div><dt>User Interaction</dt><dd>없음</dd></div>
+        <div><dt>CWE</dt><dd>CWE-93</dd></div>
+        <div><dt>Affected</dt><dd>NVD CPE 기준 확인 필요</dd></div>
+      </dl>
+      <div class="vector"><code>CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H</code></div>
+      <details>
+        <summary>References</summary>
+        <ul><li><a href="https://github.com/nodemailer/nodemailer/security/advisories/GHSA-c7w3-x93f-qmm8" target="_blank" rel="noopener">https://github.com/nodemailer/nodemailer/security/advisories/GHSA-c7w3-x93f-qmm8</a></li><li><a href="https://www.vulncheck.com/advisories/nodemailer-before-8.0.3-smtp-command-injection-via-envelope-size" target="_blank" rel="noopener">https://www.vulncheck.com/advisories/nodemailer-before-8.0.3-smtp-command-injection-via-envelope-size</a></li></ul>
+      </details>
+    </article>
+    <article class="cve-card" id="CVE-2026-82616">
+      <div class="cve-top">
+        <a class="cve-id" href="https://nvd.nist.gov/vuln/detail/CVE-2026-82616" target="_blank" rel="noopener">CVE-2026-82616</a>
+        <span class="score">CVSS 9.9 CRITICAL</span>
+      </div>
+      <p class="desc">A vulnerability was found in TOTOLINK NR1800X 9.1.0u.6681_B20230703. Impacted is the function setUploadSetting of the file /cgi-bin/cstecgi.cgi. The manipulation of the argument FileName results in stack-based buffer overflow. The attack can be executed remotely. The exploit has been made public and could be used.</p>
+      <dl>
+        <div><dt>Published</dt><dd>2026-08-31</dd></div>
+        <div><dt>Last Modified</dt><dd>2026-08-31</dd></div>
+        <div><dt>Status</dt><dd>Received</dd></div>
+        <div><dt>Attack Vector</dt><dd>네트워크</dd></div>
+        <div><dt>Attack Complexity</dt><dd>낮음</dd></div>
+        <div><dt>Privileges</dt><dd>낮음</dd></div>
+        <div><dt>User Interaction</dt><dd>없음</dd></div>
+        <div><dt>CWE</dt><dd>CWE-119, CWE-121</dd></div>
+        <div><dt>Affected</dt><dd>NVD CPE 기준 확인 필요</dd></div>
+      </dl>
+      <div class="vector"><code>CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H</code></div>
+      <details>
+        <summary>References</summary>
+        <ul><li><a href="https://github.com/lxiansheng488-bit/-/blob/main/TOTOlink/totolink%20setUploadSetting%E6%A0%88%E6%BA%A2%E5%87%BA.pdf" target="_blank" rel="noopener">https://github.com/lxiansheng488-bit/-/blob/main/TOTOlink/totolink%20setUploadSetting%E6%A0%88%E6%BA%A2%E5%87%BA.pdf</a></li><li><a href="https://vuldb.com/cve/CVE-2026-82616" target="_blank" rel="noopener">https://vuldb.com/cve/CVE-2026-82616</a></li><li><a href="https://vuldb.com/submit/892941" target="_blank" rel="noopener">https://vuldb.com/submit/892941</a></li><li><a href="https://vuldb.com/vuln/397117" target="_blank" rel="noopener">https://vuldb.com/vuln/397117</a></li></ul>
+      </details>
+    </article>
+    <article class="cve-card" id="CVE-2026-82593">
+      <div class="cve-top">
+        <a class="cve-id" href="https://nvd.nist.gov/vuln/detail/CVE-2026-82593" target="_blank" rel="noopener">CVE-2026-82593</a>
+        <span class="score">CVSS 9.9 CRITICAL</span>
+      </div>
+      <p class="desc">A flaw has been found in D-Link DIR-825M 1.1.8. This impacts the function sub_41802C of the file /boafrm/formLtefotaUpgradeFibocom of the component LTE Module Firmware Upgrade. This manipulation of the argument fota_url causes stack-based buffer overflow. The attack is possible to be carried out remotely. The exploit has been published and may be used.</p>
+      <dl>
+        <div><dt>Published</dt><dd>2026-08-31</dd></div>
+        <div><dt>Last Modified</dt><dd>2026-08-31</dd></div>
+        <div><dt>Status</dt><dd>Received</dd></div>
+        <div><dt>Attack Vector</dt><dd>네트워크</dd></div>
+        <div><dt>Attack Complexity</dt><dd>낮음</dd></div>
+        <div><dt>Privileges</dt><dd>낮음</dd></div>
+        <div><dt>User Interaction</dt><dd>없음</dd></div>
+        <div><dt>CWE</dt><dd>CWE-119, CWE-121</dd></div>
+        <div><dt>Affected</dt><dd>NVD CPE 기준 확인 필요</dd></div>
+      </dl>
+      <div class="vector"><code>CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H</code></div>
+      <details>
+        <summary>References</summary>
+        <ul><li><a href="https://github.com/Robots10/IoT_vlu/blob/main/reports/Dlink/formLtefotaUpgradeFibocom/formLtefotaUpgradeFibocom.md" target="_blank" rel="noopener">https://github.com/Robots10/IoT_vlu/blob/main/reports/Dlink/formLtefotaUpgradeFibocom/formLtefotaUpgradeFibocom.md</a></li><li><a href="https://vuldb.com/cve/CVE-2026-82593" target="_blank" rel="noopener">https://vuldb.com/cve/CVE-2026-82593</a></li><li><a href="https://vuldb.com/submit/892516" target="_blank" rel="noopener">https://vuldb.com/submit/892516</a></li><li><a href="https://vuldb.com/vuln/397088" target="_blank" rel="noopener">https://vuldb.com/vuln/397088</a></li></ul>
+      </details>
+    </article>
+    <article class="cve-card" id="CVE-2026-82592">
+      <div class="cve-top">
+        <a class="cve-id" href="https://nvd.nist.gov/vuln/detail/CVE-2026-82592" target="_blank" rel="noopener">CVE-2026-82592</a>
+        <span class="score">CVSS 9.9 CRITICAL</span>
+      </div>
+      <p class="desc">A vulnerability was detected in D-Link DIR-825M 1.1.8. This affects the function sub_46725C of the file /boafrm/formDiskFormat of the component Disk Formatting Handler Endpoint. The manipulation of the argument partition results in stack-based buffer overflow. The attack can be executed remotely. The exploit is now public and may be used.</p>
+      <dl>
+        <div><dt>Published</dt><dd>2026-08-30</dd></div>
+        <div><dt>Last Modified</dt><dd>2026-08-30</dd></div>
+        <div><dt>Status</dt><dd>Received</dd></div>
+        <div><dt>Attack Vector</dt><dd>네트워크</dd></div>
+        <div><dt>Attack Complexity</dt><dd>낮음</dd></div>
+        <div><dt>Privileges</dt><dd>낮음</dd></div>
+        <div><dt>User Interaction</dt><dd>없음</dd></div>
+        <div><dt>CWE</dt><dd>CWE-119, CWE-121</dd></div>
+        <div><dt>Affected</dt><dd>NVD CPE 기준 확인 필요</dd></div>
+      </dl>
+      <div class="vector"><code>CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H</code></div>
+      <details>
+        <summary>References</summary>
+        <ul><li><a href="https://github.com/Robots10/IoT_vlu/blob/main/reports/Dlink/formDiskFormat/formDiskFormat.md" target="_blank" rel="noopener">https://github.com/Robots10/IoT_vlu/blob/main/reports/Dlink/formDiskFormat/formDiskFormat.md</a></li><li><a href="https://vuldb.com/cve/CVE-2026-82592" target="_blank" rel="noopener">https://vuldb.com/cve/CVE-2026-82592</a></li><li><a href="https://vuldb.com/submit/892514" target="_blank" rel="noopener">https://vuldb.com/submit/892514</a></li><li><a href="https://vuldb.com/vuln/397087" target="_blank" rel="noopener">https://vuldb.com/vuln/397087</a></li></ul>
+      </details>
+    </article>
     <article class="cve-card" id="CVE-2026-82542">
       <div class="cve-top">
         <a class="cve-id" href="https://nvd.nist.gov/vuln/detail/CVE-2026-82542" target="_blank" rel="noopener">CVE-2026-82542</a>
