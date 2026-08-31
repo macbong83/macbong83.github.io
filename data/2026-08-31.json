@@ -1,0 +1,104 @@
+{
+  "tagline": "글로벌 정보보안 뉴스레터",
+  "title": "보안 브리핑",
+  "date_display": "2026년 8월 31일 월요일",
+  "date_short": "2026.08.31",
+  "sources_line": "The Hacker News · BleepingComputer · SecurityWeek · KrebsOnSecurity · CISA · NCSC UK · Unit 42 · 보안뉴스 · 데일리시큐 · 전자신문",
+  "seo": {
+    "title": "랜섬웨어, 취약점 — 2026.08.31 보안 브리핑",
+    "description": "오늘 주요 취약점·침해 사고·위협 트렌드 요약.",
+    "keywords": "CVE, 랜섬웨어, 취약점, 침해사고, 보안"
+  },
+  "sections": [
+    {
+      "label": "취약점 & 공격",
+      "type": "cards",
+      "items": [
+        {
+          "severity": "critical",
+          "source": "데일리시큐",
+          "headline": "유니트리 G1 휴머노이드 로봇에서 원격 해킹 취약점 발견",
+          "url": "https://www.dailysecu.com/news/articleView.html?idxno=208268",
+          "summary": "유니트리 G1 EDU 로봇에서 인증 없이 최고 관리자 권한을 확보할 수 있는 취약점 2건이 발견됐다. CVE-2026-76639와 CVE-2026-76640 취약점은 G1 EDU 펌웨어 1.5.2 이하 버전에서 영향을 받는다. 공격자는 한 대의 로봇을 장악한 후 주변 로봇으로 공격을 확산할 수 있다."
+        },
+        {
+          "severity": "critical",
+          "source": "데일리시큐",
+          "headline": "워드프레스 플러그인·테마에서 치명적 취약점 5종 발견",
+          "url": "https://www.dailysecu.com/news/articleView.html?idxno=208259",
+          "summary": "WPMU DEV 대시보드, 아바다, 트랜슬레이트프레스, 포즈, 기브WP 플러그인·테마에서 CVSS 점수 9.8~10.0의 치명적 취약점이 발견됐다. 일부 취약점은 로그인 없이 관리자 계정을 장악하거나, 서버에서 임의의 코드를 실행할 수 있다."
+        },
+        {
+          "severity": "high",
+          "source": "데일리시큐",
+          "headline": "Papercut 서버에서 원격 코드 실행 취약점 지속",
+          "url": "https://securityaffairs.com/198107/uncategorized/hackers-are-probing-papercut-servers-and-47-still-have-no-patch.html",
+          "summary": "Papercut 서버에서 원격 코드 실행 취약점이 발견됐으며, 47%의 설치된 서버가 패치되지 않은 상태로 남아 있다. 이 취약점은 공격자가 원격으로 코드를 실행할 수 있어 보안 위험이 크다."
+        },
+        {
+          "severity": "high",
+          "source": "데일리시큐",
+          "headline": "TermianlFix 악성코드로 Windows 사용자 유도",
+          "url": "https://thehackernews.com/2026/08/terminalfix-uses-fake-cloudflare.html",
+          "summary": "Microsoft가 새롭게 발견된 ClickFix 변종인 TerminalFix 악성코드가 사용자를 유도해 Windows Terminal 또는 PowerShell에서 악성 명령을 실행하도록 유도하는 것으로 확인됐다."
+        },
+        {
+          "severity": "medium",
+          "source": "데일리시큐",
+          "headline": "워드프레스 플러그인·테마에서 5종 취약점 발견",
+          "url": "https://thehackernews.com/2026/08/five-critical-wordpress-plugin-and.html",
+          "summary": "WPMU DEV 대시보드, Avada, TranslatePress, Pods, GiveWP 플러그인·테마에서 인증 우회, 계정 탈취, 임의 코드 실행 취약점이 발견됐다. 일부 취약점은 로그인 없이 관리자 권한을 얻을 수 있다."
+        }
+      ]
+    },
+    {
+      "label": "침해 사고",
+      "type": "cards",
+      "items": [
+        {
+          "severity": "incident",
+          "source": "데일리시큐",
+          "headline": "영국 3개 공항 운영사 MAG에서 고객 정보 870만명 노출",
+          "url": "https://www.dailysecu.com/news/articleView.html?idxno=208266",
+          "summary": "영국의 MAG는 사이버 공격으로 인해 약 870만명의 고객 정보가 노출됐다. 노출된 정보에는 이메일 주소, 전화번호, 차량 등록번호, 우편번호 등이 포함됐다."
+        },
+        {
+          "severity": "incident",
+          "source": "데일리시큐",
+          "headline": "한국도심공항 개인정보 유출 가능성 제기",
+          "url": "https://www.ngetnews.com/news/articleView.html?idxno=552832",
+          "summary": "한국도심공항 홈페이지가 외부 침해 공격을 받아 개인정보 유출 가능성이 제기됐다. 현재 유출 위험이 있는 개인정보 항목은 이름, 이메일 주소, 전화번호, 생년월일 등이다."
+        },
+        {
+          "severity": "incident",
+          "source": "Security Affairs",
+          "headline": "FulcrumSec, 86GB의 MAG 데이터 유출 주장",
+          "url": "https://securityaffairs.com/198143/cyber-crime/extortion-group-fulcrumsec-claims-86gb-manchester-airports-group-data-theft.html",
+          "summary": "랜섬웨어 그룹 FulcrumSec은 API 인증 정보가 노출된 것으로 인해 86GB의 MAG 데이터를 유출했다고 주장했다. MAG는 8월 27일 데이터 유출 사실을 공식적으로 발표했다."
+        }
+      ]
+    },
+    {
+      "label": "동향 & 분석",
+      "type": "trends",
+      "items": [
+        {
+          "lead": "AI 기술의 보안 위협 증가",
+          "body": "AI 에이전트가 서로 정보를 공유하고 역할을 나눠 실제 외부 기업 시스템을 공격하는 사례가 증가하고 있다. 이는 AI 기술이 보안 취약점 공략에 활용되고 있음을 보여준다."
+        },
+        {
+          "lead": "취약점 패치 지연",
+          "body": "Papercut 서버와 같은 취약점에 대해 47%의 사용자가 패치를 하지 않은 상태로 남아 있다. 이는 취약점에 대한 인식 부족과 패치 지연이 보안 위험을 증가시키는 것으로 보인다."
+        },
+        {
+          "lead": "국제적 사이버 공격 증가",
+          "body": "러시아 연계 해킹 조직 APT28이 유럽 정부와 외교기관을 대상으로 새로운 백도어를 사용한 공격이 확인됐다. 이는 국제적으로 사이버 공격이 지속적으로 증가하고 있음을 나타낸다."
+        },
+        {
+          "lead": "개인정보 유출 사고 증가",
+          "body": "MAG, 한국도심공항 등에서 개인정보 유출 사고가 발생하며, 이는 개인정보 보호에 대한 대응이 시급하다는 점을 보여준다."
+        }
+      ]
+    }
+  ]
+}
