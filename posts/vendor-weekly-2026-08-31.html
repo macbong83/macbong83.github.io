@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>2026년 8월 보안 벤더 동향 및 주요 이슈 | SecuLog</title>
+<meta name="description" content="2026년 8월 주요 보안 벤더들의 동향을 분석한 리포트. AI 기반 보안 위협, 피싱 공격, 랜섬웨어 동향 등 주요 이슈를 다룹니다.">
+<meta name="keywords" content="보안 벤더, AI 보안, 피싱 공격, 랜섬웨어, 공격 표면 관리, 자격 증명 공격, SentinelOne, Palo Alto, Check Point, AhnLab, Recorded Future">
+<meta property="og:type" content="article">
+<meta property="og:title" content="2026년 8월 보안 벤더 동향 및 주요 이슈">
+<meta property="og:description" content="2026년 8월 주요 보안 벤더들의 동향을 분석한 리포트. AI 기반 보안 위협, 피싱 공격, 랜섬웨어 동향 등 주요 이슈를 다룹니다.">
+<meta property="og:url" content="https://macbong83.github.io/posts/vendor-weekly-2026-08-31.html">
+<meta property="og:site_name" content="SecuLog">
+<link rel="canonical" href="https://macbong83.github.io/posts/vendor-weekly-2026-08-31.html">
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: -apple-system,'Malgun Gothic','Apple SD Gothic Neo',Arial,sans-serif; background:#f4f5f7; color:#1a1a2e; line-height:1.6; }
+  a { text-decoration:none; color:inherit; }
+  .wrapper { max-width:700px; margin:32px auto; background:#fff; border-radius:12px; overflow:hidden; box-shadow:0 2px 20px rgba(0,0,0,0.08); }
+  .header { background:#0d1b3e; padding:28px 36px 24px; border-bottom:3px solid #2563eb; }
+  .wordmark { font-size:26px; font-weight:800; color:#fff; letter-spacing:-0.02em; }
+  .wordmark .accent { color:#60a5fa; }
+  .header-meta { margin-top:10px; }
+  .nl-label { font-size:10px; letter-spacing:0.1em; text-transform:uppercase; color:#64748b; }
+  .nl-title { font-size:19px; font-weight:700; color:#fff; margin-top:4px; }
+  .nl-date { font-size:12px; color:#94a3b8; margin-top:3px; }
+  .summary-box { background:#f0f7ff; border-left:4px solid #2563eb; padding:16px 20px; margin:24px 36px 0; border-radius:0 8px 8px 0; font-size:13px; color:#1e3a5f; line-height:1.7; }
+  .body { padding:28px 36px 32px; }
+  .section-label { font-size:10px; letter-spacing:0.1em; text-transform:uppercase; color:#8a93a8; font-weight:600; padding-bottom:8px; border-bottom:1px solid #e8eaed; margin-bottom:4px; margin-top:28px; }
+  .section-label:first-child { margin-top:0; }
+  .card { display:block; padding:16px 0; border-bottom:1px solid #f0f1f3; transition:background 0.15s; }
+  .card:last-child { border-bottom:none; }
+  .card:hover { background:#f8f9fc; margin:0 -36px; padding:16px 36px; }
+  .card-inner { display:flex; gap:14px; }
+  .sev-bar { width:3px; border-radius:2px; flex-shrink:0; margin:3px 0; }
+  .sev-vendor { background:#0891b2; }
+  .card-content { flex:1; }
+  .card-top { display:flex; align-items:center; gap:8px; margin-bottom:6px; flex-wrap:wrap; }
+  .badge { font-size:10px; font-weight:700; padding:3px 9px; border-radius:4px; }
+  .badge-vendor { background:#e0f2fe; color:#0369a1; border:1px solid #bae6fd; }
+  .card-headline { font-size:14px; font-weight:600; color:#0d1b3e; margin-bottom:5px; line-height:1.45; }
+  .card-headline .arrow { font-size:12px; color:#2563eb; margin-left:4px; opacity:0; transition:opacity 0.15s; }
+  .card:hover .card-headline .arrow { opacity:1; }
+  .card-summary { font-size:13px; color:#4a5568; line-height:1.65; }
+  .trend-box { background:#f8f9fc; border-radius:10px; padding:18px 20px; margin-top:6px; }
+  .trend-row { display:flex; gap:12px; padding:10px 0; border-bottom:1px solid #e8eaed; align-items:flex-start; }
+  .trend-row:last-child { border-bottom:none; padding-bottom:0; }
+  .trend-num { font-size:11px; font-weight:700; color:#2563eb; min-width:22px; padding-top:2px; }
+  .trend-text { font-size:13px; color:#4a5568; line-height:1.6; }
+  .trend-text strong { color:#0d1b3e; font-weight:600; }
+  .footer { background:#f4f5f7; border-top:1px solid #e8eaed; padding:16px 36px; font-size:11px; color:#9aa0b0; }
+  @media(max-width:600px){
+    .wrapper{margin:0;border-radius:0;}
+    .header{padding:18px 20px;}
+    .body{padding:18px 20px 24px;}
+    .summary-box{margin:16px 20px 0;}
+    .card:hover{margin:0 -20px;padding:16px 20px;}
+    .footer{padding:14px 20px;}
+  }
+</style>
+</head>
+<body>
+<div class="wrapper">
+  <div class="header">
+    <div class="wordmark">Secu<span class="accent">Log</span></div>
+    <div class="header-meta">
+      <div class="nl-label">글로벌 보안 벤더 주간 동향</div>
+      <div class="nl-title">이번 주 보안 벤더 동향</div>
+      <div class="nl-date">2026-08-25 ~ 2026-08-31</div>
+    </div>
+  </div>
+  <div class="summary-box">이번 주에는 대규모 자격 증명 공격, AI 기반 악성코드, 랜섬웨어 동향, AI 보안 대응 전략 등 주요 보안 이슈가 다뤄졌다. 특히, AI 기술이 보안 위협에 활용되는 사례가 증가하고 있으며, 기업들은 이를 대응하기 위한 새로운 보안 전략을 모색하고 있다.</div>
+  <div class="body">
+    <div class="section-label">이번 주 주요 포스트</div>
+    
+    <a class="card" href="https://unit42.paloaltonetworks.com/large-scale-credential-attacks/" target="_blank">
+      <div class="card-inner"><div class="sev-bar sev-vendor"></div><div class="card-content">
+        <div class="card-top"><span class="badge badge-vendor">Palo Alto</span></div>
+        <div class="card-headline">대규모 자격 증명 공격 대응 가이드<span class="arrow">↗</span></div>
+        <div class="card-summary">TheHatman이라는 해커가 Microsoft Entra 테넌트에서 대규모 자격 증명을 유출했다는 주장이 제기되며, 기업들은 자격 증명 관리와 보안 인프라 강화가 필수적이다.</div>
+      </div></div>
+    </a>
+    <a class="card" href="https://asec.ahnlab.com/ko/95108/" target="_blank">
+      <div class="card-inner"><div class="sev-bar sev-vendor"></div><div class="card-content">
+        <div class="card-top"><span class="badge badge-vendor">AhnLab</span></div>
+        <div class="card-headline">금융권 보안 이슈 분석<span class="arrow">↗</span></div>
+        <div class="card-summary">피싱 공격이 여전히 주요 공격 수단으로 남아 있으며, 특히 Dropper/Downloader 유형의 악성코드가 증가하고 있어, 기업의 보안 모니터링 체계 강화가 필요하다.</div>
+      </div></div>
+    </a>
+    <a class="card" href="https://www.sentinelone.com/blog/the-early-returns-of-ai-what-it-means-for-cybersecurity/" target="_blank">
+      <div class="card-inner"><div class="sev-bar sev-vendor"></div><div class="card-content">
+        <div class="card-top"><span class="badge badge-vendor">SentinelOne</span></div>
+        <div class="card-headline">AI 기반 SOC 자동화<span class="arrow">↗</span></div>
+        <div class="card-summary">AI 기술은 SOC 운영 효율성을 높이고 분석가의 과부하를 줄이는 데 기여하고 있으며, 보안 플랫폼 통합이 중요한 전략으로 부상하고 있다.</div>
+      </div></div>
+    </a>
+    <a class="card" href="https://blog.checkpoint.com/securing-user-and-access/check-point-blocks-large-scale-debt-relief-email-phishing-campaign-targeting-more-than-9000-organizations/" target="_blank">
+      <div class="card-inner"><div class="sev-bar sev-vendor"></div><div class="card-content">
+        <div class="card-top"><span class="badge badge-vendor">Check Point</span></div>
+        <div class="card-headline">대규모 빚 간소화 피싱 캠페인 차단<span class="arrow">↗</span></div>
+        <div class="card-summary">기존의 악성 링크나 첨부파일을 사용하지 않고도 피싱 공격이 성공하고 있어, 기업의 인지 교육과 행동 분석 기반의 보안 시스템이 필수적이다.</div>
+      </div></div>
+    </a>
+    <a class="card" href="https://www.recordedfuture.com/blog/ai-alert-filtering" target="_blank">
+      <div class="card-inner"><div class="sev-bar sev-vendor"></div><div class="card-content">
+        <div class="card-top"><span class="badge badge-vendor">Recorded Future</span></div>
+        <div class="card-headline">AI 경고 필터링 도입<span class="arrow">↗</span></div>
+        <div class="card-summary">AI 기반의 경고 필터링 기술은 보안 분석가의 업무 효율성을 높이고, 중요 위협을 신속하게 식별할 수 있는 전략적 도구로 주목받고 있다.</div>
+      </div></div>
+    </a>
+    <a class="card" href="https://www.tenable.com/blog/how-to-build-an-exposure-management-program-the-business-trusts-lessons-from-tenables-cso" target="_blank">
+      <div class="card-inner"><div class="sev-bar sev-vendor"></div><div class="card-content">
+        <div class="card-top"><span class="badge badge-vendor">Tenable</span></div>
+        <div class="card-headline">공격 표면 관리 프로그램 구축<span class="arrow">↗</span></div>
+        <div class="card-summary">AI 기반의 공격 표면 관리 프로그램은 기업의 보안 데이터를 통합하고, 경영진이 이해할 수 있는 비즈니스 위험으로 전환하는 데 중요한 역할을 한다.</div>
+      </div></div>
+    </a>
+    <a class="card" href="https://blog.checkpoint.com/ai-security/stopping-the-ai-agent-actions-no-rule-could-see-coming/" target="_blank">
+      <div class="card-inner"><div class="sev-bar sev-vendor"></div><div class="card-content">
+        <div class="card-top"><span class="badge badge-vendor">Check Point</span></div>
+        <div class="card-headline">AI 에이전트 행동 차단<span class="arrow">↗</span></div>
+        <div class="card-summary">AI 에이전트는 기업 내부에서 자율적으로 작동하고 있어, 기존의 규칙 기반 보안 체계만으로는 충분하지 않으며, 맥락 분석 기반의 보안 전략이 필요하다.</div>
+      </div></div>
+    </a>
+    <a class="card" href="https://asec.ahnlab.com/ko/95140/" target="_blank">
+      <div class="card-inner"><div class="sev-bar sev-vendor"></div><div class="card-content">
+        <div class="card-top"><span class="badge badge-vendor">AhnLab</span></div>
+        <div class="card-headline">랜섬웨어 및 다크웹 이슈<span class="arrow">↗</span></div>
+        <div class="card-summary">랜섬웨어 공격과 다크웹에서의 데이터 유출 사례가 증가하고 있어, 기업은 랜섬웨어 대응 전략과 데이터 보호 체계를 강화해야 한다.</div>
+      </div></div>
+    </a>
+    <div class="section-label" style="margin-top:28px;">공통 트렌드</div>
+    <div class="trend-box">
+      <div class="trend-row">
+        <div class="trend-num">01</div>
+        <div class="trend-text"><strong>AI 기반 보안 위협 증가</strong> — AI 기술이 악성코드, 피싱, 에이전트 행동 등 다양한 보안 위협에 활용되고 있으며, 기업들은 AI 기반의 보안 대응 전략을 적극적으로 도입하고 있다.</div>
+      </div>
+      <div class="trend-row">
+        <div class="trend-num">02</div>
+        <div class="trend-text"><strong>피싱 공격의 진화</strong> — 기존의 악성 링크나 첨부파일을 사용하지 않는 피싱 공격이 증가하고 있어, 기업의 인지 교육과 행동 분석 기반의 보안 체계가 필수적이다.</div>
+      </div>
+      <div class="trend-row">
+        <div class="trend-num">03</div>
+        <div class="trend-text"><strong>공격 표면 관리의 중요성</strong> — AI 기반의 공격 표면 관리 프로그램은 기업의 보안 데이터를 통합하고, 경영진이 이해할 수 있는 비즈니스 위험으로 전환하는 데 중요한 역할을 한다.</div>
+      </div></div>
+  </div>
+  <div class="footer">
+    출처: CrowdStrike · SentinelOne · Tenable · Prompt Security &nbsp;|&nbsp; © 2026 Felix · SecuLog
+  </div>
+</div>
+</body>
+</html>

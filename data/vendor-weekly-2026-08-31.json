@@ -1,0 +1,77 @@
+{
+  "week_start": "2026-08-25",
+  "week_end": "2026-08-31",
+  "title": "이번 주 보안 벤더 동향",
+  "summary": "이번 주에는 대규모 자격 증명 공격, AI 기반 악성코드, 랜섬웨어 동향, AI 보안 대응 전략 등 주요 보안 이슈가 다뤄졌다. 특히, AI 기술이 보안 위협에 활용되는 사례가 증가하고 있으며, 기업들은 이를 대응하기 위한 새로운 보안 전략을 모색하고 있다.",
+  "highlights": [
+    {
+      "vendor": "Palo Alto",
+      "headline": "대규모 자격 증명 공격 대응 가이드",
+      "url": "https://unit42.paloaltonetworks.com/large-scale-credential-attacks/",
+      "insight": "TheHatman이라는 해커가 Microsoft Entra 테넌트에서 대규모 자격 증명을 유출했다는 주장이 제기되며, 기업들은 자격 증명 관리와 보안 인프라 강화가 필수적이다."
+    },
+    {
+      "vendor": "AhnLab",
+      "headline": "금융권 보안 이슈 분석",
+      "url": "https://asec.ahnlab.com/ko/95108/",
+      "insight": "피싱 공격이 여전히 주요 공격 수단으로 남아 있으며, 특히 Dropper/Downloader 유형의 악성코드가 증가하고 있어, 기업의 보안 모니터링 체계 강화가 필요하다."
+    },
+    {
+      "vendor": "SentinelOne",
+      "headline": "AI 기반 SOC 자동화",
+      "url": "https://www.sentinelone.com/blog/the-early-returns-of-ai-what-it-means-for-cybersecurity/",
+      "insight": "AI 기술은 SOC 운영 효율성을 높이고 분석가의 과부하를 줄이는 데 기여하고 있으며, 보안 플랫폼 통합이 중요한 전략으로 부상하고 있다."
+    },
+    {
+      "vendor": "Check Point",
+      "headline": "대규모 빚 간소화 피싱 캠페인 차단",
+      "url": "https://blog.checkpoint.com/securing-user-and-access/check-point-blocks-large-scale-debt-relief-email-phishing-campaign-targeting-more-than-9000-organizations/",
+      "insight": "기존의 악성 링크나 첨부파일을 사용하지 않고도 피싱 공격이 성공하고 있어, 기업의 인지 교육과 행동 분석 기반의 보안 시스템이 필수적이다."
+    },
+    {
+      "vendor": "Recorded Future",
+      "headline": "AI 경고 필터링 도입",
+      "url": "https://www.recordedfuture.com/blog/ai-alert-filtering",
+      "insight": "AI 기반의 경고 필터링 기술은 보안 분석가의 업무 효율성을 높이고, 중요 위협을 신속하게 식별할 수 있는 전략적 도구로 주목받고 있다."
+    },
+    {
+      "vendor": "Tenable",
+      "headline": "공격 표면 관리 프로그램 구축",
+      "url": "https://www.tenable.com/blog/how-to-build-an-exposure-management-program-the-business-trusts-lessons-from-tenables-cso",
+      "insight": "AI 기반의 공격 표면 관리 프로그램은 기업의 보안 데이터를 통합하고, 경영진이 이해할 수 있는 비즈니스 위험으로 전환하는 데 중요한 역할을 한다."
+    },
+    {
+      "vendor": "Check Point",
+      "headline": "AI 에이전트 행동 차단",
+      "url": "https://blog.checkpoint.com/ai-security/stopping-the-ai-agent-actions-no-rule-could-see-coming/",
+      "insight": "AI 에이전트는 기업 내부에서 자율적으로 작동하고 있어, 기존의 규칙 기반 보안 체계만으로는 충분하지 않으며, 맥락 분석 기반의 보안 전략이 필요하다."
+    },
+    {
+      "vendor": "AhnLab",
+      "headline": "랜섬웨어 및 다크웹 이슈",
+      "url": "https://asec.ahnlab.com/ko/95140/",
+      "insight": "랜섬웨어 공격과 다크웹에서의 데이터 유출 사례가 증가하고 있어, 기업은 랜섬웨어 대응 전략과 데이터 보호 체계를 강화해야 한다."
+    }
+  ],
+  "trends": [
+    {
+      "lead": "AI 기반 보안 위협 증가",
+      "body": "AI 기술이 악성코드, 피싱, 에이전트 행동 등 다양한 보안 위협에 활용되고 있으며, 기업들은 AI 기반의 보안 대응 전략을 적극적으로 도입하고 있다."
+    },
+    {
+      "lead": "피싱 공격의 진화",
+      "body": "기존의 악성 링크나 첨부파일을 사용하지 않는 피싱 공격이 증가하고 있어, 기업의 인지 교육과 행동 분석 기반의 보안 체계가 필수적이다."
+    },
+    {
+      "lead": "공격 표면 관리의 중요성",
+      "body": "AI 기반의 공격 표면 관리 프로그램은 기업의 보안 데이터를 통합하고, 경영진이 이해할 수 있는 비즈니스 위험으로 전환하는 데 중요한 역할을 한다."
+    }
+  ],
+  "seo": {
+    "title": "2026년 8월 보안 벤더 동향 및 주요 이슈",
+    "description": "2026년 8월 주요 보안 벤더들의 동향을 분석한 리포트. AI 기반 보안 위협, 피싱 공격, 랜섬웨어 동향 등 주요 이슈를 다룹니다.",
+    "keywords": "보안 벤더, AI 보안, 피싱 공격, 랜섬웨어, 공격 표면 관리, 자격 증명 공격, SentinelOne, Palo Alto, Check Point, AhnLab, Recorded Future"
+  },
+  "slug": "vendor-weekly-2026-08-31",
+  "type": "vendor-weekly"
+}
