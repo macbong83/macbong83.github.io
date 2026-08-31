@@ -41,13 +41,36 @@
     <h1>CVE Archive</h1>
     <p>NVD 기반 Critical CVE를 누적 관리하는 별도 페이지입니다. 블로그에는 CVE 자동 글을 발행하지 않고, 이 페이지에만 기록합니다.</p>
     <div class="meta">
-      <span>Total 739</span>
-      <span>Updated 2026-08-31 20:00 KST</span>
+      <span>Total 744</span>
+      <span>Updated 2026-09-01 08:00 KST</span>
       <span>Source NVD API</span>
     </div>
   </section>
   <div class="notice">중복 제거 기준은 CVE ID입니다. 동일 CVE는 다시 추가하지 않습니다. 실제 악용 여부와 패치 우선순위는 CISA KEV, 벤더 권고, 자산 노출 여부와 함께 검토해야 합니다.</div>
 
+    <article class="cve-card" id="CVE-2026-82954">
+      <div class="cve-top">
+        <a class="cve-id" href="https://nvd.nist.gov/vuln/detail/CVE-2026-82954" target="_blank" rel="noopener">CVE-2026-82954</a>
+        <span class="score">CVSS 9.9 CRITICAL</span>
+      </div>
+      <p class="desc">A vulnerability was detected in Dokploy up to 0.29.7. This issue affects the function writeTraefikConfigInPath of the file packages/server/src/utils/traefik/application.ts of the component Settings. The manipulation of the argument path results in path traversal. The attack can be launched remotely. The exploit is now public and may be used. The vendor was contacted early about this disclosure but did not respond in any way.</p>
+      <dl>
+        <div><dt>Published</dt><dd>2026-08-31</dd></div>
+        <div><dt>Last Modified</dt><dd>2026-08-31</dd></div>
+        <div><dt>Status</dt><dd>Received</dd></div>
+        <div><dt>Attack Vector</dt><dd>네트워크</dd></div>
+        <div><dt>Attack Complexity</dt><dd>낮음</dd></div>
+        <div><dt>Privileges</dt><dd>낮음</dd></div>
+        <div><dt>User Interaction</dt><dd>없음</dd></div>
+        <div><dt>CWE</dt><dd>CWE-22</dd></div>
+        <div><dt>Affected</dt><dd>NVD CPE 기준 확인 필요</dd></div>
+      </dl>
+      <div class="vector"><code>CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H</code></div>
+      <details>
+        <summary>References</summary>
+        <ul><li><a href="https://vuldb.com/cve/CVE-2026-82954" target="_blank" rel="noopener">https://vuldb.com/cve/CVE-2026-82954</a></li><li><a href="https://vuldb.com/submit/879844" target="_blank" rel="noopener">https://vuldb.com/submit/879844</a></li><li><a href="https://vuldb.com/vuln/397303" target="_blank" rel="noopener">https://vuldb.com/vuln/397303</a></li><li><a href="https://vuldb.com/vuln/397303/cti" target="_blank" rel="noopener">https://vuldb.com/vuln/397303/cti</a></li></ul>
+      </details>
+    </article>
     <article class="cve-card" id="CVE-2026-82874">
       <div class="cve-top">
         <a class="cve-id" href="https://nvd.nist.gov/vuln/detail/CVE-2026-82874" target="_blank" rel="noopener">CVE-2026-82874</a>
@@ -276,6 +299,52 @@
       <details>
         <summary>References</summary>
         <ul><li><a href="https://github.com/nodemailer/nodemailer/security/advisories/GHSA-c7w3-x93f-qmm8" target="_blank" rel="noopener">https://github.com/nodemailer/nodemailer/security/advisories/GHSA-c7w3-x93f-qmm8</a></li><li><a href="https://www.vulncheck.com/advisories/nodemailer-before-8.0.3-smtp-command-injection-via-envelope-size" target="_blank" rel="noopener">https://www.vulncheck.com/advisories/nodemailer-before-8.0.3-smtp-command-injection-via-envelope-size</a></li></ul>
+      </details>
+    </article>
+    <article class="cve-card" id="CVE-2026-82691">
+      <div class="cve-top">
+        <a class="cve-id" href="https://nvd.nist.gov/vuln/detail/CVE-2026-82691" target="_blank" rel="noopener">CVE-2026-82691</a>
+        <span class="score">CVSS 9.1 CRITICAL</span>
+      </div>
+      <p class="desc">A vulnerability has been found in D-Link DNS-320L, DNS-327L, DNS-340L and DNS-345 up to 20260717. Affected by this issue is some unknown functionality of the file /cgi-bin/usb_device.cgi of the component CGI Handler. Such manipulation of the argument f_ups_ip leads to os command injection. The attack may be performed from remote. The exploit has been disclosed to the public and may be used.</p>
+      <dl>
+        <div><dt>Published</dt><dd>2026-08-31</dd></div>
+        <div><dt>Last Modified</dt><dd>2026-08-31</dd></div>
+        <div><dt>Status</dt><dd>Deferred</dd></div>
+        <div><dt>Attack Vector</dt><dd>네트워크</dd></div>
+        <div><dt>Attack Complexity</dt><dd>낮음</dd></div>
+        <div><dt>Privileges</dt><dd>높음</dd></div>
+        <div><dt>User Interaction</dt><dd>없음</dd></div>
+        <div><dt>CWE</dt><dd>CWE-77, CWE-78</dd></div>
+        <div><dt>Affected</dt><dd>NVD CPE 기준 확인 필요</dd></div>
+      </dl>
+      <div class="vector"><code>CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:C/C:H/I:H/A:H</code></div>
+      <details>
+        <summary>References</summary>
+        <ul><li><a href="https://github.com/dxz0069/WAVLINK-WN530H4-Command-Injection-in-set_add_routing/blob/main/DLINK-CMD-005-vulndb.md" target="_blank" rel="noopener">https://github.com/dxz0069/WAVLINK-WN530H4-Command-Injection-in-set_add_routing/blob/main/DLINK-CMD-005-vulndb.md</a></li><li><a href="https://vuldb.com/cve/CVE-2026-82691" target="_blank" rel="noopener">https://vuldb.com/cve/CVE-2026-82691</a></li><li><a href="https://vuldb.com/submit/894210" target="_blank" rel="noopener">https://vuldb.com/submit/894210</a></li><li><a href="https://vuldb.com/vuln/397179" target="_blank" rel="noopener">https://vuldb.com/vuln/397179</a></li></ul>
+      </details>
+    </article>
+    <article class="cve-card" id="CVE-2026-82688">
+      <div class="cve-top">
+        <a class="cve-id" href="https://nvd.nist.gov/vuln/detail/CVE-2026-82688" target="_blank" rel="noopener">CVE-2026-82688</a>
+        <span class="score">CVSS 9.1 CRITICAL</span>
+      </div>
+      <p class="desc">A security vulnerability has been detected in D-Link DNS-340L and DNS-345 1.01B04/1.03B06/1.04.B02/1.05b04. This impacts an unknown function of the file /cgi-bin/virtual_vol.cgi of the component Virtual Volume Handler. The manipulation of the argument f_sharename/f_target/f_name leads to os command injection. Remote exploitation of the attack is possible. The exploit has been disclosed publicly and may be used.</p>
+      <dl>
+        <div><dt>Published</dt><dd>2026-08-31</dd></div>
+        <div><dt>Last Modified</dt><dd>2026-08-31</dd></div>
+        <div><dt>Status</dt><dd>Deferred</dd></div>
+        <div><dt>Attack Vector</dt><dd>네트워크</dd></div>
+        <div><dt>Attack Complexity</dt><dd>낮음</dd></div>
+        <div><dt>Privileges</dt><dd>높음</dd></div>
+        <div><dt>User Interaction</dt><dd>없음</dd></div>
+        <div><dt>CWE</dt><dd>CWE-77, CWE-78</dd></div>
+        <div><dt>Affected</dt><dd>NVD CPE 기준 확인 필요</dd></div>
+      </dl>
+      <div class="vector"><code>CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:C/C:H/I:H/A:H</code></div>
+      <details>
+        <summary>References</summary>
+        <ul><li><a href="https://github.com/dxz0069/WAVLINK-WN530H4-Command-Injection-in-set_add_routing/blob/main/DLINK-CMD-001-vulndb.md" target="_blank" rel="noopener">https://github.com/dxz0069/WAVLINK-WN530H4-Command-Injection-in-set_add_routing/blob/main/DLINK-CMD-001-vulndb.md</a></li><li><a href="https://vuldb.com/cve/CVE-2026-82688" target="_blank" rel="noopener">https://vuldb.com/cve/CVE-2026-82688</a></li><li><a href="https://vuldb.com/submit/894190" target="_blank" rel="noopener">https://vuldb.com/submit/894190</a></li><li><a href="https://vuldb.com/vuln/397176" target="_blank" rel="noopener">https://vuldb.com/vuln/397176</a></li></ul>
       </details>
     </article>
     <article class="cve-card" id="CVE-2026-82616">
@@ -644,6 +713,52 @@
       <details>
         <summary>References</summary>
         <ul><li><a href="https://www.twcert.org.tw/en/cp-139-11145-5361d-2.html" target="_blank" rel="noopener">https://www.twcert.org.tw/en/cp-139-11145-5361d-2.html</a></li><li><a href="https://www.twcert.org.tw/tw/cp-132-11144-45c6a-1.html" target="_blank" rel="noopener">https://www.twcert.org.tw/tw/cp-132-11144-45c6a-1.html</a></li></ul>
+      </details>
+    </article>
+    <article class="cve-card" id="CVE-2026-82078">
+      <div class="cve-top">
+        <a class="cve-id" href="https://nvd.nist.gov/vuln/detail/CVE-2026-82078" target="_blank" rel="noopener">CVE-2026-82078</a>
+        <span class="score">CVSS 9.1 CRITICAL</span>
+      </div>
+      <p class="desc">An unsafe dynamic class loading vulnerability exists in the database connection utilities of PaperCut MF and PaperCut NG. The application instantiates database driver classes based on configurable driver names without validating against an allowlist of approved drivers. If an attacker can manipulate system configuration parameters, this enables the execution of arbitrary Java bytecode residing on the application classpath under the security context of the PaperCut server process.</p>
+      <dl>
+        <div><dt>Published</dt><dd>2026-08-28</dd></div>
+        <div><dt>Last Modified</dt><dd>2026-08-31</dd></div>
+        <div><dt>Status</dt><dd>Analyzed</dd></div>
+        <div><dt>Attack Vector</dt><dd>네트워크</dd></div>
+        <div><dt>Attack Complexity</dt><dd>낮음</dd></div>
+        <div><dt>Privileges</dt><dd>높음</dd></div>
+        <div><dt>User Interaction</dt><dd>없음</dd></div>
+        <div><dt>CWE</dt><dd>CWE-470</dd></div>
+        <div><dt>Affected</dt><dd>papercut papercut_mf, papercut papercut_ng</dd></div>
+      </dl>
+      <div class="vector"><code>CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:C/C:H/I:H/A:H</code></div>
+      <details>
+        <summary>References</summary>
+        <ul><li><a href="https://www.papercut.com/kb/Main/security-bulletin-27-aug-2026-urgent-security-advisory/" target="_blank" rel="noopener">https://www.papercut.com/kb/Main/security-bulletin-27-aug-2026-urgent-security-advisory/</a></li><li><a href="https://github.com/rapid7/metasploit-framework/pull/21842" target="_blank" rel="noopener">https://github.com/rapid7/metasploit-framework/pull/21842</a></li><li><a href="https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-82078" target="_blank" rel="noopener">https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-82078</a></li></ul>
+      </details>
+    </article>
+    <article class="cve-card" id="CVE-2026-81578">
+      <div class="cve-top">
+        <a class="cve-id" href="https://nvd.nist.gov/vuln/detail/CVE-2026-81578" target="_blank" rel="noopener">CVE-2026-81578</a>
+        <span class="score">CVSS 9.8 CRITICAL</span>
+      </div>
+      <p class="desc">An improper access control vulnerability exists in the web management interface of PaperCut MF and PaperCut NG. Under specific conditions, unauthenticated remote requests targeting administrative functions can trigger backend actions prior to the  completion of access validation checks. This allows an unauthenticated remote attacker to modify certain system configurations.</p>
+      <dl>
+        <div><dt>Published</dt><dd>2026-08-28</dd></div>
+        <div><dt>Last Modified</dt><dd>2026-08-31</dd></div>
+        <div><dt>Status</dt><dd>Analyzed</dd></div>
+        <div><dt>Attack Vector</dt><dd>네트워크</dd></div>
+        <div><dt>Attack Complexity</dt><dd>낮음</dd></div>
+        <div><dt>Privileges</dt><dd>없음</dd></div>
+        <div><dt>User Interaction</dt><dd>없음</dd></div>
+        <div><dt>CWE</dt><dd>CWE-305</dd></div>
+        <div><dt>Affected</dt><dd>papercut papercut_mf, papercut papercut_ng</dd></div>
+      </dl>
+      <div class="vector"><code>CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H</code></div>
+      <details>
+        <summary>References</summary>
+        <ul><li><a href="https://www.papercut.com/kb/Main/security-bulletin-27-aug-2026-urgent-security-advisory/" target="_blank" rel="noopener">https://www.papercut.com/kb/Main/security-bulletin-27-aug-2026-urgent-security-advisory/</a></li><li><a href="https://github.com/rapid7/metasploit-framework/pull/21842" target="_blank" rel="noopener">https://github.com/rapid7/metasploit-framework/pull/21842</a></li><li><a href="https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-81578" target="_blank" rel="noopener">https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-81578</a></li></ul>
       </details>
     </article>
     <article class="cve-card" id="CVE-2026-76581">
