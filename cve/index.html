@@ -41,13 +41,36 @@
     <h1>CVE Archive</h1>
     <p>NVD 기반 Critical CVE를 누적 관리하는 별도 페이지입니다. 블로그에는 CVE 자동 글을 발행하지 않고, 이 페이지에만 기록합니다.</p>
     <div class="meta">
-      <span>Total 748</span>
-      <span>Updated 2026-09-01 20:00 KST</span>
+      <span>Total 751</span>
+      <span>Updated 2026-09-02 08:00 KST</span>
       <span>Source NVD API</span>
     </div>
   </section>
   <div class="notice">중복 제거 기준은 CVE ID입니다. 동일 CVE는 다시 추가하지 않습니다. 실제 악용 여부와 패치 우선순위는 CISA KEV, 벤더 권고, 자산 노출 여부와 함께 검토해야 합니다.</div>
 
+    <article class="cve-card" id="CVE-2026-84200">
+      <div class="cve-top">
+        <a class="cve-id" href="https://nvd.nist.gov/vuln/detail/CVE-2026-84200" target="_blank" rel="noopener">CVE-2026-84200</a>
+        <span class="score">CVSS 9.0 CRITICAL</span>
+      </div>
+      <p class="desc">Kyverno versions v1.9.0 through v1.12.7 contain a policy exception handling flaw. When a policy in enforce mode is combined with two PolicyExceptions, the less restrictive exception takes precedence, allowing an attacker to bypass the policy by crafting a resource name that matches the second exception&#x27;s name pattern (e.g., &#x27;*ingress*&#x27;). This can be used to circumvent policies such as one blocking hostPath volumes. Fixed in v1.13.0.</p>
+      <dl>
+        <div><dt>Published</dt><dd>2026-09-01</dd></div>
+        <div><dt>Last Modified</dt><dd>2026-09-01</dd></div>
+        <div><dt>Status</dt><dd>Received</dd></div>
+        <div><dt>Attack Vector</dt><dd>인접 네트워크</dd></div>
+        <div><dt>Attack Complexity</dt><dd>낮음</dd></div>
+        <div><dt>Privileges</dt><dd>낮음</dd></div>
+        <div><dt>User Interaction</dt><dd>없음</dd></div>
+        <div><dt>CWE</dt><dd>CWE-284</dd></div>
+        <div><dt>Affected</dt><dd>NVD CPE 기준 확인 필요</dd></div>
+      </dl>
+      <div class="vector"><code>CVSS:3.1/AV:A/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H</code></div>
+      <details>
+        <summary>References</summary>
+        <ul><li><a href="https://github.com/kyverno/kyverno/security/advisories/GHSA-gg4x-fgg2-h9w9" target="_blank" rel="noopener">https://github.com/kyverno/kyverno/security/advisories/GHSA-gg4x-fgg2-h9w9</a></li><li><a href="https://www.vulncheck.com/advisories/kyverno-before-1.13.0-policy-bypass-via-multiple-exceptions" target="_blank" rel="noopener">https://www.vulncheck.com/advisories/kyverno-before-1.13.0-policy-bypass-via-multiple-exceptions</a></li></ul>
+      </details>
+    </article>
     <article class="cve-card" id="CVE-2026-83772">
       <div class="cve-top">
         <a class="cve-id" href="https://nvd.nist.gov/vuln/detail/CVE-2026-83772" target="_blank" rel="noopener">CVE-2026-83772</a>
@@ -92,6 +115,52 @@
       <details>
         <summary>References</summary>
         <ul><li><a href="https://plugins.trac.wordpress.org/changeset/3674117/gdpr-cookie-consent" target="_blank" rel="noopener">https://plugins.trac.wordpress.org/changeset/3674117/gdpr-cookie-consent</a></li><li><a href="https://www.wordfence.com/threat-intel/vulnerabilities/id/96a2a552-e73f-4b27-88de-50eb63a8d131?source=cve" target="_blank" rel="noopener">https://www.wordfence.com/threat-intel/vulnerabilities/id/96a2a552-e73f-4b27-88de-50eb63a8d131?source=cve</a></li></ul>
+      </details>
+    </article>
+    <article class="cve-card" id="CVE-2026-18550">
+      <div class="cve-top">
+        <a class="cve-id" href="https://nvd.nist.gov/vuln/detail/CVE-2026-18550" target="_blank" rel="noopener">CVE-2026-18550</a>
+        <span class="score">CVSS 9.8 CRITICAL</span>
+      </div>
+      <p class="desc">The Nokri - Job Board WordPress Theme for WordPress is vulnerable to Privilege Escalation via Account Takeover in all versions up to, and including, 1.6.6. This is due to insufficient reset token validation in the `nokri_reset_password()` function, which allows empty attacker-supplied reset tokens to match empty or unset `sb_password_forget_token` user meta values. This makes it possible for unauthenticated attackers to reset the password of any user, including administrators, and gain access to their account.</p>
+      <dl>
+        <div><dt>Published</dt><dd>2026-09-01</dd></div>
+        <div><dt>Last Modified</dt><dd>2026-09-01</dd></div>
+        <div><dt>Status</dt><dd>Deferred</dd></div>
+        <div><dt>Attack Vector</dt><dd>네트워크</dd></div>
+        <div><dt>Attack Complexity</dt><dd>낮음</dd></div>
+        <div><dt>Privileges</dt><dd>없음</dd></div>
+        <div><dt>User Interaction</dt><dd>없음</dd></div>
+        <div><dt>CWE</dt><dd>CWE-269</dd></div>
+        <div><dt>Affected</dt><dd>NVD CPE 기준 확인 필요</dd></div>
+      </dl>
+      <div class="vector"><code>CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H</code></div>
+      <details>
+        <summary>References</summary>
+        <ul><li><a href="https://nokriwp.com/" target="_blank" rel="noopener">https://nokriwp.com/</a></li><li><a href="https://themeforest.net/item/nokri-job-board-wordpress-theme/22677241" target="_blank" rel="noopener">https://themeforest.net/item/nokri-job-board-wordpress-theme/22677241</a></li><li><a href="https://www.wordfence.com/threat-intel/vulnerabilities/id/b03b7ea8-6485-495d-b815-2b7b882a75a2?source=cve" target="_blank" rel="noopener">https://www.wordfence.com/threat-intel/vulnerabilities/id/b03b7ea8-6485-495d-b815-2b7b882a75a2?source=cve</a></li></ul>
+      </details>
+    </article>
+    <article class="cve-card" id="CVE-2023-54391">
+      <div class="cve-top">
+        <a class="cve-id" href="https://nvd.nist.gov/vuln/detail/CVE-2023-54391" target="_blank" rel="noopener">CVE-2023-54391</a>
+        <span class="score">CVSS 9.8 CRITICAL</span>
+      </div>
+      <p class="desc">Proxmox Virtual Environment (VE) 7.0 through 8.0 contains an authentication bypass vulnerability in libpve-access-control before 8.0.4 that allows unauthenticated attackers to authenticate as any existing enabled user without a configured second factor by supplying an arbitrary tfa-challenge value in the API login endpoint. Attackers can send a POST request to the access ticket API endpoint with any value in the tfa-challenge parameter to completely skip password verification, gaining unauthorized access including to the root@pam account. All affected releases are end of life.</p>
+      <dl>
+        <div><dt>Published</dt><dd>2026-09-01</dd></div>
+        <div><dt>Last Modified</dt><dd>2026-09-01</dd></div>
+        <div><dt>Status</dt><dd>Received</dd></div>
+        <div><dt>Attack Vector</dt><dd>네트워크</dd></div>
+        <div><dt>Attack Complexity</dt><dd>낮음</dd></div>
+        <div><dt>Privileges</dt><dd>없음</dd></div>
+        <div><dt>User Interaction</dt><dd>없음</dd></div>
+        <div><dt>CWE</dt><dd>CWE-304</dd></div>
+        <div><dt>Affected</dt><dd>NVD CPE 기준 확인 필요</dd></div>
+      </dl>
+      <div class="vector"><code>CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H</code></div>
+      <details>
+        <summary>References</summary>
+        <ul><li><a href="https://forum.proxmox.com/threads/proxmox-virtual-environment-security-advisories.149331/page-4#post-867929" target="_blank" rel="noopener">https://forum.proxmox.com/threads/proxmox-virtual-environment-security-advisories.149331/page-4#post-867929</a></li><li><a href="https://git.proxmox.com/?p=pve-access-control.git;a=commit;h=032e7d6d441f89a48cadfd7f47e957c8a561c022" target="_blank" rel="noopener">https://git.proxmox.com/?p=pve-access-control.git;a=commit;h=032e7d6d441f89a48cadfd7f47e957c8a561c022</a></li><li><a href="https://git.proxmox.com/?p=pve-access-control.git;a=commit;h=032e7d6d441f89a48cadfd7f47e957c8a561c022" target="_blank" rel="noopener">https://git.proxmox.com/?p=pve-access-control.git;a=commit;h=032e7d6d441f89a48cadfd7f47e957c8a561c022</a></li><li><a href="https://www.vulncheck.com/advisories/proxmox-ve-authentication-bypass-via-tfa-challenge-parameter" target="_blank" rel="noopener">https://www.vulncheck.com/advisories/proxmox-ve-authentication-bypass-via-tfa-challenge-parameter</a></li></ul>
       </details>
     </article>
     <article class="cve-card" id="CVE-2026-83524">

@@ -1,5 +1,32 @@
 [
   {
+    "id": "CVE-2026-84200",
+    "published": "2026-09-01",
+    "last_modified": "2026-09-01",
+    "status": "Received",
+    "description": "Kyverno versions v1.9.0 through v1.12.7 contain a policy exception handling flaw. When a policy in enforce mode is combined with two PolicyExceptions, the less restrictive exception takes precedence, allowing an attacker to bypass the policy by crafting a resource name that matches the second exception's name pattern (e.g., '*ingress*'). This can be used to circumvent policies such as one blocking hostPath volumes. Fixed in v1.13.0.",
+    "cvss": {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:A/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H",
+      "score": 9.0,
+      "severity": "CRITICAL",
+      "attack_vector": "인접 네트워크",
+      "attack_complexity": "낮음",
+      "privileges_required": "낮음",
+      "user_interaction": "없음"
+    },
+    "cwes": [
+      "CWE-284"
+    ],
+    "affected": [],
+    "references": [
+      "https://github.com/kyverno/kyverno/security/advisories/GHSA-gg4x-fgg2-h9w9",
+      "https://www.vulncheck.com/advisories/kyverno-before-1.13.0-policy-bypass-via-multiple-exceptions"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-84200",
+    "added_at": "2026-09-02T08:00:46+09:00"
+  },
+  {
     "id": "CVE-2026-83772",
     "published": "2026-09-01",
     "last_modified": "2026-09-01",
@@ -56,6 +83,63 @@
     ],
     "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-75865",
     "added_at": "2026-09-01T20:00:05+09:00"
+  },
+  {
+    "id": "CVE-2026-18550",
+    "published": "2026-09-01",
+    "last_modified": "2026-09-01",
+    "status": "Deferred",
+    "description": "The Nokri - Job Board WordPress Theme for WordPress is vulnerable to Privilege Escalation via Account Takeover in all versions up to, and including, 1.6.6. This is due to insufficient reset token validation in the `nokri_reset_password()` function, which allows empty attacker-supplied reset tokens to match empty or unset `sb_password_forget_token` user meta values. This makes it possible for unauthenticated attackers to reset the password of any user, including administrators, and gain access to their account.",
+    "cvss": {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "score": 9.8,
+      "severity": "CRITICAL",
+      "attack_vector": "네트워크",
+      "attack_complexity": "낮음",
+      "privileges_required": "없음",
+      "user_interaction": "없음"
+    },
+    "cwes": [
+      "CWE-269"
+    ],
+    "affected": [],
+    "references": [
+      "https://nokriwp.com/",
+      "https://themeforest.net/item/nokri-job-board-wordpress-theme/22677241",
+      "https://www.wordfence.com/threat-intel/vulnerabilities/id/b03b7ea8-6485-495d-b815-2b7b882a75a2?source=cve"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-18550",
+    "added_at": "2026-09-02T08:00:46+09:00"
+  },
+  {
+    "id": "CVE-2023-54391",
+    "published": "2026-09-01",
+    "last_modified": "2026-09-01",
+    "status": "Received",
+    "description": "Proxmox Virtual Environment (VE) 7.0 through 8.0 contains an authentication bypass vulnerability in libpve-access-control before 8.0.4 that allows unauthenticated attackers to authenticate as any existing enabled user without a configured second factor by supplying an arbitrary tfa-challenge value in the API login endpoint. Attackers can send a POST request to the access ticket API endpoint with any value in the tfa-challenge parameter to completely skip password verification, gaining unauthorized access including to the root@pam account. All affected releases are end of life.",
+    "cvss": {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "score": 9.8,
+      "severity": "CRITICAL",
+      "attack_vector": "네트워크",
+      "attack_complexity": "낮음",
+      "privileges_required": "없음",
+      "user_interaction": "없음"
+    },
+    "cwes": [
+      "CWE-304"
+    ],
+    "affected": [],
+    "references": [
+      "https://forum.proxmox.com/threads/proxmox-virtual-environment-security-advisories.149331/page-4#post-867929",
+      "https://git.proxmox.com/?p=pve-access-control.git;a=commit;h=032e7d6d441f89a48cadfd7f47e957c8a561c022",
+      "https://git.proxmox.com/?p=pve-access-control.git;a=commit;h=032e7d6d441f89a48cadfd7f47e957c8a561c022",
+      "https://www.vulncheck.com/advisories/proxmox-ve-authentication-bypass-via-tfa-challenge-parameter"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2023-54391",
+    "added_at": "2026-09-02T08:00:46+09:00"
   },
   {
     "id": "CVE-2026-83524",
