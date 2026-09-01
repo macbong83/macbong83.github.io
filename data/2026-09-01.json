@@ -1,0 +1,118 @@
+{
+  "tagline": "글로벌 정보보안 뉴스레터",
+  "title": "보안 브리핑",
+  "date_display": "2026년 9월 1일 화요일",
+  "date_short": "2026.09.01",
+  "sources_line": "The Hacker News · BleepingComputer · SecurityWeek · KrebsOnSecurity · CISA · NCSC UK · Unit 42 · 보안뉴스 · 데일리시큐 · 전자신문",
+  "seo": {
+    "title": "랜섬웨어, 취약점 — 2026.09.01 보안 브리핑",
+    "description": "오늘 주요 취약점·침해 사고·위협 트렌드 요약.",
+    "keywords": "CVE, 랜섬웨어, 취약점, 침해사고, 보안"
+  },
+  "sections": [
+    {
+      "label": "취약점 & 공격",
+      "type": "cards",
+      "items": [
+        {
+          "severity": "critical",
+          "source": "SecurityWeek",
+          "headline": "Kaspersky Endpoint Security 제로데이 취약점 악용",
+          "url": "https://www.securityweek.com/nightmare-eclipse-drops-hardbreacher-kaspersky-product-exploit/",
+          "summary": "Nightmare Eclipse 그룹이 Kaspersky Endpoint Security의 제로데이 취약점을 악용해 원격 코드 실행 공격을 수행했다. Kaspersky는 해당 취약점을 패치했다."
+        },
+        {
+          "severity": "high",
+          "source": "SecurityWeek",
+          "headline": "ServiceNow 3개의 중대한 코드 주입 취약점 공개",
+          "url": "https://www.securityweek.com/servicenow-patches-3-critical-code-injection-vulnerabilities/",
+          "summary": "ServiceNow는 공격자가 임의 코드 실행 및 데이터 접근/변조를 유발할 수 있는 3개의 중대한 코드 주입 취약점을 패치했다."
+        },
+        {
+          "severity": "high",
+          "source": "SecurityAffairs",
+          "headline": "ValleyRAT 악성코드, 정규 광고 소프트웨어를 통해 감염",
+          "url": "https://securityaffairs.com/198191/security/valleyrat-when-legitimate-software-becomes-a-malware-delivery-tool.html",
+          "summary": "ValleyRAT은 정규 광고 소프트웨어를 통해 DLL 사이드로딩 방식으로 감염되어 데이터를 유출하고 시스템을 제어한다."
+        },
+        {
+          "severity": "medium",
+          "source": "SecurityAffairs",
+          "headline": "GiveWP 플러그인의 PHP 객체 주입 취약점",
+          "url": "https://securityaffairs.com/198156/security/critical-givewp-flaw-lets-attackers-run-commands-on-wordpress-servers.html",
+          "summary": "GiveWP 플러그인의 취약점은 인증 없이 워드프레스 서버에서 임의 명령을 실행할 수 있게 해, 4.16.7.2 버전에서 패치되었다."
+        },
+        {
+          "severity": "medium",
+          "source": "SecurityAffairs",
+          "headline": "Chrome 및 Edge 확장 프로그램을 통해 EVM, Solana, Tron 지갑 해킹",
+          "url": "https://gbhackers.com/chrome-and-edge-extensions/",
+          "summary": "19개의 악성 확장 프로그램이 CSP를 제거하고 JavaScript를 삽입해 지갑 자산을 유출하는 공격을 수행했다."
+        }
+      ]
+    },
+    {
+      "label": "침해 사고",
+      "type": "cards",
+      "items": [
+        {
+          "severity": "incident",
+          "source": "DailySecu",
+          "headline": "클로드 사용량 무단 소비, 정보탈취 악성코드 감염",
+          "url": "https://www.dailysecu.com/news/articleView.html?idxno=208289",
+          "summary": "클로드 사용자들의 로그인 세션이 정보탈취 악성코드에 의해 무단으로 사용되어 사용량이 소진되는 사례가 확인되었다."
+        },
+        {
+          "severity": "incident",
+          "source": "DailySecu",
+          "headline": "중국계 해킹그룹 '파이어 앤트' 시스코 라우터 장악",
+          "url": "https://www.dailysecu.com/news/articleView.html?idxno=208288",
+          "summary": "중국계 해킹그룹 '파이어 앤트'가 시스코 라우터를 해킹해 내부 네트워크 통신을 수집하고 정보수집 거점으로 악용하고 있다."
+        },
+        {
+          "severity": "incident",
+          "source": "DailySecu",
+          "headline": "베를린 행정망 해킹, 랜섬웨어 조직 '리시다' 주장",
+          "url": "https://www.dailysecu.com/news/articleView.html?idxno=208287",
+          "summary": "베를린 행정망이 랜섬웨어 조직 '리시다'에 의해 해킹되어 5.79TB 규모의 데이터 유출이 발생했다."
+        },
+        {
+          "severity": "incident",
+          "source": "SecurityWeek",
+          "headline": "McKesson, 284백만 건의 데이터 유출 사고",
+          "url": "https://www.securityweek.com/mckesson-confirms-data-breach-as-attacker-deadline-looms/",
+          "summary": "ShinyHunters 랜섬웨어 그룹이 McKesson의 시스템에서 284백만 건의 데이터를 유출했다고 주장하고 있다."
+        },
+        {
+          "severity": "incident",
+          "source": "SecurityWeek",
+          "headline": "런던 공항 그룹 데이터 유출, 86GB 규모",
+          "url": "https://securityaffairs.com/198143/cyber-crime/extortion-group-fulcrumsec-claims-86gb-manchester-airports-group-data-theft.html",
+          "summary": "FulcrumSec 그룹이 Manchester Airports Group의 API 인증 정보를 유출해 86GB 규모의 데이터를 확보했다고 주장했다."
+        }
+      ]
+    },
+    {
+      "label": "동향 & 분석",
+      "type": "trends",
+      "items": [
+        {
+          "lead": "AI 기술 악용 증가",
+          "body": "랜섬웨어 그룹은 AI 코딩 도구를 활용해 C2 프레임워크를 개발하고, AI 에이전트를 통해 사용자 계정을 무단 사용하는 사례가 증가하고 있다."
+        },
+        {
+          "lead": "네트워크 인프라 해킹",
+          "body": "중국계 해킹그룹이 라우터 및 인증 서버를 장악해 내부 네트워크를 감시하고 정보를 수집하는 공격이 주요 트렌드로 나타나고 있다."
+        },
+        {
+          "lead": "브라우저 확장 프로그램을 통한 악성코드 유포",
+          "body": "Chrome 및 Edge 확장 프로그램이 CSP를 제거하고 JavaScript를 삽입해 지갑 자산을 유출하는 사례가 증가하고 있다."
+        },
+        {
+          "lead": "AI 기반 보안 솔루션 확대",
+          "body": "AI 에이전트 플랫폼과 데이터 플랫폼이 보안 분야에서 확대되고 있으며, AI 기술을 활용한 보안 제품이 주목받고 있다."
+        }
+      ]
+    }
+  ]
+}

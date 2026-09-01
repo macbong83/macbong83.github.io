@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>랜섬웨어, 취약점 — 2026.09.01 보안 브리핑 | SecuLog</title>
+<meta name="description" content="오늘 주요 취약점·침해 사고·위협 트렌드 요약.">
+<meta name="keywords" content="CVE, 랜섬웨어, 취약점, 침해사고, 보안">
+<meta name="author" content="Felix">
+<meta property="og:type" content="article">
+<meta property="og:title" content="랜섬웨어, 취약점 — 2026.09.01 보안 브리핑">
+<meta property="og:description" content="오늘 주요 취약점·침해 사고·위협 트렌드 요약.">
+<meta property="og:url" content="https://macbong83.github.io/posts/2026-09-01.html">
+<meta property="og:site_name" content="SecuLog">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="랜섬웨어, 취약점 — 2026.09.01 보안 브리핑">
+<meta name="twitter:description" content="오늘 주요 취약점·침해 사고·위협 트렌드 요약.">
+<link rel="canonical" href="https://macbong83.github.io/posts/2026-09-01.html">
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: -apple-system, 'Malgun Gothic', 'Apple SD Gothic Neo', Arial, sans-serif; background: #f4f5f7; color: #1a1a2e; line-height: 1.6; }
+  a { text-decoration: none; color: inherit; }
+  .wrapper { max-width: 700px; margin: 32px auto; background: #ffffff; border-radius: 12px; overflow: hidden; box-shadow: 0 2px 20px rgba(0,0,0,0.08); }
+  .header { background: #eef0f4; padding: 28px 36px 24px; display: flex; align-items: center; justify-content: space-between; gap: 16px; border-bottom: 3px solid #0d1b3e; }
+  .wordmark { font-size: 26px; font-weight: 800; letter-spacing: -0.02em; color: #0d1b3e; }
+  .wordmark .accent { color: #2563eb; }
+  .header-meta { text-align: right; }
+  .header-meta .nl-label { font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase; color: #6b7488; margin-bottom: 4px; }
+  .header-meta .nl-title { font-size: 17px; font-weight: 700; color: #0d1b3e; }
+  .header-meta .nl-date { font-size: 12px; color: #8a93a8; margin-top: 3px; }
+  .body { padding: 28px 36px 32px; }
+  .section-label { font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase; color: #8a93a8; font-weight: 600; padding-bottom: 8px; border-bottom: 1px solid #e8eaed; margin-bottom: 4px; margin-top: 28px; }
+  .section-label:first-child { margin-top: 0; }
+  .card { display: block; padding: 16px 0; border-bottom: 1px solid #f0f1f3; transition: background 0.15s; }
+  .card:last-child { border-bottom: none; }
+  .card:hover { background: #f8f9fc; margin: 0 -36px; padding: 16px 36px; }
+  .card-top { display: flex; align-items: center; gap: 8px; margin-bottom: 6px; flex-wrap: wrap; }
+  .badge { font-size: 10px; font-weight: 700; padding: 3px 9px; border-radius: 4px; letter-spacing: 0.04em; }
+  .badge-critical { background: #fff0f0; color: #c0392b; border: 1px solid #f5c6c6; }
+  .badge-high { background: #fff7ee; color: #b94d00; border: 1px solid #fdd5a8; }
+  .badge-medium { background: #fff9e6; color: #856900; border: 1px solid #f9e0a0; }
+  .badge-incident { background: #f3f0ff; color: #6133c0; border: 1px solid #cfc0f5; }
+  .source { font-size: 11px; color: #a0a8b8; }
+  .card-headline { font-size: 14px; font-weight: 600; color: #0d1b3e; margin-bottom: 5px; line-height: 1.45; }
+  .card-headline .arrow { font-size: 12px; color: #2563eb; margin-left: 4px; opacity: 0; transition: opacity 0.15s; }
+  .card:hover .card-headline .arrow { opacity: 1; }
+  .card-summary { font-size: 13px; color: #4a5568; line-height: 1.65; }
+  .trend-box { background: #f8f9fc; border-radius: 10px; padding: 18px 20px; margin-top: 6px; }
+  .trend-row { display: flex; gap: 12px; padding: 10px 0; border-bottom: 1px solid #e8eaed; align-items: flex-start; }
+  .trend-row:last-child { border-bottom: none; padding-bottom: 0; }
+  .trend-num { font-size: 11px; font-weight: 700; color: #2563eb; min-width: 22px; padding-top: 2px; }
+  .trend-text { font-size: 13px; color: #4a5568; line-height: 1.6; }
+  .trend-text strong { color: #0d1b3e; font-weight: 600; }
+  .footer { background: #f4f5f7; border-top: 1px solid #e8eaed; padding: 16px 36px; font-size: 11px; color: #9aa0b0; line-height: 1.6; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 8px; }
+  .footer-meta { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; justify-content: flex-end; }
+  .linkedin-link { display: inline-flex; align-items: center; justify-content: center; min-height: 28px; padding: 6px 12px; border-radius: 6px; background: #0a66c2; color: #fff; font-size: 12px; font-weight: 800; letter-spacing: 0.01em; box-shadow: 0 6px 14px rgba(10,102,194,0.16); }
+  .linkedin-link:hover { background: #004182; color: #fff; }
+  .card-inner { display: flex; gap: 14px; }
+  .sev-bar { width: 3px; border-radius: 2px; flex-shrink: 0; margin: 3px 0; }
+  .sev-critical { background: #e74c3c; }
+  .sev-high { background: #e67e22; }
+  .sev-medium { background: #f0b429; }
+  .sev-incident { background: #7c3aed; }
+  .card-content { flex: 1; }
+  @media (max-width: 600px) {
+    .wrapper { margin: 0; border-radius: 0; box-shadow: none; }
+    .header { padding: 18px 20px 16px; flex-direction: column; align-items: flex-start; gap: 8px; }
+    .header-meta { text-align: left; }
+    .body { padding: 18px 20px 24px; }
+    .card:hover { margin: 0 -20px; padding: 16px 20px; }
+    .footer { padding: 14px 20px; flex-direction: column; align-items: flex-start; }
+    .footer-meta { justify-content: flex-start; }
+    .wordmark { font-size: 22px; }
+    .card-headline { font-size: 13px; }
+    .card-summary { font-size: 12px; }
+    .card-headline .arrow { opacity: 1; }
+  }
+</style>
+</head>
+<body>
+<div class="wrapper">
+  <div class="header">
+    <div class="header-logo">
+      <span class="wordmark">Secu<span class="accent">Log</span></span>
+    </div>
+    <div class="header-meta">
+      <div class="nl-label">글로벌 정보보안 뉴스레터</div>
+      <div class="nl-title">보안 브리핑</div>
+      <div class="nl-date">2026년 9월 1일 화요일</div>
+    </div>
+  </div>
+  <div class="body">
+    <div class="section-label">취약점 &amp; 공격</div>
+
+    <a class="card" href="https://www.securityweek.com/nightmare-eclipse-drops-hardbreacher-kaspersky-product-exploit/" target="_blank">
+      <div class="card-inner"><div class="sev-bar sev-critical"></div><div class="card-content">
+        <div class="card-top"><span class="badge badge-critical">긴급</span><span class="source">SecurityWeek</span></div>
+        <div class="card-headline">Kaspersky Endpoint Security 제로데이 취약점 악용<span class="arrow">↗</span></div>
+        <div class="card-summary">Nightmare Eclipse 그룹이 Kaspersky Endpoint Security의 제로데이 취약점을 악용해 원격 코드 실행 공격을 수행했다. Kaspersky는 해당 취약점을 패치했다.</div>
+      </div></div>
+    </a>
+
+    <a class="card" href="https://www.securityweek.com/servicenow-patches-3-critical-code-injection-vulnerabilities/" target="_blank">
+      <div class="card-inner"><div class="sev-bar sev-high"></div><div class="card-content">
+        <div class="card-top"><span class="badge badge-high">높음</span><span class="source">SecurityWeek</span></div>
+        <div class="card-headline">ServiceNow 3개의 중대한 코드 주입 취약점 공개<span class="arrow">↗</span></div>
+        <div class="card-summary">ServiceNow는 공격자가 임의 코드 실행 및 데이터 접근/변조를 유발할 수 있는 3개의 중대한 코드 주입 취약점을 패치했다.</div>
+      </div></div>
+    </a>
+
+    <a class="card" href="https://securityaffairs.com/198191/security/valleyrat-when-legitimate-software-becomes-a-malware-delivery-tool.html" target="_blank">
+      <div class="card-inner"><div class="sev-bar sev-high"></div><div class="card-content">
+        <div class="card-top"><span class="badge badge-high">높음</span><span class="source">SecurityAffairs</span></div>
+        <div class="card-headline">ValleyRAT 악성코드, 정규 광고 소프트웨어를 통해 감염<span class="arrow">↗</span></div>
+        <div class="card-summary">ValleyRAT은 정규 광고 소프트웨어를 통해 DLL 사이드로딩 방식으로 감염되어 데이터를 유출하고 시스템을 제어한다.</div>
+      </div></div>
+    </a>
+
+    <a class="card" href="https://securityaffairs.com/198156/security/critical-givewp-flaw-lets-attackers-run-commands-on-wordpress-servers.html" target="_blank">
+      <div class="card-inner"><div class="sev-bar sev-medium"></div><div class="card-content">
+        <div class="card-top"><span class="badge badge-medium">중간</span><span class="source">SecurityAffairs</span></div>
+        <div class="card-headline">GiveWP 플러그인의 PHP 객체 주입 취약점<span class="arrow">↗</span></div>
+        <div class="card-summary">GiveWP 플러그인의 취약점은 인증 없이 워드프레스 서버에서 임의 명령을 실행할 수 있게 해, 4.16.7.2 버전에서 패치되었다.</div>
+      </div></div>
+    </a>
+
+    <a class="card" href="https://gbhackers.com/chrome-and-edge-extensions/" target="_blank">
+      <div class="card-inner"><div class="sev-bar sev-medium"></div><div class="card-content">
+        <div class="card-top"><span class="badge badge-medium">중간</span><span class="source">SecurityAffairs</span></div>
+        <div class="card-headline">Chrome 및 Edge 확장 프로그램을 통해 EVM, Solana, Tron 지갑 해킹<span class="arrow">↗</span></div>
+        <div class="card-summary">19개의 악성 확장 프로그램이 CSP를 제거하고 JavaScript를 삽입해 지갑 자산을 유출하는 공격을 수행했다.</div>
+      </div></div>
+    </a>
+
+    <div class="section-label">침해 사고</div>
+
+    <a class="card" href="https://www.dailysecu.com/news/articleView.html?idxno=208289" target="_blank">
+      <div class="card-inner"><div class="sev-bar sev-incident"></div><div class="card-content">
+        <div class="card-top"><span class="badge badge-incident">사고</span><span class="source">DailySecu</span></div>
+        <div class="card-headline">클로드 사용량 무단 소비, 정보탈취 악성코드 감염<span class="arrow">↗</span></div>
+        <div class="card-summary">클로드 사용자들의 로그인 세션이 정보탈취 악성코드에 의해 무단으로 사용되어 사용량이 소진되는 사례가 확인되었다.</div>
+      </div></div>
+    </a>
+
+    <a class="card" href="https://www.dailysecu.com/news/articleView.html?idxno=208288" target="_blank">
+      <div class="card-inner"><div class="sev-bar sev-incident"></div><div class="card-content">
+        <div class="card-top"><span class="badge badge-incident">사고</span><span class="source">DailySecu</span></div>
+        <div class="card-headline">중국계 해킹그룹 &#x27;파이어 앤트&#x27; 시스코 라우터 장악<span class="arrow">↗</span></div>
+        <div class="card-summary">중국계 해킹그룹 &#x27;파이어 앤트&#x27;가 시스코 라우터를 해킹해 내부 네트워크 통신을 수집하고 정보수집 거점으로 악용하고 있다.</div>
+      </div></div>
+    </a>
+
+    <a class="card" href="https://www.dailysecu.com/news/articleView.html?idxno=208287" target="_blank">
+      <div class="card-inner"><div class="sev-bar sev-incident"></div><div class="card-content">
+        <div class="card-top"><span class="badge badge-incident">사고</span><span class="source">DailySecu</span></div>
+        <div class="card-headline">베를린 행정망 해킹, 랜섬웨어 조직 &#x27;리시다&#x27; 주장<span class="arrow">↗</span></div>
+        <div class="card-summary">베를린 행정망이 랜섬웨어 조직 &#x27;리시다&#x27;에 의해 해킹되어 5.79TB 규모의 데이터 유출이 발생했다.</div>
+      </div></div>
+    </a>
+
+    <a class="card" href="https://www.securityweek.com/mckesson-confirms-data-breach-as-attacker-deadline-looms/" target="_blank">
+      <div class="card-inner"><div class="sev-bar sev-incident"></div><div class="card-content">
+        <div class="card-top"><span class="badge badge-incident">사고</span><span class="source">SecurityWeek</span></div>
+        <div class="card-headline">McKesson, 284백만 건의 데이터 유출 사고<span class="arrow">↗</span></div>
+        <div class="card-summary">ShinyHunters 랜섬웨어 그룹이 McKesson의 시스템에서 284백만 건의 데이터를 유출했다고 주장하고 있다.</div>
+      </div></div>
+    </a>
+
+    <a class="card" href="https://securityaffairs.com/198143/cyber-crime/extortion-group-fulcrumsec-claims-86gb-manchester-airports-group-data-theft.html" target="_blank">
+      <div class="card-inner"><div class="sev-bar sev-incident"></div><div class="card-content">
+        <div class="card-top"><span class="badge badge-incident">사고</span><span class="source">SecurityWeek</span></div>
+        <div class="card-headline">런던 공항 그룹 데이터 유출, 86GB 규모<span class="arrow">↗</span></div>
+        <div class="card-summary">FulcrumSec 그룹이 Manchester Airports Group의 API 인증 정보를 유출해 86GB 규모의 데이터를 확보했다고 주장했다.</div>
+      </div></div>
+    </a>
+
+    <div class="section-label">동향 &amp; 분석</div>
+    <div class="trend-box">
+      <div class="trend-row">
+        <div class="trend-num">01</div>
+        <div class="trend-text"><strong>AI 기술 악용 증가</strong> — 랜섬웨어 그룹은 AI 코딩 도구를 활용해 C2 프레임워크를 개발하고, AI 에이전트를 통해 사용자 계정을 무단 사용하는 사례가 증가하고 있다.</div>
+      </div>
+      <div class="trend-row">
+        <div class="trend-num">02</div>
+        <div class="trend-text"><strong>네트워크 인프라 해킹</strong> — 중국계 해킹그룹이 라우터 및 인증 서버를 장악해 내부 네트워크를 감시하고 정보를 수집하는 공격이 주요 트렌드로 나타나고 있다.</div>
+      </div>
+      <div class="trend-row">
+        <div class="trend-num">03</div>
+        <div class="trend-text"><strong>브라우저 확장 프로그램을 통한 악성코드 유포</strong> — Chrome 및 Edge 확장 프로그램이 CSP를 제거하고 JavaScript를 삽입해 지갑 자산을 유출하는 사례가 증가하고 있다.</div>
+      </div>
+      <div class="trend-row">
+        <div class="trend-num">04</div>
+        <div class="trend-text"><strong>AI 기반 보안 솔루션 확대</strong> — AI 에이전트 플랫폼과 데이터 플랫폼이 보안 분야에서 확대되고 있으며, AI 기술을 활용한 보안 제품이 주목받고 있다.</div>
+      </div>
+    </div>
+  </div>
+  <div class="footer">
+    <div>출처: The Hacker News · BleepingComputer · SecurityWeek · KrebsOnSecurity · CISA · NCSC UK · Unit 42 · 보안뉴스 · 데일리시큐 · 전자신문</div>
+    <div class="footer-meta">
+      <span>© 2026 Felix · SecuLog. 본 브리핑은 공개된 보안 뉴스를 기반으로 작성되었습니다.</span>
+    </div>
+  </div>
+</div>
+</body>
+</html>
