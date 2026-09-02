@@ -1,5 +1,142 @@
 [
   {
+    "id": "CVE-2026-9055",
+    "published": "2026-09-02",
+    "last_modified": "2026-09-02",
+    "status": "Received",
+    "description": "The Booking for Appointments and Events Calendar – Amelia (Premium) plugin for WordPress is vulnerable to Privilege Escalation in versions 8.0 - 9.6.2. This is due to insufficient validation of the attacker-controlled 'type' parameter in the customer update endpoint, which allows customers to set their role to 'manager' and trigger creation of a WordPress user with the wpamelia-manager role when the 'externalId' parameter is set to 0. This makes it possible for unauthenticated attackers to escalate their privileges to administrator by first elevating to the manager role, then creating a provider entity linked to an administrator user ID and overwriting that administrator's password.",
+    "cvss": {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "score": 9.8,
+      "severity": "CRITICAL",
+      "attack_vector": "네트워크",
+      "attack_complexity": "낮음",
+      "privileges_required": "없음",
+      "user_interaction": "없음"
+    },
+    "cwes": [
+      "CWE-269"
+    ],
+    "affected": [],
+    "references": [
+      "https://wpamelia.com/documentation/changelog/",
+      "https://www.wordfence.com/threat-intel/vulnerabilities/id/0c2266b8-cc23-46de-bc80-09e3d6294854?source=cve"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-9055",
+    "added_at": "2026-09-02T20:00:48+09:00"
+  },
+  {
+    "id": "CVE-2026-84699",
+    "published": "2026-09-02",
+    "last_modified": "2026-09-02",
+    "status": "Received",
+    "description": "Team Password Manager before 14.184.308 fails to enforce authentication requirements in the local account password reset flow. Unauthenticated attackers can reset local account passwords and authenticate as those users to gain unauthorized access.",
+    "cvss": {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N",
+      "score": 9.1,
+      "severity": "CRITICAL",
+      "attack_vector": "네트워크",
+      "attack_complexity": "낮음",
+      "privileges_required": "없음",
+      "user_interaction": "없음"
+    },
+    "cwes": [
+      "CWE-640"
+    ],
+    "affected": [],
+    "references": [
+      "https://teampasswordmanager.com/",
+      "https://teampasswordmanager.com/blog/chrome-extension-6.42.27-tpm-14.184.308/",
+      "https://teampasswordmanager.com/docs/changelog/",
+      "https://www.vulncheck.com/advisories/team-password-manager-before-14.184.308-authentication-bypass-in-password-reset"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-84699",
+    "added_at": "2026-09-02T20:00:48+09:00"
+  },
+  {
+    "id": "CVE-2026-78657",
+    "published": "2026-09-02",
+    "last_modified": "2026-09-02",
+    "status": "Received",
+    "description": "The SigmaForms Pro – AI Generated Forms plugin for WordPress is vulnerable to arbitrary file deletion due to insufficient file path validation in the delete_submission_files function in all versions up to, and including, 1.4.11. This makes it possible for unauthenticated attackers to delete arbitrary files on the server, which can easily lead to remote code execution when the right file is deleted (such as wp-config.php). The malicious path traversal URL is submitted via form upload field and stored in the database, with deletion triggered when an administrator deletes the submission record from the admin panel.",
+    "cvss": {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "score": 9.8,
+      "severity": "CRITICAL",
+      "attack_vector": "네트워크",
+      "attack_complexity": "낮음",
+      "privileges_required": "없음",
+      "user_interaction": "없음"
+    },
+    "cwes": [
+      "CWE-22"
+    ],
+    "affected": [],
+    "references": [
+      "https://feedback.bdthemes.com/announcements",
+      "https://www.wordfence.com/threat-intel/vulnerabilities/id/c714e2b3-8a96-4078-99a4-4ce620939828?source=cve"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-78657",
+    "added_at": "2026-09-02T20:00:48+09:00"
+  },
+  {
+    "id": "CVE-2026-84480",
+    "published": "2026-09-01",
+    "last_modified": "2026-09-01",
+    "status": "Received",
+    "description": "WWBN AVideo fails to validate password recovery token expiration in userRecoverPassSave.json.php, allowing attackers to use expired tokens to reset account passwords indefinitely. Attackers who obtain a recovery token can use it at any time to change the target account's password and gain full account access.",
+    "cvss": {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "score": 9.8,
+      "severity": "CRITICAL",
+      "attack_vector": "네트워크",
+      "attack_complexity": "낮음",
+      "privileges_required": "없음",
+      "user_interaction": "없음"
+    },
+    "cwes": [
+      "CWE-613"
+    ],
+    "affected": [],
+    "references": [
+      "https://github.com/WWBN/AVideo/security/advisories/GHSA-j9p7-hm85-9v77",
+      "https://www.vulncheck.com/advisories/wwbn-avideo-password-recovery-token-expiration-bypass"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-84480",
+    "added_at": "2026-09-02T20:00:48+09:00"
+  },
+  {
+    "id": "CVE-2026-84479",
+    "published": "2026-09-01",
+    "last_modified": "2026-09-01",
+    "status": "Received",
+    "description": "WWBN AVideo (current e01e41ecc and earlier) makes three login-time security controls depend solely on the client-supplied User-Agent header. The isAVideoEncoder()/isAVideoMobileApp() checks match HTTP_USER_AGENT against a hardcoded literal (\"AVideoEncoder\"/\"AVideoMobileApp\") with no IP check or shared secret. An attacker who submits valid credentials and sets User-Agent: AVideoEncoder bypasses two-factor authentication, skips brute-force captcha escalation, and avoids being recorded in the login/device audit history. No patch is available at the time of publication.",
+    "cvss": {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N",
+      "score": 9.1,
+      "severity": "CRITICAL",
+      "attack_vector": "네트워크",
+      "attack_complexity": "낮음",
+      "privileges_required": "없음",
+      "user_interaction": "없음"
+    },
+    "cwes": [
+      "CWE-290"
+    ],
+    "affected": [],
+    "references": [
+      "https://github.com/WWBN/AVideo/security/advisories/GHSA-m9m3-gwh2-337c",
+      "https://www.vulncheck.com/advisories/wwbn-avideo-authentication-bypass-via-user-agent-header"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-84479",
+    "added_at": "2026-09-02T20:00:48+09:00"
+  },
+  {
     "id": "CVE-2026-84200",
     "published": "2026-09-01",
     "last_modified": "2026-09-01",
