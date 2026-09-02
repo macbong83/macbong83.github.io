@@ -83,6 +83,33 @@
     "added_at": "2026-09-02T20:00:48+09:00"
   },
   {
+    "id": "CVE-2026-66786",
+    "published": "2026-09-02",
+    "last_modified": "2026-09-02",
+    "status": "Received",
+    "description": "A flaw was found in submariner. In cert-auth mode, the connection configuration is built using free-form strings from the Custom Resource Definition (CRD) without proper validation. A malicious cluster can exploit this by publishing a CableName that includes newlines and ipsec.conf directives. This allows an attacker to inject arbitrary configuration parameters or execute commands through leftupdown hooks, leading to remote code execution as root on the gateway node.",
+    "cvss": {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:C/C:H/I:H/A:H",
+      "score": 9.1,
+      "severity": "CRITICAL",
+      "attack_vector": "네트워크",
+      "attack_complexity": "낮음",
+      "privileges_required": "높음",
+      "user_interaction": "없음"
+    },
+    "cwes": [
+      "CWE-94"
+    ],
+    "affected": [],
+    "references": [
+      "https://access.redhat.com/security/cve/CVE-2026-66786",
+      "https://bugzilla.redhat.com/show_bug.cgi?id=2507531"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-66786",
+    "added_at": "2026-09-03T08:00:35+09:00"
+  },
+  {
     "id": "CVE-2026-84480",
     "published": "2026-09-01",
     "last_modified": "2026-09-01",
