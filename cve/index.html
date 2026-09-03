@@ -41,13 +41,174 @@
     <h1>CVE Archive</h1>
     <p>NVD 기반 Critical CVE를 누적 관리하는 별도 페이지입니다. 블로그에는 CVE 자동 글을 발행하지 않고, 이 페이지에만 기록합니다.</p>
     <div class="meta">
-      <span>Total 757</span>
-      <span>Updated 2026-09-03 08:00 KST</span>
+      <span>Total 769</span>
+      <span>Updated 2026-09-04 08:00 KST</span>
       <span>Source NVD API</span>
     </div>
   </section>
   <div class="notice">중복 제거 기준은 CVE ID입니다. 동일 CVE는 다시 추가하지 않습니다. 실제 악용 여부와 패치 우선순위는 CISA KEV, 벤더 권고, 자산 노출 여부와 함께 검토해야 합니다.</div>
 
+    <article class="cve-card" id="CVE-2026-85394">
+      <div class="cve-top">
+        <a class="cve-id" href="https://nvd.nist.gov/vuln/detail/CVE-2026-85394" target="_blank" rel="noopener">CVE-2026-85394</a>
+        <span class="score">CVSS 9.1 CRITICAL</span>
+      </div>
+      <p class="desc">python-jose through 3.5.0 fails to properly validate asymmetric keys in HMAC initialization, accepting DER-encoded public keys that lack PEM armor or SSH prefixes. Attackers holding the service&#x27;s public key can forge HS256 tokens that pass verification when algorithms are not explicitly restricted. This is an incomplete fix for CVE-2024-33663.</p>
+      <dl>
+        <div><dt>Published</dt><dd>2026-09-03</dd></div>
+        <div><dt>Last Modified</dt><dd>2026-09-03</dd></div>
+        <div><dt>Status</dt><dd>Received</dd></div>
+        <div><dt>Attack Vector</dt><dd>네트워크</dd></div>
+        <div><dt>Attack Complexity</dt><dd>낮음</dd></div>
+        <div><dt>Privileges</dt><dd>없음</dd></div>
+        <div><dt>User Interaction</dt><dd>없음</dd></div>
+        <div><dt>CWE</dt><dd>CWE-347</dd></div>
+        <div><dt>Affected</dt><dd>NVD CPE 기준 확인 필요</dd></div>
+      </dl>
+      <div class="vector"><code>CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N</code></div>
+      <details>
+        <summary>References</summary>
+        <ul><li><a href="https://github.com/advisories/GHSA-6c5p-j8vq-pqhj" target="_blank" rel="noopener">https://github.com/advisories/GHSA-6c5p-j8vq-pqhj</a></li><li><a href="https://github.com/mpdavis/python-jose" target="_blank" rel="noopener">https://github.com/mpdavis/python-jose</a></li><li><a href="https://github.com/mpdavis/python-jose/blob/018b310ddb8b50dcfd09a0c152117835a21dd656/jose/backends/native.py" target="_blank" rel="noopener">https://github.com/mpdavis/python-jose/blob/018b310ddb8b50dcfd09a0c152117835a21dd656/jose/backends/native.py</a></li><li><a href="https://github.com/mpdavis/python-jose/blob/018b310ddb8b50dcfd09a0c152117835a21dd656/jose/utils.py" target="_blank" rel="noopener">https://github.com/mpdavis/python-jose/blob/018b310ddb8b50dcfd09a0c152117835a21dd656/jose/utils.py</a></li></ul>
+      </details>
+    </article>
+    <article class="cve-card" id="CVE-2026-85224">
+      <div class="cve-top">
+        <a class="cve-id" href="https://nvd.nist.gov/vuln/detail/CVE-2026-85224" target="_blank" rel="noopener">CVE-2026-85224</a>
+        <span class="score">CVSS 9.1 CRITICAL</span>
+      </div>
+      <p class="desc">A vulnerability was determined in D-Link DNS-320 ShareCenter 2.06B01. This affects an unknown part of the file /cgi/file_sharing.cgi of the component File Sharing. Executing a manipulation of the argument fileurl can lead to os command injection. The attack can be launched remotely. The exploit has been publicly disclosed and may be utilized.</p>
+      <dl>
+        <div><dt>Published</dt><dd>2026-09-03</dd></div>
+        <div><dt>Last Modified</dt><dd>2026-09-03</dd></div>
+        <div><dt>Status</dt><dd>Received</dd></div>
+        <div><dt>Attack Vector</dt><dd>네트워크</dd></div>
+        <div><dt>Attack Complexity</dt><dd>낮음</dd></div>
+        <div><dt>Privileges</dt><dd>높음</dd></div>
+        <div><dt>User Interaction</dt><dd>없음</dd></div>
+        <div><dt>CWE</dt><dd>CWE-77, CWE-78</dd></div>
+        <div><dt>Affected</dt><dd>NVD CPE 기준 확인 필요</dd></div>
+      </dl>
+      <div class="vector"><code>CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:C/C:H/I:H/A:H</code></div>
+      <details>
+        <summary>References</summary>
+        <ul><li><a href="https://github.com/dxz0069/WAVLINK-WN530H4-Command-Injection-in-set_add_routing/blob/main/DLINK-CMD-010-vulndb.md" target="_blank" rel="noopener">https://github.com/dxz0069/WAVLINK-WN530H4-Command-Injection-in-set_add_routing/blob/main/DLINK-CMD-010-vulndb.md</a></li><li><a href="https://vuldb.com/cve/CVE-2026-85224" target="_blank" rel="noopener">https://vuldb.com/cve/CVE-2026-85224</a></li><li><a href="https://vuldb.com/submit/894215" target="_blank" rel="noopener">https://vuldb.com/submit/894215</a></li><li><a href="https://vuldb.com/vuln/398423" target="_blank" rel="noopener">https://vuldb.com/vuln/398423</a></li></ul>
+      </details>
+    </article>
+    <article class="cve-card" id="CVE-2026-85223">
+      <div class="cve-top">
+        <a class="cve-id" href="https://nvd.nist.gov/vuln/detail/CVE-2026-85223" target="_blank" rel="noopener">CVE-2026-85223</a>
+        <span class="score">CVSS 9.9 CRITICAL</span>
+      </div>
+      <p class="desc">A vulnerability was found in D-Link DNS-340L 1.01B04. Affected by this issue is some unknown functionality of the file /cgi-bin/dropbox.cgi of the component CGI Handler. Performing a manipulation of the argument callback_url/sync_interval results in os command injection. The attack can be initiated remotely. The exploit has been made public and could be used.</p>
+      <dl>
+        <div><dt>Published</dt><dd>2026-09-03</dd></div>
+        <div><dt>Last Modified</dt><dd>2026-09-03</dd></div>
+        <div><dt>Status</dt><dd>Received</dd></div>
+        <div><dt>Attack Vector</dt><dd>네트워크</dd></div>
+        <div><dt>Attack Complexity</dt><dd>낮음</dd></div>
+        <div><dt>Privileges</dt><dd>낮음</dd></div>
+        <div><dt>User Interaction</dt><dd>없음</dd></div>
+        <div><dt>CWE</dt><dd>CWE-77, CWE-78</dd></div>
+        <div><dt>Affected</dt><dd>NVD CPE 기준 확인 필요</dd></div>
+      </dl>
+      <div class="vector"><code>CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H</code></div>
+      <details>
+        <summary>References</summary>
+        <ul><li><a href="https://github.com/dxz0069/WAVLINK-WN530H4-Command-Injection-in-set_add_routing/blob/main/DLINK-CMD-008-vulndb.md" target="_blank" rel="noopener">https://github.com/dxz0069/WAVLINK-WN530H4-Command-Injection-in-set_add_routing/blob/main/DLINK-CMD-008-vulndb.md</a></li><li><a href="https://vuldb.com/cve/CVE-2026-85223" target="_blank" rel="noopener">https://vuldb.com/cve/CVE-2026-85223</a></li><li><a href="https://vuldb.com/submit/894213" target="_blank" rel="noopener">https://vuldb.com/submit/894213</a></li><li><a href="https://vuldb.com/vuln/398422" target="_blank" rel="noopener">https://vuldb.com/vuln/398422</a></li></ul>
+      </details>
+    </article>
+    <article class="cve-card" id="CVE-2026-85222">
+      <div class="cve-top">
+        <a class="cve-id" href="https://nvd.nist.gov/vuln/detail/CVE-2026-85222" target="_blank" rel="noopener">CVE-2026-85222</a>
+        <span class="score">CVSS 9.1 CRITICAL</span>
+      </div>
+      <p class="desc">A vulnerability has been found in D-Link DNS-340L 1.01B04. Affected by this vulnerability is an unknown functionality of the file /cgi-bin/addon_center.cgi of the component Add-On Center. Such manipulation of the argument f_name/f_url/f_flag/f_login_user leads to os command injection. It is possible to launch the attack remotely. The exploit has been disclosed to the public and may be used.</p>
+      <dl>
+        <div><dt>Published</dt><dd>2026-09-03</dd></div>
+        <div><dt>Last Modified</dt><dd>2026-09-03</dd></div>
+        <div><dt>Status</dt><dd>Received</dd></div>
+        <div><dt>Attack Vector</dt><dd>네트워크</dd></div>
+        <div><dt>Attack Complexity</dt><dd>낮음</dd></div>
+        <div><dt>Privileges</dt><dd>높음</dd></div>
+        <div><dt>User Interaction</dt><dd>없음</dd></div>
+        <div><dt>CWE</dt><dd>CWE-77, CWE-78</dd></div>
+        <div><dt>Affected</dt><dd>NVD CPE 기준 확인 필요</dd></div>
+      </dl>
+      <div class="vector"><code>CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:C/C:H/I:H/A:H</code></div>
+      <details>
+        <summary>References</summary>
+        <ul><li><a href="https://github.com/dxz0069/WAVLINK-WN530H4-Command-Injection-in-set_add_routing/blob/main/DLINK-CMD-007-vulndb.md" target="_blank" rel="noopener">https://github.com/dxz0069/WAVLINK-WN530H4-Command-Injection-in-set_add_routing/blob/main/DLINK-CMD-007-vulndb.md</a></li><li><a href="https://vuldb.com/cve/CVE-2026-85222" target="_blank" rel="noopener">https://vuldb.com/cve/CVE-2026-85222</a></li><li><a href="https://vuldb.com/submit/894212" target="_blank" rel="noopener">https://vuldb.com/submit/894212</a></li><li><a href="https://vuldb.com/vuln/398421" target="_blank" rel="noopener">https://vuldb.com/vuln/398421</a></li></ul>
+      </details>
+    </article>
+    <article class="cve-card" id="CVE-2026-85183">
+      <div class="cve-top">
+        <a class="cve-id" href="https://nvd.nist.gov/vuln/detail/CVE-2026-85183" target="_blank" rel="noopener">CVE-2026-85183</a>
+        <span class="score">CVSS 9.3 CRITICAL</span>
+      </div>
+      <p class="desc">Taipy configures its socket.io server with wildcard CORS origin and credential flag enabled, allowing any web page to establish credentialed WebSocket connections to victim applications. Attackers can open socket.io sessions from arbitrary domains and invoke state variable modifications and action callbacks without CSRF protection.</p>
+      <dl>
+        <div><dt>Published</dt><dd>2026-09-03</dd></div>
+        <div><dt>Last Modified</dt><dd>2026-09-03</dd></div>
+        <div><dt>Status</dt><dd>Received</dd></div>
+        <div><dt>Attack Vector</dt><dd>네트워크</dd></div>
+        <div><dt>Attack Complexity</dt><dd>낮음</dd></div>
+        <div><dt>Privileges</dt><dd>없음</dd></div>
+        <div><dt>User Interaction</dt><dd>필요</dd></div>
+        <div><dt>CWE</dt><dd>CWE-1385</dd></div>
+        <div><dt>Affected</dt><dd>NVD CPE 기준 확인 필요</dd></div>
+      </dl>
+      <div class="vector"><code>CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:H/I:H/A:N</code></div>
+      <details>
+        <summary>References</summary>
+        <ul><li><a href="https://github.com/Avaiga/taipy" target="_blank" rel="noopener">https://github.com/Avaiga/taipy</a></li><li><a href="https://github.com/Avaiga/taipy/blob/4.1.1/taipy/gui/server.py" target="_blank" rel="noopener">https://github.com/Avaiga/taipy/blob/4.1.1/taipy/gui/server.py</a></li><li><a href="https://github.com/Avaiga/taipy/issues/2890" target="_blank" rel="noopener">https://github.com/Avaiga/taipy/issues/2890</a></li><li><a href="https://www.vulncheck.com/advisories/taipy-through-4.1.1-cross-site-websocket-hijacking-via-wildcard-socket-io-cors" target="_blank" rel="noopener">https://www.vulncheck.com/advisories/taipy-through-4.1.1-cross-site-websocket-hijacking-via-wildcard-socket-io-cors</a></li></ul>
+      </details>
+    </article>
+    <article class="cve-card" id="CVE-2026-85154">
+      <div class="cve-top">
+        <a class="cve-id" href="https://nvd.nist.gov/vuln/detail/CVE-2026-85154" target="_blank" rel="noopener">CVE-2026-85154</a>
+        <span class="score">CVSS 9.8 CRITICAL</span>
+      </div>
+      <p class="desc">WWBN AVideo contains an authentication failure vulnerability where the video_id_hash credential is a non-expiring, non-revocable bearer token that grants full administrator session access to the video owner&#x27;s account. Attackers who obtain a video_id_hash can replay it indefinitely to authenticate as the video owner with full privileges, and the credential remains valid even after the owner changes their password.</p>
+      <dl>
+        <div><dt>Published</dt><dd>2026-09-03</dd></div>
+        <div><dt>Last Modified</dt><dd>2026-09-03</dd></div>
+        <div><dt>Status</dt><dd>Received</dd></div>
+        <div><dt>Attack Vector</dt><dd>네트워크</dd></div>
+        <div><dt>Attack Complexity</dt><dd>낮음</dd></div>
+        <div><dt>Privileges</dt><dd>없음</dd></div>
+        <div><dt>User Interaction</dt><dd>없음</dd></div>
+        <div><dt>CWE</dt><dd>CWE-269</dd></div>
+        <div><dt>Affected</dt><dd>NVD CPE 기준 확인 필요</dd></div>
+      </dl>
+      <div class="vector"><code>CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H</code></div>
+      <details>
+        <summary>References</summary>
+        <ul><li><a href="https://github.com/WWBN/AVideo/security/advisories/GHSA-59p8-6m2v-gcr5" target="_blank" rel="noopener">https://github.com/WWBN/AVideo/security/advisories/GHSA-59p8-6m2v-gcr5</a></li><li><a href="https://www.vulncheck.com/advisories/wwbn-avideo-authentication-bypass-via-non-expiring-video-id-hash" target="_blank" rel="noopener">https://www.vulncheck.com/advisories/wwbn-avideo-authentication-bypass-via-non-expiring-video-id-hash</a></li></ul>
+      </details>
+    </article>
+    <article class="cve-card" id="CVE-2026-85031">
+      <div class="cve-top">
+        <a class="cve-id" href="https://nvd.nist.gov/vuln/detail/CVE-2026-85031" target="_blank" rel="noopener">CVE-2026-85031</a>
+        <span class="score">CVSS 9.9 CRITICAL</span>
+      </div>
+      <p class="desc">A vulnerability was found in TOTOLINK CP450 4.1.0. The impacted element is an unknown function of the file /cgi-bin/cstecgi.cgi. Performing a manipulation of the argument topicurl results in buffer overflow. Remote exploitation of the attack is possible.</p>
+      <dl>
+        <div><dt>Published</dt><dd>2026-09-03</dd></div>
+        <div><dt>Last Modified</dt><dd>2026-09-03</dd></div>
+        <div><dt>Status</dt><dd>Deferred</dd></div>
+        <div><dt>Attack Vector</dt><dd>네트워크</dd></div>
+        <div><dt>Attack Complexity</dt><dd>낮음</dd></div>
+        <div><dt>Privileges</dt><dd>낮음</dd></div>
+        <div><dt>User Interaction</dt><dd>없음</dd></div>
+        <div><dt>CWE</dt><dd>CWE-119, CWE-120</dd></div>
+        <div><dt>Affected</dt><dd>NVD CPE 기준 확인 필요</dd></div>
+      </dl>
+      <div class="vector"><code>CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H</code></div>
+      <details>
+        <summary>References</summary>
+        <ul><li><a href="https://vuldb.com/cve/CVE-2026-85031" target="_blank" rel="noopener">https://vuldb.com/cve/CVE-2026-85031</a></li><li><a href="https://vuldb.com/submit/853096" target="_blank" rel="noopener">https://vuldb.com/submit/853096</a></li><li><a href="https://vuldb.com/vuln/398296" target="_blank" rel="noopener">https://vuldb.com/vuln/398296</a></li><li><a href="https://vuldb.com/vuln/398296/cti" target="_blank" rel="noopener">https://vuldb.com/vuln/398296/cti</a></li></ul>
+      </details>
+    </article>
     <article class="cve-card" id="CVE-2026-9055">
       <div class="cve-top">
         <a class="cve-id" href="https://nvd.nist.gov/vuln/detail/CVE-2026-9055" target="_blank" rel="noopener">CVE-2026-9055</a>
@@ -207,6 +368,121 @@
       <details>
         <summary>References</summary>
         <ul><li><a href="https://github.com/kyverno/kyverno/security/advisories/GHSA-gg4x-fgg2-h9w9" target="_blank" rel="noopener">https://github.com/kyverno/kyverno/security/advisories/GHSA-gg4x-fgg2-h9w9</a></li><li><a href="https://www.vulncheck.com/advisories/kyverno-before-1.13.0-policy-bypass-via-multiple-exceptions" target="_blank" rel="noopener">https://www.vulncheck.com/advisories/kyverno-before-1.13.0-policy-bypass-via-multiple-exceptions</a></li></ul>
+      </details>
+    </article>
+    <article class="cve-card" id="CVE-2026-84143">
+      <div class="cve-top">
+        <a class="cve-id" href="https://nvd.nist.gov/vuln/detail/CVE-2026-84143" target="_blank" rel="noopener">CVE-2026-84143</a>
+        <span class="score">CVSS 9.8 CRITICAL</span>
+      </div>
+      <p class="desc">Internally found bugs present in Thunderbird 154, Thunderbird ESR 153.1 and Thunderbird ESR 140.14. Some of these bugs showed evidence of memory corruption or another security-relevant defect and we presume that with enough effort some of these could have been exploited. This vulnerability was fixed in Firefox 155, Firefox ESR 140.15, Firefox ESR 153.2, Thunderbird 155, Thunderbird 140.15, and Thunderbird 153.2.</p>
+      <dl>
+        <div><dt>Published</dt><dd>2026-09-01</dd></div>
+        <div><dt>Last Modified</dt><dd>2026-09-03</dd></div>
+        <div><dt>Status</dt><dd>Modified</dd></div>
+        <div><dt>Attack Vector</dt><dd>네트워크</dd></div>
+        <div><dt>Attack Complexity</dt><dd>낮음</dd></div>
+        <div><dt>Privileges</dt><dd>없음</dd></div>
+        <div><dt>User Interaction</dt><dd>없음</dd></div>
+        <div><dt>CWE</dt><dd>CWE-119, CWE-200</dd></div>
+        <div><dt>Affected</dt><dd>mozilla firefox, mozilla thunderbird</dd></div>
+      </dl>
+      <div class="vector"><code>CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H</code></div>
+      <details>
+        <summary>References</summary>
+        <ul><li><a href="https://bugzilla.mozilla.org/buglist.cgi?bug_id=2048793%2C2054645%2C2057114%2C2059109%2C2061287" target="_blank" rel="noopener">https://bugzilla.mozilla.org/buglist.cgi?bug_id=2048793%2C2054645%2C2057114%2C2059109%2C2061287</a></li><li><a href="https://bugzilla.mozilla.org/buglist.cgi?bug_id=2054631%2C2054657%2C2055007%2C2055681%2C2057107%2C2058087%2C2058088%2C2058090%2C2058095%2C2058101%2C2059183%2C2059185%2C2061301%2C2061325" target="_blank" rel="noopener">https://bugzilla.mozilla.org/buglist.cgi?bug_id=2054631%2C2054657%2C2055007%2C2055681%2C2057107%2C2058087%2C2058088%2C2058090%2C2058095%2C2058101%2C2059183%2C2059185%2C2061301%2C2061325</a></li><li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=2057108" target="_blank" rel="noopener">https://bugzilla.mozilla.org/show_bug.cgi?id=2057108</a></li><li><a href="https://www.mozilla.org/security/advisories/mfsa2026-82/" target="_blank" rel="noopener">https://www.mozilla.org/security/advisories/mfsa2026-82/</a></li></ul>
+      </details>
+    </article>
+    <article class="cve-card" id="CVE-2026-84142">
+      <div class="cve-top">
+        <a class="cve-id" href="https://nvd.nist.gov/vuln/detail/CVE-2026-84142" target="_blank" rel="noopener">CVE-2026-84142</a>
+        <span class="score">CVSS 9.8 CRITICAL</span>
+      </div>
+      <p class="desc">Internally found bugs present in Thunderbird 154. Some of these bugs showed evidence of memory corruption or another security-relevant defect and we presume that with enough effort some of these could have been exploited. This vulnerability was fixed in Firefox 155 and Thunderbird 155.</p>
+      <dl>
+        <div><dt>Published</dt><dd>2026-09-01</dd></div>
+        <div><dt>Last Modified</dt><dd>2026-09-03</dd></div>
+        <div><dt>Status</dt><dd>Modified</dd></div>
+        <div><dt>Attack Vector</dt><dd>네트워크</dd></div>
+        <div><dt>Attack Complexity</dt><dd>낮음</dd></div>
+        <div><dt>Privileges</dt><dd>없음</dd></div>
+        <div><dt>User Interaction</dt><dd>없음</dd></div>
+        <div><dt>CWE</dt><dd>CWE-119, CWE-200</dd></div>
+        <div><dt>Affected</dt><dd>mozilla firefox, mozilla thunderbird</dd></div>
+      </dl>
+      <div class="vector"><code>CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H</code></div>
+      <details>
+        <summary>References</summary>
+        <ul><li><a href="https://bugzilla.mozilla.org/buglist.cgi?bug_id=2029421%2C2040889%2C2045313%2C2045435%2C2053578%2C2058621%2C2058626" target="_blank" rel="noopener">https://bugzilla.mozilla.org/buglist.cgi?bug_id=2029421%2C2040889%2C2045313%2C2045435%2C2053578%2C2058621%2C2058626</a></li><li><a href="https://bugzilla.mozilla.org/buglist.cgi?bug_id=2048796%2C2053150%2C2057356" target="_blank" rel="noopener">https://bugzilla.mozilla.org/buglist.cgi?bug_id=2048796%2C2053150%2C2057356</a></li><li><a href="https://www.mozilla.org/security/advisories/mfsa2026-82/" target="_blank" rel="noopener">https://www.mozilla.org/security/advisories/mfsa2026-82/</a></li><li><a href="https://www.mozilla.org/security/advisories/mfsa2026-86/" target="_blank" rel="noopener">https://www.mozilla.org/security/advisories/mfsa2026-86/</a></li></ul>
+      </details>
+    </article>
+    <article class="cve-card" id="CVE-2026-84141">
+      <div class="cve-top">
+        <a class="cve-id" href="https://nvd.nist.gov/vuln/detail/CVE-2026-84141" target="_blank" rel="noopener">CVE-2026-84141</a>
+        <span class="score">CVSS 9.8 CRITICAL</span>
+      </div>
+      <p class="desc">Integer overflow in the Graphics: ImageLib component. This vulnerability was fixed in Firefox 155, Firefox ESR 153.2, Thunderbird 155, and Thunderbird 153.2.</p>
+      <dl>
+        <div><dt>Published</dt><dd>2026-09-01</dd></div>
+        <div><dt>Last Modified</dt><dd>2026-09-03</dd></div>
+        <div><dt>Status</dt><dd>Modified</dd></div>
+        <div><dt>Attack Vector</dt><dd>네트워크</dd></div>
+        <div><dt>Attack Complexity</dt><dd>낮음</dd></div>
+        <div><dt>Privileges</dt><dd>없음</dd></div>
+        <div><dt>User Interaction</dt><dd>없음</dd></div>
+        <div><dt>CWE</dt><dd>CWE-190</dd></div>
+        <div><dt>Affected</dt><dd>mozilla firefox, mozilla thunderbird</dd></div>
+      </dl>
+      <div class="vector"><code>CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H</code></div>
+      <details>
+        <summary>References</summary>
+        <ul><li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=2063994" target="_blank" rel="noopener">https://bugzilla.mozilla.org/show_bug.cgi?id=2063994</a></li><li><a href="https://www.mozilla.org/security/advisories/mfsa2026-82/" target="_blank" rel="noopener">https://www.mozilla.org/security/advisories/mfsa2026-82/</a></li><li><a href="https://www.mozilla.org/security/advisories/mfsa2026-85/" target="_blank" rel="noopener">https://www.mozilla.org/security/advisories/mfsa2026-85/</a></li><li><a href="https://www.mozilla.org/security/advisories/mfsa2026-86/" target="_blank" rel="noopener">https://www.mozilla.org/security/advisories/mfsa2026-86/</a></li></ul>
+      </details>
+    </article>
+    <article class="cve-card" id="CVE-2026-84140">
+      <div class="cve-top">
+        <a class="cve-id" href="https://nvd.nist.gov/vuln/detail/CVE-2026-84140" target="_blank" rel="noopener">CVE-2026-84140</a>
+        <span class="score">CVSS 9.8 CRITICAL</span>
+      </div>
+      <p class="desc">Site isolation issue in the DOM: Navigation component. This vulnerability was fixed in Firefox 155, Firefox ESR 153.2, Thunderbird 155, and Thunderbird 153.2.</p>
+      <dl>
+        <div><dt>Published</dt><dd>2026-09-01</dd></div>
+        <div><dt>Last Modified</dt><dd>2026-09-03</dd></div>
+        <div><dt>Status</dt><dd>Modified</dd></div>
+        <div><dt>Attack Vector</dt><dd>네트워크</dd></div>
+        <div><dt>Attack Complexity</dt><dd>낮음</dd></div>
+        <div><dt>Privileges</dt><dd>없음</dd></div>
+        <div><dt>User Interaction</dt><dd>없음</dd></div>
+        <div><dt>CWE</dt><dd>CWE-346</dd></div>
+        <div><dt>Affected</dt><dd>mozilla firefox, mozilla thunderbird</dd></div>
+      </dl>
+      <div class="vector"><code>CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H</code></div>
+      <details>
+        <summary>References</summary>
+        <ul><li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=2063780" target="_blank" rel="noopener">https://bugzilla.mozilla.org/show_bug.cgi?id=2063780</a></li><li><a href="https://www.mozilla.org/security/advisories/mfsa2026-82/" target="_blank" rel="noopener">https://www.mozilla.org/security/advisories/mfsa2026-82/</a></li><li><a href="https://www.mozilla.org/security/advisories/mfsa2026-85/" target="_blank" rel="noopener">https://www.mozilla.org/security/advisories/mfsa2026-85/</a></li><li><a href="https://www.mozilla.org/security/advisories/mfsa2026-86/" target="_blank" rel="noopener">https://www.mozilla.org/security/advisories/mfsa2026-86/</a></li></ul>
+      </details>
+    </article>
+    <article class="cve-card" id="CVE-2026-84135">
+      <div class="cve-top">
+        <a class="cve-id" href="https://nvd.nist.gov/vuln/detail/CVE-2026-84135" target="_blank" rel="noopener">CVE-2026-84135</a>
+        <span class="score">CVSS 9.8 CRITICAL</span>
+      </div>
+      <p class="desc">Other issue in Firefox Focus for Android. This vulnerability was fixed in Firefox 155.</p>
+      <dl>
+        <div><dt>Published</dt><dd>2026-09-01</dd></div>
+        <div><dt>Last Modified</dt><dd>2026-09-03</dd></div>
+        <div><dt>Status</dt><dd>Modified</dd></div>
+        <div><dt>Attack Vector</dt><dd>네트워크</dd></div>
+        <div><dt>Attack Complexity</dt><dd>낮음</dd></div>
+        <div><dt>Privileges</dt><dd>없음</dd></div>
+        <div><dt>User Interaction</dt><dd>없음</dd></div>
+        <div><dt>CWE</dt><dd>CWE-20, CWE-200</dd></div>
+        <div><dt>Affected</dt><dd>mozilla firefox_mobile</dd></div>
+      </dl>
+      <div class="vector"><code>CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H</code></div>
+      <details>
+        <summary>References</summary>
+        <ul><li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=2046661" target="_blank" rel="noopener">https://bugzilla.mozilla.org/show_bug.cgi?id=2046661</a></li><li><a href="https://www.mozilla.org/security/advisories/mfsa2026-82/" target="_blank" rel="noopener">https://www.mozilla.org/security/advisories/mfsa2026-82/</a></li></ul>
       </details>
     </article>
     <article class="cve-card" id="CVE-2026-83772">
