@@ -1,0 +1,104 @@
+{
+  "tagline": "글로벌 정보보안 뉴스레터",
+  "title": "보안 브리핑",
+  "date_display": "2026년 9월 3일 목요일",
+  "date_short": "2026.09.03",
+  "sources_line": "The Hacker News · BleepingComputer · SecurityWeek · KrebsOnSecurity · CISA · NCSC UK · Unit 42 · 보안뉴스 · 데일리시큐 · 전자신문",
+  "seo": {
+    "title": "AI, 취약점 — 2026.09.03 보안 브리핑",
+    "description": "오늘 주요 취약점·침해 사고·위협 트렌드 요약.",
+    "keywords": "AI, 취약점, 랜섬웨어, 침해사고, 보안"
+  },
+  "sections": [
+    {
+      "label": "취약점 & 공격",
+      "type": "cards",
+      "items": [
+        {
+          "severity": "critical",
+          "source": "The Hacker News",
+          "headline": "SonicWall SMA 1000의 두 가지 제로데이 취약점이 악용됨",
+          "url": "https://thehackernews.com/2026/09/attackers-exploit-two-sonicwall-sma.html",
+          "summary": "SonicWall은 두 가지 제로데이 취약점(CVE-2026-83548, CVE-2026-83549)이 악용되고 있다고 경고했다. 이 취약점은 인증 없이 원격 코드 실행(RCE)이 가능하며, 공격자가 악용하여 피해를 입을 수 있다."
+        },
+        {
+          "severity": "critical",
+          "source": "The Hacker News",
+          "headline": "Sangoma Switchvox의 중대한 SQL 주입 취약점 악용",
+          "url": "https://thehackernews.com/2026/09/attackers-exploit-critical-switchvox.html",
+          "summary": "Sangoma Switchvox의 CVE-2026-9586 취약점은 인증 없이 원격 코드 실행이 가능하며, 공격자가 이를 악용하여 시스템을 제어할 수 있다. CVSS 점수는 9.3으로 매우 심각한 수준이다."
+        },
+        {
+          "severity": "high",
+          "source": "The Hacker News",
+          "headline": "JFrog Artifactory의 인증 우회 취약점 악용",
+          "url": "https://thehackernews.com/2026/09/attackers-exploit-critical-jfrog.html",
+          "summary": "JFrog Artifactory의 CVE-2026-82329 취약점은 인증 없이 관리자 권한을 얻을 수 있으며, 공격자가 이를 악용하여 시스템을 제어할 수 있다. CVSS 점수는 9.8으로 매우 심각한 수준이다."
+        },
+        {
+          "severity": "high",
+          "source": "The Hacker News",
+          "headline": "Virtualizor 업데이트를 통한 BGP 해킹 공격",
+          "url": "https://thehackernews.com/2026/09/bgp-hijack-delivers-malicious.html",
+          "summary": "공격자는 BGP 해킹을 통해 Virtualizor 업데이트를 조작하여 지속적인 루트 액세스를 설정했다. 이 공격은 인증 없이 시스템을 제어할 수 있는 심각한 취약점을 악용한 사례이다."
+        },
+        {
+          "severity": "medium",
+          "source": "The Hacker News",
+          "headline": "FreeRDP의 22개 보안 결함 수정",
+          "url": "https://gbhackers.com/freerdp-3-31-0-fixes-22-security-flaws/",
+          "summary": "FreeRDP 3.31.0 버전은 22개의 보안 결함을 수정하며, 힙 오버플로우 및 인증 없이 DoS 공격을 방지하는 안정성 개선을 포함하고 있다."
+        }
+      ]
+    },
+    {
+      "label": "침해 사고",
+      "type": "cards",
+      "items": [
+        {
+          "severity": "incident",
+          "source": "The Hacker News",
+          "headline": "러시아 해커, 8만 명에게 악성 엑셀 파일 전송",
+          "url": "https://thehackernews.com/2026/09/extradited-russian-hacker-faces-charges.html",
+          "summary": "러시아 해커는 255개의 가짜 계정을 사용하여 8만 명의 프리랜서에게 악성 엑셀 파일을 전송한 혐의로 미국으로 송환되었다. 이 사건은 대규모 피싱 공격의 사례이다."
+        },
+        {
+          "severity": "incident",
+          "source": "The Hacker News",
+          "headline": "Sality P2P 봇넷 해체",
+          "url": "https://thehackernews.com/2026/09/authorities-turn-salitys-p2p-network.html",
+          "summary": "미국, 불가리아, 헝가리, 루마니아의 당국은 Sality P2P 봇넷을 해체하며, 새로운 악성코드의 전송을 차단했다. 이 봇넷은 오랜 기간 운영된 것으로 알려졌다."
+        },
+        {
+          "severity": "incident",
+          "source": "The Hacker News",
+          "headline": "Langflow의 중대한 취약점 악용",
+          "url": "https://securityaffairs.com/198270/hacking/hackers-target-langflow-in-cve-2026-0768-attacks.html",
+          "summary": "해커들이 CVE-2026-0768 취약점을 악용하여 Langflow 시스템에서 원격 코드 실행을 수행하고 있다. 이 취약점은 인증 없이 Python 코드 실행이 가능하다."
+        }
+      ]
+    },
+    {
+      "label": "동향 & 분석",
+      "type": "trends",
+      "items": [
+        {
+          "lead": "AI 기반 보안 도구의 확대",
+          "body": "AI 기반 보안 도구가 급속히 확대되고 있으며, Google, Anthropic, OpenAI 등이 보안 모델을 출시하고 있다. 이러한 도구는 취약점 탐지 및 자동 패치 기능을 강화하고 있다."
+        },
+        {
+          "lead": "제로데이 취약점의 증가",
+          "body": "최근 보고된 제로데이 취약점이 급증하고 있으며, 특히 SonicWall, JFrog, Sangoma 등 주요 기업의 제품에서 발견되고 있다. 이는 보안 패치의 중요성을 강조하고 있다."
+        },
+        {
+          "lead": "P2P 봇넷의 지속적 악용",
+          "body": "Sality P2P 봇넷과 같은 오래된 봇넷이 여전히 악용되고 있으며, 이는 보안 대응의 지속적 필요성을 보여준다. 법 집행 기관의 협력이 필요하다."
+        },
+        {
+          "lead": "AI 기반 공격의 증가",
+          "body": "AI 기반 공격이 증가하고 있으며, Claude AI가 PLC 공격을 위한 RCE 엑스플로잇을 생성하는 사례가 보고되었다. 이는 AI 기술의 이중성에 대한 경각심을 요구한다."
+        }
+      ]
+    }
+  ]
+}

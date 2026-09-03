@@ -5,48 +5,55 @@
     <link>https://macbong83.github.io/</link>
     <description>EDR · SASE · CTEM · 취약점 관리 중심의 매일 보안 브리핑</description>
     <language>ko</language>
-    <lastBuildDate>Thu, 03 Sep 2026 08:00:35 +0900</lastBuildDate>
+    <lastBuildDate>Thu, 03 Sep 2026 09:02:29 +0900</lastBuildDate>
     <item>
       <title>SecuLog 보안 브리핑 — vendor-weekly-2026-08-31</title>
       <link>https://macbong83.github.io/posts/vendor-weekly-2026-08-31.html</link>
       <guid isPermaLink="true">https://macbong83.github.io/posts/vendor-weekly-2026-08-31.html</guid>
-      <pubDate>Thu, 03 Sep 2026 08:00:35 +0900</pubDate>
+      <pubDate>Thu, 03 Sep 2026 09:02:29 +0900</pubDate>
       <description></description>
     </item>
     <item>
       <title>SecuLog 보안 브리핑 — vendor-weekly-2026-08-24</title>
       <link>https://macbong83.github.io/posts/vendor-weekly-2026-08-24.html</link>
       <guid isPermaLink="true">https://macbong83.github.io/posts/vendor-weekly-2026-08-24.html</guid>
-      <pubDate>Thu, 03 Sep 2026 08:00:35 +0900</pubDate>
+      <pubDate>Thu, 03 Sep 2026 09:02:29 +0900</pubDate>
       <description></description>
     </item>
     <item>
       <title>SecuLog 보안 브리핑 — vendor-weekly-2026-07-20</title>
       <link>https://macbong83.github.io/posts/vendor-weekly-2026-07-20.html</link>
       <guid isPermaLink="true">https://macbong83.github.io/posts/vendor-weekly-2026-07-20.html</guid>
-      <pubDate>Thu, 03 Sep 2026 08:00:35 +0900</pubDate>
+      <pubDate>Thu, 03 Sep 2026 09:02:29 +0900</pubDate>
       <description></description>
     </item>
     <item>
       <title>SecuLog 보안 브리핑 — vendor-weekly-2026-07-06</title>
       <link>https://macbong83.github.io/posts/vendor-weekly-2026-07-06.html</link>
       <guid isPermaLink="true">https://macbong83.github.io/posts/vendor-weekly-2026-07-06.html</guid>
-      <pubDate>Thu, 03 Sep 2026 08:00:35 +0900</pubDate>
+      <pubDate>Thu, 03 Sep 2026 09:02:29 +0900</pubDate>
       <description></description>
     </item>
     <item>
       <title>SecuLog 보안 브리핑 — vendor-weekly-2026-06-30</title>
       <link>https://macbong83.github.io/posts/vendor-weekly-2026-06-30.html</link>
       <guid isPermaLink="true">https://macbong83.github.io/posts/vendor-weekly-2026-06-30.html</guid>
-      <pubDate>Thu, 03 Sep 2026 08:00:35 +0900</pubDate>
+      <pubDate>Thu, 03 Sep 2026 09:02:29 +0900</pubDate>
       <description></description>
     </item>
     <item>
       <title>SecuLog 보안 브리핑 — startup-radar-2026-07-13</title>
       <link>https://macbong83.github.io/posts/startup-radar-2026-07-13.html</link>
       <guid isPermaLink="true">https://macbong83.github.io/posts/startup-radar-2026-07-13.html</guid>
-      <pubDate>Thu, 03 Sep 2026 08:00:35 +0900</pubDate>
+      <pubDate>Thu, 03 Sep 2026 09:02:29 +0900</pubDate>
       <description></description>
+    </item>
+    <item>
+      <title>SecuLog 보안 브리핑 — 2026.09.03</title>
+      <link>https://macbong83.github.io/posts/2026-09-03.html</link>
+      <guid isPermaLink="true">https://macbong83.github.io/posts/2026-09-03.html</guid>
+      <pubDate>Thu, 03 Sep 2026 08:00:00 +0900</pubDate>
+      <description>SonicWall SMA 1000의 두 가지 제로데이 취약점이 악용됨 / Sangoma Switchvox의 중대한 SQL 주입 취약점 악용 / JFrog Artifactory의 인증 우회 취약점 악용 / Virtualizor 업데이트를 통한 BGP 해킹 공격</description>
     </item>
     <item>
       <title>SecuLog 보안 브리핑 — 2026.09.02</title>
