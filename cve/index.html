@@ -41,13 +41,174 @@
     <h1>CVE Archive</h1>
     <p>NVD 기반 Critical CVE를 누적 관리하는 별도 페이지입니다. 블로그에는 CVE 자동 글을 발행하지 않고, 이 페이지에만 기록합니다.</p>
     <div class="meta">
-      <span>Total 788</span>
-      <span>Updated 2026-09-04 20:00 KST</span>
+      <span>Total 796</span>
+      <span>Updated 2026-09-05 08:00 KST</span>
       <span>Source NVD API</span>
     </div>
   </section>
   <div class="notice">중복 제거 기준은 CVE ID입니다. 동일 CVE는 다시 추가하지 않습니다. 실제 악용 여부와 패치 우선순위는 CISA KEV, 벤더 권고, 자산 노출 여부와 함께 검토해야 합니다.</div>
 
+    <article class="cve-card" id="CVE-2026-85696">
+      <div class="cve-top">
+        <a class="cve-id" href="https://nvd.nist.gov/vuln/detail/CVE-2026-85696" target="_blank" rel="noopener">CVE-2026-85696</a>
+        <span class="score">CVSS 9.8 CRITICAL</span>
+      </div>
+      <p class="desc">SadTalker contains an OS command injection vulnerability in the video muxing process where uploaded audio filenames are interpolated into ffmpeg commands without proper escaping. Attackers can upload audio files with shell metacharacters in the filename to break out of quoted arguments and execute arbitrary system commands when video generation occurs.</p>
+      <dl>
+        <div><dt>Published</dt><dd>2026-09-04</dd></div>
+        <div><dt>Last Modified</dt><dd>2026-09-04</dd></div>
+        <div><dt>Status</dt><dd>Received</dd></div>
+        <div><dt>Attack Vector</dt><dd>네트워크</dd></div>
+        <div><dt>Attack Complexity</dt><dd>낮음</dd></div>
+        <div><dt>Privileges</dt><dd>없음</dd></div>
+        <div><dt>User Interaction</dt><dd>없음</dd></div>
+        <div><dt>CWE</dt><dd>CWE-78</dd></div>
+        <div><dt>Affected</dt><dd>NVD CPE 기준 확인 필요</dd></div>
+      </dl>
+      <div class="vector"><code>CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H</code></div>
+      <details>
+        <summary>References</summary>
+        <ul><li><a href="https://github.com/OpenTalker/SadTalker" target="_blank" rel="noopener">https://github.com/OpenTalker/SadTalker</a></li><li><a href="https://github.com/OpenTalker/SadTalker/blob/v0.0.2/src/utils/videoio.py" target="_blank" rel="noopener">https://github.com/OpenTalker/SadTalker/blob/v0.0.2/src/utils/videoio.py</a></li><li><a href="https://github.com/OpenTalker/SadTalker/issues/1043" target="_blank" rel="noopener">https://github.com/OpenTalker/SadTalker/issues/1043</a></li><li><a href="https://www.vulncheck.com/advisories/sadtalker-os-command-injection-via-audio-filename" target="_blank" rel="noopener">https://www.vulncheck.com/advisories/sadtalker-os-command-injection-via-audio-filename</a></li></ul>
+      </details>
+    </article>
+    <article class="cve-card" id="CVE-2026-85695">
+      <div class="cve-top">
+        <a class="cve-id" href="https://nvd.nist.gov/vuln/detail/CVE-2026-85695" target="_blank" rel="noopener">CVE-2026-85695</a>
+        <span class="score">CVSS 9.4 CRITICAL</span>
+      </div>
+      <p class="desc">FastChat contains an authentication bypass vulnerability in the /register_worker endpoint that allows unauthenticated attackers to register arbitrary worker addresses and perform server-side request forgery. Attackers can register malicious workers under victim model names to intercept user prompts, images, and responses, or probe internal network ports across the worker mesh.</p>
+      <dl>
+        <div><dt>Published</dt><dd>2026-09-04</dd></div>
+        <div><dt>Last Modified</dt><dd>2026-09-04</dd></div>
+        <div><dt>Status</dt><dd>Received</dd></div>
+        <div><dt>Attack Vector</dt><dd>네트워크</dd></div>
+        <div><dt>Attack Complexity</dt><dd>낮음</dd></div>
+        <div><dt>Privileges</dt><dd>없음</dd></div>
+        <div><dt>User Interaction</dt><dd>없음</dd></div>
+        <div><dt>CWE</dt><dd>CWE-306</dd></div>
+        <div><dt>Affected</dt><dd>NVD CPE 기준 확인 필요</dd></div>
+      </dl>
+      <div class="vector"><code>CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:L</code></div>
+      <details>
+        <summary>References</summary>
+        <ul><li><a href="https://github.com/lm-sys/FastChat" target="_blank" rel="noopener">https://github.com/lm-sys/FastChat</a></li><li><a href="https://github.com/lm-sys/FastChat/blob/v0.2.36/fastchat/serve/controller.py" target="_blank" rel="noopener">https://github.com/lm-sys/FastChat/blob/v0.2.36/fastchat/serve/controller.py</a></li><li><a href="https://github.com/lm-sys/FastChat/issues/3886" target="_blank" rel="noopener">https://github.com/lm-sys/FastChat/issues/3886</a></li><li><a href="https://www.vulncheck.com/advisories/fastchat-unauthenticated-worker-registration-ssrf-and-model-spoofing" target="_blank" rel="noopener">https://www.vulncheck.com/advisories/fastchat-unauthenticated-worker-registration-ssrf-and-model-spoofing</a></li></ul>
+      </details>
+    </article>
+    <article class="cve-card" id="CVE-2026-85688">
+      <div class="cve-top">
+        <a class="cve-id" href="https://nvd.nist.gov/vuln/detail/CVE-2026-85688" target="_blank" rel="noopener">CVE-2026-85688</a>
+        <span class="score">CVSS 9.8 CRITICAL</span>
+      </div>
+      <p class="desc">TEN Framework 0.11.71 contains unauthenticated arbitrary file read and write vulnerabilities in the TMAN Designer file-content API endpoints. Attackers can submit POST and PUT requests to the /api/designer/v1/file-content endpoints to read arbitrary files or write malicious content to system paths, enabling code execution through authorized_keys, cron files, or executable graph files.</p>
+      <dl>
+        <div><dt>Published</dt><dd>2026-09-04</dd></div>
+        <div><dt>Last Modified</dt><dd>2026-09-04</dd></div>
+        <div><dt>Status</dt><dd>Received</dd></div>
+        <div><dt>Attack Vector</dt><dd>네트워크</dd></div>
+        <div><dt>Attack Complexity</dt><dd>낮음</dd></div>
+        <div><dt>Privileges</dt><dd>없음</dd></div>
+        <div><dt>User Interaction</dt><dd>없음</dd></div>
+        <div><dt>CWE</dt><dd>CWE-306</dd></div>
+        <div><dt>Affected</dt><dd>NVD CPE 기준 확인 필요</dd></div>
+      </dl>
+      <div class="vector"><code>CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H</code></div>
+      <details>
+        <summary>References</summary>
+        <ul><li><a href="https://github.com/TEN-framework/ten-framework" target="_blank" rel="noopener">https://github.com/TEN-framework/ten-framework</a></li><li><a href="https://github.com/TEN-framework/ten-framework/blob/0.11.71/core/src/ten_manager/src/designer/file_content/mod.rs" target="_blank" rel="noopener">https://github.com/TEN-framework/ten-framework/blob/0.11.71/core/src/ten_manager/src/designer/file_content/mod.rs</a></li><li><a href="https://github.com/TEN-framework/ten-framework/issues/2187" target="_blank" rel="noopener">https://github.com/TEN-framework/ten-framework/issues/2187</a></li><li><a href="https://www.vulncheck.com/advisories/ten-framework-0.11.71-unauthenticated-file-read-write-via-tman-designer" target="_blank" rel="noopener">https://www.vulncheck.com/advisories/ten-framework-0.11.71-unauthenticated-file-read-write-via-tman-designer</a></li></ul>
+      </details>
+    </article>
+    <article class="cve-card" id="CVE-2026-85684">
+      <div class="cve-top">
+        <a class="cve-id" href="https://nvd.nist.gov/vuln/detail/CVE-2026-85684" target="_blank" rel="noopener">CVE-2026-85684</a>
+        <span class="score">CVSS 9.1 CRITICAL</span>
+      </div>
+      <p class="desc">marker through 2.0.0 contains a path traversal vulnerability in the FastAPI /marker/upload handler that fails to sanitize the file.filename parameter. Unauthenticated attackers can supply filenames containing directory traversal sequences to write arbitrary files to any location or delete existing files on the system.</p>
+      <dl>
+        <div><dt>Published</dt><dd>2026-09-04</dd></div>
+        <div><dt>Last Modified</dt><dd>2026-09-04</dd></div>
+        <div><dt>Status</dt><dd>Received</dd></div>
+        <div><dt>Attack Vector</dt><dd>네트워크</dd></div>
+        <div><dt>Attack Complexity</dt><dd>낮음</dd></div>
+        <div><dt>Privileges</dt><dd>없음</dd></div>
+        <div><dt>User Interaction</dt><dd>없음</dd></div>
+        <div><dt>CWE</dt><dd>CWE-73</dd></div>
+        <div><dt>Affected</dt><dd>NVD CPE 기준 확인 필요</dd></div>
+      </dl>
+      <div class="vector"><code>CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:H</code></div>
+      <details>
+        <summary>References</summary>
+        <ul><li><a href="https://github.com/datalab-to/marker" target="_blank" rel="noopener">https://github.com/datalab-to/marker</a></li><li><a href="https://github.com/datalab-to/marker/blob/v2.0.0/marker/scripts/server.py" target="_blank" rel="noopener">https://github.com/datalab-to/marker/blob/v2.0.0/marker/scripts/server.py</a></li><li><a href="https://github.com/datalab-to/marker/issues/1047" target="_blank" rel="noopener">https://github.com/datalab-to/marker/issues/1047</a></li><li><a href="https://www.vulncheck.com/advisories/marker-through-2.0.0-path-traversal-via-upload-filename" target="_blank" rel="noopener">https://www.vulncheck.com/advisories/marker-through-2.0.0-path-traversal-via-upload-filename</a></li></ul>
+      </details>
+    </article>
+    <article class="cve-card" id="CVE-2026-85672">
+      <div class="cve-top">
+        <a class="cve-id" href="https://nvd.nist.gov/vuln/detail/CVE-2026-85672" target="_blank" rel="noopener">CVE-2026-85672</a>
+        <span class="score">CVSS 9.8 CRITICAL</span>
+      </div>
+      <p class="desc">zerox 1.1.20 contains an OS command injection vulnerability in the file download mechanism where the temporary file extension derived from document URLs is interpolated unsanitized into shell commands executed by poppler utilities. Attackers can craft document URLs with malicious file extensions containing command substitution syntax to execute arbitrary OS commands before document processing occurs.</p>
+      <dl>
+        <div><dt>Published</dt><dd>2026-09-04</dd></div>
+        <div><dt>Last Modified</dt><dd>2026-09-04</dd></div>
+        <div><dt>Status</dt><dd>Received</dd></div>
+        <div><dt>Attack Vector</dt><dd>네트워크</dd></div>
+        <div><dt>Attack Complexity</dt><dd>낮음</dd></div>
+        <div><dt>Privileges</dt><dd>없음</dd></div>
+        <div><dt>User Interaction</dt><dd>없음</dd></div>
+        <div><dt>CWE</dt><dd>CWE-78</dd></div>
+        <div><dt>Affected</dt><dd>NVD CPE 기준 확인 필요</dd></div>
+      </dl>
+      <div class="vector"><code>CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H</code></div>
+      <details>
+        <summary>References</summary>
+        <ul><li><a href="https://github.com/getomni-ai/zerox" target="_blank" rel="noopener">https://github.com/getomni-ai/zerox</a></li><li><a href="https://github.com/getomni-ai/zerox/blob/main/node-zerox/src/utils/file.ts" target="_blank" rel="noopener">https://github.com/getomni-ai/zerox/blob/main/node-zerox/src/utils/file.ts</a></li><li><a href="https://github.com/getomni-ai/zerox/issues/206" target="_blank" rel="noopener">https://github.com/getomni-ai/zerox/issues/206</a></li><li><a href="https://www.vulncheck.com/advisories/zerox-1.1.20-os-command-injection-via-document-url-file-extension" target="_blank" rel="noopener">https://www.vulncheck.com/advisories/zerox-1.1.20-os-command-injection-via-document-url-file-extension</a></li></ul>
+      </details>
+    </article>
+    <article class="cve-card" id="CVE-2026-85667">
+      <div class="cve-top">
+        <a class="cve-id" href="https://nvd.nist.gov/vuln/detail/CVE-2026-85667" target="_blank" rel="noopener">CVE-2026-85667</a>
+        <span class="score">CVSS 9.1 CRITICAL</span>
+      </div>
+      <p class="desc">xiaobei through 5.5.2 fails to implement authentication or signature validation on webhook endpoints, allowing unauthenticated attackers to inject arbitrary messages into the agent pipeline. Attackers can publish malicious messages via the /webhook_worktool handler and exploit unvalidated media URL fetching to perform server-side request forgery against internal services.</p>
+      <dl>
+        <div><dt>Published</dt><dd>2026-09-04</dd></div>
+        <div><dt>Last Modified</dt><dd>2026-09-04</dd></div>
+        <div><dt>Status</dt><dd>Received</dd></div>
+        <div><dt>Attack Vector</dt><dd>네트워크</dd></div>
+        <div><dt>Attack Complexity</dt><dd>낮음</dd></div>
+        <div><dt>Privileges</dt><dd>없음</dd></div>
+        <div><dt>User Interaction</dt><dd>없음</dd></div>
+        <div><dt>CWE</dt><dd>CWE-306</dd></div>
+        <div><dt>Affected</dt><dd>NVD CPE 기준 확인 필요</dd></div>
+      </dl>
+      <div class="vector"><code>CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N</code></div>
+      <details>
+        <summary>References</summary>
+        <ul><li><a href="https://github.com/TeamWiseFlow/xiaobei" target="_blank" rel="noopener">https://github.com/TeamWiseFlow/xiaobei</a></li><li><a href="https://github.com/TeamWiseFlow/xiaobei/blob/v5.5.2/awada/awada-server/src/routes/webhook-worktool.ts" target="_blank" rel="noopener">https://github.com/TeamWiseFlow/xiaobei/blob/v5.5.2/awada/awada-server/src/routes/webhook-worktool.ts</a></li><li><a href="https://github.com/TeamWiseFlow/xiaobei/issues/440" target="_blank" rel="noopener">https://github.com/TeamWiseFlow/xiaobei/issues/440</a></li><li><a href="https://www.vulncheck.com/advisories/xiaobei-through-5.5.2-unauthenticated-webhook-message-injection" target="_blank" rel="noopener">https://www.vulncheck.com/advisories/xiaobei-through-5.5.2-unauthenticated-webhook-message-injection</a></li></ul>
+      </details>
+    </article>
+    <article class="cve-card" id="CVE-2026-85661">
+      <div class="cve-top">
+        <a class="cve-id" href="https://nvd.nist.gov/vuln/detail/CVE-2026-85661" target="_blank" rel="noopener">CVE-2026-85661</a>
+        <span class="score">CVSS 9.8 CRITICAL</span>
+      </div>
+      <p class="desc">excel-mcp-server 0.1.8 fails to enforce path confinement in stdio mode when EXCEL_FILES_PATH is unset, allowing attackers to read and write arbitrary files. Attackers can supply unchecked file paths to read and write tools to access any file accessible to the process.</p>
+      <dl>
+        <div><dt>Published</dt><dd>2026-09-04</dd></div>
+        <div><dt>Last Modified</dt><dd>2026-09-04</dd></div>
+        <div><dt>Status</dt><dd>Received</dd></div>
+        <div><dt>Attack Vector</dt><dd>네트워크</dd></div>
+        <div><dt>Attack Complexity</dt><dd>낮음</dd></div>
+        <div><dt>Privileges</dt><dd>없음</dd></div>
+        <div><dt>User Interaction</dt><dd>없음</dd></div>
+        <div><dt>CWE</dt><dd>CWE-22</dd></div>
+        <div><dt>Affected</dt><dd>NVD CPE 기준 확인 필요</dd></div>
+      </dl>
+      <div class="vector"><code>CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H</code></div>
+      <details>
+        <summary>References</summary>
+        <ul><li><a href="https://github.com/haris-musa/excel-mcp-server" target="_blank" rel="noopener">https://github.com/haris-musa/excel-mcp-server</a></li><li><a href="https://github.com/haris-musa/excel-mcp-server/blob/v0.1.8/src/excel_mcp/server.py" target="_blank" rel="noopener">https://github.com/haris-musa/excel-mcp-server/blob/v0.1.8/src/excel_mcp/server.py</a></li><li><a href="https://github.com/haris-musa/excel-mcp-server/blob/v0.1.8/src/excel_mcp/validation.py" target="_blank" rel="noopener">https://github.com/haris-musa/excel-mcp-server/blob/v0.1.8/src/excel_mcp/validation.py</a></li><li><a href="https://github.com/haris-musa/excel-mcp-server/issues/149" target="_blank" rel="noopener">https://github.com/haris-musa/excel-mcp-server/issues/149</a></li></ul>
+      </details>
+    </article>
     <article class="cve-card" id="CVE-2026-85148">
       <div class="cve-top">
         <a class="cve-id" href="https://nvd.nist.gov/vuln/detail/CVE-2026-85148" target="_blank" rel="noopener">CVE-2026-85148</a>
@@ -92,6 +253,29 @@
       <details>
         <summary>References</summary>
         <ul><li><a href="https://www.twcert.org.tw/en/cp-139-11177-13ca3-2.html" target="_blank" rel="noopener">https://www.twcert.org.tw/en/cp-139-11177-13ca3-2.html</a></li><li><a href="https://www.twcert.org.tw/tw/cp-132-11176-a4cc2-1.html" target="_blank" rel="noopener">https://www.twcert.org.tw/tw/cp-132-11176-a4cc2-1.html</a></li></ul>
+      </details>
+    </article>
+    <article class="cve-card" id="CVE-2026-18658">
+      <div class="cve-top">
+        <a class="cve-id" href="https://nvd.nist.gov/vuln/detail/CVE-2026-18658" target="_blank" rel="noopener">CVE-2026-18658</a>
+        <span class="score">CVSS 9.8 CRITICAL</span>
+      </div>
+      <p class="desc">IBM Operational Decision Manager 9.6.0.0, 9.5.0.0, 8.11.1.0, 8.11.0.1, 8.12.0.1, 9.5.0.1, and 9.0.0.1 is vulnerable to SQL injection. An unauthenticated attacker can execute arbitrary SQL statements and leverage database functionality to write a web shell to the application web root, resulting in remote code execution.</p>
+      <dl>
+        <div><dt>Published</dt><dd>2026-09-04</dd></div>
+        <div><dt>Last Modified</dt><dd>2026-09-04</dd></div>
+        <div><dt>Status</dt><dd>Received</dd></div>
+        <div><dt>Attack Vector</dt><dd>네트워크</dd></div>
+        <div><dt>Attack Complexity</dt><dd>낮음</dd></div>
+        <div><dt>Privileges</dt><dd>없음</dd></div>
+        <div><dt>User Interaction</dt><dd>없음</dd></div>
+        <div><dt>CWE</dt><dd>CWE-89</dd></div>
+        <div><dt>Affected</dt><dd>NVD CPE 기준 확인 필요</dd></div>
+      </dl>
+      <div class="vector"><code>CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H</code></div>
+      <details>
+        <summary>References</summary>
+        <ul><li><a href="https://www.ibm.com/support/pages/node/7286196" target="_blank" rel="noopener">https://www.ibm.com/support/pages/node/7286196</a></li></ul>
       </details>
     </article>
     <article class="cve-card" id="CVE-2026-15354">
