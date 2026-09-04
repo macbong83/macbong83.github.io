@@ -1,5 +1,443 @@
 [
   {
+    "id": "CVE-2026-85148",
+    "published": "2026-09-04",
+    "last_modified": "2026-09-04",
+    "status": "Received",
+    "description": "SmartIT Desktop Manager developed by Lightstar has a Use of Hard-coded Credentials vulnerability. Unauthenticated remote attackers can exploit a fixed password to remotely access user hosts.",
+    "cvss": {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "score": 9.8,
+      "severity": "CRITICAL",
+      "attack_vector": "네트워크",
+      "attack_complexity": "낮음",
+      "privileges_required": "없음",
+      "user_interaction": "없음"
+    },
+    "cwes": [
+      "CWE-798"
+    ],
+    "affected": [],
+    "references": [
+      "https://www.twcert.org.tw/en/cp-139-11177-13ca3-2.html",
+      "https://www.twcert.org.tw/tw/cp-132-11176-a4cc2-1.html"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-85148",
+    "added_at": "2026-09-04T20:00:24+09:00"
+  },
+  {
+    "id": "CVE-2026-85146",
+    "published": "2026-09-04",
+    "last_modified": "2026-09-04",
+    "status": "Received",
+    "description": "SmartIT Desktop Manager developed by Lightstar has a Use of Hard-coded Credentials vulnerability. Unauthenticated remote attackers can obtain the SSH service account credentials and passwords for the SmartIT Agent directly from the application source code.",
+    "cvss": {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "score": 9.8,
+      "severity": "CRITICAL",
+      "attack_vector": "네트워크",
+      "attack_complexity": "낮음",
+      "privileges_required": "없음",
+      "user_interaction": "없음"
+    },
+    "cwes": [
+      "CWE-798"
+    ],
+    "affected": [],
+    "references": [
+      "https://www.twcert.org.tw/en/cp-139-11177-13ca3-2.html",
+      "https://www.twcert.org.tw/tw/cp-132-11176-a4cc2-1.html"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-85146",
+    "added_at": "2026-09-04T20:00:24+09:00"
+  },
+  {
+    "id": "CVE-2026-15354",
+    "published": "2026-09-04",
+    "last_modified": "2026-09-04",
+    "status": "Received",
+    "description": "The ACPT (Premium) plugin for WordPress is vulnerable to Privilege Escalation in all versions up to, and including, 2.0.66. This is due to missing authorization in the `submit()` function, which allows unauthenticated form submissions to control the target user ID before calling `wp_update_user()`. This makes it possible for unauthenticated attackers to overwrite any WordPress user's email address and password, including an administrator's, and take over the account. Successful exploitation requires a public ACPT user form that permits anonymous submissions.",
+    "cvss": {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "score": 9.8,
+      "severity": "CRITICAL",
+      "attack_vector": "네트워크",
+      "attack_complexity": "낮음",
+      "privileges_required": "없음",
+      "user_interaction": "없음"
+    },
+    "cwes": [
+      "CWE-269"
+    ],
+    "affected": [],
+    "references": [
+      "https://acpt.io/changelog/",
+      "https://www.wordfence.com/threat-intel/vulnerabilities/id/abc138f5-0bb7-4ce3-a504-89580021bedb?source=cve"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-15354",
+    "added_at": "2026-09-04T20:00:24+09:00"
+  },
+  {
+    "id": "CVE-2026-11613",
+    "published": "2026-09-04",
+    "last_modified": "2026-09-04",
+    "status": "Received",
+    "description": "The Divi Ajax Filter plugin for WordPress is vulnerable to Local File Inclusion in all versions up to, and including, 5.1.2 via the 'custom_loop_template' parameter parameter. This makes it possible for unauthenticated attackers to include and execute arbitrary .php files on the server, allowing the execution of any PHP code in those files. This can be used to bypass access controls, obtain sensitive data, or achieve code execution in cases where .php file types can be uploaded and included. This vulnerability is only exploitable when the loop_templates parameter is set to 'custom-template'.",
+    "cvss": {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "score": 9.8,
+      "severity": "CRITICAL",
+      "attack_vector": "네트워크",
+      "attack_complexity": "낮음",
+      "privileges_required": "없음",
+      "user_interaction": "없음"
+    },
+    "cwes": [
+      "CWE-98"
+    ],
+    "affected": [],
+    "references": [
+      "https://diviengine.com/divi-ajax-filter-changelog/",
+      "https://www.wordfence.com/threat-intel/vulnerabilities/id/8fbb92ac-a8e7-480d-8910-416fbe902a2a?source=cve"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-11613",
+    "added_at": "2026-09-04T20:00:24+09:00"
+  },
+  {
+    "id": "CVE-2026-85440",
+    "published": "2026-09-03",
+    "last_modified": "2026-09-03",
+    "status": "Received",
+    "description": "MOOS core-moos through 10.4.0 contains a pre-authentication heap overflow vulnerability in MOOSCommPkt packet handling that allows remote attackers to write arbitrary data by declaring a negative packet length. Attackers can exploit the signed integer check in InflateTo() and negative size conversion in recv() to overflow a four-byte heap buffer during the HandShake phase before authentication.",
+    "cvss": {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "score": 9.8,
+      "severity": "CRITICAL",
+      "attack_vector": "네트워크",
+      "attack_complexity": "낮음",
+      "privileges_required": "없음",
+      "user_interaction": "없음"
+    },
+    "cwes": [
+      "CWE-787"
+    ],
+    "affected": [],
+    "references": [
+      "https://github.com/themoos/core-moos",
+      "https://github.com/themoos/core-moos/blob/ec9c77c68fcbdef8f5e4c60fe243acd223433f0c/Core/libMOOS/Comms/MOOSCommPkt.cpp#L67",
+      "https://github.com/themoos/core-moos/commit/96c49c5cdda6e07ee734a5324e8d25ba5a7f2d7a",
+      "https://github.com/themoos/core-moos/pull/82",
+      "https://www.vulncheck.com/advisories/moos-core-moos-through-10.4.0-moosdb-pre-authentication-heap-overflow-via-negative-packet-length"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-85440",
+    "added_at": "2026-09-04T20:00:24+09:00"
+  },
+  {
+    "id": "CVE-2026-85438",
+    "published": "2026-09-03",
+    "last_modified": "2026-09-03",
+    "status": "Received",
+    "description": "MOOS-IvP through 24.8.1 contains a buffer overflow vulnerability in StringToIvPFunction() where dimension, piece, and degree counts from encoded BHV_IPF payloads are used as allocation sizes and loop bounds without validation. Attackers can supply crafted payloads with mismatched dimension values to write attacker-controlled doubles past the end of the IvPBox weight array, causing memory corruption and potential code execution.",
+    "cvss": {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "score": 9.8,
+      "severity": "CRITICAL",
+      "attack_vector": "네트워크",
+      "attack_complexity": "낮음",
+      "privileges_required": "없음",
+      "user_interaction": "없음"
+    },
+    "cwes": [
+      "CWE-190"
+    ],
+    "affected": [],
+    "references": [
+      "https://github.com/moos-ivp/moos-ivp",
+      "https://github.com/moos-ivp/moos-ivp/blob/1de9ae146cd63c209e8c3fd81611a4ed2472971b/ivp/src/lib_ivpbuild/FunctionEncoder.cpp#L407",
+      "https://github.com/moos-ivp/moos-ivp/commit/85f4653ff792b30c3ab14dc0eac0991d1405d904",
+      "https://github.com/moos-ivp/moos-ivp/pull/126",
+      "https://www.vulncheck.com/advisories/moos-ivp-through-24.8.1-out-of-bounds-write-via-unvalidated-ivp-payload-counts"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-85438",
+    "added_at": "2026-09-04T20:00:24+09:00"
+  },
+  {
+    "id": "CVE-2026-85437",
+    "published": "2026-09-03",
+    "last_modified": "2026-09-03",
+    "status": "Received",
+    "description": "MOOS-IvP through 24.8.1 contains multiple buffer overflow vulnerabilities in IvP function string decoders that trust attacker-controlled length fields without validation. Attackers can craft malicious encoded strings with mismatched declared and actual field lengths to overflow heap and stack buffers, potentially achieving remote code execution through MOOS variables or alog files.",
+    "cvss": {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "score": 9.8,
+      "severity": "CRITICAL",
+      "attack_vector": "네트워크",
+      "attack_complexity": "낮음",
+      "privileges_required": "없음",
+      "user_interaction": "없음"
+    },
+    "cwes": [
+      "CWE-787"
+    ],
+    "affected": [],
+    "references": [
+      "https://github.com/moos-ivp/moos-ivp",
+      "https://github.com/moos-ivp/moos-ivp/blob/1de9ae146cd63c209e8c3fd81611a4ed2472971b/ivp/src/lib_ivpbuild/FunctionEncoder.cpp#L310",
+      "https://github.com/moos-ivp/moos-ivp/commit/81ca795fcfd62b42002d277f5a2390f4c8ab8c7f",
+      "https://github.com/moos-ivp/moos-ivp/pull/125",
+      "https://www.vulncheck.com/advisories/moos-ivp-through-24.8.1-buffer-overflow-in-ivp-function-string-decoders"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-85437",
+    "added_at": "2026-09-04T20:00:24+09:00"
+  },
+  {
+    "id": "CVE-2026-85435",
+    "published": "2026-09-03",
+    "last_modified": "2026-09-03",
+    "status": "Received",
+    "description": "MOOS-IvP uFldNodeBroker through 24.8.1 fails to validate the source of TRY_SHORE_HOST messages on the vehicle bus, allowing any publisher to enroll attacker-controlled shore routes. Attackers can publish malicious shore route messages to receive bridged vehicle traffic including sensor data and control information.",
+    "cvss": {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N",
+      "score": 9.1,
+      "severity": "CRITICAL",
+      "attack_vector": "네트워크",
+      "attack_complexity": "낮음",
+      "privileges_required": "없음",
+      "user_interaction": "없음"
+    },
+    "cwes": [
+      "CWE-345"
+    ],
+    "affected": [],
+    "references": [
+      "https://github.com/moos-ivp/moos-ivp",
+      "https://github.com/moos-ivp/moos-ivp/blob/1de9ae146cd63c209e8c3fd81611a4ed2472971b/ivp/src/uFldNodeBroker/NodeBroker.cpp#L97",
+      "https://github.com/moos-ivp/moos-ivp/commit/d66394f576cae0c63c0a777760e1595802b83edf",
+      "https://github.com/moos-ivp/moos-ivp/pull/124",
+      "https://www.vulncheck.com/advisories/moos-ivp-through-24.8.1-ufldnodebroker-unauthenticated-shore-route-enrollment"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-85435",
+    "added_at": "2026-09-04T20:00:24+09:00"
+  },
+  {
+    "id": "CVE-2026-85434",
+    "published": "2026-09-03",
+    "last_modified": "2026-09-03",
+    "status": "Received",
+    "description": "MOOS-IvP uFldShoreBroker through 24.8.1 fails to verify node ping authenticity before creating outbound bridge routes. Attackers can publish NODE_BROKER_PING messages with crafted HostRecord data to redirect bridged variables to attacker-controlled addresses.",
+    "cvss": {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N",
+      "score": 9.1,
+      "severity": "CRITICAL",
+      "attack_vector": "네트워크",
+      "attack_complexity": "낮음",
+      "privileges_required": "없음",
+      "user_interaction": "없음"
+    },
+    "cwes": [
+      "CWE-345"
+    ],
+    "affected": [],
+    "references": [
+      "https://github.com/moos-ivp/moos-ivp",
+      "https://github.com/moos-ivp/moos-ivp/blob/1de9ae146cd63c209e8c3fd81611a4ed2472971b/ivp/src/uFldShoreBroker/ShoreBroker.cpp#L93",
+      "https://github.com/moos-ivp/moos-ivp/commit/2f5224dcd68f92ce9ae10c261bb45dd7000f4d33",
+      "https://github.com/moos-ivp/moos-ivp/pull/123",
+      "https://www.vulncheck.com/advisories/moos-ivp-through-24.8.1-ufldshorebroker-bridge-route-injection-via-unverified-node-ping"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-85434",
+    "added_at": "2026-09-04T20:00:24+09:00"
+  },
+  {
+    "id": "CVE-2026-85433",
+    "published": "2026-09-03",
+    "last_modified": "2026-09-03",
+    "status": "Received",
+    "description": "MOOS essential-moos pShare through 10.0.1 fails to properly authorize PSHARE_CMD messages, allowing any publisher to reconfigure network routes and listeners at runtime. Attackers can send crafted PSHARE_CMD messages with cmd=output or cmd=input parameters to open new listeners on arbitrary addresses and redirect or duplicate bus traffic to attacker-controlled destinations.",
+    "cvss": {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "score": 9.8,
+      "severity": "CRITICAL",
+      "attack_vector": "네트워크",
+      "attack_complexity": "낮음",
+      "privileges_required": "없음",
+      "user_interaction": "없음"
+    },
+    "cwes": [
+      "CWE-862"
+    ],
+    "affected": [],
+    "references": [
+      "https://github.com/themoos/essential-moos",
+      "https://github.com/themoos/essential-moos/blob/b897ea86dba8b61412dc48ac0cfb5ff34cdaf5f6/Essentials/pShare/Share.cpp#L813",
+      "https://github.com/themoos/essential-moos/commit/8e51cedcbd8de9781adec2e9cce354f51750a547",
+      "https://github.com/themoos/essential-moos/pull/20",
+      "https://www.vulncheck.com/advisories/moos-essential-moos-through-10.0.1-pshare-unauthorized-runtime-route-reconfiguration"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-85433",
+    "added_at": "2026-09-04T20:00:24+09:00"
+  },
+  {
+    "id": "CVE-2026-85430",
+    "published": "2026-09-03",
+    "last_modified": "2026-09-03",
+    "status": "Received",
+    "description": "MOOS essential-moos through 10.0.1 contains an authentication bypass vulnerability in pShare that accepts UDP datagrams from any source and republishes them with the attacker-claimed identity intact. Attackers can send crafted UDP datagrams to pShare input routes to inject messages into the local MOOS community under spoofed identities, or send malformed datagrams to crash the pShare process.",
+    "cvss": {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:H",
+      "score": 9.1,
+      "severity": "CRITICAL",
+      "attack_vector": "네트워크",
+      "attack_complexity": "낮음",
+      "privileges_required": "없음",
+      "user_interaction": "없음"
+    },
+    "cwes": [
+      "CWE-345"
+    ],
+    "affected": [],
+    "references": [
+      "https://github.com/themoos/essential-moos",
+      "https://github.com/themoos/essential-moos/blob/b897ea86dba8b61412dc48ac0cfb5ff34cdaf5f6/Essentials/pShare/Listener.cpp#L132",
+      "https://github.com/themoos/essential-moos/commit/53729b6325a991a8dbd84dcd04e4707f3e592fd6",
+      "https://github.com/themoos/essential-moos/pull/18",
+      "https://www.vulncheck.com/advisories/moos-essential-moos-through-10.0.1-pshare-unauthenticated-udp-datagram-republishing"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-85430",
+    "added_at": "2026-09-04T20:00:24+09:00"
+  },
+  {
+    "id": "CVE-2026-85428",
+    "published": "2026-09-03",
+    "last_modified": "2026-09-03",
+    "status": "Received",
+    "description": "MOOS core-moos through 10.4.0 contains an authentication bypass vulnerability in the optional MOOSDB HTTP server that allows unauthenticated clients to write variables. Attackers can send HTTP requests with variable names and values to the MOOSDB HTTP server port to modify MOOS variables including actuator and override commands without authentication.",
+    "cvss": {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "score": 9.8,
+      "severity": "CRITICAL",
+      "attack_vector": "네트워크",
+      "attack_complexity": "낮음",
+      "privileges_required": "없음",
+      "user_interaction": "없음"
+    },
+    "cwes": [
+      "CWE-306"
+    ],
+    "affected": [],
+    "references": [
+      "https://github.com/themoos/core-moos",
+      "https://github.com/themoos/core-moos/blob/ec9c77c68fcbdef8f5e4c60fe243acd223433f0c/Core/libMOOS/DB/HTTPConnection.cpp#L196",
+      "https://github.com/themoos/core-moos/commit/7e3aecdbf5fe47980ea9399340c77940991a6fa5",
+      "https://github.com/themoos/core-moos/pull/77",
+      "https://www.vulncheck.com/advisories/moos-core-moos-through-10.4.0-moosdb-http-server-unauthenticated-variable-write"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-85428",
+    "added_at": "2026-09-04T20:00:24+09:00"
+  },
+  {
+    "id": "CVE-2026-85426",
+    "published": "2026-09-03",
+    "last_modified": "2026-09-03",
+    "status": "Received",
+    "description": "MOOS-IvP uMemWatch through 24.8.1 constructs shell commands from attacker-chosen MOOS client names without sanitization. Attackers can inject shell metacharacters into client names to execute arbitrary commands as the uMemWatch process user through unquoted redirection targets in system calls.",
+    "cvss": {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "score": 9.8,
+      "severity": "CRITICAL",
+      "attack_vector": "네트워크",
+      "attack_complexity": "낮음",
+      "privileges_required": "없음",
+      "user_interaction": "없음"
+    },
+    "cwes": [
+      "CWE-78"
+    ],
+    "affected": [],
+    "references": [
+      "https://github.com/moos-ivp/moos-ivp",
+      "https://github.com/moos-ivp/moos-ivp/blob/1de9ae146cd63c209e8c3fd81611a4ed2472971b/ivp/src/uMemWatch/MemWatch.cpp#L182",
+      "https://github.com/moos-ivp/moos-ivp/commit/0b2bd991b0ca7139b1edcf271473d33e7eccfc20",
+      "https://github.com/moos-ivp/moos-ivp/pull/121",
+      "https://www.vulncheck.com/advisories/moos-ivp-through-24.8.1-umemwatch-command-injection-via-moos-client-names"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-85426",
+    "added_at": "2026-09-04T20:00:24+09:00"
+  },
+  {
+    "id": "CVE-2026-85425",
+    "published": "2026-09-03",
+    "last_modified": "2026-09-03",
+    "status": "Received",
+    "description": "MOOS-IvP iSay through 24.8.1 contains a remote code execution vulnerability in the SAY_MOOS variable handler that passes unsanitized text to a shell command. Attackers can publish SAY_MOOS messages containing backticks or command substitution syntax to execute arbitrary commands as the iSay process user.",
+    "cvss": {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "score": 9.8,
+      "severity": "CRITICAL",
+      "attack_vector": "네트워크",
+      "attack_complexity": "낮음",
+      "privileges_required": "없음",
+      "user_interaction": "없음"
+    },
+    "cwes": [
+      "CWE-78"
+    ],
+    "affected": [],
+    "references": [
+      "https://github.com/moos-ivp/moos-ivp",
+      "https://github.com/moos-ivp/moos-ivp/blob/1de9ae146cd63c209e8c3fd81611a4ed2472971b/ivp/src/iSay/Sayer.cpp#L416",
+      "https://github.com/moos-ivp/moos-ivp/commit/ed3a44131fd3e5528602f20adc37ba82273c1cd8",
+      "https://github.com/moos-ivp/moos-ivp/pull/120",
+      "https://www.vulncheck.com/advisories/moos-ivp-through-24.8.1-isay-command-injection-via-say-moos"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-85425",
+    "added_at": "2026-09-04T20:00:24+09:00"
+  },
+  {
+    "id": "CVE-2026-85424",
+    "published": "2026-09-03",
+    "last_modified": "2026-09-03",
+    "status": "Received",
+    "description": "MOOS core-moos through 10.4.0 lacks authentication in the wire protocol, allowing unauthenticated clients to connect with full publish, subscribe, and database clear privileges. Attackers can bypass the compile-time protocol string check and connect with arbitrary client names to execute privileged operations including DB_CLEAR which resets all variables and clears client mail queues.",
+    "cvss": {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "score": 9.8,
+      "severity": "CRITICAL",
+      "attack_vector": "네트워크",
+      "attack_complexity": "낮음",
+      "privileges_required": "없음",
+      "user_interaction": "없음"
+    },
+    "cwes": [
+      "CWE-306"
+    ],
+    "affected": [],
+    "references": [
+      "https://github.com/themoos/core-moos",
+      "https://github.com/themoos/core-moos/blob/ec9c77c68fcbdef8f5e4c60fe243acd223433f0c/Core/libMOOS/DB/MOOSDB.cpp#L1163",
+      "https://github.com/themoos/core-moos/commit/5ff5cdec44242156a168cc1a545a6a21357bd3ac",
+      "https://github.com/themoos/core-moos/pull/84",
+      "https://www.vulncheck.com/advisories/moos-core-moos-through-10.4.0-missing-authentication-for-moosdb-publish-subscribe-and-db-clear"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-85424",
+    "added_at": "2026-09-04T20:00:24+09:00"
+  },
+  {
     "id": "CVE-2026-85394",
     "published": "2026-09-03",
     "last_modified": "2026-09-03",
@@ -213,6 +651,110 @@
     ],
     "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-85031",
     "added_at": "2026-09-04T08:00:33+09:00"
+  },
+  {
+    "id": "CVE-2026-83711",
+    "published": "2026-09-03",
+    "last_modified": "2026-09-03",
+    "status": "Received",
+    "description": "Authorization bypass through user-controlled key in Microsoft Azure Active Directory B2C allows an unauthorized attacker to elevate privileges over a network.",
+    "cvss": {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:N",
+      "score": 10.0,
+      "severity": "CRITICAL",
+      "attack_vector": "네트워크",
+      "attack_complexity": "낮음",
+      "privileges_required": "없음",
+      "user_interaction": "없음"
+    },
+    "cwes": [
+      "CWE-639"
+    ],
+    "affected": [],
+    "references": [
+      "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-83711"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-83711",
+    "added_at": "2026-09-04T20:00:24+09:00"
+  },
+  {
+    "id": "CVE-2026-80098",
+    "published": "2026-09-03",
+    "last_modified": "2026-09-03",
+    "status": "Received",
+    "description": "Improper verification of cryptographic signature in Copilot Studio allows an unauthorized attacker to elevate privileges over a network.",
+    "cvss": {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:L/I:H/A:N",
+      "score": 9.3,
+      "severity": "CRITICAL",
+      "attack_vector": "네트워크",
+      "attack_complexity": "낮음",
+      "privileges_required": "없음",
+      "user_interaction": "없음"
+    },
+    "cwes": [
+      "CWE-347"
+    ],
+    "affected": [],
+    "references": [
+      "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-80098"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-80098",
+    "added_at": "2026-09-04T20:00:24+09:00"
+  },
+  {
+    "id": "CVE-2026-70352",
+    "published": "2026-09-03",
+    "last_modified": "2026-09-03",
+    "status": "Received",
+    "description": "Missing authentication for critical function in Azure AI Language allows an unauthorized attacker to elevate privileges over a network.",
+    "cvss": {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:H",
+      "score": 10.0,
+      "severity": "CRITICAL",
+      "attack_vector": "네트워크",
+      "attack_complexity": "낮음",
+      "privileges_required": "없음",
+      "user_interaction": "없음"
+    },
+    "cwes": [
+      "CWE-306"
+    ],
+    "affected": [],
+    "references": [
+      "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-70352"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-70352",
+    "added_at": "2026-09-04T20:00:24+09:00"
+  },
+  {
+    "id": "CVE-2026-62916",
+    "published": "2026-09-03",
+    "last_modified": "2026-09-03",
+    "status": "Received",
+    "description": "Authentication bypass using an alternate path or channel in Microsoft Entra ID allows an unauthorized attacker to elevate privileges over a network.",
+    "cvss": {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N",
+      "score": 9.1,
+      "severity": "CRITICAL",
+      "attack_vector": "네트워크",
+      "attack_complexity": "낮음",
+      "privileges_required": "없음",
+      "user_interaction": "없음"
+    },
+    "cwes": [
+      "CWE-288"
+    ],
+    "affected": [],
+    "references": [
+      "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-62916"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-62916",
+    "added_at": "2026-09-04T20:00:24+09:00"
   },
   {
     "id": "CVE-2026-9055",
