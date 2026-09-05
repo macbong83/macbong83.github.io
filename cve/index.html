@@ -41,13 +41,128 @@
     <h1>CVE Archive</h1>
     <p>NVD 기반 Critical CVE를 누적 관리하는 별도 페이지입니다. 블로그에는 CVE 자동 글을 발행하지 않고, 이 페이지에만 기록합니다.</p>
     <div class="meta">
-      <span>Total 801</span>
-      <span>Updated 2026-09-05 20:00 KST</span>
+      <span>Total 807</span>
+      <span>Updated 2026-09-06 08:00 KST</span>
       <span>Source NVD API</span>
     </div>
   </section>
   <div class="notice">중복 제거 기준은 CVE ID입니다. 동일 CVE는 다시 추가하지 않습니다. 실제 악용 여부와 패치 우선순위는 CISA KEV, 벤더 권고, 자산 노출 여부와 함께 검토해야 합니다.</div>
 
+    <article class="cve-card" id="CVE-2026-86190">
+      <div class="cve-top">
+        <a class="cve-id" href="https://nvd.nist.gov/vuln/detail/CVE-2026-86190" target="_blank" rel="noopener">CVE-2026-86190</a>
+        <span class="score">CVSS 9.1 CRITICAL</span>
+      </div>
+      <p class="desc">WWBN AVideo contains a broken access control vulnerability in videoViewsInfo endpoints that returns complete user records including password hashes, recovery tokens, and live session identifiers to unauthenticated callers when a hash parameter is provided. Attackers can use the disclosed session identifier to hijack viewer sessions, including administrator accounts, and obtain sensitive personal data for all video viewers.</p>
+      <dl>
+        <div><dt>Published</dt><dd>2026-09-05</dd></div>
+        <div><dt>Last Modified</dt><dd>2026-09-05</dd></div>
+        <div><dt>Status</dt><dd>Received</dd></div>
+        <div><dt>Attack Vector</dt><dd>네트워크</dd></div>
+        <div><dt>Attack Complexity</dt><dd>낮음</dd></div>
+        <div><dt>Privileges</dt><dd>없음</dd></div>
+        <div><dt>User Interaction</dt><dd>없음</dd></div>
+        <div><dt>CWE</dt><dd>CWE-200</dd></div>
+        <div><dt>Affected</dt><dd>NVD CPE 기준 확인 필요</dd></div>
+      </dl>
+      <div class="vector"><code>CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N</code></div>
+      <details>
+        <summary>References</summary>
+        <ul><li><a href="https://github.com/WWBN/AVideo/security/advisories/GHSA-82q2-88mq-p44q" target="_blank" rel="noopener">https://github.com/WWBN/AVideo/security/advisories/GHSA-82q2-88mq-p44q</a></li><li><a href="https://www.vulncheck.com/advisories/wwbn-avideo-broken-access-control-via-videoviewsinfo-hash-parameter" target="_blank" rel="noopener">https://www.vulncheck.com/advisories/wwbn-avideo-broken-access-control-via-videoviewsinfo-hash-parameter</a></li></ul>
+      </details>
+    </article>
+    <article class="cve-card" id="CVE-2026-86189">
+      <div class="cve-top">
+        <a class="cve-id" href="https://nvd.nist.gov/vuln/detail/CVE-2026-86189" target="_blank" rel="noopener">CVE-2026-86189</a>
+        <span class="score">CVSS 9.8 CRITICAL</span>
+      </div>
+      <p class="desc">WWBN AVideo contains a path traversal vulnerability in notify.ffmpeg.json.php that allows unauthenticated attackers to write files to arbitrary locations by supplying a caller-chosen path in the avideoRelativePath parameter. Attackers can replay any previously issued ciphertext as a notifyCode token, which is decrypted but never validated, to bypass authentication and write files to the application root and subdirectories.</p>
+      <dl>
+        <div><dt>Published</dt><dd>2026-09-05</dd></div>
+        <div><dt>Last Modified</dt><dd>2026-09-05</dd></div>
+        <div><dt>Status</dt><dd>Received</dd></div>
+        <div><dt>Attack Vector</dt><dd>네트워크</dd></div>
+        <div><dt>Attack Complexity</dt><dd>낮음</dd></div>
+        <div><dt>Privileges</dt><dd>없음</dd></div>
+        <div><dt>User Interaction</dt><dd>없음</dd></div>
+        <div><dt>CWE</dt><dd>CWE-73</dd></div>
+        <div><dt>Affected</dt><dd>NVD CPE 기준 확인 필요</dd></div>
+      </dl>
+      <div class="vector"><code>CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H</code></div>
+      <details>
+        <summary>References</summary>
+        <ul><li><a href="https://github.com/WWBN/AVideo/security/advisories/GHSA-cprx-fggj-7vpq" target="_blank" rel="noopener">https://github.com/WWBN/AVideo/security/advisories/GHSA-cprx-fggj-7vpq</a></li><li><a href="https://www.vulncheck.com/advisories/wwbn-avideo-unauthenticated-path-traversal-via-notify-ffmpeg-json-php" target="_blank" rel="noopener">https://www.vulncheck.com/advisories/wwbn-avideo-unauthenticated-path-traversal-via-notify-ffmpeg-json-php</a></li></ul>
+      </details>
+    </article>
+    <article class="cve-card" id="CVE-2026-86184">
+      <div class="cve-top">
+        <a class="cve-id" href="https://nvd.nist.gov/vuln/detail/CVE-2026-86184" target="_blank" rel="noopener">CVE-2026-86184</a>
+        <span class="score">CVSS 9.8 CRITICAL</span>
+      </div>
+      <p class="desc">Lara Dashboard before 1.3.0 contains an authentication bypass vulnerability in the screenshot-login route that allows unauthenticated attackers to authenticate as any user by email when APP_ENV is not production. Attackers can request the GET /screenshot-login/{email} endpoint with a registered email address to receive a fully authenticated session, enabling access to user administration, settings, database contents, and arbitrary code execution through the module installer.</p>
+      <dl>
+        <div><dt>Published</dt><dd>2026-09-05</dd></div>
+        <div><dt>Last Modified</dt><dd>2026-09-05</dd></div>
+        <div><dt>Status</dt><dd>Received</dd></div>
+        <div><dt>Attack Vector</dt><dd>네트워크</dd></div>
+        <div><dt>Attack Complexity</dt><dd>낮음</dd></div>
+        <div><dt>Privileges</dt><dd>없음</dd></div>
+        <div><dt>User Interaction</dt><dd>없음</dd></div>
+        <div><dt>CWE</dt><dd>CWE-306</dd></div>
+        <div><dt>Affected</dt><dd>NVD CPE 기준 확인 필요</dd></div>
+      </dl>
+      <div class="vector"><code>CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H</code></div>
+      <details>
+        <summary>References</summary>
+        <ul><li><a href="https://github.com/laradashboard/laradashboard" target="_blank" rel="noopener">https://github.com/laradashboard/laradashboard</a></li><li><a href="https://github.com/laradashboard/laradashboard/blob/v1.2.2/app/Http/Controllers/Backend/Auth/ScreenshotGeneratorLoginController.php" target="_blank" rel="noopener">https://github.com/laradashboard/laradashboard/blob/v1.2.2/app/Http/Controllers/Backend/Auth/ScreenshotGeneratorLoginController.php</a></li><li><a href="https://github.com/laradashboard/laradashboard/commit/50986e4ac58c883dd8f064cf32be3e2a87c11b24" target="_blank" rel="noopener">https://github.com/laradashboard/laradashboard/commit/50986e4ac58c883dd8f064cf32be3e2a87c11b24</a></li><li><a href="https://github.com/laradashboard/laradashboard/releases/tag/v1.3.0" target="_blank" rel="noopener">https://github.com/laradashboard/laradashboard/releases/tag/v1.3.0</a></li></ul>
+      </details>
+    </article>
+    <article class="cve-card" id="CVE-2026-86149">
+      <div class="cve-top">
+        <a class="cve-id" href="https://nvd.nist.gov/vuln/detail/CVE-2026-86149" target="_blank" rel="noopener">CVE-2026-86149</a>
+        <span class="score">CVSS 9.1 CRITICAL</span>
+      </div>
+      <p class="desc">A weakness has been identified in Tenda CP3 27.5.57.101. This issue affects some unknown processing of the file Net/NetCheckPing.cpp. This manipulation of the argument interface_name/host causes os command injection. The attack can be initiated remotely.</p>
+      <dl>
+        <div><dt>Published</dt><dd>2026-09-05</dd></div>
+        <div><dt>Last Modified</dt><dd>2026-09-05</dd></div>
+        <div><dt>Status</dt><dd>Received</dd></div>
+        <div><dt>Attack Vector</dt><dd>네트워크</dd></div>
+        <div><dt>Attack Complexity</dt><dd>낮음</dd></div>
+        <div><dt>Privileges</dt><dd>높음</dd></div>
+        <div><dt>User Interaction</dt><dd>없음</dd></div>
+        <div><dt>CWE</dt><dd>CWE-77, CWE-78</dd></div>
+        <div><dt>Affected</dt><dd>NVD CPE 기준 확인 필요</dd></div>
+      </dl>
+      <div class="vector"><code>CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:C/C:H/I:H/A:H</code></div>
+      <details>
+        <summary>References</summary>
+        <ul><li><a href="https://vuldb.com/cve/CVE-2026-86149" target="_blank" rel="noopener">https://vuldb.com/cve/CVE-2026-86149</a></li><li><a href="https://vuldb.com/submit/895350" target="_blank" rel="noopener">https://vuldb.com/submit/895350</a></li><li><a href="https://vuldb.com/vuln/399272" target="_blank" rel="noopener">https://vuldb.com/vuln/399272</a></li><li><a href="https://vuldb.com/vuln/399272/cti" target="_blank" rel="noopener">https://vuldb.com/vuln/399272/cti</a></li></ul>
+      </details>
+    </article>
+    <article class="cve-card" id="CVE-2026-86148">
+      <div class="cve-top">
+        <a class="cve-id" href="https://nvd.nist.gov/vuln/detail/CVE-2026-86148" target="_blank" rel="noopener">CVE-2026-86148</a>
+        <span class="score">CVSS 9.1 CRITICAL</span>
+      </div>
+      <p class="desc">A security flaw has been discovered in Tenda CP3 27.5.57.101. This vulnerability affects the function SystemAsh of the file Apis/system.c of the component Kylin. The manipulation of the argument AlarmVoiceURL results in os command injection. It is possible to launch the attack remotely.</p>
+      <dl>
+        <div><dt>Published</dt><dd>2026-09-05</dd></div>
+        <div><dt>Last Modified</dt><dd>2026-09-05</dd></div>
+        <div><dt>Status</dt><dd>Received</dd></div>
+        <div><dt>Attack Vector</dt><dd>네트워크</dd></div>
+        <div><dt>Attack Complexity</dt><dd>낮음</dd></div>
+        <div><dt>Privileges</dt><dd>높음</dd></div>
+        <div><dt>User Interaction</dt><dd>없음</dd></div>
+        <div><dt>CWE</dt><dd>CWE-77, CWE-78</dd></div>
+        <div><dt>Affected</dt><dd>NVD CPE 기준 확인 필요</dd></div>
+      </dl>
+      <div class="vector"><code>CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:C/C:H/I:H/A:H</code></div>
+      <details>
+        <summary>References</summary>
+        <ul><li><a href="https://vuldb.com/cve/CVE-2026-86148" target="_blank" rel="noopener">https://vuldb.com/cve/CVE-2026-86148</a></li><li><a href="https://vuldb.com/submit/895348" target="_blank" rel="noopener">https://vuldb.com/submit/895348</a></li><li><a href="https://vuldb.com/vuln/399271" target="_blank" rel="noopener">https://vuldb.com/vuln/399271</a></li><li><a href="https://vuldb.com/vuln/399271/cti" target="_blank" rel="noopener">https://vuldb.com/vuln/399271/cti</a></li></ul>
+      </details>
+    </article>
     <article class="cve-card" id="CVE-2026-86124">
       <div class="cve-top">
         <a class="cve-id" href="https://nvd.nist.gov/vuln/detail/CVE-2026-86124" target="_blank" rel="noopener">CVE-2026-86124</a>
@@ -138,6 +253,29 @@
       <details>
         <summary>References</summary>
         <ul><li><a href="https://plugins.trac.wordpress.org/browser/mstore-api/tags/4.18.4/controllers/flutter-user.php#L829" target="_blank" rel="noopener">https://plugins.trac.wordpress.org/browser/mstore-api/tags/4.18.4/controllers/flutter-user.php#L829</a></li><li><a href="https://plugins.trac.wordpress.org/browser/mstore-api/tags/4.18.4/controllers/flutter-user.php#L940" target="_blank" rel="noopener">https://plugins.trac.wordpress.org/browser/mstore-api/tags/4.18.4/controllers/flutter-user.php#L940</a></li><li><a href="https://plugins.trac.wordpress.org/browser/mstore-api/tags/4.18.4/controllers/helpers/firebase-phone-auth-helper.php#L5" target="_blank" rel="noopener">https://plugins.trac.wordpress.org/browser/mstore-api/tags/4.18.4/controllers/helpers/firebase-phone-auth-helper.php#L5</a></li><li><a href="https://plugins.trac.wordpress.org/browser/mstore-api/trunk/controllers/flutter-user.php#L829" target="_blank" rel="noopener">https://plugins.trac.wordpress.org/browser/mstore-api/trunk/controllers/flutter-user.php#L829</a></li></ul>
+      </details>
+    </article>
+    <article class="cve-card" id="CVE-2026-10196">
+      <div class="cve-top">
+        <a class="cve-id" href="https://nvd.nist.gov/vuln/detail/CVE-2026-10196" target="_blank" rel="noopener">CVE-2026-10196</a>
+        <span class="score">CVSS 9.8 CRITICAL</span>
+      </div>
+      <p class="desc">The Mail Mint – Email Marketing, Newsletter, Email Automation &amp; WooCommerce Emails plugin for WordPress is vulnerable to PHP Object Injection in all versions up to, and including, 1.31.0 via deserialization of untrusted input in the &#x27;handle_form_submission&#x27; function. This makes it possible for unauthenticated attackers to inject a PHP Object. The additional presence of a POP chain allows attackers to execute code on the server. The vulnerability was partially patched in version 1.23.1.</p>
+      <dl>
+        <div><dt>Published</dt><dd>2026-09-05</dd></div>
+        <div><dt>Last Modified</dt><dd>2026-09-05</dd></div>
+        <div><dt>Status</dt><dd>Received</dd></div>
+        <div><dt>Attack Vector</dt><dd>네트워크</dd></div>
+        <div><dt>Attack Complexity</dt><dd>낮음</dd></div>
+        <div><dt>Privileges</dt><dd>없음</dd></div>
+        <div><dt>User Interaction</dt><dd>없음</dd></div>
+        <div><dt>CWE</dt><dd>CWE-502</dd></div>
+        <div><dt>Affected</dt><dd>NVD CPE 기준 확인 필요</dd></div>
+      </dl>
+      <div class="vector"><code>CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H</code></div>
+      <details>
+        <summary>References</summary>
+        <ul><li><a href="https://plugins.trac.wordpress.org/browser/mail-mint/tags/1.21.0/app/API/Actions/Frontend/FormAction.php#L59" target="_blank" rel="noopener">https://plugins.trac.wordpress.org/browser/mail-mint/tags/1.21.0/app/API/Actions/Frontend/FormAction.php#L59</a></li><li><a href="https://plugins.trac.wordpress.org/browser/mail-mint/tags/1.21.0/app/Database/models/ContactModel.php#L460" target="_blank" rel="noopener">https://plugins.trac.wordpress.org/browser/mail-mint/tags/1.21.0/app/Database/models/ContactModel.php#L460</a></li><li><a href="https://plugins.trac.wordpress.org/browser/mail-mint/tags/1.21.0/vendor/posthog/posthog-php/lib/Consumer/ForkCurl.php#L96" target="_blank" rel="noopener">https://plugins.trac.wordpress.org/browser/mail-mint/tags/1.21.0/vendor/posthog/posthog-php/lib/Consumer/ForkCurl.php#L96</a></li><li><a href="https://plugins.trac.wordpress.org/browser/mail-mint/trunk/app/API/Actions/Frontend/FormAction.php#L59" target="_blank" rel="noopener">https://plugins.trac.wordpress.org/browser/mail-mint/trunk/app/API/Actions/Frontend/FormAction.php#L59</a></li></ul>
       </details>
     </article>
     <article class="cve-card" id="CVE-2024-11080">
