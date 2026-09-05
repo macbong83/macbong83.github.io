@@ -1,5 +1,157 @@
 [
   {
+    "id": "CVE-2026-86124",
+    "published": "2026-09-05",
+    "last_modified": "2026-09-05",
+    "status": "Received",
+    "description": "AutoAgent contains an unauthenticated remote code execution vulnerability in the TCP server that binds to all interfaces and executes attacker-supplied commands as root. Attackers can connect to the exposed communication port and execute arbitrary bash commands within the container, gaining access to bind-mounted host workspace directories.",
+    "cvss": {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "score": 9.8,
+      "severity": "CRITICAL",
+      "attack_vector": "네트워크",
+      "attack_complexity": "낮음",
+      "privileges_required": "없음",
+      "user_interaction": "없음"
+    },
+    "cwes": [
+      "CWE-306"
+    ],
+    "affected": [],
+    "references": [
+      "https://github.com/HKUDS/AutoAgent",
+      "https://github.com/HKUDS/AutoAgent/blob/16c12b052ef2330a198063c62a07a7f9723031e3/autoagent/environment/docker_env.py",
+      "https://github.com/HKUDS/AutoAgent/blob/16c12b052ef2330a198063c62a07a7f9723031e3/autoagent/environment/tcp_server.py",
+      "https://github.com/HKUDS/AutoAgent/issues/96",
+      "https://www.vulncheck.com/advisories/autoagent-unauthenticated-remote-code-execution-via-the-sandbox-tcp-command-server"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-86124",
+    "added_at": "2026-09-05T20:00:49+09:00"
+  },
+  {
+    "id": "CVE-2026-86121",
+    "published": "2026-09-05",
+    "last_modified": "2026-09-05",
+    "status": "Received",
+    "description": "Cua computer-server versions before 0.3.42 skip authentication when the CONTAINER_NAME environment variable is unset and bind to all interfaces by default, allowing unauthenticated attackers to execute arbitrary commands. Attackers can reach TCP port 8000 to run shell commands via the run_command endpoint, read and write arbitrary files through file operation endpoints, and access interactive PTY shells without authentication.",
+    "cvss": {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "score": 9.8,
+      "severity": "CRITICAL",
+      "attack_vector": "네트워크",
+      "attack_complexity": "낮음",
+      "privileges_required": "없음",
+      "user_interaction": "없음"
+    },
+    "cwes": [
+      "CWE-306"
+    ],
+    "affected": [],
+    "references": [
+      "https://github.com/trycua/cua",
+      "https://github.com/trycua/cua/blob/10a2e71792db/libs/python/computer-server/computer_server/cli.py",
+      "https://github.com/trycua/cua/blob/10a2e71792db/libs/python/computer-server/computer_server/main.py",
+      "https://github.com/trycua/cua/commit/59cf25c0ec54",
+      "https://github.com/trycua/cua/issues/1892",
+      "https://www.vulncheck.com/advisories/cua-computer-server-before-0.3.42-unauthenticated-rce-via-desktop-control"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-86121",
+    "added_at": "2026-09-05T20:00:49+09:00"
+  },
+  {
+    "id": "CVE-2026-83627",
+    "published": "2026-09-05",
+    "last_modified": "2026-09-05",
+    "status": "Received",
+    "description": "The Hummingbird – Speed Optimization, Caching, Minify, Compress & CDN plugin for WordPress is vulnerable to Remote Code Execution in all versions up to, and including, 3.21.0 via the log_msg() function in core/modules/class-page-cache.php. The page-cache debug log is written to wp-content/wphb-logs/page-caching-log.php, a directly web-accessible PHP file that is supposed to be protected by a leading '<?php die(); ?>' header. That header is guarded by class_exists( 'Filesystem' ), which can never match because class_exists() resolves string arguments in the global namespace while the class is Hummingbird\\Core\\Filesystem; when the log is created during a front-end request the header is therefore omitted entirely. get_cookies() then writes the raw name of any cookie matching the wphb_cache_ prefix into that file without sanitization. This makes it possible for unauthenticated attackers to write arbitrary PHP into the log file with a single anonymous request and execute it by requesting the file directly, resulting in full remote code execution. Exploitation requires the site administrator to have enabled Page Caching with the Debug Log option (non-default), and the log file to be created during a front-end request — a state reached by the plugin's own 'Clear logs' action, any cache flush, or unattended via the plugin's daily log-rotation cron, which can strip the protective header from an existing log file.",
+    "cvss": {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "score": 9.8,
+      "severity": "CRITICAL",
+      "attack_vector": "네트워크",
+      "attack_complexity": "낮음",
+      "privileges_required": "없음",
+      "user_interaction": "없음"
+    },
+    "cwes": [
+      "CWE-94"
+    ],
+    "affected": [],
+    "references": [
+      "https://plugins.trac.wordpress.org/browser/hummingbird-performance/trunk/core/modules/class-page-cache.php#L1973",
+      "https://plugins.trac.wordpress.org/browser/hummingbird-performance/trunk/core/modules/class-page-cache.php#L1982",
+      "https://plugins.trac.wordpress.org/browser/hummingbird-performance/trunk/core/modules/class-page-cache.php#L749",
+      "https://plugins.trac.wordpress.org/browser/hummingbird-performance/trunk/core/modules/class-page-cache.php#L752",
+      "https://plugins.trac.wordpress.org/changeset/3675836/hummingbird-performance/trunk/core/modules/class-page-cache.php",
+      "https://plugins.trac.wordpress.org/changeset?old_path=%2Fhummingbird-performance/tags/3.20.0&new_path=%2Fhummingbird-performance/tags/3.21.2"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-83627",
+    "added_at": "2026-09-05T20:00:49+09:00"
+  },
+  {
+    "id": "CVE-2026-13447",
+    "published": "2026-09-05",
+    "last_modified": "2026-09-05",
+    "status": "Received",
+    "description": "The Mstore Api plugin for WordPress is vulnerable to Authentication Bypass via JWT Forgery in versions up to, and including, 4.20.0 This is due to missing cryptographic signature verification in the FirebasePhoneAuthHelper::verify_id_token() function, which decodes and validates Firebase ID token claims (alg, kid, aud, iss) but never calls openssl_verify() or any equivalent to validate the JWT signature against Google's actual public key certificates. This makes it possible for unauthenticated attackers to forge a Firebase Phone Auth JWT signed with a self-generated RSA key pair and impersonate any phone number, resulting in unauthorized access to existing WordPress accounts or creation of new arbitrary accounts.",
+    "cvss": {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "score": 9.8,
+      "severity": "CRITICAL",
+      "attack_vector": "네트워크",
+      "attack_complexity": "낮음",
+      "privileges_required": "없음",
+      "user_interaction": "없음"
+    },
+    "cwes": [
+      "CWE-287"
+    ],
+    "affected": [],
+    "references": [
+      "https://plugins.trac.wordpress.org/browser/mstore-api/tags/4.18.4/controllers/flutter-user.php#L829",
+      "https://plugins.trac.wordpress.org/browser/mstore-api/tags/4.18.4/controllers/flutter-user.php#L940",
+      "https://plugins.trac.wordpress.org/browser/mstore-api/tags/4.18.4/controllers/helpers/firebase-phone-auth-helper.php#L5",
+      "https://plugins.trac.wordpress.org/browser/mstore-api/trunk/controllers/flutter-user.php#L829",
+      "https://plugins.trac.wordpress.org/browser/mstore-api/trunk/controllers/flutter-user.php#L940",
+      "https://plugins.trac.wordpress.org/browser/mstore-api/trunk/controllers/helpers/firebase-phone-auth-helper.php#L5"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-13447",
+    "added_at": "2026-09-05T20:00:49+09:00"
+  },
+  {
+    "id": "CVE-2024-11080",
+    "published": "2026-09-05",
+    "last_modified": "2026-09-05",
+    "status": "Received",
+    "description": "The Post Grid and Gutenberg Blocks – ComboBlocks plugin for WordPress is vulnerable to Unauthenticated Hook Injection in versions 2.2.32 to 2.3.1 via several functions in the ~/includes/blocks/form-wrap/function.php file. This makes it possible for unauthenticated attackers to execute actions with hooks in WordPress, granted no other security controls are present in the function.",
+    "cvss": {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "score": 9.8,
+      "severity": "CRITICAL",
+      "attack_vector": "네트워크",
+      "attack_complexity": "낮음",
+      "privileges_required": "없음",
+      "user_interaction": "없음"
+    },
+    "cwes": [
+      "CWE-94"
+    ],
+    "affected": [],
+    "references": [
+      "https://plugins.trac.wordpress.org/browser/post-grid/trunk/includes/blocks/form-wrap/functions.php#L116",
+      "https://plugins.trac.wordpress.org/browser/post-grid/trunk/includes/blocks/form-wrap/functions.php#L262",
+      "https://plugins.trac.wordpress.org/browser/post-grid/trunk/includes/blocks/form-wrap/functions.php#L3249",
+      "https://www.wordfence.com/threat-intel/vulnerabilities/id/ec8666d4-042e-4cf4-86f5-474a69d90ff6?source=cve"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2024-11080",
+    "added_at": "2026-09-05T20:00:49+09:00"
+  },
+  {
     "id": "CVE-2026-85696",
     "published": "2026-09-04",
     "last_modified": "2026-09-04",
