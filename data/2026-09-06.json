@@ -1,0 +1,111 @@
+{
+  "tagline": "글로벌 정보보안 뉴스레터",
+  "title": "보안 브리핑",
+  "date_display": "2026년 9월 6일 일요일",
+  "date_short": "2026.09.06",
+  "sources_line": "The Hacker News · BleepingComputer · SecurityWeek · KrebsOnSecurity · CISA · NCSC UK · Unit 42 · 보안뉴스 · 데일리시큐 · 전자신문",
+  "seo": {
+    "title": "취약점, 랜섬웨어 — 2026.09.06 보안 브리핑",
+    "description": "오늘 주요 취약점·침해 사고·위협 트렌드 요약.",
+    "keywords": "CVE, 랜섬웨어, 취약점, 침해사고, 보안"
+  },
+  "sections": [
+    {
+      "label": "취약점 & 공격",
+      "type": "cards",
+      "items": [
+        {
+          "severity": "critical",
+          "source": "The Hacker News",
+          "headline": "Magento와 Adobe Commerce 제로데이 취약점 악용으로 온라인 스토어 해킹",
+          "url": "https://thehackernews.com/2026/09/unpatched-magento-and-adobe-commerce.html",
+          "summary": "Magento Open Source 및 Adobe Commerce의 패치되지 않은 취약점이 공격자에게 악용되어 로그인 없이 서버에 악성코드를 실행할 수 있게 했다. 이 취약점은 Sansec에서 경고했다."
+        },
+        {
+          "severity": "critical",
+          "source": "The Hacker News",
+          "headline": "TeamCity 취약점 악용으로 JetBrains Cadence 환경 침해",
+          "url": "https://thehackernews.com/2026/09/attackers-breached-jetbrains-cadence.html",
+          "summary": "TeamCity의 최근 공개된 심각한 취약점이 악용되어 JetBrains Cadence 환경이 침해되었으며, 사용자는 모든 자격 증명을 즉시 회수하거나 재발급해야 한다."
+        },
+        {
+          "severity": "critical",
+          "source": "The Hacker News",
+          "headline": "VMware Workstation 및 Fusion VM-Escape 취약점 발견",
+          "url": "https://thehackernews.com/2026/09/critical-vmware-workstation-and-fusion.html",
+          "summary": "Broadcom은 VMware Workstation 및 Fusion의 심각한 VM-Escape 취약점(CVE-2026-59346, CVSS 9.3)을 패치했다. 이 취약점은 특정 조건 하에 호스트 코드 실행이 가능하다."
+        },
+        {
+          "severity": "high",
+          "source": "Security Affairs",
+          "headline": "PostgreSQL 12년 된 논리적 복제 취약점 패치",
+          "url": "https://thehackernews.com/2026/09/postgresql-fixes-12-year-old-logical.html",
+          "summary": "PostgreSQL은 REPLICATION 권한을 가진 사용자가 운영체제 사용자로 임의 코드를 실행할 수 있는 취약점(CVE-2026-6471, CVSS 7.2)을 수정했다. 이 취약점은 2004년 논리적 복제 기능 도입 시부터 존재했다."
+        },
+        {
+          "severity": "high",
+          "source": "SecurityWeek",
+          "headline": "Elementor Pro WordPress 플러그인 취약점 악용으로 사이트 해킹",
+          "url": "https://www.securityweek.com/elementor-pro-wordpress-plugin-vulnerability-exploited-to-hack-sites/",
+          "summary": "CVE-2026-32475 (CVSS 9.8) 취약점이 Elementor Pro의 폼 제출 기능에서 발견되어 악용되어 사이트가 해킹되고 있다."
+        },
+        {
+          "severity": "high",
+          "source": "SecurityWeek",
+          "headline": "HPE AOS-CX에서 심각한 RCE 취약점 패치",
+          "url": "https://www.securityweek.com/hpe-patches-critical-rce-vulnerabilities-in-aos-cx/",
+          "summary": "CVE-2026-73749 (CVSS 9.8) 취약점이 HPE AOS-CX에서 발견되어 패치되었다. 이 취약점은 원격 코드 실행이 가능하다."
+        }
+      ]
+    },
+    {
+      "label": "침해 사고",
+      "type": "cards",
+      "items": [
+        {
+          "severity": "incident",
+          "source": "The Hacker News",
+          "headline": "Trezor, ShipMonk 해킹으로 67,000명의 미국 고객 정보 유출",
+          "url": "https://thehackernews.com/2026/09/trezor-says-shipmonk-breach-exposed.html",
+          "summary": "Trezor는 ShipMonk의 해킹으로 67,000명의 미국 고객 정보가 유출되었으며, 이름, 이메일, 전화번호, 배송 주소 등이 노출되었다고 발표했다."
+        },
+        {
+          "severity": "incident",
+          "source": "GBHackers",
+          "headline": "CARS24 데이터 유출로 3,100명의 고객 정보 유출",
+          "url": "https://gbhackers.com/cars24-data-breach-exposes-3100-customer-records/",
+          "summary": "CARS24는 약 3,100명의 고객 정보가 해커에 의해 유출되어 경쟁사에 판매된 것으로 추정된다. 이로 인해 약 5.7억 원의 상업적 손실이 발생했다."
+        },
+        {
+          "severity": "incident",
+          "source": "Security Affairs",
+          "headline": "Manchester Airports Group 해킹으로 880만 명의 데이터 유출",
+          "url": "https://securityaffairs.com/198447/data-breach/crooks-behind-manchester-airports-group-hack-leaked-data-of-8-8-million-people.html",
+          "summary": "Manchester Airports Group의 데이터가 FulcrumSec에 의해 유출되어 880만 명의 이메일과 전화번호가 노출되었다. 이는 제3자 제공업체의 데이터 유출로 인한 것이다."
+        }
+      ]
+    },
+    {
+      "label": "동향 & 분석",
+      "type": "trends",
+      "items": [
+        {
+          "lead": "AI 기반 공격 증가",
+          "body": "AI 모델이 사용되어 기업 네트워크 침투 및 클라우드 인프라 해킹이 빠르게 이루어지고 있다. Palo Alto Networks Unit 42는 10시간 이내에 기업 환경이 해킹된 사례를 보고했다."
+        },
+        {
+          "lead": "취약점 패치 지연",
+          "body": "Magento, Adobe Commerce, PostgreSQL 등에서 발견된 취약점들이 패치 지연으로 인해 실제 공격에 악용되고 있다. 이는 보안 업데이트를 신속히 적용해야 함을 시사한다."
+        },
+        {
+          "lead": "랜섬웨어 확산",
+          "body": "Panzer 랜섬웨어는 11개 국가의 16개 피해자에게 데이터 유출과 암호화를 동시에 적용하며 RaaS 운영 모델로 확산되고 있다."
+        },
+        {
+          "lead": "데이터 유출 사고 증가",
+          "body": "Trezor, CARS24, Manchester Airports Group 등에서 대규모 데이터 유출 사고가 발생하며, 기업의 데이터 보호 체계에 대한 재검토가 필요하다."
+        }
+      ]
+    }
+  ]
+}
