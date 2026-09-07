@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI 기반 보안 동향 및 주요 공격 사례 분석 | SecuLog</title>
+<meta name="description" content="2026년 9월 첫 주 보안 벤더들의 주요 발표 및 AI 기반 공격 동향을 분석한 리포트입니다.">
+<meta name="keywords" content="AI 보안, 음성 피싱, 공급망 공격, 보안 인프라, 봇넷 해체, 정부 사이트 해킹, AI 에이전트, 보안 강화, 보안 솔루션, 공공 인프라">
+<meta property="og:type" content="article">
+<meta property="og:title" content="AI 기반 보안 동향 및 주요 공격 사례 분석">
+<meta property="og:description" content="2026년 9월 첫 주 보안 벤더들의 주요 발표 및 AI 기반 공격 동향을 분석한 리포트입니다.">
+<meta property="og:url" content="https://macbong83.github.io/posts/vendor-weekly-2026-09-07.html">
+<meta property="og:site_name" content="SecuLog">
+<link rel="canonical" href="https://macbong83.github.io/posts/vendor-weekly-2026-09-07.html">
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: -apple-system,'Malgun Gothic','Apple SD Gothic Neo',Arial,sans-serif; background:#f4f5f7; color:#1a1a2e; line-height:1.6; }
+  a { text-decoration:none; color:inherit; }
+  .wrapper { max-width:700px; margin:32px auto; background:#fff; border-radius:12px; overflow:hidden; box-shadow:0 2px 20px rgba(0,0,0,0.08); }
+  .header { background:#0d1b3e; padding:28px 36px 24px; border-bottom:3px solid #2563eb; }
+  .wordmark { font-size:26px; font-weight:800; color:#fff; letter-spacing:-0.02em; }
+  .wordmark .accent { color:#60a5fa; }
+  .header-meta { margin-top:10px; }
+  .nl-label { font-size:10px; letter-spacing:0.1em; text-transform:uppercase; color:#64748b; }
+  .nl-title { font-size:19px; font-weight:700; color:#fff; margin-top:4px; }
+  .nl-date { font-size:12px; color:#94a3b8; margin-top:3px; }
+  .summary-box { background:#f0f7ff; border-left:4px solid #2563eb; padding:16px 20px; margin:24px 36px 0; border-radius:0 8px 8px 0; font-size:13px; color:#1e3a5f; line-height:1.7; }
+  .body { padding:28px 36px 32px; }
+  .section-label { font-size:10px; letter-spacing:0.1em; text-transform:uppercase; color:#8a93a8; font-weight:600; padding-bottom:8px; border-bottom:1px solid #e8eaed; margin-bottom:4px; margin-top:28px; }
+  .section-label:first-child { margin-top:0; }
+  .card { display:block; padding:16px 0; border-bottom:1px solid #f0f1f3; transition:background 0.15s; }
+  .card:last-child { border-bottom:none; }
+  .card:hover { background:#f8f9fc; margin:0 -36px; padding:16px 36px; }
+  .card-inner { display:flex; gap:14px; }
+  .sev-bar { width:3px; border-radius:2px; flex-shrink:0; margin:3px 0; }
+  .sev-vendor { background:#0891b2; }
+  .card-content { flex:1; }
+  .card-top { display:flex; align-items:center; gap:8px; margin-bottom:6px; flex-wrap:wrap; }
+  .badge { font-size:10px; font-weight:700; padding:3px 9px; border-radius:4px; }
+  .badge-vendor { background:#e0f2fe; color:#0369a1; border:1px solid #bae6fd; }
+  .card-headline { font-size:14px; font-weight:600; color:#0d1b3e; margin-bottom:5px; line-height:1.45; }
+  .card-headline .arrow { font-size:12px; color:#2563eb; margin-left:4px; opacity:0; transition:opacity 0.15s; }
+  .card:hover .card-headline .arrow { opacity:1; }
+  .card-summary { font-size:13px; color:#4a5568; line-height:1.65; }
+  .trend-box { background:#f8f9fc; border-radius:10px; padding:18px 20px; margin-top:6px; }
+  .trend-row { display:flex; gap:12px; padding:10px 0; border-bottom:1px solid #e8eaed; align-items:flex-start; }
+  .trend-row:last-child { border-bottom:none; padding-bottom:0; }
+  .trend-num { font-size:11px; font-weight:700; color:#2563eb; min-width:22px; padding-top:2px; }
+  .trend-text { font-size:13px; color:#4a5568; line-height:1.6; }
+  .trend-text strong { color:#0d1b3e; font-weight:600; }
+  .footer { background:#f4f5f7; border-top:1px solid #e8eaed; padding:16px 36px; font-size:11px; color:#9aa0b0; }
+  @media(max-width:600px){
+    .wrapper{margin:0;border-radius:0;}
+    .header{padding:18px 20px;}
+    .body{padding:18px 20px 24px;}
+    .summary-box{margin:16px 20px 0;}
+    .card:hover{margin:0 -20px;padding:16px 20px;}
+    .footer{padding:14px 20px;}
+  }
+</style>
+</head>
+<body>
+<div class="wrapper">
+  <div class="header">
+    <div class="wordmark">Secu<span class="accent">Log</span></div>
+    <div class="header-meta">
+      <div class="nl-label">글로벌 보안 벤더 주간 동향</div>
+      <div class="nl-title">이번 주 보안 벤더 동향</div>
+      <div class="nl-date">2026-09-01 ~ 2026-09-07</div>
+    </div>
+  </div>
+  <div class="summary-box">이번 주에는 AI 기반 공격의 증가와 보안 대응 전략의 변화가 두드러졌다. 특히, AI를 활용한 피싱, 공급망 공격, 그리고 보안 인프라의 현대화가 주요 주제로 등장했다. 또한, 보안 벤더들은 AI 기술을 활용한 새로운 보안 솔루션을 발표하며 AI와 보안의 경계가 모호해지는 현상에 대응하고 있다.</div>
+  <div class="body">
+    <div class="section-label">이번 주 주요 포스트</div>
+    
+    <a class="card" href="https://unit42.paloaltonetworks.com/spring-ring-voice-phishing-campaigns/" target="_blank">
+      <div class="card-inner"><div class="sev-bar sev-vendor"></div><div class="card-content">
+        <div class="card-top"><span class="badge badge-vendor">Palo Alto</span></div>
+        <div class="card-headline">Voice Phishing in Microsoft Teams<span class="arrow">↗</span></div>
+        <div class="card-summary">AI 기반의 음성 피싱이 Microsoft Teams 환경에서 증가하고 있으며, 기업의 도메인 컨트롤러를 대상으로 하고 있다. 이는 보안 정책에서 VoIP 및 협업 플랫폼에 대한 보호를 강화해야 함을 시사한다.</div>
+      </div></div>
+    </a>
+    <a class="card" href="https://blog.checkpoint.com/services/security-hardening-assessment-prepare-for-ai-transformation-without-increasing-risk/" target="_blank">
+      <div class="card-inner"><div class="sev-bar sev-vendor"></div><div class="card-content">
+        <div class="card-top"><span class="badge badge-vendor">Check Point</span></div>
+        <div class="card-headline">AI Transformation Security Assessment<span class="arrow">↗</span></div>
+        <div class="card-summary">AI 도입 시 기존 보안 취약점이 확대될 수 있어, 보안 강화 평가가 필수적이다. 기업은 AI와 보안의 균형을 유지하기 위해 자동화된 검증과 전문가 검토를 병행해야 한다.</div>
+      </div></div>
+    </a>
+    <a class="card" href="https://www.crowdstrike.com/en-us/blog/falcon-guardian-defines-next-generation-of-ai-security/" target="_blank">
+      <div class="card-inner"><div class="sev-bar sev-vendor"></div><div class="card-content">
+        <div class="card-top"><span class="badge badge-vendor">CrowdStrike</span></div>
+        <div class="card-headline">Falcon Guardian AI Security Solution<span class="arrow">↗</span></div>
+        <div class="card-summary">AI 기반의 보안 솔루션으로, 런타임 보호와 AI 게이트웨이 도입을 통해 AI 에이전트의 위협을 탐지하고 대응하는 새로운 방향을 제시한다.</div>
+      </div></div>
+    </a>
+    <a class="card" href="https://blog.checkpoint.com/ai-security/ai-observability-must-evolve-for-the-agentic-era/" target="_blank">
+      <div class="card-inner"><div class="sev-bar sev-vendor"></div><div class="card-content">
+        <div class="card-top"><span class="badge badge-vendor">Check Point</span></div>
+        <div class="card-headline">AI Observability for Agentic Era<span class="arrow">↗</span></div>
+        <div class="card-summary">AI 에이전트의 의사결정 추적을 위한 새로운 관찰 기법이 필요하다. 기존의 관찰 기법은 AI의 결정 과정을 이해하지 못해, 위험 행동을 사전에 차단하기 어렵다.</div>
+      </div></div>
+    </a>
+    <a class="card" href="https://www.crowdstrike.com/en-us/blog/crowdstrike-announces-agentic-identity-provider/" target="_blank">
+      <div class="card-inner"><div class="sev-bar sev-vendor"></div><div class="card-content">
+        <div class="card-top"><span class="badge badge-vendor">CrowdStrike</span></div>
+        <div class="card-headline">Agentic Identity Provider<span class="arrow">↗</span></div>
+        <div class="card-summary">AI 에이전트에 신뢰할 수 있는 식별자 부여 및 실시간 맥락 기반의 접근 제어가 필요하다. 이는 AI 기반 보안의 핵심 요소로, 권한 관리의 현대화를 요구한다.</div>
+      </div></div>
+    </a>
+    <a class="card" href="https://asec.ahnlab.com/ko/95210/" target="_blank">
+      <div class="card-inner"><div class="sev-bar sev-vendor"></div><div class="card-content">
+        <div class="card-top"><span class="badge badge-vendor">AhnLab</span></div>
+        <div class="card-headline">회피형 악성코드 공격 수법<span class="arrow">↗</span></div>
+        <div class="card-summary">악성코드가 사용자의 경계를 낮추고 정상 프로그램에 숨어 실행하는 &#x27;회피형&#x27; 공격이 증가하고 있다. 이는 기존의 보안 시스템이 이러한 공격을 탐지하기 어렵게 만들고 있다.</div>
+      </div></div>
+    </a>
+    <a class="card" href="https://blog.checkpoint.com/research/gambling-goblin-a-chinese-speaking-actor-hijacks-brazilian-government-sites-to-fuel-a-global-seo-fraud-machine/" target="_blank">
+      <div class="card-inner"><div class="sev-bar sev-vendor"></div><div class="card-content">
+        <div class="card-top"><span class="badge badge-vendor">Check Point</span></div>
+        <div class="card-headline">Gambling Goblin SEO Fraud<span class="arrow">↗</span></div>
+        <div class="card-summary">정부 웹사이트를 악용한 SEO 사기 운영이 확대되고 있으며, 이는 공공 인프라의 보안 취약점을 노리는 공격자들의 전략을 보여준다.</div>
+      </div></div>
+    </a>
+    <a class="card" href="https://www.crowdstrike.com/en-us/blog/inside-sality-botnet-disruption-operation/" target="_blank">
+      <div class="card-inner"><div class="sev-bar sev-vendor"></div><div class="card-content">
+        <div class="card-top"><span class="badge badge-vendor">CrowdStrike</span></div>
+        <div class="card-headline">Sality Botnet Disruption<span class="arrow">↗</span></div>
+        <div class="card-summary">국제 협력이 필요한 대규모 봇넷 해체 사례를 보여주며, 기업은 사이버 보안에 있어 글로벌 협력의 중요성을 인식해야 한다.</div>
+      </div></div>
+    </a>
+    <div class="section-label" style="margin-top:28px;">공통 트렌드</div>
+    <div class="trend-box">
+      <div class="trend-row">
+        <div class="trend-num">01</div>
+        <div class="trend-text"><strong>AI 기반 공격 증가</strong> — AI 기술이 공격자들의 도구로 활용되며, 음성 피싱, 데이터 유출, 봇넷 운영 등 다양한 형태로 나타나고 있다. 이에 따라 보안 벤더들은 AI 기반의 탐지 및 대응 솔루션을 지속적으로 개발하고 있다.</div>
+      </div>
+      <div class="trend-row">
+        <div class="trend-num">02</div>
+        <div class="trend-text"><strong>보안 인프라 현대화</strong> — AI와 협업 플랫폼의 확대에 따라 기존 보안 인프라가 부족해지고 있다. 보안 벤더들은 AI 에이전트의 접근 제어, 의사결정 추적, 실시간 관찰 등 새로운 보안 기술을 도입하고 있다.</div>
+      </div>
+      <div class="trend-row">
+        <div class="trend-num">03</div>
+        <div class="trend-text"><strong>공공 인프라 보안 취약점 노출</strong> — 정부 및 공공 기관의 웹사이트가 악용되는 사례가 증가하고 있다. 이는 공공 인프라의 보안 강화가 시급하며, 기존의 보안 정책이 공격자들의 전략에 대응하지 못하고 있음을 보여준다.</div>
+      </div></div>
+  </div>
+  <div class="footer">
+    출처: CrowdStrike · SentinelOne · Tenable · Prompt Security &nbsp;|&nbsp; © 2026 Felix · SecuLog
+  </div>
+</div>
+</body>
+</html>

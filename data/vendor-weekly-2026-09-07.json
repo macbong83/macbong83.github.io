@@ -1,0 +1,77 @@
+{
+  "week_start": "2026-09-01",
+  "week_end": "2026-09-07",
+  "title": "이번 주 보안 벤더 동향",
+  "summary": "이번 주에는 AI 기반 공격의 증가와 보안 대응 전략의 변화가 두드러졌다. 특히, AI를 활용한 피싱, 공급망 공격, 그리고 보안 인프라의 현대화가 주요 주제로 등장했다. 또한, 보안 벤더들은 AI 기술을 활용한 새로운 보안 솔루션을 발표하며 AI와 보안의 경계가 모호해지는 현상에 대응하고 있다.",
+  "highlights": [
+    {
+      "vendor": "Palo Alto",
+      "headline": "Voice Phishing in Microsoft Teams",
+      "url": "https://unit42.paloaltonetworks.com/spring-ring-voice-phishing-campaigns/",
+      "insight": "AI 기반의 음성 피싱이 Microsoft Teams 환경에서 증가하고 있으며, 기업의 도메인 컨트롤러를 대상으로 하고 있다. 이는 보안 정책에서 VoIP 및 협업 플랫폼에 대한 보호를 강화해야 함을 시사한다."
+    },
+    {
+      "vendor": "Check Point",
+      "headline": "AI Transformation Security Assessment",
+      "url": "https://blog.checkpoint.com/services/security-hardening-assessment-prepare-for-ai-transformation-without-increasing-risk/",
+      "insight": "AI 도입 시 기존 보안 취약점이 확대될 수 있어, 보안 강화 평가가 필수적이다. 기업은 AI와 보안의 균형을 유지하기 위해 자동화된 검증과 전문가 검토를 병행해야 한다."
+    },
+    {
+      "vendor": "CrowdStrike",
+      "headline": "Falcon Guardian AI Security Solution",
+      "url": "https://www.crowdstrike.com/en-us/blog/falcon-guardian-defines-next-generation-of-ai-security/",
+      "insight": "AI 기반의 보안 솔루션으로, 런타임 보호와 AI 게이트웨이 도입을 통해 AI 에이전트의 위협을 탐지하고 대응하는 새로운 방향을 제시한다."
+    },
+    {
+      "vendor": "Check Point",
+      "headline": "AI Observability for Agentic Era",
+      "url": "https://blog.checkpoint.com/ai-security/ai-observability-must-evolve-for-the-agentic-era/",
+      "insight": "AI 에이전트의 의사결정 추적을 위한 새로운 관찰 기법이 필요하다. 기존의 관찰 기법은 AI의 결정 과정을 이해하지 못해, 위험 행동을 사전에 차단하기 어렵다."
+    },
+    {
+      "vendor": "CrowdStrike",
+      "headline": "Agentic Identity Provider",
+      "url": "https://www.crowdstrike.com/en-us/blog/crowdstrike-announces-agentic-identity-provider/",
+      "insight": "AI 에이전트에 신뢰할 수 있는 식별자 부여 및 실시간 맥락 기반의 접근 제어가 필요하다. 이는 AI 기반 보안의 핵심 요소로, 권한 관리의 현대화를 요구한다."
+    },
+    {
+      "vendor": "AhnLab",
+      "headline": "회피형 악성코드 공격 수법",
+      "url": "https://asec.ahnlab.com/ko/95210/",
+      "insight": "악성코드가 사용자의 경계를 낮추고 정상 프로그램에 숨어 실행하는 '회피형' 공격이 증가하고 있다. 이는 기존의 보안 시스템이 이러한 공격을 탐지하기 어렵게 만들고 있다."
+    },
+    {
+      "vendor": "Check Point",
+      "headline": "Gambling Goblin SEO Fraud",
+      "url": "https://blog.checkpoint.com/research/gambling-goblin-a-chinese-speaking-actor-hijacks-brazilian-government-sites-to-fuel-a-global-seo-fraud-machine/",
+      "insight": "정부 웹사이트를 악용한 SEO 사기 운영이 확대되고 있으며, 이는 공공 인프라의 보안 취약점을 노리는 공격자들의 전략을 보여준다."
+    },
+    {
+      "vendor": "CrowdStrike",
+      "headline": "Sality Botnet Disruption",
+      "url": "https://www.crowdstrike.com/en-us/blog/inside-sality-botnet-disruption-operation/",
+      "insight": "국제 협력이 필요한 대규모 봇넷 해체 사례를 보여주며, 기업은 사이버 보안에 있어 글로벌 협력의 중요성을 인식해야 한다."
+    }
+  ],
+  "trends": [
+    {
+      "lead": "AI 기반 공격 증가",
+      "body": "AI 기술이 공격자들의 도구로 활용되며, 음성 피싱, 데이터 유출, 봇넷 운영 등 다양한 형태로 나타나고 있다. 이에 따라 보안 벤더들은 AI 기반의 탐지 및 대응 솔루션을 지속적으로 개발하고 있다."
+    },
+    {
+      "lead": "보안 인프라 현대화",
+      "body": "AI와 협업 플랫폼의 확대에 따라 기존 보안 인프라가 부족해지고 있다. 보안 벤더들은 AI 에이전트의 접근 제어, 의사결정 추적, 실시간 관찰 등 새로운 보안 기술을 도입하고 있다."
+    },
+    {
+      "lead": "공공 인프라 보안 취약점 노출",
+      "body": "정부 및 공공 기관의 웹사이트가 악용되는 사례가 증가하고 있다. 이는 공공 인프라의 보안 강화가 시급하며, 기존의 보안 정책이 공격자들의 전략에 대응하지 못하고 있음을 보여준다."
+    }
+  ],
+  "seo": {
+    "title": "AI 기반 보안 동향 및 주요 공격 사례 분석",
+    "description": "2026년 9월 첫 주 보안 벤더들의 주요 발표 및 AI 기반 공격 동향을 분석한 리포트입니다.",
+    "keywords": "AI 보안, 음성 피싱, 공급망 공격, 보안 인프라, 봇넷 해체, 정부 사이트 해킹, AI 에이전트, 보안 강화, 보안 솔루션, 공공 인프라"
+  },
+  "slug": "vendor-weekly-2026-09-07",
+  "type": "vendor-weekly"
+}
