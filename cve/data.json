@@ -1,5 +1,69 @@
 [
   {
+    "id": "CVE-2026-86299",
+    "published": "2026-09-07",
+    "last_modified": "2026-09-07",
+    "status": "Received",
+    "description": "A vulnerability was detected in Linksys RE7000 2.0.15. This affects the function platform_event_pingTest of the file /cgi-bin/json.cgi?PingTest of the component PingTest Handler. The manipulation of the argument pingTestIp/pingTestPktSize/pingTestTimes results in os command injection. The attack can be launched remotely. The exploit is now public and may be used.",
+    "cvss": {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H",
+      "score": 9.9,
+      "severity": "CRITICAL",
+      "attack_vector": "네트워크",
+      "attack_complexity": "낮음",
+      "privileges_required": "낮음",
+      "user_interaction": "없음"
+    },
+    "cwes": [
+      "CWE-77",
+      "CWE-78"
+    ],
+    "affected": [],
+    "references": [
+      "https://github.com/limou89/somevul/blob/main/Linksys_RE7000_v2_PingTest_Command_Injection.md",
+      "https://vuldb.com/cve/CVE-2026-86299",
+      "https://vuldb.com/submit/906547",
+      "https://vuldb.com/vuln/399463",
+      "https://vuldb.com/vuln/399463/cti",
+      "https://www.linksys.com/"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-86299",
+    "added_at": "2026-09-08T08:00:42+09:00"
+  },
+  {
+    "id": "CVE-2026-86296",
+    "published": "2026-09-07",
+    "last_modified": "2026-09-07",
+    "status": "Received",
+    "description": "A vulnerability was determined in D-Link DIR-822A A_101. This vulnerability affects the function strcpy of the file udhcpcd/serverpacket.c of the component udhcpcd. This manipulation causes stack-based buffer overflow. The attack is possible to be carried out remotely. The exploit has been publicly disclosed and may be utilized.",
+    "cvss": {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:H",
+      "score": 10.0,
+      "severity": "CRITICAL",
+      "attack_vector": "네트워크",
+      "attack_complexity": "낮음",
+      "privileges_required": "없음",
+      "user_interaction": "없음"
+    },
+    "cwes": [
+      "CWE-119",
+      "CWE-121"
+    ],
+    "affected": [],
+    "references": [
+      "https://tzh00203.notion.site/D-Link-DIR-822A-Stack-Overflow-in-udhcpd-TR-111-Option-125-Parsing-33cb5c52018a80238b80e89e7c7c68f0",
+      "https://vuldb.com/cve/CVE-2026-86296",
+      "https://vuldb.com/submit/906297",
+      "https://vuldb.com/vuln/399458",
+      "https://vuldb.com/vuln/399458/cti",
+      "https://www.dlink.com/"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-86296",
+    "added_at": "2026-09-08T08:00:42+09:00"
+  },
+  {
     "id": "CVE-2026-79698",
     "published": "2026-09-07",
     "last_modified": "2026-09-07",
@@ -62,6 +126,138 @@
     ],
     "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-79697",
     "added_at": "2026-09-07T20:00:18+09:00"
+  },
+  {
+    "id": "CVE-2026-7861",
+    "published": "2026-09-07",
+    "last_modified": "2026-09-07",
+    "status": "Received",
+    "description": "Deserialization of untrusted data vulnerability in Next4Biz Information Technologies Inc. CSM (Customer Service Management) allows Code Injection.\n\nThis issue affects CSM (Customer Service Management): through 07092026. NOTE: The vendor was contacted early about this disclosure but did not respond in any way.",
+    "cvss": {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "score": 9.8,
+      "severity": "CRITICAL",
+      "attack_vector": "네트워크",
+      "attack_complexity": "낮음",
+      "privileges_required": "없음",
+      "user_interaction": "없음"
+    },
+    "cwes": [
+      "CWE-502"
+    ],
+    "affected": [],
+    "references": [
+      "https://siberguvenlik.gov.tr/guvenlik-bildirimleri/detay/tr-26-1027"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-7861",
+    "added_at": "2026-09-08T08:00:42+09:00"
+  },
+  {
+    "id": "CVE-2026-76578",
+    "published": "2026-09-07",
+    "last_modified": "2026-09-07",
+    "status": "Received",
+    "description": "A flaw was found in FreeIPA. The self-managed OTP token ACI does not require authentication and does not restrict which attributes may be added alongside the token entry. An unauthenticated LDAP client can exploit this, combined with a related flaw in the underlying directory server's ACI evaluation (tracked separately), to create an arbitrary attacker-controlled Kerberos principal and have it added to the administrators group. This allows a remote, unauthenticated attacker to obtain genuine FreeIPA administrator-group membership and perform administrative operations against the directory and, on SID-enabled deployments, other IdM services.",
+    "cvss": {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "score": 9.8,
+      "severity": "CRITICAL",
+      "attack_vector": "네트워크",
+      "attack_complexity": "낮음",
+      "privileges_required": "없음",
+      "user_interaction": "없음"
+    },
+    "cwes": [
+      "CWE-306"
+    ],
+    "affected": [],
+    "references": [
+      "https://access.redhat.com/security/cve/CVE-2026-76578",
+      "https://bugzilla.redhat.com/show_bug.cgi?id=2519522"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-76578",
+    "added_at": "2026-09-08T08:00:42+09:00"
+  },
+  {
+    "id": "CVE-2026-75650",
+    "published": "2026-09-07",
+    "last_modified": "2026-09-07",
+    "status": "Received",
+    "description": "Adobe Commerce is affected by an Improper Neutralization of Special Elements Used in a Template Engine vulnerability that could result in arbitrary code execution in the context of the current user. An attacker could exploit this vulnerability to execute arbitrary code. Exploitation of this issue does not require user interaction. Scope is changed.",
+    "cvss": {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:H",
+      "score": 10.0,
+      "severity": "CRITICAL",
+      "attack_vector": "네트워크",
+      "attack_complexity": "낮음",
+      "privileges_required": "없음",
+      "user_interaction": "없음"
+    },
+    "cwes": [
+      "CWE-1336"
+    ],
+    "affected": [],
+    "references": [
+      "https://helpx.adobe.com/security/products/magento/apsb26-146.html"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-75650",
+    "added_at": "2026-09-08T08:00:42+09:00"
+  },
+  {
+    "id": "CVE-2026-6223",
+    "published": "2026-09-07",
+    "last_modified": "2026-09-07",
+    "status": "Received",
+    "description": "Improper restriction of excessive authentication attempts vulnerability in Bahçelievler Muncipality BiHayat App allows Authentication Bypass.\n\nThis issue affects BiHayat App: from 2.1.7 through 07092026. NOTE: The vendor was contacted early about this disclosure but did not respond in any way.",
+    "cvss": {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:L",
+      "score": 9.4,
+      "severity": "CRITICAL",
+      "attack_vector": "네트워크",
+      "attack_complexity": "낮음",
+      "privileges_required": "없음",
+      "user_interaction": "없음"
+    },
+    "cwes": [
+      "CWE-307"
+    ],
+    "affected": [],
+    "references": [
+      "https://siberguvenlik.gov.tr/guvenlik-bildirimleri/detay/tr-26-1014"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-6223",
+    "added_at": "2026-09-08T08:00:42+09:00"
+  },
+  {
+    "id": "CVE-2026-18922",
+    "published": "2026-09-07",
+    "last_modified": "2026-09-07",
+    "status": "Received",
+    "description": "A flaw was found in 389 Directory Server. During SASL PLAIN authentication, a stale identity carried in a Cyrus SASL auxiliary property from a prior failed bind attempt can be installed on a connection following a subsequent, unrelated successful bind, regardless of which SASL mechanism completes that second bind. An attacker can send a SASL PLAIN bind as cn=Directory Manager with an incorrect password, then complete a SASL ANONYMOUS bind on the same connection, causing the server to grant Directory Manager authority without any valid credentials. A variant using a valid low-privileged account's own successful bind instead of an anonymous one is also possible.",
+    "cvss": {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "score": 9.8,
+      "severity": "CRITICAL",
+      "attack_vector": "네트워크",
+      "attack_complexity": "낮음",
+      "privileges_required": "없음",
+      "user_interaction": "없음"
+    },
+    "cwes": [
+      "CWE-287"
+    ],
+    "affected": [],
+    "references": [
+      "https://access.redhat.com/security/cve/CVE-2026-18922",
+      "https://bugzilla.redhat.com/show_bug.cgi?id=2511388"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-18922",
+    "added_at": "2026-09-08T08:00:42+09:00"
   },
   {
     "id": "CVE-2026-86167",
