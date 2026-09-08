@@ -64,6 +64,137 @@
     "added_at": "2026-09-08T20:00:39+09:00"
   },
   {
+    "id": "CVE-2026-83941",
+    "published": "2026-09-08",
+    "last_modified": "2026-09-08",
+    "status": "Awaiting Analysis",
+    "description": "Missing authorization in Entra ID allows an authorized attacker to elevate privileges over a network.",
+    "cvss": {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:L",
+      "score": 9.9,
+      "severity": "CRITICAL",
+      "attack_vector": "네트워크",
+      "attack_complexity": "낮음",
+      "privileges_required": "낮음",
+      "user_interaction": "없음"
+    },
+    "cwes": [
+      "CWE-862"
+    ],
+    "affected": [],
+    "references": [
+      "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-83941"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-83941",
+    "added_at": "2026-09-09T08:00:08+09:00"
+  },
+  {
+    "id": "CVE-2026-82004",
+    "published": "2026-09-08",
+    "last_modified": "2026-09-08",
+    "status": "Undergoing Analysis",
+    "description": "Adobe Campaign Classic (ACC) is affected by an Improper Neutralization of Special Elements used in an OS Command ('OS Command Injection') vulnerability that could result in arbitrary code execution in the context of the current user. An attacker could exploit this vulnerability to execute arbitrary code. Exploitation of this issue does not require user interaction. Scope is changed.",
+    "cvss": {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:H",
+      "score": 10.0,
+      "severity": "CRITICAL",
+      "attack_vector": "네트워크",
+      "attack_complexity": "낮음",
+      "privileges_required": "없음",
+      "user_interaction": "없음"
+    },
+    "cwes": [
+      "CWE-78"
+    ],
+    "affected": [],
+    "references": [
+      "https://helpx.adobe.com/security/products/campaign/apsb26-142.html"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-82004",
+    "added_at": "2026-09-09T08:00:08+09:00"
+  },
+  {
+    "id": "CVE-2026-81376",
+    "published": "2026-09-08",
+    "last_modified": "2026-09-08",
+    "status": "Undergoing Analysis",
+    "description": "Incomplete comparison with missing factors in Visual Studio Code allows an unauthorized attacker to bypass a security feature over a network.",
+    "cvss": {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:H/I:H/A:H",
+      "score": 9.6,
+      "severity": "CRITICAL",
+      "attack_vector": "네트워크",
+      "attack_complexity": "낮음",
+      "privileges_required": "없음",
+      "user_interaction": "필요"
+    },
+    "cwes": [
+      "CWE-693",
+      "CWE-1023"
+    ],
+    "affected": [],
+    "references": [
+      "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-81376"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-81376",
+    "added_at": "2026-09-09T08:00:08+09:00"
+  },
+  {
+    "id": "CVE-2026-78445",
+    "published": "2026-09-08",
+    "last_modified": "2026-09-08",
+    "status": "Undergoing Analysis",
+    "description": "Use after free in Windows Services for NFS ONCRPC XDR Driver allows an unauthorized attacker to execute code over a network.",
+    "cvss": {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "score": 9.8,
+      "severity": "CRITICAL",
+      "attack_vector": "네트워크",
+      "attack_complexity": "낮음",
+      "privileges_required": "없음",
+      "user_interaction": "없음"
+    },
+    "cwes": [
+      "CWE-416"
+    ],
+    "affected": [],
+    "references": [
+      "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-78445"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-78445",
+    "added_at": "2026-09-09T08:00:08+09:00"
+  },
+  {
+    "id": "CVE-2026-77493",
+    "published": "2026-09-08",
+    "last_modified": "2026-09-08",
+    "status": "Undergoing Analysis",
+    "description": "Double free in Microsoft Graphics Component allows an unauthorized attacker to execute code over a network.",
+    "cvss": {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "score": 9.8,
+      "severity": "CRITICAL",
+      "attack_vector": "네트워크",
+      "attack_complexity": "낮음",
+      "privileges_required": "없음",
+      "user_interaction": "없음"
+    },
+    "cwes": [
+      "CWE-415"
+    ],
+    "affected": [],
+    "references": [
+      "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-77493"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-77493",
+    "added_at": "2026-09-09T08:00:08+09:00"
+  },
+  {
     "id": "CVE-2026-76969",
     "published": "2026-09-08",
     "last_modified": "2026-09-08",
@@ -89,6 +220,819 @@
     ],
     "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-76969",
     "added_at": "2026-09-08T20:00:39+09:00"
+  },
+  {
+    "id": "CVE-2026-76201",
+    "published": "2026-09-08",
+    "last_modified": "2026-09-08",
+    "status": "Undergoing Analysis",
+    "description": "Adobe Commerce is affected by a stored Cross-Site Scripting (XSS) vulnerability that could be abused by an attacker to inject malicious scripts into vulnerable form fields. Malicious JavaScript may be executed in a victim's browser when they browse to the page containing the vulnerable field, potentially gaining elevated access or control over the victim's account or session. Scope is changed.",
+    "cvss": {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:H/I:H/A:N",
+      "score": 9.3,
+      "severity": "CRITICAL",
+      "attack_vector": "네트워크",
+      "attack_complexity": "낮음",
+      "privileges_required": "없음",
+      "user_interaction": "필요"
+    },
+    "cwes": [
+      "CWE-79"
+    ],
+    "affected": [],
+    "references": [
+      "https://helpx.adobe.com/security/products/magento/apsb26-138.html"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-76201",
+    "added_at": "2026-09-09T08:00:08+09:00"
+  },
+  {
+    "id": "CVE-2026-76200",
+    "published": "2026-09-08",
+    "last_modified": "2026-09-08",
+    "status": "Undergoing Analysis",
+    "description": "Adobe Commerce is affected by a stored Cross-Site Scripting (XSS) vulnerability that could be abused by an attacker to inject malicious scripts into vulnerable form fields. Malicious JavaScript may be executed in a victim's browser when they browse to the page containing the vulnerable field, potentially gaining elevated access or control over the victim's account or session. Scope is changed.",
+    "cvss": {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:H/I:H/A:N",
+      "score": 9.3,
+      "severity": "CRITICAL",
+      "attack_vector": "네트워크",
+      "attack_complexity": "낮음",
+      "privileges_required": "없음",
+      "user_interaction": "필요"
+    },
+    "cwes": [
+      "CWE-79"
+    ],
+    "affected": [],
+    "references": [
+      "https://helpx.adobe.com/security/products/magento/apsb26-138.html"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-76200",
+    "added_at": "2026-09-09T08:00:08+09:00"
+  },
+  {
+    "id": "CVE-2026-75746",
+    "published": "2026-09-08",
+    "last_modified": "2026-09-08",
+    "status": "Awaiting Analysis",
+    "description": "ColdFusion is affected by an Improper Neutralization of Special Elements used in an SQL Command ('SQL Injection') vulnerability that could result in arbitrary code execution in the context of the current user. An attacker with high privileges could exploit this vulnerability to execute arbitrary code. Exploitation of this issue does not require user interaction. Scope is changed.",
+    "cvss": {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:C/C:H/I:H/A:H",
+      "score": 9.1,
+      "severity": "CRITICAL",
+      "attack_vector": "네트워크",
+      "attack_complexity": "낮음",
+      "privileges_required": "높음",
+      "user_interaction": "없음"
+    },
+    "cwes": [
+      "CWE-89"
+    ],
+    "affected": [],
+    "references": [
+      "https://helpx.adobe.com/security/products/coldfusion/apsb26-119.html"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-75746",
+    "added_at": "2026-09-09T08:00:08+09:00"
+  },
+  {
+    "id": "CVE-2026-73025",
+    "published": "2026-09-08",
+    "last_modified": "2026-09-08",
+    "status": "Awaiting Analysis",
+    "description": "Weak authentication in Windows iSCSI allows an unauthorized attacker to bypass a security feature over a network.",
+    "cvss": {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "score": 9.8,
+      "severity": "CRITICAL",
+      "attack_vector": "네트워크",
+      "attack_complexity": "낮음",
+      "privileges_required": "없음",
+      "user_interaction": "없음"
+    },
+    "cwes": [
+      "CWE-1390"
+    ],
+    "affected": [],
+    "references": [
+      "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-73025"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-73025",
+    "added_at": "2026-09-09T08:00:08+09:00"
+  },
+  {
+    "id": "CVE-2026-73010",
+    "published": "2026-09-08",
+    "last_modified": "2026-09-08",
+    "status": "Awaiting Analysis",
+    "description": "Use after free in Windows Failover Cluster allows an unauthorized attacker to execute code over a network.",
+    "cvss": {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "score": 9.8,
+      "severity": "CRITICAL",
+      "attack_vector": "네트워크",
+      "attack_complexity": "낮음",
+      "privileges_required": "없음",
+      "user_interaction": "없음"
+    },
+    "cwes": [
+      "CWE-416"
+    ],
+    "affected": [],
+    "references": [
+      "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-73010"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-73010",
+    "added_at": "2026-09-09T08:00:08+09:00"
+  },
+  {
+    "id": "CVE-2026-73009",
+    "published": "2026-09-08",
+    "last_modified": "2026-09-08",
+    "status": "Awaiting Analysis",
+    "description": "Use after free in Windows Secure Socket Tunneling Protocol (SSTP) allows an unauthorized attacker to execute code over a network.",
+    "cvss": {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "score": 9.8,
+      "severity": "CRITICAL",
+      "attack_vector": "네트워크",
+      "attack_complexity": "낮음",
+      "privileges_required": "없음",
+      "user_interaction": "없음"
+    },
+    "cwes": [
+      "CWE-416"
+    ],
+    "affected": [],
+    "references": [
+      "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-73009"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-73009",
+    "added_at": "2026-09-09T08:00:08+09:00"
+  },
+  {
+    "id": "CVE-2026-72982",
+    "published": "2026-09-08",
+    "last_modified": "2026-09-08",
+    "status": "Awaiting Analysis",
+    "description": "Stack-based buffer overflow in Windows Netlogon allows an unauthorized attacker to execute code over a network.",
+    "cvss": {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "score": 9.8,
+      "severity": "CRITICAL",
+      "attack_vector": "네트워크",
+      "attack_complexity": "낮음",
+      "privileges_required": "없음",
+      "user_interaction": "없음"
+    },
+    "cwes": [
+      "CWE-121"
+    ],
+    "affected": [],
+    "references": [
+      "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-72982"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-72982",
+    "added_at": "2026-09-09T08:00:08+09:00"
+  },
+  {
+    "id": "CVE-2026-72979",
+    "published": "2026-09-08",
+    "last_modified": "2026-09-08",
+    "status": "Awaiting Analysis",
+    "description": "Use after free in Windows DHCP Server allows an unauthorized attacker to execute code over a network.",
+    "cvss": {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "score": 9.8,
+      "severity": "CRITICAL",
+      "attack_vector": "네트워크",
+      "attack_complexity": "낮음",
+      "privileges_required": "없음",
+      "user_interaction": "없음"
+    },
+    "cwes": [
+      "CWE-416"
+    ],
+    "affected": [],
+    "references": [
+      "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-72979"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-72979",
+    "added_at": "2026-09-09T08:00:08+09:00"
+  },
+  {
+    "id": "CVE-2026-70296",
+    "published": "2026-09-08",
+    "last_modified": "2026-09-08",
+    "status": "Awaiting Analysis",
+    "description": "Out-of-bounds write in Windows Imaging Component allows an unauthorized attacker to execute code over a network.",
+    "cvss": {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "score": 9.8,
+      "severity": "CRITICAL",
+      "attack_vector": "네트워크",
+      "attack_complexity": "낮음",
+      "privileges_required": "없음",
+      "user_interaction": "없음"
+    },
+    "cwes": [
+      "CWE-787"
+    ],
+    "affected": [],
+    "references": [
+      "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-70296"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-70296",
+    "added_at": "2026-09-09T08:00:08+09:00"
+  },
+  {
+    "id": "CVE-2026-69910",
+    "published": "2026-09-08",
+    "last_modified": "2026-09-08",
+    "status": "Awaiting Analysis",
+    "description": "Stack-based buffer overflow in Windows Hyper-V allows an unauthorized attacker to execute code over a network.",
+    "cvss": {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "score": 9.8,
+      "severity": "CRITICAL",
+      "attack_vector": "네트워크",
+      "attack_complexity": "낮음",
+      "privileges_required": "없음",
+      "user_interaction": "없음"
+    },
+    "cwes": [
+      "CWE-121"
+    ],
+    "affected": [],
+    "references": [
+      "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-69910"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-69910",
+    "added_at": "2026-09-09T08:00:08+09:00"
+  },
+  {
+    "id": "CVE-2026-69854",
+    "published": "2026-09-08",
+    "last_modified": "2026-09-08",
+    "status": "Awaiting Analysis",
+    "description": "Improper authentication in Spring Cloud Azure allows an unauthorized attacker to elevate privileges over a network.",
+    "cvss": {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:C/C:H/I:H/A:H",
+      "score": 9.0,
+      "severity": "CRITICAL",
+      "attack_vector": "네트워크",
+      "attack_complexity": "높음",
+      "privileges_required": "없음",
+      "user_interaction": "없음"
+    },
+    "cwes": [
+      "CWE-287"
+    ],
+    "affected": [],
+    "references": [
+      "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-69854"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-69854",
+    "added_at": "2026-09-09T08:00:08+09:00"
+  },
+  {
+    "id": "CVE-2026-69845",
+    "published": "2026-09-08",
+    "last_modified": "2026-09-08",
+    "status": "Awaiting Analysis",
+    "description": "Heap-based buffer overflow in Windows DHCP Server allows an unauthorized attacker to execute code over a network.",
+    "cvss": {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "score": 9.8,
+      "severity": "CRITICAL",
+      "attack_vector": "네트워크",
+      "attack_complexity": "낮음",
+      "privileges_required": "없음",
+      "user_interaction": "없음"
+    },
+    "cwes": [
+      "CWE-20",
+      "CWE-122"
+    ],
+    "affected": [],
+    "references": [
+      "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-69845"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-69845",
+    "added_at": "2026-09-09T08:00:08+09:00"
+  },
+  {
+    "id": "CVE-2026-69829",
+    "published": "2026-09-08",
+    "last_modified": "2026-09-08",
+    "status": "Awaiting Analysis",
+    "description": "Heap-based buffer overflow in Windows Shell allows an unauthorized attacker to execute code over a network.",
+    "cvss": {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "score": 9.8,
+      "severity": "CRITICAL",
+      "attack_vector": "네트워크",
+      "attack_complexity": "낮음",
+      "privileges_required": "없음",
+      "user_interaction": "없음"
+    },
+    "cwes": [
+      "CWE-122"
+    ],
+    "affected": [],
+    "references": [
+      "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-69829"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-69829",
+    "added_at": "2026-09-09T08:00:08+09:00"
+  },
+  {
+    "id": "CVE-2026-69824",
+    "published": "2026-09-08",
+    "last_modified": "2026-09-08",
+    "status": "Awaiting Analysis",
+    "description": "Integer underflow (wrap or wraparound) in Microsoft Standard XPS allows an unauthorized attacker to execute code over a network.",
+    "cvss": {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "score": 9.8,
+      "severity": "CRITICAL",
+      "attack_vector": "네트워크",
+      "attack_complexity": "낮음",
+      "privileges_required": "없음",
+      "user_interaction": "없음"
+    },
+    "cwes": [
+      "CWE-122",
+      "CWE-191"
+    ],
+    "affected": [],
+    "references": [
+      "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-69824"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-69824",
+    "added_at": "2026-09-09T08:00:08+09:00"
+  },
+  {
+    "id": "CVE-2026-69819",
+    "published": "2026-09-08",
+    "last_modified": "2026-09-08",
+    "status": "Awaiting Analysis",
+    "description": "Out-of-bounds write in RPC Runtime allows an unauthorized attacker to execute code over a network.",
+    "cvss": {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "score": 9.8,
+      "severity": "CRITICAL",
+      "attack_vector": "네트워크",
+      "attack_complexity": "낮음",
+      "privileges_required": "없음",
+      "user_interaction": "없음"
+    },
+    "cwes": [
+      "CWE-787"
+    ],
+    "affected": [],
+    "references": [
+      "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-69819"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-69819",
+    "added_at": "2026-09-09T08:00:08+09:00"
+  },
+  {
+    "id": "CVE-2026-69769",
+    "published": "2026-09-08",
+    "last_modified": "2026-09-08",
+    "status": "Awaiting Analysis",
+    "description": "Heap-based buffer overflow in Windows HTTP Print Provider allows an unauthorized attacker to execute code over a network.",
+    "cvss": {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "score": 9.8,
+      "severity": "CRITICAL",
+      "attack_vector": "네트워크",
+      "attack_complexity": "낮음",
+      "privileges_required": "없음",
+      "user_interaction": "없음"
+    },
+    "cwes": [
+      "CWE-122"
+    ],
+    "affected": [],
+    "references": [
+      "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-69769"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-69769",
+    "added_at": "2026-09-09T08:00:08+09:00"
+  },
+  {
+    "id": "CVE-2026-69768",
+    "published": "2026-09-08",
+    "last_modified": "2026-09-08",
+    "status": "Awaiting Analysis",
+    "description": "Heap-based buffer overflow in Windows RNDIS allows an unauthorized attacker to execute code over a network.",
+    "cvss": {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "score": 9.8,
+      "severity": "CRITICAL",
+      "attack_vector": "네트워크",
+      "attack_complexity": "낮음",
+      "privileges_required": "없음",
+      "user_interaction": "없음"
+    },
+    "cwes": [
+      "CWE-122"
+    ],
+    "affected": [],
+    "references": [
+      "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-69768"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-69768",
+    "added_at": "2026-09-09T08:00:08+09:00"
+  },
+  {
+    "id": "CVE-2026-69730",
+    "published": "2026-09-08",
+    "last_modified": "2026-09-08",
+    "status": "Awaiting Analysis",
+    "description": "Use after free in Windows DNS allows an unauthorized attacker to execute code over a network.",
+    "cvss": {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "score": 9.8,
+      "severity": "CRITICAL",
+      "attack_vector": "네트워크",
+      "attack_complexity": "낮음",
+      "privileges_required": "없음",
+      "user_interaction": "없음"
+    },
+    "cwes": [
+      "CWE-416"
+    ],
+    "affected": [],
+    "references": [
+      "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-69730"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-69730",
+    "added_at": "2026-09-09T08:00:08+09:00"
+  },
+  {
+    "id": "CVE-2026-69715",
+    "published": "2026-09-08",
+    "last_modified": "2026-09-08",
+    "status": "Awaiting Analysis",
+    "description": "Out-of-bounds read in Windows Direct Show allows an unauthorized attacker to execute code over a network.",
+    "cvss": {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "score": 9.8,
+      "severity": "CRITICAL",
+      "attack_vector": "네트워크",
+      "attack_complexity": "낮음",
+      "privileges_required": "없음",
+      "user_interaction": "없음"
+    },
+    "cwes": [
+      "CWE-122",
+      "CWE-125"
+    ],
+    "affected": [],
+    "references": [
+      "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-69715"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-69715",
+    "added_at": "2026-09-09T08:00:08+09:00"
+  },
+  {
+    "id": "CVE-2026-69641",
+    "published": "2026-09-08",
+    "last_modified": "2026-09-08",
+    "status": "Awaiting Analysis",
+    "description": "Missing authorization in Microsoft Exchange Server allows an authorized attacker to elevate privileges over a network.",
+    "cvss": {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:C/C:H/I:H/A:H",
+      "score": 9.1,
+      "severity": "CRITICAL",
+      "attack_vector": "네트워크",
+      "attack_complexity": "낮음",
+      "privileges_required": "높음",
+      "user_interaction": "없음"
+    },
+    "cwes": [
+      "CWE-862"
+    ],
+    "affected": [],
+    "references": [
+      "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-69641"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-69641",
+    "added_at": "2026-09-09T08:00:08+09:00"
+  },
+  {
+    "id": "CVE-2026-69595",
+    "published": "2026-09-08",
+    "last_modified": "2026-09-08",
+    "status": "Awaiting Analysis",
+    "description": "Use after free in Windows Services for NFS ONCRPC XDR Driver allows an unauthorized attacker to execute code over a network.",
+    "cvss": {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "score": 9.8,
+      "severity": "CRITICAL",
+      "attack_vector": "네트워크",
+      "attack_complexity": "낮음",
+      "privileges_required": "없음",
+      "user_interaction": "없음"
+    },
+    "cwes": [
+      "CWE-416"
+    ],
+    "affected": [],
+    "references": [
+      "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-69595"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-69595",
+    "added_at": "2026-09-09T08:00:08+09:00"
+  },
+  {
+    "id": "CVE-2026-69590",
+    "published": "2026-09-08",
+    "last_modified": "2026-09-08",
+    "status": "Awaiting Analysis",
+    "description": "Remote Code Execution in Windows Routing and Remote Access Service (RRAS) allows attacker to gain an unauthorized access to victim's machine",
+    "cvss": {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "score": 9.8,
+      "severity": "CRITICAL",
+      "attack_vector": "네트워크",
+      "attack_complexity": "낮음",
+      "privileges_required": "없음",
+      "user_interaction": "없음"
+    },
+    "cwes": [
+      "CWE-122"
+    ],
+    "affected": [],
+    "references": [
+      "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-69590"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-69590",
+    "added_at": "2026-09-09T08:00:08+09:00"
+  },
+  {
+    "id": "CVE-2026-69586",
+    "published": "2026-09-08",
+    "last_modified": "2026-09-08",
+    "status": "Awaiting Analysis",
+    "description": "Integer overflow or wraparound in Microsoft Windows PDF allows an unauthorized attacker to execute code over a network.",
+    "cvss": {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "score": 9.8,
+      "severity": "CRITICAL",
+      "attack_vector": "네트워크",
+      "attack_complexity": "낮음",
+      "privileges_required": "없음",
+      "user_interaction": "없음"
+    },
+    "cwes": [
+      "CWE-122",
+      "CWE-190"
+    ],
+    "affected": [],
+    "references": [
+      "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-69586"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-69586",
+    "added_at": "2026-09-09T08:00:08+09:00"
+  },
+  {
+    "id": "CVE-2026-69579",
+    "published": "2026-09-08",
+    "last_modified": "2026-09-08",
+    "status": "Undergoing Analysis",
+    "description": "Use after free in Windows Message Queuing allows an unauthorized attacker to execute code over a network.",
+    "cvss": {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "score": 9.8,
+      "severity": "CRITICAL",
+      "attack_vector": "네트워크",
+      "attack_complexity": "낮음",
+      "privileges_required": "없음",
+      "user_interaction": "없음"
+    },
+    "cwes": [
+      "CWE-416"
+    ],
+    "affected": [],
+    "references": [
+      "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-69579"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-69579",
+    "added_at": "2026-09-09T08:00:08+09:00"
+  },
+  {
+    "id": "CVE-2026-69525",
+    "published": "2026-09-08",
+    "last_modified": "2026-09-08",
+    "status": "Awaiting Analysis",
+    "description": "Use after free in Windows Remote Desktop Services allows an unauthorized attacker to execute code over a network.",
+    "cvss": {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "score": 9.8,
+      "severity": "CRITICAL",
+      "attack_vector": "네트워크",
+      "attack_complexity": "낮음",
+      "privileges_required": "없음",
+      "user_interaction": "없음"
+    },
+    "cwes": [
+      "CWE-416"
+    ],
+    "affected": [],
+    "references": [
+      "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-69525"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-69525",
+    "added_at": "2026-09-09T08:00:08+09:00"
+  },
+  {
+    "id": "CVE-2026-69493",
+    "published": "2026-09-08",
+    "last_modified": "2026-09-08",
+    "status": "Awaiting Analysis",
+    "description": "Out-of-bounds read in Windows Event Logging Service allows an unauthorized attacker to execute code over a network.",
+    "cvss": {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "score": 9.8,
+      "severity": "CRITICAL",
+      "attack_vector": "네트워크",
+      "attack_complexity": "낮음",
+      "privileges_required": "없음",
+      "user_interaction": "없음"
+    },
+    "cwes": [
+      "CWE-122",
+      "CWE-125"
+    ],
+    "affected": [],
+    "references": [
+      "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-69493"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-69493",
+    "added_at": "2026-09-09T08:00:08+09:00"
+  },
+  {
+    "id": "CVE-2026-69463",
+    "published": "2026-09-08",
+    "last_modified": "2026-09-08",
+    "status": "Awaiting Analysis",
+    "description": "Heap-based buffer overflow in Windows NTFS allows an unauthorized attacker to execute code over a network.",
+    "cvss": {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "score": 9.8,
+      "severity": "CRITICAL",
+      "attack_vector": "네트워크",
+      "attack_complexity": "낮음",
+      "privileges_required": "없음",
+      "user_interaction": "없음"
+    },
+    "cwes": [
+      "CWE-122"
+    ],
+    "affected": [],
+    "references": [
+      "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-69463"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-69463",
+    "added_at": "2026-09-09T08:00:08+09:00"
+  },
+  {
+    "id": "CVE-2026-69431",
+    "published": "2026-09-08",
+    "last_modified": "2026-09-08",
+    "status": "Awaiting Analysis",
+    "description": "Heap-based buffer overflow in Telnet Client allows an unauthorized attacker to execute code over a network.",
+    "cvss": {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "score": 9.8,
+      "severity": "CRITICAL",
+      "attack_vector": "네트워크",
+      "attack_complexity": "낮음",
+      "privileges_required": "없음",
+      "user_interaction": "없음"
+    },
+    "cwes": [
+      "CWE-122"
+    ],
+    "affected": [],
+    "references": [
+      "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-69431"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-69431",
+    "added_at": "2026-09-09T08:00:08+09:00"
+  },
+  {
+    "id": "CVE-2026-69408",
+    "published": "2026-09-08",
+    "last_modified": "2026-09-08",
+    "status": "Awaiting Analysis",
+    "description": "Integer overflow or wraparound in Microsoft Windows Media Foundation allows an unauthorized attacker to execute code over a network.",
+    "cvss": {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "score": 9.8,
+      "severity": "CRITICAL",
+      "attack_vector": "네트워크",
+      "attack_complexity": "낮음",
+      "privileges_required": "없음",
+      "user_interaction": "없음"
+    },
+    "cwes": [
+      "CWE-122",
+      "CWE-190"
+    ],
+    "affected": [],
+    "references": [
+      "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-69408"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-69408",
+    "added_at": "2026-09-09T08:00:08+09:00"
+  },
+  {
+    "id": "CVE-2026-69356",
+    "published": "2026-09-08",
+    "last_modified": "2026-09-08",
+    "status": "Awaiting Analysis",
+    "description": "Improper neutralization of input during web page generation ('cross-site scripting') in Microsoft Exchange Server allows an unauthorized attacker to perform spoofing over a network.",
+    "cvss": {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:H/I:H/A:N",
+      "score": 9.3,
+      "severity": "CRITICAL",
+      "attack_vector": "네트워크",
+      "attack_complexity": "낮음",
+      "privileges_required": "없음",
+      "user_interaction": "필요"
+    },
+    "cwes": [
+      "CWE-79"
+    ],
+    "affected": [],
+    "references": [
+      "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-69356"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-69356",
+    "added_at": "2026-09-09T08:00:08+09:00"
+  },
+  {
+    "id": "CVE-2026-68839",
+    "published": "2026-09-08",
+    "last_modified": "2026-09-08",
+    "status": "Awaiting Analysis",
+    "description": "Heap-based buffer overflow in Windows USB Mass Storage Class Driver allows an unauthorized attacker to execute code over a network.",
+    "cvss": {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "score": 9.8,
+      "severity": "CRITICAL",
+      "attack_vector": "네트워크",
+      "attack_complexity": "낮음",
+      "privileges_required": "없음",
+      "user_interaction": "없음"
+    },
+    "cwes": [
+      "CWE-20",
+      "CWE-122"
+    ],
+    "affected": [],
+    "references": [
+      "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-68839"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-68839",
+    "added_at": "2026-09-09T08:00:08+09:00"
   },
   {
     "id": "CVE-2026-66768",
@@ -118,6 +1062,58 @@
     "added_at": "2026-09-08T20:00:39+09:00"
   },
   {
+    "id": "CVE-2026-66302",
+    "published": "2026-09-08",
+    "last_modified": "2026-09-08",
+    "status": "Undergoing Analysis",
+    "description": "External control of file name or path in Skype for Business allows an unauthorized attacker to execute code over a network.",
+    "cvss": {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "score": 9.8,
+      "severity": "CRITICAL",
+      "attack_vector": "네트워크",
+      "attack_complexity": "낮음",
+      "privileges_required": "없음",
+      "user_interaction": "없음"
+    },
+    "cwes": [
+      "CWE-73"
+    ],
+    "affected": [],
+    "references": [
+      "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-66302"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-66302",
+    "added_at": "2026-09-09T08:00:08+09:00"
+  },
+  {
+    "id": "CVE-2026-65669",
+    "published": "2026-09-08",
+    "last_modified": "2026-09-08",
+    "status": "Awaiting Analysis",
+    "description": "Improper neutralization of special elements in output used by a downstream component ('injection') in SQL Server allows an unauthorized attacker to elevate privileges over a network.",
+    "cvss": {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:H/I:H/A:H",
+      "score": 9.6,
+      "severity": "CRITICAL",
+      "attack_vector": "네트워크",
+      "attack_complexity": "낮음",
+      "privileges_required": "없음",
+      "user_interaction": "필요"
+    },
+    "cwes": [
+      "CWE-74"
+    ],
+    "affected": [],
+    "references": [
+      "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-65669"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-65669",
+    "added_at": "2026-09-09T08:00:08+09:00"
+  },
+  {
     "id": "CVE-2026-62645",
     "published": "2026-09-08",
     "last_modified": "2026-09-08",
@@ -142,6 +1138,35 @@
     ],
     "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-62645",
     "added_at": "2026-09-08T20:00:39+09:00"
+  },
+  {
+    "id": "CVE-2026-61516",
+    "published": "2026-09-08",
+    "last_modified": "2026-09-08",
+    "status": "Deferred",
+    "description": "Netis NX10 firmware V4.0.1.5808 and V3.0.0.4142 contain an information disclosure vulnerability that allows unauthenticated attackers to retrieve the administrator password by sending a request to the sysinfo action in the web management interface without a valid session. Attackers can replay the exposed credential against the login handler to establish a fully authenticated administrator session on the device.",
+    "cvss": {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "score": 9.8,
+      "severity": "CRITICAL",
+      "attack_vector": "네트워크",
+      "attack_complexity": "낮음",
+      "privileges_required": "없음",
+      "user_interaction": "없음"
+    },
+    "cwes": [
+      "CWE-522"
+    ],
+    "affected": [],
+    "references": [
+      "https://hackwithmike.com/research/advisories/netis/cve-2026-61516",
+      "https://hackwithmike.com/research/netis/2026-09",
+      "https://www.netis-systems.com/products/NX10.html",
+      "https://www.vulncheck.com/advisories/netis-nx10-credential-disclosure-via-sysinfo-diagnostic-endpoint"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-61516",
+    "added_at": "2026-09-09T08:00:08+09:00"
   },
   {
     "id": "CVE-2026-58240",
@@ -197,6 +1222,32 @@
     "added_at": "2026-09-08T20:00:39+09:00"
   },
   {
+    "id": "CVE-2026-48273",
+    "published": "2026-09-08",
+    "last_modified": "2026-09-08",
+    "status": "Awaiting Analysis",
+    "description": "ColdFusion is affected by an Improper Neutralization of Directives in Dynamically Evaluated Code ('Eval Injection') vulnerability that could result in arbitrary code execution in the context of the current user. A low-privileged attacker could exploit this vulnerability to execute arbitrary code. Exploitation of this issue does not require user interaction. Scope is changed.",
+    "cvss": {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H",
+      "score": 9.9,
+      "severity": "CRITICAL",
+      "attack_vector": "네트워크",
+      "attack_complexity": "낮음",
+      "privileges_required": "낮음",
+      "user_interaction": "없음"
+    },
+    "cwes": [
+      "CWE-95"
+    ],
+    "affected": [],
+    "references": [
+      "https://helpx.adobe.com/security/products/coldfusion/apsb26-119.html"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-48273",
+    "added_at": "2026-09-09T08:00:08+09:00"
+  },
+  {
     "id": "CVE-2026-44756",
     "published": "2026-09-08",
     "last_modified": "2026-09-08",
@@ -222,6 +1273,32 @@
     ],
     "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-44756",
     "added_at": "2026-09-08T20:00:39+09:00"
+  },
+  {
+    "id": "CVE-2026-19232",
+    "published": "2026-09-08",
+    "last_modified": "2026-09-08",
+    "status": "Awaiting Analysis",
+    "description": "Adobe Experience Manager is affected by an Incorrect Authorization vulnerability that could result in arbitrary code execution in the context of the current user, potentially gaining elevated access or control over the victim's account or session. A low-privileged attacker could exploit this vulnerability to gain elevated access or control over the victim's account or session. Exploitation of this issue does not require user interaction. Scope is changed.",
+    "cvss": {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H",
+      "score": 9.9,
+      "severity": "CRITICAL",
+      "attack_vector": "네트워크",
+      "attack_complexity": "낮음",
+      "privileges_required": "낮음",
+      "user_interaction": "없음"
+    },
+    "cwes": [
+      "CWE-863"
+    ],
+    "affected": [],
+    "references": [
+      "https://helpx.adobe.com/security/products/experience-manager/apsb26-98.html"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-19232",
+    "added_at": "2026-09-09T08:00:08+09:00"
   },
   {
     "id": "CVE-2026-86543",
@@ -544,6 +1621,36 @@
     ],
     "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-18922",
     "added_at": "2026-09-08T08:00:42+09:00"
+  },
+  {
+    "id": "CVE-2026-86218",
+    "published": "2026-09-06",
+    "last_modified": "2026-09-08",
+    "status": "Analyzed",
+    "description": "N-central is vulnerable to a pre-auth remote code execution This issue affects N-central: before 2026.3.1.14.",
+    "cvss": {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "score": 9.8,
+      "severity": "CRITICAL",
+      "attack_vector": "네트워크",
+      "attack_complexity": "낮음",
+      "privileges_required": "없음",
+      "user_interaction": "없음"
+    },
+    "cwes": [
+      "CWE-96"
+    ],
+    "affected": [
+      "n-able n-central",
+      "n-able n-central 2026.3"
+    ],
+    "references": [
+      "https://me.n-able.com/s/security-advisory/aArVy0000002Ld3KAE/cve202686218-preauthentication-remote-code-execution",
+      "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-86218"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-86218",
+    "added_at": "2026-09-09T08:00:08+09:00"
   },
   {
     "id": "CVE-2026-86167",
