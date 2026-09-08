@@ -1,5 +1,291 @@
 [
   {
+    "id": "CVE-2026-86510",
+    "published": "2026-09-08",
+    "last_modified": "2026-09-08",
+    "status": "Received",
+    "description": "A vulnerability has been found in D-Link DIR-822A A_101. Affected is the function tunnel_set_params of the component L2TP Control Message Parser. Such manipulation leads to out-of-bounds write. The attack can be launched remotely. The exploit has been disclosed to the public and may be used.",
+    "cvss": {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H",
+      "score": 9.9,
+      "severity": "CRITICAL",
+      "attack_vector": "네트워크",
+      "attack_complexity": "낮음",
+      "privileges_required": "낮음",
+      "user_interaction": "없음"
+    },
+    "cwes": [
+      "CWE-119",
+      "CWE-787"
+    ],
+    "affected": [],
+    "references": [
+      "https://tzh00203.notion.site/D-Link-DIR-822A-L2TP-Host-Name-AVP-Out-of-Bounds-Write-33cb5c52018a80a7af5fdc1af3d5aa73",
+      "https://vuldb.com/cve/CVE-2026-86510",
+      "https://vuldb.com/submit/906300",
+      "https://vuldb.com/vuln/399663",
+      "https://vuldb.com/vuln/399663/cti",
+      "https://www.dlink.com/"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-86510",
+    "added_at": "2026-09-08T20:00:39+09:00"
+  },
+  {
+    "id": "CVE-2026-86509",
+    "published": "2026-09-08",
+    "last_modified": "2026-09-08",
+    "status": "Received",
+    "description": "A flaw has been found in D-Link DIR-895L A1_102b07. This impacts the function sendOffer/sendACK of the file udhcpcd/serverpacket.c of the component udhcpcd. This manipulation causes stack-based buffer overflow. The attack can only be done within the local network. The exploit has been published and may be used.",
+    "cvss": {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:A/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:H",
+      "score": 9.6,
+      "severity": "CRITICAL",
+      "attack_vector": "인접 네트워크",
+      "attack_complexity": "낮음",
+      "privileges_required": "없음",
+      "user_interaction": "없음"
+    },
+    "cwes": [
+      "CWE-119",
+      "CWE-121"
+    ],
+    "affected": [],
+    "references": [
+      "https://tzh00203.notion.site/D-Link-DIR-895L-Stack-Overflow-in-udhcpd-TR-111-Option-125-Parsing-33cb5c52018a80dc8140e1502e4814d0",
+      "https://vuldb.com/cve/CVE-2026-86509",
+      "https://vuldb.com/submit/906298",
+      "https://vuldb.com/vuln/399662",
+      "https://vuldb.com/vuln/399662/cti",
+      "https://www.dlink.com/"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-86509",
+    "added_at": "2026-09-08T20:00:39+09:00"
+  },
+  {
+    "id": "CVE-2026-76969",
+    "published": "2026-09-08",
+    "last_modified": "2026-09-08",
+    "status": "Received",
+    "description": "@sap/cds-mtxs NPM library does not perform sufficient checks on certain functionality used in multitenant CAP applications with extensibility enabled. An unauthenticated attacker could send specially crafted requests to obtain sensitive credentials and abuse them to replace or delete tenant data. Successful exploitation can result in a high impact on availability and integrity of the application. There may also be partial impact to the confidentiality of business data.",
+    "cvss": {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:H/A:H",
+      "score": 9.4,
+      "severity": "CRITICAL",
+      "attack_vector": "네트워크",
+      "attack_complexity": "낮음",
+      "privileges_required": "없음",
+      "user_interaction": "없음"
+    },
+    "cwes": [
+      "CWE-522"
+    ],
+    "affected": [],
+    "references": [
+      "https://me.sap.com/notes/3798315",
+      "https://url.sap/sapsecuritypatchday"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-76969",
+    "added_at": "2026-09-08T20:00:39+09:00"
+  },
+  {
+    "id": "CVE-2026-66768",
+    "published": "2026-09-08",
+    "last_modified": "2026-09-08",
+    "status": "Received",
+    "description": "SAP GUI for Java does not correctly enforce the trust level policy for certain functions invoked from a connected backend system. A low-privileged attacker could exploit this weakness by manipulating a connected backend system to trigger affected functionality. This could allow arbitrary command execution on the victim's machine, leading to a high impact on the confidentiality, integrity, and availability of the affected system.",
+    "cvss": {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:C/C:H/I:H/A:H",
+      "score": 9.0,
+      "severity": "CRITICAL",
+      "attack_vector": "네트워크",
+      "attack_complexity": "낮음",
+      "privileges_required": "낮음",
+      "user_interaction": "필요"
+    },
+    "cwes": [
+      "CWE-807"
+    ],
+    "affected": [],
+    "references": [
+      "https://me.sap.com/notes/3781729",
+      "https://url.sap/sapsecuritypatchday"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-66768",
+    "added_at": "2026-09-08T20:00:39+09:00"
+  },
+  {
+    "id": "CVE-2026-62645",
+    "published": "2026-09-08",
+    "last_modified": "2026-09-08",
+    "status": "Received",
+    "description": "A vulnerability has been identified in Reyrolle 7SR5 (All versions < V2.70). Information is exposed through the web interface that can be used to calculate the current and past session ID numbers. This could allow an attacker to bypass the authentication and gain unauthorized access to the device.",
+    "cvss": {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "score": 9.8,
+      "severity": "CRITICAL",
+      "attack_vector": "네트워크",
+      "attack_complexity": "낮음",
+      "privileges_required": "없음",
+      "user_interaction": "없음"
+    },
+    "cwes": [
+      "CWE-306"
+    ],
+    "affected": [],
+    "references": [
+      "https://cert-portal.siemens.com/productcert/html/ssa-142885.html"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-62645",
+    "added_at": "2026-09-08T20:00:39+09:00"
+  },
+  {
+    "id": "CVE-2026-58240",
+    "published": "2026-09-08",
+    "last_modified": "2026-09-08",
+    "status": "Received",
+    "description": "SAP NetWeaver Message Server does not sufficiently validate the authenticity of internal application server components during registration. An unauthenticated attacker with network access to the affected service could exploit this weakness to register an unauthorized component and potentially perform unauthorized actions within the application environment, resulting in a high impact on the confidentiality, integrity, and availability of the affected system.",
+    "cvss": {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "score": 9.8,
+      "severity": "CRITICAL",
+      "attack_vector": "네트워크",
+      "attack_complexity": "낮음",
+      "privileges_required": "없음",
+      "user_interaction": "없음"
+    },
+    "cwes": [
+      "CWE-308"
+    ],
+    "affected": [],
+    "references": [
+      "https://me.sap.com/notes/3759472",
+      "https://url.sap/sapsecuritypatchday"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-58240",
+    "added_at": "2026-09-08T20:00:39+09:00"
+  },
+  {
+    "id": "CVE-2026-50093",
+    "published": "2026-09-08",
+    "last_modified": "2026-09-08",
+    "status": "Received",
+    "description": "A vulnerability has been identified in Siveillance Control Pro V3.0 (All versions < V3.0.12.2173), Siveillance Control Pro V4.0 (All versions < V4.0.9.2178), Siveillance Control V3.0 (All versions < V3.0.22.2177), Siveillance Control V4.0 (All versions < V4.0.11.2177). A vulnerability in the OIS web module allows an attacker to upload arbitrary files to the server. Successful exploitation of this vulnerability could allow an attacker to gain root access on the host system, potentially leading to a full compromise of the affected OIS environment.",
+    "cvss": {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:A/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H",
+      "score": 9.0,
+      "severity": "CRITICAL",
+      "attack_vector": "인접 네트워크",
+      "attack_complexity": "낮음",
+      "privileges_required": "낮음",
+      "user_interaction": "없음"
+    },
+    "cwes": [
+      "CWE-434"
+    ],
+    "affected": [],
+    "references": [
+      "https://cert-portal.siemens.com/productcert/html/ssa-254516.html"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-50093",
+    "added_at": "2026-09-08T20:00:39+09:00"
+  },
+  {
+    "id": "CVE-2026-44756",
+    "published": "2026-09-08",
+    "last_modified": "2026-09-08",
+    "status": "Received",
+    "description": "A memory safety vulnerability exists in the Extended Passport Protocol (EPP) processing library. Under specific conditions, an unauthenticated attacker could exploit a crafted network request containing a malformed EPP header, potentially resulting in undefined behavior and abnormal program termination. Successful exploitation may have a high impact on the confidentiality, integrity, and availability of the application.",
+    "cvss": {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:H",
+      "score": 10.0,
+      "severity": "CRITICAL",
+      "attack_vector": "네트워크",
+      "attack_complexity": "낮음",
+      "privileges_required": "없음",
+      "user_interaction": "없음"
+    },
+    "cwes": [
+      "CWE-120"
+    ],
+    "affected": [],
+    "references": [
+      "https://me.sap.com/notes/3747649",
+      "https://url.sap/sapsecuritypatchday"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-44756",
+    "added_at": "2026-09-08T20:00:39+09:00"
+  },
+  {
+    "id": "CVE-2026-86543",
+    "published": "2026-09-07",
+    "last_modified": "2026-09-07",
+    "status": "Received",
+    "description": "knowns versions before 0.30.0 serve the management API without authentication on all network interfaces by default, with no password required on fresh installations. Attackers can access the unauthenticated /api/tunnel/start endpoint to provision a public tunnel and republish the API at a publicly accessible address.",
+    "cvss": {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "score": 9.8,
+      "severity": "CRITICAL",
+      "attack_vector": "네트워크",
+      "attack_complexity": "낮음",
+      "privileges_required": "없음",
+      "user_interaction": "없음"
+    },
+    "cwes": [
+      "CWE-306"
+    ],
+    "affected": [],
+    "references": [
+      "https://github.com/knowns-dev/knowns/blob/v0.29.1/internal/cli/browser.go#L193-L200",
+      "https://github.com/knowns-dev/knowns/blob/v0.29.1/internal/server/auth.go#L80-L86",
+      "https://github.com/knowns-dev/knowns/blob/v0.29.1/internal/server/routes/tunnel.go#L26-L38",
+      "https://github.com/knowns-dev/knowns/commit/878a02cb7cc14f0a592fdfda7a520af3cac500fb",
+      "https://github.com/knowns-dev/knowns/releases/tag/v0.30.0",
+      "https://github.com/knowns-dev/knowns/security/advisories/GHSA-fc85-99vc-9c75"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-86543",
+    "added_at": "2026-09-08T20:00:39+09:00"
+  },
+  {
+    "id": "CVE-2026-86542",
+    "published": "2026-09-07",
+    "last_modified": "2026-09-07",
+    "status": "Received",
+    "description": "knowns before 0.30.0 fails to validate import names in the import routes, allowing unauthenticated attackers to write files outside the imports directory. Attackers can supply traversal sequences in the name parameter to escape the imports directory and overwrite arbitrary files writable by the server process.",
+    "cvss": {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:H",
+      "score": 9.1,
+      "severity": "CRITICAL",
+      "attack_vector": "네트워크",
+      "attack_complexity": "낮음",
+      "privileges_required": "없음",
+      "user_interaction": "없음"
+    },
+    "cwes": [
+      "CWE-22"
+    ],
+    "affected": [],
+    "references": [
+      "https://github.com/knowns-dev/knowns/blob/v0.29.1/internal/server/routes/imports.go#L376-L420",
+      "https://github.com/knowns-dev/knowns/blob/v0.29.1/internal/server/routes/imports.go#L519-L551",
+      "https://github.com/knowns-dev/knowns/commit/d3989829fb5095666d23d005b2f78a082832a396",
+      "https://github.com/knowns-dev/knowns/releases/tag/v0.30.0",
+      "https://github.com/knowns-dev/knowns/security/advisories/GHSA-wh3c-v55g-qfg8",
+      "https://www.vulncheck.com/advisories/knowns-before-0.30.0-path-traversal-via-import-name"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-86542",
+    "added_at": "2026-09-08T20:00:39+09:00"
+  },
+  {
     "id": "CVE-2026-86299",
     "published": "2026-09-07",
     "last_modified": "2026-09-07",
