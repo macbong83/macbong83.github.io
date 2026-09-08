@@ -1,0 +1,104 @@
+{
+  "tagline": "글로벌 정보보안 뉴스레터",
+  "title": "보안 브리핑",
+  "date_display": "2026년 9월 8일 화요일",
+  "date_short": "2026.09.08",
+  "sources_line": "The Hacker News · BleepingComputer · SecurityWeek · KrebsOnSecurity · CISA · NCSC UK · Unit 42 · 보안뉴스 · 데일리시큐 · 전자신문",
+  "seo": {
+    "title": "취약점, 랜섬웨어 — 2026.09.08 보안 브리핑",
+    "description": "오늘 주요 취약점·침해 사고·위협 트렌드 요약.",
+    "keywords": "CVE, 랜섬웨어, 취약점, 침해사고, 보안"
+  },
+  "sections": [
+    {
+      "label": "취약점 & 공격",
+      "type": "cards",
+      "items": [
+        {
+          "severity": "critical",
+          "source": "SecurityWeek",
+          "headline": "StyleSmuggler: Magento 제로데이로 온라인 스토어 해킹",
+          "url": "https://www.securityweek.com/adobe-commerce-zero-day-exploited-to-backdoor-online-stores/",
+          "summary": "StyleSmuggler라는 Magento와 Adobe Commerce의 제로데이 취약점이 악용되어, 인증 없이도 코드를 실행하고 백도어를 설치할 수 있다. 이 취약점은 이미 패치되었지만, 여전히 악용되고 있다."
+        },
+        {
+          "severity": "high",
+          "source": "The Hacker News",
+          "headline": "PEEP: Chrome 및 Edge를 악용한 후침투 도구",
+          "url": "https://thehackernews.com/2026/09/peep-turns-chrome-and-edge-into-post.html",
+          "summary": "PEEP이라는 크롬 기반의 후침투 도구가 발견되었다. 이 도구는 웹 브라우저의 북마크 확장 프로그램으로 위장하여, 관리자 또는 코드 실행 권한이 필요하다. 이 도구는 Chrome 및 Edge에 직접 확장 프로그램을 주입한다."
+        },
+        {
+          "severity": "high",
+          "source": "The Hacker News",
+          "headline": "Telerik UI Padding-Oracle 취약점, 인증 없이 원격 코드 실행 가능",
+          "url": "https://thehackernews.com/2026/09/telerik-ui-padding-oracle-bug-chained.html",
+          "summary": "Telerik UI의 AES-CBC 'padding oracle' 취약점이 발견되었으며, 특정 비기본 설정의 애플리케이션에 대해 인증 없이 원격 코드 실행이 가능하다. Progress는 7월에 이 취약점을 패치했다."
+        },
+        {
+          "severity": "medium",
+          "source": "The Hacker News",
+          "headline": "N-able, N-central의 비인증 원격 코드 실행 취약점에 대한 4번째 핫픽스 발표",
+          "url": "https://thehackernews.com/2026/09/n-able-issues-fourth-n-central-hotfix.html",
+          "summary": "N-able은 N-central의 비인증 원격 코드 실행 취약점에 대한 4번째 핫픽스를 발표했다. 이 취약점은 야기된 것으로 보이며, 악용이 확인되었다."
+        },
+        {
+          "severity": "medium",
+          "source": "The Hacker News",
+          "headline": "JSCeal 악성코드, Google 인증 우회 및 세션 쿠키 도용",
+          "url": "https://thehackernews.com/2026/09/jsceal-malware-can-bypass-google.html",
+          "summary": "JSCeal이라는 고급 컴파일된 V8 JavaScript 악성코드가 발견되었다. 이 악성코드는 자격 증명 수집, 감시, 트래픽 중개 기능을 포함하고 있다."
+        }
+      ]
+    },
+    {
+      "label": "침해 사고",
+      "type": "cards",
+      "items": [
+        {
+          "severity": "incident",
+          "source": "SecurityWeek",
+          "headline": "Berlin 랜섬웨어 유출로 국가 기밀 노출",
+          "url": "https://securityaffairs.com/198545/cyber-crime/berlin-ransomware-leak-exposes-state-secrets.html",
+          "summary": "Berlin은 30비트코인의 랜섬을 거절했고, 해커는 6TB의 민감한 국가 행정 및 방위 데이터를 다크웹에 유출했다. Rhysida 랜섬웨어 그룹이 해당 데이터를 공개했다."
+        },
+        {
+          "severity": "incident",
+          "source": "SecurityWeek",
+          "headline": "Condé Nast 3280만 명의 사용자 데이터 유출",
+          "url": "https://securityaffairs.com/198628/data-breach/conde-nast-data-of-32-8-million-users-offered-for-sale-after-wired-leak.html",
+          "summary": "Condé Nast의 3280만 명의 사용자 데이터가 유출되어, 타겟된 피싱, 사기 및 스캠 위험이 증가했다. 3280만 명의 사용자 기록이 포함된 데이터베이스가 러시아어 사이버 범죄 포럼에서 15,000달러에 판매되고 있다."
+        },
+        {
+          "severity": "incident",
+          "source": "SecurityWeek",
+          "headline": "Natural Resources Wales, 직원 다양성 데이터 유출",
+          "url": "https://gbhackers.com/natural-resources-wales-data-breach/",
+          "summary": "Natural Resources Wales(NRW)는 2013년 4월부터 2018년 3월 사이에 고용된 직원들의 민감한 다양성 모니터링 정보가 유출되었다. 내부 조사에서 스프레드시트가 잘못 저장되어 유출된 것으로 밝혀졌다."
+        }
+      ]
+    },
+    {
+      "label": "동향 & 분석",
+      "type": "trends",
+      "items": [
+        {
+          "lead": "AI 기반 보안 위협 증가",
+          "body": "AI 기반의 보안 위협이 급증하고 있으며, 특히 OpenAI의 에이전트가 위키에 자율적으로 편집을 수행하는 사례가 보고되었다. 이는 AI 기술이 보안 위협으로도 활용될 수 있음을 시사한다."
+        },
+        {
+          "lead": "제로데이 취약점의 악용 증가",
+          "body": "제로데이 취약점의 악용이 증가하고 있으며, 특히 Chrome, Magento, Adobe Commerce 등 주요 플랫폼에서 발견된 취약점이 악용되고 있다. 이는 보안 패치의 중요성을 강조한다."
+        },
+        {
+          "lead": "랜섬웨어 공격의 확장",
+          "body": "랜섬웨어 공격이 확장되고 있으며, Berlin과 같은 주요 도시의 데이터 유출 사례가 보고되었다. 이는 랜섬웨어 그룹이 대규모 데이터 유출을 통해 압박을 가하고 있음을 보여준다."
+        },
+        {
+          "lead": "AI 기반 보안 솔루션의 필요성",
+          "body": "AI 기반 보안 솔루션의 필요성이 증가하고 있으며, OpenAI는 Daybreak AI 플랫폼을 통해 인프라 보호에 10억 달러를 투자했다. 이는 AI 기술이 보안 분야에서도 중요한 역할을 할 수 있음을 보여준다."
+        }
+      ]
+    }
+  ]
+}
