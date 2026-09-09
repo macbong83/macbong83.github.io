@@ -41,13 +41,36 @@
     <h1>CVE Archive</h1>
     <p>NVD 기반 Critical CVE를 누적 관리하는 별도 페이지입니다. 블로그에는 CVE 자동 글을 발행하지 않고, 이 페이지에만 기록합니다.</p>
     <div class="meta">
-      <span>Total 876</span>
-      <span>Updated 2026-09-09 20:00 KST</span>
+      <span>Total 878</span>
+      <span>Updated 2026-09-10 08:00 KST</span>
       <span>Source NVD API</span>
     </div>
   </section>
   <div class="notice">중복 제거 기준은 CVE ID입니다. 동일 CVE는 다시 추가하지 않습니다. 실제 악용 여부와 패치 우선순위는 CISA KEV, 벤더 권고, 자산 노출 여부와 함께 검토해야 합니다.</div>
 
+    <article class="cve-card" id="CVE-2026-87929">
+      <div class="cve-top">
+        <a class="cve-id" href="https://nvd.nist.gov/vuln/detail/CVE-2026-87929" target="_blank" rel="noopener">CVE-2026-87929</a>
+        <span class="score">CVSS 9.8 CRITICAL</span>
+      </div>
+      <p class="desc">MaxSite CMS through 109.6 ships with a hardcoded session encryption key in application/config/config.php that is never changed during installation, allowing unauthenticated attackers to forge administrator session cookies. Attackers can mint a malicious ci_session cookie with administrator privileges by computing an HMAC-SHA1 using the publicly known encryption key, bypassing authentication checks in is_login() and mso_check_allow() functions.</p>
+      <dl>
+        <div><dt>Published</dt><dd>2026-09-09</dd></div>
+        <div><dt>Last Modified</dt><dd>2026-09-09</dd></div>
+        <div><dt>Status</dt><dd>Deferred</dd></div>
+        <div><dt>Attack Vector</dt><dd>네트워크</dd></div>
+        <div><dt>Attack Complexity</dt><dd>낮음</dd></div>
+        <div><dt>Privileges</dt><dd>없음</dd></div>
+        <div><dt>User Interaction</dt><dd>없음</dd></div>
+        <div><dt>CWE</dt><dd>CWE-321</dd></div>
+        <div><dt>Affected</dt><dd>NVD CPE 기준 확인 필요</dd></div>
+      </dl>
+      <div class="vector"><code>CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H</code></div>
+      <details>
+        <summary>References</summary>
+        <ul><li><a href="https://github.com/EviL0rd/maxsite-cve4/blob/main/2026.09.08-maxsite-cms-hardcoded-session-key-auth-bypass.md" target="_blank" rel="noopener">https://github.com/EviL0rd/maxsite-cve4/blob/main/2026.09.08-maxsite-cms-hardcoded-session-key-auth-bypass.md</a></li><li><a href="https://github.com/maxsite/cms" target="_blank" rel="noopener">https://github.com/maxsite/cms</a></li><li><a href="https://github.com/maxsite/cms/blob/2ca0a0c7d1d71106a25dbb0f2aedaaefbf12802c/application/config/config.php#L230-L254" target="_blank" rel="noopener">https://github.com/maxsite/cms/blob/2ca0a0c7d1d71106a25dbb0f2aedaaefbf12802c/application/config/config.php#L230-L254</a></li><li><a href="https://github.com/maxsite/cms/blob/2ca0a0c7d1d71106a25dbb0f2aedaaefbf12802c/application/maxsite/common/core/init.php#L70-L96" target="_blank" rel="noopener">https://github.com/maxsite/cms/blob/2ca0a0c7d1d71106a25dbb0f2aedaaefbf12802c/application/maxsite/common/core/init.php#L70-L96</a></li></ul>
+      </details>
+    </article>
     <article class="cve-card" id="CVE-2026-16272">
       <div class="cve-top">
         <a class="cve-id" href="https://nvd.nist.gov/vuln/detail/CVE-2026-16272" target="_blank" rel="noopener">CVE-2026-16272</a>
@@ -1244,6 +1267,45 @@ This issue affects PayTR Virtual Pos iFrame API (v9x) WHMCS Module: from v9.0.0 
       <details>
         <summary>References</summary>
         <ul><li><a href="https://github.com/knowns-dev/knowns/blob/v0.29.1/internal/server/routes/imports.go#L376-L420" target="_blank" rel="noopener">https://github.com/knowns-dev/knowns/blob/v0.29.1/internal/server/routes/imports.go#L376-L420</a></li><li><a href="https://github.com/knowns-dev/knowns/blob/v0.29.1/internal/server/routes/imports.go#L519-L551" target="_blank" rel="noopener">https://github.com/knowns-dev/knowns/blob/v0.29.1/internal/server/routes/imports.go#L519-L551</a></li><li><a href="https://github.com/knowns-dev/knowns/commit/d3989829fb5095666d23d005b2f78a082832a396" target="_blank" rel="noopener">https://github.com/knowns-dev/knowns/commit/d3989829fb5095666d23d005b2f78a082832a396</a></li><li><a href="https://github.com/knowns-dev/knowns/releases/tag/v0.30.0" target="_blank" rel="noopener">https://github.com/knowns-dev/knowns/releases/tag/v0.30.0</a></li></ul>
+      </details>
+    </article>
+    <article class="cve-card" id="CVE-2026-86419">
+      <div class="cve-top">
+        <a class="cve-id" href="https://nvd.nist.gov/vuln/detail/CVE-2026-86419" target="_blank" rel="noopener">CVE-2026-86419</a>
+        <span class="score">CVSS 9.1 CRITICAL</span>
+      </div>
+      <p class="desc">Affected versions of MISP contain insufficient validation of server-side outbound HTTP destinations in feed retrieval and TAXII discovery functionality.
+
+
+In feed processing, redirects were followed without validating the redirect scheme or destination. The original request headers were reused across redirect hops, meaning authentication headers or API credentials configured for a feed could be forwarded to a different host. Redirects could also target internal network resources, resulting in SSRF. The fix adds redirect validation, blocks internal destinations for cross-host redirects, strips configured feed credentials before following redirects to another host, and pins validated DNS results to prevent re-resolution after validation.
+
+
+The TAXII discovery endpoint had a related incomplete SSRF defense. It used gethostbyname() and compared the result against only a few literal addresses. This missed cases including IPv6 loopback (::1), numeric host encodings such as 0x7f000001, and potentially multiple DNS records. The fix moves TAXII discovery to the shared URL egress validator.
+
+
+Together, these commits harden MISP&#x27;s outbound URL handling against alternate-address representations, DNS-related bypasses, unsafe redirects, internal-host access, and cross-host credential forwarding.
+
+
+
+
+
+
+Version affected: ≤2.5.45</p>
+      <dl>
+        <div><dt>Published</dt><dd>2026-09-07</dd></div>
+        <div><dt>Last Modified</dt><dd>2026-09-09</dd></div>
+        <div><dt>Status</dt><dd>Analyzed</dd></div>
+        <div><dt>Attack Vector</dt><dd>네트워크</dd></div>
+        <div><dt>Attack Complexity</dt><dd>낮음</dd></div>
+        <div><dt>Privileges</dt><dd>낮음</dd></div>
+        <div><dt>User Interaction</dt><dd>없음</dd></div>
+        <div><dt>CWE</dt><dd>CWE-200, CWE-918</dd></div>
+        <div><dt>Affected</dt><dd>misp-project misp</dd></div>
+      </dl>
+      <div class="vector"><code>CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:L/I:L/A:H</code></div>
+      <details>
+        <summary>References</summary>
+        <ul><li><a href="https://github.com/MISP/MISP/commit/06f541dcf" target="_blank" rel="noopener">https://github.com/MISP/MISP/commit/06f541dcf</a></li><li><a href="https://github.com/MISP/MISP/commit/08d6efe24" target="_blank" rel="noopener">https://github.com/MISP/MISP/commit/08d6efe24</a></li></ul>
       </details>
     </article>
     <article class="cve-card" id="CVE-2026-86299">

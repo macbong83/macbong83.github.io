@@ -1,5 +1,35 @@
 [
   {
+    "id": "CVE-2026-87929",
+    "published": "2026-09-09",
+    "last_modified": "2026-09-09",
+    "status": "Deferred",
+    "description": "MaxSite CMS through 109.6 ships with a hardcoded session encryption key in application/config/config.php that is never changed during installation, allowing unauthenticated attackers to forge administrator session cookies. Attackers can mint a malicious ci_session cookie with administrator privileges by computing an HMAC-SHA1 using the publicly known encryption key, bypassing authentication checks in is_login() and mso_check_allow() functions.",
+    "cvss": {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "score": 9.8,
+      "severity": "CRITICAL",
+      "attack_vector": "네트워크",
+      "attack_complexity": "낮음",
+      "privileges_required": "없음",
+      "user_interaction": "없음"
+    },
+    "cwes": [
+      "CWE-321"
+    ],
+    "affected": [],
+    "references": [
+      "https://github.com/EviL0rd/maxsite-cve4/blob/main/2026.09.08-maxsite-cms-hardcoded-session-key-auth-bypass.md",
+      "https://github.com/maxsite/cms",
+      "https://github.com/maxsite/cms/blob/2ca0a0c7d1d71106a25dbb0f2aedaaefbf12802c/application/config/config.php#L230-L254",
+      "https://github.com/maxsite/cms/blob/2ca0a0c7d1d71106a25dbb0f2aedaaefbf12802c/application/maxsite/common/core/init.php#L70-L96",
+      "https://www.vulncheck.com/advisories/maxsite-cms-through-109.6-authentication-bypass-via-hardcoded-encryption-key"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-87929",
+    "added_at": "2026-09-10T08:00:26+09:00"
+  },
+  {
     "id": "CVE-2026-16272",
     "published": "2026-09-09",
     "last_modified": "2026-09-09",
@@ -1387,6 +1417,36 @@
     ],
     "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-86542",
     "added_at": "2026-09-08T20:00:39+09:00"
+  },
+  {
+    "id": "CVE-2026-86419",
+    "published": "2026-09-07",
+    "last_modified": "2026-09-09",
+    "status": "Analyzed",
+    "description": "Affected versions of MISP contain insufficient validation of server-side outbound HTTP destinations in feed retrieval and TAXII discovery functionality.\n\n\nIn feed processing, redirects were followed without validating the redirect scheme or destination. The original request headers were reused across redirect hops, meaning authentication headers or API credentials configured for a feed could be forwarded to a different host. Redirects could also target internal network resources, resulting in SSRF. The fix adds redirect validation, blocks internal destinations for cross-host redirects, strips configured feed credentials before following redirects to another host, and pins validated DNS results to prevent re-resolution after validation.\n\n\nThe TAXII discovery endpoint had a related incomplete SSRF defense. It used gethostbyname() and compared the result against only a few literal addresses. This missed cases including IPv6 loopback (::1), numeric host encodings such as 0x7f000001, and potentially multiple DNS records. The fix moves TAXII discovery to the shared URL egress validator.\n\n\nTogether, these commits harden MISP's outbound URL handling against alternate-address representations, DNS-related bypasses, unsafe redirects, internal-host access, and cross-host credential forwarding.\n\n\n\n\n\n\nVersion affected: ≤2.5.45",
+    "cvss": {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:L/I:L/A:H",
+      "score": 9.1,
+      "severity": "CRITICAL",
+      "attack_vector": "네트워크",
+      "attack_complexity": "낮음",
+      "privileges_required": "낮음",
+      "user_interaction": "없음"
+    },
+    "cwes": [
+      "CWE-200",
+      "CWE-918"
+    ],
+    "affected": [
+      "misp-project misp"
+    ],
+    "references": [
+      "https://github.com/MISP/MISP/commit/06f541dcf",
+      "https://github.com/MISP/MISP/commit/08d6efe24"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-86419",
+    "added_at": "2026-09-10T08:00:26+09:00"
   },
   {
     "id": "CVE-2026-86299",
