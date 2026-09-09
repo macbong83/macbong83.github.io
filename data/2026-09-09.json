@@ -1,0 +1,104 @@
+{
+  "tagline": "글로벌 정보보안 뉴스레터",
+  "title": "보안 브리핑",
+  "date_display": "2026년 9월 9일 수요일",
+  "date_short": "2026.09.09",
+  "sources_line": "The Hacker News · BleepingComputer · SecurityWeek · KrebsOnSecurity · CISA · NCSC UK · Unit 42 · 보안뉴스 · 데일리시큐 · 전자신문",
+  "seo": {
+    "title": "랜섬웨어, 취약점 — 2026.09.09 보안 브리핑",
+    "description": "오늘 주요 취약점·침해 사고·위협 트렌드 요약.",
+    "keywords": "CVE, 랜섬웨어, 취약점, 침해사고, 보안"
+  },
+  "sections": [
+    {
+      "label": "취약점 & 공격",
+      "type": "cards",
+      "items": [
+        {
+          "severity": "critical",
+          "source": "SecurityWeek",
+          "headline": "마이크로소프트, 974개 취약점 패치 포함 2개 제로데이 악용",
+          "url": "https://www.securityweek.com/microsoft-patches-record-974-vulnerabilities-including-two-exploited-zero-days/",
+          "summary": "마이크로소프트는 9월 보안 업데이트에서 2개의 제로데이 취약점을 포함한 974개의 취약점을 패치했다. 이 중 20개는 웜 가능한 취약점이다."
+        },
+        {
+          "severity": "critical",
+          "source": "The Hacker News",
+          "headline": "아доб비, 170개 이상 취약점 패치 포함 커머스 제로데이",
+          "url": "https://www.securityweek.com/adobe-patches-over-170-vulnerabilities-including-commerce-zero-day/",
+          "summary": "아доб비는 170개 이상의 취약점을 패치했으며, 그 중 CVE-2026-75650이라는 제로데이 취약점이 발견되었다. 이 취약점은 인증되지 않은 공격자가 임의 코드를 실행할 수 있게 한다."
+        },
+        {
+          "severity": "high",
+          "source": "The Hacker News",
+          "headline": "SAP, 확장 패스포트 처리 취약점 패치",
+          "url": "https://www.securityweek.com/sap-patches-critical-extended-passport-processing-vulnerability/",
+          "summary": "SAP는 인증되지 않은 공격자가 임의 명령을 실행하고 데이터를 수정할 수 있는 '확장 패스포트 처리' 취약점을 패치했다."
+        },
+        {
+          "severity": "high",
+          "source": "The Hacker News",
+          "headline": "마이크로티크, 라우터 해킹에 사용된 심각한 취약점 패치",
+          "url": "https://www.securityweek.com/mikrotik-patches-critical-flaws-chained-to-hack-routers/",
+          "summary": "마이크로티크는 인증 우회, 구성 파일 덮어쓰기, 장치 점령 등의 취약점을 포함한 'MikroTrick' 취약점을 패치했다."
+        },
+        {
+          "severity": "medium",
+          "source": "The Hacker News",
+          "headline": "ASUS 컨트롤 센터, 루트 액세스 허용하는 심각한 취약점 패치",
+          "url": "https://gbhackers.com/asus-control-center-critical-flaw/",
+          "summary": "ASUS는 인증 없이 근접한 공격자가 시스템을 제어할 수 있는 'CVE-2026-19397' 취약점을 패치했다."
+        }
+      ]
+    },
+    {
+      "label": "침해 사고",
+      "type": "cards",
+      "items": [
+        {
+          "severity": "incident",
+          "source": "The Hacker News",
+          "headline": "리퀴드 네트워크 해커, 320만 달러 도난 후 대부분 돌려보내",
+          "url": "https://securityaffairs.com/198697/cyber-crime/hackers-drain-320-million-from-liquid-network-then-return-most-of-it.html",
+          "summary": "리퀴드 네트워크에서 3.2억 달러가 도난되었으나, 해커는 버그 수정을 요구한 후 대부분의 자금을 돌려보냈다."
+        },
+        {
+          "severity": "incident",
+          "source": "The Hacker News",
+          "headline": "그린드, HIV 상태 데이터 공유로 2600만 파운드 손해배상 합의",
+          "url": "https://thehackernews.com/2026/09/grindr-to-pay-26-million-to-settle-uk.html",
+          "summary": "그린드는 사용자의 HIV 상태 데이터를 제3자에게 공유했다는 혐의로 영국에서 2600만 파운드의 손해배상금을 지불하기로 합의했다."
+        },
+        {
+          "severity": "incident",
+          "source": "The Hacker News",
+          "headline": "Condé Nast, 3280만 사용자 데이터 유출로 인해 판매 중",
+          "url": "https://securityaffairs.com/198628/data-breach/conde-nast-data-of-32-8-million-users-offered-for-sale-after-wired-leak.html",
+          "summary": "Condé Nast의 3280만 사용자 데이터가 해킹되어 러시아어 사이버 범죄 포럼에서 1만 5천 달러에 판매되고 있다."
+        }
+      ]
+    },
+    {
+      "label": "동향 & 분석",
+      "type": "trends",
+      "items": [
+        {
+          "lead": "AI 기반 공격 증가",
+          "body": "AI 기반의 자율적 멀티 에이전트 프레임워크가 사용자 인증 없이 자동으로 자격 증명을 수집하는 사례가 증가하고 있다."
+        },
+        {
+          "lead": "제로데이 악용 증가",
+          "body": "제로데이 취약점이 활발히 악용되고 있으며, 특히 마이크로소프트와 아доб비의 취약점이 주목받고 있다."
+        },
+        {
+          "lead": "인바운드 전화를 통한 해킹",
+          "body": "WeChat과 Microsoft Teams에서 인바운드 전화를 통해 사용자 계정을 해킹하는 사례가 증가하고 있다."
+        },
+        {
+          "lead": "데이터 유출 사고 증가",
+          "body": "APIS 데이터베이스와 Condé Nast 사용자 데이터 유출 사고가 발생하며, 데이터 보호의 중요성이 강조되고 있다."
+        }
+      ]
+    }
+  ]
+}
