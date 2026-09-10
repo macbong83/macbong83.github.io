@@ -1,5 +1,117 @@
 [
   {
+    "id": "CVE-2026-9163",
+    "published": "2026-09-10",
+    "last_modified": "2026-09-10",
+    "status": "Deferred",
+    "description": "Improper neutralization of special elements used in an SQL command ('SQL injection') vulnerability in GIS Informatics GisLab Laboratory Management System allows SQL Injection.\n\nThis issue affects GisLab Laboratory Management System: from 1.4.03 before 1.5.",
+    "cvss": {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "score": 9.8,
+      "severity": "CRITICAL",
+      "attack_vector": "네트워크",
+      "attack_complexity": "낮음",
+      "privileges_required": "없음",
+      "user_interaction": "없음"
+    },
+    "cwes": [
+      "CWE-89"
+    ],
+    "affected": [],
+    "references": [
+      "https://siberguvenlik.gov.tr/guvenlik-bildirimleri/detay/tr-26-1063"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-9163",
+    "added_at": "2026-09-11T08:00:38+09:00"
+  },
+  {
+    "id": "CVE-2026-89042",
+    "published": "2026-09-10",
+    "last_modified": "2026-09-10",
+    "status": "Deferred",
+    "description": "passport-saml-encrypted through 0.1.13 makes SAML signature verification conditional on an optional cert option, allowing attackers to bypass authentication by submitting unsigned SAML responses. Attackers can post forged SAML responses with arbitrary NameID and attributes to the assertion consumer service endpoint to receive authenticated profiles without valid signatures.",
+    "cvss": {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N",
+      "score": 9.1,
+      "severity": "CRITICAL",
+      "attack_vector": "네트워크",
+      "attack_complexity": "낮음",
+      "privileges_required": "없음",
+      "user_interaction": "없음"
+    },
+    "cwes": [
+      "CWE-347"
+    ],
+    "affected": [],
+    "references": [
+      "https://github.com/krakenjs/passport-saml-encrypted",
+      "https://github.com/krakenjs/passport-saml-encrypted/blob/v0.1.13/lib/saml.js#L296",
+      "https://github.com/krakenjs/passport-saml-encrypted/blob/v0.1.13/lib/saml.js#L321",
+      "https://github.com/krakenjs/passport-saml-encrypted/issues/29",
+      "https://www.vulncheck.com/advisories/passport-saml-encrypted-through-0.1.13-authentication-bypass-via-missing-signature-verification"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-89042",
+    "added_at": "2026-09-11T08:00:38+09:00"
+  },
+  {
+    "id": "CVE-2026-88899",
+    "published": "2026-09-10",
+    "last_modified": "2026-09-10",
+    "status": "Deferred",
+    "description": "knowns versions before 0.31.0 fail to properly validate the x-opencode-directory request header in the /api/opencode proxy endpoint. Remote attackers can supply arbitrary directory paths to execute file operations outside the project root on the host system.",
+    "cvss": {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "score": 9.8,
+      "severity": "CRITICAL",
+      "attack_vector": "네트워크",
+      "attack_complexity": "낮음",
+      "privileges_required": "없음",
+      "user_interaction": "없음"
+    },
+    "cwes": [
+      "CWE-73"
+    ],
+    "affected": [],
+    "references": [
+      "https://github.com/knowns-dev/knowns/blob/v0.30.0/internal/server/server.go#L1283-L1296",
+      "https://github.com/knowns-dev/knowns/commit/37db0561b37b48b8bd035a417d7f1da6258ae657",
+      "https://github.com/knowns-dev/knowns/releases/tag/v0.31.0",
+      "https://github.com/knowns-dev/knowns/security/advisories/GHSA-9h2q-r9fh-f98w",
+      "https://www.vulncheck.com/advisories/knowns-before-0.31.0-external-control-of-agent-working-directory-via-x-opencode-directory-header"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-88899",
+    "added_at": "2026-09-11T08:00:38+09:00"
+  },
+  {
+    "id": "CVE-2026-85025",
+    "published": "2026-09-10",
+    "last_modified": "2026-09-10",
+    "status": "Awaiting Analysis",
+    "description": "IBM Langflow OSS 1.0.0 through 1.11.5 Langflow could allow an unauthenticated attacker to execute arbitrary code and access or modify chat sessions through publicly shared MCP project endpoints due to improper enforcement of public-flow security restrictions and session isolation controls.",
+    "cvss": {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "score": 9.8,
+      "severity": "CRITICAL",
+      "attack_vector": "네트워크",
+      "attack_complexity": "낮음",
+      "privileges_required": "없음",
+      "user_interaction": "없음"
+    },
+    "cwes": [
+      "CWE-863"
+    ],
+    "affected": [],
+    "references": [
+      "https://www.ibm.com/support/pages/node/7286666"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-85025",
+    "added_at": "2026-09-11T08:00:38+09:00"
+  },
+  {
     "id": "CVE-2026-8323",
     "published": "2026-09-10",
     "last_modified": "2026-09-10",
@@ -26,6 +138,188 @@
     "added_at": "2026-09-10T20:00:26+09:00"
   },
   {
+    "id": "CVE-2026-82107",
+    "published": "2026-09-10",
+    "last_modified": "2026-09-10",
+    "status": "Received",
+    "description": "IBM DataStage on Cloud Pak for Data 5.4.0.0 could allow a remote authenticated attacker to obtain sensitive information and bypass security restrictions due to improper authentication.",
+    "cvss": {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:N",
+      "score": 9.6,
+      "severity": "CRITICAL",
+      "attack_vector": "네트워크",
+      "attack_complexity": "낮음",
+      "privileges_required": "낮음",
+      "user_interaction": "없음"
+    },
+    "cwes": [
+      "CWE-287"
+    ],
+    "affected": [],
+    "references": [
+      "https://www.ibm.com/support/pages/node/7286562"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-82107",
+    "added_at": "2026-09-11T08:00:38+09:00"
+  },
+  {
+    "id": "CVE-2026-82100",
+    "published": "2026-09-10",
+    "last_modified": "2026-09-10",
+    "status": "Received",
+    "description": "IBM DataStage on Cloud Pak for Data 5.4.0.0 could allow a remote authenticated attacker to cause a denial of service due to a path traversal vulnerability.",
+    "cvss": {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:N/I:H/A:H",
+      "score": 9.6,
+      "severity": "CRITICAL",
+      "attack_vector": "네트워크",
+      "attack_complexity": "낮음",
+      "privileges_required": "낮음",
+      "user_interaction": "없음"
+    },
+    "cwes": [
+      "CWE-22"
+    ],
+    "affected": [],
+    "references": [
+      "https://www.ibm.com/support/pages/node/7286562"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-82100",
+    "added_at": "2026-09-11T08:00:38+09:00"
+  },
+  {
+    "id": "CVE-2026-81204",
+    "published": "2026-09-10",
+    "last_modified": "2026-09-10",
+    "status": "Received",
+    "description": "IBM Langflow OSS 1.0.0 through 1.11.5 could allow a remote attacker to execute arbitrary code due to code injection during graph construction.",
+    "cvss": {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "score": 9.8,
+      "severity": "CRITICAL",
+      "attack_vector": "네트워크",
+      "attack_complexity": "낮음",
+      "privileges_required": "없음",
+      "user_interaction": "없음"
+    },
+    "cwes": [
+      "CWE-94"
+    ],
+    "affected": [],
+    "references": [
+      "https://www.ibm.com/support/pages/node/7286666"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-81204",
+    "added_at": "2026-09-11T08:00:38+09:00"
+  },
+  {
+    "id": "CVE-2026-80424",
+    "published": "2026-09-10",
+    "last_modified": "2026-09-10",
+    "status": "Received",
+    "description": "IBM DataStage on Cloud Pak for Data 5.4.0.0 could allow a remote authenticated attacker to create arbitrary files due to path traversal during archive extraction.",
+    "cvss": {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:L/I:H/A:L",
+      "score": 9.1,
+      "severity": "CRITICAL",
+      "attack_vector": "네트워크",
+      "attack_complexity": "낮음",
+      "privileges_required": "낮음",
+      "user_interaction": "없음"
+    },
+    "cwes": [
+      "CWE-22"
+    ],
+    "affected": [],
+    "references": [
+      "https://www.ibm.com/support/pages/node/7286562"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-80424",
+    "added_at": "2026-09-11T08:00:38+09:00"
+  },
+  {
+    "id": "CVE-2026-79724",
+    "published": "2026-09-10",
+    "last_modified": "2026-09-10",
+    "status": "Received",
+    "description": "IBM Langflow OSS 1.0.0 through 1.11.5 could allow a remote attacker to execute arbitrary OS commands due to improper neutralization of special elements used in an OS command.",
+    "cvss": {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "score": 9.8,
+      "severity": "CRITICAL",
+      "attack_vector": "네트워크",
+      "attack_complexity": "낮음",
+      "privileges_required": "없음",
+      "user_interaction": "없음"
+    },
+    "cwes": [
+      "CWE-78"
+    ],
+    "affected": [],
+    "references": [
+      "https://www.ibm.com/support/pages/node/7286666"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-79724",
+    "added_at": "2026-09-11T08:00:38+09:00"
+  },
+  {
+    "id": "CVE-2026-78573",
+    "published": "2026-09-10",
+    "last_modified": "2026-09-10",
+    "status": "Received",
+    "description": "IBM ContextForge MCP Gateway 1.0.0 through 1.0.7 could allow a remote attacker to gain administrative access due to the use of default credentials.",
+    "cvss": {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "score": 9.8,
+      "severity": "CRITICAL",
+      "attack_vector": "네트워크",
+      "attack_complexity": "낮음",
+      "privileges_required": "없음",
+      "user_interaction": "없음"
+    },
+    "cwes": [
+      "CWE-1392"
+    ],
+    "affected": [],
+    "references": [
+      "https://www.ibm.com/support/pages/node/7286834"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-78573",
+    "added_at": "2026-09-11T08:00:38+09:00"
+  },
+  {
+    "id": "CVE-2026-75940",
+    "published": "2026-09-10",
+    "last_modified": "2026-09-10",
+    "status": "Deferred",
+    "description": "A vulnerability was reported in Lenovo Health Android Application, distributed exclusively in the Chinese market, that could allow an attacker to access sensitive health-related information.",
+    "cvss": {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N",
+      "score": 9.1,
+      "severity": "CRITICAL",
+      "attack_vector": "네트워크",
+      "attack_complexity": "낮음",
+      "privileges_required": "없음",
+      "user_interaction": "없음"
+    },
+    "cwes": [
+      "CWE-798"
+    ],
+    "affected": [],
+    "references": [
+      "https://iknow.lenovo.com.cn/detail/442248"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-75940",
+    "added_at": "2026-09-11T08:00:38+09:00"
+  },
+  {
     "id": "CVE-2026-7188",
     "published": "2026-09-10",
     "last_modified": "2026-09-10",
@@ -50,6 +344,32 @@
     ],
     "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-7188",
     "added_at": "2026-09-10T20:00:26+09:00"
+  },
+  {
+    "id": "CVE-2026-19646",
+    "published": "2026-09-10",
+    "last_modified": "2026-09-10",
+    "status": "Received",
+    "description": "IBM Common Licensing Agent 9.0, Agent 9.0.0.1, Agent 9.0.0.2, ART 9.0, ART 9.0.0.1, and ART 9.0.0.2 could allow a remote attacker to redirect users to an arbitrary domain due to improper validation of the HTTP Host header.",
+    "cvss": {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N",
+      "score": 9.1,
+      "severity": "CRITICAL",
+      "attack_vector": "네트워크",
+      "attack_complexity": "낮음",
+      "privileges_required": "없음",
+      "user_interaction": "없음"
+    },
+    "cwes": [
+      "CWE-1149"
+    ],
+    "affected": [],
+    "references": [
+      "https://www.ibm.com/support/pages/node/7286490"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-19646",
+    "added_at": "2026-09-11T08:00:38+09:00"
   },
   {
     "id": "CVE-2026-18351",
@@ -110,6 +430,65 @@
     ],
     "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-87929",
     "added_at": "2026-09-10T08:00:26+09:00"
+  },
+  {
+    "id": "CVE-2026-87544",
+    "published": "2026-09-09",
+    "last_modified": "2026-09-10",
+    "status": "Analyzed",
+    "description": "Incorrect authorization in Extensions in Google Chrome prior to 153.0.8010.36 allowed a remote attacker to bypass system access restrictions into a privileged page via a crafted HTML page. (Chromium security severity: Low)",
+    "cvss": {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "score": 9.8,
+      "severity": "CRITICAL",
+      "attack_vector": "네트워크",
+      "attack_complexity": "낮음",
+      "privileges_required": "없음",
+      "user_interaction": "없음"
+    },
+    "cwes": [
+      "CWE-863"
+    ],
+    "affected": [
+      "google chrome"
+    ],
+    "references": [
+      "https://chromereleases.googleblog.com/2026/09/stable-channel-update-for-desktop_0808145027.html",
+      "https://issues.chromium.org/issues/542355360"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-87544",
+    "added_at": "2026-09-11T08:00:38+09:00"
+  },
+  {
+    "id": "CVE-2026-87534",
+    "published": "2026-09-09",
+    "last_modified": "2026-09-10",
+    "status": "Modified",
+    "description": "Missing authorization in WebView in Google Chrome on on Android prior to 153.0.8010.36 allowed a remote attacker leveraging social engineering to bypass system access restrictions via crafted network traffic. (Chromium security severity: Medium)",
+    "cvss": {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "score": 9.8,
+      "severity": "CRITICAL",
+      "attack_vector": "네트워크",
+      "attack_complexity": "낮음",
+      "privileges_required": "없음",
+      "user_interaction": "없음"
+    },
+    "cwes": [
+      "CWE-862"
+    ],
+    "affected": [
+      "google chrome",
+      "google android -"
+    ],
+    "references": [
+      "https://chromereleases.googleblog.com/2026/09/stable-channel-update-for-desktop_0808145027.html",
+      "https://issues.chromium.org/issues/513134173"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-87534",
+    "added_at": "2026-09-11T08:00:38+09:00"
   },
   {
     "id": "CVE-2026-16272",

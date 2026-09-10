@@ -41,13 +41,107 @@
     <h1>CVE Archive</h1>
     <p>NVD 기반 Critical CVE를 누적 관리하는 별도 페이지입니다. 블로그에는 CVE 자동 글을 발행하지 않고, 이 페이지에만 기록합니다.</p>
     <div class="meta">
-      <span>Total 881</span>
-      <span>Updated 2026-09-10 20:00 KST</span>
+      <span>Total 895</span>
+      <span>Updated 2026-09-11 08:00 KST</span>
       <span>Source NVD API</span>
     </div>
   </section>
   <div class="notice">중복 제거 기준은 CVE ID입니다. 동일 CVE는 다시 추가하지 않습니다. 실제 악용 여부와 패치 우선순위는 CISA KEV, 벤더 권고, 자산 노출 여부와 함께 검토해야 합니다.</div>
 
+    <article class="cve-card" id="CVE-2026-9163">
+      <div class="cve-top">
+        <a class="cve-id" href="https://nvd.nist.gov/vuln/detail/CVE-2026-9163" target="_blank" rel="noopener">CVE-2026-9163</a>
+        <span class="score">CVSS 9.8 CRITICAL</span>
+      </div>
+      <p class="desc">Improper neutralization of special elements used in an SQL command (&#x27;SQL injection&#x27;) vulnerability in GIS Informatics GisLab Laboratory Management System allows SQL Injection.
+
+This issue affects GisLab Laboratory Management System: from 1.4.03 before 1.5.</p>
+      <dl>
+        <div><dt>Published</dt><dd>2026-09-10</dd></div>
+        <div><dt>Last Modified</dt><dd>2026-09-10</dd></div>
+        <div><dt>Status</dt><dd>Deferred</dd></div>
+        <div><dt>Attack Vector</dt><dd>네트워크</dd></div>
+        <div><dt>Attack Complexity</dt><dd>낮음</dd></div>
+        <div><dt>Privileges</dt><dd>없음</dd></div>
+        <div><dt>User Interaction</dt><dd>없음</dd></div>
+        <div><dt>CWE</dt><dd>CWE-89</dd></div>
+        <div><dt>Affected</dt><dd>NVD CPE 기준 확인 필요</dd></div>
+      </dl>
+      <div class="vector"><code>CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H</code></div>
+      <details>
+        <summary>References</summary>
+        <ul><li><a href="https://siberguvenlik.gov.tr/guvenlik-bildirimleri/detay/tr-26-1063" target="_blank" rel="noopener">https://siberguvenlik.gov.tr/guvenlik-bildirimleri/detay/tr-26-1063</a></li></ul>
+      </details>
+    </article>
+    <article class="cve-card" id="CVE-2026-89042">
+      <div class="cve-top">
+        <a class="cve-id" href="https://nvd.nist.gov/vuln/detail/CVE-2026-89042" target="_blank" rel="noopener">CVE-2026-89042</a>
+        <span class="score">CVSS 9.1 CRITICAL</span>
+      </div>
+      <p class="desc">passport-saml-encrypted through 0.1.13 makes SAML signature verification conditional on an optional cert option, allowing attackers to bypass authentication by submitting unsigned SAML responses. Attackers can post forged SAML responses with arbitrary NameID and attributes to the assertion consumer service endpoint to receive authenticated profiles without valid signatures.</p>
+      <dl>
+        <div><dt>Published</dt><dd>2026-09-10</dd></div>
+        <div><dt>Last Modified</dt><dd>2026-09-10</dd></div>
+        <div><dt>Status</dt><dd>Deferred</dd></div>
+        <div><dt>Attack Vector</dt><dd>네트워크</dd></div>
+        <div><dt>Attack Complexity</dt><dd>낮음</dd></div>
+        <div><dt>Privileges</dt><dd>없음</dd></div>
+        <div><dt>User Interaction</dt><dd>없음</dd></div>
+        <div><dt>CWE</dt><dd>CWE-347</dd></div>
+        <div><dt>Affected</dt><dd>NVD CPE 기준 확인 필요</dd></div>
+      </dl>
+      <div class="vector"><code>CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N</code></div>
+      <details>
+        <summary>References</summary>
+        <ul><li><a href="https://github.com/krakenjs/passport-saml-encrypted" target="_blank" rel="noopener">https://github.com/krakenjs/passport-saml-encrypted</a></li><li><a href="https://github.com/krakenjs/passport-saml-encrypted/blob/v0.1.13/lib/saml.js#L296" target="_blank" rel="noopener">https://github.com/krakenjs/passport-saml-encrypted/blob/v0.1.13/lib/saml.js#L296</a></li><li><a href="https://github.com/krakenjs/passport-saml-encrypted/blob/v0.1.13/lib/saml.js#L321" target="_blank" rel="noopener">https://github.com/krakenjs/passport-saml-encrypted/blob/v0.1.13/lib/saml.js#L321</a></li><li><a href="https://github.com/krakenjs/passport-saml-encrypted/issues/29" target="_blank" rel="noopener">https://github.com/krakenjs/passport-saml-encrypted/issues/29</a></li></ul>
+      </details>
+    </article>
+    <article class="cve-card" id="CVE-2026-88899">
+      <div class="cve-top">
+        <a class="cve-id" href="https://nvd.nist.gov/vuln/detail/CVE-2026-88899" target="_blank" rel="noopener">CVE-2026-88899</a>
+        <span class="score">CVSS 9.8 CRITICAL</span>
+      </div>
+      <p class="desc">knowns versions before 0.31.0 fail to properly validate the x-opencode-directory request header in the /api/opencode proxy endpoint. Remote attackers can supply arbitrary directory paths to execute file operations outside the project root on the host system.</p>
+      <dl>
+        <div><dt>Published</dt><dd>2026-09-10</dd></div>
+        <div><dt>Last Modified</dt><dd>2026-09-10</dd></div>
+        <div><dt>Status</dt><dd>Deferred</dd></div>
+        <div><dt>Attack Vector</dt><dd>네트워크</dd></div>
+        <div><dt>Attack Complexity</dt><dd>낮음</dd></div>
+        <div><dt>Privileges</dt><dd>없음</dd></div>
+        <div><dt>User Interaction</dt><dd>없음</dd></div>
+        <div><dt>CWE</dt><dd>CWE-73</dd></div>
+        <div><dt>Affected</dt><dd>NVD CPE 기준 확인 필요</dd></div>
+      </dl>
+      <div class="vector"><code>CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H</code></div>
+      <details>
+        <summary>References</summary>
+        <ul><li><a href="https://github.com/knowns-dev/knowns/blob/v0.30.0/internal/server/server.go#L1283-L1296" target="_blank" rel="noopener">https://github.com/knowns-dev/knowns/blob/v0.30.0/internal/server/server.go#L1283-L1296</a></li><li><a href="https://github.com/knowns-dev/knowns/commit/37db0561b37b48b8bd035a417d7f1da6258ae657" target="_blank" rel="noopener">https://github.com/knowns-dev/knowns/commit/37db0561b37b48b8bd035a417d7f1da6258ae657</a></li><li><a href="https://github.com/knowns-dev/knowns/releases/tag/v0.31.0" target="_blank" rel="noopener">https://github.com/knowns-dev/knowns/releases/tag/v0.31.0</a></li><li><a href="https://github.com/knowns-dev/knowns/security/advisories/GHSA-9h2q-r9fh-f98w" target="_blank" rel="noopener">https://github.com/knowns-dev/knowns/security/advisories/GHSA-9h2q-r9fh-f98w</a></li></ul>
+      </details>
+    </article>
+    <article class="cve-card" id="CVE-2026-85025">
+      <div class="cve-top">
+        <a class="cve-id" href="https://nvd.nist.gov/vuln/detail/CVE-2026-85025" target="_blank" rel="noopener">CVE-2026-85025</a>
+        <span class="score">CVSS 9.8 CRITICAL</span>
+      </div>
+      <p class="desc">IBM Langflow OSS 1.0.0 through 1.11.5 Langflow could allow an unauthenticated attacker to execute arbitrary code and access or modify chat sessions through publicly shared MCP project endpoints due to improper enforcement of public-flow security restrictions and session isolation controls.</p>
+      <dl>
+        <div><dt>Published</dt><dd>2026-09-10</dd></div>
+        <div><dt>Last Modified</dt><dd>2026-09-10</dd></div>
+        <div><dt>Status</dt><dd>Awaiting Analysis</dd></div>
+        <div><dt>Attack Vector</dt><dd>네트워크</dd></div>
+        <div><dt>Attack Complexity</dt><dd>낮음</dd></div>
+        <div><dt>Privileges</dt><dd>없음</dd></div>
+        <div><dt>User Interaction</dt><dd>없음</dd></div>
+        <div><dt>CWE</dt><dd>CWE-863</dd></div>
+        <div><dt>Affected</dt><dd>NVD CPE 기준 확인 필요</dd></div>
+      </dl>
+      <div class="vector"><code>CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H</code></div>
+      <details>
+        <summary>References</summary>
+        <ul><li><a href="https://www.ibm.com/support/pages/node/7286666" target="_blank" rel="noopener">https://www.ibm.com/support/pages/node/7286666</a></li></ul>
+      </details>
+    </article>
     <article class="cve-card" id="CVE-2026-8323">
       <div class="cve-top">
         <a class="cve-id" href="https://nvd.nist.gov/vuln/detail/CVE-2026-8323" target="_blank" rel="noopener">CVE-2026-8323</a>
@@ -73,6 +167,167 @@ This issue affects Access Control System: before Versiyon 2.</p>
         <ul><li><a href="https://siberguvenlik.gov.tr/guvenlik-bildirimleri/detay/tr-26-1061" target="_blank" rel="noopener">https://siberguvenlik.gov.tr/guvenlik-bildirimleri/detay/tr-26-1061</a></li></ul>
       </details>
     </article>
+    <article class="cve-card" id="CVE-2026-82107">
+      <div class="cve-top">
+        <a class="cve-id" href="https://nvd.nist.gov/vuln/detail/CVE-2026-82107" target="_blank" rel="noopener">CVE-2026-82107</a>
+        <span class="score">CVSS 9.6 CRITICAL</span>
+      </div>
+      <p class="desc">IBM DataStage on Cloud Pak for Data 5.4.0.0 could allow a remote authenticated attacker to obtain sensitive information and bypass security restrictions due to improper authentication.</p>
+      <dl>
+        <div><dt>Published</dt><dd>2026-09-10</dd></div>
+        <div><dt>Last Modified</dt><dd>2026-09-10</dd></div>
+        <div><dt>Status</dt><dd>Received</dd></div>
+        <div><dt>Attack Vector</dt><dd>네트워크</dd></div>
+        <div><dt>Attack Complexity</dt><dd>낮음</dd></div>
+        <div><dt>Privileges</dt><dd>낮음</dd></div>
+        <div><dt>User Interaction</dt><dd>없음</dd></div>
+        <div><dt>CWE</dt><dd>CWE-287</dd></div>
+        <div><dt>Affected</dt><dd>NVD CPE 기준 확인 필요</dd></div>
+      </dl>
+      <div class="vector"><code>CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:N</code></div>
+      <details>
+        <summary>References</summary>
+        <ul><li><a href="https://www.ibm.com/support/pages/node/7286562" target="_blank" rel="noopener">https://www.ibm.com/support/pages/node/7286562</a></li></ul>
+      </details>
+    </article>
+    <article class="cve-card" id="CVE-2026-82100">
+      <div class="cve-top">
+        <a class="cve-id" href="https://nvd.nist.gov/vuln/detail/CVE-2026-82100" target="_blank" rel="noopener">CVE-2026-82100</a>
+        <span class="score">CVSS 9.6 CRITICAL</span>
+      </div>
+      <p class="desc">IBM DataStage on Cloud Pak for Data 5.4.0.0 could allow a remote authenticated attacker to cause a denial of service due to a path traversal vulnerability.</p>
+      <dl>
+        <div><dt>Published</dt><dd>2026-09-10</dd></div>
+        <div><dt>Last Modified</dt><dd>2026-09-10</dd></div>
+        <div><dt>Status</dt><dd>Received</dd></div>
+        <div><dt>Attack Vector</dt><dd>네트워크</dd></div>
+        <div><dt>Attack Complexity</dt><dd>낮음</dd></div>
+        <div><dt>Privileges</dt><dd>낮음</dd></div>
+        <div><dt>User Interaction</dt><dd>없음</dd></div>
+        <div><dt>CWE</dt><dd>CWE-22</dd></div>
+        <div><dt>Affected</dt><dd>NVD CPE 기준 확인 필요</dd></div>
+      </dl>
+      <div class="vector"><code>CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:N/I:H/A:H</code></div>
+      <details>
+        <summary>References</summary>
+        <ul><li><a href="https://www.ibm.com/support/pages/node/7286562" target="_blank" rel="noopener">https://www.ibm.com/support/pages/node/7286562</a></li></ul>
+      </details>
+    </article>
+    <article class="cve-card" id="CVE-2026-81204">
+      <div class="cve-top">
+        <a class="cve-id" href="https://nvd.nist.gov/vuln/detail/CVE-2026-81204" target="_blank" rel="noopener">CVE-2026-81204</a>
+        <span class="score">CVSS 9.8 CRITICAL</span>
+      </div>
+      <p class="desc">IBM Langflow OSS 1.0.0 through 1.11.5 could allow a remote attacker to execute arbitrary code due to code injection during graph construction.</p>
+      <dl>
+        <div><dt>Published</dt><dd>2026-09-10</dd></div>
+        <div><dt>Last Modified</dt><dd>2026-09-10</dd></div>
+        <div><dt>Status</dt><dd>Received</dd></div>
+        <div><dt>Attack Vector</dt><dd>네트워크</dd></div>
+        <div><dt>Attack Complexity</dt><dd>낮음</dd></div>
+        <div><dt>Privileges</dt><dd>없음</dd></div>
+        <div><dt>User Interaction</dt><dd>없음</dd></div>
+        <div><dt>CWE</dt><dd>CWE-94</dd></div>
+        <div><dt>Affected</dt><dd>NVD CPE 기준 확인 필요</dd></div>
+      </dl>
+      <div class="vector"><code>CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H</code></div>
+      <details>
+        <summary>References</summary>
+        <ul><li><a href="https://www.ibm.com/support/pages/node/7286666" target="_blank" rel="noopener">https://www.ibm.com/support/pages/node/7286666</a></li></ul>
+      </details>
+    </article>
+    <article class="cve-card" id="CVE-2026-80424">
+      <div class="cve-top">
+        <a class="cve-id" href="https://nvd.nist.gov/vuln/detail/CVE-2026-80424" target="_blank" rel="noopener">CVE-2026-80424</a>
+        <span class="score">CVSS 9.1 CRITICAL</span>
+      </div>
+      <p class="desc">IBM DataStage on Cloud Pak for Data 5.4.0.0 could allow a remote authenticated attacker to create arbitrary files due to path traversal during archive extraction.</p>
+      <dl>
+        <div><dt>Published</dt><dd>2026-09-10</dd></div>
+        <div><dt>Last Modified</dt><dd>2026-09-10</dd></div>
+        <div><dt>Status</dt><dd>Received</dd></div>
+        <div><dt>Attack Vector</dt><dd>네트워크</dd></div>
+        <div><dt>Attack Complexity</dt><dd>낮음</dd></div>
+        <div><dt>Privileges</dt><dd>낮음</dd></div>
+        <div><dt>User Interaction</dt><dd>없음</dd></div>
+        <div><dt>CWE</dt><dd>CWE-22</dd></div>
+        <div><dt>Affected</dt><dd>NVD CPE 기준 확인 필요</dd></div>
+      </dl>
+      <div class="vector"><code>CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:L/I:H/A:L</code></div>
+      <details>
+        <summary>References</summary>
+        <ul><li><a href="https://www.ibm.com/support/pages/node/7286562" target="_blank" rel="noopener">https://www.ibm.com/support/pages/node/7286562</a></li></ul>
+      </details>
+    </article>
+    <article class="cve-card" id="CVE-2026-79724">
+      <div class="cve-top">
+        <a class="cve-id" href="https://nvd.nist.gov/vuln/detail/CVE-2026-79724" target="_blank" rel="noopener">CVE-2026-79724</a>
+        <span class="score">CVSS 9.8 CRITICAL</span>
+      </div>
+      <p class="desc">IBM Langflow OSS 1.0.0 through 1.11.5 could allow a remote attacker to execute arbitrary OS commands due to improper neutralization of special elements used in an OS command.</p>
+      <dl>
+        <div><dt>Published</dt><dd>2026-09-10</dd></div>
+        <div><dt>Last Modified</dt><dd>2026-09-10</dd></div>
+        <div><dt>Status</dt><dd>Received</dd></div>
+        <div><dt>Attack Vector</dt><dd>네트워크</dd></div>
+        <div><dt>Attack Complexity</dt><dd>낮음</dd></div>
+        <div><dt>Privileges</dt><dd>없음</dd></div>
+        <div><dt>User Interaction</dt><dd>없음</dd></div>
+        <div><dt>CWE</dt><dd>CWE-78</dd></div>
+        <div><dt>Affected</dt><dd>NVD CPE 기준 확인 필요</dd></div>
+      </dl>
+      <div class="vector"><code>CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H</code></div>
+      <details>
+        <summary>References</summary>
+        <ul><li><a href="https://www.ibm.com/support/pages/node/7286666" target="_blank" rel="noopener">https://www.ibm.com/support/pages/node/7286666</a></li></ul>
+      </details>
+    </article>
+    <article class="cve-card" id="CVE-2026-78573">
+      <div class="cve-top">
+        <a class="cve-id" href="https://nvd.nist.gov/vuln/detail/CVE-2026-78573" target="_blank" rel="noopener">CVE-2026-78573</a>
+        <span class="score">CVSS 9.8 CRITICAL</span>
+      </div>
+      <p class="desc">IBM ContextForge MCP Gateway 1.0.0 through 1.0.7 could allow a remote attacker to gain administrative access due to the use of default credentials.</p>
+      <dl>
+        <div><dt>Published</dt><dd>2026-09-10</dd></div>
+        <div><dt>Last Modified</dt><dd>2026-09-10</dd></div>
+        <div><dt>Status</dt><dd>Received</dd></div>
+        <div><dt>Attack Vector</dt><dd>네트워크</dd></div>
+        <div><dt>Attack Complexity</dt><dd>낮음</dd></div>
+        <div><dt>Privileges</dt><dd>없음</dd></div>
+        <div><dt>User Interaction</dt><dd>없음</dd></div>
+        <div><dt>CWE</dt><dd>CWE-1392</dd></div>
+        <div><dt>Affected</dt><dd>NVD CPE 기준 확인 필요</dd></div>
+      </dl>
+      <div class="vector"><code>CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H</code></div>
+      <details>
+        <summary>References</summary>
+        <ul><li><a href="https://www.ibm.com/support/pages/node/7286834" target="_blank" rel="noopener">https://www.ibm.com/support/pages/node/7286834</a></li></ul>
+      </details>
+    </article>
+    <article class="cve-card" id="CVE-2026-75940">
+      <div class="cve-top">
+        <a class="cve-id" href="https://nvd.nist.gov/vuln/detail/CVE-2026-75940" target="_blank" rel="noopener">CVE-2026-75940</a>
+        <span class="score">CVSS 9.1 CRITICAL</span>
+      </div>
+      <p class="desc">A vulnerability was reported in Lenovo Health Android Application, distributed exclusively in the Chinese market, that could allow an attacker to access sensitive health-related information.</p>
+      <dl>
+        <div><dt>Published</dt><dd>2026-09-10</dd></div>
+        <div><dt>Last Modified</dt><dd>2026-09-10</dd></div>
+        <div><dt>Status</dt><dd>Deferred</dd></div>
+        <div><dt>Attack Vector</dt><dd>네트워크</dd></div>
+        <div><dt>Attack Complexity</dt><dd>낮음</dd></div>
+        <div><dt>Privileges</dt><dd>없음</dd></div>
+        <div><dt>User Interaction</dt><dd>없음</dd></div>
+        <div><dt>CWE</dt><dd>CWE-798</dd></div>
+        <div><dt>Affected</dt><dd>NVD CPE 기준 확인 필요</dd></div>
+      </dl>
+      <div class="vector"><code>CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N</code></div>
+      <details>
+        <summary>References</summary>
+        <ul><li><a href="https://iknow.lenovo.com.cn/detail/442248" target="_blank" rel="noopener">https://iknow.lenovo.com.cn/detail/442248</a></li></ul>
+      </details>
+    </article>
     <article class="cve-card" id="CVE-2026-7188">
       <div class="cve-top">
         <a class="cve-id" href="https://nvd.nist.gov/vuln/detail/CVE-2026-7188" target="_blank" rel="noopener">CVE-2026-7188</a>
@@ -96,6 +351,29 @@ This issue affects Access Control System: before Versiyon 2.</p>
       <details>
         <summary>References</summary>
         <ul><li><a href="https://siberguvenlik.gov.tr/guvenlik-bildirimleri/detay/tr-26-1061" target="_blank" rel="noopener">https://siberguvenlik.gov.tr/guvenlik-bildirimleri/detay/tr-26-1061</a></li></ul>
+      </details>
+    </article>
+    <article class="cve-card" id="CVE-2026-19646">
+      <div class="cve-top">
+        <a class="cve-id" href="https://nvd.nist.gov/vuln/detail/CVE-2026-19646" target="_blank" rel="noopener">CVE-2026-19646</a>
+        <span class="score">CVSS 9.1 CRITICAL</span>
+      </div>
+      <p class="desc">IBM Common Licensing Agent 9.0, Agent 9.0.0.1, Agent 9.0.0.2, ART 9.0, ART 9.0.0.1, and ART 9.0.0.2 could allow a remote attacker to redirect users to an arbitrary domain due to improper validation of the HTTP Host header.</p>
+      <dl>
+        <div><dt>Published</dt><dd>2026-09-10</dd></div>
+        <div><dt>Last Modified</dt><dd>2026-09-10</dd></div>
+        <div><dt>Status</dt><dd>Received</dd></div>
+        <div><dt>Attack Vector</dt><dd>네트워크</dd></div>
+        <div><dt>Attack Complexity</dt><dd>낮음</dd></div>
+        <div><dt>Privileges</dt><dd>없음</dd></div>
+        <div><dt>User Interaction</dt><dd>없음</dd></div>
+        <div><dt>CWE</dt><dd>CWE-1149</dd></div>
+        <div><dt>Affected</dt><dd>NVD CPE 기준 확인 필요</dd></div>
+      </dl>
+      <div class="vector"><code>CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N</code></div>
+      <details>
+        <summary>References</summary>
+        <ul><li><a href="https://www.ibm.com/support/pages/node/7286490" target="_blank" rel="noopener">https://www.ibm.com/support/pages/node/7286490</a></li></ul>
       </details>
     </article>
     <article class="cve-card" id="CVE-2026-18351">
@@ -142,6 +420,52 @@ This issue affects Access Control System: before Versiyon 2.</p>
       <details>
         <summary>References</summary>
         <ul><li><a href="https://github.com/EviL0rd/maxsite-cve4/blob/main/2026.09.08-maxsite-cms-hardcoded-session-key-auth-bypass.md" target="_blank" rel="noopener">https://github.com/EviL0rd/maxsite-cve4/blob/main/2026.09.08-maxsite-cms-hardcoded-session-key-auth-bypass.md</a></li><li><a href="https://github.com/maxsite/cms" target="_blank" rel="noopener">https://github.com/maxsite/cms</a></li><li><a href="https://github.com/maxsite/cms/blob/2ca0a0c7d1d71106a25dbb0f2aedaaefbf12802c/application/config/config.php#L230-L254" target="_blank" rel="noopener">https://github.com/maxsite/cms/blob/2ca0a0c7d1d71106a25dbb0f2aedaaefbf12802c/application/config/config.php#L230-L254</a></li><li><a href="https://github.com/maxsite/cms/blob/2ca0a0c7d1d71106a25dbb0f2aedaaefbf12802c/application/maxsite/common/core/init.php#L70-L96" target="_blank" rel="noopener">https://github.com/maxsite/cms/blob/2ca0a0c7d1d71106a25dbb0f2aedaaefbf12802c/application/maxsite/common/core/init.php#L70-L96</a></li></ul>
+      </details>
+    </article>
+    <article class="cve-card" id="CVE-2026-87544">
+      <div class="cve-top">
+        <a class="cve-id" href="https://nvd.nist.gov/vuln/detail/CVE-2026-87544" target="_blank" rel="noopener">CVE-2026-87544</a>
+        <span class="score">CVSS 9.8 CRITICAL</span>
+      </div>
+      <p class="desc">Incorrect authorization in Extensions in Google Chrome prior to 153.0.8010.36 allowed a remote attacker to bypass system access restrictions into a privileged page via a crafted HTML page. (Chromium security severity: Low)</p>
+      <dl>
+        <div><dt>Published</dt><dd>2026-09-09</dd></div>
+        <div><dt>Last Modified</dt><dd>2026-09-10</dd></div>
+        <div><dt>Status</dt><dd>Analyzed</dd></div>
+        <div><dt>Attack Vector</dt><dd>네트워크</dd></div>
+        <div><dt>Attack Complexity</dt><dd>낮음</dd></div>
+        <div><dt>Privileges</dt><dd>없음</dd></div>
+        <div><dt>User Interaction</dt><dd>없음</dd></div>
+        <div><dt>CWE</dt><dd>CWE-863</dd></div>
+        <div><dt>Affected</dt><dd>google chrome</dd></div>
+      </dl>
+      <div class="vector"><code>CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H</code></div>
+      <details>
+        <summary>References</summary>
+        <ul><li><a href="https://chromereleases.googleblog.com/2026/09/stable-channel-update-for-desktop_0808145027.html" target="_blank" rel="noopener">https://chromereleases.googleblog.com/2026/09/stable-channel-update-for-desktop_0808145027.html</a></li><li><a href="https://issues.chromium.org/issues/542355360" target="_blank" rel="noopener">https://issues.chromium.org/issues/542355360</a></li></ul>
+      </details>
+    </article>
+    <article class="cve-card" id="CVE-2026-87534">
+      <div class="cve-top">
+        <a class="cve-id" href="https://nvd.nist.gov/vuln/detail/CVE-2026-87534" target="_blank" rel="noopener">CVE-2026-87534</a>
+        <span class="score">CVSS 9.8 CRITICAL</span>
+      </div>
+      <p class="desc">Missing authorization in WebView in Google Chrome on on Android prior to 153.0.8010.36 allowed a remote attacker leveraging social engineering to bypass system access restrictions via crafted network traffic. (Chromium security severity: Medium)</p>
+      <dl>
+        <div><dt>Published</dt><dd>2026-09-09</dd></div>
+        <div><dt>Last Modified</dt><dd>2026-09-10</dd></div>
+        <div><dt>Status</dt><dd>Modified</dd></div>
+        <div><dt>Attack Vector</dt><dd>네트워크</dd></div>
+        <div><dt>Attack Complexity</dt><dd>낮음</dd></div>
+        <div><dt>Privileges</dt><dd>없음</dd></div>
+        <div><dt>User Interaction</dt><dd>없음</dd></div>
+        <div><dt>CWE</dt><dd>CWE-862</dd></div>
+        <div><dt>Affected</dt><dd>google chrome, google android -</dd></div>
+      </dl>
+      <div class="vector"><code>CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H</code></div>
+      <details>
+        <summary>References</summary>
+        <ul><li><a href="https://chromereleases.googleblog.com/2026/09/stable-channel-update-for-desktop_0808145027.html" target="_blank" rel="noopener">https://chromereleases.googleblog.com/2026/09/stable-channel-update-for-desktop_0808145027.html</a></li><li><a href="https://issues.chromium.org/issues/513134173" target="_blank" rel="noopener">https://issues.chromium.org/issues/513134173</a></li></ul>
       </details>
     </article>
     <article class="cve-card" id="CVE-2026-16272">
