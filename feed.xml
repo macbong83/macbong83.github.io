@@ -5,55 +5,62 @@
     <link>https://macbong83.github.io/</link>
     <description>EDR · SASE · CTEM · 취약점 관리 중심의 매일 보안 브리핑</description>
     <language>ko</language>
-    <lastBuildDate>Thu, 10 Sep 2026 08:00:26 +0900</lastBuildDate>
+    <lastBuildDate>Thu, 10 Sep 2026 09:02:44 +0900</lastBuildDate>
     <item>
       <title>SecuLog 보안 브리핑 — vendor-weekly-2026-09-07</title>
       <link>https://macbong83.github.io/posts/vendor-weekly-2026-09-07.html</link>
       <guid isPermaLink="true">https://macbong83.github.io/posts/vendor-weekly-2026-09-07.html</guid>
-      <pubDate>Thu, 10 Sep 2026 08:00:26 +0900</pubDate>
+      <pubDate>Thu, 10 Sep 2026 09:02:44 +0900</pubDate>
       <description></description>
     </item>
     <item>
       <title>SecuLog 보안 브리핑 — vendor-weekly-2026-08-31</title>
       <link>https://macbong83.github.io/posts/vendor-weekly-2026-08-31.html</link>
       <guid isPermaLink="true">https://macbong83.github.io/posts/vendor-weekly-2026-08-31.html</guid>
-      <pubDate>Thu, 10 Sep 2026 08:00:26 +0900</pubDate>
+      <pubDate>Thu, 10 Sep 2026 09:02:44 +0900</pubDate>
       <description></description>
     </item>
     <item>
       <title>SecuLog 보안 브리핑 — vendor-weekly-2026-08-24</title>
       <link>https://macbong83.github.io/posts/vendor-weekly-2026-08-24.html</link>
       <guid isPermaLink="true">https://macbong83.github.io/posts/vendor-weekly-2026-08-24.html</guid>
-      <pubDate>Thu, 10 Sep 2026 08:00:26 +0900</pubDate>
+      <pubDate>Thu, 10 Sep 2026 09:02:44 +0900</pubDate>
       <description></description>
     </item>
     <item>
       <title>SecuLog 보안 브리핑 — vendor-weekly-2026-07-20</title>
       <link>https://macbong83.github.io/posts/vendor-weekly-2026-07-20.html</link>
       <guid isPermaLink="true">https://macbong83.github.io/posts/vendor-weekly-2026-07-20.html</guid>
-      <pubDate>Thu, 10 Sep 2026 08:00:26 +0900</pubDate>
+      <pubDate>Thu, 10 Sep 2026 09:02:44 +0900</pubDate>
       <description></description>
     </item>
     <item>
       <title>SecuLog 보안 브리핑 — vendor-weekly-2026-07-06</title>
       <link>https://macbong83.github.io/posts/vendor-weekly-2026-07-06.html</link>
       <guid isPermaLink="true">https://macbong83.github.io/posts/vendor-weekly-2026-07-06.html</guid>
-      <pubDate>Thu, 10 Sep 2026 08:00:26 +0900</pubDate>
+      <pubDate>Thu, 10 Sep 2026 09:02:44 +0900</pubDate>
       <description></description>
     </item>
     <item>
       <title>SecuLog 보안 브리핑 — vendor-weekly-2026-06-30</title>
       <link>https://macbong83.github.io/posts/vendor-weekly-2026-06-30.html</link>
       <guid isPermaLink="true">https://macbong83.github.io/posts/vendor-weekly-2026-06-30.html</guid>
-      <pubDate>Thu, 10 Sep 2026 08:00:26 +0900</pubDate>
+      <pubDate>Thu, 10 Sep 2026 09:02:44 +0900</pubDate>
       <description></description>
     </item>
     <item>
       <title>SecuLog 보안 브리핑 — startup-radar-2026-07-13</title>
       <link>https://macbong83.github.io/posts/startup-radar-2026-07-13.html</link>
       <guid isPermaLink="true">https://macbong83.github.io/posts/startup-radar-2026-07-13.html</guid>
-      <pubDate>Thu, 10 Sep 2026 08:00:26 +0900</pubDate>
+      <pubDate>Thu, 10 Sep 2026 09:02:44 +0900</pubDate>
       <description></description>
+    </item>
+    <item>
+      <title>SecuLog 보안 브리핑 — 2026.09.10</title>
+      <link>https://macbong83.github.io/posts/2026-09-10.html</link>
+      <guid isPermaLink="true">https://macbong83.github.io/posts/2026-09-10.html</guid>
+      <pubDate>Thu, 10 Sep 2026 08:00:00 +0900</pubDate>
+      <description>SAP 커널 취약점, 원격 코드 실행 가능 / Chrome V8 제로데이 악용, 코드 실행 가능 / N-able N-central 원격 코드 실행 취약점, 악용 중 / F5 BIG-IP APM 메모리에 PHP 웹 쉘 주입</description>
     </item>
     <item>
       <title>SecuLog 보안 브리핑 — 2026.09.09</title>
