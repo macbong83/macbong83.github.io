@@ -41,13 +41,86 @@
     <h1>CVE Archive</h1>
     <p>NVD 기반 Critical CVE를 누적 관리하는 별도 페이지입니다. 블로그에는 CVE 자동 글을 발행하지 않고, 이 페이지에만 기록합니다.</p>
     <div class="meta">
-      <span>Total 878</span>
-      <span>Updated 2026-09-10 08:00 KST</span>
+      <span>Total 881</span>
+      <span>Updated 2026-09-10 20:00 KST</span>
       <span>Source NVD API</span>
     </div>
   </section>
   <div class="notice">중복 제거 기준은 CVE ID입니다. 동일 CVE는 다시 추가하지 않습니다. 실제 악용 여부와 패치 우선순위는 CISA KEV, 벤더 권고, 자산 노출 여부와 함께 검토해야 합니다.</div>
 
+    <article class="cve-card" id="CVE-2026-8323">
+      <div class="cve-top">
+        <a class="cve-id" href="https://nvd.nist.gov/vuln/detail/CVE-2026-8323" target="_blank" rel="noopener">CVE-2026-8323</a>
+        <span class="score">CVSS 9.3 CRITICAL</span>
+      </div>
+      <p class="desc">URL redirection to untrusted site (&#x27;open redirect&#x27;) vulnerability in Armiya Information Technologies Ltd. Co. Access Control System allows Fake the Source of Data.
+
+This issue affects Access Control System: before Versiyon 2.</p>
+      <dl>
+        <div><dt>Published</dt><dd>2026-09-10</dd></div>
+        <div><dt>Last Modified</dt><dd>2026-09-10</dd></div>
+        <div><dt>Status</dt><dd>Received</dd></div>
+        <div><dt>Attack Vector</dt><dd>네트워크</dd></div>
+        <div><dt>Attack Complexity</dt><dd>낮음</dd></div>
+        <div><dt>Privileges</dt><dd>없음</dd></div>
+        <div><dt>User Interaction</dt><dd>필요</dd></div>
+        <div><dt>CWE</dt><dd>CWE-601</dd></div>
+        <div><dt>Affected</dt><dd>NVD CPE 기준 확인 필요</dd></div>
+      </dl>
+      <div class="vector"><code>CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:H/I:H/A:N</code></div>
+      <details>
+        <summary>References</summary>
+        <ul><li><a href="https://siberguvenlik.gov.tr/guvenlik-bildirimleri/detay/tr-26-1061" target="_blank" rel="noopener">https://siberguvenlik.gov.tr/guvenlik-bildirimleri/detay/tr-26-1061</a></li></ul>
+      </details>
+    </article>
+    <article class="cve-card" id="CVE-2026-7188">
+      <div class="cve-top">
+        <a class="cve-id" href="https://nvd.nist.gov/vuln/detail/CVE-2026-7188" target="_blank" rel="noopener">CVE-2026-7188</a>
+        <span class="score">CVSS 9.8 CRITICAL</span>
+      </div>
+      <p class="desc">Improper neutralization of special elements used in an SQL command (&#x27;SQL injection&#x27;) vulnerability in Armiya Information Technologies Ltd. Co. Access Control System allows SQL Injection.
+
+This issue affects Access Control System: before Versiyon 2.</p>
+      <dl>
+        <div><dt>Published</dt><dd>2026-09-10</dd></div>
+        <div><dt>Last Modified</dt><dd>2026-09-10</dd></div>
+        <div><dt>Status</dt><dd>Received</dd></div>
+        <div><dt>Attack Vector</dt><dd>네트워크</dd></div>
+        <div><dt>Attack Complexity</dt><dd>낮음</dd></div>
+        <div><dt>Privileges</dt><dd>없음</dd></div>
+        <div><dt>User Interaction</dt><dd>없음</dd></div>
+        <div><dt>CWE</dt><dd>CWE-89</dd></div>
+        <div><dt>Affected</dt><dd>NVD CPE 기준 확인 필요</dd></div>
+      </dl>
+      <div class="vector"><code>CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H</code></div>
+      <details>
+        <summary>References</summary>
+        <ul><li><a href="https://siberguvenlik.gov.tr/guvenlik-bildirimleri/detay/tr-26-1061" target="_blank" rel="noopener">https://siberguvenlik.gov.tr/guvenlik-bildirimleri/detay/tr-26-1061</a></li></ul>
+      </details>
+    </article>
+    <article class="cve-card" id="CVE-2026-18351">
+      <div class="cve-top">
+        <a class="cve-id" href="https://nvd.nist.gov/vuln/detail/CVE-2026-18351" target="_blank" rel="noopener">CVE-2026-18351</a>
+        <span class="score">CVSS 9.8 CRITICAL</span>
+      </div>
+      <p class="desc">The Drag and Drop File Upload for Elementor Forms plugin for WordPress is vulnerable to Arbitrary File Upload in all versions up to, and including, 1.6.0 via the elementor_file_upload function. This is due to insufficient file type validation in the is_file_type_valid() function, which uses the attacker-controlled &#x27;type&#x27; parameter as regex keys in the MIME allowlist, allowing blacklist bypass via a crafted extension that sanitize_file_name() later normalizes to a PHP extension. This makes it possible for unauthenticated attackers to upload files that may be executable, which makes remote code execution possible.</p>
+      <dl>
+        <div><dt>Published</dt><dd>2026-09-10</dd></div>
+        <div><dt>Last Modified</dt><dd>2026-09-10</dd></div>
+        <div><dt>Status</dt><dd>Received</dd></div>
+        <div><dt>Attack Vector</dt><dd>네트워크</dd></div>
+        <div><dt>Attack Complexity</dt><dd>낮음</dd></div>
+        <div><dt>Privileges</dt><dd>없음</dd></div>
+        <div><dt>User Interaction</dt><dd>없음</dd></div>
+        <div><dt>CWE</dt><dd>CWE-434</dd></div>
+        <div><dt>Affected</dt><dd>NVD CPE 기준 확인 필요</dd></div>
+      </dl>
+      <div class="vector"><code>CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H</code></div>
+      <details>
+        <summary>References</summary>
+        <ul><li><a href="https://plugins.svn.wordpress.org/drag-and-drop-file-upload-for-elementor-forms/tags/1.6.0/drag-and-drop-file-upload-for-elementor-forms.php" target="_blank" rel="noopener">https://plugins.svn.wordpress.org/drag-and-drop-file-upload-for-elementor-forms/tags/1.6.0/drag-and-drop-file-upload-for-elementor-forms.php</a></li><li><a href="https://plugins.svn.wordpress.org/drag-and-drop-file-upload-for-elementor-forms/tags/1.6.0/fields/file_upload.php" target="_blank" rel="noopener">https://plugins.svn.wordpress.org/drag-and-drop-file-upload-for-elementor-forms/tags/1.6.0/fields/file_upload.php</a></li><li><a href="https://plugins.trac.wordpress.org/browser/drag-and-drop-file-upload-for-elementor-forms/tags/1.6.0/fields/file_upload.php#L833" target="_blank" rel="noopener">https://plugins.trac.wordpress.org/browser/drag-and-drop-file-upload-for-elementor-forms/tags/1.6.0/fields/file_upload.php#L833</a></li><li><a href="https://plugins.trac.wordpress.org/changeset/3628051/drag-and-drop-file-upload-for-elementor-forms" target="_blank" rel="noopener">https://plugins.trac.wordpress.org/changeset/3628051/drag-and-drop-file-upload-for-elementor-forms</a></li></ul>
+      </details>
+    </article>
     <article class="cve-card" id="CVE-2026-87929">
       <div class="cve-top">
         <a class="cve-id" href="https://nvd.nist.gov/vuln/detail/CVE-2026-87929" target="_blank" rel="noopener">CVE-2026-87929</a>
