@@ -1,5 +1,35 @@
 [
   {
+    "id": "CVE-2026-90558",
+    "published": "2026-09-12",
+    "last_modified": "2026-09-12",
+    "status": "Received",
+    "description": "sngrep through 1.8.4 contains stack buffer overflow vulnerabilities in SIP attribute formatting routines when header values exceed the 255-byte buffer limit. Attackers can craft malicious SIP packets with oversized Call-ID, X-Call-ID, or other header fields to overflow stack buffers and cause crashes or execute arbitrary code during packet parsing and rendering.",
+    "cvss": {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "score": 9.8,
+      "severity": "CRITICAL",
+      "attack_vector": "네트워크",
+      "attack_complexity": "낮음",
+      "privileges_required": "없음",
+      "user_interaction": "없음"
+    },
+    "cwes": [
+      "CWE-121"
+    ],
+    "affected": [],
+    "references": [
+      "https://github.com/irontec/sngrep",
+      "https://github.com/irontec/sngrep/blob/v1.8.4/src/sip_call.c#L260",
+      "https://github.com/irontec/sngrep/blob/v1.8.4/src/sip_msg.c#L150",
+      "https://github.com/irontec/sngrep/commit/1ff74ee3ab5ff280e8ba976aa8c744dca57eb35b",
+      "https://www.vulncheck.com/advisories/sngrep-through-1.8.4-stack-buffer-overflow-via-sip-headers"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-90558",
+    "added_at": "2026-09-13T08:00:22+09:00"
+  },
+  {
     "id": "CVE-2026-78159",
     "published": "2026-09-12",
     "last_modified": "2026-09-12",
