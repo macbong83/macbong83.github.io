@@ -1,0 +1,77 @@
+{
+  "week_start": "2026-09-08",
+  "week_end": "2026-09-14",
+  "title": "이번 주 보안 벤더 동향",
+  "summary": "이번 주에는 AI 기반 보안 위협, 대규모 패치, 랜섬웨어 공격, 그리고 보안 벤더들의 최신 기술 동향이 주목받았다. 특히, GenAI의 데이터 노출과 루트킷 탐지 기술이 강조되었으며, 보안 업체들이 AI를 활용한 새로운 보호 기술을 선보였다.",
+  "highlights": [
+    {
+      "vendor": "AhnLab",
+      "headline": "리눅스 환경의 루트킷 Syslogk 탐지 및 치료",
+      "url": "https://asec.ahnlab.com/ko/95253/",
+      "insight": "리눅스 커널을 변조하는 루트킷의 활동이 지속적으로 증가하고 있으며, 이를 탐지 및 치료하는 기술이 중요해지고 있다. 기업은 리눅스 서버의 보안 모니터링을 강화해야 한다."
+    },
+    {
+      "vendor": "Check Point",
+      "headline": "NoName057(16) Renews #OpJapan",
+      "url": "https://blog.checkpoint.com/exposure-management/noname05716-renews-opjapan/",
+      "insight": "러시아 친화적 해커 집단이 일본 기업을 대상으로 한 DDoS 공격이 재개되었다. 일본의 우크라이나 지원에 대한 반발이 배경이며, 기업은 지속적인 보안 모니터링이 필요하다."
+    },
+    {
+      "vendor": "Tenable",
+      "headline": "Microsoft의 9월 패치 데이 964개의 CVE 수정",
+      "url": "https://www.tenable.com/blog/microsofts-september-2026-patch-tuesday-addresses-964-cves-cve-2026-81963-cve-2026-85880",
+      "insight": "Microsoft가 964개의 취약점을 수정한 이번 패치 데이는 기업이 즉시 업데이트를 적용해야 할 중요성을 강조한다. 특히, 2개의 제로데이 취약점이 악용되고 있어 주의가 필요하다."
+    },
+    {
+      "vendor": "Tenable",
+      "headline": "Claude Mythos 5, Tenable One에 도입",
+      "url": "https://www.tenable.com/blog/tenable-one-claude-mythos-5-adversary-view-ai-exposure-management",
+      "insight": "AI 기반의 위협 분석 기술이 보안 플랫폼에 통합되며, 공격자의 전략을 예측하고 대응하는 데 중요한 역할을 할 것으로 기대된다."
+    },
+    {
+      "vendor": "Check Point",
+      "headline": "ChatGPT를 통해 Gmail 읽기 시도",
+      "url": "https://blog.checkpoint.com/research/chatgpt-let-attackers-read-victims-gmail-through-a-hidden-channel-between-accounts/",
+      "insight": "AI 어시스턴트의 내부 서비스를 악용한 공격이 가능하다는 점에서, 기업은 AI 도구의 사용을 모니터링하고 보안 정책을 엄격히 적용해야 한다."
+    },
+    {
+      "vendor": "Tenable",
+      "headline": "CyberAgents Exchange AI Inspector 출시",
+      "url": "https://www.tenable.com/blog/ai-agent-security-openai-tenable-cyberagents-exchange-inspector",
+      "insight": "AI 에이전트의 보안 검토를 위한 새로운 도구가 출시되며, 오픈소스 AI 플랫폼의 보안 강화가 중요한 과제로 부상하고 있다."
+    },
+    {
+      "vendor": "Check Point",
+      "headline": "PuzzleMask: Prompt Injection 기술 발견",
+      "url": "https://blog.checkpoint.com/security/puzzlemask-the-prompt-injection-hiding-in-plain-sight/",
+      "insight": "AI 모델의 입력에 숨겨진 Prompt Injection 기술이 발견되며, 기업은 AI 입력 검증을 강화해야 할 필요가 있다."
+    },
+    {
+      "vendor": "AhnLab",
+      "headline": "LegionLoader 악성코드 유포 방식 분석",
+      "url": "https://asec.ahnlab.com/ko/95373/",
+      "insight": "ClickFix 방식을 통해 유포되는 LegionLoader 악성코드는 사용자의 주의를 끌기 위해 보안 인증 창을 모방하고 있다. 사용자는 의심스러운 URL을 클릭하지 않도록 주의해야 한다."
+    }
+  ],
+  "trends": [
+    {
+      "lead": "AI 기반 보안 위협 증가",
+      "body": "AI 기반의 Prompt Injection, 데이터 노출, 그리고 AI 에이전트의 악용이 증가하고 있다. 기업은 AI 도구의 사용을 모니터링하고, 보안 정책을 엄격히 적용해야 한다."
+    },
+    {
+      "lead": "대규모 패치 및 취약점 수정",
+      "body": "Microsoft는 이번 패치 데이에 964개의 취약점을 수정하며, 기업은 즉시 업데이트를 적용해야 할 중요성을 강조한다. 특히, 제로데이 취약점의 악용 가능성에 주의해야 한다."
+    },
+    {
+      "lead": "랜섬웨어 및 해킹 집단 활동 증가",
+      "body": "NoName057(16)과 The Gentlemen 등 해킹 집단의 활동이 지속적으로 증가하고 있으며, 기업은 지속적인 보안 모니터링과 대응 전략 수립이 필수적이다."
+    }
+  ],
+  "seo": {
+    "title": "2026년 9월 보안 벤더 동향: AI 위협, 패치, 랜섬웨어",
+    "description": "2026년 9월 보안 벤더들의 주요 동향을 분석한 리포트입니다. AI 기반 위협, 대규모 패치, 랜섬웨어 공격 등 주요 이슈를 다룹니다.",
+    "keywords": "AI 위협, 패치, 랜섬웨어, 보안 벤더, Check Point, Tenable, AhnLab, GenAI, 취약점, 보안 리포트"
+  },
+  "slug": "vendor-weekly-2026-09-14",
+  "type": "vendor-weekly"
+}

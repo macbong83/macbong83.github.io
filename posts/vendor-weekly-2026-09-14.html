@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>2026년 9월 보안 벤더 동향: AI 위협, 패치, 랜섬웨어 | SecuLog</title>
+<meta name="description" content="2026년 9월 보안 벤더들의 주요 동향을 분석한 리포트입니다. AI 기반 위협, 대규모 패치, 랜섬웨어 공격 등 주요 이슈를 다룹니다.">
+<meta name="keywords" content="AI 위협, 패치, 랜섬웨어, 보안 벤더, Check Point, Tenable, AhnLab, GenAI, 취약점, 보안 리포트">
+<meta property="og:type" content="article">
+<meta property="og:title" content="2026년 9월 보안 벤더 동향: AI 위협, 패치, 랜섬웨어">
+<meta property="og:description" content="2026년 9월 보안 벤더들의 주요 동향을 분석한 리포트입니다. AI 기반 위협, 대규모 패치, 랜섬웨어 공격 등 주요 이슈를 다룹니다.">
+<meta property="og:url" content="https://macbong83.github.io/posts/vendor-weekly-2026-09-14.html">
+<meta property="og:site_name" content="SecuLog">
+<link rel="canonical" href="https://macbong83.github.io/posts/vendor-weekly-2026-09-14.html">
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: -apple-system,'Malgun Gothic','Apple SD Gothic Neo',Arial,sans-serif; background:#f4f5f7; color:#1a1a2e; line-height:1.6; }
+  a { text-decoration:none; color:inherit; }
+  .wrapper { max-width:700px; margin:32px auto; background:#fff; border-radius:12px; overflow:hidden; box-shadow:0 2px 20px rgba(0,0,0,0.08); }
+  .header { background:#0d1b3e; padding:28px 36px 24px; border-bottom:3px solid #2563eb; }
+  .wordmark { font-size:26px; font-weight:800; color:#fff; letter-spacing:-0.02em; }
+  .wordmark .accent { color:#60a5fa; }
+  .header-meta { margin-top:10px; }
+  .nl-label { font-size:10px; letter-spacing:0.1em; text-transform:uppercase; color:#64748b; }
+  .nl-title { font-size:19px; font-weight:700; color:#fff; margin-top:4px; }
+  .nl-date { font-size:12px; color:#94a3b8; margin-top:3px; }
+  .summary-box { background:#f0f7ff; border-left:4px solid #2563eb; padding:16px 20px; margin:24px 36px 0; border-radius:0 8px 8px 0; font-size:13px; color:#1e3a5f; line-height:1.7; }
+  .body { padding:28px 36px 32px; }
+  .section-label { font-size:10px; letter-spacing:0.1em; text-transform:uppercase; color:#8a93a8; font-weight:600; padding-bottom:8px; border-bottom:1px solid #e8eaed; margin-bottom:4px; margin-top:28px; }
+  .section-label:first-child { margin-top:0; }
+  .card { display:block; padding:16px 0; border-bottom:1px solid #f0f1f3; transition:background 0.15s; }
+  .card:last-child { border-bottom:none; }
+  .card:hover { background:#f8f9fc; margin:0 -36px; padding:16px 36px; }
+  .card-inner { display:flex; gap:14px; }
+  .sev-bar { width:3px; border-radius:2px; flex-shrink:0; margin:3px 0; }
+  .sev-vendor { background:#0891b2; }
+  .card-content { flex:1; }
+  .card-top { display:flex; align-items:center; gap:8px; margin-bottom:6px; flex-wrap:wrap; }
+  .badge { font-size:10px; font-weight:700; padding:3px 9px; border-radius:4px; }
+  .badge-vendor { background:#e0f2fe; color:#0369a1; border:1px solid #bae6fd; }
+  .card-headline { font-size:14px; font-weight:600; color:#0d1b3e; margin-bottom:5px; line-height:1.45; }
+  .card-headline .arrow { font-size:12px; color:#2563eb; margin-left:4px; opacity:0; transition:opacity 0.15s; }
+  .card:hover .card-headline .arrow { opacity:1; }
+  .card-summary { font-size:13px; color:#4a5568; line-height:1.65; }
+  .trend-box { background:#f8f9fc; border-radius:10px; padding:18px 20px; margin-top:6px; }
+  .trend-row { display:flex; gap:12px; padding:10px 0; border-bottom:1px solid #e8eaed; align-items:flex-start; }
+  .trend-row:last-child { border-bottom:none; padding-bottom:0; }
+  .trend-num { font-size:11px; font-weight:700; color:#2563eb; min-width:22px; padding-top:2px; }
+  .trend-text { font-size:13px; color:#4a5568; line-height:1.6; }
+  .trend-text strong { color:#0d1b3e; font-weight:600; }
+  .footer { background:#f4f5f7; border-top:1px solid #e8eaed; padding:16px 36px; font-size:11px; color:#9aa0b0; }
+  @media(max-width:600px){
+    .wrapper{margin:0;border-radius:0;}
+    .header{padding:18px 20px;}
+    .body{padding:18px 20px 24px;}
+    .summary-box{margin:16px 20px 0;}
+    .card:hover{margin:0 -20px;padding:16px 20px;}
+    .footer{padding:14px 20px;}
+  }
+</style>
+</head>
+<body>
+<div class="wrapper">
+  <div class="header">
+    <div class="wordmark">Secu<span class="accent">Log</span></div>
+    <div class="header-meta">
+      <div class="nl-label">글로벌 보안 벤더 주간 동향</div>
+      <div class="nl-title">이번 주 보안 벤더 동향</div>
+      <div class="nl-date">2026-09-08 ~ 2026-09-14</div>
+    </div>
+  </div>
+  <div class="summary-box">이번 주에는 AI 기반 보안 위협, 대규모 패치, 랜섬웨어 공격, 그리고 보안 벤더들의 최신 기술 동향이 주목받았다. 특히, GenAI의 데이터 노출과 루트킷 탐지 기술이 강조되었으며, 보안 업체들이 AI를 활용한 새로운 보호 기술을 선보였다.</div>
+  <div class="body">
+    <div class="section-label">이번 주 주요 포스트</div>
+    
+    <a class="card" href="https://asec.ahnlab.com/ko/95253/" target="_blank">
+      <div class="card-inner"><div class="sev-bar sev-vendor"></div><div class="card-content">
+        <div class="card-top"><span class="badge badge-vendor">AhnLab</span></div>
+        <div class="card-headline">리눅스 환경의 루트킷 Syslogk 탐지 및 치료<span class="arrow">↗</span></div>
+        <div class="card-summary">리눅스 커널을 변조하는 루트킷의 활동이 지속적으로 증가하고 있으며, 이를 탐지 및 치료하는 기술이 중요해지고 있다. 기업은 리눅스 서버의 보안 모니터링을 강화해야 한다.</div>
+      </div></div>
+    </a>
+    <a class="card" href="https://blog.checkpoint.com/exposure-management/noname05716-renews-opjapan/" target="_blank">
+      <div class="card-inner"><div class="sev-bar sev-vendor"></div><div class="card-content">
+        <div class="card-top"><span class="badge badge-vendor">Check Point</span></div>
+        <div class="card-headline">NoName057(16) Renews #OpJapan<span class="arrow">↗</span></div>
+        <div class="card-summary">러시아 친화적 해커 집단이 일본 기업을 대상으로 한 DDoS 공격이 재개되었다. 일본의 우크라이나 지원에 대한 반발이 배경이며, 기업은 지속적인 보안 모니터링이 필요하다.</div>
+      </div></div>
+    </a>
+    <a class="card" href="https://www.tenable.com/blog/microsofts-september-2026-patch-tuesday-addresses-964-cves-cve-2026-81963-cve-2026-85880" target="_blank">
+      <div class="card-inner"><div class="sev-bar sev-vendor"></div><div class="card-content">
+        <div class="card-top"><span class="badge badge-vendor">Tenable</span></div>
+        <div class="card-headline">Microsoft의 9월 패치 데이 964개의 CVE 수정<span class="arrow">↗</span></div>
+        <div class="card-summary">Microsoft가 964개의 취약점을 수정한 이번 패치 데이는 기업이 즉시 업데이트를 적용해야 할 중요성을 강조한다. 특히, 2개의 제로데이 취약점이 악용되고 있어 주의가 필요하다.</div>
+      </div></div>
+    </a>
+    <a class="card" href="https://www.tenable.com/blog/tenable-one-claude-mythos-5-adversary-view-ai-exposure-management" target="_blank">
+      <div class="card-inner"><div class="sev-bar sev-vendor"></div><div class="card-content">
+        <div class="card-top"><span class="badge badge-vendor">Tenable</span></div>
+        <div class="card-headline">Claude Mythos 5, Tenable One에 도입<span class="arrow">↗</span></div>
+        <div class="card-summary">AI 기반의 위협 분석 기술이 보안 플랫폼에 통합되며, 공격자의 전략을 예측하고 대응하는 데 중요한 역할을 할 것으로 기대된다.</div>
+      </div></div>
+    </a>
+    <a class="card" href="https://blog.checkpoint.com/research/chatgpt-let-attackers-read-victims-gmail-through-a-hidden-channel-between-accounts/" target="_blank">
+      <div class="card-inner"><div class="sev-bar sev-vendor"></div><div class="card-content">
+        <div class="card-top"><span class="badge badge-vendor">Check Point</span></div>
+        <div class="card-headline">ChatGPT를 통해 Gmail 읽기 시도<span class="arrow">↗</span></div>
+        <div class="card-summary">AI 어시스턴트의 내부 서비스를 악용한 공격이 가능하다는 점에서, 기업은 AI 도구의 사용을 모니터링하고 보안 정책을 엄격히 적용해야 한다.</div>
+      </div></div>
+    </a>
+    <a class="card" href="https://www.tenable.com/blog/ai-agent-security-openai-tenable-cyberagents-exchange-inspector" target="_blank">
+      <div class="card-inner"><div class="sev-bar sev-vendor"></div><div class="card-content">
+        <div class="card-top"><span class="badge badge-vendor">Tenable</span></div>
+        <div class="card-headline">CyberAgents Exchange AI Inspector 출시<span class="arrow">↗</span></div>
+        <div class="card-summary">AI 에이전트의 보안 검토를 위한 새로운 도구가 출시되며, 오픈소스 AI 플랫폼의 보안 강화가 중요한 과제로 부상하고 있다.</div>
+      </div></div>
+    </a>
+    <a class="card" href="https://blog.checkpoint.com/security/puzzlemask-the-prompt-injection-hiding-in-plain-sight/" target="_blank">
+      <div class="card-inner"><div class="sev-bar sev-vendor"></div><div class="card-content">
+        <div class="card-top"><span class="badge badge-vendor">Check Point</span></div>
+        <div class="card-headline">PuzzleMask: Prompt Injection 기술 발견<span class="arrow">↗</span></div>
+        <div class="card-summary">AI 모델의 입력에 숨겨진 Prompt Injection 기술이 발견되며, 기업은 AI 입력 검증을 강화해야 할 필요가 있다.</div>
+      </div></div>
+    </a>
+    <a class="card" href="https://asec.ahnlab.com/ko/95373/" target="_blank">
+      <div class="card-inner"><div class="sev-bar sev-vendor"></div><div class="card-content">
+        <div class="card-top"><span class="badge badge-vendor">AhnLab</span></div>
+        <div class="card-headline">LegionLoader 악성코드 유포 방식 분석<span class="arrow">↗</span></div>
+        <div class="card-summary">ClickFix 방식을 통해 유포되는 LegionLoader 악성코드는 사용자의 주의를 끌기 위해 보안 인증 창을 모방하고 있다. 사용자는 의심스러운 URL을 클릭하지 않도록 주의해야 한다.</div>
+      </div></div>
+    </a>
+    <div class="section-label" style="margin-top:28px;">공통 트렌드</div>
+    <div class="trend-box">
+      <div class="trend-row">
+        <div class="trend-num">01</div>
+        <div class="trend-text"><strong>AI 기반 보안 위협 증가</strong> — AI 기반의 Prompt Injection, 데이터 노출, 그리고 AI 에이전트의 악용이 증가하고 있다. 기업은 AI 도구의 사용을 모니터링하고, 보안 정책을 엄격히 적용해야 한다.</div>
+      </div>
+      <div class="trend-row">
+        <div class="trend-num">02</div>
+        <div class="trend-text"><strong>대규모 패치 및 취약점 수정</strong> — Microsoft는 이번 패치 데이에 964개의 취약점을 수정하며, 기업은 즉시 업데이트를 적용해야 할 중요성을 강조한다. 특히, 제로데이 취약점의 악용 가능성에 주의해야 한다.</div>
+      </div>
+      <div class="trend-row">
+        <div class="trend-num">03</div>
+        <div class="trend-text"><strong>랜섬웨어 및 해킹 집단 활동 증가</strong> — NoName057(16)과 The Gentlemen 등 해킹 집단의 활동이 지속적으로 증가하고 있으며, 기업은 지속적인 보안 모니터링과 대응 전략 수립이 필수적이다.</div>
+      </div></div>
+  </div>
+  <div class="footer">
+    출처: CrowdStrike · SentinelOne · Tenable · Prompt Security &nbsp;|&nbsp; © 2026 Felix · SecuLog
+  </div>
+</div>
+</body>
+</html>
