@@ -1,0 +1,97 @@
+{
+  "tagline": "글로벌 정보보안 뉴스레터",
+  "title": "보안 브리핑",
+  "date_display": "2026년 9월 14일 월요일",
+  "date_short": "2026.09.14",
+  "sources_line": "The Hacker News · BleepingComputer · SecurityWeek · KrebsOnSecurity · CISA · NCSC UK · Unit 42 · 보안뉴스 · 데일리시큐 · 전자신문",
+  "seo": {
+    "title": "취약점, 랜섬웨어 — 2026.09.14 보안 브리핑",
+    "description": "오늘 주요 취약점·침해 사고·위협 트렌드 요약.",
+    "keywords": "CVE, 랜섬웨어, 취약점, 침해사고, 보안"
+  },
+  "sections": [
+    {
+      "label": "취약점 & 공격",
+      "type": "cards",
+      "items": [
+        {
+          "severity": "critical",
+          "source": "Security Affairs",
+          "headline": "GitLab 경로 탐색 취약점(CVE-2026-85706) 24시간 내 악용",
+          "url": "https://securityaffairs.com/198945/hacking/gitlab-cve-2026-85706-one-http-request-no-authentication-full-file-read-exploited-within-24-hours.html",
+          "summary": "CVSS 10.0의 GitLab 경로 탐색 취약점(CVE-2026-85706)이 공개 후 24시간 이내에 악용되었으며, 인증 없이 파일 읽기 가능."
+        },
+        {
+          "severity": "high",
+          "source": "The Hacker News",
+          "headline": "Microsoft 클라우드 계정 해킹을 위한 패스키 페ishing 공격 증가",
+          "url": "https://thehackernews.com/2026/09/attackers-use-passkey-phishing-to.html",
+          "summary": "Microsoft는 제3자 이메일 인프라를 악용한 금융 사기 스키마와 패스키 테마의 사회 공학 공격이 클라우드 환경 침입에 사용되고 있다고 밝혔다."
+        },
+        {
+          "severity": "high",
+          "source": "The Hacker News",
+          "headline": "CISA, Artifactory 및 RouterOS 등 5개 취약점 KEV 목록에 추가",
+          "url": "https://thehackernews.com/2026/09/cisa-adds-5-actively-exploited.html",
+          "summary": "CISA는 JFrog Artifactory, ConnectWise ScreenConnect, MikroTik RouterOS의 5개 취약점이 악용되고 있다는 보고에 따라 KEV 목록에 추가했다."
+        },
+        {
+          "severity": "medium",
+          "source": "Security Affairs",
+          "headline": "RevStealer 악성코드, JSCeal의 컴파일된 V8 바이트코드 정적 분석 탈출",
+          "url": "https://securityaffairs.com/198980/breaking-news/security-affairs-malware-newsletter-round-114.html",
+          "summary": "RevStealer 악성코드가 JSCeal의 컴파일된 V8 바이트코드를 정적 분석으로 탈출하는 방식으로 활동 중이다."
+        }
+      ]
+    },
+    {
+      "label": "침해 사고",
+      "type": "cards",
+      "items": [
+        {
+          "severity": "incident",
+          "source": "Security Affairs",
+          "headline": "Revolut, 사기 정부 이메일로 KYC 데이터 유출",
+          "url": "https://securityaffairs.com/198922/data-breach/revolut-exposed-kyc-data-after-fraudulent-government-email-passed-security-checks.html",
+          "summary": "Revolut은 유효한 도메인 자격을 가진 사기 정부 이메일이 보안 점검을 통과한 후 KYC 문서, 자기 사진, 비트코인 거래 내역이 유출되었다."
+        },
+        {
+          "severity": "incident",
+          "source": "Security Affairs",
+          "headline": "Conti 해커, 랜섬웨어 공격으로 4년형 선고",
+          "url": "https://securityaffairs.com/198931/cyber-crime/conti-hacker-who-built-malware-and-attacked-victims-gets-four-year-sentence.html",
+          "summary": "우크라이나의 Conti 랜섬웨어 개발자 Oleksii Lytvynenko는 랜섬웨어 공격으로 미국에서 4년형을 선고받았다."
+        },
+        {
+          "severity": "incident",
+          "source": "Security Affairs",
+          "headline": "Revolut, 사기 정부 이메일로 KYC 데이터 유출",
+          "url": "https://securityaffairs.com/198922/data-breach/revolut-exposed-kyc-data-after-fraudulent-government-email-passed-security-checks.html",
+          "summary": "Revolut은 유효한 도메인 자격을 가진 사기 정부 이메일이 보안 점검을 통과한 후 KYC 문서, 자기 사진, 비트코인 거래 내역이 유출되었다."
+        }
+      ]
+    },
+    {
+      "label": "동향 & 분석",
+      "type": "trends",
+      "items": [
+        {
+          "lead": "AI 기반 공격 증가",
+          "body": "AI는 사이버 범죄, 감시, 선전, 무기 개발 등 다양한 분야에서 활용되고 있으며, 공격의 비용과 규모를 낮추고 있다. AI 기반의 자동화 공격이 증가함에 따라 보안 전략도 AI 기반으로 전환되고 있다."
+        },
+        {
+          "lead": "공급망 보안 강화",
+          "body": "소프트웨어 공급망 보안은 탐지에서 예방으로 전환해야 한다는 의견이 제기되었으며, 오픈소스의 보안 취약점을 사전에 제거하는 방안이 제시되었다."
+        },
+        {
+          "lead": "제로트러스트 확장",
+          "body": "제로트러스트 보안 모델은 사람에서 AI까지 신뢰 범위를 확장해야 한다는 의견이 제기되었으며, AI 기반의 자동화 정책으로 운영 복잡성을 낮추는 방안이 제시되었다."
+        },
+        {
+          "lead": "AI 기반의 문서 공격 증가",
+          "body": "AI 공격의 핵심 침투 경로는 문서이며, 콘텐츠 무해화가 최선의 방어선으로 평가되고 있다. 문서 기반의 자동화 공격이 증가함에 따라 콘텐츠 보안의 중요성이 강조되고 있다."
+        }
+      ]
+    }
+  ]
+}
