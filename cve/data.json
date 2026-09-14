@@ -1,5 +1,62 @@
 [
   {
+    "id": "CVE-2026-90945",
+    "published": "2026-09-14",
+    "last_modified": "2026-09-14",
+    "status": "Received",
+    "description": "Crawlab through 0.6.3 uses a hard-coded HMAC-SHA256 secret for JWT token signing that cannot be overridden via configuration or environment variables. Unauthenticated attackers can forge valid administrator tokens to access administrative APIs and execute code on worker nodes.",
+    "cvss": {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "score": 9.8,
+      "severity": "CRITICAL",
+      "attack_vector": "네트워크",
+      "attack_complexity": "낮음",
+      "privileges_required": "없음",
+      "user_interaction": "없음"
+    },
+    "cwes": [
+      "CWE-321"
+    ],
+    "affected": [],
+    "references": [
+      "https://github.com/crawlab-team/crawlab",
+      "https://github.com/crawlab-team/crawlab-core/blob/main/user/service.go",
+      "https://github.com/crawlab-team/crawlab/blob/0485310def8b4f31ea20997846a8d5e7dfc681e5/core/user/service_v2.go",
+      "https://github.com/crawlab-team/crawlab/issues/1622",
+      "https://www.vulncheck.com/advisories/crawlab-through-0.6.3-authentication-bypass-via-hard-coded-jwt-secret"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-90945",
+    "added_at": "2026-09-15T08:01:00+09:00"
+  },
+  {
+    "id": "CVE-2026-90937",
+    "published": "2026-09-14",
+    "last_modified": "2026-09-14",
+    "status": "Received",
+    "description": "froxlor versions before 2.2.5 fail to validate newline characters in subdomain redirect URLs, allowing authenticated customers to inject arbitrary nginx or Apache configuration directives. Attackers can supply URLs containing literal newlines that are written verbatim into vhost config files during cron rebuild, enabling web server configuration corruption, denial of service, or hijacking of HTTP responses across hosted domains.",
+    "cvss": {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:L",
+      "score": 9.9,
+      "severity": "CRITICAL",
+      "attack_vector": "네트워크",
+      "attack_complexity": "낮음",
+      "privileges_required": "낮음",
+      "user_interaction": "없음"
+    },
+    "cwes": [
+      "CWE-93"
+    ],
+    "affected": [],
+    "references": [
+      "https://github.com/froxlor/froxlor/security/advisories/GHSA-c3p2-mj7v-5mrc",
+      "https://www.vulncheck.com/advisories/froxlor-before-2.2.5-nginx-apache-configuration-injection-via-subdomain-redirect-url"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-90937",
+    "added_at": "2026-09-15T08:01:00+09:00"
+  },
+  {
     "id": "CVE-2026-90703",
     "published": "2026-09-14",
     "last_modified": "2026-09-14",
@@ -318,6 +375,84 @@
     ],
     "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-90605",
     "added_at": "2026-09-14T20:00:24+09:00"
+  },
+  {
+    "id": "CVE-2026-76441",
+    "published": "2026-09-14",
+    "last_modified": "2026-09-14",
+    "status": "Awaiting Analysis",
+    "description": "As part of Cisco's ongoing commitment to proactive security and product quality, the Cisco Secure Email Gateway and Cisco Secure Email and Web Manager engineering team has conducted a comprehensive internal security review. This review resulted in software hardening releases that address multiple internally discovered vulnerabilities.\r\n\r\nThe vulnerabilities tracked by CVE-2026-76441 are related to issues with improper access control that are grouped under the Common Weakness Enumeration (CWE) Pillar CWE-284.",
+    "cvss": {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "score": 9.8,
+      "severity": "CRITICAL",
+      "attack_vector": "네트워크",
+      "attack_complexity": "낮음",
+      "privileges_required": "없음",
+      "user_interaction": "없음"
+    },
+    "cwes": [
+      "CWE-284"
+    ],
+    "affected": [],
+    "references": [
+      "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-hardening-esa-dfCrfXkm"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-76441",
+    "added_at": "2026-09-15T08:01:00+09:00"
+  },
+  {
+    "id": "CVE-2026-20353",
+    "published": "2026-09-14",
+    "last_modified": "2026-09-14",
+    "status": "Awaiting Analysis",
+    "description": "As part of Cisco's ongoing commitment to proactive security and product quality, the Cisco Secure Email Gateway and Cisco Secure Email and Web Manager engineering team has conducted a comprehensive internal security review. This review resulted in software hardening releases that address multiple internally discovered vulnerabilities.\r\n\r\nThe vulnerabilities tracked by CVE-2026-20353 are related to issues with improper control of a resource through its lifetime that are grouped under the Common Weakness Enumeration (CWE) Pillar CWE-664.",
+    "cvss": {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "score": 9.8,
+      "severity": "CRITICAL",
+      "attack_vector": "네트워크",
+      "attack_complexity": "낮음",
+      "privileges_required": "없음",
+      "user_interaction": "없음"
+    },
+    "cwes": [
+      "CWE-664"
+    ],
+    "affected": [],
+    "references": [
+      "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-hardening-esa-dfCrfXkm"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-20353",
+    "added_at": "2026-09-15T08:01:00+09:00"
+  },
+  {
+    "id": "CVE-2026-12944",
+    "published": "2026-09-14",
+    "last_modified": "2026-09-14",
+    "status": "Received",
+    "description": "IBM Langflow OSS 1.0.0 through 1.10.0 can allow attackers to execute arbitrary Python code with root privileges (UID=0) on the Langflow server by submitting components containing socket or urllib imports. This enables: (1) AWS credential theft via IMDSv1 SSRF with full IAM role permissions, (2) arbitrary file exfiltration from the container filesystem, and (3) lateral movement to internal services (PostgreSQL, Redis) within the Docker network. The scanner incorrectly returns \"validated\": true, providing a false security signal.",
+    "cvss": {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:N",
+      "score": 9.6,
+      "severity": "CRITICAL",
+      "attack_vector": "네트워크",
+      "attack_complexity": "낮음",
+      "privileges_required": "낮음",
+      "user_interaction": "없음"
+    },
+    "cwes": [
+      "CWE-918"
+    ],
+    "affected": [],
+    "references": [
+      "https://www.ibm.com/support/pages/node/7278919"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-12944",
+    "added_at": "2026-09-15T08:01:00+09:00"
   },
   {
     "id": "CVE-2026-90558",
