@@ -41,13 +41,82 @@
     <h1>CVE Archive</h1>
     <p>NVD 기반 Critical CVE를 누적 관리하는 별도 페이지입니다. 블로그에는 CVE 자동 글을 발행하지 않고, 이 페이지에만 기록합니다.</p>
     <div class="meta">
-      <span>Total 920</span>
-      <span>Updated 2026-09-15 08:01 KST</span>
+      <span>Total 923</span>
+      <span>Updated 2026-09-15 20:00 KST</span>
       <span>Source NVD API</span>
     </div>
   </section>
   <div class="notice">중복 제거 기준은 CVE ID입니다. 동일 CVE는 다시 추가하지 않습니다. 실제 악용 여부와 패치 우선순위는 CISA KEV, 벤더 권고, 자산 노출 여부와 함께 검토해야 합니다.</div>
 
+    <article class="cve-card" id="CVE-2026-91003">
+      <div class="cve-top">
+        <a class="cve-id" href="https://nvd.nist.gov/vuln/detail/CVE-2026-91003" target="_blank" rel="noopener">CVE-2026-91003</a>
+        <span class="score">CVSS 9.1 CRITICAL</span>
+      </div>
+      <p class="desc">A flaw has been found in D-Link DI-8300 16.07. The affected element is the function rzgl_asp of the file /rzgl.asp of the component CGI Service. This manipulation of the argument redirct_url causes stack-based buffer overflow. Remote exploitation of the attack is possible. The exploit has been published and may be used.</p>
+      <dl>
+        <div><dt>Published</dt><dd>2026-09-15</dd></div>
+        <div><dt>Last Modified</dt><dd>2026-09-15</dd></div>
+        <div><dt>Status</dt><dd>Received</dd></div>
+        <div><dt>Attack Vector</dt><dd>네트워크</dd></div>
+        <div><dt>Attack Complexity</dt><dd>낮음</dd></div>
+        <div><dt>Privileges</dt><dd>높음</dd></div>
+        <div><dt>User Interaction</dt><dd>없음</dd></div>
+        <div><dt>CWE</dt><dd>CWE-119, CWE-121</dd></div>
+        <div><dt>Affected</dt><dd>NVD CPE 기준 확인 필요</dd></div>
+      </dl>
+      <div class="vector"><code>CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:C/C:H/I:H/A:H</code></div>
+      <details>
+        <summary>References</summary>
+        <ul><li><a href="https://github.com/Vivi-Xray/Xray-s-cve-/blob/main/rzgl/rzgl_asp.md" target="_blank" rel="noopener">https://github.com/Vivi-Xray/Xray-s-cve-/blob/main/rzgl/rzgl_asp.md</a></li><li><a href="https://github.com/Vivi-Xray/Xray-s-cve-/blob/main/rzgl/rzgl_asp.py" target="_blank" rel="noopener">https://github.com/Vivi-Xray/Xray-s-cve-/blob/main/rzgl/rzgl_asp.py</a></li><li><a href="https://vuldb.com/cve/CVE-2026-91003" target="_blank" rel="noopener">https://vuldb.com/cve/CVE-2026-91003</a></li><li><a href="https://vuldb.com/submit/932002" target="_blank" rel="noopener">https://vuldb.com/submit/932002</a></li></ul>
+      </details>
+    </article>
+    <article class="cve-card" id="CVE-2026-91001">
+      <div class="cve-top">
+        <a class="cve-id" href="https://nvd.nist.gov/vuln/detail/CVE-2026-91001" target="_blank" rel="noopener">CVE-2026-91001</a>
+        <span class="score">CVSS 9.9 CRITICAL</span>
+      </div>
+      <p class="desc">A security flaw has been discovered in D-Link DI-8400 16.07. This affects the function ddns_asp of the file /ddns.asp of the component DDNS Configuration. Performing a manipulation of the argument serv/user/host/wild/mx/bmx/cust/ip results in stack-based buffer overflow. The attack can be initiated remotely. The exploit has been released to the public and may be used for attacks.</p>
+      <dl>
+        <div><dt>Published</dt><dd>2026-09-15</dd></div>
+        <div><dt>Last Modified</dt><dd>2026-09-15</dd></div>
+        <div><dt>Status</dt><dd>Received</dd></div>
+        <div><dt>Attack Vector</dt><dd>네트워크</dd></div>
+        <div><dt>Attack Complexity</dt><dd>낮음</dd></div>
+        <div><dt>Privileges</dt><dd>낮음</dd></div>
+        <div><dt>User Interaction</dt><dd>없음</dd></div>
+        <div><dt>CWE</dt><dd>CWE-119, CWE-121</dd></div>
+        <div><dt>Affected</dt><dd>NVD CPE 기준 확인 필요</dd></div>
+      </dl>
+      <div class="vector"><code>CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H</code></div>
+      <details>
+        <summary>References</summary>
+        <ul><li><a href="https://github.com/Vivi-Xray/Xray-s-cve-/blob/main/ddns_asp/ddns_asp.py" target="_blank" rel="noopener">https://github.com/Vivi-Xray/Xray-s-cve-/blob/main/ddns_asp/ddns_asp.py</a></li><li><a href="https://github.com/Vivi-Xray/Xray-s-cve-/tree/main/ddns_asp" target="_blank" rel="noopener">https://github.com/Vivi-Xray/Xray-s-cve-/tree/main/ddns_asp</a></li><li><a href="https://vuldb.com/cve/CVE-2026-91001" target="_blank" rel="noopener">https://vuldb.com/cve/CVE-2026-91001</a></li><li><a href="https://vuldb.com/submit/931642" target="_blank" rel="noopener">https://vuldb.com/submit/931642</a></li></ul>
+      </details>
+    </article>
+    <article class="cve-card" id="CVE-2026-90847">
+      <div class="cve-top">
+        <a class="cve-id" href="https://nvd.nist.gov/vuln/detail/CVE-2026-90847" target="_blank" rel="noopener">CVE-2026-90847</a>
+        <span class="score">CVSS 9.1 CRITICAL</span>
+      </div>
+      <p class="desc">A vulnerability was determined in EFM ipTIME C200E 1.094. The impacted element is an unknown function of the file iux_set.cgi of the component System Setup. This manipulation causes os command injection. It is possible to initiate the attack remotely. The exploit has been publicly disclosed and may be utilized.</p>
+      <dl>
+        <div><dt>Published</dt><dd>2026-09-15</dd></div>
+        <div><dt>Last Modified</dt><dd>2026-09-15</dd></div>
+        <div><dt>Status</dt><dd>Received</dd></div>
+        <div><dt>Attack Vector</dt><dd>네트워크</dd></div>
+        <div><dt>Attack Complexity</dt><dd>낮음</dd></div>
+        <div><dt>Privileges</dt><dd>높음</dd></div>
+        <div><dt>User Interaction</dt><dd>없음</dd></div>
+        <div><dt>CWE</dt><dd>CWE-77, CWE-78</dd></div>
+        <div><dt>Affected</dt><dd>NVD CPE 기준 확인 필요</dd></div>
+      </dl>
+      <div class="vector"><code>CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:C/C:H/I:H/A:H</code></div>
+      <details>
+        <summary>References</summary>
+        <ul><li><a href="https://drive.google.com/file/d/19WVo2tOImpmSEg3dFsmyB5Rw1aMQXyyd/view?usp=drive_link" target="_blank" rel="noopener">https://drive.google.com/file/d/19WVo2tOImpmSEg3dFsmyB5Rw1aMQXyyd/view?usp=drive_link</a></li><li><a href="https://vuldb.com/cve/CVE-2026-90847" target="_blank" rel="noopener">https://vuldb.com/cve/CVE-2026-90847</a></li><li><a href="https://vuldb.com/submit/925831" target="_blank" rel="noopener">https://vuldb.com/submit/925831</a></li><li><a href="https://vuldb.com/vuln/403400" target="_blank" rel="noopener">https://vuldb.com/vuln/403400</a></li></ul>
+      </details>
+    </article>
     <article class="cve-card" id="CVE-2026-90945">
       <div class="cve-top">
         <a class="cve-id" href="https://nvd.nist.gov/vuln/detail/CVE-2026-90945" target="_blank" rel="noopener">CVE-2026-90945</a>

@@ -1,5 +1,101 @@
 [
   {
+    "id": "CVE-2026-91003",
+    "published": "2026-09-15",
+    "last_modified": "2026-09-15",
+    "status": "Received",
+    "description": "A flaw has been found in D-Link DI-8300 16.07. The affected element is the function rzgl_asp of the file /rzgl.asp of the component CGI Service. This manipulation of the argument redirct_url causes stack-based buffer overflow. Remote exploitation of the attack is possible. The exploit has been published and may be used.",
+    "cvss": {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:C/C:H/I:H/A:H",
+      "score": 9.1,
+      "severity": "CRITICAL",
+      "attack_vector": "네트워크",
+      "attack_complexity": "낮음",
+      "privileges_required": "높음",
+      "user_interaction": "없음"
+    },
+    "cwes": [
+      "CWE-119",
+      "CWE-121"
+    ],
+    "affected": [],
+    "references": [
+      "https://github.com/Vivi-Xray/Xray-s-cve-/blob/main/rzgl/rzgl_asp.md",
+      "https://github.com/Vivi-Xray/Xray-s-cve-/blob/main/rzgl/rzgl_asp.py",
+      "https://vuldb.com/cve/CVE-2026-91003",
+      "https://vuldb.com/submit/932002",
+      "https://vuldb.com/vuln/403586",
+      "https://vuldb.com/vuln/403586/cti"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-91003",
+    "added_at": "2026-09-15T20:00:51+09:00"
+  },
+  {
+    "id": "CVE-2026-91001",
+    "published": "2026-09-15",
+    "last_modified": "2026-09-15",
+    "status": "Received",
+    "description": "A security flaw has been discovered in D-Link DI-8400 16.07. This affects the function ddns_asp of the file /ddns.asp of the component DDNS Configuration. Performing a manipulation of the argument serv/user/host/wild/mx/bmx/cust/ip results in stack-based buffer overflow. The attack can be initiated remotely. The exploit has been released to the public and may be used for attacks.",
+    "cvss": {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H",
+      "score": 9.9,
+      "severity": "CRITICAL",
+      "attack_vector": "네트워크",
+      "attack_complexity": "낮음",
+      "privileges_required": "낮음",
+      "user_interaction": "없음"
+    },
+    "cwes": [
+      "CWE-119",
+      "CWE-121"
+    ],
+    "affected": [],
+    "references": [
+      "https://github.com/Vivi-Xray/Xray-s-cve-/blob/main/ddns_asp/ddns_asp.py",
+      "https://github.com/Vivi-Xray/Xray-s-cve-/tree/main/ddns_asp",
+      "https://vuldb.com/cve/CVE-2026-91001",
+      "https://vuldb.com/submit/931642",
+      "https://vuldb.com/vuln/403582",
+      "https://vuldb.com/vuln/403582/cti"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-91001",
+    "added_at": "2026-09-15T20:00:51+09:00"
+  },
+  {
+    "id": "CVE-2026-90847",
+    "published": "2026-09-15",
+    "last_modified": "2026-09-15",
+    "status": "Received",
+    "description": "A vulnerability was determined in EFM ipTIME C200E 1.094. The impacted element is an unknown function of the file iux_set.cgi of the component System Setup. This manipulation causes os command injection. It is possible to initiate the attack remotely. The exploit has been publicly disclosed and may be utilized.",
+    "cvss": {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:C/C:H/I:H/A:H",
+      "score": 9.1,
+      "severity": "CRITICAL",
+      "attack_vector": "네트워크",
+      "attack_complexity": "낮음",
+      "privileges_required": "높음",
+      "user_interaction": "없음"
+    },
+    "cwes": [
+      "CWE-77",
+      "CWE-78"
+    ],
+    "affected": [],
+    "references": [
+      "https://drive.google.com/file/d/19WVo2tOImpmSEg3dFsmyB5Rw1aMQXyyd/view?usp=drive_link",
+      "https://vuldb.com/cve/CVE-2026-90847",
+      "https://vuldb.com/submit/925831",
+      "https://vuldb.com/vuln/403400",
+      "https://vuldb.com/vuln/403400/cti",
+      "https://youtu.be/qdFGRSpCiY0"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-90847",
+    "added_at": "2026-09-15T20:00:51+09:00"
+  },
+  {
     "id": "CVE-2026-90945",
     "published": "2026-09-14",
     "last_modified": "2026-09-14",
