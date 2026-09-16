@@ -1,5 +1,234 @@
 [
   {
+    "id": "CVE-2026-92805",
+    "published": "2026-09-16",
+    "last_modified": "2026-09-16",
+    "status": "Received",
+    "description": "UVdesk Community Skeleton through 1.1.8 fails to authenticate or validate installation state on wizard endpoints in ConfigureHelpdesk controller actions. Unauthenticated attackers can repoint the database and create super administrator accounts by submitting crafted requests to wizard endpoints, gaining full control of the instance.",
+    "cvss": {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "score": 9.8,
+      "severity": "CRITICAL",
+      "attack_vector": "네트워크",
+      "attack_complexity": "낮음",
+      "privileges_required": "없음",
+      "user_interaction": "없음"
+    },
+    "cwes": [
+      "CWE-306"
+    ],
+    "affected": [],
+    "references": [
+      "https://github.com/uvdesk/community-skeleton",
+      "https://github.com/uvdesk/community-skeleton/blob/6f35040/src/Resources/config/routes.yaml#L1-L35",
+      "https://github.com/uvdesk/community-skeleton/issues/926",
+      "https://www.vulncheck.com/advisories/uvdesk-community-skeleton-through-1.1.8-missing-authentication-on-the-installation-wizard"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-92805",
+    "added_at": "2026-09-17T08:00:22+09:00"
+  },
+  {
+    "id": "CVE-2026-92787",
+    "published": "2026-09-16",
+    "last_modified": "2026-09-16",
+    "status": "Received",
+    "description": "Feast through 0.66.0 fails to verify JWT token signatures before establishing user identity, allowing attackers to bypass all role-based access control by presenting an unverified token with a hardcoded claim value. Attackers can obtain trusted internal identity and gain unchecked read and write access to all entities, feature views, data sources, and permission policies on the server.",
+    "cvss": {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "score": 9.8,
+      "severity": "CRITICAL",
+      "attack_vector": "네트워크",
+      "attack_complexity": "낮음",
+      "privileges_required": "없음",
+      "user_interaction": "없음"
+    },
+    "cwes": [
+      "CWE-798"
+    ],
+    "affected": [],
+    "references": [
+      "https://github.com/feast-dev/feast",
+      "https://github.com/feast-dev/feast/blob/f296d4b/infra/charts/feast-feature-server/templates/deployment.yaml#L46-L47",
+      "https://github.com/feast-dev/feast/blob/f296d4b/sdk/python/feast/permissions/auth/oidc_token_parser.py#L152-L156",
+      "https://github.com/feast-dev/feast/blob/v0.66.0/sdk/python/feast/permissions/security_manager.py#L248-L264",
+      "https://github.com/feast-dev/feast/issues/6785",
+      "https://www.vulncheck.com/advisories/feast-through-0.66.0-authentication-bypass-via-unverified-token"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-92787",
+    "added_at": "2026-09-17T08:00:22+09:00"
+  },
+  {
+    "id": "CVE-2026-92720",
+    "published": "2026-09-16",
+    "last_modified": "2026-09-16",
+    "status": "Received",
+    "description": "Kubero through 3.1.1 fails to apply authentication guards to the notifications API endpoints, allowing unauthenticated attackers to read webhook secrets and service URLs. Attackers can retrieve stored credentials and register malicious webhooks to intercept pipeline events or suppress alerting by deleting existing configurations.",
+    "cvss": {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N",
+      "score": 9.1,
+      "severity": "CRITICAL",
+      "attack_vector": "네트워크",
+      "attack_complexity": "낮음",
+      "privileges_required": "없음",
+      "user_interaction": "없음"
+    },
+    "cwes": [
+      "CWE-306"
+    ],
+    "affected": [],
+    "references": [
+      "https://github.com/kubero-dev/kubero",
+      "https://github.com/kubero-dev/kubero/blob/v3.1.1/server/src/main.ts",
+      "https://github.com/kubero-dev/kubero/blob/v3.1.1/server/src/notifications/notifications.controller.ts#L23-L33",
+      "https://github.com/kubero-dev/kubero/issues/753",
+      "https://www.vulncheck.com/advisories/kubero-through-3.1.1-unauthenticated-notifications-api-access"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-92720",
+    "added_at": "2026-09-17T08:00:22+09:00"
+  },
+  {
+    "id": "CVE-2026-92717",
+    "published": "2026-09-16",
+    "last_modified": "2026-09-16",
+    "status": "Received",
+    "description": "Covenant through 0.6 registers the CovenantHub SignalR hub without an Authorize attribute, allowing unauthenticated callers to invoke CreateHttpListener and receive a signed JWT token. Attackers can use the obtained token to authenticate against the entire operator API and access grunts, credentials, binaries, events, and the operator roster.",
+    "cvss": {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N",
+      "score": 9.1,
+      "severity": "CRITICAL",
+      "attack_vector": "네트워크",
+      "attack_complexity": "낮음",
+      "privileges_required": "없음",
+      "user_interaction": "없음"
+    },
+    "cwes": [
+      "CWE-306"
+    ],
+    "affected": [],
+    "references": [
+      "https://github.com/cobbr/Covenant",
+      "https://github.com/cobbr/Covenant/blob/v0.6/Covenant/Core/CovenantService.cs#L3958-L3975",
+      "https://github.com/cobbr/Covenant/blob/v0.6/Covenant/Hubs/CovenantHub.cs#L28-L33",
+      "https://github.com/cobbr/Covenant/issues/406",
+      "https://www.vulncheck.com/advisories/covenant-through-0.6-missing-authentication-on-the-covenanthub-signalr-hub"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-92717",
+    "added_at": "2026-09-17T08:00:22+09:00"
+  },
+  {
+    "id": "CVE-2026-92716",
+    "published": "2026-09-16",
+    "last_modified": "2026-09-16",
+    "status": "Received",
+    "description": "Shuffle through 2.2.1 contains a cross-tenant privilege escalation vulnerability in the HandleApiGeneration endpoint that allows administrators to reset and read API keys of non-administrator users in other organizations. Attackers with admin privileges in one organization can supply arbitrary user IDs to generate valid API keys for users in different organizations, enabling account takeover across tenant boundaries.",
+    "cvss": {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:N",
+      "score": 9.6,
+      "severity": "CRITICAL",
+      "attack_vector": "네트워크",
+      "attack_complexity": "낮음",
+      "privileges_required": "낮음",
+      "user_interaction": "없음"
+    },
+    "cwes": [
+      "CWE-639"
+    ],
+    "affected": [],
+    "references": [
+      "https://github.com/Shuffle/Shuffle",
+      "https://github.com/Shuffle/shuffle-shared/blob/v1.2.50/shared.go#L9888-L9912",
+      "https://github.com/Shuffle/shuffle-shared/commit/c1b582e91b429bc7d5ad02e6c22f98234ec67615",
+      "https://github.com/geo-chen/oss/blob/main/shuffle.md",
+      "https://www.vulncheck.com/advisories/shuffle-through-2.2.1-api-key-reset-cross-tenant-privilege-escalation"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-92716",
+    "added_at": "2026-09-17T08:00:22+09:00"
+  },
+  {
+    "id": "CVE-2026-76460",
+    "published": "2026-09-16",
+    "last_modified": "2026-09-16",
+    "status": "Received",
+    "description": "A vulnerability in an API of Cisco Identity Services Engine (ISE) could allow an unauthenticated, remote attacker to bypass authentication.\r\n\r\nThis vulnerability is due to insufficient authentication control on an API endpoint. An attacker could exploit this vulnerability by sending a crafted request to an affected API endpoint. A successful exploit could allow the attacker to gain unauthorized access to the affected device by bypassing the web-based management interface.",
+    "cvss": {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:H",
+      "score": 10.0,
+      "severity": "CRITICAL",
+      "attack_vector": "네트워크",
+      "attack_complexity": "낮음",
+      "privileges_required": "없음",
+      "user_interaction": "없음"
+    },
+    "cwes": [
+      "CWE-648"
+    ],
+    "affected": [],
+    "references": [
+      "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-ISE-ABP-VNSW7Tn5",
+      "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-76460"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-76460",
+    "added_at": "2026-09-17T08:00:22+09:00"
+  },
+  {
+    "id": "CVE-2026-76423",
+    "published": "2026-09-16",
+    "last_modified": "2026-09-16",
+    "status": "Awaiting Analysis",
+    "description": "A vulnerability in the REST API of Cisco ISE and Cisco ISE-PIC could allow an unauthenticated, remote attacker to gain administrative access to an affected device.\r\n\r\nThis vulnerability is due to the REST API web service being exposed with insufficient authorization checks. An attacker could exploit this vulnerability by sending a crafted HTTP request to the exposed REST API port. A successful exploit could allow the attacker to read and modify ISE configuration and identity data with administrative privileges.",
+    "cvss": {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:L",
+      "score": 10.0,
+      "severity": "CRITICAL",
+      "attack_vector": "네트워크",
+      "attack_complexity": "낮음",
+      "privileges_required": "없음",
+      "user_interaction": "없음"
+    },
+    "cwes": [
+      "CWE-290"
+    ],
+    "affected": [],
+    "references": [
+      "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-ise-multi-hrP9jQSQ"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-76423",
+    "added_at": "2026-09-17T08:00:22+09:00"
+  },
+  {
+    "id": "CVE-2026-76420",
+    "published": "2026-09-16",
+    "last_modified": "2026-09-16",
+    "status": "Awaiting Analysis",
+    "description": "A vulnerability in the internal configuration of the Apache JServ Protocol (AJP)&nbsp;connector for Cisco Secure FMC Software could allow an unauthenticated, remote attacker to impersonate a peer device.\r\n\r\nThis vulnerability is due to incorrect initialization of encryption parameters for the AJP connector at boot time. An attacker could exploit this vulnerability by sending crafted packets to the AJP connector. A&nbsp;successful exploit could allow the attacker to execute commands as root and&nbsp;gain full control over the FMC REST APIs on the affected device.\r\nNote: This vulnerability can be exploited only if the valid sftunnel connection between Cisco Secure FMC Software and Cisco Secure FTD Software is down.",
+    "cvss": {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:C/C:H/I:H/A:H",
+      "score": 9.0,
+      "severity": "CRITICAL",
+      "attack_vector": "네트워크",
+      "attack_complexity": "높음",
+      "privileges_required": "없음",
+      "user_interaction": "없음"
+    },
+    "cwes": [
+      "CWE-285"
+    ],
+    "affected": [],
+    "references": [
+      "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-fmc2-multivulns-HXgcqRG"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-76420",
+    "added_at": "2026-09-17T08:00:22+09:00"
+  },
+  {
     "id": "CVE-2026-27565",
     "published": "2026-09-16",
     "last_modified": "2026-09-16",
@@ -54,6 +283,474 @@
     ],
     "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-27546",
     "added_at": "2026-09-16T20:00:09+09:00"
+  },
+  {
+    "id": "CVE-2026-20341",
+    "published": "2026-09-16",
+    "last_modified": "2026-09-16",
+    "status": "Awaiting Analysis",
+    "description": "A vulnerability in the sftunnel inter-device communication protocol of Cisco Secure FMC Software could allow an authenticated, remote attacker to obtain&nbsp;root privileges.\r\n\r\nThis vulnerability is due to unsecured deserialization of untrusted data over the sftunnel management connection. An attacker could exploit this vulnerability by sending crafted sftunnel remote procedure calls (RPCs). A successful exploit could allow the attacker to gain root privileges on a device that is running Cisco Secure FMC Software and its high-availability peer.\r\nTo exploit this vulnerability, the attacker must have valid administrative credentials on a managed Cisco FTD device.",
+    "cvss": {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:C/C:H/I:H/A:H",
+      "score": 9.1,
+      "severity": "CRITICAL",
+      "attack_vector": "네트워크",
+      "attack_complexity": "낮음",
+      "privileges_required": "높음",
+      "user_interaction": "없음"
+    },
+    "cwes": [
+      "CWE-502"
+    ],
+    "affected": [],
+    "references": [
+      "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-fmc-mulivulns-4PsnFwvx"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-20341",
+    "added_at": "2026-09-17T08:00:22+09:00"
+  },
+  {
+    "id": "CVE-2026-20332",
+    "published": "2026-09-16",
+    "last_modified": "2026-09-16",
+    "status": "Received",
+    "description": "As part of Cisco's ongoing commitment to proactive security and product quality, the Cisco Secure Adaptive Security Appliance Software, Cisco Secure Firewall Threat Defense Software and Cisco Secure Firewall Management Center Software engineering team has conducted a comprehensive internal security review. This review resulted in a software hardening release that addresses multiple internally discovered vulnerabilities. &nbsp;\r\n\r\nThe vulnerabilities tracked by CVE-2026-20332 are related to improper access control issues that are grouped under the Common Weakness Enumeration (CWE) Pillar CWE-284.",
+    "cvss": {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H",
+      "score": 9.9,
+      "severity": "CRITICAL",
+      "attack_vector": "네트워크",
+      "attack_complexity": "낮음",
+      "privileges_required": "낮음",
+      "user_interaction": "없음"
+    },
+    "cwes": [
+      "CWE-284"
+    ],
+    "affected": [],
+    "references": [
+      "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-hardening-asaftdfmc-uvpPROhN"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-20332",
+    "added_at": "2026-09-17T08:00:22+09:00"
+  },
+  {
+    "id": "CVE-2026-20330",
+    "published": "2026-09-16",
+    "last_modified": "2026-09-16",
+    "status": "Awaiting Analysis",
+    "description": "As part of Cisco's ongoing commitment to proactive security and product quality, the Cisco Secure Adaptive Security Appliance Software, Cisco Secure Firewall Threat Defense Software and Cisco Secure Firewall Management Center Software engineering team has conducted a comprehensive internal security review. This review resulted in a software hardening release that addresses multiple internally discovered vulnerabilities. &nbsp;\r\n\r\nThe vulnerabilities tracked by CVE-2026-20330 are related to improper neutralization issues that are grouped under the Common Weakness Enumeration (CWE) Pillar CWE-707.",
+    "cvss": {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H",
+      "score": 9.9,
+      "severity": "CRITICAL",
+      "attack_vector": "네트워크",
+      "attack_complexity": "낮음",
+      "privileges_required": "낮음",
+      "user_interaction": "없음"
+    },
+    "cwes": [
+      "CWE-707"
+    ],
+    "affected": [],
+    "references": [
+      "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-hardening-asaftdfmc-uvpPROhN"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-20330",
+    "added_at": "2026-09-17T08:00:22+09:00"
+  },
+  {
+    "id": "CVE-2026-20329",
+    "published": "2026-09-16",
+    "last_modified": "2026-09-16",
+    "status": "Awaiting Analysis",
+    "description": "As part of Cisco's ongoing commitment to proactive security and product quality, the Cisco Secure Adaptive Security Appliance Software, Cisco Secure Firewall Threat Defense Software and Cisco Secure Firewall Management Center Software engineering team has conducted a comprehensive internal security review. This review resulted in a software hardening release that addresses multiple internally discovered vulnerabilities. &nbsp;\r\n\r\nThe vulnerabilities tracked by CVE-2026-20329 are related to issues concerning improper handling of exceptional conditions that are grouped under the Common Weakness Enumeration (CWE) Pillar CWE-703.",
+    "cvss": {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H",
+      "score": 9.9,
+      "severity": "CRITICAL",
+      "attack_vector": "네트워크",
+      "attack_complexity": "낮음",
+      "privileges_required": "낮음",
+      "user_interaction": "없음"
+    },
+    "cwes": [
+      "CWE-703"
+    ],
+    "affected": [],
+    "references": [
+      "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-hardening-asaftdfmc-uvpPROhN"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-20329",
+    "added_at": "2026-09-17T08:00:22+09:00"
+  },
+  {
+    "id": "CVE-2026-20326",
+    "published": "2026-09-16",
+    "last_modified": "2026-09-16",
+    "status": "Awaiting Analysis",
+    "description": "As part of Cisco's ongoing commitment to proactive security and product quality, the Cisco Nexus Dashboard engineering team has conducted a comprehensive internal security review. This review resulted in a software hardening release that addresses multiple internally discovered vulnerabilities.\r\n\r\nThe vulnerabilities tracked by CVE-2026-20326 are related to missing authentication for critical function issues that are grouped under the Common Weakness Enumeration (CWE) CWE-306.",
+    "cvss": {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "score": 9.8,
+      "severity": "CRITICAL",
+      "attack_vector": "네트워크",
+      "attack_complexity": "낮음",
+      "privileges_required": "없음",
+      "user_interaction": "없음"
+    },
+    "cwes": [
+      "CWE-306"
+    ],
+    "affected": [],
+    "references": [
+      "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-hardening-ndw1-psFvnrg"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-20326",
+    "added_at": "2026-09-17T08:00:22+09:00"
+  },
+  {
+    "id": "CVE-2026-20325",
+    "published": "2026-09-16",
+    "last_modified": "2026-09-16",
+    "status": "Awaiting Analysis",
+    "description": "As part of Cisco's ongoing commitment to proactive security and product quality, the Cisco Nexus Dashboard&nbsp;engineering team has conducted a comprehensive internal security review. This review resulted in a software hardening release that addresses multiple internally discovered vulnerabilities.\r\n\r\nThe vulnerabilities tracked by CVE-2026-20325 are related to improper neutralization of special elements used in a command issue that are grouped under the Common Weakness Enumeration (CWE) CWE-77.",
+    "cvss": {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H",
+      "score": 9.9,
+      "severity": "CRITICAL",
+      "attack_vector": "네트워크",
+      "attack_complexity": "낮음",
+      "privileges_required": "낮음",
+      "user_interaction": "없음"
+    },
+    "cwes": [
+      "CWE-77"
+    ],
+    "affected": [],
+    "references": [
+      "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-hardening-ndw1-psFvnrg"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-20325",
+    "added_at": "2026-09-17T08:00:22+09:00"
+  },
+  {
+    "id": "CVE-2026-20324",
+    "published": "2026-09-16",
+    "last_modified": "2026-09-16",
+    "status": "Awaiting Analysis",
+    "description": "A vulnerability in the sftunnel inter-device communication protocol of Cisco Secure Firewall Management Center (FMC) Software could allow an authenticated, remote attacker to execute arbitrary commands as root.\r\n\r\nThis vulnerability exists because a registered sftunnel peer has incorrect permissions to write an arbitrary file to any location on the device. An attacker could exploit this vulnerability by hijacking the sftunnel communication connection or being a valid registered sftunnel peer and sending an sftunnel command to write a malicious file to the disk of an affected device. A successful exploit could allow the attacker to write a file to the device that is executed with root privileges. To exploit this vulnerability, the attacker must have valid user credentials on the affected device.",
+    "cvss": {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H",
+      "score": 9.9,
+      "severity": "CRITICAL",
+      "attack_vector": "네트워크",
+      "attack_complexity": "낮음",
+      "privileges_required": "낮음",
+      "user_interaction": "없음"
+    },
+    "cwes": [
+      "CWE-862"
+    ],
+    "affected": [],
+    "references": [
+      "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-fmc-sftunn-codex-c3O4Jft2"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-20324",
+    "added_at": "2026-09-17T08:00:22+09:00"
+  },
+  {
+    "id": "CVE-2026-20322",
+    "published": "2026-09-16",
+    "last_modified": "2026-09-16",
+    "status": "Awaiting Analysis",
+    "description": "As part of Cisco's ongoing commitment to proactive security and product quality, the Cisco Nexus Dashboard&nbsp;engineering team has conducted a comprehensive internal security review. This review resulted in a software hardening release that addresses multiple internally discovered vulnerabilities.\r\n\r\nThe vulnerabilities tracked by CVE-2026-20322 are related to improper access control issues that are grouped under the Common Weakness Enumeration (CWE) CWE-284.",
+    "cvss": {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H",
+      "score": 9.9,
+      "severity": "CRITICAL",
+      "attack_vector": "네트워크",
+      "attack_complexity": "낮음",
+      "privileges_required": "낮음",
+      "user_interaction": "없음"
+    },
+    "cwes": [
+      "CWE-284"
+    ],
+    "affected": [],
+    "references": [
+      "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-hardening-ndw1-psFvnrg"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-20322",
+    "added_at": "2026-09-17T08:00:22+09:00"
+  },
+  {
+    "id": "CVE-2026-20307",
+    "published": "2026-09-16",
+    "last_modified": "2026-09-16",
+    "status": "Awaiting Analysis",
+    "description": "A vulnerability in the web-based management interface of Cisco ISE could allow an authenticated, remote attacker to execute arbitrary commands on the underlying operating system of an affected device. To exploit this vulnerability, the attacker must have at least low-privileged administrative credentials.\r\n\r\nThis vulnerability is due to insecure deserialization of a user-supplied Java byte stream. An attacker could exploit this vulnerability by sending a crafted serialized Java object to the web-based management interface of an affected device. A successful exploit could allow the attacker to execute arbitrary code on the device and elevate privileges to root. In single-node deployments, successful exploitation of this vulnerability could cause the affected ISE node to become unavailable, resulting in a denial of service (DoS) condition. In that condition, endpoints that have not already authenticated would be unable to access the network until the node is restored.",
+    "cvss": {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H",
+      "score": 9.9,
+      "severity": "CRITICAL",
+      "attack_vector": "네트워크",
+      "attack_complexity": "낮음",
+      "privileges_required": "낮음",
+      "user_interaction": "없음"
+    },
+    "cwes": [
+      "CWE-502"
+    ],
+    "affected": [],
+    "references": [
+      "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-ise-rce-se7bYU57"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-20307",
+    "added_at": "2026-09-17T08:00:22+09:00"
+  },
+  {
+    "id": "CVE-2026-20284",
+    "published": "2026-09-16",
+    "last_modified": "2026-09-16",
+    "status": "Received",
+    "description": "A vulnerability in the SXP REST API of Cisco ISE could allow an authenticated, remote attacker to conduct SQL injection attacks.\r\n\r\nThis vulnerability is due to insufficient validation of user-supplied input in REST API calls. An attacker could exploit this vulnerability by sending crafted input to an affected device. A successful exploit could allow the attacker to view or modify data on the underlying database for the affected device. In single-node deployments, successful exploitation of this vulnerability could cause the affected ISE node to become unavailable, resulting in a DoS condition. In that condition, endpoints that have not already authenticated would be unable to access the network until the node is restored.\r\nTo exploit this vulnerability, the attacker must have valid administrative credentials, have the SXP service enabled, and have at least one SXP connection configured.",
+    "cvss": {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:C/C:H/I:H/A:H",
+      "score": 9.1,
+      "severity": "CRITICAL",
+      "attack_vector": "네트워크",
+      "attack_complexity": "낮음",
+      "privileges_required": "높음",
+      "user_interaction": "없음"
+    },
+    "cwes": [
+      "CWE-943"
+    ],
+    "affected": [],
+    "references": [
+      "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-ise-mult-vul-ymSsTLCc"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-20284",
+    "added_at": "2026-09-17T08:00:22+09:00"
+  },
+  {
+    "id": "CVE-2026-20242",
+    "published": "2026-09-16",
+    "last_modified": "2026-09-16",
+    "status": "Awaiting Analysis",
+    "description": "A vulnerability in the External Database Access feature of Cisco Secure Firewall Management Center (FMC) Software could allow an unauthenticated, remote attacker to execute arbitrary commands as&nbsp;root on an affected device.\r\n\r\nThis vulnerability is due to insecure deserialization of a user-supplied Java byte stream from a host that is configured in the external database access list. An attacker could exploit this vulnerability by sending a crafted, serialized Java byte stream to a specific TCP port of an affected device. A successful exploit could allow the attacker to execute arbitrary commands on the device and elevate privileges to root.\r\nNotes:\r\n\r\nThis vulnerability can be exploited only by an attacker who has control of a host in the external database access list.\r\nIf the FMC management interface does not have public internet access, the attack surface that is associated with this vulnerability is reduced.",
+    "cvss": {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "score": 9.8,
+      "severity": "CRITICAL",
+      "attack_vector": "네트워크",
+      "attack_complexity": "낮음",
+      "privileges_required": "없음",
+      "user_interaction": "없음"
+    },
+    "cwes": [
+      "CWE-502"
+    ],
+    "affected": [],
+    "references": [
+      "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-fmc-javarce-y2NypXwk"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-20242",
+    "added_at": "2026-09-17T08:00:22+09:00"
+  },
+  {
+    "id": "CVE-2026-20237",
+    "published": "2026-09-16",
+    "last_modified": "2026-09-16",
+    "status": "Awaiting Analysis",
+    "description": "As part of Cisco's ongoing commitment to proactive security and product quality, the Cisco Identity Services Engine (ISE) and Cisco ISE Passive Identity Connector (ISE-PIC), engineering teams have conducted a comprehensive internal security review. This review resulted in a software hardening release that addresses multiple internally discovered vulnerabilities.\r\n\r\nThe vulnerabilities tracked by CVE-2026-20237 are related to improper input validation issues that are grouped under the Common Weakness Enumeration (CWE) Pillar CWE-20.",
+    "cvss": {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:C/C:H/I:H/A:H",
+      "score": 9.1,
+      "severity": "CRITICAL",
+      "attack_vector": "네트워크",
+      "attack_complexity": "낮음",
+      "privileges_required": "높음",
+      "user_interaction": "없음"
+    },
+    "cwes": [
+      "CWE-20"
+    ],
+    "affected": [],
+    "references": [
+      "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-hardening-ise-XU5EwX5T"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-20237",
+    "added_at": "2026-09-17T08:00:22+09:00"
+  },
+  {
+    "id": "CVE-2026-20234",
+    "published": "2026-09-16",
+    "last_modified": "2026-09-16",
+    "status": "Awaiting Analysis",
+    "description": "As part of Cisco's ongoing commitment to proactive security and product quality, the Cisco Identity Services Engine (ISE) and Cisco ISE Passive Identity Connector (ISE-PIC) engineering teams have conducted a comprehensive internal security review. This review resulted in a software hardening release that addresses multiple internally discovered vulnerabilities.\r\n\r\nThe vulnerabilities tracked by CVE-2026-20234 are related to insufficiently protected credentials issues that are grouped under the Common Weakness Enumeration (CWE) Pillar CWE-522.",
+    "cvss": {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H",
+      "score": 9.9,
+      "severity": "CRITICAL",
+      "attack_vector": "네트워크",
+      "attack_complexity": "낮음",
+      "privileges_required": "낮음",
+      "user_interaction": "없음"
+    },
+    "cwes": [
+      "CWE-522"
+    ],
+    "affected": [],
+    "references": [
+      "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-hardening-ise-XU5EwX5T"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-20234",
+    "added_at": "2026-09-17T08:00:22+09:00"
+  },
+  {
+    "id": "CVE-2026-20211",
+    "published": "2026-09-16",
+    "last_modified": "2026-09-16",
+    "status": "Awaiting Analysis",
+    "description": "A vulnerability in Cisco ISE could allow an authenticated, remote attacker to execute arbitrary commands on the underlying operating system of an affected device. To exploit this vulnerability, the attacker must have valid high-privileged administrative credentials.\r\n\r\nThis vulnerability is due to insecure deserialization of Java objects by the affected software. An attacker could exploit this vulnerability by sending a crafted serialized Java object to an affected device. A successful exploit could allow the attacker to obtain user-level access to the underlying operating system and then elevate privileges to&nbsp;root. In single-node deployments, successful exploitation of this vulnerability could cause the affected ISE node to become unavailable, resulting in a DoS condition. In that condition, endpoints that have not already authenticated would be unable to access the network until the node is restored.",
+    "cvss": {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:C/C:H/I:H/A:H",
+      "score": 9.1,
+      "severity": "CRITICAL",
+      "attack_vector": "네트워크",
+      "attack_complexity": "낮음",
+      "privileges_required": "높음",
+      "user_interaction": "없음"
+    },
+    "cwes": [
+      "CWE-502"
+    ],
+    "affected": [],
+    "references": [
+      "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-ise-rce-se7bYU57"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-20211",
+    "added_at": "2026-09-17T08:00:22+09:00"
+  },
+  {
+    "id": "CVE-2026-20194",
+    "published": "2026-09-16",
+    "last_modified": "2026-09-16",
+    "status": "Awaiting Analysis",
+    "description": "As part of Cisco's ongoing commitment to proactive security and product quality, the Cisco Identity Services Engine (ISE) and Cisco ISE Passive Identity Connector (ISE-PIC), engineering teams have conducted a comprehensive internal security review. This review resulted in a software hardening release that addresses multiple internally discovered vulnerabilities.\r\n\r\nThe vulnerabilities tracked by CVE-2026-20194 are related to incorrect resource transfer between spheres that are grouped under the Common Weakness Enumeration (CWE) Pillar CWE-669.",
+    "cvss": {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:C/C:H/I:H/A:H",
+      "score": 9.1,
+      "severity": "CRITICAL",
+      "attack_vector": "네트워크",
+      "attack_complexity": "낮음",
+      "privileges_required": "높음",
+      "user_interaction": "없음"
+    },
+    "cwes": [
+      "CWE-669"
+    ],
+    "affected": [],
+    "references": [
+      "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-hardening-ise-XU5EwX5T"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-20194",
+    "added_at": "2026-09-17T08:00:22+09:00"
+  },
+  {
+    "id": "CVE-2026-20192",
+    "published": "2026-09-16",
+    "last_modified": "2026-09-16",
+    "status": "Awaiting Analysis",
+    "description": "As part of Cisco's ongoing commitment to proactive security and product quality, the Cisco Identity Services Engine (ISE) and Cisco ISE Passive Identity Connector (ISE-PIC) engineering teams have conducted a comprehensive internal security review. This review resulted in a software hardening release that addresses multiple internally discovered vulnerabilities.\r\n\r\nThe vulnerabilities tracked by CVE-2026-20192 are related to improper access control issues that are grouped under the Common Weakness Enumeration (CWE) Pillar CWE-284.",
+    "cvss": {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:H",
+      "score": 10.0,
+      "severity": "CRITICAL",
+      "attack_vector": "네트워크",
+      "attack_complexity": "낮음",
+      "privileges_required": "없음",
+      "user_interaction": "없음"
+    },
+    "cwes": [
+      "CWE-284"
+    ],
+    "affected": [],
+    "references": [
+      "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-hardening-ise-XU5EwX5T"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-20192",
+    "added_at": "2026-09-17T08:00:22+09:00"
+  },
+  {
+    "id": "CVE-2026-20176",
+    "published": "2026-09-16",
+    "last_modified": "2026-09-16",
+    "status": "Awaiting Analysis",
+    "description": "A vulnerability in Cisco ISE could allow an authenticated, remote attacker to execute arbitrary commands on the underlying operating system of an affected device. To exploit this vulnerability, the attacker must have valid high-privileged administrative credentials.\r\n\r\nThis vulnerability is due to insufficient validation of user-supplied input. An attacker could exploit this vulnerability by sending a crafted HTTP request to an affected device. A successful exploit could allow the attacker to obtain system-level access to the underlying operating system and then elevate privileges to root. In single-node deployments, successful exploitation of this vulnerability could cause the affected ISE node to become unavailable, resulting in a DoS condition. In that condition, endpoints that have not already authenticated would be unable to access the network until the node is restored.",
+    "cvss": {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:C/C:H/I:H/A:H",
+      "score": 9.1,
+      "severity": "CRITICAL",
+      "attack_vector": "네트워크",
+      "attack_complexity": "낮음",
+      "privileges_required": "높음",
+      "user_interaction": "없음"
+    },
+    "cwes": [
+      "CWE-77"
+    ],
+    "affected": [],
+    "references": [
+      "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-ise-rce-se7bYU57"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-20176",
+    "added_at": "2026-09-17T08:00:22+09:00"
+  },
+  {
+    "id": "CVE-2026-20130",
+    "published": "2026-09-16",
+    "last_modified": "2026-09-16",
+    "status": "Awaiting Analysis",
+    "description": "As part of Cisco's ongoing commitment to proactive security and product quality, the Cisco Identity Services Engine (ISE) and Cisco ISE Passive Identity Connector (ISE-PIC), engineering teams have conducted a comprehensive internal security review. This review resulted in a software hardening release that addresses multiple internally discovered vulnerabilities.\r\n\r\nThe vulnerabilities tracked by CVE-2026-20130 are related to improper neutralization of special elements issues that are grouped under the Common Weakness Enumeration (CWE) Pillar CWE-74.",
+    "cvss": {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:H",
+      "score": 10.0,
+      "severity": "CRITICAL",
+      "attack_vector": "네트워크",
+      "attack_complexity": "낮음",
+      "privileges_required": "없음",
+      "user_interaction": "없음"
+    },
+    "cwes": [
+      "CWE-74"
+    ],
+    "affected": [],
+    "references": [
+      "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-hardening-ise-XU5EwX5T"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-20130",
+    "added_at": "2026-09-17T08:00:22+09:00"
   },
   {
     "id": "CVE-2026-14349",
@@ -3092,6 +3789,66 @@
     ],
     "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-76441",
     "added_at": "2026-09-15T08:01:00+09:00"
+  },
+  {
+    "id": "CVE-2026-65381",
+    "published": "2026-09-14",
+    "last_modified": "2026-09-16",
+    "status": "Analyzed",
+    "description": "A validation issue existed in the entitlement verification. This issue was addressed with improved validation of the process entitlement. This issue is fixed in macOS Golden Gate 27, macOS Sequoia 15.8, macOS Tahoe 26.7. A malicious app may be able to break out of its sandbox.",
+    "cvss": {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:H",
+      "score": 10.0,
+      "severity": "CRITICAL",
+      "attack_vector": "네트워크",
+      "attack_complexity": "낮음",
+      "privileges_required": "없음",
+      "user_interaction": "없음"
+    },
+    "cwes": [
+      "CWE-862"
+    ],
+    "affected": [
+      "apple macos"
+    ],
+    "references": [
+      "https://support.apple.com/en-us/149035",
+      "https://support.apple.com/en-us/149042",
+      "https://support.apple.com/en-us/149043"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-65381",
+    "added_at": "2026-09-17T08:00:22+09:00"
+  },
+  {
+    "id": "CVE-2026-43790",
+    "published": "2026-09-14",
+    "last_modified": "2026-09-16",
+    "status": "Analyzed",
+    "description": "The issue was addressed with improved memory handling. This issue is fixed in macOS Golden Gate 27, macOS Sequoia 15.8, macOS Tahoe 26.7. A remote attacker may be able to cause unexpected system termination or corrupt kernel memory.",
+    "cvss": {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:H",
+      "score": 9.1,
+      "severity": "CRITICAL",
+      "attack_vector": "네트워크",
+      "attack_complexity": "낮음",
+      "privileges_required": "없음",
+      "user_interaction": "없음"
+    },
+    "cwes": [
+      "CWE-787"
+    ],
+    "affected": [
+      "apple macos"
+    ],
+    "references": [
+      "https://support.apple.com/en-us/149035",
+      "https://support.apple.com/en-us/149042",
+      "https://support.apple.com/en-us/149043"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-43790",
+    "added_at": "2026-09-17T08:00:22+09:00"
   },
   {
     "id": "CVE-2026-20353",

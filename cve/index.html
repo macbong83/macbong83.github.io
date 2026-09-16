@@ -41,13 +41,204 @@
     <h1>CVE Archive</h1>
     <p>NVD 기반 Critical CVE를 누적 관리하는 별도 페이지입니다. 블로그에는 CVE 자동 글을 발행하지 않고, 이 페이지에만 기록합니다.</p>
     <div class="meta">
-      <span>Total 1029</span>
-      <span>Updated 2026-09-16 20:00 KST</span>
+      <span>Total 1057</span>
+      <span>Updated 2026-09-17 08:00 KST</span>
       <span>Source NVD API</span>
     </div>
   </section>
   <div class="notice">중복 제거 기준은 CVE ID입니다. 동일 CVE는 다시 추가하지 않습니다. 실제 악용 여부와 패치 우선순위는 CISA KEV, 벤더 권고, 자산 노출 여부와 함께 검토해야 합니다.</div>
 
+    <article class="cve-card" id="CVE-2026-92805">
+      <div class="cve-top">
+        <a class="cve-id" href="https://nvd.nist.gov/vuln/detail/CVE-2026-92805" target="_blank" rel="noopener">CVE-2026-92805</a>
+        <span class="score">CVSS 9.8 CRITICAL</span>
+      </div>
+      <p class="desc">UVdesk Community Skeleton through 1.1.8 fails to authenticate or validate installation state on wizard endpoints in ConfigureHelpdesk controller actions. Unauthenticated attackers can repoint the database and create super administrator accounts by submitting crafted requests to wizard endpoints, gaining full control of the instance.</p>
+      <dl>
+        <div><dt>Published</dt><dd>2026-09-16</dd></div>
+        <div><dt>Last Modified</dt><dd>2026-09-16</dd></div>
+        <div><dt>Status</dt><dd>Received</dd></div>
+        <div><dt>Attack Vector</dt><dd>네트워크</dd></div>
+        <div><dt>Attack Complexity</dt><dd>낮음</dd></div>
+        <div><dt>Privileges</dt><dd>없음</dd></div>
+        <div><dt>User Interaction</dt><dd>없음</dd></div>
+        <div><dt>CWE</dt><dd>CWE-306</dd></div>
+        <div><dt>Affected</dt><dd>NVD CPE 기준 확인 필요</dd></div>
+      </dl>
+      <div class="vector"><code>CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H</code></div>
+      <details>
+        <summary>References</summary>
+        <ul><li><a href="https://github.com/uvdesk/community-skeleton" target="_blank" rel="noopener">https://github.com/uvdesk/community-skeleton</a></li><li><a href="https://github.com/uvdesk/community-skeleton/blob/6f35040/src/Resources/config/routes.yaml#L1-L35" target="_blank" rel="noopener">https://github.com/uvdesk/community-skeleton/blob/6f35040/src/Resources/config/routes.yaml#L1-L35</a></li><li><a href="https://github.com/uvdesk/community-skeleton/issues/926" target="_blank" rel="noopener">https://github.com/uvdesk/community-skeleton/issues/926</a></li><li><a href="https://www.vulncheck.com/advisories/uvdesk-community-skeleton-through-1.1.8-missing-authentication-on-the-installation-wizard" target="_blank" rel="noopener">https://www.vulncheck.com/advisories/uvdesk-community-skeleton-through-1.1.8-missing-authentication-on-the-installation-wizard</a></li></ul>
+      </details>
+    </article>
+    <article class="cve-card" id="CVE-2026-92787">
+      <div class="cve-top">
+        <a class="cve-id" href="https://nvd.nist.gov/vuln/detail/CVE-2026-92787" target="_blank" rel="noopener">CVE-2026-92787</a>
+        <span class="score">CVSS 9.8 CRITICAL</span>
+      </div>
+      <p class="desc">Feast through 0.66.0 fails to verify JWT token signatures before establishing user identity, allowing attackers to bypass all role-based access control by presenting an unverified token with a hardcoded claim value. Attackers can obtain trusted internal identity and gain unchecked read and write access to all entities, feature views, data sources, and permission policies on the server.</p>
+      <dl>
+        <div><dt>Published</dt><dd>2026-09-16</dd></div>
+        <div><dt>Last Modified</dt><dd>2026-09-16</dd></div>
+        <div><dt>Status</dt><dd>Received</dd></div>
+        <div><dt>Attack Vector</dt><dd>네트워크</dd></div>
+        <div><dt>Attack Complexity</dt><dd>낮음</dd></div>
+        <div><dt>Privileges</dt><dd>없음</dd></div>
+        <div><dt>User Interaction</dt><dd>없음</dd></div>
+        <div><dt>CWE</dt><dd>CWE-798</dd></div>
+        <div><dt>Affected</dt><dd>NVD CPE 기준 확인 필요</dd></div>
+      </dl>
+      <div class="vector"><code>CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H</code></div>
+      <details>
+        <summary>References</summary>
+        <ul><li><a href="https://github.com/feast-dev/feast" target="_blank" rel="noopener">https://github.com/feast-dev/feast</a></li><li><a href="https://github.com/feast-dev/feast/blob/f296d4b/infra/charts/feast-feature-server/templates/deployment.yaml#L46-L47" target="_blank" rel="noopener">https://github.com/feast-dev/feast/blob/f296d4b/infra/charts/feast-feature-server/templates/deployment.yaml#L46-L47</a></li><li><a href="https://github.com/feast-dev/feast/blob/f296d4b/sdk/python/feast/permissions/auth/oidc_token_parser.py#L152-L156" target="_blank" rel="noopener">https://github.com/feast-dev/feast/blob/f296d4b/sdk/python/feast/permissions/auth/oidc_token_parser.py#L152-L156</a></li><li><a href="https://github.com/feast-dev/feast/blob/v0.66.0/sdk/python/feast/permissions/security_manager.py#L248-L264" target="_blank" rel="noopener">https://github.com/feast-dev/feast/blob/v0.66.0/sdk/python/feast/permissions/security_manager.py#L248-L264</a></li></ul>
+      </details>
+    </article>
+    <article class="cve-card" id="CVE-2026-92720">
+      <div class="cve-top">
+        <a class="cve-id" href="https://nvd.nist.gov/vuln/detail/CVE-2026-92720" target="_blank" rel="noopener">CVE-2026-92720</a>
+        <span class="score">CVSS 9.1 CRITICAL</span>
+      </div>
+      <p class="desc">Kubero through 3.1.1 fails to apply authentication guards to the notifications API endpoints, allowing unauthenticated attackers to read webhook secrets and service URLs. Attackers can retrieve stored credentials and register malicious webhooks to intercept pipeline events or suppress alerting by deleting existing configurations.</p>
+      <dl>
+        <div><dt>Published</dt><dd>2026-09-16</dd></div>
+        <div><dt>Last Modified</dt><dd>2026-09-16</dd></div>
+        <div><dt>Status</dt><dd>Received</dd></div>
+        <div><dt>Attack Vector</dt><dd>네트워크</dd></div>
+        <div><dt>Attack Complexity</dt><dd>낮음</dd></div>
+        <div><dt>Privileges</dt><dd>없음</dd></div>
+        <div><dt>User Interaction</dt><dd>없음</dd></div>
+        <div><dt>CWE</dt><dd>CWE-306</dd></div>
+        <div><dt>Affected</dt><dd>NVD CPE 기준 확인 필요</dd></div>
+      </dl>
+      <div class="vector"><code>CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N</code></div>
+      <details>
+        <summary>References</summary>
+        <ul><li><a href="https://github.com/kubero-dev/kubero" target="_blank" rel="noopener">https://github.com/kubero-dev/kubero</a></li><li><a href="https://github.com/kubero-dev/kubero/blob/v3.1.1/server/src/main.ts" target="_blank" rel="noopener">https://github.com/kubero-dev/kubero/blob/v3.1.1/server/src/main.ts</a></li><li><a href="https://github.com/kubero-dev/kubero/blob/v3.1.1/server/src/notifications/notifications.controller.ts#L23-L33" target="_blank" rel="noopener">https://github.com/kubero-dev/kubero/blob/v3.1.1/server/src/notifications/notifications.controller.ts#L23-L33</a></li><li><a href="https://github.com/kubero-dev/kubero/issues/753" target="_blank" rel="noopener">https://github.com/kubero-dev/kubero/issues/753</a></li></ul>
+      </details>
+    </article>
+    <article class="cve-card" id="CVE-2026-92717">
+      <div class="cve-top">
+        <a class="cve-id" href="https://nvd.nist.gov/vuln/detail/CVE-2026-92717" target="_blank" rel="noopener">CVE-2026-92717</a>
+        <span class="score">CVSS 9.1 CRITICAL</span>
+      </div>
+      <p class="desc">Covenant through 0.6 registers the CovenantHub SignalR hub without an Authorize attribute, allowing unauthenticated callers to invoke CreateHttpListener and receive a signed JWT token. Attackers can use the obtained token to authenticate against the entire operator API and access grunts, credentials, binaries, events, and the operator roster.</p>
+      <dl>
+        <div><dt>Published</dt><dd>2026-09-16</dd></div>
+        <div><dt>Last Modified</dt><dd>2026-09-16</dd></div>
+        <div><dt>Status</dt><dd>Received</dd></div>
+        <div><dt>Attack Vector</dt><dd>네트워크</dd></div>
+        <div><dt>Attack Complexity</dt><dd>낮음</dd></div>
+        <div><dt>Privileges</dt><dd>없음</dd></div>
+        <div><dt>User Interaction</dt><dd>없음</dd></div>
+        <div><dt>CWE</dt><dd>CWE-306</dd></div>
+        <div><dt>Affected</dt><dd>NVD CPE 기준 확인 필요</dd></div>
+      </dl>
+      <div class="vector"><code>CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N</code></div>
+      <details>
+        <summary>References</summary>
+        <ul><li><a href="https://github.com/cobbr/Covenant" target="_blank" rel="noopener">https://github.com/cobbr/Covenant</a></li><li><a href="https://github.com/cobbr/Covenant/blob/v0.6/Covenant/Core/CovenantService.cs#L3958-L3975" target="_blank" rel="noopener">https://github.com/cobbr/Covenant/blob/v0.6/Covenant/Core/CovenantService.cs#L3958-L3975</a></li><li><a href="https://github.com/cobbr/Covenant/blob/v0.6/Covenant/Hubs/CovenantHub.cs#L28-L33" target="_blank" rel="noopener">https://github.com/cobbr/Covenant/blob/v0.6/Covenant/Hubs/CovenantHub.cs#L28-L33</a></li><li><a href="https://github.com/cobbr/Covenant/issues/406" target="_blank" rel="noopener">https://github.com/cobbr/Covenant/issues/406</a></li></ul>
+      </details>
+    </article>
+    <article class="cve-card" id="CVE-2026-92716">
+      <div class="cve-top">
+        <a class="cve-id" href="https://nvd.nist.gov/vuln/detail/CVE-2026-92716" target="_blank" rel="noopener">CVE-2026-92716</a>
+        <span class="score">CVSS 9.6 CRITICAL</span>
+      </div>
+      <p class="desc">Shuffle through 2.2.1 contains a cross-tenant privilege escalation vulnerability in the HandleApiGeneration endpoint that allows administrators to reset and read API keys of non-administrator users in other organizations. Attackers with admin privileges in one organization can supply arbitrary user IDs to generate valid API keys for users in different organizations, enabling account takeover across tenant boundaries.</p>
+      <dl>
+        <div><dt>Published</dt><dd>2026-09-16</dd></div>
+        <div><dt>Last Modified</dt><dd>2026-09-16</dd></div>
+        <div><dt>Status</dt><dd>Received</dd></div>
+        <div><dt>Attack Vector</dt><dd>네트워크</dd></div>
+        <div><dt>Attack Complexity</dt><dd>낮음</dd></div>
+        <div><dt>Privileges</dt><dd>낮음</dd></div>
+        <div><dt>User Interaction</dt><dd>없음</dd></div>
+        <div><dt>CWE</dt><dd>CWE-639</dd></div>
+        <div><dt>Affected</dt><dd>NVD CPE 기준 확인 필요</dd></div>
+      </dl>
+      <div class="vector"><code>CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:N</code></div>
+      <details>
+        <summary>References</summary>
+        <ul><li><a href="https://github.com/Shuffle/Shuffle" target="_blank" rel="noopener">https://github.com/Shuffle/Shuffle</a></li><li><a href="https://github.com/Shuffle/shuffle-shared/blob/v1.2.50/shared.go#L9888-L9912" target="_blank" rel="noopener">https://github.com/Shuffle/shuffle-shared/blob/v1.2.50/shared.go#L9888-L9912</a></li><li><a href="https://github.com/Shuffle/shuffle-shared/commit/c1b582e91b429bc7d5ad02e6c22f98234ec67615" target="_blank" rel="noopener">https://github.com/Shuffle/shuffle-shared/commit/c1b582e91b429bc7d5ad02e6c22f98234ec67615</a></li><li><a href="https://github.com/geo-chen/oss/blob/main/shuffle.md" target="_blank" rel="noopener">https://github.com/geo-chen/oss/blob/main/shuffle.md</a></li></ul>
+      </details>
+    </article>
+    <article class="cve-card" id="CVE-2026-76460">
+      <div class="cve-top">
+        <a class="cve-id" href="https://nvd.nist.gov/vuln/detail/CVE-2026-76460" target="_blank" rel="noopener">CVE-2026-76460</a>
+        <span class="score">CVSS 10.0 CRITICAL</span>
+      </div>
+      <p class="desc">A vulnerability in an API of Cisco Identity Services Engine (ISE) could allow an unauthenticated, remote attacker to bypass authentication.
+
+This vulnerability is due to insufficient authentication control on an API endpoint. An attacker could exploit this vulnerability by sending a crafted request to an affected API endpoint. A successful exploit could allow the attacker to gain unauthorized access to the affected device by bypassing the web-based management interface.</p>
+      <dl>
+        <div><dt>Published</dt><dd>2026-09-16</dd></div>
+        <div><dt>Last Modified</dt><dd>2026-09-16</dd></div>
+        <div><dt>Status</dt><dd>Received</dd></div>
+        <div><dt>Attack Vector</dt><dd>네트워크</dd></div>
+        <div><dt>Attack Complexity</dt><dd>낮음</dd></div>
+        <div><dt>Privileges</dt><dd>없음</dd></div>
+        <div><dt>User Interaction</dt><dd>없음</dd></div>
+        <div><dt>CWE</dt><dd>CWE-648</dd></div>
+        <div><dt>Affected</dt><dd>NVD CPE 기준 확인 필요</dd></div>
+      </dl>
+      <div class="vector"><code>CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:H</code></div>
+      <details>
+        <summary>References</summary>
+        <ul><li><a href="https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-ISE-ABP-VNSW7Tn5" target="_blank" rel="noopener">https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-ISE-ABP-VNSW7Tn5</a></li><li><a href="https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-76460" target="_blank" rel="noopener">https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-76460</a></li></ul>
+      </details>
+    </article>
+    <article class="cve-card" id="CVE-2026-76423">
+      <div class="cve-top">
+        <a class="cve-id" href="https://nvd.nist.gov/vuln/detail/CVE-2026-76423" target="_blank" rel="noopener">CVE-2026-76423</a>
+        <span class="score">CVSS 10.0 CRITICAL</span>
+      </div>
+      <p class="desc">A vulnerability in the REST API of Cisco ISE and Cisco ISE-PIC could allow an unauthenticated, remote attacker to gain administrative access to an affected device.
+
+This vulnerability is due to the REST API web service being exposed with insufficient authorization checks. An attacker could exploit this vulnerability by sending a crafted HTTP request to the exposed REST API port. A successful exploit could allow the attacker to read and modify ISE configuration and identity data with administrative privileges.</p>
+      <dl>
+        <div><dt>Published</dt><dd>2026-09-16</dd></div>
+        <div><dt>Last Modified</dt><dd>2026-09-16</dd></div>
+        <div><dt>Status</dt><dd>Awaiting Analysis</dd></div>
+        <div><dt>Attack Vector</dt><dd>네트워크</dd></div>
+        <div><dt>Attack Complexity</dt><dd>낮음</dd></div>
+        <div><dt>Privileges</dt><dd>없음</dd></div>
+        <div><dt>User Interaction</dt><dd>없음</dd></div>
+        <div><dt>CWE</dt><dd>CWE-290</dd></div>
+        <div><dt>Affected</dt><dd>NVD CPE 기준 확인 필요</dd></div>
+      </dl>
+      <div class="vector"><code>CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:L</code></div>
+      <details>
+        <summary>References</summary>
+        <ul><li><a href="https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-ise-multi-hrP9jQSQ" target="_blank" rel="noopener">https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-ise-multi-hrP9jQSQ</a></li></ul>
+      </details>
+    </article>
+    <article class="cve-card" id="CVE-2026-76420">
+      <div class="cve-top">
+        <a class="cve-id" href="https://nvd.nist.gov/vuln/detail/CVE-2026-76420" target="_blank" rel="noopener">CVE-2026-76420</a>
+        <span class="score">CVSS 9.0 CRITICAL</span>
+      </div>
+      <p class="desc">A vulnerability in the internal configuration of the Apache JServ Protocol (AJP)&amp;nbsp;connector for Cisco Secure FMC Software could allow an unauthenticated, remote attacker to impersonate a peer device.
+
+This vulnerability is due to incorrect initialization of encryption parameters for the AJP connector at boot time. An attacker could exploit this vulnerability by sending crafted packets to the AJP connector. A&amp;nbsp;successful exploit could allow the attacker to execute commands as root and&amp;nbsp;gain full control over the FMC REST APIs on the affected device.
+Note: This vulnerability can be exploited only if the valid sftunnel connection between Cisco Secure FMC Software and Cisco Secure FTD Software is down.</p>
+      <dl>
+        <div><dt>Published</dt><dd>2026-09-16</dd></div>
+        <div><dt>Last Modified</dt><dd>2026-09-16</dd></div>
+        <div><dt>Status</dt><dd>Awaiting Analysis</dd></div>
+        <div><dt>Attack Vector</dt><dd>네트워크</dd></div>
+        <div><dt>Attack Complexity</dt><dd>높음</dd></div>
+        <div><dt>Privileges</dt><dd>없음</dd></div>
+        <div><dt>User Interaction</dt><dd>없음</dd></div>
+        <div><dt>CWE</dt><dd>CWE-285</dd></div>
+        <div><dt>Affected</dt><dd>NVD CPE 기준 확인 필요</dd></div>
+      </dl>
+      <div class="vector"><code>CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:C/C:H/I:H/A:H</code></div>
+      <details>
+        <summary>References</summary>
+        <ul><li><a href="https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-fmc2-multivulns-HXgcqRG" target="_blank" rel="noopener">https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-fmc2-multivulns-HXgcqRG</a></li></ul>
+      </details>
+    </article>
     <article class="cve-card" id="CVE-2026-27565">
       <div class="cve-top">
         <a class="cve-id" href="https://nvd.nist.gov/vuln/detail/CVE-2026-27565" target="_blank" rel="noopener">CVE-2026-27565</a>
@@ -92,6 +283,462 @@
       <details>
         <summary>References</summary>
         <ul><li><a href="https://www.certvde.com/en/advisories/VDE-2026-014/" target="_blank" rel="noopener">https://www.certvde.com/en/advisories/VDE-2026-014/</a></li><li><a href="https://www.certvde.com/en/advisories/VDE-2026-027/" target="_blank" rel="noopener">https://www.certvde.com/en/advisories/VDE-2026-027/</a></li><li><a href="https://www.certvde.com/en/advisories/VDE-2026-028/" target="_blank" rel="noopener">https://www.certvde.com/en/advisories/VDE-2026-028/</a></li></ul>
+      </details>
+    </article>
+    <article class="cve-card" id="CVE-2026-20341">
+      <div class="cve-top">
+        <a class="cve-id" href="https://nvd.nist.gov/vuln/detail/CVE-2026-20341" target="_blank" rel="noopener">CVE-2026-20341</a>
+        <span class="score">CVSS 9.1 CRITICAL</span>
+      </div>
+      <p class="desc">A vulnerability in the sftunnel inter-device communication protocol of Cisco Secure FMC Software could allow an authenticated, remote attacker to obtain&amp;nbsp;root privileges.
+
+This vulnerability is due to unsecured deserialization of untrusted data over the sftunnel management connection. An attacker could exploit this vulnerability by sending crafted sftunnel remote procedure calls (RPCs). A successful exploit could allow the attacker to gain root privileges on a device that is running Cisco Secure FMC Software and its high-availability peer.
+To exploit this vulnerability, the attacker must have valid administrative credentials on a managed Cisco FTD device.</p>
+      <dl>
+        <div><dt>Published</dt><dd>2026-09-16</dd></div>
+        <div><dt>Last Modified</dt><dd>2026-09-16</dd></div>
+        <div><dt>Status</dt><dd>Awaiting Analysis</dd></div>
+        <div><dt>Attack Vector</dt><dd>네트워크</dd></div>
+        <div><dt>Attack Complexity</dt><dd>낮음</dd></div>
+        <div><dt>Privileges</dt><dd>높음</dd></div>
+        <div><dt>User Interaction</dt><dd>없음</dd></div>
+        <div><dt>CWE</dt><dd>CWE-502</dd></div>
+        <div><dt>Affected</dt><dd>NVD CPE 기준 확인 필요</dd></div>
+      </dl>
+      <div class="vector"><code>CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:C/C:H/I:H/A:H</code></div>
+      <details>
+        <summary>References</summary>
+        <ul><li><a href="https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-fmc-mulivulns-4PsnFwvx" target="_blank" rel="noopener">https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-fmc-mulivulns-4PsnFwvx</a></li></ul>
+      </details>
+    </article>
+    <article class="cve-card" id="CVE-2026-20332">
+      <div class="cve-top">
+        <a class="cve-id" href="https://nvd.nist.gov/vuln/detail/CVE-2026-20332" target="_blank" rel="noopener">CVE-2026-20332</a>
+        <span class="score">CVSS 9.9 CRITICAL</span>
+      </div>
+      <p class="desc">As part of Cisco&#x27;s ongoing commitment to proactive security and product quality, the Cisco Secure Adaptive Security Appliance Software, Cisco Secure Firewall Threat Defense Software and Cisco Secure Firewall Management Center Software engineering team has conducted a comprehensive internal security review. This review resulted in a software hardening release that addresses multiple internally discovered vulnerabilities. &amp;nbsp;
+
+The vulnerabilities tracked by CVE-2026-20332 are related to improper access control issues that are grouped under the Common Weakness Enumeration (CWE) Pillar CWE-284.</p>
+      <dl>
+        <div><dt>Published</dt><dd>2026-09-16</dd></div>
+        <div><dt>Last Modified</dt><dd>2026-09-16</dd></div>
+        <div><dt>Status</dt><dd>Received</dd></div>
+        <div><dt>Attack Vector</dt><dd>네트워크</dd></div>
+        <div><dt>Attack Complexity</dt><dd>낮음</dd></div>
+        <div><dt>Privileges</dt><dd>낮음</dd></div>
+        <div><dt>User Interaction</dt><dd>없음</dd></div>
+        <div><dt>CWE</dt><dd>CWE-284</dd></div>
+        <div><dt>Affected</dt><dd>NVD CPE 기준 확인 필요</dd></div>
+      </dl>
+      <div class="vector"><code>CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H</code></div>
+      <details>
+        <summary>References</summary>
+        <ul><li><a href="https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-hardening-asaftdfmc-uvpPROhN" target="_blank" rel="noopener">https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-hardening-asaftdfmc-uvpPROhN</a></li></ul>
+      </details>
+    </article>
+    <article class="cve-card" id="CVE-2026-20330">
+      <div class="cve-top">
+        <a class="cve-id" href="https://nvd.nist.gov/vuln/detail/CVE-2026-20330" target="_blank" rel="noopener">CVE-2026-20330</a>
+        <span class="score">CVSS 9.9 CRITICAL</span>
+      </div>
+      <p class="desc">As part of Cisco&#x27;s ongoing commitment to proactive security and product quality, the Cisco Secure Adaptive Security Appliance Software, Cisco Secure Firewall Threat Defense Software and Cisco Secure Firewall Management Center Software engineering team has conducted a comprehensive internal security review. This review resulted in a software hardening release that addresses multiple internally discovered vulnerabilities. &amp;nbsp;
+
+The vulnerabilities tracked by CVE-2026-20330 are related to improper neutralization issues that are grouped under the Common Weakness Enumeration (CWE) Pillar CWE-707.</p>
+      <dl>
+        <div><dt>Published</dt><dd>2026-09-16</dd></div>
+        <div><dt>Last Modified</dt><dd>2026-09-16</dd></div>
+        <div><dt>Status</dt><dd>Awaiting Analysis</dd></div>
+        <div><dt>Attack Vector</dt><dd>네트워크</dd></div>
+        <div><dt>Attack Complexity</dt><dd>낮음</dd></div>
+        <div><dt>Privileges</dt><dd>낮음</dd></div>
+        <div><dt>User Interaction</dt><dd>없음</dd></div>
+        <div><dt>CWE</dt><dd>CWE-707</dd></div>
+        <div><dt>Affected</dt><dd>NVD CPE 기준 확인 필요</dd></div>
+      </dl>
+      <div class="vector"><code>CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H</code></div>
+      <details>
+        <summary>References</summary>
+        <ul><li><a href="https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-hardening-asaftdfmc-uvpPROhN" target="_blank" rel="noopener">https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-hardening-asaftdfmc-uvpPROhN</a></li></ul>
+      </details>
+    </article>
+    <article class="cve-card" id="CVE-2026-20329">
+      <div class="cve-top">
+        <a class="cve-id" href="https://nvd.nist.gov/vuln/detail/CVE-2026-20329" target="_blank" rel="noopener">CVE-2026-20329</a>
+        <span class="score">CVSS 9.9 CRITICAL</span>
+      </div>
+      <p class="desc">As part of Cisco&#x27;s ongoing commitment to proactive security and product quality, the Cisco Secure Adaptive Security Appliance Software, Cisco Secure Firewall Threat Defense Software and Cisco Secure Firewall Management Center Software engineering team has conducted a comprehensive internal security review. This review resulted in a software hardening release that addresses multiple internally discovered vulnerabilities. &amp;nbsp;
+
+The vulnerabilities tracked by CVE-2026-20329 are related to issues concerning improper handling of exceptional conditions that are grouped under the Common Weakness Enumeration (CWE) Pillar CWE-703.</p>
+      <dl>
+        <div><dt>Published</dt><dd>2026-09-16</dd></div>
+        <div><dt>Last Modified</dt><dd>2026-09-16</dd></div>
+        <div><dt>Status</dt><dd>Awaiting Analysis</dd></div>
+        <div><dt>Attack Vector</dt><dd>네트워크</dd></div>
+        <div><dt>Attack Complexity</dt><dd>낮음</dd></div>
+        <div><dt>Privileges</dt><dd>낮음</dd></div>
+        <div><dt>User Interaction</dt><dd>없음</dd></div>
+        <div><dt>CWE</dt><dd>CWE-703</dd></div>
+        <div><dt>Affected</dt><dd>NVD CPE 기준 확인 필요</dd></div>
+      </dl>
+      <div class="vector"><code>CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H</code></div>
+      <details>
+        <summary>References</summary>
+        <ul><li><a href="https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-hardening-asaftdfmc-uvpPROhN" target="_blank" rel="noopener">https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-hardening-asaftdfmc-uvpPROhN</a></li></ul>
+      </details>
+    </article>
+    <article class="cve-card" id="CVE-2026-20326">
+      <div class="cve-top">
+        <a class="cve-id" href="https://nvd.nist.gov/vuln/detail/CVE-2026-20326" target="_blank" rel="noopener">CVE-2026-20326</a>
+        <span class="score">CVSS 9.8 CRITICAL</span>
+      </div>
+      <p class="desc">As part of Cisco&#x27;s ongoing commitment to proactive security and product quality, the Cisco Nexus Dashboard engineering team has conducted a comprehensive internal security review. This review resulted in a software hardening release that addresses multiple internally discovered vulnerabilities.
+
+The vulnerabilities tracked by CVE-2026-20326 are related to missing authentication for critical function issues that are grouped under the Common Weakness Enumeration (CWE) CWE-306.</p>
+      <dl>
+        <div><dt>Published</dt><dd>2026-09-16</dd></div>
+        <div><dt>Last Modified</dt><dd>2026-09-16</dd></div>
+        <div><dt>Status</dt><dd>Awaiting Analysis</dd></div>
+        <div><dt>Attack Vector</dt><dd>네트워크</dd></div>
+        <div><dt>Attack Complexity</dt><dd>낮음</dd></div>
+        <div><dt>Privileges</dt><dd>없음</dd></div>
+        <div><dt>User Interaction</dt><dd>없음</dd></div>
+        <div><dt>CWE</dt><dd>CWE-306</dd></div>
+        <div><dt>Affected</dt><dd>NVD CPE 기준 확인 필요</dd></div>
+      </dl>
+      <div class="vector"><code>CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H</code></div>
+      <details>
+        <summary>References</summary>
+        <ul><li><a href="https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-hardening-ndw1-psFvnrg" target="_blank" rel="noopener">https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-hardening-ndw1-psFvnrg</a></li></ul>
+      </details>
+    </article>
+    <article class="cve-card" id="CVE-2026-20325">
+      <div class="cve-top">
+        <a class="cve-id" href="https://nvd.nist.gov/vuln/detail/CVE-2026-20325" target="_blank" rel="noopener">CVE-2026-20325</a>
+        <span class="score">CVSS 9.9 CRITICAL</span>
+      </div>
+      <p class="desc">As part of Cisco&#x27;s ongoing commitment to proactive security and product quality, the Cisco Nexus Dashboard&amp;nbsp;engineering team has conducted a comprehensive internal security review. This review resulted in a software hardening release that addresses multiple internally discovered vulnerabilities.
+
+The vulnerabilities tracked by CVE-2026-20325 are related to improper neutralization of special elements used in a command issue that are grouped under the Common Weakness Enumeration (CWE) CWE-77.</p>
+      <dl>
+        <div><dt>Published</dt><dd>2026-09-16</dd></div>
+        <div><dt>Last Modified</dt><dd>2026-09-16</dd></div>
+        <div><dt>Status</dt><dd>Awaiting Analysis</dd></div>
+        <div><dt>Attack Vector</dt><dd>네트워크</dd></div>
+        <div><dt>Attack Complexity</dt><dd>낮음</dd></div>
+        <div><dt>Privileges</dt><dd>낮음</dd></div>
+        <div><dt>User Interaction</dt><dd>없음</dd></div>
+        <div><dt>CWE</dt><dd>CWE-77</dd></div>
+        <div><dt>Affected</dt><dd>NVD CPE 기준 확인 필요</dd></div>
+      </dl>
+      <div class="vector"><code>CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H</code></div>
+      <details>
+        <summary>References</summary>
+        <ul><li><a href="https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-hardening-ndw1-psFvnrg" target="_blank" rel="noopener">https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-hardening-ndw1-psFvnrg</a></li></ul>
+      </details>
+    </article>
+    <article class="cve-card" id="CVE-2026-20324">
+      <div class="cve-top">
+        <a class="cve-id" href="https://nvd.nist.gov/vuln/detail/CVE-2026-20324" target="_blank" rel="noopener">CVE-2026-20324</a>
+        <span class="score">CVSS 9.9 CRITICAL</span>
+      </div>
+      <p class="desc">A vulnerability in the sftunnel inter-device communication protocol of Cisco Secure Firewall Management Center (FMC) Software could allow an authenticated, remote attacker to execute arbitrary commands as root.
+
+This vulnerability exists because a registered sftunnel peer has incorrect permissions to write an arbitrary file to any location on the device. An attacker could exploit this vulnerability by hijacking the sftunnel communication connection or being a valid registered sftunnel peer and sending an sftunnel command to write a malicious file to the disk of an affected device. A successful exploit could allow the attacker to write a file to the device that is executed with root privileges. To exploit this vulnerability, the attacker must have valid user credentials on the affected device.</p>
+      <dl>
+        <div><dt>Published</dt><dd>2026-09-16</dd></div>
+        <div><dt>Last Modified</dt><dd>2026-09-16</dd></div>
+        <div><dt>Status</dt><dd>Awaiting Analysis</dd></div>
+        <div><dt>Attack Vector</dt><dd>네트워크</dd></div>
+        <div><dt>Attack Complexity</dt><dd>낮음</dd></div>
+        <div><dt>Privileges</dt><dd>낮음</dd></div>
+        <div><dt>User Interaction</dt><dd>없음</dd></div>
+        <div><dt>CWE</dt><dd>CWE-862</dd></div>
+        <div><dt>Affected</dt><dd>NVD CPE 기준 확인 필요</dd></div>
+      </dl>
+      <div class="vector"><code>CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H</code></div>
+      <details>
+        <summary>References</summary>
+        <ul><li><a href="https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-fmc-sftunn-codex-c3O4Jft2" target="_blank" rel="noopener">https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-fmc-sftunn-codex-c3O4Jft2</a></li></ul>
+      </details>
+    </article>
+    <article class="cve-card" id="CVE-2026-20322">
+      <div class="cve-top">
+        <a class="cve-id" href="https://nvd.nist.gov/vuln/detail/CVE-2026-20322" target="_blank" rel="noopener">CVE-2026-20322</a>
+        <span class="score">CVSS 9.9 CRITICAL</span>
+      </div>
+      <p class="desc">As part of Cisco&#x27;s ongoing commitment to proactive security and product quality, the Cisco Nexus Dashboard&amp;nbsp;engineering team has conducted a comprehensive internal security review. This review resulted in a software hardening release that addresses multiple internally discovered vulnerabilities.
+
+The vulnerabilities tracked by CVE-2026-20322 are related to improper access control issues that are grouped under the Common Weakness Enumeration (CWE) CWE-284.</p>
+      <dl>
+        <div><dt>Published</dt><dd>2026-09-16</dd></div>
+        <div><dt>Last Modified</dt><dd>2026-09-16</dd></div>
+        <div><dt>Status</dt><dd>Awaiting Analysis</dd></div>
+        <div><dt>Attack Vector</dt><dd>네트워크</dd></div>
+        <div><dt>Attack Complexity</dt><dd>낮음</dd></div>
+        <div><dt>Privileges</dt><dd>낮음</dd></div>
+        <div><dt>User Interaction</dt><dd>없음</dd></div>
+        <div><dt>CWE</dt><dd>CWE-284</dd></div>
+        <div><dt>Affected</dt><dd>NVD CPE 기준 확인 필요</dd></div>
+      </dl>
+      <div class="vector"><code>CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H</code></div>
+      <details>
+        <summary>References</summary>
+        <ul><li><a href="https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-hardening-ndw1-psFvnrg" target="_blank" rel="noopener">https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-hardening-ndw1-psFvnrg</a></li></ul>
+      </details>
+    </article>
+    <article class="cve-card" id="CVE-2026-20307">
+      <div class="cve-top">
+        <a class="cve-id" href="https://nvd.nist.gov/vuln/detail/CVE-2026-20307" target="_blank" rel="noopener">CVE-2026-20307</a>
+        <span class="score">CVSS 9.9 CRITICAL</span>
+      </div>
+      <p class="desc">A vulnerability in the web-based management interface of Cisco ISE could allow an authenticated, remote attacker to execute arbitrary commands on the underlying operating system of an affected device. To exploit this vulnerability, the attacker must have at least low-privileged administrative credentials.
+
+This vulnerability is due to insecure deserialization of a user-supplied Java byte stream. An attacker could exploit this vulnerability by sending a crafted serialized Java object to the web-based management interface of an affected device. A successful exploit could allow the attacker to execute arbitrary code on the device and elevate privileges to root. In single-node deployments, successful exploitation of this vulnerability could cause the affected ISE node to become unavailable, resulting in a denial of service (DoS) condition. In that condition, endpoints that have not already authenticated would be unable to access the network until the node is restored.</p>
+      <dl>
+        <div><dt>Published</dt><dd>2026-09-16</dd></div>
+        <div><dt>Last Modified</dt><dd>2026-09-16</dd></div>
+        <div><dt>Status</dt><dd>Awaiting Analysis</dd></div>
+        <div><dt>Attack Vector</dt><dd>네트워크</dd></div>
+        <div><dt>Attack Complexity</dt><dd>낮음</dd></div>
+        <div><dt>Privileges</dt><dd>낮음</dd></div>
+        <div><dt>User Interaction</dt><dd>없음</dd></div>
+        <div><dt>CWE</dt><dd>CWE-502</dd></div>
+        <div><dt>Affected</dt><dd>NVD CPE 기준 확인 필요</dd></div>
+      </dl>
+      <div class="vector"><code>CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H</code></div>
+      <details>
+        <summary>References</summary>
+        <ul><li><a href="https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-ise-rce-se7bYU57" target="_blank" rel="noopener">https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-ise-rce-se7bYU57</a></li></ul>
+      </details>
+    </article>
+    <article class="cve-card" id="CVE-2026-20284">
+      <div class="cve-top">
+        <a class="cve-id" href="https://nvd.nist.gov/vuln/detail/CVE-2026-20284" target="_blank" rel="noopener">CVE-2026-20284</a>
+        <span class="score">CVSS 9.1 CRITICAL</span>
+      </div>
+      <p class="desc">A vulnerability in the SXP REST API of Cisco ISE could allow an authenticated, remote attacker to conduct SQL injection attacks.
+
+This vulnerability is due to insufficient validation of user-supplied input in REST API calls. An attacker could exploit this vulnerability by sending crafted input to an affected device. A successful exploit could allow the attacker to view or modify data on the underlying database for the affected device. In single-node deployments, successful exploitation of this vulnerability could cause the affected ISE node to become unavailable, resulting in a DoS condition. In that condition, endpoints that have not already authenticated would be unable to access the network until the node is restored.
+To exploit this vulnerability, the attacker must have valid administrative credentials, have the SXP service enabled, and have at least one SXP connection configured.</p>
+      <dl>
+        <div><dt>Published</dt><dd>2026-09-16</dd></div>
+        <div><dt>Last Modified</dt><dd>2026-09-16</dd></div>
+        <div><dt>Status</dt><dd>Received</dd></div>
+        <div><dt>Attack Vector</dt><dd>네트워크</dd></div>
+        <div><dt>Attack Complexity</dt><dd>낮음</dd></div>
+        <div><dt>Privileges</dt><dd>높음</dd></div>
+        <div><dt>User Interaction</dt><dd>없음</dd></div>
+        <div><dt>CWE</dt><dd>CWE-943</dd></div>
+        <div><dt>Affected</dt><dd>NVD CPE 기준 확인 필요</dd></div>
+      </dl>
+      <div class="vector"><code>CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:C/C:H/I:H/A:H</code></div>
+      <details>
+        <summary>References</summary>
+        <ul><li><a href="https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-ise-mult-vul-ymSsTLCc" target="_blank" rel="noopener">https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-ise-mult-vul-ymSsTLCc</a></li></ul>
+      </details>
+    </article>
+    <article class="cve-card" id="CVE-2026-20242">
+      <div class="cve-top">
+        <a class="cve-id" href="https://nvd.nist.gov/vuln/detail/CVE-2026-20242" target="_blank" rel="noopener">CVE-2026-20242</a>
+        <span class="score">CVSS 9.8 CRITICAL</span>
+      </div>
+      <p class="desc">A vulnerability in the External Database Access feature of Cisco Secure Firewall Management Center (FMC) Software could allow an unauthenticated, remote attacker to execute arbitrary commands as&amp;nbsp;root on an affected device.
+
+This vulnerability is due to insecure deserialization of a user-supplied Java byte stream from a host that is configured in the external database access list. An attacker could exploit this vulnerability by sending a crafted, serialized Java byte stream to a specific TCP port of an affected device. A successful exploit could allow the attacker to execute arbitrary commands on the device and elevate privileges to root.
+Notes:
+
+This vulnerability can be exploited only by an attacker who has control of a host in the external database access list.
+If the FMC management interface does not have public internet access, the attack surface that is associated with this vulnerability is reduced.</p>
+      <dl>
+        <div><dt>Published</dt><dd>2026-09-16</dd></div>
+        <div><dt>Last Modified</dt><dd>2026-09-16</dd></div>
+        <div><dt>Status</dt><dd>Awaiting Analysis</dd></div>
+        <div><dt>Attack Vector</dt><dd>네트워크</dd></div>
+        <div><dt>Attack Complexity</dt><dd>낮음</dd></div>
+        <div><dt>Privileges</dt><dd>없음</dd></div>
+        <div><dt>User Interaction</dt><dd>없음</dd></div>
+        <div><dt>CWE</dt><dd>CWE-502</dd></div>
+        <div><dt>Affected</dt><dd>NVD CPE 기준 확인 필요</dd></div>
+      </dl>
+      <div class="vector"><code>CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H</code></div>
+      <details>
+        <summary>References</summary>
+        <ul><li><a href="https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-fmc-javarce-y2NypXwk" target="_blank" rel="noopener">https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-fmc-javarce-y2NypXwk</a></li></ul>
+      </details>
+    </article>
+    <article class="cve-card" id="CVE-2026-20237">
+      <div class="cve-top">
+        <a class="cve-id" href="https://nvd.nist.gov/vuln/detail/CVE-2026-20237" target="_blank" rel="noopener">CVE-2026-20237</a>
+        <span class="score">CVSS 9.1 CRITICAL</span>
+      </div>
+      <p class="desc">As part of Cisco&#x27;s ongoing commitment to proactive security and product quality, the Cisco Identity Services Engine (ISE) and Cisco ISE Passive Identity Connector (ISE-PIC), engineering teams have conducted a comprehensive internal security review. This review resulted in a software hardening release that addresses multiple internally discovered vulnerabilities.
+
+The vulnerabilities tracked by CVE-2026-20237 are related to improper input validation issues that are grouped under the Common Weakness Enumeration (CWE) Pillar CWE-20.</p>
+      <dl>
+        <div><dt>Published</dt><dd>2026-09-16</dd></div>
+        <div><dt>Last Modified</dt><dd>2026-09-16</dd></div>
+        <div><dt>Status</dt><dd>Awaiting Analysis</dd></div>
+        <div><dt>Attack Vector</dt><dd>네트워크</dd></div>
+        <div><dt>Attack Complexity</dt><dd>낮음</dd></div>
+        <div><dt>Privileges</dt><dd>높음</dd></div>
+        <div><dt>User Interaction</dt><dd>없음</dd></div>
+        <div><dt>CWE</dt><dd>CWE-20</dd></div>
+        <div><dt>Affected</dt><dd>NVD CPE 기준 확인 필요</dd></div>
+      </dl>
+      <div class="vector"><code>CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:C/C:H/I:H/A:H</code></div>
+      <details>
+        <summary>References</summary>
+        <ul><li><a href="https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-hardening-ise-XU5EwX5T" target="_blank" rel="noopener">https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-hardening-ise-XU5EwX5T</a></li></ul>
+      </details>
+    </article>
+    <article class="cve-card" id="CVE-2026-20234">
+      <div class="cve-top">
+        <a class="cve-id" href="https://nvd.nist.gov/vuln/detail/CVE-2026-20234" target="_blank" rel="noopener">CVE-2026-20234</a>
+        <span class="score">CVSS 9.9 CRITICAL</span>
+      </div>
+      <p class="desc">As part of Cisco&#x27;s ongoing commitment to proactive security and product quality, the Cisco Identity Services Engine (ISE) and Cisco ISE Passive Identity Connector (ISE-PIC) engineering teams have conducted a comprehensive internal security review. This review resulted in a software hardening release that addresses multiple internally discovered vulnerabilities.
+
+The vulnerabilities tracked by CVE-2026-20234 are related to insufficiently protected credentials issues that are grouped under the Common Weakness Enumeration (CWE) Pillar CWE-522.</p>
+      <dl>
+        <div><dt>Published</dt><dd>2026-09-16</dd></div>
+        <div><dt>Last Modified</dt><dd>2026-09-16</dd></div>
+        <div><dt>Status</dt><dd>Awaiting Analysis</dd></div>
+        <div><dt>Attack Vector</dt><dd>네트워크</dd></div>
+        <div><dt>Attack Complexity</dt><dd>낮음</dd></div>
+        <div><dt>Privileges</dt><dd>낮음</dd></div>
+        <div><dt>User Interaction</dt><dd>없음</dd></div>
+        <div><dt>CWE</dt><dd>CWE-522</dd></div>
+        <div><dt>Affected</dt><dd>NVD CPE 기준 확인 필요</dd></div>
+      </dl>
+      <div class="vector"><code>CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H</code></div>
+      <details>
+        <summary>References</summary>
+        <ul><li><a href="https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-hardening-ise-XU5EwX5T" target="_blank" rel="noopener">https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-hardening-ise-XU5EwX5T</a></li></ul>
+      </details>
+    </article>
+    <article class="cve-card" id="CVE-2026-20211">
+      <div class="cve-top">
+        <a class="cve-id" href="https://nvd.nist.gov/vuln/detail/CVE-2026-20211" target="_blank" rel="noopener">CVE-2026-20211</a>
+        <span class="score">CVSS 9.1 CRITICAL</span>
+      </div>
+      <p class="desc">A vulnerability in Cisco ISE could allow an authenticated, remote attacker to execute arbitrary commands on the underlying operating system of an affected device. To exploit this vulnerability, the attacker must have valid high-privileged administrative credentials.
+
+This vulnerability is due to insecure deserialization of Java objects by the affected software. An attacker could exploit this vulnerability by sending a crafted serialized Java object to an affected device. A successful exploit could allow the attacker to obtain user-level access to the underlying operating system and then elevate privileges to&amp;nbsp;root. In single-node deployments, successful exploitation of this vulnerability could cause the affected ISE node to become unavailable, resulting in a DoS condition. In that condition, endpoints that have not already authenticated would be unable to access the network until the node is restored.</p>
+      <dl>
+        <div><dt>Published</dt><dd>2026-09-16</dd></div>
+        <div><dt>Last Modified</dt><dd>2026-09-16</dd></div>
+        <div><dt>Status</dt><dd>Awaiting Analysis</dd></div>
+        <div><dt>Attack Vector</dt><dd>네트워크</dd></div>
+        <div><dt>Attack Complexity</dt><dd>낮음</dd></div>
+        <div><dt>Privileges</dt><dd>높음</dd></div>
+        <div><dt>User Interaction</dt><dd>없음</dd></div>
+        <div><dt>CWE</dt><dd>CWE-502</dd></div>
+        <div><dt>Affected</dt><dd>NVD CPE 기준 확인 필요</dd></div>
+      </dl>
+      <div class="vector"><code>CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:C/C:H/I:H/A:H</code></div>
+      <details>
+        <summary>References</summary>
+        <ul><li><a href="https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-ise-rce-se7bYU57" target="_blank" rel="noopener">https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-ise-rce-se7bYU57</a></li></ul>
+      </details>
+    </article>
+    <article class="cve-card" id="CVE-2026-20194">
+      <div class="cve-top">
+        <a class="cve-id" href="https://nvd.nist.gov/vuln/detail/CVE-2026-20194" target="_blank" rel="noopener">CVE-2026-20194</a>
+        <span class="score">CVSS 9.1 CRITICAL</span>
+      </div>
+      <p class="desc">As part of Cisco&#x27;s ongoing commitment to proactive security and product quality, the Cisco Identity Services Engine (ISE) and Cisco ISE Passive Identity Connector (ISE-PIC), engineering teams have conducted a comprehensive internal security review. This review resulted in a software hardening release that addresses multiple internally discovered vulnerabilities.
+
+The vulnerabilities tracked by CVE-2026-20194 are related to incorrect resource transfer between spheres that are grouped under the Common Weakness Enumeration (CWE) Pillar CWE-669.</p>
+      <dl>
+        <div><dt>Published</dt><dd>2026-09-16</dd></div>
+        <div><dt>Last Modified</dt><dd>2026-09-16</dd></div>
+        <div><dt>Status</dt><dd>Awaiting Analysis</dd></div>
+        <div><dt>Attack Vector</dt><dd>네트워크</dd></div>
+        <div><dt>Attack Complexity</dt><dd>낮음</dd></div>
+        <div><dt>Privileges</dt><dd>높음</dd></div>
+        <div><dt>User Interaction</dt><dd>없음</dd></div>
+        <div><dt>CWE</dt><dd>CWE-669</dd></div>
+        <div><dt>Affected</dt><dd>NVD CPE 기준 확인 필요</dd></div>
+      </dl>
+      <div class="vector"><code>CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:C/C:H/I:H/A:H</code></div>
+      <details>
+        <summary>References</summary>
+        <ul><li><a href="https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-hardening-ise-XU5EwX5T" target="_blank" rel="noopener">https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-hardening-ise-XU5EwX5T</a></li></ul>
+      </details>
+    </article>
+    <article class="cve-card" id="CVE-2026-20192">
+      <div class="cve-top">
+        <a class="cve-id" href="https://nvd.nist.gov/vuln/detail/CVE-2026-20192" target="_blank" rel="noopener">CVE-2026-20192</a>
+        <span class="score">CVSS 10.0 CRITICAL</span>
+      </div>
+      <p class="desc">As part of Cisco&#x27;s ongoing commitment to proactive security and product quality, the Cisco Identity Services Engine (ISE) and Cisco ISE Passive Identity Connector (ISE-PIC) engineering teams have conducted a comprehensive internal security review. This review resulted in a software hardening release that addresses multiple internally discovered vulnerabilities.
+
+The vulnerabilities tracked by CVE-2026-20192 are related to improper access control issues that are grouped under the Common Weakness Enumeration (CWE) Pillar CWE-284.</p>
+      <dl>
+        <div><dt>Published</dt><dd>2026-09-16</dd></div>
+        <div><dt>Last Modified</dt><dd>2026-09-16</dd></div>
+        <div><dt>Status</dt><dd>Awaiting Analysis</dd></div>
+        <div><dt>Attack Vector</dt><dd>네트워크</dd></div>
+        <div><dt>Attack Complexity</dt><dd>낮음</dd></div>
+        <div><dt>Privileges</dt><dd>없음</dd></div>
+        <div><dt>User Interaction</dt><dd>없음</dd></div>
+        <div><dt>CWE</dt><dd>CWE-284</dd></div>
+        <div><dt>Affected</dt><dd>NVD CPE 기준 확인 필요</dd></div>
+      </dl>
+      <div class="vector"><code>CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:H</code></div>
+      <details>
+        <summary>References</summary>
+        <ul><li><a href="https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-hardening-ise-XU5EwX5T" target="_blank" rel="noopener">https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-hardening-ise-XU5EwX5T</a></li></ul>
+      </details>
+    </article>
+    <article class="cve-card" id="CVE-2026-20176">
+      <div class="cve-top">
+        <a class="cve-id" href="https://nvd.nist.gov/vuln/detail/CVE-2026-20176" target="_blank" rel="noopener">CVE-2026-20176</a>
+        <span class="score">CVSS 9.1 CRITICAL</span>
+      </div>
+      <p class="desc">A vulnerability in Cisco ISE could allow an authenticated, remote attacker to execute arbitrary commands on the underlying operating system of an affected device. To exploit this vulnerability, the attacker must have valid high-privileged administrative credentials.
+
+This vulnerability is due to insufficient validation of user-supplied input. An attacker could exploit this vulnerability by sending a crafted HTTP request to an affected device. A successful exploit could allow the attacker to obtain system-level access to the underlying operating system and then elevate privileges to root. In single-node deployments, successful exploitation of this vulnerability could cause the affected ISE node to become unavailable, resulting in a DoS condition. In that condition, endpoints that have not already authenticated would be unable to access the network until the node is restored.</p>
+      <dl>
+        <div><dt>Published</dt><dd>2026-09-16</dd></div>
+        <div><dt>Last Modified</dt><dd>2026-09-16</dd></div>
+        <div><dt>Status</dt><dd>Awaiting Analysis</dd></div>
+        <div><dt>Attack Vector</dt><dd>네트워크</dd></div>
+        <div><dt>Attack Complexity</dt><dd>낮음</dd></div>
+        <div><dt>Privileges</dt><dd>높음</dd></div>
+        <div><dt>User Interaction</dt><dd>없음</dd></div>
+        <div><dt>CWE</dt><dd>CWE-77</dd></div>
+        <div><dt>Affected</dt><dd>NVD CPE 기준 확인 필요</dd></div>
+      </dl>
+      <div class="vector"><code>CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:C/C:H/I:H/A:H</code></div>
+      <details>
+        <summary>References</summary>
+        <ul><li><a href="https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-ise-rce-se7bYU57" target="_blank" rel="noopener">https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-ise-rce-se7bYU57</a></li></ul>
+      </details>
+    </article>
+    <article class="cve-card" id="CVE-2026-20130">
+      <div class="cve-top">
+        <a class="cve-id" href="https://nvd.nist.gov/vuln/detail/CVE-2026-20130" target="_blank" rel="noopener">CVE-2026-20130</a>
+        <span class="score">CVSS 10.0 CRITICAL</span>
+      </div>
+      <p class="desc">As part of Cisco&#x27;s ongoing commitment to proactive security and product quality, the Cisco Identity Services Engine (ISE) and Cisco ISE Passive Identity Connector (ISE-PIC), engineering teams have conducted a comprehensive internal security review. This review resulted in a software hardening release that addresses multiple internally discovered vulnerabilities.
+
+The vulnerabilities tracked by CVE-2026-20130 are related to improper neutralization of special elements issues that are grouped under the Common Weakness Enumeration (CWE) Pillar CWE-74.</p>
+      <dl>
+        <div><dt>Published</dt><dd>2026-09-16</dd></div>
+        <div><dt>Last Modified</dt><dd>2026-09-16</dd></div>
+        <div><dt>Status</dt><dd>Awaiting Analysis</dd></div>
+        <div><dt>Attack Vector</dt><dd>네트워크</dd></div>
+        <div><dt>Attack Complexity</dt><dd>낮음</dd></div>
+        <div><dt>Privileges</dt><dd>없음</dd></div>
+        <div><dt>User Interaction</dt><dd>없음</dd></div>
+        <div><dt>CWE</dt><dd>CWE-74</dd></div>
+        <div><dt>Affected</dt><dd>NVD CPE 기준 확인 필요</dd></div>
+      </dl>
+      <div class="vector"><code>CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:H</code></div>
+      <details>
+        <summary>References</summary>
+        <ul><li><a href="https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-hardening-ise-XU5EwX5T" target="_blank" rel="noopener">https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-hardening-ise-XU5EwX5T</a></li></ul>
       </details>
     </article>
     <article class="cve-card" id="CVE-2026-14349">
@@ -2854,6 +3501,52 @@ The vulnerabilities tracked by CVE-2026-76441 are related to issues with imprope
       <details>
         <summary>References</summary>
         <ul><li><a href="https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-hardening-esa-dfCrfXkm" target="_blank" rel="noopener">https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-hardening-esa-dfCrfXkm</a></li></ul>
+      </details>
+    </article>
+    <article class="cve-card" id="CVE-2026-65381">
+      <div class="cve-top">
+        <a class="cve-id" href="https://nvd.nist.gov/vuln/detail/CVE-2026-65381" target="_blank" rel="noopener">CVE-2026-65381</a>
+        <span class="score">CVSS 10.0 CRITICAL</span>
+      </div>
+      <p class="desc">A validation issue existed in the entitlement verification. This issue was addressed with improved validation of the process entitlement. This issue is fixed in macOS Golden Gate 27, macOS Sequoia 15.8, macOS Tahoe 26.7. A malicious app may be able to break out of its sandbox.</p>
+      <dl>
+        <div><dt>Published</dt><dd>2026-09-14</dd></div>
+        <div><dt>Last Modified</dt><dd>2026-09-16</dd></div>
+        <div><dt>Status</dt><dd>Analyzed</dd></div>
+        <div><dt>Attack Vector</dt><dd>네트워크</dd></div>
+        <div><dt>Attack Complexity</dt><dd>낮음</dd></div>
+        <div><dt>Privileges</dt><dd>없음</dd></div>
+        <div><dt>User Interaction</dt><dd>없음</dd></div>
+        <div><dt>CWE</dt><dd>CWE-862</dd></div>
+        <div><dt>Affected</dt><dd>apple macos</dd></div>
+      </dl>
+      <div class="vector"><code>CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:H</code></div>
+      <details>
+        <summary>References</summary>
+        <ul><li><a href="https://support.apple.com/en-us/149035" target="_blank" rel="noopener">https://support.apple.com/en-us/149035</a></li><li><a href="https://support.apple.com/en-us/149042" target="_blank" rel="noopener">https://support.apple.com/en-us/149042</a></li><li><a href="https://support.apple.com/en-us/149043" target="_blank" rel="noopener">https://support.apple.com/en-us/149043</a></li></ul>
+      </details>
+    </article>
+    <article class="cve-card" id="CVE-2026-43790">
+      <div class="cve-top">
+        <a class="cve-id" href="https://nvd.nist.gov/vuln/detail/CVE-2026-43790" target="_blank" rel="noopener">CVE-2026-43790</a>
+        <span class="score">CVSS 9.1 CRITICAL</span>
+      </div>
+      <p class="desc">The issue was addressed with improved memory handling. This issue is fixed in macOS Golden Gate 27, macOS Sequoia 15.8, macOS Tahoe 26.7. A remote attacker may be able to cause unexpected system termination or corrupt kernel memory.</p>
+      <dl>
+        <div><dt>Published</dt><dd>2026-09-14</dd></div>
+        <div><dt>Last Modified</dt><dd>2026-09-16</dd></div>
+        <div><dt>Status</dt><dd>Analyzed</dd></div>
+        <div><dt>Attack Vector</dt><dd>네트워크</dd></div>
+        <div><dt>Attack Complexity</dt><dd>낮음</dd></div>
+        <div><dt>Privileges</dt><dd>없음</dd></div>
+        <div><dt>User Interaction</dt><dd>없음</dd></div>
+        <div><dt>CWE</dt><dd>CWE-787</dd></div>
+        <div><dt>Affected</dt><dd>apple macos</dd></div>
+      </dl>
+      <div class="vector"><code>CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:H</code></div>
+      <details>
+        <summary>References</summary>
+        <ul><li><a href="https://support.apple.com/en-us/149035" target="_blank" rel="noopener">https://support.apple.com/en-us/149035</a></li><li><a href="https://support.apple.com/en-us/149042" target="_blank" rel="noopener">https://support.apple.com/en-us/149042</a></li><li><a href="https://support.apple.com/en-us/149043" target="_blank" rel="noopener">https://support.apple.com/en-us/149043</a></li></ul>
       </details>
     </article>
     <article class="cve-card" id="CVE-2026-20353">
