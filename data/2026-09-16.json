@@ -1,0 +1,111 @@
+{
+  "tagline": "글로벌 정보보안 뉴스레터",
+  "title": "보안 브리핑",
+  "date_display": "2026년 9월 16일 수요일",
+  "date_short": "2026.09.16",
+  "sources_line": "The Hacker News · BleepingComputer · SecurityWeek · KrebsOnSecurity · CISA · NCSC UK · Unit 42 · 보안뉴스 · 데일리시큐 · 전자신문",
+  "seo": {
+    "title": "랜섬웨어, 취약점 — 2026.09.16 보안 브리핑",
+    "description": "오늘 주요 취약점·침해 사고·위협 트렌드 요약.",
+    "keywords": "CVE, 랜섬웨어, 취약점, 침해사고, 보안"
+  },
+  "sections": [
+    {
+      "label": "취약점 & 공격",
+      "type": "cards",
+      "items": [
+        {
+          "severity": "critical",
+          "source": "The Hacker News",
+          "headline": "Cisco Secure Email Gateway 취약점(CVE-2026-76461) 악용으로 루트 실행 가능",
+          "url": "https://thehackernews.com/2026/09/cisco-secure-email-gateway-flaw.html",
+          "summary": "Cisco Secure Email Gateway의 심각한 취약점(CVE-2026-76461, CVSS 9.8)이 악용되어 루트 권한을 얻는 공격이 발생했다. CISA가 해당 취약점을 KEV 목록에 추가한 상태이며, 패치가 권장된다."
+        },
+        {
+          "severity": "critical",
+          "source": "The Hacker News",
+          "headline": "LiteSpeed Enterprise 취약점으로 공유 호스팅 서버 루트 권한 획득 가능",
+          "url": "https://thehackernews.com/2026/09/litespeed-enterprise-flaw-could-let-one.html",
+          "summary": "LiteSpeed Enterprise의 취약점으로 공유 호스팅 환경에서 하나의 계정이 서버 전체의 루트 권한을 얻을 수 있다. cPanel은 해당 취약점을 해결하기 위한 패치를 발표했다."
+        },
+        {
+          "severity": "critical",
+          "source": "The Hacker News",
+          "headline": "China-Linked Hackers, Chrome-Windows 제로데이 악용하여 GRIMWEDGE 배포",
+          "url": "https://thehackernews.com/2026/09/china-linked-hackers-exploit-chrome.html",
+          "summary": "중국과 연관된 해커 그룹이 Chrome과 Windows의 제로데이 취약점을 악용해 GRIMWEDGE라는 악성 JavaScript 백도어를 배포했다. Volexity는 해당 공격을 UTA0560으로 추적하고 있다."
+        },
+        {
+          "severity": "high",
+          "source": "The Hacker News",
+          "headline": "Marimo RCE 취약점으로 AWS 자격 증명 유출 및 바스티온 호스트 접근",
+          "url": "https://thehackernews.com/2026/09/human-attacker-exploits-marimo-rce.html",
+          "summary": "Marimo의 원격 코드 실행(RCE) 취약점이 악용되어 AWS 자격 증명을 유출하고 바스티온 호스트에 접근하는 공격이 발생했다. Sysdig은 해당 취약점을 8초 내에 악용할 수 있다고 분석했다."
+        },
+        {
+          "severity": "high",
+          "source": "The Hacker News",
+          "headline": "Gitea RCE 취약점 악용, Red Heron 해커 그룹이 13개 기관 침해",
+          "url": "https://thehackernews.com/2026/09/red-heron-exploits-gitea-rce-to.html",
+          "summary": "Red Heron 해커 그룹이 Gitea의 원격 코드 실행(RCE) 취약점을 악용해 6개 국가에 걸쳐 13개 기관을 침해했다. 해당 취약점은 최근 공개된 것으로, 빠른 패치가 필요하다."
+        },
+        {
+          "severity": "medium",
+          "source": "The Hacker News",
+          "headline": "Telegram Desktop XSS 취약점으로 채팅 기록 유출 가능성",
+          "url": "https://thehackernews.com/2026/09/telegram-desktop-flaw-lets-hidden.html",
+          "summary": "Telegram Desktop의 XSS 취약점으로 악성 스크립트가 채팅 내보내기 파일에 삽입되어 사용자 데이터가 유출될 수 있다. ExPatch는 해당 취약점을 9월 12일 보고했다."
+        }
+      ]
+    },
+    {
+      "label": "침해 사고",
+      "type": "cards",
+      "items": [
+        {
+          "severity": "incident",
+          "source": "SecurityWeek",
+          "headline": "Texas Utility CenterPoint Energy, 해커에 의해 750만 고객 정보 유출",
+          "url": "https://www.securityweek.com/texas-utility-centerpoint-energy-confirms-breach-after-hacker-leaks-data/",
+          "summary": "해커가 CenterPoint Energy의 시스템을 침해해 750만 고객의 정보를 유출했다. 해당 사고로 인해 회사가 보안 점검을 진행 중이다."
+        },
+        {
+          "severity": "incident",
+          "source": "SecurityWeek",
+          "headline": "일본 디지털 에이전시, 24만 명의 개인정보 유출 사고 발생",
+          "url": "https://www.securityweek.com/240000-hit-by-data-breach-at-japans-digital-agency/",
+          "summary": "VPN 제품의 취약점을 악용해 일본 디지털 에이전시의 24만 명의 개인정보가 유출되었다. 해당 사고로 인해 보안 강화가 필요하다."
+        },
+        {
+          "severity": "incident",
+          "source": "SecurityWeek",
+          "headline": "태국 통신사 3BB, MeshCentral 백도어를 통해 해킹",
+          "url": "https://www.securityweek.com/thai-broadband-provider-hacked-via-fortinet-vulnerability/",
+          "summary": "3BB는 MeshCentral 백도어를 통해 해킹되어 내부 시스템에 원격 제어가 가능하게 되었다. Hunt.io는 해당 침해 사고를 발견했다."
+        }
+      ]
+    },
+    {
+      "label": "동향 & 분석",
+      "type": "trends",
+      "items": [
+        {
+          "lead": "AI 기반 공격 증가",
+          "body": "AI 기술이 발전하면서 취약점 발견부터 악용까지의 시간이 줄어들고 있다. 예를 들어, Marimo RCE 취약점은 8초 만에 악용될 수 있었다. 이는 보안 대응의 중요성을 강조한다."
+        },
+        {
+          "lead": "공유 호스팅 환경 취약",
+          "body": "LiteSpeed Enterprise와 같은 공유 호스팅 환경의 취약점은 하나의 계정이 전체 서버를 제어할 수 있게 해, 보안 관리에 대한 재검토가 필요하다."
+        },
+        {
+          "lead": "메신저 앱의 보안 취약점",
+          "body": "Telegram Desktop과 같은 메신저 앱의 XSS 취약점은 사용자 데이터 유출로 이어질 수 있다. 이는 앱 개발자와 사용자 모두의 보안 인식을 높이는 계기가 되어야 한다."
+        },
+        {
+          "lead": "국제적 해킹 그룹의 활동 증가",
+          "body": "중국과 연관된 해커 그룹이 여러 국가를 대상으로 한 공격을 지속하고 있다. 이는 국제 협력과 보안 대응 체계 강화가 필요하다는 점을 시사한다."
+        }
+      ]
+    }
+  ]
+}
