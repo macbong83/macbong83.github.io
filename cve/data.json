@@ -1,5 +1,36 @@
 [
   {
+    "id": "CVE-2026-87796",
+    "published": "2026-09-17",
+    "last_modified": "2026-09-17",
+    "status": "Received",
+    "description": "The Multi Uploader for Gravity Forms plugin for WordPress is vulnerable to Arbitrary File Upload in all versions up to, and including, 1.1.9 via the move_file function. This is due to insufficient file type validation during chunked upload handling. This makes it possible for unauthenticated attackers to upload arbitrary files on the affected site's server which may make remote code execution possible.",
+    "cvss": {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "score": 9.8,
+      "severity": "CRITICAL",
+      "attack_vector": "네트워크",
+      "attack_complexity": "낮음",
+      "privileges_required": "없음",
+      "user_interaction": "없음"
+    },
+    "cwes": [
+      "CWE-434"
+    ],
+    "affected": [],
+    "references": [
+      "https://plugins.trac.wordpress.org/browser/gf-multi-uploader/tags/1.1.9/GFMUAddon.class.php#L125",
+      "https://plugins.trac.wordpress.org/browser/gf-multi-uploader/tags/1.1.9/inc/GFMUHandlePluploader.class.php#L257",
+      "https://plugins.trac.wordpress.org/browser/gf-multi-uploader/tags/1.1.9/inc/GFMU_FileUploader.php#L319",
+      "https://plugins.trac.wordpress.org/browser/gf-multi-uploader/tags/1.1.9/inc/GFMU_FileUploader.php#L322",
+      "https://plugins.trac.wordpress.org/browser/gf-multi-uploader/tags/1.1.9/inc/GFMU_FileUploader.php#L560",
+      "https://www.wordfence.com/threat-intel/vulnerabilities/id/47337bc1-fa3d-470c-9524-859295261017?source=cve"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-87796",
+    "added_at": "2026-09-17T20:00:42+09:00"
+  },
+  {
     "id": "CVE-2026-92805",
     "published": "2026-09-16",
     "last_modified": "2026-09-16",
