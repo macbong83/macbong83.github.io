@@ -1,5 +1,173 @@
 [
   {
+    "id": "CVE-2026-92953",
+    "published": "2026-09-17",
+    "last_modified": "2026-09-17",
+    "status": "Deferred",
+    "description": "vm2 versions from 3.11.0 before 3.11.8 fail to protect host TypedArray and ArrayBuffer prototypes from sandbox mutation. Attackers can use prototype-walking primitives to reach and modify host Uint8Array.prototype, %TypedArray%.prototype, and ArrayBuffer.prototype, causing host-created typed arrays to observe attacker-controlled properties after VM.run() returns.",
+    "cvss": {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:N/I:H/A:H",
+      "score": 10.0,
+      "severity": "CRITICAL",
+      "attack_vector": "네트워크",
+      "attack_complexity": "낮음",
+      "privileges_required": "없음",
+      "user_interaction": "없음"
+    },
+    "cwes": [
+      "CWE-913"
+    ],
+    "affected": [],
+    "references": [
+      "https://github.com/patriksimek/vm2/security/advisories/GHSA-3vgf-8m4q-q4qr",
+      "https://www.vulncheck.com/advisories/vm2-3.11.0-through-3.11.7-prototype-pollution-via-typedarray"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-92953",
+    "added_at": "2026-09-18T08:00:31+09:00"
+  },
+  {
+    "id": "CVE-2026-92948",
+    "published": "2026-09-17",
+    "last_modified": "2026-09-17",
+    "status": "Deferred",
+    "description": "vm2 versions >= 3.9.6 and <= 3.11.6 are affected by a NodeVM builtin allowlist bypass that permits a sandbox escape on Node.js 24 and newer when the embedder explicitly allows the node:test builtin (e.g. require: { builtin: ['node:test'] }). On Node.js 24+, module.builtinModules exposes the scheme-only key node:test, which is not covered by vm2's family-based DANGEROUS_BUILTINS protection, so it is stored in the generic host-passthrough loader. Because requireImpl() in lib/setup-node-sandbox.js strips a single 'node:' prefix before the builtin lookup, sandbox code calling require('node:node:test') resolves to the stored node:test key and receives a readonly proxy to the host module. Calls to node:test.run() are forwarded to the host implementation, which spawns a separate Node process for process-isolated test execution and passes through attacker-controlled execArgv values; supplying --eval=<JavaScript> therefore executes arbitrary JavaScript in an unrestricted host Node process outside the NodeVM sandbox. Fixed in vm2 3.11.7.",
+    "cvss": {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H",
+      "score": 9.9,
+      "severity": "CRITICAL",
+      "attack_vector": "네트워크",
+      "attack_complexity": "낮음",
+      "privileges_required": "낮음",
+      "user_interaction": "없음"
+    },
+    "cwes": [
+      "CWE-693"
+    ],
+    "affected": [],
+    "references": [
+      "https://github.com/patriksimek/vm2/security/advisories/GHSA-qhwx-74w5-xhxq",
+      "https://www.vulncheck.com/advisories/vm2-3.9.6-through-3.11.5-sandbox-escape-via-node-test"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-92948",
+    "added_at": "2026-09-18T08:00:31+09:00"
+  },
+  {
+    "id": "CVE-2026-92944",
+    "published": "2026-09-17",
+    "last_modified": "2026-09-17",
+    "status": "Deferred",
+    "description": "vm2 versions 3.10.2 through 3.11.6 contain a sandbox escape vulnerability on Node.js 26 where Promise.prototype.finally() bypasses vm2's wrapper protections due to a stale PromiseThenLookupChain protector in V8 14.6. Attackers can exploit this by creating an async function that returns a Promise with an attacker-controlled constructor Symbol.species, allowing them to reach the host Function constructor and process object for arbitrary code execution.",
+    "cvss": {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "score": 9.8,
+      "severity": "CRITICAL",
+      "attack_vector": "네트워크",
+      "attack_complexity": "낮음",
+      "privileges_required": "없음",
+      "user_interaction": "없음"
+    },
+    "cwes": [
+      "CWE-693"
+    ],
+    "affected": [],
+    "references": [
+      "https://github.com/patriksimek/vm2/commit/4635ddd85839461c8ad791990023a477efefe7bd",
+      "https://github.com/patriksimek/vm2/commit/7b26e81087ec88c287d9a4812f969d412f32774e",
+      "https://github.com/patriksimek/vm2/security/advisories/GHSA-27g9-p43v-cw3v",
+      "https://www.vulncheck.com/advisories/vm2-3.10.2-through-3.11.6-sandbox-escape-via-promise-protector"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-92944",
+    "added_at": "2026-09-18T08:00:31+09:00"
+  },
+  {
+    "id": "CVE-2026-92938",
+    "published": "2026-09-17",
+    "last_modified": "2026-09-17",
+    "status": "Deferred",
+    "description": "vm2 versions 3.11.3 through 3.11.6 expose Node.js's host node:sqlite module to code running in NodeVM when that builtin is permitted, either explicitly or through builtin: ['*']. The module is wrapped with vm.readonly(), which prevents property assignment but leaves host-authority callables reachable; in addition, the resolver treats any request starting with 'node:' as a core-module request and the runtime strips only one 'node:' prefix, so a sandbox request for 'node:node:sqlite' resolves to the configured node:sqlite entry. Sandboxed code can therefore create an in-memory DatabaseSync with extension loading enabled and call DatabaseSync.loadExtension() on a native library bundled in the untrusted plugin package (path derived from __dirname). SQLite loads the library into the Node.js host process and invokes its native entry point, giving the sandboxed plugin arbitrary native code execution outside the sandbox with the host process's privileges. The issue is fixed in vm2 3.11.7.",
+    "cvss": {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H",
+      "score": 9.9,
+      "severity": "CRITICAL",
+      "attack_vector": "네트워크",
+      "attack_complexity": "낮음",
+      "privileges_required": "낮음",
+      "user_interaction": "없음"
+    },
+    "cwes": [
+      "CWE-693"
+    ],
+    "affected": [],
+    "references": [
+      "https://github.com/patriksimek/vm2/security/advisories/GHSA-6w8r-xxw2-g3hx",
+      "https://www.vulncheck.com/advisories/vm2-3.11.3-through-3.11.6-remote-code-execution-via-node-sqlite"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-92938",
+    "added_at": "2026-09-18T08:00:31+09:00"
+  },
+  {
+    "id": "CVE-2026-92937",
+    "published": "2026-09-17",
+    "last_modified": "2026-09-17",
+    "status": "Deferred",
+    "description": "vm2 3.11.6 is vulnerable to a sandbox escape leading to remote code execution in the host Node.js process. The fix for GHSA-m283-3h24-438v is incomplete: the bridge gate at lib/bridge.js:1624 identity-checks only the direct call target when deciding whether to rebuild/sanitise a rejected host Promise value. Registering the rejection handler through Function.prototype.call or .apply indirection (e.g., p.then.call(p, undefined, cb)) makes the intercepted target host Function.prototype.call, so the sanitiser never runs and the raw host error reaches sandbox code with its own properties intact. If an embedder exposes a host-realm Promise to the sandbox (an async host function bridged via the sandbox option, or a NodeVM external module's async method) and that Promise rejects with an Error carrying a non-primitive own property referencing a host object (for example err.detail = process), untrusted code in the sandbox obtains a fully functional proxy to that host object and can execute arbitrary commands with the privileges of the host process (e.g., e.detail.mainModule.require('child_process').execSync(...)). The direct p.then(undefined, cb), bind, and Reflect.apply forms are correctly sanitised. Fixed in vm2 3.11.7.",
+    "cvss": {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:H",
+      "score": 10.0,
+      "severity": "CRITICAL",
+      "attack_vector": "네트워크",
+      "attack_complexity": "낮음",
+      "privileges_required": "없음",
+      "user_interaction": "없음"
+    },
+    "cwes": [
+      "CWE-94"
+    ],
+    "affected": [],
+    "references": [
+      "https://github.com/patriksimek/vm2/security/advisories/GHSA-647f-g98j-qq25",
+      "https://www.vulncheck.com/advisories/vm2-3.11.6-remote-code-execution-via-promise-call-apply"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-92937",
+    "added_at": "2026-09-18T08:00:31+09:00"
+  },
+  {
+    "id": "CVE-2026-92860",
+    "published": "2026-09-17",
+    "last_modified": "2026-09-17",
+    "status": "Deferred",
+    "description": "A security flaw has been discovered in rcourtman Pulse up to 6.0.4/6.1.0-rc.4. Affected by this issue is the function fmt.Sprintf of the file /api/security/quick-setup of the component Quick Security Setup Handler. The manipulation of the argument Username results in improper input validation. The attack may be performed from remote. Upgrading the affected component is advised.",
+    "cvss": {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:C/C:H/I:H/A:H",
+      "score": 9.1,
+      "severity": "CRITICAL",
+      "attack_vector": "네트워크",
+      "attack_complexity": "낮음",
+      "privileges_required": "높음",
+      "user_interaction": "없음"
+    },
+    "cwes": [
+      "CWE-20"
+    ],
+    "affected": [],
+    "references": [
+      "https://github.com/rcourtman/Pulse/",
+      "https://github.com/rcourtman/Pulse/releases/tag/v6.1.0",
+      "https://github.com/rcourtman/Pulse/security/advisories/GHSA-rr3f-jjrr-3qxv",
+      "https://vuldb.com/cve/CVE-2026-92860",
+      "https://vuldb.com/submit/941807",
+      "https://vuldb.com/vuln/406309"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-92860",
+    "added_at": "2026-09-18T08:00:31+09:00"
+  },
+  {
     "id": "CVE-2026-87796",
     "published": "2026-09-17",
     "last_modified": "2026-09-17",
