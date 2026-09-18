@@ -1,5 +1,162 @@
 [
   {
+    "id": "CVE-2026-93467",
+    "published": "2026-09-18",
+    "last_modified": "2026-09-18",
+    "status": "Received",
+    "description": "The OAKlouds developed by HGiga has a Insecure Deserialization vulnerability. Unauthenticated remote attackers can execute arbitrary code on the server by sending maliciously crafted serialized content.",
+    "cvss": {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "score": 9.8,
+      "severity": "CRITICAL",
+      "attack_vector": "네트워크",
+      "attack_complexity": "낮음",
+      "privileges_required": "없음",
+      "user_interaction": "없음"
+    },
+    "cwes": [
+      "CWE-502"
+    ],
+    "affected": [],
+    "references": [
+      "https://www.twcert.org.tw/en/cp-139-11211-d2aa9-2.html",
+      "https://www.twcert.org.tw/tw/cp-132-11210-11cb0-1.html"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-93467",
+    "added_at": "2026-09-18T20:00:08+09:00"
+  },
+  {
+    "id": "CVE-2026-85878",
+    "published": "2026-09-18",
+    "last_modified": "2026-09-18",
+    "status": "Received",
+    "description": "Improper authorization in Azure Database for PostgreSQL allows an authorized attacker to elevate privileges over a network.",
+    "cvss": {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H",
+      "score": 9.9,
+      "severity": "CRITICAL",
+      "attack_vector": "네트워크",
+      "attack_complexity": "낮음",
+      "privileges_required": "낮음",
+      "user_interaction": "없음"
+    },
+    "cwes": [
+      "CWE-285"
+    ],
+    "affected": [],
+    "references": [
+      "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-85878"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-85878",
+    "added_at": "2026-09-18T20:00:08+09:00"
+  },
+  {
+    "id": "CVE-2026-69843",
+    "published": "2026-09-18",
+    "last_modified": "2026-09-18",
+    "status": "Received",
+    "description": "Authentication bypass by spoofing in Microsoft Fabric allows an unauthorized attacker to elevate privileges over a network.",
+    "cvss": {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:H",
+      "score": 10.0,
+      "severity": "CRITICAL",
+      "attack_vector": "네트워크",
+      "attack_complexity": "낮음",
+      "privileges_required": "없음",
+      "user_interaction": "없음"
+    },
+    "cwes": [
+      "CWE-290"
+    ],
+    "affected": [],
+    "references": [
+      "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-69843"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-69843",
+    "added_at": "2026-09-18T20:00:08+09:00"
+  },
+  {
+    "id": "CVE-2026-62874",
+    "published": "2026-09-18",
+    "last_modified": "2026-09-18",
+    "status": "Received",
+    "description": "Insufficient verification of data authenticity in Azure Billing allows an unauthorized attacker to elevate privileges over a network.",
+    "cvss": {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:L",
+      "score": 10.0,
+      "severity": "CRITICAL",
+      "attack_vector": "네트워크",
+      "attack_complexity": "낮음",
+      "privileges_required": "없음",
+      "user_interaction": "없음"
+    },
+    "cwes": [
+      "CWE-345"
+    ],
+    "affected": [],
+    "references": [
+      "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-62874"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-62874",
+    "added_at": "2026-09-18T20:00:08+09:00"
+  },
+  {
+    "id": "CVE-2026-13684",
+    "published": "2026-09-18",
+    "last_modified": "2026-09-18",
+    "status": "Received",
+    "description": "An improper encoding or escaping of output vulnerability in SCGI in Synology DiskStation Manager (DSM) before 7.2.1-69057-12, 7.2.2-72806-9, 7.3.2-86009-4 and 7.4-90075 allows remote attackers to read or write arbitrary files and conduct denial-of-service attacks.",
+    "cvss": {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "score": 9.8,
+      "severity": "CRITICAL",
+      "attack_vector": "네트워크",
+      "attack_complexity": "낮음",
+      "privileges_required": "없음",
+      "user_interaction": "없음"
+    },
+    "cwes": [
+      "CWE-116"
+    ],
+    "affected": [],
+    "references": [
+      "https://www.synology.com/en-global/security/advisory/Synology_SA_26_13"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-13684",
+    "added_at": "2026-09-18T20:00:08+09:00"
+  },
+  {
+    "id": "CVE-2026-13639",
+    "published": "2026-09-18",
+    "last_modified": "2026-09-18",
+    "status": "Received",
+    "description": "An insufficient entropy vulnerability in login logic in Synology DiskStation Manager (DSM) before 7.2.1-69057-12, 7.2.2-72806-9, 7.3.2-86009-4 and 7.4-90075 allows remote attackers to read or write arbitrary files and conduct denial-of-service attacks.",
+    "cvss": {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "score": 9.8,
+      "severity": "CRITICAL",
+      "attack_vector": "네트워크",
+      "attack_complexity": "낮음",
+      "privileges_required": "없음",
+      "user_interaction": "없음"
+    },
+    "cwes": [
+      "CWE-331"
+    ],
+    "affected": [],
+    "references": [
+      "https://www.synology.com/en-global/security/advisory/Synology_SA_26_13"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-13639",
+    "added_at": "2026-09-18T20:00:08+09:00"
+  },
+  {
     "id": "CVE-2026-92953",
     "published": "2026-09-17",
     "last_modified": "2026-09-17",
@@ -197,6 +354,241 @@
     ],
     "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-87796",
     "added_at": "2026-09-17T20:00:42+09:00"
+  },
+  {
+    "id": "CVE-2026-87701",
+    "published": "2026-09-17",
+    "last_modified": "2026-09-17",
+    "status": "Received",
+    "description": "Improper neutralization of special elements in output used by a downstream component ('injection') in Azure Cosmos DB allows an authorized attacker to elevate privileges over a network.",
+    "cvss": {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:N",
+      "score": 9.6,
+      "severity": "CRITICAL",
+      "attack_vector": "네트워크",
+      "attack_complexity": "낮음",
+      "privileges_required": "낮음",
+      "user_interaction": "없음"
+    },
+    "cwes": [
+      "CWE-74"
+    ],
+    "affected": [],
+    "references": [
+      "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-87701"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-87701",
+    "added_at": "2026-09-18T20:00:08+09:00"
+  },
+  {
+    "id": "CVE-2026-85889",
+    "published": "2026-09-17",
+    "last_modified": "2026-09-17",
+    "status": "Received",
+    "description": "Missing authentication for critical function in Azure AI Foundry allows an unauthorized attacker to elevate privileges over a network.",
+    "cvss": {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:H",
+      "score": 10.0,
+      "severity": "CRITICAL",
+      "attack_vector": "네트워크",
+      "attack_complexity": "낮음",
+      "privileges_required": "없음",
+      "user_interaction": "없음"
+    },
+    "cwes": [
+      "CWE-306"
+    ],
+    "affected": [],
+    "references": [
+      "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-85889"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-85889",
+    "added_at": "2026-09-18T20:00:08+09:00"
+  },
+  {
+    "id": "CVE-2026-85885",
+    "published": "2026-09-17",
+    "last_modified": "2026-09-17",
+    "status": "Received",
+    "description": "Improper neutralization of special elements used in a command ('command injection') in M365 Copilot allows an authorized attacker to elevate privileges over a network.",
+    "cvss": {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H",
+      "score": 9.9,
+      "severity": "CRITICAL",
+      "attack_vector": "네트워크",
+      "attack_complexity": "낮음",
+      "privileges_required": "낮음",
+      "user_interaction": "없음"
+    },
+    "cwes": [
+      "CWE-77"
+    ],
+    "affected": [],
+    "references": [
+      "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-85885"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-85885",
+    "added_at": "2026-09-18T20:00:08+09:00"
+  },
+  {
+    "id": "CVE-2026-83944",
+    "published": "2026-09-17",
+    "last_modified": "2026-09-17",
+    "status": "Received",
+    "description": "Improper access control in Azure Logic Apps allows an unauthorized attacker to elevate privileges over a network.",
+    "cvss": {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:N",
+      "score": 10.0,
+      "severity": "CRITICAL",
+      "attack_vector": "네트워크",
+      "attack_complexity": "낮음",
+      "privileges_required": "없음",
+      "user_interaction": "없음"
+    },
+    "cwes": [
+      "CWE-284"
+    ],
+    "affected": [],
+    "references": [
+      "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-83944"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-83944",
+    "added_at": "2026-09-18T20:00:08+09:00"
+  },
+  {
+    "id": "CVE-2026-77903",
+    "published": "2026-09-17",
+    "last_modified": "2026-09-17",
+    "status": "Received",
+    "description": "Authentication bypass by spoofing in Microsoft Dataverse allows an unauthorized attacker to elevate privileges over a network.",
+    "cvss": {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:C/C:H/I:H/A:H",
+      "score": 9.0,
+      "severity": "CRITICAL",
+      "attack_vector": "네트워크",
+      "attack_complexity": "높음",
+      "privileges_required": "없음",
+      "user_interaction": "없음"
+    },
+    "cwes": [
+      "CWE-290"
+    ],
+    "affected": [],
+    "references": [
+      "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-77903"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-77903",
+    "added_at": "2026-09-18T20:00:08+09:00"
+  },
+  {
+    "id": "CVE-2026-70200",
+    "published": "2026-09-17",
+    "last_modified": "2026-09-17",
+    "status": "Received",
+    "description": "Improper limitation of a pathname to a restricted directory ('path traversal') in Azure Logic Apps allows an unauthorized attacker to elevate privileges over a network.",
+    "cvss": {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:N",
+      "score": 10.0,
+      "severity": "CRITICAL",
+      "attack_vector": "네트워크",
+      "attack_complexity": "낮음",
+      "privileges_required": "없음",
+      "user_interaction": "없음"
+    },
+    "cwes": [
+      "CWE-22",
+      "CWE-285"
+    ],
+    "affected": [],
+    "references": [
+      "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-70200"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-70200",
+    "added_at": "2026-09-18T20:00:08+09:00"
+  },
+  {
+    "id": "CVE-2026-70009",
+    "published": "2026-09-17",
+    "last_modified": "2026-09-17",
+    "status": "Received",
+    "description": "Improper limitation of a pathname to a restricted directory ('path traversal') in Azure Arc allows an unauthorized attacker to elevate privileges over a network.",
+    "cvss": {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:L/I:H/A:N",
+      "score": 9.3,
+      "severity": "CRITICAL",
+      "attack_vector": "네트워크",
+      "attack_complexity": "낮음",
+      "privileges_required": "없음",
+      "user_interaction": "없음"
+    },
+    "cwes": [
+      "CWE-22"
+    ],
+    "affected": [],
+    "references": [
+      "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-70009"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-70009",
+    "added_at": "2026-09-18T20:00:08+09:00"
+  },
+  {
+    "id": "CVE-2026-69865",
+    "published": "2026-09-17",
+    "last_modified": "2026-09-17",
+    "status": "Received",
+    "description": "Authorization bypass through user-controlled key in Microsoft Container Registry allows an unauthorized attacker to elevate privileges over a network.",
+    "cvss": {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:N",
+      "score": 10.0,
+      "severity": "CRITICAL",
+      "attack_vector": "네트워크",
+      "attack_complexity": "낮음",
+      "privileges_required": "없음",
+      "user_interaction": "없음"
+    },
+    "cwes": [
+      "CWE-639"
+    ],
+    "affected": [],
+    "references": [
+      "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-69865"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-69865",
+    "added_at": "2026-09-18T20:00:08+09:00"
+  },
+  {
+    "id": "CVE-2026-69399",
+    "published": "2026-09-17",
+    "last_modified": "2026-09-17",
+    "status": "Received",
+    "description": "Azure Arc Elevation of Privilege Vulnerability",
+    "cvss": {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:H",
+      "score": 10.0,
+      "severity": "CRITICAL",
+      "attack_vector": "네트워크",
+      "attack_complexity": "낮음",
+      "privileges_required": "없음",
+      "user_interaction": "없음"
+    },
+    "cwes": [
+      "CWE-441"
+    ],
+    "affected": [],
+    "references": [
+      "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-69399"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-69399",
+    "added_at": "2026-09-18T20:00:08+09:00"
   },
   {
     "id": "CVE-2026-92805",
