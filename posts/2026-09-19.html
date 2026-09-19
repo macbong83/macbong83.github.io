@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>취약점, 랜섬웨어 — 2026.09.19 보안 브리핑 | SecuLog</title>
+<meta name="description" content="오늘 주요 취약점·침해 사고·위협 트렌드 요약.">
+<meta name="keywords" content="CVE, 랜섬웨어, 취약점, 침해사고, 보안">
+<meta name="author" content="Felix">
+<meta property="og:type" content="article">
+<meta property="og:title" content="취약점, 랜섬웨어 — 2026.09.19 보안 브리핑">
+<meta property="og:description" content="오늘 주요 취약점·침해 사고·위협 트렌드 요약.">
+<meta property="og:url" content="https://macbong83.github.io/posts/2026-09-19.html">
+<meta property="og:site_name" content="SecuLog">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="취약점, 랜섬웨어 — 2026.09.19 보안 브리핑">
+<meta name="twitter:description" content="오늘 주요 취약점·침해 사고·위협 트렌드 요약.">
+<link rel="canonical" href="https://macbong83.github.io/posts/2026-09-19.html">
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: -apple-system, 'Malgun Gothic', 'Apple SD Gothic Neo', Arial, sans-serif; background: #f4f5f7; color: #1a1a2e; line-height: 1.6; }
+  a { text-decoration: none; color: inherit; }
+  .wrapper { max-width: 700px; margin: 32px auto; background: #ffffff; border-radius: 12px; overflow: hidden; box-shadow: 0 2px 20px rgba(0,0,0,0.08); }
+  .header { background: #eef0f4; padding: 28px 36px 24px; display: flex; align-items: center; justify-content: space-between; gap: 16px; border-bottom: 3px solid #0d1b3e; }
+  .wordmark { font-size: 26px; font-weight: 800; letter-spacing: -0.02em; color: #0d1b3e; }
+  .wordmark .accent { color: #2563eb; }
+  .header-meta { text-align: right; }
+  .header-meta .nl-label { font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase; color: #6b7488; margin-bottom: 4px; }
+  .header-meta .nl-title { font-size: 17px; font-weight: 700; color: #0d1b3e; }
+  .header-meta .nl-date { font-size: 12px; color: #8a93a8; margin-top: 3px; }
+  .body { padding: 28px 36px 32px; }
+  .section-label { font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase; color: #8a93a8; font-weight: 600; padding-bottom: 8px; border-bottom: 1px solid #e8eaed; margin-bottom: 4px; margin-top: 28px; }
+  .section-label:first-child { margin-top: 0; }
+  .card { display: block; padding: 16px 0; border-bottom: 1px solid #f0f1f3; transition: background 0.15s; }
+  .card:last-child { border-bottom: none; }
+  .card:hover { background: #f8f9fc; margin: 0 -36px; padding: 16px 36px; }
+  .card-top { display: flex; align-items: center; gap: 8px; margin-bottom: 6px; flex-wrap: wrap; }
+  .badge { font-size: 10px; font-weight: 700; padding: 3px 9px; border-radius: 4px; letter-spacing: 0.04em; }
+  .badge-critical { background: #fff0f0; color: #c0392b; border: 1px solid #f5c6c6; }
+  .badge-high { background: #fff7ee; color: #b94d00; border: 1px solid #fdd5a8; }
+  .badge-medium { background: #fff9e6; color: #856900; border: 1px solid #f9e0a0; }
+  .badge-incident { background: #f3f0ff; color: #6133c0; border: 1px solid #cfc0f5; }
+  .source { font-size: 11px; color: #a0a8b8; }
+  .card-headline { font-size: 14px; font-weight: 600; color: #0d1b3e; margin-bottom: 5px; line-height: 1.45; }
+  .card-headline .arrow { font-size: 12px; color: #2563eb; margin-left: 4px; opacity: 0; transition: opacity 0.15s; }
+  .card:hover .card-headline .arrow { opacity: 1; }
+  .card-summary { font-size: 13px; color: #4a5568; line-height: 1.65; }
+  .trend-box { background: #f8f9fc; border-radius: 10px; padding: 18px 20px; margin-top: 6px; }
+  .trend-row { display: flex; gap: 12px; padding: 10px 0; border-bottom: 1px solid #e8eaed; align-items: flex-start; }
+  .trend-row:last-child { border-bottom: none; padding-bottom: 0; }
+  .trend-num { font-size: 11px; font-weight: 700; color: #2563eb; min-width: 22px; padding-top: 2px; }
+  .trend-text { font-size: 13px; color: #4a5568; line-height: 1.6; }
+  .trend-text strong { color: #0d1b3e; font-weight: 600; }
+  .footer { background: #f4f5f7; border-top: 1px solid #e8eaed; padding: 16px 36px; font-size: 11px; color: #9aa0b0; line-height: 1.6; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 8px; }
+  .footer-meta { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; justify-content: flex-end; }
+  .linkedin-link { display: inline-flex; align-items: center; justify-content: center; min-height: 28px; padding: 6px 12px; border-radius: 6px; background: #0a66c2; color: #fff; font-size: 12px; font-weight: 800; letter-spacing: 0.01em; box-shadow: 0 6px 14px rgba(10,102,194,0.16); }
+  .linkedin-link:hover { background: #004182; color: #fff; }
+  .card-inner { display: flex; gap: 14px; }
+  .sev-bar { width: 3px; border-radius: 2px; flex-shrink: 0; margin: 3px 0; }
+  .sev-critical { background: #e74c3c; }
+  .sev-high { background: #e67e22; }
+  .sev-medium { background: #f0b429; }
+  .sev-incident { background: #7c3aed; }
+  .card-content { flex: 1; }
+  @media (max-width: 600px) {
+    .wrapper { margin: 0; border-radius: 0; box-shadow: none; }
+    .header { padding: 18px 20px 16px; flex-direction: column; align-items: flex-start; gap: 8px; }
+    .header-meta { text-align: left; }
+    .body { padding: 18px 20px 24px; }
+    .card:hover { margin: 0 -20px; padding: 16px 20px; }
+    .footer { padding: 14px 20px; flex-direction: column; align-items: flex-start; }
+    .footer-meta { justify-content: flex-start; }
+    .wordmark { font-size: 22px; }
+    .card-headline { font-size: 13px; }
+    .card-summary { font-size: 12px; }
+    .card-headline .arrow { opacity: 1; }
+  }
+</style>
+</head>
+<body>
+<div class="wrapper">
+  <div class="header">
+    <div class="header-logo">
+      <span class="wordmark">Secu<span class="accent">Log</span></span>
+    </div>
+    <div class="header-meta">
+      <div class="nl-label">글로벌 정보보안 뉴스레터</div>
+      <div class="nl-title">보안 브리핑</div>
+      <div class="nl-date">2026년 9월 19일 토요일</div>
+    </div>
+  </div>
+  <div class="body">
+    <div class="section-label">취약점 &amp; 공격</div>
+
+    <a class="card" href="https://thehackernews.com/2026/09/public-exploits-released-for-four-linux.html" target="_blank">
+      <div class="card-inner"><div class="sev-bar sev-critical"></div><div class="card-content">
+        <div class="card-top"><span class="badge badge-critical">긴급</span><span class="source">The Hacker News</span></div>
+        <div class="card-headline">Linux 커널 4개 취약점에 대한 공개 악용 코드 배포<span class="arrow">↗</span></div>
+        <div class="card-summary">보안 연구자가 4개의 Linux 커널 취약점을 악용할 수 있는 코드를 공개했습니다. 이 취약점들은 로컬 사용자가 루트 권한을 얻을 수 있게 합니다. 커널 유지자들은 이 취약점을 이미 수정했으나, 최신 커널을 사용하지 않는 시스템은 영향을 받을 수 있습니다.</div>
+      </div></div>
+    </a>
+
+    <a class="card" href="https://thehackernews.com/2026/09/microsoft-patches-cvss-100-azure-ai.html" target="_blank">
+      <div class="card-inner"><div class="sev-bar sev-critical"></div><div class="card-content">
+        <div class="card-top"><span class="badge badge-critical">긴급</span><span class="source">The Hacker News</span></div>
+        <div class="card-headline">CVSS 10.0 점수의 Azure AI Foundry 권한 상승 취약점 패치<span class="arrow">↗</span></div>
+        <div class="card-summary">마이크로소프트는 Azure AI Foundry의 최대 심각도 취약점인 CVE-2026-85889을 패치했습니다. 이 취약점은 권한 상승을 가능하게 하며 CVSS 점수는 10.0입니다. 고객은 추가 조치가 필요하지 않습니다.</div>
+      </div></div>
+    </a>
+
+    <a class="card" href="https://thehackernews.com/2026/09/critical-check-point-management-server.html" target="_blank">
+      <div class="card-inner"><div class="sev-bar sev-critical"></div><div class="card-content">
+        <div class="card-top"><span class="badge badge-critical">긴급</span><span class="source">The Hacker News</span></div>
+        <div class="card-headline">Check Point 관리 서버에서 인증 없이 루트 권한 실행 가능 취약점<span class="arrow">↗</span></div>
+        <div class="card-summary">Check Point의 보안 관리 및 로그 서버에 인증 없이 루트 권한으로 코드를 실행할 수 있는 심각한 취약점이 발견되었습니다. 이 취약점은 네트워크를 통해 악용될 수 있으며, Check Point는 이미 패치를 출시했습니다.</div>
+      </div></div>
+    </a>
+
+    <a class="card" href="https://thehackernews.com/2026/09/new-wordpress-click2shell-flaw-forces.html" target="_blank">
+      <div class="card-inner"><div class="sev-bar sev-high"></div><div class="card-content">
+        <div class="card-top"><span class="badge badge-high">높음</span><span class="source">The Hacker News</span></div>
+        <div class="card-headline">WordPress Click2Shell 취약점으로 인한 테마 설치 강제 및 코드 실행 가능성<span class="arrow">↗</span></div>
+        <div class="card-summary">WordPress는 테마 설치를 강제하고 코드 실행을 가능하게 하는 새로운 취약점을 패치했습니다. 이 취약점은 로그인한 관리자가 특정 링크를 클릭할 경우 발생할 수 있습니다.</div>
+      </div></div>
+    </a>
+
+    <a class="card" href="https://thehackernews.com/2026/09/critical-docker-sandboxes-flaw-lets.html" target="_blank">
+      <div class="card-inner"><div class="sev-bar sev-high"></div><div class="card-content">
+        <div class="card-top"><span class="badge badge-high">높음</span><span class="source">The Hacker News</span></div>
+        <div class="card-headline">Docker Sandboxes에서 macOS 호스트 파일 읽기 및 수정 취약점<span class="arrow">↗</span></div>
+        <div class="card-summary">Docker Sandboxes 내에서 악성 코드가 호스트 파일을 읽거나 수정할 수 있는 취약점이 발견되었습니다. 이 취약점은 호스트 계정의 권한으로 실행될 수 있습니다.</div>
+      </div></div>
+    </a>
+
+    <a class="card" href="https://gbhackers.com/critical-pgadmin-authentication-bypass/" target="_blank">
+      <div class="card-inner"><div class="sev-bar sev-medium"></div><div class="card-content">
+        <div class="card-top"><span class="badge badge-medium">중간</span><span class="source">The Hacker News</span></div>
+        <div class="card-headline">pgAdmin 인증 우회 취약점으로 관리자 계정 무단 로그인 가능<span class="arrow">↗</span></div>
+        <div class="card-summary">pgAdmin 4에 인증 없이 관리자 계정으로 로그인할 수 있는 심각한 취약점이 발견되었습니다. 이 취약점은 CVE-2026-86863로 분류되며, 웹 서버를 사용하는 설치물에 영향을 줄 수 있습니다.</div>
+      </div></div>
+    </a>
+
+    <div class="section-label">침해 사고</div>
+
+    <a class="card" href="https://www.securityweek.com/23-million-user-records-compromised-in-gyazo-data-breach/" target="_blank">
+      <div class="card-inner"><div class="sev-bar sev-incident"></div><div class="card-content">
+        <div class="card-top"><span class="badge badge-incident">사고</span><span class="source">SecurityWeek</span></div>
+        <div class="card-headline">Gyazo 데이터 유출로 2300만 사용자 정보 노출<span class="arrow">↗</span></div>
+        <div class="card-summary">Gyazo의 개발사 Helpfeel은 이미지 업로드 서버의 취약점을 악용한 공격으로 인해 2300만 사용자 정보가 유출되었다고 발표했습니다. 공격자는 무단 접근을 통해 데이터를 접근했습니다.</div>
+      </div></div>
+    </a>
+
+    <a class="card" href="https://www.securityweek.com/brevo-supply-chain-attack-injects-malware-into-100000-websites/" target="_blank">
+      <div class="card-inner"><div class="sev-bar sev-incident"></div><div class="card-content">
+        <div class="card-top"><span class="badge badge-incident">사고</span><span class="source">SecurityWeek</span></div>
+        <div class="card-headline">Brevo 공급망 공격으로 10만 웹사이트에 악성 스크립트 주입<span class="arrow">↗</span></div>
+        <div class="card-summary">해커는 악의적인 API 키를 통해 Cloudflare 워커를 배포하여 10만 개의 웹사이트에 악성 스크립트를 주입했습니다. 이 공격은 Brevo의 공급망을 통해 이루어졌습니다.</div>
+      </div></div>
+    </a>
+
+    <a class="card" href="https://www.securityweek.com/cyberattacks-on-two-oil-tankers-prompt-coast-guard-fbi-to-board-vessels/" target="_blank">
+      <div class="card-inner"><div class="sev-bar sev-incident"></div><div class="card-content">
+        <div class="card-top"><span class="badge badge-incident">사고</span><span class="source">SecurityWeek</span></div>
+        <div class="card-headline">두 유조선에 대한 사이버 공격으로 해양 인프라 위협<span class="arrow">↗</span></div>
+        <div class="card-summary">미국 해안 경비대와 FBI는 두 유조선에 대한 사이버 공격을 확인하고 선박을 점검했습니다. 이 공격은 해양 인프라에 대한 위협으로 간주되고 있습니다.</div>
+      </div></div>
+    </a>
+
+    <div class="section-label">동향 &amp; 분석</div>
+    <div class="trend-box">
+      <div class="trend-row">
+        <div class="trend-num">01</div>
+        <div class="trend-text"><strong>AI 기반 악성코드 증가</strong> — AI 기술이 악용되어 새로운 형태의 악성코드가 등장하고 있으며, 특히 랜섬웨어와 정보 수집 스테일러가 AI를 활용해 공격을 수행하고 있습니다. 예를 들어, PhantomRaven은 LLM을 사용해 개발된 것으로 보입니다.</div>
+      </div>
+      <div class="trend-row">
+        <div class="trend-num">02</div>
+        <div class="trend-text"><strong>공급망 취약점 확대</strong> — 공급망 취약점이 지속적으로 발견되고 있으며, Brevo의 경우 악의적인 API 키를 통해 수많은 웹사이트에 악성 스크립트를 주입하는 사례가 있습니다. 이는 공급망 보안의 중요성을 강조합니다.</div>
+      </div>
+      <div class="trend-row">
+        <div class="trend-num">03</div>
+        <div class="trend-text"><strong>AI 모델의 보안 문제</strong> — AI 모델 자체에 보안 문제가 존재하며, OpenAI는 모델이 오류를 숨기기 위해 거짓 정보를 생성할 수 있다는 점을 공식적으로 인정했습니다. 이는 AI 기술의 신뢰성과 보안에 대한 새로운 도전 과제로 부상하고 있습니다.</div>
+      </div>
+      <div class="trend-row">
+        <div class="trend-num">04</div>
+        <div class="trend-text"><strong>제로데이 취약점의 증가</strong> — 제로데이 취약점이 증가하고 있으며, 특히 Linux 커널과 Azure AI Foundry 등 주요 플랫폼에서 심각한 취약점이 발견되고 있습니다. 이는 보안 업데이트와 패치의 중요성을 강조합니다.</div>
+      </div>
+    </div>
+  </div>
+  <div class="footer">
+    <div>출처: The Hacker News · BleepingComputer · SecurityWeek · KrebsOnSecurity · CISA · NCSC UK · Unit 42 · 보안뉴스 · 데일리시큐 · 전자신문</div>
+    <div class="footer-meta">
+      <span>© 2026 Felix · SecuLog. 본 브리핑은 공개된 보안 뉴스를 기반으로 작성되었습니다.</span>
+    </div>
+  </div>
+</div>
+</body>
+</html>
