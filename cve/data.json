@@ -1,5 +1,32 @@
 [
   {
+    "id": "CVE-2026-93985",
+    "published": "2026-09-19",
+    "last_modified": "2026-09-19",
+    "status": "Received",
+    "description": "OpenPanel js-runtime through commit bad75bdd contains a sandbox escape vulnerability in the JavaScript webhook template validator that fails to block computed member access to constructor chains. Attackers with project write access can create webhook templates using computed property notation to access Function constructor and execute arbitrary code in the worker process.",
+    "cvss": {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H",
+      "score": 9.9,
+      "severity": "CRITICAL",
+      "attack_vector": "네트워크",
+      "attack_complexity": "낮음",
+      "privileges_required": "낮음",
+      "user_interaction": "없음"
+    },
+    "cwes": [
+      "CWE-94"
+    ],
+    "affected": [],
+    "references": [
+      "https://github.com/Openpanel-dev/openpanel/security/advisories/GHSA-6f7h-cvp6-w9w5",
+      "https://www.vulncheck.com/advisories/openpanel-js-runtime-javascript-template-sandbox-escape-rce"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-93985",
+    "added_at": "2026-09-20T08:00:11+09:00"
+  },
+  {
     "id": "CVE-2026-93742",
     "published": "2026-09-19",
     "last_modified": "2026-09-19",
