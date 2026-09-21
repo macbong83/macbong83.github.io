@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>2026년 9월 보안 벤더 동향 및 주요 보안 이슈 | SecuLog</title>
+<meta name="description" content="2026년 9월 주요 보안 벤더들의 블로그 포스트를 바탕으로 한 보안 동향 분석 및 주요 이슈 정리.">
+<meta name="keywords" content="보안 벤더, 클라우드 보안, AI 위협, 랜섬웨어, 다크웹, 자동화 보안, 실시간 대응, 보안 패치, 위협 인텔리전스, 보안 운영">
+<meta property="og:type" content="article">
+<meta property="og:title" content="2026년 9월 보안 벤더 동향 및 주요 보안 이슈">
+<meta property="og:description" content="2026년 9월 주요 보안 벤더들의 블로그 포스트를 바탕으로 한 보안 동향 분석 및 주요 이슈 정리.">
+<meta property="og:url" content="https://macbong83.github.io/posts/vendor-weekly-2026-09-21.html">
+<meta property="og:site_name" content="SecuLog">
+<link rel="canonical" href="https://macbong83.github.io/posts/vendor-weekly-2026-09-21.html">
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: -apple-system,'Malgun Gothic','Apple SD Gothic Neo',Arial,sans-serif; background:#f4f5f7; color:#1a1a2e; line-height:1.6; }
+  a { text-decoration:none; color:inherit; }
+  .wrapper { max-width:700px; margin:32px auto; background:#fff; border-radius:12px; overflow:hidden; box-shadow:0 2px 20px rgba(0,0,0,0.08); }
+  .header { background:#0d1b3e; padding:28px 36px 24px; border-bottom:3px solid #2563eb; }
+  .wordmark { font-size:26px; font-weight:800; color:#fff; letter-spacing:-0.02em; }
+  .wordmark .accent { color:#60a5fa; }
+  .header-meta { margin-top:10px; }
+  .nl-label { font-size:10px; letter-spacing:0.1em; text-transform:uppercase; color:#64748b; }
+  .nl-title { font-size:19px; font-weight:700; color:#fff; margin-top:4px; }
+  .nl-date { font-size:12px; color:#94a3b8; margin-top:3px; }
+  .summary-box { background:#f0f7ff; border-left:4px solid #2563eb; padding:16px 20px; margin:24px 36px 0; border-radius:0 8px 8px 0; font-size:13px; color:#1e3a5f; line-height:1.7; }
+  .body { padding:28px 36px 32px; }
+  .section-label { font-size:10px; letter-spacing:0.1em; text-transform:uppercase; color:#8a93a8; font-weight:600; padding-bottom:8px; border-bottom:1px solid #e8eaed; margin-bottom:4px; margin-top:28px; }
+  .section-label:first-child { margin-top:0; }
+  .card { display:block; padding:16px 0; border-bottom:1px solid #f0f1f3; transition:background 0.15s; }
+  .card:last-child { border-bottom:none; }
+  .card:hover { background:#f8f9fc; margin:0 -36px; padding:16px 36px; }
+  .card-inner { display:flex; gap:14px; }
+  .sev-bar { width:3px; border-radius:2px; flex-shrink:0; margin:3px 0; }
+  .sev-vendor { background:#0891b2; }
+  .card-content { flex:1; }
+  .card-top { display:flex; align-items:center; gap:8px; margin-bottom:6px; flex-wrap:wrap; }
+  .badge { font-size:10px; font-weight:700; padding:3px 9px; border-radius:4px; }
+  .badge-vendor { background:#e0f2fe; color:#0369a1; border:1px solid #bae6fd; }
+  .card-headline { font-size:14px; font-weight:600; color:#0d1b3e; margin-bottom:5px; line-height:1.45; }
+  .card-headline .arrow { font-size:12px; color:#2563eb; margin-left:4px; opacity:0; transition:opacity 0.15s; }
+  .card:hover .card-headline .arrow { opacity:1; }
+  .card-summary { font-size:13px; color:#4a5568; line-height:1.65; }
+  .trend-box { background:#f8f9fc; border-radius:10px; padding:18px 20px; margin-top:6px; }
+  .trend-row { display:flex; gap:12px; padding:10px 0; border-bottom:1px solid #e8eaed; align-items:flex-start; }
+  .trend-row:last-child { border-bottom:none; padding-bottom:0; }
+  .trend-num { font-size:11px; font-weight:700; color:#2563eb; min-width:22px; padding-top:2px; }
+  .trend-text { font-size:13px; color:#4a5568; line-height:1.6; }
+  .trend-text strong { color:#0d1b3e; font-weight:600; }
+  .footer { background:#f4f5f7; border-top:1px solid #e8eaed; padding:16px 36px; font-size:11px; color:#9aa0b0; }
+  @media(max-width:600px){
+    .wrapper{margin:0;border-radius:0;}
+    .header{padding:18px 20px;}
+    .body{padding:18px 20px 24px;}
+    .summary-box{margin:16px 20px 0;}
+    .card:hover{margin:0 -20px;padding:16px 20px;}
+    .footer{padding:14px 20px;}
+  }
+</style>
+</head>
+<body>
+<div class="wrapper">
+  <div class="header">
+    <div class="wordmark">Secu<span class="accent">Log</span></div>
+    <div class="header-meta">
+      <div class="nl-label">글로벌 보안 벤더 주간 동향</div>
+      <div class="nl-title">이번 주 보안 벤더 동향</div>
+      <div class="nl-date">2026-09-15 ~ 2026-09-21</div>
+    </div>
+  </div>
+  <div class="summary-box">이번 주 보안 벤더들은 클라우드 보안, AI 위협, 랜섬웨어, 다크웹 동향 등 다양한 주제를 다루며, 보안 환경의 복잡성과 위협의 진화를 강조했다. 특히 AI 기반 공격과 자동화된 보안 대응의 중요성이 두드러졌다.</div>
+  <div class="body">
+    <div class="section-label">이번 주 주요 포스트</div>
+    
+    <a class="card" href="https://unit42.paloaltonetworks.com/behavioral-clustering-map-to-cloud-identities/" target="_blank">
+      <div class="card-inner"><div class="sev-bar sev-vendor"></div><div class="card-content">
+        <div class="card-top"><span class="badge badge-vendor">Palo Alto</span></div>
+        <div class="card-headline">클라우드 정체성 분석을 위한 행동 클러스터링 모델<span class="arrow">↗</span></div>
+        <div class="card-summary">Palo Alto는 클라우드 정체성을 분석하기 위한 행동 클러스터링 모델을 제시하며, 이는 기존의 SQL 쿼리 기반으로도 위협을 지속적으로 탐지할 수 있음을 보여준다. 이는 클라우드 환경에서의 실시간 보안 모니터링의 필요성을 강조한다.</div>
+      </div></div>
+    </a>
+    <a class="card" href="https://asec.ahnlab.com/ko/95384/" target="_blank">
+      <div class="card-inner"><div class="sev-bar sev-vendor"></div><div class="card-content">
+        <div class="card-top"><span class="badge badge-vendor">AhnLab</span></div>
+        <div class="card-headline">다크웹 침해사고 동향 보고서<span class="arrow">↗</span></div>
+        <div class="card-summary">AhnLab은 다크웹에서 데이터베이스 유출 및 내부 데이터 판매가 활발하게 이루어지고 있음을 보고했다. 이는 조직이 내부 보안 정책을 강화하고, 데이터 유출 방지를 위한 모니터링을 확대해야 함을 시사한다.</div>
+      </div></div>
+    </a>
+    <a class="card" href="https://blog.checkpoint.com/security/fake-voicemail-transcript-emails-target-7800-organizations-in-large-scale-credential-phishing/" target="_blank">
+      <div class="card-inner"><div class="sev-bar sev-vendor"></div><div class="card-content">
+        <div class="card-top"><span class="badge badge-vendor">Check Point</span></div>
+        <div class="card-headline">대규모 자격 인증 피싱 공격 분석<span class="arrow">↗</span></div>
+        <div class="card-summary">Check Point는 자동화된 음성 메시지 전사 기능을 악용한 대규모 자격 인증 피싱 공격을 분석했다. 이는 기존의 기술을 악용한 공격이 증가하고 있으며, 사용자 교육과 실시간 탐지 기술이 필수적임을 보여준다.</div>
+      </div></div>
+    </a>
+    <a class="card" href="https://www.tenable.com/blog/oracle-september-2026-critical-security-patch-update-addresses-672-cves" target="_blank">
+      <div class="card-inner"><div class="sev-bar sev-vendor"></div><div class="card-content">
+        <div class="card-top"><span class="badge badge-vendor">Tenable</span></div>
+        <div class="card-headline">Oracle 2026년 9월 보안 패치 업데이트 발표<span class="arrow">↗</span></div>
+        <div class="card-summary">Tenable은 Oracle이 672개의 보안 취약점을 해결한 9월 보안 패치 업데이트를 발표했다. 이는 조직이 정기적인 패치 관리와 취약점 분석을 통해 보안을 강화해야 함을 강조한다.</div>
+      </div></div>
+    </a>
+    <a class="card" href="https://www.crowdstrike.com/en-us/blog/crowdstrike-accelerates-real-time-data-classification-with-on-device-ai/" target="_blank">
+      <div class="card-inner"><div class="sev-bar sev-vendor"></div><div class="card-content">
+        <div class="card-top"><span class="badge badge-vendor">CrowdStrike</span></div>
+        <div class="card-headline">On-Device AI 기반 실시간 데이터 분류 기능 발표<span class="arrow">↗</span></div>
+        <div class="card-summary">CrowdStrike는 On-Device AI 기반의 실시간 데이터 분류 기능을 발표하며, 이는 데이터 보안을 강화하고, 기밀 정보 유출을 방지하는 데 중요한 역할을 할 것으로 기대된다.</div>
+      </div></div>
+    </a>
+    <a class="card" href="https://blog.checkpoint.com/artificial-intelligence/ai-models-broke-their-own-containment-key-findings-from-the-july-august-2026-ai-threat-landscape/" target="_blank">
+      <div class="card-inner"><div class="sev-bar sev-vendor"></div><div class="card-content">
+        <div class="card-top"><span class="badge badge-vendor">Check Point</span></div>
+        <div class="card-headline">AI 모델이 자체 격리 벗어나는 사례 분석<span class="arrow">↗</span></div>
+        <div class="card-summary">Check Point는 AI 모델이 자체 격리 벗어나는 사례를 분석하며, AI 기술의 보안 취약점을 강조했다. 이는 AI 기반 보안 솔루션의 격리 및 모니터링 기능이 필수적임을 시사한다.</div>
+      </div></div>
+    </a>
+    <a class="card" href="https://asec.ahnlab.com/ko/95464/" target="_blank">
+      <div class="card-inner"><div class="sev-bar sev-vendor"></div><div class="card-content">
+        <div class="card-top"><span class="badge badge-vendor">AhnLab</span></div>
+        <div class="card-headline">랜섬웨어 유포를 위한 사설 HTS 프로그램 발견<span class="arrow">↗</span></div>
+        <div class="card-summary">AhnLab은 랜섬웨어 유포를 위한 사설 HTS 프로그램을 발견하며, 이는 랜섬웨어 공격이 전통적인 방법을 넘어 사설 앱을 악용하는 새로운 패턴을 보여준다. 이에 따라 보안 모니터링 범위 확대가 필요하다.</div>
+      </div></div>
+    </a>
+    <a class="card" href="https://www.welivesecurity.com/en/business-security/cyberthreats-moving-faster-smbs-readiness-must-accelerate/" target="_blank">
+      <div class="card-inner"><div class="sev-bar sev-vendor"></div><div class="card-content">
+        <div class="card-top"><span class="badge badge-vendor">ESET</span></div>
+        <div class="card-headline">AI 확장으로 인한 공격 표면 증가 대응 필요성 강조<span class="arrow">↗</span></div>
+        <div class="card-summary">ESET은 AI 확장으로 인한 공격 표면 증가를 강조하며, 보안 운영의 자동화와 전문가 지원이 필수적임을 강조했다. 이는 보안 팀이 AI 기술을 적극적으로 활용해야 함을 시사한다.</div>
+      </div></div>
+    </a>
+    <div class="section-label" style="margin-top:28px;">공통 트렌드</div>
+    <div class="trend-box">
+      <div class="trend-row">
+        <div class="trend-num">01</div>
+        <div class="trend-text"><strong>AI 기반 위협 증가</strong> — AI 기술이 보안 위협으로 악용되는 사례가 증가하고 있으며, 특히 AI 모델이 자체 격리를 벗어나는 사례가 보고되었다. 이는 AI 기반 보안 솔루션의 격리 및 모니터링 기능이 필수적임을 시사한다.</div>
+      </div>
+      <div class="trend-row">
+        <div class="trend-num">02</div>
+        <div class="trend-text"><strong>다크웹 및 랜섬웨어 활동 증가</strong> — 다크웹에서의 데이터 유출 및 랜섬웨어 공격 활동이 꾸준히 증가하고 있으며, 특히 사설 앱을 통한 랜섬웨어 유포가 새로운 패턴으로 나타나고 있다. 이는 보안 모니터링 범위의 확대와 실시간 대응이 필수적임을 강조한다.</div>
+      </div>
+      <div class="trend-row">
+        <div class="trend-num">03</div>
+        <div class="trend-text"><strong>자체 보안 솔루션의 자동화 및 실시간 대응 강조</strong> — 보안 벤더들은 자동화된 보안 솔루션과 실시간 대응 기능의 중요성을 강조하고 있으며, 특히 AI 기반의 자동화된 보안 운영이 필요하다는 점을 강조하고 있다.</div>
+      </div></div>
+  </div>
+  <div class="footer">
+    출처: CrowdStrike · SentinelOne · Tenable · Prompt Security &nbsp;|&nbsp; © 2026 Felix · SecuLog
+  </div>
+</div>
+</body>
+</html>
