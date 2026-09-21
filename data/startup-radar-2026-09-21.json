@@ -1,0 +1,56 @@
+{
+  "date": "2026-09-21",
+  "slug": "startup-radar-2026-09-21",
+  "type": "startup-radar",
+  "count": 3,
+  "companies": [
+    {
+      "name": "TigerByte Cyber",
+      "country": "USA",
+      "founded": null,
+      "stage": "Unknown",
+      "funding": "$3M",
+      "category": "Other",
+      "solution": "TigerByte Cyber has secured over $7 million in contracts with US government agencies, including the US Space Force, the US Navy, and DARPA.",
+      "problem": "Addressing cybersecurity needs for critical government agencies.",
+      "competitors": "Not specified in the article",
+      "korea_point": "Its government contracts may indicate potential interest in expanding to other regions, including Korea.",
+      "urls": {
+        "homepage": "https://www.tigerbytecyber.com",
+        "source": "https://www.securityweek.com/tigerbyte-cyber-emerges-from-stealth-with-3-million-in-funding/"
+      }
+    },
+    {
+      "name": "MIND",
+      "country": "Unknown",
+      "founded": null,
+      "stage": "Unknown",
+      "funding": "$72M",
+      "category": "AI Security",
+      "solution": "MIND is securing $72 million in funding to accelerate platform development and expand its presence in key enterprise markets using AI-powered data loss prevention (DLP) technology.",
+      "problem": "Protecting sensitive data from leaks in enterprise environments.",
+      "competitors": "Not specified in the article",
+      "korea_point": "With significant funding, MIND may look to expand into the Korean market, which is increasingly focused on AI-driven security solutions.",
+      "urls": {
+        "homepage": "https://www.mind.com",
+        "source": "https://www.securityweek.com/mind-secures-72-million-for-ai-powered-dlp/"
+      }
+    },
+    {
+      "name": "Vectra AI",
+      "country": "USA",
+      "founded": null,
+      "stage": "Unknown",
+      "funding": null,
+      "category": "AI Security",
+      "solution": "Vectra AI launched Ascent, a program aimed at addressing the new era of AI-driven attacks by expanding its partner strategy and enhancing AI expertise and security outcomes.",
+      "problem": "Mitigating the growing threat of AI-driven cyberattacks in complex security environments.",
+      "competitors": "Not specified in the article",
+      "korea_point": "As AI-driven threats grow, Vectra AI's expansion could be relevant to Korea's increasing focus on AI security.",
+      "urls": {
+        "homepage": "https://www.vectra.ai",
+        "source": "https://www.darkreading.com/cyberattacks-data-breaches/vectra-ai-launches-ascent-new-era-ai-driven-attacks"
+      }
+    }
+  ]
+}
