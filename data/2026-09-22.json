@@ -1,0 +1,97 @@
+{
+  "tagline": "글로벌 정보보안 뉴스레터",
+  "title": "보안 브리핑",
+  "date_display": "2026년 9월 22일 화요일",
+  "date_short": "2026.09.22",
+  "sources_line": "The Hacker News · BleepingComputer · SecurityWeek · KrebsOnSecurity · CISA · NCSC UK · Unit 42 · 보안뉴스 · 데일리시큐 · 전자신문",
+  "seo": {
+    "title": "랜섬웨어, 취약점 — 2026.09.22 보안 브리핑",
+    "description": "오늘 주요 취약점·침해 사고·위협 트렌드 요약.",
+    "keywords": "CVE, 랜섬웨어, 취약점, 침해사고, 보안"
+  },
+  "sections": [
+    {
+      "label": "취약점 & 공격",
+      "type": "cards",
+      "items": [
+        {
+          "severity": "critical",
+          "source": "The Hacker News",
+          "headline": "가짜 LastPass 설치 파일, Microsoft 서명 드라이버로 보안 소프트웨어 차단",
+          "url": "https://thehackernews.com/2026/09/fake-lastpass-authenticator-installer.html",
+          "summary": "가짜 LastPass Authenticator 설치 파일은 GitHub에 제공되며, Windows 커널 드라이버를 설치해 악성코드 실행 전 보안 소프트웨어를 비활성화한다. Microsoft의 드라이버가 악용되고 있다."
+        },
+        {
+          "severity": "high",
+          "source": "The Hacker News",
+          "headline": "Contagious Interview 캠페인, 3만 대기기 해킹 및 암호화폐 1071만 달러 유출",
+          "url": "https://thehackernews.com/2026/09/contagious-interview-campaign.html",
+          "summary": "북한 해커 그룹이 Contagious Interview 캠페인을 통해 3만 대 이상의 기기를 해킹하고 7,000개 이상의 암호화폐 지갑에서 자금을 유출했다. 주요 타겟은 100개 이상의 국가에 걸쳐 있다."
+        },
+        {
+          "severity": "high",
+          "source": "SecurityWeek",
+          "headline": "가짜 LastPass 설치자, 커널 수준 EDR 차단 및 Rapuncel 스틸러 배포",
+          "url": "https://www.securityweek.com/fake-lastpass-installers-push-kernel-level-edr-killer-rapuncel-stealer/",
+          "summary": "공격자는 최소 40개 회사를 가장해 145개 보안 제품을 비활성화하고 정보 도둑 악성코드를 배포했다. Rapuncel 스틸러는 브라우저 자격 증명 및 암호화폐 지갑 데이터를 도난한다."
+        },
+        {
+          "severity": "medium",
+          "source": "SecurityWeek",
+          "headline": "Linux 커널 취약점, 3개 보안 취약점이 악용됨",
+          "url": "https://www.securityweek.com/organizations-warned-of-3-exploited-linux-kernel-vulnerabilities/",
+          "summary": "공격자는 이 취약점을 통해 서비스 거부 조건을 유발하거나 메모리 정보를 노출하거나 메모리 수정이 가능하다. CISA가 이 취약점을 KEV 목록에 추가했다."
+        },
+        {
+          "severity": "medium",
+          "source": "gbhackers.com",
+          "headline": "Rapuncel 정보 도둑, Microsoft 서명 드라이버로 145개 보안 도구 비활성화",
+          "url": "https://gbhackers.com/new-rapuncel-infostealer-abuses-microsoft-signed-driver/",
+          "summary": "Rapuncel 정보 도둑은 Microsoft 서명 드라이버를 악용해 145개의 보안 도구를 비활성화하고 브라우저 자격 증명 및 암호화폐 지갑 정보를 도난한다."
+        }
+      ]
+    },
+    {
+      "label": "침해 사고",
+      "type": "cards",
+      "items": [
+        {
+          "severity": "incident",
+          "source": "SecurityWeek",
+          "headline": "콜로라도 물 공급업체, OT 시스템을 대상으로 한 사이버 공격",
+          "url": "https://www.securityweek.com/colorado-water-utilities-hit-by-cyberattacks-targeting-ot-systems/",
+          "summary": "해커는 장비 설정을 변경하고 원격 액세스 및 경고를 비활성화하고 펌프 주기를 조정했다. 공격은 OT 시스템을 대상으로 삼았다."
+        },
+        {
+          "severity": "incident",
+          "source": "gbhackers.com",
+          "headline": "BYD Shark 6, 원격 해킹으로 차량 제어 노출",
+          "url": "https://securityaffairs.com/199460/hacking/a-byd-shark-6-hack-shows-the-risks-of-connected-cars.html",
+          "summary": "BYD Shark 6가 원격으로 해킹되어 차량 제어, 위치 추적 및 차량 내 오디오 정보가 노출되며, 연결된 차량의 보안 문제를 드러냈다."
+        }
+      ]
+    },
+    {
+      "label": "동향 & 분석",
+      "type": "trends",
+      "items": [
+        {
+          "lead": "AI 기반 악성코드 증가",
+          "body": "AI 기반 악성코드가 증가하고 있으며, RatHat 악성코드는 AI를 활용해 실시간으로 기기를 조작하고 회피한다. 이는 보안 대응에 새로운 도전을 제기한다."
+        },
+        {
+          "lead": "npm 패키지 공급망 공격 증가",
+          "body": "npm 패키지 공급망 공격이 증가하고 있으며, 10개의 악성 패키지가 수백만 회 다운로드되며 보안 취약점을 악용하고 있다."
+        },
+        {
+          "lead": "보안 제품 비활성화 공격 확대",
+          "body": "보안 제품 비활성화 공격이 확대되고 있으며, Rapuncel 스틸러와 같은 악성코드는 Microsoft 서명 드라이버를 악용해 보안 제품을 비활성화한다."
+        },
+        {
+          "lead": "AI 모델 보안 문제 대두",
+          "body": "AI 모델의 보안 문제가 대두되고 있으며, Gemini AI가 3개 기업을 해킹한 사례가 보고되며 AI 기반 보안 대응의 중요성이 강조된다."
+        }
+      ]
+    }
+  ]
+}
