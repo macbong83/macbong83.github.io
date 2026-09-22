@@ -31,6 +31,743 @@
     "added_at": "2026-09-22T20:00:19+09:00"
   },
   {
+    "id": "CVE-2026-89276",
+    "published": "2026-09-22",
+    "last_modified": "2026-09-22",
+    "status": "Awaiting Analysis",
+    "description": "Adobe Campaign Classic (ACC) is affected by an Improper Control of Generation of Code ('Code Injection') vulnerability that could result in arbitrary code execution in the context of the current user. A low-privileged attacker could exploit this vulnerability to execute arbitrary code. Exploitation of this issue does not require user interaction. Scope is changed.",
+    "cvss": {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:L",
+      "score": 9.9,
+      "severity": "CRITICAL",
+      "attack_vector": "네트워크",
+      "attack_complexity": "낮음",
+      "privileges_required": "낮음",
+      "user_interaction": "없음"
+    },
+    "cwes": [
+      "CWE-94"
+    ],
+    "affected": [],
+    "references": [
+      "https://helpx.adobe.com/security/products/campaign/apsb26-142.html"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-89276",
+    "added_at": "2026-09-23T08:00:52+09:00"
+  },
+  {
+    "id": "CVE-2026-89275",
+    "published": "2026-09-22",
+    "last_modified": "2026-09-22",
+    "status": "Awaiting Analysis",
+    "description": "Adobe Campaign Classic (ACC) is affected by an Improper Control of Generation of Code ('Code Injection') vulnerability that could result in arbitrary code execution in the context of the current user. An attacker could exploit this vulnerability to execute arbitrary code. Exploitation of this issue does not require user interaction. Scope is changed.",
+    "cvss": {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:H",
+      "score": 10.0,
+      "severity": "CRITICAL",
+      "attack_vector": "네트워크",
+      "attack_complexity": "낮음",
+      "privileges_required": "없음",
+      "user_interaction": "없음"
+    },
+    "cwes": [
+      "CWE-94"
+    ],
+    "affected": [],
+    "references": [
+      "https://helpx.adobe.com/security/products/campaign/apsb26-142.html"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-89275",
+    "added_at": "2026-09-23T08:00:52+09:00"
+  },
+  {
+    "id": "CVE-2026-83660",
+    "published": "2026-09-22",
+    "last_modified": "2026-09-22",
+    "status": "Awaiting Analysis",
+    "description": "Adobe Campaign Classic (ACC) is affected by a Server-Side Request Forgery (SSRF) vulnerability that could result in privilege escalation. Exploitation of this issue does not require user interaction. Scope is changed.",
+    "cvss": {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:L/A:L",
+      "score": 9.9,
+      "severity": "CRITICAL",
+      "attack_vector": "네트워크",
+      "attack_complexity": "낮음",
+      "privileges_required": "없음",
+      "user_interaction": "없음"
+    },
+    "cwes": [
+      "CWE-918"
+    ],
+    "affected": [],
+    "references": [
+      "https://helpx.adobe.com/security/products/campaign/apsb26-142.html"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-83660",
+    "added_at": "2026-09-23T08:00:52+09:00"
+  },
+  {
+    "id": "CVE-2026-82013",
+    "published": "2026-09-22",
+    "last_modified": "2026-09-22",
+    "status": "Awaiting Analysis",
+    "description": "Adobe Campaign Classic (ACC) is affected by a Server-Side Request Forgery (SSRF) vulnerability that could result in privilege escalation. A low-privileged attacker could exploit this vulnerability to gain elevated access to internal resources. Exploitation of this issue does not require user interaction. Scope is changed.",
+    "cvss": {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H",
+      "score": 9.9,
+      "severity": "CRITICAL",
+      "attack_vector": "네트워크",
+      "attack_complexity": "낮음",
+      "privileges_required": "낮음",
+      "user_interaction": "없음"
+    },
+    "cwes": [
+      "CWE-918"
+    ],
+    "affected": [],
+    "references": [
+      "https://helpx.adobe.com/security/products/campaign/apsb26-142.html"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-82013",
+    "added_at": "2026-09-23T08:00:52+09:00"
+  },
+  {
+    "id": "CVE-2026-82011",
+    "published": "2026-09-22",
+    "last_modified": "2026-09-22",
+    "status": "Awaiting Analysis",
+    "description": "Adobe Campaign Classic (ACC) is affected by an Improper Neutralization of Special Elements used in an SQL Command ('SQL Injection') vulnerability that could result in a Security feature bypass. A low-privileged attacker could leverage this vulnerability to bypass security measures and gain unauthorized read and limited write access. Exploitation of this issue does not require user interaction. Scope is changed.",
+    "cvss": {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:L/A:L",
+      "score": 9.1,
+      "severity": "CRITICAL",
+      "attack_vector": "네트워크",
+      "attack_complexity": "낮음",
+      "privileges_required": "낮음",
+      "user_interaction": "없음"
+    },
+    "cwes": [
+      "CWE-89"
+    ],
+    "affected": [],
+    "references": [
+      "https://helpx.adobe.com/security/products/campaign/apsb26-142.html"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-82011",
+    "added_at": "2026-09-23T08:00:52+09:00"
+  },
+  {
+    "id": "CVE-2026-82009",
+    "published": "2026-09-22",
+    "last_modified": "2026-09-22",
+    "status": "Awaiting Analysis",
+    "description": "Adobe Campaign Classic (ACC) is affected by an Improper Neutralization of Special Elements used in an SQL Command ('SQL Injection') vulnerability that could result in arbitrary code execution in the context of the current user. An attacker with high privileges could exploit this vulnerability to execute arbitrary SQL commands. Exploitation of this issue does not require user interaction. Scope is changed.",
+    "cvss": {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:C/C:H/I:H/A:H",
+      "score": 9.1,
+      "severity": "CRITICAL",
+      "attack_vector": "네트워크",
+      "attack_complexity": "낮음",
+      "privileges_required": "높음",
+      "user_interaction": "없음"
+    },
+    "cwes": [
+      "CWE-89"
+    ],
+    "affected": [],
+    "references": [
+      "https://helpx.adobe.com/security/products/campaign/apsb26-142.html"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-82009",
+    "added_at": "2026-09-23T08:00:52+09:00"
+  },
+  {
+    "id": "CVE-2026-82000",
+    "published": "2026-09-22",
+    "last_modified": "2026-09-22",
+    "status": "Awaiting Analysis",
+    "description": "Adobe Experience Manager Forms JEE is affected by a Server-Side Request Forgery (SSRF) vulnerability that could result in privilege escalation. A low-privileged attacker could exploit this vulnerability to gain elevated access to internal resources. Exploitation of this issue does not require user interaction. Scope is changed.",
+    "cvss": {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:N",
+      "score": 9.6,
+      "severity": "CRITICAL",
+      "attack_vector": "네트워크",
+      "attack_complexity": "낮음",
+      "privileges_required": "낮음",
+      "user_interaction": "없음"
+    },
+    "cwes": [
+      "CWE-918"
+    ],
+    "affected": [],
+    "references": [
+      "https://helpx.adobe.com/security/products/aem-forms/apsb26-151.html"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-82000",
+    "added_at": "2026-09-23T08:00:52+09:00"
+  },
+  {
+    "id": "CVE-2026-81995",
+    "published": "2026-09-22",
+    "last_modified": "2026-09-22",
+    "status": "Awaiting Analysis",
+    "description": "Adobe Experience Manager Forms JEE is affected by an Improper Input Validation vulnerability that could result in arbitrary code execution in the context of the current user. An attacker with high privileges could exploit this vulnerability to execute arbitrary code. Exploitation of this issue does not require user interaction. Scope is changed.",
+    "cvss": {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:C/C:H/I:H/A:H",
+      "score": 9.1,
+      "severity": "CRITICAL",
+      "attack_vector": "네트워크",
+      "attack_complexity": "낮음",
+      "privileges_required": "높음",
+      "user_interaction": "없음"
+    },
+    "cwes": [
+      "CWE-20"
+    ],
+    "affected": [],
+    "references": [
+      "https://helpx.adobe.com/security/products/aem-forms/apsb26-151.html"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-81995",
+    "added_at": "2026-09-23T08:00:52+09:00"
+  },
+  {
+    "id": "CVE-2026-80156",
+    "published": "2026-09-22",
+    "last_modified": "2026-09-22",
+    "status": "Awaiting Analysis",
+    "description": "Lantronix SLC8000 before firmware v9.7.0.5, EMG8500/EMG7500 before firmware v9.7.0.1, and all firmware versions of SLB882/SLCx-03/SLCx-02 contain a path traversal vulnerability in the web management portal upload endpoint that allows authenticated attackers to write arbitrary data to any location on the device's filesystem, leading to remote code execution. The upload filename validation strips backslash characters but does not subsequently check for forward slashes when a backslash is detected; by supplying a filename containing both characters an attacker writes outside the intended upload directory to any writable path. Attackers can use this vulnerability to achieve complete loss of confidentiality, integrity, and availability on the affected device and potentially impact downstream serial-connected devices.",
+    "cvss": {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:C/C:H/I:H/A:H",
+      "score": 9.1,
+      "severity": "CRITICAL",
+      "attack_vector": "네트워크",
+      "attack_complexity": "낮음",
+      "privileges_required": "높음",
+      "user_interaction": "없음"
+    },
+    "cwes": [
+      "CWE-22"
+    ],
+    "affected": [],
+    "references": [
+      "https://revrb.net/2026/09/21/revrb-lantern.html",
+      "https://ts.lantronix.com/ftp/emg/EMG_7500/9.7.0.1R2/",
+      "https://ts.lantronix.com/ftp/emg/EMG_8500/9.7.0.1R2/",
+      "https://ts.lantronix.com/ftp/slc8000/9.7.0.5R2/",
+      "https://www.vulncheck.com/advisories/lantronix-autonomous-out-of-band-devices-arbitrary-file-write-via-upload-filename-validation-bypass"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-80156",
+    "added_at": "2026-09-23T08:00:52+09:00"
+  },
+  {
+    "id": "CVE-2026-80155",
+    "published": "2026-09-22",
+    "last_modified": "2026-09-22",
+    "status": "Awaiting Analysis",
+    "description": "Lantronix SLC8000 before firmware v9.7.0.5, EMG8500/EMG7500 before firmware v9.7.0.1, and all firmware versions of SLB882/SLCx-03/SLCx-02 contain an authentication bypass vulnerability in the web management portal upload endpoint that allows unauthenticated attackers to read sensitive configuration files and upload files to arbitrary filesystem locations, leading to remote code execution. The web configuration server constructs the session cookie file path using snprintf with a fixed-size buffer; by supplying a cookie value of a specific length an attacker causes the path to truncate at the required delimiter and leverages path traversal to redirect authentication validation to an arbitrary on-disk file such as the local user database, bypassing all session checks. Attackers can use this vulnerability to achieve complete loss of confidentiality, integrity, and availability on the affected device and potentially impact downstream serial-connected devices.",
+    "cvss": {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:H",
+      "score": 10.0,
+      "severity": "CRITICAL",
+      "attack_vector": "네트워크",
+      "attack_complexity": "낮음",
+      "privileges_required": "없음",
+      "user_interaction": "없음"
+    },
+    "cwes": [
+      "CWE-22"
+    ],
+    "affected": [],
+    "references": [
+      "https://revrb.net/2026/09/21/revrb-lantern.html",
+      "https://ts.lantronix.com/ftp/emg/EMG_7500/9.7.0.1R2/",
+      "https://ts.lantronix.com/ftp/emg/EMG_8500/9.7.0.1R2/",
+      "https://ts.lantronix.com/ftp/slc8000/9.7.0.5R2/",
+      "https://www.vulncheck.com/advisories/lantronix-autonomous-out-of-band-devices-unauthenticated-authentication-bypass-via-snprintf-path-truncation"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-80155",
+    "added_at": "2026-09-23T08:00:52+09:00"
+  },
+  {
+    "id": "CVE-2026-80152",
+    "published": "2026-09-22",
+    "last_modified": "2026-09-22",
+    "status": "Awaiting Analysis",
+    "description": "Lantronix SLC8000 before firmware v9.7.0.3, EMG8500/EMG7500 before firmware v9.7.0.1, and all firmware versions of SLB882/SLCx-03/SLCx-02 contain a command injection vulnerability that allows authenticated attackers with the services permission to execute arbitrary shell commands as root by exploiting the set script schedule command that passes unsanitized user input to a system() call. Attackers with the services permission can authenticate to the terminal or CLI interface and inject malicious commands through the unsanitized parameter to achieve complete loss of confidentiality, integrity, and availability on the affected device and potentially impact downstream serial-attached devices.",
+    "cvss": {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:C/C:H/I:H/A:H",
+      "score": 9.1,
+      "severity": "CRITICAL",
+      "attack_vector": "네트워크",
+      "attack_complexity": "낮음",
+      "privileges_required": "높음",
+      "user_interaction": "없음"
+    },
+    "cwes": [
+      "CWE-78"
+    ],
+    "affected": [],
+    "references": [
+      "https://revrb.net/2026/09/21/revrb-lantern.html",
+      "https://ts.lantronix.com/ftp/emg/EMG_7500/9.7.0.1R2/",
+      "https://ts.lantronix.com/ftp/emg/EMG_8500/9.7.0.1R2/",
+      "https://ts.lantronix.com/ftp/slc8000/9.7.0.3R3/",
+      "https://www.vulncheck.com/advisories/lantronix-autonomous-out-of-band-devices-os-command-injection-via-set-script-schedule"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-80152",
+    "added_at": "2026-09-23T08:00:52+09:00"
+  },
+  {
+    "id": "CVE-2026-80151",
+    "published": "2026-09-22",
+    "last_modified": "2026-09-22",
+    "status": "Awaiting Analysis",
+    "description": "Lantronix SLC8000 before firmware v9.7.0.3, EMG8500/EMG7500 before firmware v9.7.0.1, and all firmware versions of SLB882/SLCx-03/SLCx-02 contain a command injection vulnerability that allows authenticated attackers with the services permission to execute arbitrary shell commands as root by exploiting the set nfs download command that passes unsanitized user input to a system() call. Attackers with the services permission can authenticate to the terminal or CLI interface and inject malicious commands through the unsanitized parameter to achieve complete loss of confidentiality, integrity, and availability on the affected device and potentially impact downstream serial-attached devices.",
+    "cvss": {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:C/C:H/I:H/A:H",
+      "score": 9.1,
+      "severity": "CRITICAL",
+      "attack_vector": "네트워크",
+      "attack_complexity": "낮음",
+      "privileges_required": "높음",
+      "user_interaction": "없음"
+    },
+    "cwes": [
+      "CWE-78"
+    ],
+    "affected": [],
+    "references": [
+      "https://revrb.net/2026/09/21/revrb-lantern.html",
+      "https://ts.lantronix.com/ftp/emg/EMG_7500/9.7.0.1R2/",
+      "https://ts.lantronix.com/ftp/emg/EMG_8500/9.7.0.1R2/",
+      "https://ts.lantronix.com/ftp/slc8000/9.7.0.3R3/",
+      "https://www.vulncheck.com/advisories/lantronix-autonomous-out-of-band-devices-os-command-injection-via-set-nfs-download"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-80151",
+    "added_at": "2026-09-23T08:00:52+09:00"
+  },
+  {
+    "id": "CVE-2026-80146",
+    "published": "2026-09-22",
+    "last_modified": "2026-09-22",
+    "status": "Awaiting Analysis",
+    "description": "Lantronix SLC8000 before firmware v9.7.0.2, EMG8500/EMG7500 before firmware v9.7.0.1, and all firmware versions of SLB882/SLCx-03/SLCx-02 contain a stack-based buffer overflow vulnerability that allows authenticated attackers to potentially execute arbitrary code by exploiting an undocumented mfc eeprom read command that copies unbounded user input into a bounded stack buffer before passing it to a system() call. Attackers can authenticate as any user to the terminal or CLI interface and supply an oversized input to trigger the overflow, potentially achieving complete loss of confidentiality, integrity, and availability on the affected device and impacting downstream serial-attached devices.",
+    "cvss": {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H",
+      "score": 9.9,
+      "severity": "CRITICAL",
+      "attack_vector": "네트워크",
+      "attack_complexity": "낮음",
+      "privileges_required": "낮음",
+      "user_interaction": "없음"
+    },
+    "cwes": [
+      "CWE-121"
+    ],
+    "affected": [],
+    "references": [
+      "https://revrb.net/2026/09/21/revrb-lantern.html",
+      "https://ts.lantronix.com/ftp/emg/EMG_7500/9.7.0.1R2/",
+      "https://ts.lantronix.com/ftp/emg/EMG_8500/9.7.0.1R2/",
+      "https://ts.lantronix.com/ftp/slc8000/9.7.0.2R1/",
+      "https://www.vulncheck.com/advisories/lantronix-autonomous-out-of-band-devices-stack-based-buffer-overflow-via-mfc-eeprom-read"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-80146",
+    "added_at": "2026-09-23T08:00:52+09:00"
+  },
+  {
+    "id": "CVE-2026-80145",
+    "published": "2026-09-22",
+    "last_modified": "2026-09-22",
+    "status": "Awaiting Analysis",
+    "description": "Lantronix SLC8000 before firmware v9.7.0.2, EMG8500/EMG7500 before firmware v9.7.0.1, and all firmware versions of SLB882/SLCx-03/SLCx-02 contain a command injection vulnerability that allows authenticated attackers with the services permission to execute arbitrary shell commands as root by exploiting the set cifs password command that passes unsanitized user input to a system() call. Attackers with the services permission can authenticate to the terminal or CLI interface and inject malicious commands through the unsanitized parameter to achieve complete loss of confidentiality, integrity, and availability on the affected device and potentially impact downstream serial-attached devices.",
+    "cvss": {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:C/C:H/I:H/A:H",
+      "score": 9.1,
+      "severity": "CRITICAL",
+      "attack_vector": "네트워크",
+      "attack_complexity": "낮음",
+      "privileges_required": "높음",
+      "user_interaction": "없음"
+    },
+    "cwes": [
+      "CWE-78"
+    ],
+    "affected": [],
+    "references": [
+      "https://revrb.net/2026/09/21/revrb-lantern.html",
+      "https://ts.lantronix.com/ftp/emg/EMG_7500/9.7.0.1R2/",
+      "https://ts.lantronix.com/ftp/emg/EMG_8500/9.7.0.1R2/",
+      "https://ts.lantronix.com/ftp/slc8000/9.7.0.2R1/",
+      "https://www.vulncheck.com/advisories/lantronix-autonomous-out-of-band-devices-cli-command-injection-via-set-cifs-password"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-80145",
+    "added_at": "2026-09-23T08:00:52+09:00"
+  },
+  {
+    "id": "CVE-2026-80144",
+    "published": "2026-09-22",
+    "last_modified": "2026-09-22",
+    "status": "Awaiting Analysis",
+    "description": "Lantronix SLC8000 before firmware v9.7.0.2, EMG8500/EMG7500 before firmware v9.7.0.1, and all firmware versions of SLB882/SLCx-03/SLCx-02 contain a command injection vulnerability that allows authenticated attackers to execute arbitrary shell commands as root by exploiting an undocumented mfc eeprom write command that passes unsanitized user input to a system() call. Attackers can authenticate as any user to the terminal or CLI interface and inject malicious commands through the unsanitized parameter to achieve complete loss of confidentiality, integrity, and availability on the affected device and potentially impact downstream serial-attached devices.",
+    "cvss": {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H",
+      "score": 9.9,
+      "severity": "CRITICAL",
+      "attack_vector": "네트워크",
+      "attack_complexity": "낮음",
+      "privileges_required": "낮음",
+      "user_interaction": "없음"
+    },
+    "cwes": [
+      "CWE-78"
+    ],
+    "affected": [],
+    "references": [
+      "https://revrb.net/2026/09/21/revrb-lantern.html",
+      "https://ts.lantronix.com/ftp/emg/EMG_7500/9.7.0.1R2/",
+      "https://ts.lantronix.com/ftp/emg/EMG_8500/9.7.0.1R2/",
+      "https://ts.lantronix.com/ftp/slc8000/9.7.0.2R1/",
+      "https://www.vulncheck.com/advisories/lantronix-autonomous-out-of-band-devices-cli-command-injection-via-mfc-eeprom-write"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-80144",
+    "added_at": "2026-09-23T08:00:52+09:00"
+  },
+  {
+    "id": "CVE-2026-75745",
+    "published": "2026-09-22",
+    "last_modified": "2026-09-22",
+    "status": "Awaiting Analysis",
+    "description": "Adobe Experience Manager Forms JEE is affected by an Incorrect Authorization vulnerability that could result in arbitrary code execution in the context of the current user. An attacker could exploit this vulnerability to execute arbitrary code. Exploitation of this issue does not require user interaction. Scope is changed.",
+    "cvss": {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:H",
+      "score": 10.0,
+      "severity": "CRITICAL",
+      "attack_vector": "네트워크",
+      "attack_complexity": "낮음",
+      "privileges_required": "없음",
+      "user_interaction": "없음"
+    },
+    "cwes": [
+      "CWE-863"
+    ],
+    "affected": [],
+    "references": [
+      "https://helpx.adobe.com/security/products/aem-forms/apsb26-151.html"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-75745",
+    "added_at": "2026-09-23T08:00:52+09:00"
+  },
+  {
+    "id": "CVE-2026-75728",
+    "published": "2026-09-22",
+    "last_modified": "2026-09-22",
+    "status": "Awaiting Analysis",
+    "description": "Adobe Campaign Classic (ACC) is affected by an Incorrect Authorization vulnerability that could result in arbitrary code execution in the context of the current user. An attacker could exploit this vulnerability to execute arbitrary code. Exploitation of this issue does not require user interaction.",
+    "cvss": {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N",
+      "score": 9.1,
+      "severity": "CRITICAL",
+      "attack_vector": "네트워크",
+      "attack_complexity": "낮음",
+      "privileges_required": "없음",
+      "user_interaction": "없음"
+    },
+    "cwes": [
+      "CWE-863"
+    ],
+    "affected": [],
+    "references": [
+      "https://helpx.adobe.com/security/products/campaign/apsb26-142.html"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-75728",
+    "added_at": "2026-09-23T08:00:52+09:00"
+  },
+  {
+    "id": "CVE-2026-75721",
+    "published": "2026-09-22",
+    "last_modified": "2026-09-22",
+    "status": "Awaiting Analysis",
+    "description": "Adobe Campaign Classic (ACC) is affected by an Improper Control of Generation of Code ('Code Injection') vulnerability that could result in arbitrary code execution in the context of the current user. An attacker could exploit this vulnerability to execute arbitrary code. Exploitation of this issue does not require user interaction. Scope is changed.",
+    "cvss": {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:H",
+      "score": 10.0,
+      "severity": "CRITICAL",
+      "attack_vector": "네트워크",
+      "attack_complexity": "낮음",
+      "privileges_required": "없음",
+      "user_interaction": "없음"
+    },
+    "cwes": [
+      "CWE-94"
+    ],
+    "affected": [],
+    "references": [
+      "https://helpx.adobe.com/security/products/campaign/apsb26-142.html"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-75721",
+    "added_at": "2026-09-23T08:00:52+09:00"
+  },
+  {
+    "id": "CVE-2026-75699",
+    "published": "2026-09-22",
+    "last_modified": "2026-09-22",
+    "status": "Awaiting Analysis",
+    "description": "Adobe Campaign Classic (ACC) is affected by an Improper Control of Generation of Code ('Code Injection') vulnerability that could result in arbitrary code execution in the context of the current user. An attacker could exploit this vulnerability to execute arbitrary code. Exploitation of this issue does not require user interaction. Scope is changed.",
+    "cvss": {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:H",
+      "score": 10.0,
+      "severity": "CRITICAL",
+      "attack_vector": "네트워크",
+      "attack_complexity": "낮음",
+      "privileges_required": "없음",
+      "user_interaction": "없음"
+    },
+    "cwes": [
+      "CWE-94"
+    ],
+    "affected": [],
+    "references": [
+      "https://helpx.adobe.com/security/products/campaign/apsb26-142.html"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-75699",
+    "added_at": "2026-09-23T08:00:52+09:00"
+  },
+  {
+    "id": "CVE-2026-75698",
+    "published": "2026-09-22",
+    "last_modified": "2026-09-22",
+    "status": "Awaiting Analysis",
+    "description": "Adobe Connect is affected by a reflected Cross-Site Scripting (XSS) vulnerability. An attacker could exploit this vulnerability to inject malicious scripts into a web page, potentially gaining elevated access or control over the victim's account or session. Exploitation of this issue requires user interaction in that a victim must visit a maliciously crafted URL or interact with a compromised web page. Scope is changed.",
+    "cvss": {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:H/I:H/A:N",
+      "score": 9.3,
+      "severity": "CRITICAL",
+      "attack_vector": "네트워크",
+      "attack_complexity": "낮음",
+      "privileges_required": "없음",
+      "user_interaction": "필요"
+    },
+    "cwes": [
+      "CWE-79"
+    ],
+    "affected": [],
+    "references": [
+      "https://helpx.adobe.com/security/products/connect/apsb26-150.html"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-75698",
+    "added_at": "2026-09-23T08:00:52+09:00"
+  },
+  {
+    "id": "CVE-2026-75689",
+    "published": "2026-09-22",
+    "last_modified": "2026-09-22",
+    "status": "Awaiting Analysis",
+    "description": "Adobe Connect is affected by a stored Cross-Site Scripting (XSS) vulnerability that could be abused by an attacker to inject malicious scripts into vulnerable form fields. Malicious JavaScript may be executed in a victim's browser when they browse to the page containing the vulnerable field, potentially gaining elevated access or control over the victim's account or session. Scope is changed.",
+    "cvss": {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:H/I:H/A:N",
+      "score": 9.3,
+      "severity": "CRITICAL",
+      "attack_vector": "네트워크",
+      "attack_complexity": "낮음",
+      "privileges_required": "없음",
+      "user_interaction": "필요"
+    },
+    "cwes": [
+      "CWE-79"
+    ],
+    "affected": [],
+    "references": [
+      "https://helpx.adobe.com/security/products/connect/apsb26-150.html"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-75689",
+    "added_at": "2026-09-23T08:00:52+09:00"
+  },
+  {
+    "id": "CVE-2026-75684",
+    "published": "2026-09-22",
+    "last_modified": "2026-09-22",
+    "status": "Awaiting Analysis",
+    "description": "Adobe Connect is affected by a stored Cross-Site Scripting (XSS) vulnerability that could be abused by an attacker to inject malicious scripts into vulnerable form fields. Malicious JavaScript may be executed in a victim's browser when they browse to the page containing the vulnerable field, potentially gaining elevated access or control over the victim's account or session. Scope is changed.",
+    "cvss": {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:H/I:H/A:N",
+      "score": 9.3,
+      "severity": "CRITICAL",
+      "attack_vector": "네트워크",
+      "attack_complexity": "낮음",
+      "privileges_required": "없음",
+      "user_interaction": "필요"
+    },
+    "cwes": [
+      "CWE-79"
+    ],
+    "affected": [],
+    "references": [
+      "https://helpx.adobe.com/security/products/connect/apsb26-150.html"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-75684",
+    "added_at": "2026-09-23T08:00:52+09:00"
+  },
+  {
+    "id": "CVE-2026-75682",
+    "published": "2026-09-22",
+    "last_modified": "2026-09-22",
+    "status": "Awaiting Analysis",
+    "description": "Adobe Connect is affected by an Improper Neutralization of Special Elements used in an SQL Command ('SQL Injection') vulnerability that could result in arbitrary code execution in the context of the current user. A low-privileged attacker could exploit this vulnerability to execute arbitrary SQL commands, potentially gaining elevated access or control over the victim's account or session. Exploitation of this issue does not require user interaction. Scope is changed.",
+    "cvss": {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H",
+      "score": 9.9,
+      "severity": "CRITICAL",
+      "attack_vector": "네트워크",
+      "attack_complexity": "낮음",
+      "privileges_required": "낮음",
+      "user_interaction": "없음"
+    },
+    "cwes": [
+      "CWE-89"
+    ],
+    "affected": [],
+    "references": [
+      "https://helpx.adobe.com/security/products/connect/apsb26-150.html"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-75682",
+    "added_at": "2026-09-23T08:00:52+09:00"
+  },
+  {
+    "id": "CVE-2026-73369",
+    "published": "2026-09-22",
+    "last_modified": "2026-09-22",
+    "status": "Awaiting Analysis",
+    "description": "Adobe Campaign Classic (ACC) is affected by an Improper Control of Generation of Code ('Code Injection') vulnerability that could result in arbitrary code execution in the context of the current user. An attacker could exploit this vulnerability to execute arbitrary code. Exploitation of this issue does not require user interaction. Scope is changed.",
+    "cvss": {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:H",
+      "score": 10.0,
+      "severity": "CRITICAL",
+      "attack_vector": "네트워크",
+      "attack_complexity": "낮음",
+      "privileges_required": "없음",
+      "user_interaction": "없음"
+    },
+    "cwes": [
+      "CWE-94"
+    ],
+    "affected": [],
+    "references": [
+      "https://helpx.adobe.com/security/products/campaign/apsb26-142.html"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-73369",
+    "added_at": "2026-09-23T08:00:52+09:00"
+  },
+  {
+    "id": "CVE-2026-47116",
+    "published": "2026-09-22",
+    "last_modified": "2026-09-22",
+    "status": "Received",
+    "description": "LTSecurity LTK3500SF contains a hard-coded credentials vulnerability where root and guest account passwords are stored as reversible hashes in /etc/shadow, recoverable using dictionary-based cracking tools. Attackers can use the recovered credentials to authenticate via Telnet or SSH and obtain full root-level access to the operating system.",
+    "cvss": {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "score": 9.8,
+      "severity": "CRITICAL",
+      "attack_vector": "네트워크",
+      "attack_complexity": "낮음",
+      "privileges_required": "없음",
+      "user_interaction": "없음"
+    },
+    "cwes": [
+      "CWE-798"
+    ],
+    "affected": [],
+    "references": [
+      "https://github.com/AndreaLandriscina/Hardcoded-Credentials-in-LTSecurity-LTK3500SF",
+      "https://www.vulncheck.com/advisories/ltsecurity-ltk3500sf-hard-coded-credentials-via-telnet-ssh"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-47116",
+    "added_at": "2026-09-23T08:00:52+09:00"
+  },
+  {
+    "id": "CVE-2026-43641",
+    "published": "2026-09-22",
+    "last_modified": "2026-09-22",
+    "status": "Deferred",
+    "description": "Softaculous Virtualizor before 3.2.9 (Patch 9) and 3.0.0 contains an OS command injection vulnerability in the billing module handler that allows unauthenticated remote attackers to execute arbitrary commands as root by bypassing authentication through specific parameter combinations. Attackers can deserialize a crafted billing_data POST field and inject shell payloads through the uid field, which is passed unmodified to proc_open() via vexec(), yielding complete control of the host and all managed VPS instances.",
+    "cvss": {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "score": 9.8,
+      "severity": "CRITICAL",
+      "attack_vector": "네트워크",
+      "attack_complexity": "낮음",
+      "privileges_required": "없음",
+      "user_interaction": "없음"
+    },
+    "cwes": [
+      "CWE-78"
+    ],
+    "affected": [],
+    "references": [
+      "https://www.virtualizor.com/blog/virtualizor-3-2-9-launched-release-candidate-patch-9/",
+      "https://www.virtualizor.com/blog/virtualizor-3-3-0/",
+      "https://www.vulncheck.com/advisories/softaculous-virtualizor-os-command-injection-via-billing-module-handler",
+      "https://www.vulncheck.com/blog/virtualizor-billing-hook-unauthenticated-root-rce"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-43641",
+    "added_at": "2026-09-23T08:00:52+09:00"
+  },
+  {
+    "id": "CVE-2026-28324",
+    "published": "2026-09-22",
+    "last_modified": "2026-09-22",
+    "status": "Received",
+    "description": "SolarWinds Observability Self-Hosted was found to be affected by an unauthenticated remote code execution vulnerability due to the insufficient integrity checks. Installations configured in a non-default and non-secure configuration are affected.",
+    "cvss": {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "score": 9.8,
+      "severity": "CRITICAL",
+      "attack_vector": "네트워크",
+      "attack_complexity": "낮음",
+      "privileges_required": "없음",
+      "user_interaction": "없음"
+    },
+    "cwes": [
+      "CWE-345"
+    ],
+    "affected": [],
+    "references": [
+      "https://documentation.solarwinds.com/en/success_center/orionplatform/content/core-secure-configuration.htm",
+      "https://documentation.solarwinds.com/en/success_center/orionplatform/content/release_notes/hco_2026-2-3_release_notes.htm",
+      "https://documentation.solarwinds.com/en/success_center/wpm/content/orionwpmagaddingalocation.htm",
+      "https://www.solarwinds.com/trust-center/security-advisories/CVE-2026-28324"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-28324",
+    "added_at": "2026-09-23T08:00:52+09:00"
+  },
+  {
     "id": "CVE-2026-25254",
     "published": "2026-09-22",
     "last_modified": "2026-09-22",
@@ -82,6 +819,110 @@
     ],
     "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-19658",
     "added_at": "2026-09-22T20:00:19+09:00"
+  },
+  {
+    "id": "CVE-2026-17645",
+    "published": "2026-09-22",
+    "last_modified": "2026-09-22",
+    "status": "Received",
+    "description": "IBM Financial Transaction Manager (FTM) for RedHat OpenShift could allow a remote authenticated attacker to gain elevated privileges due to improper privilege management.",
+    "cvss": {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:C/C:H/I:H/A:H",
+      "score": 9.1,
+      "severity": "CRITICAL",
+      "attack_vector": "네트워크",
+      "attack_complexity": "낮음",
+      "privileges_required": "높음",
+      "user_interaction": "없음"
+    },
+    "cwes": [
+      "CWE-269"
+    ],
+    "affected": [],
+    "references": [
+      "https://www.ibm.com/support/pages/node/7288641"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-17645",
+    "added_at": "2026-09-23T08:00:52+09:00"
+  },
+  {
+    "id": "CVE-2026-17635",
+    "published": "2026-09-22",
+    "last_modified": "2026-09-22",
+    "status": "Received",
+    "description": "IBM Financial Transaction Manager (FTM) for RedHat OpenShift could allow a remote attacker to perform unauthorized actions due to improper configuration of HTTP method-based security constraints.",
+    "cvss": {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N",
+      "score": 9.1,
+      "severity": "CRITICAL",
+      "attack_vector": "네트워크",
+      "attack_complexity": "낮음",
+      "privileges_required": "없음",
+      "user_interaction": "없음"
+    },
+    "cwes": [
+      "CWE-306"
+    ],
+    "affected": [],
+    "references": [
+      "https://www.ibm.com/support/pages/node/7288641"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-17635",
+    "added_at": "2026-09-23T08:00:52+09:00"
+  },
+  {
+    "id": "CVE-2026-17472",
+    "published": "2026-09-22",
+    "last_modified": "2026-09-22",
+    "status": "Received",
+    "description": "IBM Concert 1.0.0 through 3.0.0 could allow a remote authenticated attacker to access or modify unauthorized resources due to the use of wildcards in RBAC permission definitions.",
+    "cvss": {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:N",
+      "score": 9.6,
+      "severity": "CRITICAL",
+      "attack_vector": "네트워크",
+      "attack_complexity": "낮음",
+      "privileges_required": "낮음",
+      "user_interaction": "없음"
+    },
+    "cwes": [
+      "CWE-269"
+    ],
+    "affected": [],
+    "references": [
+      "https://www.ibm.com/support/pages/node/7288830"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-17472",
+    "added_at": "2026-09-23T08:00:52+09:00"
+  },
+  {
+    "id": "CVE-2026-16346",
+    "published": "2026-09-22",
+    "last_modified": "2026-09-22",
+    "status": "Received",
+    "description": "IBM DataStage on Cloud Pak for Data 5.4.0.0 could allow a remote authenticated attacker to execute arbitrary commands due to improper neutralization of special elements used in an OS command.",
+    "cvss": {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H",
+      "score": 9.9,
+      "severity": "CRITICAL",
+      "attack_vector": "네트워크",
+      "attack_complexity": "낮음",
+      "privileges_required": "낮음",
+      "user_interaction": "없음"
+    },
+    "cwes": [
+      "CWE-285"
+    ],
+    "affected": [],
+    "references": [
+      "https://www.ibm.com/support/pages/node/7288649"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-16346",
+    "added_at": "2026-09-23T08:00:52+09:00"
   },
   {
     "id": "CVE-2026-13355",
