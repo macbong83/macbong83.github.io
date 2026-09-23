@@ -41,13 +41,36 @@
     <h1>CVE Archive</h1>
     <p>NVD 기반 Critical CVE를 누적 관리하는 별도 페이지입니다. 블로그에는 CVE 자동 글을 발행하지 않고, 이 페이지에만 기록합니다.</p>
     <div class="meta">
-      <span>Total 1152</span>
-      <span>Updated 2026-09-23 08:00 KST</span>
+      <span>Total 1156</span>
+      <span>Updated 2026-09-23 20:00 KST</span>
       <span>Source NVD API</span>
     </div>
   </section>
   <div class="notice">중복 제거 기준은 CVE ID입니다. 동일 CVE는 다시 추가하지 않습니다. 실제 악용 여부와 패치 우선순위는 CISA KEV, 벤더 권고, 자산 노출 여부와 함께 검토해야 합니다.</div>
 
+    <article class="cve-card" id="CVE-2026-96257">
+      <div class="cve-top">
+        <a class="cve-id" href="https://nvd.nist.gov/vuln/detail/CVE-2026-96257" target="_blank" rel="noopener">CVE-2026-96257</a>
+        <span class="score">CVSS 10.0 CRITICAL</span>
+      </div>
+      <p class="desc">A flaw has been found in Fast FAC1203R Gigabit Edition 2.0.4. Affected by this issue is the function copy_msg_element of the component Device Discovery Service. Executing a manipulation can lead to stack-based buffer overflow. The attack can be executed remotely. The exploit has been published and may be used. The vendor was contacted early about this disclosure but did not respond in any way.</p>
+      <dl>
+        <div><dt>Published</dt><dd>2026-09-23</dd></div>
+        <div><dt>Last Modified</dt><dd>2026-09-23</dd></div>
+        <div><dt>Status</dt><dd>Received</dd></div>
+        <div><dt>Attack Vector</dt><dd>네트워크</dd></div>
+        <div><dt>Attack Complexity</dt><dd>낮음</dd></div>
+        <div><dt>Privileges</dt><dd>없음</dd></div>
+        <div><dt>User Interaction</dt><dd>없음</dd></div>
+        <div><dt>CWE</dt><dd>CWE-119, CWE-121</dd></div>
+        <div><dt>Affected</dt><dd>NVD CPE 기준 확인 필요</dd></div>
+      </dl>
+      <div class="vector"><code>CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:H</code></div>
+      <details>
+        <summary>References</summary>
+        <ul><li><a href="https://github.com/xiaobor123/vuls-find-VxWorks/tree/main/vul-find-FAST_FAC1203R-copy_msg_element" target="_blank" rel="noopener">https://github.com/xiaobor123/vuls-find-VxWorks/tree/main/vul-find-FAST_FAC1203R-copy_msg_element</a></li><li><a href="https://vuldb.com/cve/CVE-2026-96257" target="_blank" rel="noopener">https://vuldb.com/cve/CVE-2026-96257</a></li><li><a href="https://vuldb.com/submit/901889" target="_blank" rel="noopener">https://vuldb.com/submit/901889</a></li><li><a href="https://vuldb.com/vuln/408707" target="_blank" rel="noopener">https://vuldb.com/vuln/408707</a></li></ul>
+      </details>
+    </article>
     <article class="cve-card" id="CVE-2026-94493">
       <div class="cve-top">
         <a class="cve-id" href="https://nvd.nist.gov/vuln/detail/CVE-2026-94493" target="_blank" rel="noopener">CVE-2026-94493</a>
@@ -736,6 +759,75 @@
       <details>
         <summary>References</summary>
         <ul><li><a href="https://www.liquidweb.com/software/give/" target="_blank" rel="noopener">https://www.liquidweb.com/software/give/</a></li><li><a href="https://www.wordfence.com/threat-intel/vulnerabilities/id/0cdd5562-8755-4ca3-9c16-a5b364f8408b?source=cve" target="_blank" rel="noopener">https://www.wordfence.com/threat-intel/vulnerabilities/id/0cdd5562-8755-4ca3-9c16-a5b364f8408b?source=cve</a></li></ul>
+      </details>
+    </article>
+    <article class="cve-card" id="CVE-2026-18169">
+      <div class="cve-top">
+        <a class="cve-id" href="https://nvd.nist.gov/vuln/detail/CVE-2026-18169" target="_blank" rel="noopener">CVE-2026-18169</a>
+        <span class="score">CVSS 9.9 CRITICAL</span>
+      </div>
+      <p class="desc">IBM Financial Transaction Manager (FTM) for RedHat OpenShift could allow a remote authenticated attacker to obtain sensitive information due to improper validation of symbolic links.</p>
+      <dl>
+        <div><dt>Published</dt><dd>2026-09-22</dd></div>
+        <div><dt>Last Modified</dt><dd>2026-09-22</dd></div>
+        <div><dt>Status</dt><dd>Received</dd></div>
+        <div><dt>Attack Vector</dt><dd>네트워크</dd></div>
+        <div><dt>Attack Complexity</dt><dd>낮음</dd></div>
+        <div><dt>Privileges</dt><dd>낮음</dd></div>
+        <div><dt>User Interaction</dt><dd>없음</dd></div>
+        <div><dt>CWE</dt><dd>CWE-22</dd></div>
+        <div><dt>Affected</dt><dd>NVD CPE 기준 확인 필요</dd></div>
+      </dl>
+      <div class="vector"><code>CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H</code></div>
+      <details>
+        <summary>References</summary>
+        <ul><li><a href="https://www.ibm.com/support/pages/node/7288641" target="_blank" rel="noopener">https://www.ibm.com/support/pages/node/7288641</a></li></ul>
+      </details>
+    </article>
+    <article class="cve-card" id="CVE-2026-18163">
+      <div class="cve-top">
+        <a class="cve-id" href="https://nvd.nist.gov/vuln/detail/CVE-2026-18163" target="_blank" rel="noopener">CVE-2026-18163</a>
+        <span class="score">CVSS 9.8 CRITICAL</span>
+      </div>
+      <p class="desc">IBM Financial Transaction Manager (FTM) for RedHat OpenShift could allow a remote attacker to execute arbitrary code due to improper deserialization of untrusted data.</p>
+      <dl>
+        <div><dt>Published</dt><dd>2026-09-22</dd></div>
+        <div><dt>Last Modified</dt><dd>2026-09-22</dd></div>
+        <div><dt>Status</dt><dd>Received</dd></div>
+        <div><dt>Attack Vector</dt><dd>네트워크</dd></div>
+        <div><dt>Attack Complexity</dt><dd>낮음</dd></div>
+        <div><dt>Privileges</dt><dd>없음</dd></div>
+        <div><dt>User Interaction</dt><dd>없음</dd></div>
+        <div><dt>CWE</dt><dd>CWE-502</dd></div>
+        <div><dt>Affected</dt><dd>NVD CPE 기준 확인 필요</dd></div>
+      </dl>
+      <div class="vector"><code>CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H</code></div>
+      <details>
+        <summary>References</summary>
+        <ul><li><a href="https://www.ibm.com/support/pages/node/7288641" target="_blank" rel="noopener">https://www.ibm.com/support/pages/node/7288641</a></li></ul>
+      </details>
+    </article>
+    <article class="cve-card" id="CVE-2026-18162">
+      <div class="cve-top">
+        <a class="cve-id" href="https://nvd.nist.gov/vuln/detail/CVE-2026-18162" target="_blank" rel="noopener">CVE-2026-18162</a>
+        <span class="score">CVSS 9.8 CRITICAL</span>
+      </div>
+      <p class="desc">IBM Financial Transaction Manager (FTM) for RedHat OpenShift could allow a remote attacker to execute arbitrary code due to improper neutralization of user-controlled input within the new Function constructor.</p>
+      <dl>
+        <div><dt>Published</dt><dd>2026-09-22</dd></div>
+        <div><dt>Last Modified</dt><dd>2026-09-22</dd></div>
+        <div><dt>Status</dt><dd>Received</dd></div>
+        <div><dt>Attack Vector</dt><dd>네트워크</dd></div>
+        <div><dt>Attack Complexity</dt><dd>낮음</dd></div>
+        <div><dt>Privileges</dt><dd>없음</dd></div>
+        <div><dt>User Interaction</dt><dd>없음</dd></div>
+        <div><dt>CWE</dt><dd>CWE-94</dd></div>
+        <div><dt>Affected</dt><dd>NVD CPE 기준 확인 필요</dd></div>
+      </dl>
+      <div class="vector"><code>CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H</code></div>
+      <details>
+        <summary>References</summary>
+        <ul><li><a href="https://www.ibm.com/support/pages/node/7288641" target="_blank" rel="noopener">https://www.ibm.com/support/pages/node/7288641</a></li></ul>
       </details>
     </article>
     <article class="cve-card" id="CVE-2026-17645">
