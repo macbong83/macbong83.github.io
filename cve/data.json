@@ -1,5 +1,98 @@
 [
   {
+    "id": "CVE-2026-96759",
+    "published": "2026-09-23",
+    "last_modified": "2026-09-23",
+    "status": "Deferred",
+    "description": "orval before 8.29.0 fails to escape the operationId parameter when emitting it into generated TanStack Query mutator options metadata objects. Attackers can inject arbitrary JavaScript code through a crafted operationId in an OpenAPI specification that executes when generated hooks are called.",
+    "cvss": {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "score": 9.8,
+      "severity": "CRITICAL",
+      "attack_vector": "네트워크",
+      "attack_complexity": "낮음",
+      "privileges_required": "없음",
+      "user_interaction": "없음"
+    },
+    "cwes": [
+      "CWE-94"
+    ],
+    "affected": [],
+    "references": [
+      "https://github.com/orval-labs/orval",
+      "https://github.com/orval-labs/orval/blob/v8.28.1/packages/query/src/query-generator.ts#L784",
+      "https://github.com/orval-labs/orval/commit/b28c53f3e0c06190e0f6ea136737e6316432448f",
+      "https://github.com/orval-labs/orval/pull/4008",
+      "https://github.com/orval-labs/orval/security/advisories/GHSA-vv88-cm6j-665j",
+      "https://www.vulncheck.com/advisories/orval-before-8.29.0-code-injection-via-operationid"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-96759",
+    "added_at": "2026-09-24T08:00:27+09:00"
+  },
+  {
+    "id": "CVE-2026-96755",
+    "published": "2026-09-23",
+    "last_modified": "2026-09-23",
+    "status": "Deferred",
+    "description": "orval versions 8.14.0 through 8.28.1 contain a code injection vulnerability in the @orval/effect generator that converts OpenAPI schema defaults into template literals. Attackers can inject arbitrary JavaScript expressions via schema defaults containing ${...} syntax, which are executed at module scope when the generated code is built or imported.",
+    "cvss": {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "score": 9.8,
+      "severity": "CRITICAL",
+      "attack_vector": "네트워크",
+      "attack_complexity": "낮음",
+      "privileges_required": "없음",
+      "user_interaction": "없음"
+    },
+    "cwes": [
+      "CWE-94"
+    ],
+    "affected": [],
+    "references": [
+      "https://github.com/orval-labs/orval",
+      "https://github.com/orval-labs/orval/blob/v8.28.1/packages/effect/src/index.ts#L298-L302",
+      "https://github.com/orval-labs/orval/commit/d346d94a660e50a2f8d0f7c17fee2c4c69d8dc23",
+      "https://github.com/orval-labs/orval/pull/3995",
+      "https://github.com/orval-labs/orval/security/advisories/GHSA-q7f2-jg6j-r867",
+      "https://www.vulncheck.com/advisories/orval-orval-effect-8.14.0-through-8.28.1-code-injection"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-96755",
+    "added_at": "2026-09-24T08:00:27+09:00"
+  },
+  {
+    "id": "CVE-2026-96754",
+    "published": "2026-09-23",
+    "last_modified": "2026-09-23",
+    "status": "Received",
+    "description": "orval versions before 8.29.0 contain a code injection vulnerability in the @orval/hono generator that fails to escape OpenAPI path values in single-quoted route literals. Attackers can craft an OpenAPI document with an apostrophe in a static path segment to inject arbitrary JavaScript code that executes when the generated TypeScript module is imported.",
+    "cvss": {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "score": 9.8,
+      "severity": "CRITICAL",
+      "attack_vector": "네트워크",
+      "attack_complexity": "낮음",
+      "privileges_required": "없음",
+      "user_interaction": "없음"
+    },
+    "cwes": [
+      "CWE-94"
+    ],
+    "affected": [],
+    "references": [
+      "https://github.com/orval-labs/orval",
+      "https://github.com/orval-labs/orval/blob/v8.28.1/packages/hono/src/index.ts#L169-L175",
+      "https://github.com/orval-labs/orval/commit/155a5b7a38ff6886020cbc4c292db57c2793e6b6",
+      "https://github.com/orval-labs/orval/commit/d346d94a660e50a2f8d0f7c17fee2c4c69d8dc23",
+      "https://github.com/orval-labs/orval/pull/4006",
+      "https://github.com/orval-labs/orval/security/advisories/GHSA-g4mf-q5hw-f9j9"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-96754",
+    "added_at": "2026-09-24T08:00:27+09:00"
+  },
+  {
     "id": "CVE-2026-96257",
     "published": "2026-09-23",
     "last_modified": "2026-09-23",
@@ -29,6 +122,113 @@
     ],
     "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-96257",
     "added_at": "2026-09-23T20:00:37+09:00"
+  },
+  {
+    "id": "CVE-2026-93352",
+    "published": "2026-09-23",
+    "last_modified": "2026-09-23",
+    "status": "Received",
+    "description": "Laravel-Mediable 7.0.0 before 7.0.2 contains an incomplete patch for CVE-2026-49972 in which the .pht extension is absent from the forbidden_extensions blocklist in config/mediable.php. The blocklist introduced to address CVE-2026-49972 includes phpt but omits pht, which Apache executes as PHP via the default FilesMatch directive on Debian and Ubuntu systems. An attacker can upload a .pht file that passes all validation in MediaUploader::verifyExtension() and File::sanitizeFileName() because pht is not present in the blocklist, causing the file to be written to disk and executed as PHP when requested, enabling remote code execution with the privileges of the web server process.",
+    "cvss": {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "score": 9.8,
+      "severity": "CRITICAL",
+      "attack_vector": "네트워크",
+      "attack_complexity": "낮음",
+      "privileges_required": "없음",
+      "user_interaction": "없음"
+    },
+    "cwes": [
+      "CWE-434"
+    ],
+    "affected": [],
+    "references": [
+      "https://github.com/plank/laravel-mediable/commit/8ddb0e5b300084e91ad2cb18a6e7bc768bb7b008",
+      "https://github.com/plank/laravel-mediable/pull/396",
+      "https://github.com/plank/laravel-mediable/releases/tag/7.0.2",
+      "https://www.vulncheck.com/advisories/laravel-mediable-rce-via-pht-file-upload"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-93352",
+    "added_at": "2026-09-24T08:00:27+09:00"
+  },
+  {
+    "id": "CVE-2026-6928",
+    "published": "2026-09-23",
+    "last_modified": "2026-09-23",
+    "status": "Received",
+    "description": "IBM Concert 1.0.0 through 3.0.0 references or accesses memory after it has been freed. This allows an attacker who can influence program execution or input may exploit this condition to corrupt memory, cause application crashes, or execute arbitrary code.",
+    "cvss": {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "score": 9.8,
+      "severity": "CRITICAL",
+      "attack_vector": "네트워크",
+      "attack_complexity": "낮음",
+      "privileges_required": "없음",
+      "user_interaction": "없음"
+    },
+    "cwes": [
+      "CWE-416"
+    ],
+    "affected": [],
+    "references": [
+      "https://www.ibm.com/support/pages/node/7288830"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-6928",
+    "added_at": "2026-09-24T08:00:27+09:00"
+  },
+  {
+    "id": "CVE-2026-6730",
+    "published": "2026-09-23",
+    "last_modified": "2026-09-23",
+    "status": "Received",
+    "description": "IBM Concert 1.0.0 through 3.0.0 is vulnerable to a buffer overflow, caused by improper bounds checking. A local user could overflow the buffer and execute arbitrary code on the system.",
+    "cvss": {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "score": 9.8,
+      "severity": "CRITICAL",
+      "attack_vector": "네트워크",
+      "attack_complexity": "낮음",
+      "privileges_required": "없음",
+      "user_interaction": "없음"
+    },
+    "cwes": [
+      "CWE-120"
+    ],
+    "affected": [],
+    "references": [
+      "https://www.ibm.com/support/pages/node/7288830"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-6730",
+    "added_at": "2026-09-24T08:00:27+09:00"
+  },
+  {
+    "id": "CVE-2026-6721",
+    "published": "2026-09-23",
+    "last_modified": "2026-09-23",
+    "status": "Received",
+    "description": "IBM Concert 1.0.0 through 3.0.0 allows an unauthenticated remote attacker can supply specially crafted input that is incorporated into OS commands, resulting in arbitrary command execution on the underlying system. Successful exploitation allows remote code execution with the privileges of the affected application.",
+    "cvss": {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "score": 9.8,
+      "severity": "CRITICAL",
+      "attack_vector": "네트워크",
+      "attack_complexity": "낮음",
+      "privileges_required": "없음",
+      "user_interaction": "없음"
+    },
+    "cwes": [
+      "CWE-78"
+    ],
+    "affected": [],
+    "references": [
+      "https://www.ibm.com/support/pages/node/7288830"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-6721",
+    "added_at": "2026-09-24T08:00:27+09:00"
   },
   {
     "id": "CVE-2026-94493",
@@ -138,6 +338,37 @@
     ],
     "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-83660",
     "added_at": "2026-09-23T08:00:52+09:00"
+  },
+  {
+    "id": "CVE-2026-82443",
+    "published": "2026-09-22",
+    "last_modified": "2026-09-23",
+    "status": "Analyzed",
+    "description": "Adobe Campaign Classic (ACC) is affected by a Server-Side Request Forgery (SSRF) vulnerability that could result in privilege escalation. A low-privileged attacker could exploit this vulnerability to gain elevated access to internal resources. Exploitation of this issue does not require user interaction. Scope is changed.",
+    "cvss": {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:N",
+      "score": 9.6,
+      "severity": "CRITICAL",
+      "attack_vector": "네트워크",
+      "attack_complexity": "낮음",
+      "privileges_required": "낮음",
+      "user_interaction": "없음"
+    },
+    "cwes": [
+      "CWE-918"
+    ],
+    "affected": [
+      "adobe campaign",
+      "adobe campaign 7.4.4",
+      "linux linux_kernel -",
+      "microsoft windows -"
+    ],
+    "references": [
+      "https://helpx.adobe.com/security/products/campaign/apsb26-142.html"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-82443",
+    "added_at": "2026-09-24T08:00:27+09:00"
   },
   {
     "id": "CVE-2026-82013",
