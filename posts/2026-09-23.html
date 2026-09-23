@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>취약점, 랜섬웨어 — 2026.09.23 보안 브리핑 | SecuLog</title>
+<meta name="description" content="오늘 주요 취약점·침해 사고·위협 트렌드 요약.">
+<meta name="keywords" content="CVE, 랜섬웨어, 취약점, 침해사고, 보안">
+<meta name="author" content="Felix">
+<meta property="og:type" content="article">
+<meta property="og:title" content="취약점, 랜섬웨어 — 2026.09.23 보안 브리핑">
+<meta property="og:description" content="오늘 주요 취약점·침해 사고·위협 트렌드 요약.">
+<meta property="og:url" content="https://macbong83.github.io/posts/2026-09-23.html">
+<meta property="og:site_name" content="SecuLog">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="취약점, 랜섬웨어 — 2026.09.23 보안 브리핑">
+<meta name="twitter:description" content="오늘 주요 취약점·침해 사고·위협 트렌드 요약.">
+<link rel="canonical" href="https://macbong83.github.io/posts/2026-09-23.html">
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: -apple-system, 'Malgun Gothic', 'Apple SD Gothic Neo', Arial, sans-serif; background: #f4f5f7; color: #1a1a2e; line-height: 1.6; }
+  a { text-decoration: none; color: inherit; }
+  .wrapper { max-width: 700px; margin: 32px auto; background: #ffffff; border-radius: 12px; overflow: hidden; box-shadow: 0 2px 20px rgba(0,0,0,0.08); }
+  .header { background: #eef0f4; padding: 28px 36px 24px; display: flex; align-items: center; justify-content: space-between; gap: 16px; border-bottom: 3px solid #0d1b3e; }
+  .wordmark { font-size: 26px; font-weight: 800; letter-spacing: -0.02em; color: #0d1b3e; }
+  .wordmark .accent { color: #2563eb; }
+  .header-meta { text-align: right; }
+  .header-meta .nl-label { font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase; color: #6b7488; margin-bottom: 4px; }
+  .header-meta .nl-title { font-size: 17px; font-weight: 700; color: #0d1b3e; }
+  .header-meta .nl-date { font-size: 12px; color: #8a93a8; margin-top: 3px; }
+  .body { padding: 28px 36px 32px; }
+  .section-label { font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase; color: #8a93a8; font-weight: 600; padding-bottom: 8px; border-bottom: 1px solid #e8eaed; margin-bottom: 4px; margin-top: 28px; }
+  .section-label:first-child { margin-top: 0; }
+  .card { display: block; padding: 16px 0; border-bottom: 1px solid #f0f1f3; transition: background 0.15s; }
+  .card:last-child { border-bottom: none; }
+  .card:hover { background: #f8f9fc; margin: 0 -36px; padding: 16px 36px; }
+  .card-top { display: flex; align-items: center; gap: 8px; margin-bottom: 6px; flex-wrap: wrap; }
+  .badge { font-size: 10px; font-weight: 700; padding: 3px 9px; border-radius: 4px; letter-spacing: 0.04em; }
+  .badge-critical { background: #fff0f0; color: #c0392b; border: 1px solid #f5c6c6; }
+  .badge-high { background: #fff7ee; color: #b94d00; border: 1px solid #fdd5a8; }
+  .badge-medium { background: #fff9e6; color: #856900; border: 1px solid #f9e0a0; }
+  .badge-incident { background: #f3f0ff; color: #6133c0; border: 1px solid #cfc0f5; }
+  .source { font-size: 11px; color: #a0a8b8; }
+  .card-headline { font-size: 14px; font-weight: 600; color: #0d1b3e; margin-bottom: 5px; line-height: 1.45; }
+  .card-headline .arrow { font-size: 12px; color: #2563eb; margin-left: 4px; opacity: 0; transition: opacity 0.15s; }
+  .card:hover .card-headline .arrow { opacity: 1; }
+  .card-summary { font-size: 13px; color: #4a5568; line-height: 1.65; }
+  .trend-box { background: #f8f9fc; border-radius: 10px; padding: 18px 20px; margin-top: 6px; }
+  .trend-row { display: flex; gap: 12px; padding: 10px 0; border-bottom: 1px solid #e8eaed; align-items: flex-start; }
+  .trend-row:last-child { border-bottom: none; padding-bottom: 0; }
+  .trend-num { font-size: 11px; font-weight: 700; color: #2563eb; min-width: 22px; padding-top: 2px; }
+  .trend-text { font-size: 13px; color: #4a5568; line-height: 1.6; }
+  .trend-text strong { color: #0d1b3e; font-weight: 600; }
+  .footer { background: #f4f5f7; border-top: 1px solid #e8eaed; padding: 16px 36px; font-size: 11px; color: #9aa0b0; line-height: 1.6; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 8px; }
+  .footer-meta { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; justify-content: flex-end; }
+  .linkedin-link { display: inline-flex; align-items: center; justify-content: center; min-height: 28px; padding: 6px 12px; border-radius: 6px; background: #0a66c2; color: #fff; font-size: 12px; font-weight: 800; letter-spacing: 0.01em; box-shadow: 0 6px 14px rgba(10,102,194,0.16); }
+  .linkedin-link:hover { background: #004182; color: #fff; }
+  .card-inner { display: flex; gap: 14px; }
+  .sev-bar { width: 3px; border-radius: 2px; flex-shrink: 0; margin: 3px 0; }
+  .sev-critical { background: #e74c3c; }
+  .sev-high { background: #e67e22; }
+  .sev-medium { background: #f0b429; }
+  .sev-incident { background: #7c3aed; }
+  .card-content { flex: 1; }
+  @media (max-width: 600px) {
+    .wrapper { margin: 0; border-radius: 0; box-shadow: none; }
+    .header { padding: 18px 20px 16px; flex-direction: column; align-items: flex-start; gap: 8px; }
+    .header-meta { text-align: left; }
+    .body { padding: 18px 20px 24px; }
+    .card:hover { margin: 0 -20px; padding: 16px 20px; }
+    .footer { padding: 14px 20px; flex-direction: column; align-items: flex-start; }
+    .footer-meta { justify-content: flex-start; }
+    .wordmark { font-size: 22px; }
+    .card-headline { font-size: 13px; }
+    .card-summary { font-size: 12px; }
+    .card-headline .arrow { opacity: 1; }
+  }
+</style>
+</head>
+<body>
+<div class="wrapper">
+  <div class="header">
+    <div class="header-logo">
+      <span class="wordmark">Secu<span class="accent">Log</span></span>
+    </div>
+    <div class="header-meta">
+      <div class="nl-label">글로벌 정보보안 뉴스레터</div>
+      <div class="nl-title">보안 브리핑</div>
+      <div class="nl-date">2026년 9월 23일 수요일</div>
+    </div>
+  </div>
+  <div class="body">
+    <div class="section-label">취약점 &amp; 공격</div>
+
+    <a class="card" href="https://thehackernews.com/2026/09/check-point-warns-of-management-server.html" target="_blank">
+      <div class="card-inner"><div class="sev-bar sev-critical"></div><div class="card-content">
+        <div class="card-top"><span class="badge badge-critical">긴급</span><span class="source">The Hacker News</span></div>
+        <div class="card-headline">Check Point 관리 서버 제로데이 악용으로 대상 공격 발생<span class="arrow">↗</span></div>
+        <div class="card-summary">Check Point는 7월 23일에 발생한 대상 공격에서 Security Management Server의 알려지지 않은 결함(CVE-2026-93616)이 악용된 것으로 밝혔다. 이 결함은 서버의 웹 서비스에 접근한 공격자가 로그인 없이 스크립트를 실행할 수 있다.</div>
+      </div></div>
+    </a>
+
+    <a class="card" href="https://thehackernews.com/2026/09/critical-bifrost-ai-gateway-flaw-lets.html" target="_blank">
+      <div class="card-inner"><div class="sev-bar sev-critical"></div><div class="card-content">
+        <div class="card-top"><span class="badge badge-critical">긴급</span><span class="source">The Hacker News</span></div>
+        <div class="card-headline">Bifrost AI 게이트웨이에서 인증 없이 명령 실행 가능한 심각한 결함 발견<span class="arrow">↗</span></div>
+        <div class="card-summary">Bifrost AI 게이트웨이의 심각한 결함(CVE-2026-90898, CVSS 9.8)은 인증 없이 단일 HTTP 요청으로 게이트웨이 서버에서 임의 명령을 실행할 수 있게 한다. 이는 20개 이상의 LLM 제공업체에 요청을 라우팅하는 오픈소스 AI 게이트웨이에서 발생했다.</div>
+      </div></div>
+    </a>
+
+    <a class="card" href="https://thehackernews.com/2026/09/wordpress-issues-patch-for-critical.html" target="_blank">
+      <div class="card-inner"><div class="sev-bar sev-high"></div><div class="card-content">
+        <div class="card-top"><span class="badge badge-high">높음</span><span class="source">The Hacker News</span></div>
+        <div class="card-headline">WordPress 핵심 소프트웨어의 심각한 결함으로 코드 실행 가능<span class="arrow">↗</span></div>
+        <div class="card-summary">WordPress는 사용자가 계정 없이 외부 테마 폴더 이외의 PHP 파일을 로드하게 하는 심각한 결함을 수정했다. 이 결함은 일부 서버에서는 공격자가 자신의 코드를 실행하게 할 수 있다.</div>
+      </div></div>
+    </a>
+
+    <a class="card" href="https://thehackernews.com/2026/09/zyxel-and-veeam-flaws-under-active.html" target="_blank">
+      <div class="card-inner"><div class="sev-bar sev-high"></div><div class="card-content">
+        <div class="card-top"><span class="badge badge-high">높음</span><span class="source">The Hacker News</span></div>
+        <div class="card-headline">Zyxel 및 Veeam 결함이 현재 악용되어 명령 및 SYSTEM 접근 가능<span class="arrow">↗</span></div>
+        <div class="card-summary">CISA는 Zyxel GS1900 시리즈 스위치에 영향을 주는 결함(CVE-2026-7273, CVSS 9.8)이 현재 악용되고 있다고 발표했다. 이 결함은 공격자가 명령 및 SYSTEM 수준 접근을 얻을 수 있게 한다.</div>
+      </div></div>
+    </a>
+
+    <a class="card" href="https://thehackernews.com/2026/09/new-linux-kernel-flaw-gives-arm64-kvm.html" target="_blank">
+      <div class="card-inner"><div class="sev-bar sev-medium"></div><div class="card-content">
+        <div class="card-top"><span class="badge badge-medium">중간</span><span class="source">The Hacker News</span></div>
+        <div class="card-headline">Linux 커널 KVM 코드의 새로운 결함으로 ARM64 KVM 게스트가 호스트 메모리에 읽기/쓰기 가능<span class="arrow">↗</span></div>
+        <div class="card-summary">Linux 커널의 KVM 가상화 코드에 새로운 결함(CVE-2026-89775)이 존재하며, 중첩 가상화가 활성화된 ARM64 호스트에서 게스트가 호스트 커널 메모리에 읽기/쓰기를 할 수 있게 한다.</div>
+      </div></div>
+    </a>
+
+    <div class="section-label">침해 사고</div>
+
+    <a class="card" href="https://www.securityweek.com/bigcommerce-data-stolen-via-ribon-apps-hack/" target="_blank">
+      <div class="card-inner"><div class="sev-bar sev-incident"></div><div class="card-content">
+        <div class="card-top"><span class="badge badge-incident">사고</span><span class="source">SecurityWeek</span></div>
+        <div class="card-headline">BigCommerce 데이터가 Ribon 앱 해킹으로 유출<span class="arrow">↗</span></div>
+        <div class="card-summary">공격자는 Ribon이 보유한 BigCommerce 애플리케이션 키를 사용해 고객 데이터에 접근했다. 이 사건은 BigCommerce의 데이터 유출 사례로 보고되고 있다.</div>
+      </div></div>
+    </a>
+
+    <a class="card" href="https://hackread.com/shinyhunters-hacks-fbi-jobs-portal-fbi-agents-data/" target="_blank">
+      <div class="card-inner"><div class="sev-bar sev-incident"></div><div class="card-content">
+        <div class="card-top"><span class="badge badge-incident">사고</span><span class="source">HackRead</span></div>
+        <div class="card-headline">ShinyHunters가 FBI 채용 포털 해킹, FBI 요원 데이터 유출 주장<span class="arrow">↗</span></div>
+        <div class="card-summary">ShinyHunters는 FBI 채용 포털을 해킹해 거의 모든 FBI 요원과 지원자의 민감한 데이터를 유출했다고 주장하며, 해당 사이트는 보안 작업을 위해 오프라인 상태로 전환되었다.</div>
+      </div></div>
+    </a>
+
+    <a class="card" href="https://www.securityweek.com/recent-zyxel-switch-vulnerability-exploited-by-chinese-hackers/" target="_blank">
+      <div class="card-inner"><div class="sev-bar sev-incident"></div><div class="card-content">
+        <div class="card-top"><span class="badge badge-incident">사고</span><span class="source">SecurityWeek</span></div>
+        <div class="card-headline">중국 해커가 최근 ZyXEL 스위치 결함 악용해 민감 정보 유출<span class="arrow">↗</span></div>
+        <div class="card-summary">중국 해커는 결함을 악용해 거의 1,000대의 ZyXEL 스위치에서 민감한 정보를 유출했다. 이는 ZyXEL 스위치의 최근 결함이 악용된 사례이다.</div>
+      </div></div>
+    </a>
+
+    <div class="section-label">동향 &amp; 분석</div>
+    <div class="trend-box">
+      <div class="trend-row">
+        <div class="trend-num">01</div>
+        <div class="trend-text"><strong>AI 기반 공격 증가</strong> — AI 기반의 공격이 증가하고 있으며, 특히 AI가 사용자 인증을 우회하거나 공격 경로를 자동으로 탐색하는 사례가 늘고 있다. 예를 들어, RatHat 악성코드는 생성형 AI를 사용해 실시간으로 은행 계좌 정보를 도난하고 있다.</div>
+      </div>
+      <div class="trend-row">
+        <div class="trend-num">02</div>
+        <div class="trend-text"><strong>npm 패키지 악용</strong> — npm 패키지가 악용되는 사례가 증가하고 있다. 예를 들어, &#x27;indexed-btree&#x27; 패키지는 악성 코드를 숨기기 위해 런타임 코드에 숨겨두었으며, 이는 보안 대응을 우회하기 위한 새로운 전략이다.</div>
+      </div>
+      <div class="trend-row">
+        <div class="trend-num">03</div>
+        <div class="trend-text"><strong>AI 에이전트 보안 취약점</strong> — AI 에이전트의 보안 취약점이 지속적으로 발견되고 있다. 예를 들어, Meta의 Muse 어시스턴트에 존재하는 설정을 악용해 공격자가 백도어를 생성할 수 있는 가능성이 제기되었다.</div>
+      </div>
+    </div>
+  </div>
+  <div class="footer">
+    <div>출처: The Hacker News · BleepingComputer · SecurityWeek · KrebsOnSecurity · CISA · NCSC UK · Unit 42 · 보안뉴스 · 데일리시큐 · 전자신문</div>
+    <div class="footer-meta">
+      <span>© 2026 Felix · SecuLog. 본 브리핑은 공개된 보안 뉴스를 기반으로 작성되었습니다.</span>
+    </div>
+  </div>
+</div>
+</body>
+</html>

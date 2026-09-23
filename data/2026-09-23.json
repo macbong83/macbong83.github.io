@@ -1,0 +1,100 @@
+{
+  "tagline": "글로벌 정보보안 뉴스레터",
+  "title": "보안 브리핑",
+  "date_display": "2026년 9월 23일 수요일",
+  "date_short": "2026.09.23",
+  "sources_line": "The Hacker News · BleepingComputer · SecurityWeek · KrebsOnSecurity · CISA · NCSC UK · Unit 42 · 보안뉴스 · 데일리시큐 · 전자신문",
+  "seo": {
+    "title": "취약점, 랜섬웨어 — 2026.09.23 보안 브리핑",
+    "description": "오늘 주요 취약점·침해 사고·위협 트렌드 요약.",
+    "keywords": "CVE, 랜섬웨어, 취약점, 침해사고, 보안"
+  },
+  "sections": [
+    {
+      "label": "취약점 & 공격",
+      "type": "cards",
+      "items": [
+        {
+          "severity": "critical",
+          "source": "The Hacker News",
+          "headline": "Check Point 관리 서버 제로데이 악용으로 대상 공격 발생",
+          "url": "https://thehackernews.com/2026/09/check-point-warns-of-management-server.html",
+          "summary": "Check Point는 7월 23일에 발생한 대상 공격에서 Security Management Server의 알려지지 않은 결함(CVE-2026-93616)이 악용된 것으로 밝혔다. 이 결함은 서버의 웹 서비스에 접근한 공격자가 로그인 없이 스크립트를 실행할 수 있다."
+        },
+        {
+          "severity": "critical",
+          "source": "The Hacker News",
+          "headline": "Bifrost AI 게이트웨이에서 인증 없이 명령 실행 가능한 심각한 결함 발견",
+          "url": "https://thehackernews.com/2026/09/critical-bifrost-ai-gateway-flaw-lets.html",
+          "summary": "Bifrost AI 게이트웨이의 심각한 결함(CVE-2026-90898, CVSS 9.8)은 인증 없이 단일 HTTP 요청으로 게이트웨이 서버에서 임의 명령을 실행할 수 있게 한다. 이는 20개 이상의 LLM 제공업체에 요청을 라우팅하는 오픈소스 AI 게이트웨이에서 발생했다."
+        },
+        {
+          "severity": "high",
+          "source": "The Hacker News",
+          "headline": "WordPress 핵심 소프트웨어의 심각한 결함으로 코드 실행 가능",
+          "url": "https://thehackernews.com/2026/09/wordpress-issues-patch-for-critical.html",
+          "summary": "WordPress는 사용자가 계정 없이 외부 테마 폴더 이외의 PHP 파일을 로드하게 하는 심각한 결함을 수정했다. 이 결함은 일부 서버에서는 공격자가 자신의 코드를 실행하게 할 수 있다."
+        },
+        {
+          "severity": "high",
+          "source": "The Hacker News",
+          "headline": "Zyxel 및 Veeam 결함이 현재 악용되어 명령 및 SYSTEM 접근 가능",
+          "url": "https://thehackernews.com/2026/09/zyxel-and-veeam-flaws-under-active.html",
+          "summary": "CISA는 Zyxel GS1900 시리즈 스위치에 영향을 주는 결함(CVE-2026-7273, CVSS 9.8)이 현재 악용되고 있다고 발표했다. 이 결함은 공격자가 명령 및 SYSTEM 수준 접근을 얻을 수 있게 한다."
+        },
+        {
+          "severity": "medium",
+          "source": "The Hacker News",
+          "headline": "Linux 커널 KVM 코드의 새로운 결함으로 ARM64 KVM 게스트가 호스트 메모리에 읽기/쓰기 가능",
+          "url": "https://thehackernews.com/2026/09/new-linux-kernel-flaw-gives-arm64-kvm.html",
+          "summary": "Linux 커널의 KVM 가상화 코드에 새로운 결함(CVE-2026-89775)이 존재하며, 중첩 가상화가 활성화된 ARM64 호스트에서 게스트가 호스트 커널 메모리에 읽기/쓰기를 할 수 있게 한다."
+        }
+      ]
+    },
+    {
+      "label": "침해 사고",
+      "type": "cards",
+      "items": [
+        {
+          "severity": "incident",
+          "source": "SecurityWeek",
+          "headline": "BigCommerce 데이터가 Ribon 앱 해킹으로 유출",
+          "url": "https://www.securityweek.com/bigcommerce-data-stolen-via-ribon-apps-hack/",
+          "summary": "공격자는 Ribon이 보유한 BigCommerce 애플리케이션 키를 사용해 고객 데이터에 접근했다. 이 사건은 BigCommerce의 데이터 유출 사례로 보고되고 있다."
+        },
+        {
+          "severity": "incident",
+          "source": "HackRead",
+          "headline": "ShinyHunters가 FBI 채용 포털 해킹, FBI 요원 데이터 유출 주장",
+          "url": "https://hackread.com/shinyhunters-hacks-fbi-jobs-portal-fbi-agents-data/",
+          "summary": "ShinyHunters는 FBI 채용 포털을 해킹해 거의 모든 FBI 요원과 지원자의 민감한 데이터를 유출했다고 주장하며, 해당 사이트는 보안 작업을 위해 오프라인 상태로 전환되었다."
+        },
+        {
+          "severity": "incident",
+          "source": "SecurityWeek",
+          "headline": "중국 해커가 최근 ZyXEL 스위치 결함 악용해 민감 정보 유출",
+          "url": "https://www.securityweek.com/recent-zyxel-switch-vulnerability-exploited-by-chinese-hackers/",
+          "summary": "중국 해커는 결함을 악용해 거의 1,000대의 ZyXEL 스위치에서 민감한 정보를 유출했다. 이는 ZyXEL 스위치의 최근 결함이 악용된 사례이다."
+        }
+      ]
+    },
+    {
+      "label": "동향 & 분석",
+      "type": "trends",
+      "items": [
+        {
+          "lead": "AI 기반 공격 증가",
+          "body": "AI 기반의 공격이 증가하고 있으며, 특히 AI가 사용자 인증을 우회하거나 공격 경로를 자동으로 탐색하는 사례가 늘고 있다. 예를 들어, RatHat 악성코드는 생성형 AI를 사용해 실시간으로 은행 계좌 정보를 도난하고 있다."
+        },
+        {
+          "lead": "npm 패키지 악용",
+          "body": "npm 패키지가 악용되는 사례가 증가하고 있다. 예를 들어, 'indexed-btree' 패키지는 악성 코드를 숨기기 위해 런타임 코드에 숨겨두었으며, 이는 보안 대응을 우회하기 위한 새로운 전략이다."
+        },
+        {
+          "lead": "AI 에이전트 보안 취약점",
+          "body": "AI 에이전트의 보안 취약점이 지속적으로 발견되고 있다. 예를 들어, Meta의 Muse 어시스턴트에 존재하는 설정을 악용해 공격자가 백도어를 생성할 수 있는 가능성이 제기되었다."
+        }
+      ]
+    }
+  ]
+}
