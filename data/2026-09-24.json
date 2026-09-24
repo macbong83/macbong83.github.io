@@ -1,0 +1,104 @@
+{
+  "tagline": "글로벌 정보보안 뉴스레터",
+  "title": "보안 브리핑",
+  "date_display": "2026년 9월 24일 목요일",
+  "date_short": "2026.09.24",
+  "sources_line": "The Hacker News · BleepingComputer · SecurityWeek · KrebsOnSecurity · CISA · NCSC UK · Unit 42 · 보안뉴스 · 데일리시큐 · 전자신문",
+  "seo": {
+    "title": "랜섬웨어, 취약점 — 2026.09.24 보안 브리핑",
+    "description": "오늘 주요 취약점·침해 사고·위협 트렌드 요약.",
+    "keywords": "CVE, 랜섬웨어, 취약점, 침해사고, 보안"
+  },
+  "sections": [
+    {
+      "label": "취약점 & 공격",
+      "type": "cards",
+      "items": [
+        {
+          "severity": "critical",
+          "source": "The Hacker News",
+          "headline": "F5 BIG-IP APM 제로데이 공격으로 원격 코드 실행 가능",
+          "url": "https://securityaffairs.com/199619/security/f5-big-ip-apm-zero-day-exploited-in-zero-day-rce-attacks.html",
+          "summary": "F5는 BIG-IP APM에서 제로데이 취약점 CVE-2026-94127이 발견되었으며, 이 취약점은 인증 없이 원격 코드 실행이 가능하다. 공격자는 이미 이를 악용하고 있으며, F5는 긴급한 보안 업데이트를 발표했다."
+        },
+        {
+          "severity": "critical",
+          "source": "The Hacker News",
+          "headline": "Bifrost AI 게이트웨이에서 인증 없이 명령 실행 가능한 취약점 발견",
+          "url": "https://thehackernews.com/2026/09/critical-bifrost-ai-gateway-flaw-lets.html",
+          "summary": "Bifrost AI 게이트웨이의 CVE-2026-90898 취약점은 인증 없이 단일 HTTP 요청으로 명령을 실행할 수 있게 해준다. CVSS 점수는 9.8으로 매우 심각한 취약점이다."
+        },
+        {
+          "severity": "high",
+          "source": "The Hacker News",
+          "headline": "MikroTik 라우터에서 인증 없이 관리자 권한 획득 가능한 취약점 발견",
+          "url": "https://thehackernews.com/2026/09/mikrotrick-chain-let-attackers-take.html",
+          "summary": "MikroTik RouterOS의 SSH 취약점인 CVE-2026-67279와 다른 취약점이 결합되어, 인증 없이 라우터의 관리자 권한을 얻을 수 있다. 이는 인터넷에 노출된 라우터에 큰 위협이 된다."
+        },
+        {
+          "severity": "high",
+          "source": "The Hacker News",
+          "headline": "Next.js에서 ImageResponse 기능을 통해 서버 코드 실행 가능한 취약점 발견",
+          "url": "https://thehackernews.com/2026/09/critical-nextjs-imageresponse-flaw-can.html",
+          "summary": "Next.js의 ImageResponse 기능에 취약점이 발견되어, 공격자가 SVG 입력을 통해 서버 코드를 실행할 수 있다. 이는 악의적인 사용자가 Open Graph 이미지를 생성하는 과정에서 악용할 수 있다."
+        },
+        {
+          "severity": "medium",
+          "source": "The Hacker News",
+          "headline": "cPanel의 CalDAV 서비스에서 루트 권한 획득 가능한 취약점 발견",
+          "url": "https://thehackernews.com/2026/09/new-cpanel-flaw-lets-hosting-account_0272795595.html",
+          "summary": "cPanel의 CalDAV 서비스에 취약점이 존재하여, 호스팅 계정 소유자가 루트 권한을 얻을 수 있다. 이는 서버 전체를 제어할 수 있는 심각한 문제이다."
+        }
+      ]
+    },
+    {
+      "label": "침해 사고",
+      "type": "cards",
+      "items": [
+        {
+          "severity": "incident",
+          "source": "The Hacker News",
+          "headline": "ShinyHunters, FBI 해킹 주장하며 에이전트 및 지원자 데이터 유출",
+          "url": "https://thehackernews.com/2026/09/shinyhunters-claims-fbi-breach-says-it.html",
+          "summary": "ShinyHunters라는 해킹 그룹은 FBI를 해킹했다고 주장하며, 현재 및 이전 FBI 에이전트 및 지원자의 민감한 데이터를 유출했다고 주장했다. 이는 심각한 보안 사고로 간주된다."
+        },
+        {
+          "severity": "incident",
+          "source": "The Hacker News",
+          "headline": "EvilTokens AI 기반 피싱 서비스, Microsoft에 의해 차단",
+          "url": "https://thehackernews.com/2026/09/microsoft-takes-down-eviltokens-device.html",
+          "summary": "Microsoft는 AI 기반 피싱 서비스인 EvilTokens를 차단했으며, 이는 12,000개의 이메일 계정을 해킹한 것으로 알려졌다. 이는 AI 기술이 피싱 공격에 악용될 수 있음을 보여준다."
+        },
+        {
+          "severity": "incident",
+          "source": "The Hacker News",
+          "headline": "Fake Crypto Wallet 앱으로 PamStealer 악성코드 배포",
+          "url": "https://gbhackers.com/fake-crypto-wallet-app/",
+          "summary": "가짜 암호화폐 지갑 앱을 통해 macOS 인포스테이러 PamStealer가 배포되었으며, 사용자의 자격 증명 및 브라우저 데이터를 유출하는 것으로 확인되었다."
+        }
+      ]
+    },
+    {
+      "label": "동향 & 분석",
+      "type": "trends",
+      "items": [
+        {
+          "lead": "AI 기반 공격 증가",
+          "body": "AI 기술이 피싱 및 악성코드 배포에 활용되고 있으며, 이는 공격의 자동화와 정교화를 촉진하고 있다. Microsoft와 Google은 AI 기반 공격에 대응하기 위해 다양한 보안 조치를 취하고 있다."
+        },
+        {
+          "lead": "제로데이 취약점의 빈번한 발견",
+          "body": "최근 보고된 제로데이 취약점은 F5, MikroTik, Next.js 등 다양한 플랫폼에서 발견되었으며, 이는 보안 업데이트가 지연되거나 누락될 경우 심각한 영향을 줄 수 있다."
+        },
+        {
+          "lead": "보안 업데이트의 중요성 강조",
+          "body": "CISA와 여러 보안 업체는 취약점 패치의 중요성을 강조하고 있으며, 특히 제로데이 취약점은 즉시 패치가 필요하다. 사용자는 보안 업데이트를 정기적으로 확인해야 한다."
+        },
+        {
+          "lead": "AI 기반 보안 솔루션의 확대",
+          "body": "AI 기반 보안 솔루션은 공격 감지 및 대응에 효과적이며, Microsoft와 여러 보안 기업은 AI 기술을 활용한 보안 제품을 개발하고 있다. 그러나 AI 기술의 악용 가능성도 동시에 증가하고 있다."
+        }
+      ]
+    }
+  ]
+}
