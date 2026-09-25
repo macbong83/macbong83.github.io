@@ -41,13 +41,82 @@
     <h1>CVE Archive</h1>
     <p>NVD 기반 Critical CVE를 누적 관리하는 별도 페이지입니다. 블로그에는 CVE 자동 글을 발행하지 않고, 이 페이지에만 기록합니다.</p>
     <div class="meta">
-      <span>Total 1168</span>
-      <span>Updated 2026-09-25 08:00 KST</span>
+      <span>Total 1171</span>
+      <span>Updated 2026-09-25 20:00 KST</span>
       <span>Source NVD API</span>
     </div>
   </section>
   <div class="notice">중복 제거 기준은 CVE ID입니다. 동일 CVE는 다시 추가하지 않습니다. 실제 악용 여부와 패치 우선순위는 CISA KEV, 벤더 권고, 자산 노출 여부와 함께 검토해야 합니다.</div>
 
+    <article class="cve-card" id="CVE-2026-93399">
+      <div class="cve-top">
+        <a class="cve-id" href="https://nvd.nist.gov/vuln/detail/CVE-2026-93399" target="_blank" rel="noopener">CVE-2026-93399</a>
+        <span class="score">CVSS 9.1 CRITICAL</span>
+      </div>
+      <p class="desc">The Bookly plugin for WordPress is vulnerable to Insecure Direct Object Reference in versions up to, and including, 28.2 via the &#x27;bookly_get_form_id&#x27;, &#x27;bookly_render_complete&#x27;, &#x27;bookly_add_to_calendar&#x27; and &#x27;bookly_rollback_order&#x27; AJAX actions. This is due to the &#x27;bookly_get_form_id&#x27; handler blindly storing the attacker-controlled &#x27;order_id&#x27; from the submitted form_data into a new booking session, which the &#x27;bookly_render_complete&#x27; handler then trusts to look up and return the corresponding Order&#x27;s secret token without verifying that the current session created that order. This makes it possible for unauthenticated attackers to enumerate sequential order IDs, disclose other customers&#x27; order tokens, retrieve calendar/appointment information via &#x27;bookly_add_to_calendar&#x27; and permanently delete arbitrary non-completed bookings via &#x27;bookly_rollback_order&#x27;, which cascade-deletes the customer_appointment and (when no other customers are attached) the underlying appointment.</p>
+      <dl>
+        <div><dt>Published</dt><dd>2026-09-25</dd></div>
+        <div><dt>Last Modified</dt><dd>2026-09-25</dd></div>
+        <div><dt>Status</dt><dd>Received</dd></div>
+        <div><dt>Attack Vector</dt><dd>네트워크</dd></div>
+        <div><dt>Attack Complexity</dt><dd>낮음</dd></div>
+        <div><dt>Privileges</dt><dd>없음</dd></div>
+        <div><dt>User Interaction</dt><dd>없음</dd></div>
+        <div><dt>CWE</dt><dd>CWE-639</dd></div>
+        <div><dt>Affected</dt><dd>NVD CPE 기준 확인 필요</dd></div>
+      </dl>
+      <div class="vector"><code>CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:H</code></div>
+      <details>
+        <summary>References</summary>
+        <ul><li><a href="https://plugins.trac.wordpress.org/browser/bookly-responsive-appointment-booking-tool/tags/28.2/frontend/modules/booking/Ajax.php#L1111" target="_blank" rel="noopener">https://plugins.trac.wordpress.org/browser/bookly-responsive-appointment-booking-tool/tags/28.2/frontend/modules/booking/Ajax.php#L1111</a></li><li><a href="https://plugins.trac.wordpress.org/browser/bookly-responsive-appointment-booking-tool/tags/28.2/frontend/modules/booking/Ajax.php#L46" target="_blank" rel="noopener">https://plugins.trac.wordpress.org/browser/bookly-responsive-appointment-booking-tool/tags/28.2/frontend/modules/booking/Ajax.php#L46</a></li><li><a href="https://plugins.trac.wordpress.org/browser/bookly-responsive-appointment-booking-tool/tags/28.2/frontend/modules/booking/Ajax.php#L733" target="_blank" rel="noopener">https://plugins.trac.wordpress.org/browser/bookly-responsive-appointment-booking-tool/tags/28.2/frontend/modules/booking/Ajax.php#L733</a></li><li><a href="https://plugins.trac.wordpress.org/browser/bookly-responsive-appointment-booking-tool/tags/28.2/frontend/modules/payment/Ajax.php#L74" target="_blank" rel="noopener">https://plugins.trac.wordpress.org/browser/bookly-responsive-appointment-booking-tool/tags/28.2/frontend/modules/payment/Ajax.php#L74</a></li></ul>
+      </details>
+    </article>
+    <article class="cve-card" id="CVE-2026-89055">
+      <div class="cve-top">
+        <a class="cve-id" href="https://nvd.nist.gov/vuln/detail/CVE-2026-89055" target="_blank" rel="noopener">CVE-2026-89055</a>
+        <span class="score">CVSS 9.1 CRITICAL</span>
+      </div>
+      <p class="desc">The Customer Reviews for WooCommerce plugin for WordPress is vulnerable to authorization bypass in all versions up to, and including, 5.120.0. This is due to the plugin not properly verifying that a user is authorized to perform an action. This makes it possible for unauthenticated attackers to permanently delete arbitrary attachments from the Media Library — including administrator-owned product images, logos, and documents — by injecting their IDs into a review that is later trashed and purged. Exploitation requires a public review-form link (a 13-hex formId distributed to customers via e-mail), which exposes the nonce needed to reach the handler without any WordPress account or session.</p>
+      <dl>
+        <div><dt>Published</dt><dd>2026-09-25</dd></div>
+        <div><dt>Last Modified</dt><dd>2026-09-25</dd></div>
+        <div><dt>Status</dt><dd>Received</dd></div>
+        <div><dt>Attack Vector</dt><dd>네트워크</dd></div>
+        <div><dt>Attack Complexity</dt><dd>낮음</dd></div>
+        <div><dt>Privileges</dt><dd>없음</dd></div>
+        <div><dt>User Interaction</dt><dd>없음</dd></div>
+        <div><dt>CWE</dt><dd>CWE-862</dd></div>
+        <div><dt>Affected</dt><dd>NVD CPE 기준 확인 필요</dd></div>
+      </dl>
+      <div class="vector"><code>CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:H</code></div>
+      <details>
+        <summary>References</summary>
+        <ul><li><a href="https://plugins.trac.wordpress.org/browser/customer-reviews-woocommerce/tags/5.120.0/includes/reminders/class-cr-local-forms-ajax.php#L57" target="_blank" rel="noopener">https://plugins.trac.wordpress.org/browser/customer-reviews-woocommerce/tags/5.120.0/includes/reminders/class-cr-local-forms-ajax.php#L57</a></li><li><a href="https://plugins.trac.wordpress.org/browser/customer-reviews-woocommerce/tags/5.120.0/includes/reviews/class-cr-endpoint.php#L318" target="_blank" rel="noopener">https://plugins.trac.wordpress.org/browser/customer-reviews-woocommerce/tags/5.120.0/includes/reviews/class-cr-endpoint.php#L318</a></li><li><a href="https://plugins.trac.wordpress.org/browser/customer-reviews-woocommerce/tags/5.120.0/includes/reviews/class-cr-endpoint.php#L467" target="_blank" rel="noopener">https://plugins.trac.wordpress.org/browser/customer-reviews-woocommerce/tags/5.120.0/includes/reviews/class-cr-endpoint.php#L467</a></li><li><a href="https://plugins.trac.wordpress.org/browser/customer-reviews-woocommerce/tags/5.120.0/includes/reviews/class-cr-reviews.php#L129" target="_blank" rel="noopener">https://plugins.trac.wordpress.org/browser/customer-reviews-woocommerce/tags/5.120.0/includes/reviews/class-cr-reviews.php#L129</a></li></ul>
+      </details>
+    </article>
+    <article class="cve-card" id="CVE-2026-14281">
+      <div class="cve-top">
+        <a class="cve-id" href="https://nvd.nist.gov/vuln/detail/CVE-2026-14281" target="_blank" rel="noopener">CVE-2026-14281</a>
+        <span class="score">CVSS 9.8 CRITICAL</span>
+      </div>
+      <p class="desc">The Automation Web Platform – Notifications and OTP for WooCommerce, Advanced Country Code plugin for WordPress is vulnerable to Privilege Escalation in all versions up to, and including, 4.8.6. This is due to missing permission enforcement on the publicly accessible REST route `POST /wp-json/wawp/v1/signup/&lt;op&gt;` and the absence of a key allowlist in the `finish_registration_logic` function, which copies the attacker-controlled `wawp_custom_fields` parameter directly into `update_user_meta()` — allowing sensitive meta keys such as `wp_capabilities` and `wp_user_level` to be set by the caller. This makes it possible for unauthenticated attackers to register a new account with the administrator role and gain full administrative access to the site. When OTP verification is enabled at signup, the OTP session token (`otp_transient`) is returned in plaintext in the HTTP response body, and the `handle_magic_link_request()` handler marks that token as verified on any unauthenticated GET request containing it without ever checking the OTP code value — making the OTP step trivially bypassable with no inbox or SMS access required.</p>
+      <dl>
+        <div><dt>Published</dt><dd>2026-09-25</dd></div>
+        <div><dt>Last Modified</dt><dd>2026-09-25</dd></div>
+        <div><dt>Status</dt><dd>Received</dd></div>
+        <div><dt>Attack Vector</dt><dd>네트워크</dd></div>
+        <div><dt>Attack Complexity</dt><dd>낮음</dd></div>
+        <div><dt>Privileges</dt><dd>없음</dd></div>
+        <div><dt>User Interaction</dt><dd>없음</dd></div>
+        <div><dt>CWE</dt><dd>CWE-269</dd></div>
+        <div><dt>Affected</dt><dd>NVD CPE 기준 확인 필요</dd></div>
+      </dl>
+      <div class="vector"><code>CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H</code></div>
+      <details>
+        <summary>References</summary>
+        <ul><li><a href="https://plugins.trac.wordpress.org/browser/automation-web-platform/tags/4.8.6/includes/api/class-wawp-rest-settings-api.php#L342" target="_blank" rel="noopener">https://plugins.trac.wordpress.org/browser/automation-web-platform/tags/4.8.6/includes/api/class-wawp-rest-settings-api.php#L342</a></li><li><a href="https://plugins.trac.wordpress.org/browser/automation-web-platform/tags/4.8.6/includes/api/class-wawp-rest-settings-api.php#L574" target="_blank" rel="noopener">https://plugins.trac.wordpress.org/browser/automation-web-platform/tags/4.8.6/includes/api/class-wawp-rest-settings-api.php#L574</a></li><li><a href="https://plugins.trac.wordpress.org/browser/automation-web-platform/tags/4.8.6/includes/auth-services/class-wawp-otp-service.php#L477" target="_blank" rel="noopener">https://plugins.trac.wordpress.org/browser/automation-web-platform/tags/4.8.6/includes/auth-services/class-wawp-otp-service.php#L477</a></li><li><a href="https://plugins.trac.wordpress.org/browser/automation-web-platform/tags/4.8.6/includes/auth-services/class-wawp-otp-service.php#L787" target="_blank" rel="noopener">https://plugins.trac.wordpress.org/browser/automation-web-platform/tags/4.8.6/includes/auth-services/class-wawp-otp-service.php#L787</a></li></ul>
+      </details>
+    </article>
     <article class="cve-card" id="CVE-2026-97359">
       <div class="cve-top">
         <a class="cve-id" href="https://nvd.nist.gov/vuln/detail/CVE-2026-97359" target="_blank" rel="noopener">CVE-2026-97359</a>

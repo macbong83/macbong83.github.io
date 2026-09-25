@@ -1,5 +1,98 @@
 [
   {
+    "id": "CVE-2026-93399",
+    "published": "2026-09-25",
+    "last_modified": "2026-09-25",
+    "status": "Received",
+    "description": "The Bookly plugin for WordPress is vulnerable to Insecure Direct Object Reference in versions up to, and including, 28.2 via the 'bookly_get_form_id', 'bookly_render_complete', 'bookly_add_to_calendar' and 'bookly_rollback_order' AJAX actions. This is due to the 'bookly_get_form_id' handler blindly storing the attacker-controlled 'order_id' from the submitted form_data into a new booking session, which the 'bookly_render_complete' handler then trusts to look up and return the corresponding Order's secret token without verifying that the current session created that order. This makes it possible for unauthenticated attackers to enumerate sequential order IDs, disclose other customers' order tokens, retrieve calendar/appointment information via 'bookly_add_to_calendar' and permanently delete arbitrary non-completed bookings via 'bookly_rollback_order', which cascade-deletes the customer_appointment and (when no other customers are attached) the underlying appointment.",
+    "cvss": {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:H",
+      "score": 9.1,
+      "severity": "CRITICAL",
+      "attack_vector": "네트워크",
+      "attack_complexity": "낮음",
+      "privileges_required": "없음",
+      "user_interaction": "없음"
+    },
+    "cwes": [
+      "CWE-639"
+    ],
+    "affected": [],
+    "references": [
+      "https://plugins.trac.wordpress.org/browser/bookly-responsive-appointment-booking-tool/tags/28.2/frontend/modules/booking/Ajax.php#L1111",
+      "https://plugins.trac.wordpress.org/browser/bookly-responsive-appointment-booking-tool/tags/28.2/frontend/modules/booking/Ajax.php#L46",
+      "https://plugins.trac.wordpress.org/browser/bookly-responsive-appointment-booking-tool/tags/28.2/frontend/modules/booking/Ajax.php#L733",
+      "https://plugins.trac.wordpress.org/browser/bookly-responsive-appointment-booking-tool/tags/28.2/frontend/modules/payment/Ajax.php#L74",
+      "https://plugins.trac.wordpress.org/browser/bookly-responsive-appointment-booking-tool/tags/28.2/lib/UserBookingData.php#L360",
+      "https://plugins.trac.wordpress.org/browser/bookly-responsive-appointment-booking-tool/tags/28.2/lib/base/Gateway.php#L301"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-93399",
+    "added_at": "2026-09-25T20:00:34+09:00"
+  },
+  {
+    "id": "CVE-2026-89055",
+    "published": "2026-09-25",
+    "last_modified": "2026-09-25",
+    "status": "Received",
+    "description": "The Customer Reviews for WooCommerce plugin for WordPress is vulnerable to authorization bypass in all versions up to, and including, 5.120.0. This is due to the plugin not properly verifying that a user is authorized to perform an action. This makes it possible for unauthenticated attackers to permanently delete arbitrary attachments from the Media Library — including administrator-owned product images, logos, and documents — by injecting their IDs into a review that is later trashed and purged. Exploitation requires a public review-form link (a 13-hex formId distributed to customers via e-mail), which exposes the nonce needed to reach the handler without any WordPress account or session.",
+    "cvss": {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:H",
+      "score": 9.1,
+      "severity": "CRITICAL",
+      "attack_vector": "네트워크",
+      "attack_complexity": "낮음",
+      "privileges_required": "없음",
+      "user_interaction": "없음"
+    },
+    "cwes": [
+      "CWE-862"
+    ],
+    "affected": [],
+    "references": [
+      "https://plugins.trac.wordpress.org/browser/customer-reviews-woocommerce/tags/5.120.0/includes/reminders/class-cr-local-forms-ajax.php#L57",
+      "https://plugins.trac.wordpress.org/browser/customer-reviews-woocommerce/tags/5.120.0/includes/reviews/class-cr-endpoint.php#L318",
+      "https://plugins.trac.wordpress.org/browser/customer-reviews-woocommerce/tags/5.120.0/includes/reviews/class-cr-endpoint.php#L467",
+      "https://plugins.trac.wordpress.org/browser/customer-reviews-woocommerce/tags/5.120.0/includes/reviews/class-cr-reviews.php#L129",
+      "https://plugins.trac.wordpress.org/browser/customer-reviews-woocommerce/tags/5.120.0/includes/reviews/class-cr-reviews.php#L1871",
+      "https://plugins.trac.wordpress.org/changeset?reponame=&old=3694303%40customer-reviews-woocommerce&new=3694303%40customer-reviews-woocommerce"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-89055",
+    "added_at": "2026-09-25T20:00:34+09:00"
+  },
+  {
+    "id": "CVE-2026-14281",
+    "published": "2026-09-25",
+    "last_modified": "2026-09-25",
+    "status": "Received",
+    "description": "The Automation Web Platform – Notifications and OTP for WooCommerce, Advanced Country Code plugin for WordPress is vulnerable to Privilege Escalation in all versions up to, and including, 4.8.6. This is due to missing permission enforcement on the publicly accessible REST route `POST /wp-json/wawp/v1/signup/<op>` and the absence of a key allowlist in the `finish_registration_logic` function, which copies the attacker-controlled `wawp_custom_fields` parameter directly into `update_user_meta()` — allowing sensitive meta keys such as `wp_capabilities` and `wp_user_level` to be set by the caller. This makes it possible for unauthenticated attackers to register a new account with the administrator role and gain full administrative access to the site. When OTP verification is enabled at signup, the OTP session token (`otp_transient`) is returned in plaintext in the HTTP response body, and the `handle_magic_link_request()` handler marks that token as verified on any unauthenticated GET request containing it without ever checking the OTP code value — making the OTP step trivially bypassable with no inbox or SMS access required.",
+    "cvss": {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "score": 9.8,
+      "severity": "CRITICAL",
+      "attack_vector": "네트워크",
+      "attack_complexity": "낮음",
+      "privileges_required": "없음",
+      "user_interaction": "없음"
+    },
+    "cwes": [
+      "CWE-269"
+    ],
+    "affected": [],
+    "references": [
+      "https://plugins.trac.wordpress.org/browser/automation-web-platform/tags/4.8.6/includes/api/class-wawp-rest-settings-api.php#L342",
+      "https://plugins.trac.wordpress.org/browser/automation-web-platform/tags/4.8.6/includes/api/class-wawp-rest-settings-api.php#L574",
+      "https://plugins.trac.wordpress.org/browser/automation-web-platform/tags/4.8.6/includes/auth-services/class-wawp-otp-service.php#L477",
+      "https://plugins.trac.wordpress.org/browser/automation-web-platform/tags/4.8.6/includes/auth-services/class-wawp-otp-service.php#L787",
+      "https://plugins.trac.wordpress.org/browser/automation-web-platform/tags/4.8.6/includes/auth-services/class-wawp-signup.php#L1002",
+      "https://plugins.trac.wordpress.org/browser/automation-web-platform/tags/4.8.6/includes/auth-services/class-wawp-signup.php#L845"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-14281",
+    "added_at": "2026-09-25T20:00:34+09:00"
+  },
+  {
     "id": "CVE-2026-97359",
     "published": "2026-09-24",
     "last_modified": "2026-09-24",
