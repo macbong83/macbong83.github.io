@@ -1,5 +1,65 @@
 [
   {
+    "id": "CVE-2026-85984",
+    "published": "2026-09-26",
+    "last_modified": "2026-09-26",
+    "status": "Received",
+    "description": "The miniOrange OTP Login, Verification and SMS Notifications plugin for WordPress is vulnerable to Authentication Bypass via the mo_wp_login_intent parameter in all versions up to, and including, 5.5.5. This is due to a missing password-intent guard in the skip_pass_fallback-enabled configuration branch of the mo_by_pass_login() function, which treats administrator role membership alone as sufficient authentication whenever the unauthenticated, unverified POST parameter mo_wp_login_intent is submitted with the value otp, causing mo_get_user() to skip wp_authenticate_username_password() and resolve a WP_User purely from a username lookup. This makes it possible for unauthenticated attackers to log in as any existing administrator account by supplying only a known username and an empty password alongside mo_wp_login_intent=otp, with no password or OTP verification required. Exploitation is conditional on a site administrator having simultaneously enabled the following plugin options: WP Login OTP, Login with Only OTP, Allow Users to Login with Username and Password, and Admin OTP Bypass.",
+    "cvss": {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "score": 9.8,
+      "severity": "CRITICAL",
+      "attack_vector": "네트워크",
+      "attack_complexity": "낮음",
+      "privileges_required": "없음",
+      "user_interaction": "없음"
+    },
+    "cwes": [
+      "CWE-287"
+    ],
+    "affected": [],
+    "references": [
+      "https://plugins.trac.wordpress.org/browser/miniorange-otp-verification/tags/5.5.5/includes/js/loginform.js#L176",
+      "https://plugins.trac.wordpress.org/browser/miniorange-otp-verification/tags/5.5.5/views/forms/mowploginform.php#L134",
+      "https://plugins.trac.wordpress.org/changeset/3687601/miniorange-otp-verification",
+      "https://www.wordfence.com/threat-intel/vulnerabilities/id/2895f0c2-41b6-4b11-9865-3bded4402aa9?source=cve"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-85984",
+    "added_at": "2026-09-27T08:01:01+09:00"
+  },
+  {
+    "id": "CVE-2026-82901",
+    "published": "2026-09-26",
+    "last_modified": "2026-09-26",
+    "status": "Received",
+    "description": "The Ultra Addons for Contact Form 7 plugin for WordPress is vulnerable to Arbitrary File Upload due to insufficient file type validation in the 'uacf7_wpcf7_mail_components' function in all versions up to, and including, 3.5.50. This makes it possible for unauthenticated attackers to upload arbitrary files on the affected site's server which may make remote code execution possible. Note: This is only exploitable when the plugin's PDF Generator module is enabled, which is disabled by default.",
+    "cvss": {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "score": 9.8,
+      "severity": "CRITICAL",
+      "attack_vector": "네트워크",
+      "attack_complexity": "낮음",
+      "privileges_required": "없음",
+      "user_interaction": "없음"
+    },
+    "cwes": [
+      "CWE-434"
+    ],
+    "affected": [],
+    "references": [
+      "https://plugins.trac.wordpress.org/browser/ultimate-addons-for-contact-form-7/tags/3.5.48/addons/pdf-generator/pdf-generator.php#L608",
+      "https://plugins.trac.wordpress.org/browser/ultimate-addons-for-contact-form-7/tags/3.5.48/addons/pdf-generator/pdf-generator.php#L807",
+      "https://plugins.trac.wordpress.org/browser/ultimate-addons-for-contact-form-7/tags/3.5.48/addons/signature/ultimate-signature.php#L133",
+      "https://plugins.trac.wordpress.org/browser/ultimate-addons-for-contact-form-7/tags/3.5.48/addons/signature/ultimate-signature.php#L192",
+      "https://plugins.trac.wordpress.org/browser/ultimate-addons-for-contact-form-7/tags/3.5.48/addons/signature/ultimate-signature.php#L300",
+      "https://plugins.trac.wordpress.org/changeset/3698232/ultimate-addons-for-contact-form-7"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-82901",
+    "added_at": "2026-09-27T08:01:01+09:00"
+  },
+  {
     "id": "CVE-2026-18143",
     "published": "2026-09-26",
     "last_modified": "2026-09-26",
@@ -25,6 +85,141 @@
     ],
     "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-18143",
     "added_at": "2026-09-26T20:00:20+09:00"
+  },
+  {
+    "id": "CVE-2026-100717",
+    "published": "2026-09-26",
+    "last_modified": "2026-09-26",
+    "status": "Deferred",
+    "description": "froxlor is a server administration panel. In versions 2.3.10 and earlier, Validate::validateUrl rejects carriage return and line feed characters only in the path, query and fragment components returned by parse_url, and never inspects the userinfo (user:pass@) components. This is an incomplete fix for GHSA-c3p2. An authenticated low-privilege customer with subdomain-create rights (no admin or change_serversettings privilege required) can supply a subdomain redirect URL that carries a CR/LF payload in the userinfo portion (e.g. http://user%0areturn 200 \"pwned\";%0a@evil.com/). The value passes validation, survives IDNA encoding, and is written verbatim into the generated nginx or Apache vhost configuration, allowing the attacker to break out of the emitted directive and inject arbitrary web-server configuration lines. froxlor regenerates and reloads the web-server configuration as root, so the injected directives take effect server-wide and can hijack responses or read local files. The issue is fixed in version 2.3.12.",
+    "cvss": {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:L/I:H/A:H",
+      "score": 9.9,
+      "severity": "CRITICAL",
+      "attack_vector": "네트워크",
+      "attack_complexity": "낮음",
+      "privileges_required": "낮음",
+      "user_interaction": "없음"
+    },
+    "cwes": [
+      "CWE-93"
+    ],
+    "affected": [],
+    "references": [
+      "https://github.com/froxlor/froxlor/security/advisories/GHSA-gxx3-hwjc-h2gp",
+      "https://www.vulncheck.com/advisories/froxlor-before-2.3.12-crlf-injection-via-validateurl-userinfo"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-100717",
+    "added_at": "2026-09-27T08:01:01+09:00"
+  },
+  {
+    "id": "CVE-2026-100716",
+    "published": "2026-09-26",
+    "last_modified": "2026-09-26",
+    "status": "Deferred",
+    "description": "Froxlor is a server administration panel. In versions 2.3.10 and earlier, the customer data-export (DataDump) cron fails to validate intermediate path components of the export destination: Froxlor\\FileDir::makeCorrectDir() contains an off-by-one in its path-component walk that skips the first segment below the customer home directory, and the guard in ExportCron.php checks only the final component with is_link(). An authenticated customer whose account has the export feature enabled can schedule an export into a genuine subdirectory of their own webspace, then replace an intermediate path component with a symlink before the root-owned cron runs. The cron's `chown -R` then recursively changes ownership of the linked directory tree — for example /etc — to the customer's UID, yielding host root and cross-tenant compromise. Exploitation is deterministic and requires no race. This is an incomplete fix of GHSA-75h4-... The issue is fixed in Froxlor 2.3.12.",
+    "cvss": {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H",
+      "score": 9.9,
+      "severity": "CRITICAL",
+      "attack_vector": "네트워크",
+      "attack_complexity": "낮음",
+      "privileges_required": "낮음",
+      "user_interaction": "없음"
+    },
+    "cwes": [
+      "CWE-59"
+    ],
+    "affected": [],
+    "references": [
+      "https://github.com/froxlor/froxlor/security/advisories/GHSA-2wjc-6mgx-hq42",
+      "https://www.vulncheck.com/advisories/froxlor-before-2.3.12-privilege-escalation-via-symlink"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-100716",
+    "added_at": "2026-09-27T08:01:01+09:00"
+  },
+  {
+    "id": "CVE-2026-100715",
+    "published": "2026-09-26",
+    "last_modified": "2026-09-26",
+    "status": "Deferred",
+    "description": "Froxlor through 2.3.10 is vulnerable to arbitrary file deletion via symlink following in the FTP data deletion cron task. Cron task 8 (deleteFtpData), queued when an FTP account is deleted, calls FileDir::makeCorrectDir() without the $fixed_homedir argument, so the symlink component walk is skipped, and then executes 'rm -rf' as root on the resulting path with string-level guards only. Because makeCorrectDir() appends a trailing slash, GNU rm dereferences a symlink used either as an intermediate path component or as the final component. An authenticated customer who can write to the FTP home directory can plant a symlink between task insertion and cron execution, causing the root cron job to recursively delete arbitrary directory trees, resulting in cross-tenant data destruction and host denial of service. This issue is fixed in Froxlor 2.3.12.",
+    "cvss": {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:N/I:H/A:H",
+      "score": 9.6,
+      "severity": "CRITICAL",
+      "attack_vector": "네트워크",
+      "attack_complexity": "낮음",
+      "privileges_required": "낮음",
+      "user_interaction": "없음"
+    },
+    "cwes": [
+      "CWE-59"
+    ],
+    "affected": [],
+    "references": [
+      "https://github.com/froxlor/froxlor/security/advisories/GHSA-px4q-2rf7-cvcf",
+      "https://www.vulncheck.com/advisories/froxlor-before-2.3.12-arbitrary-file-deletion-via-symlink"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-100715",
+    "added_at": "2026-09-27T08:01:01+09:00"
+  },
+  {
+    "id": "CVE-2026-100714",
+    "published": "2026-09-26",
+    "last_modified": "2026-09-26",
+    "status": "Deferred",
+    "description": "Froxlor before 2.3.12 does not restrict or escape the system.letsencryptchallengepath setting: unlike sibling settings hardened in GHSA-33mp, the field has no string_regexp or required_otp guard, and its value is concatenated unescaped into the acme.sh command line built in lib/Froxlor/Cron/Http/LetsEncrypt/AcmeSh.php and executed by the root cron via FileDir::safe_exec. Because safe_exec only blacklists shell metacharacters such as ; | & > < \\ $ ~ ?, spaces and quotes survive and the value is word-split into additional acme.sh arguments. An administrator, or any actor able to write settings (for example through the settings-import API), can therefore inject acme.sh options such as --renew-hook, --pre-hook or --post-hook to obtain arbitrary command execution as root at the next Let's Encrypt cron run, or use --config-home/--cert-home for arbitrary file writes. Versions up to and including 2.3.10 are affected; the issue is fixed in 2.3.12.",
+    "cvss": {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:C/C:H/I:H/A:H",
+      "score": 9.1,
+      "severity": "CRITICAL",
+      "attack_vector": "네트워크",
+      "attack_complexity": "낮음",
+      "privileges_required": "높음",
+      "user_interaction": "없음"
+    },
+    "cwes": [
+      "CWE-88"
+    ],
+    "affected": [],
+    "references": [
+      "https://github.com/froxlor/froxlor/security/advisories/GHSA-3w4g-cmpj-rj42",
+      "https://www.vulncheck.com/advisories/froxlor-before-2.3.12-command-injection-via-letsencryptchallengepath"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-100714",
+    "added_at": "2026-09-27T08:01:01+09:00"
+  },
+  {
+    "id": "CVE-2026-100706",
+    "published": "2026-09-26",
+    "last_modified": "2026-09-26",
+    "status": "Received",
+    "description": "kyverno before 1.19.1 fails to properly validate URL-encoded path segments in Policy apiCall urlPath, allowing namespace tenants to bypass the per-namespace clamp and create objects in other namespaces as the admission-controller ServiceAccount. Attackers can exploit this by using percent-encoded directory traversal sequences to create MutatingWebhookConfiguration objects cluster-wide or PolicyException objects in the kyverno namespace, enabling privilege escalation to cluster admin.",
+    "cvss": {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H",
+      "score": 9.9,
+      "severity": "CRITICAL",
+      "attack_vector": "네트워크",
+      "attack_complexity": "낮음",
+      "privileges_required": "낮음",
+      "user_interaction": "없음"
+    },
+    "cwes": [
+      "CWE-441"
+    ],
+    "affected": [],
+    "references": [
+      "https://github.com/kyverno/kyverno/security/advisories/GHSA-5qq8-67g6-4h2w",
+      "https://www.vulncheck.com/advisories/kyverno-before-1.19.1-privilege-escalation-via-policy-apicall-urlpath"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-100706",
+    "added_at": "2026-09-27T08:01:01+09:00"
   },
   {
     "id": "CVE-2026-97064",
