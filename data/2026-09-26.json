@@ -1,0 +1,97 @@
+{
+  "tagline": "글로벌 정보보안 뉴스레터",
+  "title": "보안 브리핑",
+  "date_display": "2026년 9월 26일 토요일",
+  "date_short": "2026.09.26",
+  "sources_line": "The Hacker News · BleepingComputer · SecurityWeek · KrebsOnSecurity · CISA · NCSC UK · Unit 42 · 보안뉴스 · 데일리시큐 · 전자신문",
+  "seo": {
+    "title": "랜섬웨어, 취약점 — 2026.09.26 보안 브리핑",
+    "description": "오늘 주요 취약점·침해 사고·위협 트렌드 요약.",
+    "keywords": "CVE, 랜섬웨어, 취약점, 침해사고, 보안"
+  },
+  "sections": [
+    {
+      "label": "취약점 & 공격",
+      "type": "cards",
+      "items": [
+        {
+          "severity": "critical",
+          "source": "SecurityWeek",
+          "headline": "Roundcube Webmail SQL 주입 취약점(CVE-2026-48842) 악용",
+          "url": "https://www.securityweek.com/roundcube-webmail-vulnerability-in-attackers-crosshairs/",
+          "summary": "CVE-2026-48842 취약점은 인증 없이 SQL 주입 공격이 가능하며, 현재 악용되고 있다. 이 취약점은 Roundcube Webmail의 virtuser_query 플러그인에서 발생하며, 패치가 제공되었다."
+        },
+        {
+          "severity": "high",
+          "source": "CISA",
+          "headline": "WSO2 보안 취약점(CVE-2026-5430) 악용",
+          "url": "https://gbhackers.com/cisa-flags-wso2-security-flaw/",
+          "summary": "CISA는 WSO2의 CVE-2026-5430 취약점이 현재 악용되고 있다고 발표했다. 이 취약점은 중대한 보안 위협으로, 즉시 패치가 필요하다."
+        },
+        {
+          "severity": "medium",
+          "source": "The Hacker News",
+          "headline": "OnePlus 15의 악성 앱을 통한 루트 권한 획득 취약점",
+          "url": "https://thehackernews.com/2026/09/unpatched-oneplus-flaws-let-installed.html",
+          "summary": "OnePlus 15에서 악성 앱을 설치할 경우, 특별한 권한 없이 루트 권한을 얻을 수 있는 취약점이 발견되었다. 이 취약점은 패치가 필요하며, 사용자는 주의가 필요하다."
+        },
+        {
+          "severity": "medium",
+          "source": "The Hacker News",
+          "headline": "Cloudflare 컨테이너에서 다른 사용자의 디스크 데이터 읽기 취약점",
+          "url": "https://thehackernews.com/2026/09/cloudflare-fixes-flaw-that-let-one.html",
+          "summary": "Cloudflare 컨테이너에서 다른 사용자의 디스크 데이터를 읽을 수 있는 취약점이 발견되었다. 이 취약점은 Cloudflare에서 수정되었으나, 사용자는 보안 업데이트를 확인해야 한다."
+        }
+      ]
+    },
+    {
+      "label": "침해 사고",
+      "type": "cards",
+      "items": [
+        {
+          "severity": "incident",
+          "source": "The Hacker News",
+          "headline": "Bitget 랜섬웨어 공격으로 $351.6M 손실",
+          "url": "https://thehackernews.com/2026/09/bitget-says-suspected-north-korean.html",
+          "summary": "Bitget은 북한과 연관된 해커에 의해 $351.6M의 자금이 유출되었다고 발표했다. 해킹 후, 출금이 일시 중단되었으며, Mandiant이 조사 중이다."
+        },
+        {
+          "severity": "incident",
+          "source": "The Hacker News",
+          "headline": "Duelbits 랜섬웨어 공격으로 $7M 손실",
+          "url": "https://gbhackers.com/duelbits-hot-wallet-hack-drains-7-million/",
+          "summary": "Duelbits는 랜섬웨어 공격으로 $7M의 자금이 유출되었다고 발표했다. 이로 인해 플랫폼이 일시적으로 중단되었으며, 원인을 조사 중이다."
+        },
+        {
+          "severity": "incident",
+          "source": "The Hacker News",
+          "headline": "Payy Network 블록체인 공격으로 자금 유출",
+          "url": "https://gbhackers.com/attackers-drain-payy-network/",
+          "summary": "Payy Network은 이더리움 브리지 계약을 악용한 해커 공격으로 전체 자금이 유출되었다고 발표했다. 이로 인해 네트워크와 지갑 서비스가 중단되었다."
+        }
+      ]
+    },
+    {
+      "label": "동향 & 분석",
+      "type": "trends",
+      "items": [
+        {
+          "lead": "AI 기반 공격 증가",
+          "body": "AI 기반의 봇넷과 자동화된 공격이 증가하고 있으며, 이는 보안 대응을 더욱 복잡하게 만든다. AI는 기존의 보안 취약점을 더욱 효과적으로 악용할 수 있다."
+        },
+        {
+          "lead": "크립토 해킹 사례 증가",
+          "body": "비트코인과 같은 암호화폐 플랫폼이 랜섬웨어 공격으로 인해 큰 손실을 입고 있으며, 이는 암호화폐 보안의 취약점을 드러낸다."
+        },
+        {
+          "lead": "CISA KEV 목록에 추가된 취약점 증가",
+          "body": "CISA는 최근 여러 보안 취약점을 KEV 목록에 추가했으며, 이는 실제 악용 사례가 증가하고 있음을 시사한다. 보안 업데이트와 패치 적용이 필수적이다."
+        },
+        {
+          "lead": "AI 기반 보안 솔루션 도입",
+          "body": "AI 기반의 보안 솔루션과 실행 검증 인프라(EVI)가 등장하며, 자율 시스템과 AI 에이전트의 보안을 강화하는 방향으로 나아가고 있다."
+        }
+      ]
+    }
+  ]
+}
