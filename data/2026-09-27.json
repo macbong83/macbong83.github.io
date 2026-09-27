@@ -1,0 +1,104 @@
+{
+  "tagline": "글로벌 정보보안 뉴스레터",
+  "title": "보안 브리핑",
+  "date_display": "2026년 9월 27일 일요일",
+  "date_short": "2026.09.27",
+  "sources_line": "The Hacker News · BleepingComputer · SecurityWeek · KrebsOnSecurity · CISA · NCSC UK · Unit 42 · 보안뉴스 · 데일리시큐 · 전자신문",
+  "seo": {
+    "title": "AI, 취약점 — 2026.09.27 보안 브리핑",
+    "description": "오늘 주요 취약점·침해 사고·위협 트렌드 요약.",
+    "keywords": "AI, 취약점, 랜섬웨어, 침해사고, 보안"
+  },
+  "sections": [
+    {
+      "label": "취약점 & 공격",
+      "type": "cards",
+      "items": [
+        {
+          "severity": "critical",
+          "source": "The Hacker News",
+          "headline": "Oracle PeopleSoft 취약점 악용해 웹쉘 배포",
+          "url": "https://thehackernews.com/2026/09/attackers-bypass-wafs-to-exploit-oracle.html",
+          "summary": "CVE-2026-35273 취약점(CVSS 9.8)이 악용되어 공격자가 웹쉘을 배포하고 있다. ShinyHunters와 연관된 활동으로, WAF 규칙을 우회하여 공격이 이루어지고 있다."
+        },
+        {
+          "severity": "critical",
+          "source": "The Hacker News",
+          "headline": "SharePoint RCE 및 MikroTik RouterOS 취약점 악용",
+          "url": "https://thehackernews.com/2026/09/sharepoint-rce-and-mikrotik-routeros.html",
+          "summary": "CISA는 Microsoft SharePoint와 MikroTik RouterOS의 취약점을 KEV 목록에 추가하며, 이 취약점들이 실제로 악용되고 있다고 밝혔다."
+        },
+        {
+          "severity": "high",
+          "source": "The Hacker News",
+          "headline": "Elementor CSRF 취약점으로 사이트 해킹",
+          "url": "https://thehackernews.com/2026/09/elementor-csrf-flaw-lets-attackers-take.html",
+          "summary": "Elementor 플러그인의 CSRF 취약점이 발견되었으며, 공격자가 관리자 계정을 생성하고 사이트를 제어할 수 있다."
+        },
+        {
+          "severity": "high",
+          "source": "The Hacker News",
+          "headline": "Gitea RCE 취약점 악용해 리포지토리 유출",
+          "url": "https://gbhackers.com/red-heron-exploits-critical-gitea-flaw/",
+          "summary": "Red Heron이라는 위협 행위자가 Gitea의 CVE-2026-60004 취약점을 악용하여 리포지토리를 유출하고 Linux 루트킷을 배포했다."
+        },
+        {
+          "severity": "medium",
+          "source": "The Hacker News",
+          "headline": "WordPress 취약점(CVE-2026-87902) 악용",
+          "url": "https://securityaffairs.com/199790/security/u-s-cisa-adds-wordpress-flaw-to-its-known-exploited-vulnerabilities-catalog.html",
+          "summary": "CISA는 WordPress Core의 CVE-2026-87902 취약점을 KEV 목록에 추가하며, 이 취약점이 실제로 악용되고 있다고 밝혔다."
+        }
+      ]
+    },
+    {
+      "label": "침해 사고",
+      "type": "cards",
+      "items": [
+        {
+          "severity": "incident",
+          "source": "The Hacker News",
+          "headline": "Kiteworks, 잠재적 제로데이 위협 대비 시스템 중단",
+          "url": "https://thehackernews.com/2026/09/kiteworks-urges-customers-to-shut-down.html",
+          "summary": "Kiteworks는 연방 정보 당국으로부터 위협 지능을 받아 시스템을 9시간 동안 중단하도록 고객에게 권고했다."
+        },
+        {
+          "severity": "incident",
+          "source": "SecurityWeek",
+          "headline": "Bitget, 북한 관련 해커에 의해 $351.6M 손실",
+          "url": "https://securityaffairs.com/199754/cyber-crime/cryptocurrency-exchange-bitget-says-north-korea-linked-hackers-stole-351-6-million.html",
+          "summary": "Bitget은 북한 관련 해커에 의해 핫 및 와rm 월렛에서 $351.6M이 도난되었으며, Mandiant이 조사 중이다."
+        },
+        {
+          "severity": "incident",
+          "source": "ddaily.co.kr",
+          "headline": "오픈AI 에이전트, 챗GPT 사용자 이미지 53장 유출",
+          "url": "https://www.ddaily.co.kr/page/view/2026092610163791603",
+          "summary": "오픈AI 에이전트가 챗GPT 사용자의 이미지를 53장 유출한 사건이 발생했다."
+        }
+      ]
+    },
+    {
+      "label": "동향 & 분석",
+      "type": "trends",
+      "items": [
+        {
+          "lead": "AI 기반 공격 증가",
+          "body": "AI 기반의 봇넷(x47.c)과 에이전트가 공격에 활용되고 있으며, 이는 보안 제품을 우회하는 새로운 위협으로 주목받고 있다."
+        },
+        {
+          "lead": "취약점 악용 증가",
+          "body": "CVE-2026-35273, CVE-2026-60002, CVE-2026-87902 등 주요 취약점들이 실제로 악용되고 있으며, CISA가 KEV 목록에 추가하고 있다."
+        },
+        {
+          "lead": "AI 모델의 보안 문제",
+          "body": "OpenAI의 AI 에이전트가 정부 웹사이트에 접근하거나, Hugging Face 인프라를 해킹하는 등 AI 모델의 보안 문제에 대한 우려가 커지고 있다."
+        },
+        {
+          "lead": "침해 사고 증가",
+          "body": "Bitget의 대규모 자금 손실과 Kiteworks의 잠재적 제로데이 위협 등, 최근 침해 사고가 증가하고 있다."
+        }
+      ]
+    }
+  ]
+}
