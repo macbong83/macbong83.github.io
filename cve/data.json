@@ -1,5 +1,67 @@
 [
   {
+    "id": "CVE-2026-100740",
+    "published": "2026-09-27",
+    "last_modified": "2026-09-27",
+    "status": "Received",
+    "description": "A vulnerability was detected in D-Link DIR-895L A1_102b07. Impacted is the function tunnel_set_params of the file tunnel.c of the component L2TP Control Channel Parser. Performing a manipulation results in out-of-bounds write. The attack may be initiated remotely. The exploit is now public and may be used.",
+    "cvss": {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H",
+      "score": 9.9,
+      "severity": "CRITICAL",
+      "attack_vector": "네트워크",
+      "attack_complexity": "낮음",
+      "privileges_required": "낮음",
+      "user_interaction": "없음"
+    },
+    "cwes": [
+      "CWE-119",
+      "CWE-787"
+    ],
+    "affected": [],
+    "references": [
+      "https://tzh00203.notion.site/D-Link-DIR-895L-L2TP-Host-Name-AVP-Out-of-Bounds-Write-33cb5c52018a8061b139cacc39d58fff",
+      "https://vuldb.com/cve/CVE-2026-100740",
+      "https://vuldb.com/submit/906303",
+      "https://vuldb.com/vuln/410614",
+      "https://vuldb.com/vuln/410614/cti",
+      "https://www.dlink.com/"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-100740",
+    "added_at": "2026-09-27T20:01:00+09:00"
+  },
+  {
+    "id": "CVE-2026-100721",
+    "published": "2026-09-27",
+    "last_modified": "2026-09-27",
+    "status": "Deferred",
+    "description": "vm2 before 3.12.2 contains an authorization bypass in the NodeVM external-module resolver. When an embedder configures `require.external` with a custom resolver (and `context: 'host'`), `LegacyResolver.customResolve` in lib/resolver-compat.js records the resolved module directory in `this.externals` as `new RegExp('^' + escapeRegExp(resolvedPath))`, without requiring a path separator or end-of-string boundary. Untrusted guest code can therefore require the allowlisted module (e.g. `foo`) and then require the absolute path of a non-allowlisted sibling whose path merely shares the resolved prefix (e.g. `.../node_modules/foo2/index.js`); the sibling passes `isPathAllowedForModule` and is loaded through `hostRequire`, so its top-level code runs in the host process before the exports are wrapped with `vm.readonly`, resulting in a sandbox escape and arbitrary code execution in the host context.",
+    "cvss": {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:C/C:H/I:H/A:H",
+      "score": 9.0,
+      "severity": "CRITICAL",
+      "attack_vector": "네트워크",
+      "attack_complexity": "높음",
+      "privileges_required": "없음",
+      "user_interaction": "없음"
+    },
+    "cwes": [
+      "CWE-863"
+    ],
+    "affected": [],
+    "references": [
+      "https://github.com/patriksimek/vm2/commit/6ac3916da84e060c403e407b6b6318fcc66b0e72",
+      "https://github.com/patriksimek/vm2/commit/91034466bfb7f56b95fd48083ec6ca36d058f164",
+      "https://github.com/patriksimek/vm2/commit/ab4ee7d803e8c80155e9eb3672226bddbca4aa9c",
+      "https://github.com/patriksimek/vm2/security/advisories/GHSA-5h3f-q97h-ccvc",
+      "https://www.vulncheck.com/advisories/vm2-before-3.12.2-authorization-bypass-via-custom-resolver"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-100721",
+    "added_at": "2026-09-27T20:01:00+09:00"
+  },
+  {
     "id": "CVE-2026-85984",
     "published": "2026-09-26",
     "last_modified": "2026-09-26",
