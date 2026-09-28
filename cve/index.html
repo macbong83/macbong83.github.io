@@ -41,13 +41,151 @@
     <h1>CVE Archive</h1>
     <p>NVD 기반 Critical CVE를 누적 관리하는 별도 페이지입니다. 블로그에는 CVE 자동 글을 발행하지 않고, 이 페이지에만 기록합니다.</p>
     <div class="meta">
-      <span>Total 1193</span>
-      <span>Updated 2026-09-28 20:00 KST</span>
+      <span>Total 1204</span>
+      <span>Updated 2026-09-29 08:00 KST</span>
       <span>Source NVD API</span>
     </div>
   </section>
   <div class="notice">중복 제거 기준은 CVE ID입니다. 동일 CVE는 다시 추가하지 않습니다. 실제 악용 여부와 패치 우선순위는 CISA KEV, 벤더 권고, 자산 노출 여부와 함께 검토해야 합니다.</div>
 
+    <article class="cve-card" id="CVE-2026-101187">
+      <div class="cve-top">
+        <a class="cve-id" href="https://nvd.nist.gov/vuln/detail/CVE-2026-101187" target="_blank" rel="noopener">CVE-2026-101187</a>
+        <span class="score">CVSS 9.1 CRITICAL</span>
+      </div>
+      <p class="desc">A weakness has been identified in Ziroom ZHOME A0101 1.0.1.0. This vulnerability affects the function pop_usb_device of the file usr/lib/lua/luci/controller/api/zrUsb.lua of the component USB Device Management API. This manipulation of the argument path causes command injection. The attack is possible to be carried out remotely. The exploit has been made available to the public and could be used for attacks. The vendor was contacted early about this disclosure but did not respond in any way.</p>
+      <dl>
+        <div><dt>Published</dt><dd>2026-09-28</dd></div>
+        <div><dt>Last Modified</dt><dd>2026-09-28</dd></div>
+        <div><dt>Status</dt><dd>Received</dd></div>
+        <div><dt>Attack Vector</dt><dd>네트워크</dd></div>
+        <div><dt>Attack Complexity</dt><dd>낮음</dd></div>
+        <div><dt>Privileges</dt><dd>높음</dd></div>
+        <div><dt>User Interaction</dt><dd>없음</dd></div>
+        <div><dt>CWE</dt><dd>CWE-74, CWE-77</dd></div>
+        <div><dt>Affected</dt><dd>NVD CPE 기준 확인 필요</dd></div>
+      </dl>
+      <div class="vector"><code>CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:C/C:H/I:H/A:H</code></div>
+      <details>
+        <summary>References</summary>
+        <ul><li><a href="https://github.com/Wlz1112/ZHOME_A0101/blob/main/pop_usb_device_path_command_injection.md" target="_blank" rel="noopener">https://github.com/Wlz1112/ZHOME_A0101/blob/main/pop_usb_device_path_command_injection.md</a></li><li><a href="https://vuldb.com/cve/CVE-2026-101187" target="_blank" rel="noopener">https://vuldb.com/cve/CVE-2026-101187</a></li><li><a href="https://vuldb.com/submit/906506" target="_blank" rel="noopener">https://vuldb.com/submit/906506</a></li><li><a href="https://vuldb.com/vuln/411008" target="_blank" rel="noopener">https://vuldb.com/vuln/411008</a></li></ul>
+      </details>
+    </article>
+    <article class="cve-card" id="CVE-2026-101081">
+      <div class="cve-top">
+        <a class="cve-id" href="https://nvd.nist.gov/vuln/detail/CVE-2026-101081" target="_blank" rel="noopener">CVE-2026-101081</a>
+        <span class="score">CVSS 9.1 CRITICAL</span>
+      </div>
+      <p class="desc">A security flaw has been discovered in D-Link DI-8400 16.07. This vulnerability affects the function menu_nat_more_asp of the file menu_nat_more.asp of the component Web Administration Service. The manipulation of the argument opt results in stack-based buffer overflow. The attack can be launched remotely. The exploit has been released to the public and may be used for attacks.</p>
+      <dl>
+        <div><dt>Published</dt><dd>2026-09-28</dd></div>
+        <div><dt>Last Modified</dt><dd>2026-09-28</dd></div>
+        <div><dt>Status</dt><dd>Deferred</dd></div>
+        <div><dt>Attack Vector</dt><dd>네트워크</dd></div>
+        <div><dt>Attack Complexity</dt><dd>낮음</dd></div>
+        <div><dt>Privileges</dt><dd>높음</dd></div>
+        <div><dt>User Interaction</dt><dd>없음</dd></div>
+        <div><dt>CWE</dt><dd>CWE-119, CWE-121</dd></div>
+        <div><dt>Affected</dt><dd>NVD CPE 기준 확인 필요</dd></div>
+      </dl>
+      <div class="vector"><code>CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:C/C:H/I:H/A:H</code></div>
+      <details>
+        <summary>References</summary>
+        <ul><li><a href="https://github.com/Vivi-Xray/Xray-s-cve-/blob/main/menu_nat_more_asp/manu_nat_more_asp.py" target="_blank" rel="noopener">https://github.com/Vivi-Xray/Xray-s-cve-/blob/main/menu_nat_more_asp/manu_nat_more_asp.py</a></li><li><a href="https://github.com/Vivi-Xray/Xray-s-cve-/blob/main/menu_nat_more_asp/menu_nat_more_asp_Stack%20Buffer%20Overflow.md" target="_blank" rel="noopener">https://github.com/Vivi-Xray/Xray-s-cve-/blob/main/menu_nat_more_asp/menu_nat_more_asp_Stack%20Buffer%20Overflow.md</a></li><li><a href="https://vuldb.com/cve/CVE-2026-101081" target="_blank" rel="noopener">https://vuldb.com/cve/CVE-2026-101081</a></li><li><a href="https://vuldb.com/submit/932318" target="_blank" rel="noopener">https://vuldb.com/submit/932318</a></li></ul>
+      </details>
+    </article>
+    <article class="cve-card" id="CVE-2026-101077">
+      <div class="cve-top">
+        <a class="cve-id" href="https://nvd.nist.gov/vuln/detail/CVE-2026-101077" target="_blank" rel="noopener">CVE-2026-101077</a>
+        <span class="score">CVSS 10.0 CRITICAL</span>
+      </div>
+      <p class="desc">A flaw has been found in Netcore NR289-GE 1.4.5102. This impacts the function process_request of the component boa_temp Handler. This manipulation causes missing authentication. The attack is possible to be carried out remotely. The exploit has been published and may be used. The vendor was contacted early about this disclosure but did not respond in any way.</p>
+      <dl>
+        <div><dt>Published</dt><dd>2026-09-28</dd></div>
+        <div><dt>Last Modified</dt><dd>2026-09-28</dd></div>
+        <div><dt>Status</dt><dd>Deferred</dd></div>
+        <div><dt>Attack Vector</dt><dd>네트워크</dd></div>
+        <div><dt>Attack Complexity</dt><dd>낮음</dd></div>
+        <div><dt>Privileges</dt><dd>없음</dd></div>
+        <div><dt>User Interaction</dt><dd>없음</dd></div>
+        <div><dt>CWE</dt><dd>CWE-287, CWE-306</dd></div>
+        <div><dt>Affected</dt><dd>NVD CPE 기준 확인 필요</dd></div>
+      </dl>
+      <div class="vector"><code>CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:H</code></div>
+      <details>
+        <summary>References</summary>
+        <ul><li><a href="https://github.com/senxitoyshuyi-ui/HACKALL/blob/main/netcore_NR289-GE_V1.4.5102%2C2018.06.1418_44%20Router/Netcore_NR289-GE_unauth_file_write.md" target="_blank" rel="noopener">https://github.com/senxitoyshuyi-ui/HACKALL/blob/main/netcore_NR289-GE_V1.4.5102%2C2018.06.1418_44%20Router/Netcore_NR289-GE_unauth_file_write.md</a></li><li><a href="https://vuldb.com/cve/CVE-2026-101077" target="_blank" rel="noopener">https://vuldb.com/cve/CVE-2026-101077</a></li><li><a href="https://vuldb.com/submit/929226" target="_blank" rel="noopener">https://vuldb.com/submit/929226</a></li><li><a href="https://vuldb.com/vuln/410948" target="_blank" rel="noopener">https://vuldb.com/vuln/410948</a></li></ul>
+      </details>
+    </article>
+    <article class="cve-card" id="CVE-2026-101076">
+      <div class="cve-top">
+        <a class="cve-id" href="https://nvd.nist.gov/vuln/detail/CVE-2026-101076" target="_blank" rel="noopener">CVE-2026-101076</a>
+        <span class="score">CVSS 10.0 CRITICAL</span>
+      </div>
+      <p class="desc">A vulnerability was detected in Netcore NR289-GE 1.4.5102. This affects the function system of the file /set_ntp_server_ip.cgi of the component CGI Handler. The manipulation of the argument ntp_ip results in os command injection. The attack can be executed remotely. The exploit is now public and may be used. The vendor was contacted early about this disclosure but did not respond in any way.</p>
+      <dl>
+        <div><dt>Published</dt><dd>2026-09-28</dd></div>
+        <div><dt>Last Modified</dt><dd>2026-09-28</dd></div>
+        <div><dt>Status</dt><dd>Deferred</dd></div>
+        <div><dt>Attack Vector</dt><dd>네트워크</dd></div>
+        <div><dt>Attack Complexity</dt><dd>낮음</dd></div>
+        <div><dt>Privileges</dt><dd>없음</dd></div>
+        <div><dt>User Interaction</dt><dd>없음</dd></div>
+        <div><dt>CWE</dt><dd>CWE-77, CWE-78</dd></div>
+        <div><dt>Affected</dt><dd>NVD CPE 기준 확인 필요</dd></div>
+      </dl>
+      <div class="vector"><code>CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:H</code></div>
+      <details>
+        <summary>References</summary>
+        <ul><li><a href="https://github.com/senxitoyshuyi-ui/HACKALL/blob/main/netcore_NR289-GE_V1.4.5102%2C2018.06.1418_44%20Router/Netcore_NR289-GE_set_ntp_server_ip_command_injection.md" target="_blank" rel="noopener">https://github.com/senxitoyshuyi-ui/HACKALL/blob/main/netcore_NR289-GE_V1.4.5102%2C2018.06.1418_44%20Router/Netcore_NR289-GE_set_ntp_server_ip_command_injection.md</a></li><li><a href="https://vuldb.com/cve/CVE-2026-101076" target="_blank" rel="noopener">https://vuldb.com/cve/CVE-2026-101076</a></li><li><a href="https://vuldb.com/submit/929204" target="_blank" rel="noopener">https://vuldb.com/submit/929204</a></li><li><a href="https://vuldb.com/vuln/410947" target="_blank" rel="noopener">https://vuldb.com/vuln/410947</a></li></ul>
+      </details>
+    </article>
+    <article class="cve-card" id="CVE-2026-101072">
+      <div class="cve-top">
+        <a class="cve-id" href="https://nvd.nist.gov/vuln/detail/CVE-2026-101072" target="_blank" rel="noopener">CVE-2026-101072</a>
+        <span class="score">CVSS 10.0 CRITICAL</span>
+      </div>
+      <p class="desc">A vulnerability was identified in Netcore NR289-GE 1.4.5102. This issue affects the function system of the file /ap_ip.cgi of the component CGI Handler. Such manipulation of the argument ip leads to os command injection. The attack can be launched remotely. The exploit is publicly available and might be used. The vendor was contacted early about this disclosure but did not respond in any way.</p>
+      <dl>
+        <div><dt>Published</dt><dd>2026-09-28</dd></div>
+        <div><dt>Last Modified</dt><dd>2026-09-28</dd></div>
+        <div><dt>Status</dt><dd>Deferred</dd></div>
+        <div><dt>Attack Vector</dt><dd>네트워크</dd></div>
+        <div><dt>Attack Complexity</dt><dd>낮음</dd></div>
+        <div><dt>Privileges</dt><dd>없음</dd></div>
+        <div><dt>User Interaction</dt><dd>없음</dd></div>
+        <div><dt>CWE</dt><dd>CWE-77, CWE-78</dd></div>
+        <div><dt>Affected</dt><dd>NVD CPE 기준 확인 필요</dd></div>
+      </dl>
+      <div class="vector"><code>CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:H</code></div>
+      <details>
+        <summary>References</summary>
+        <ul><li><a href="https://github.com/senxitoyshuyi-ui/HACKALL/blob/main/netcore_NR289-GE_V1.4.5102%2C2018.06.1418_44%20Router/Netcore_NR289-GE_ap_ip_command_injection.md" target="_blank" rel="noopener">https://github.com/senxitoyshuyi-ui/HACKALL/blob/main/netcore_NR289-GE_V1.4.5102%2C2018.06.1418_44%20Router/Netcore_NR289-GE_ap_ip_command_injection.md</a></li><li><a href="https://vuldb.com/cve/CVE-2026-101072" target="_blank" rel="noopener">https://vuldb.com/cve/CVE-2026-101072</a></li><li><a href="https://vuldb.com/submit/929176" target="_blank" rel="noopener">https://vuldb.com/submit/929176</a></li><li><a href="https://vuldb.com/vuln/410943" target="_blank" rel="noopener">https://vuldb.com/vuln/410943</a></li></ul>
+      </details>
+    </article>
+    <article class="cve-card" id="CVE-2026-101038">
+      <div class="cve-top">
+        <a class="cve-id" href="https://nvd.nist.gov/vuln/detail/CVE-2026-101038" target="_blank" rel="noopener">CVE-2026-101038</a>
+        <span class="score">CVSS 9.9 CRITICAL</span>
+      </div>
+      <p class="desc">A vulnerability was determined in FAST FAC1200R 5.0_20201119_1.0.2. Affected by this vulnerability is the function MmtAtePrase of the component MmtAtePrase Parser. This manipulation causes stack-based buffer overflow. Remote exploitation of the attack is possible. The exploit has been publicly disclosed and may be utilized. The vendor was contacted early about this disclosure but did not respond in any way.</p>
+      <dl>
+        <div><dt>Published</dt><dd>2026-09-28</dd></div>
+        <div><dt>Last Modified</dt><dd>2026-09-28</dd></div>
+        <div><dt>Status</dt><dd>Deferred</dd></div>
+        <div><dt>Attack Vector</dt><dd>네트워크</dd></div>
+        <div><dt>Attack Complexity</dt><dd>낮음</dd></div>
+        <div><dt>Privileges</dt><dd>낮음</dd></div>
+        <div><dt>User Interaction</dt><dd>없음</dd></div>
+        <div><dt>CWE</dt><dd>CWE-119, CWE-121</dd></div>
+        <div><dt>Affected</dt><dd>NVD CPE 기준 확인 필요</dd></div>
+      </dl>
+      <div class="vector"><code>CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H</code></div>
+      <details>
+        <summary>References</summary>
+        <ul><li><a href="https://github.com/xiaobor123/vuls-find-VxWorks/tree/main/vul-find-FAST_FAC1200R-twlantask-MmtAtePrase-stack-overflow(1)/vul-find-FAST_FAC1200R-twlantask-MmtAtePrase-stack-overflow" target="_blank" rel="noopener">https://github.com/xiaobor123/vuls-find-VxWorks/tree/main/vul-find-FAST_FAC1200R-twlantask-MmtAtePrase-stack-overflow(1)/vul-find-FAST_FAC1200R-twlantask-MmtAtePrase-stack-overflow</a></li><li><a href="https://vuldb.com/cve/CVE-2026-101038" target="_blank" rel="noopener">https://vuldb.com/cve/CVE-2026-101038</a></li><li><a href="https://vuldb.com/submit/927237" target="_blank" rel="noopener">https://vuldb.com/submit/927237</a></li><li><a href="https://vuldb.com/vuln/410906" target="_blank" rel="noopener">https://vuldb.com/vuln/410906</a></li></ul>
+      </details>
+    </article>
     <article class="cve-card" id="CVE-2026-101037">
       <div class="cve-top">
         <a class="cve-id" href="https://nvd.nist.gov/vuln/detail/CVE-2026-101037" target="_blank" rel="noopener">CVE-2026-101037</a>
@@ -184,6 +322,130 @@
       <details>
         <summary>References</summary>
         <ul><li><a href="https://gist.github.com/H3rmesk1t/c071a62375f38b629f67653428a8f25a" target="_blank" rel="noopener">https://gist.github.com/H3rmesk1t/c071a62375f38b629f67653428a8f25a</a></li><li><a href="https://vuldb.com/cve/CVE-2026-100896" target="_blank" rel="noopener">https://vuldb.com/cve/CVE-2026-100896</a></li><li><a href="https://vuldb.com/submit/918574" target="_blank" rel="noopener">https://vuldb.com/submit/918574</a></li><li><a href="https://vuldb.com/vuln/410846" target="_blank" rel="noopener">https://vuldb.com/vuln/410846</a></li></ul>
+      </details>
+    </article>
+    <article class="cve-card" id="CVE-2026-88777">
+      <div class="cve-top">
+        <a class="cve-id" href="https://nvd.nist.gov/vuln/detail/CVE-2026-88777" target="_blank" rel="noopener">CVE-2026-88777</a>
+        <span class="score">CVSS 9.8 CRITICAL</span>
+      </div>
+      <p class="desc">Memory overflow vulnerability vulnerability in Citrix NetScaler ADC and Citrix NetScaler Gateway.
+
+This issue affects ADC: before 14.1-73.37, before 13.1-64.23, before 14.1-73.37 FIPS, and before 13.1.37.279 FIPS and NDcPP; Gateway: before 14.1-73.37 and before 13.1-64.23  leading to unpredictable or erroneous behavior or Denial of Service</p>
+      <dl>
+        <div><dt>Published</dt><dd>2026-09-27</dd></div>
+        <div><dt>Last Modified</dt><dd>2026-09-28</dd></div>
+        <div><dt>Status</dt><dd>Analyzed</dd></div>
+        <div><dt>Attack Vector</dt><dd>네트워크</dd></div>
+        <div><dt>Attack Complexity</dt><dd>낮음</dd></div>
+        <div><dt>Privileges</dt><dd>없음</dd></div>
+        <div><dt>User Interaction</dt><dd>없음</dd></div>
+        <div><dt>CWE</dt><dd>CWE-119</dd></div>
+        <div><dt>Affected</dt><dd>citrix netscaler_application_delivery_controller, citrix netscaler_gateway</dd></div>
+      </dl>
+      <div class="vector"><code>CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H</code></div>
+      <details>
+        <summary>References</summary>
+        <ul><li><a href="https://support.citrix.com/support-home/kbsearch/article?articleNumber=CTX697096&amp;articleTitle=Citrix_NetScaler_ADC_and_Citrix_NetScaler_Gateway_Security_Bulletin_for_CVE_2026_88771_CVE_2026_88772_CVE_2026_88773_CVE_2026_88774_CVE_2026_88775_CVE_2026_88776_CVE_2026_88777_and_CVE_2026_88778" target="_blank" rel="noopener">https://support.citrix.com/support-home/kbsearch/article?articleNumber=CTX697096&amp;articleTitle=Citrix_NetScaler_ADC_and_Citrix_NetScaler_Gateway_Security_Bulletin_for_CVE_2026_88771_CVE_2026_88772_CVE_2026_88773_CVE_2026_88774_CVE_2026_88775_CVE_2026_88776_CVE_2026_88777_and_CVE_2026_88778</a></li></ul>
+      </details>
+    </article>
+    <article class="cve-card" id="CVE-2026-88776">
+      <div class="cve-top">
+        <a class="cve-id" href="https://nvd.nist.gov/vuln/detail/CVE-2026-88776" target="_blank" rel="noopener">CVE-2026-88776</a>
+        <span class="score">CVSS 9.8 CRITICAL</span>
+      </div>
+      <p class="desc">Memory overflow vulnerability vulnerability in Citrix NetScaler ADC and Citrix NetScaler Gateway.
+This issue affects ADC: before 14.1-73.37, before 13.1-64.23, before 14.1-73.37 FIPS, and before 13.1.37.279 FIPS and NDcPP; Gateway: before 14.1-73.37 and before 13.1-64.23  leading to unpredictable or erroneous behavior or Denial of Service</p>
+      <dl>
+        <div><dt>Published</dt><dd>2026-09-27</dd></div>
+        <div><dt>Last Modified</dt><dd>2026-09-28</dd></div>
+        <div><dt>Status</dt><dd>Analyzed</dd></div>
+        <div><dt>Attack Vector</dt><dd>네트워크</dd></div>
+        <div><dt>Attack Complexity</dt><dd>낮음</dd></div>
+        <div><dt>Privileges</dt><dd>없음</dd></div>
+        <div><dt>User Interaction</dt><dd>없음</dd></div>
+        <div><dt>CWE</dt><dd>CWE-119</dd></div>
+        <div><dt>Affected</dt><dd>citrix netscaler_application_delivery_controller, citrix netscaler_gateway</dd></div>
+      </dl>
+      <div class="vector"><code>CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H</code></div>
+      <details>
+        <summary>References</summary>
+        <ul><li><a href="https://support.citrix.com/support-home/kbsearch/article?articleNumber=CTX697096" target="_blank" rel="noopener">https://support.citrix.com/support-home/kbsearch/article?articleNumber=CTX697096</a></li></ul>
+      </details>
+    </article>
+    <article class="cve-card" id="CVE-2026-88775">
+      <div class="cve-top">
+        <a class="cve-id" href="https://nvd.nist.gov/vuln/detail/CVE-2026-88775" target="_blank" rel="noopener">CVE-2026-88775</a>
+        <span class="score">CVSS 9.8 CRITICAL</span>
+      </div>
+      <p class="desc">Memory overflow vulnerability in Citrix NetScaler ADC and Citrix NetScaler Gateway.
+
+This issue affects ADC: before 14.1-73.37, before 13.1-64.23, before 14.1-73.37 FIPS, and before 13.1.37.279 FIPS and NDcPP; Gateway: before 14.1-73.37 and before 13.1-64.23 leading Memory overflow vulnerability leading to unpredictable or erroneous behavior or Denial of Service</p>
+      <dl>
+        <div><dt>Published</dt><dd>2026-09-27</dd></div>
+        <div><dt>Last Modified</dt><dd>2026-09-28</dd></div>
+        <div><dt>Status</dt><dd>Analyzed</dd></div>
+        <div><dt>Attack Vector</dt><dd>네트워크</dd></div>
+        <div><dt>Attack Complexity</dt><dd>낮음</dd></div>
+        <div><dt>Privileges</dt><dd>없음</dd></div>
+        <div><dt>User Interaction</dt><dd>없음</dd></div>
+        <div><dt>CWE</dt><dd>CWE-120</dd></div>
+        <div><dt>Affected</dt><dd>citrix netscaler_application_delivery_controller, citrix netscaler_gateway</dd></div>
+      </dl>
+      <div class="vector"><code>CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H</code></div>
+      <details>
+        <summary>References</summary>
+        <ul><li><a href="https://support.citrix.com/support-home/kbsearch/article?articleNumber=CTX697096&amp;articleTitle=Citrix_NetScaler_ADC_and_Citrix_NetScaler_Gateway_Security_Bulletin_for_CVE_2026_88771_CVE_2026_88772_CVE_2026_88773_CVE_2026_88774_CVE_2026_88775_CVE_2026_88776_CVE_2026_88777_and_CVE_2026_88778" target="_blank" rel="noopener">https://support.citrix.com/support-home/kbsearch/article?articleNumber=CTX697096&amp;articleTitle=Citrix_NetScaler_ADC_and_Citrix_NetScaler_Gateway_Security_Bulletin_for_CVE_2026_88771_CVE_2026_88772_CVE_2026_88773_CVE_2026_88774_CVE_2026_88775_CVE_2026_88776_CVE_2026_88777_and_CVE_2026_88778</a></li></ul>
+      </details>
+    </article>
+    <article class="cve-card" id="CVE-2026-88773">
+      <div class="cve-top">
+        <a class="cve-id" href="https://nvd.nist.gov/vuln/detail/CVE-2026-88773" target="_blank" rel="noopener">CVE-2026-88773</a>
+        <span class="score">CVSS 10.0 CRITICAL</span>
+      </div>
+      <p class="desc">Inconsistent interpretation of HTTP requests (&#x27;HTTP Request/Response smuggling&#x27;) vulnerability in Citrix NetScaler ADC and Citrix NetScaler Gateway.
+
+This issue affects ADC: before 14.1-73.37, before 13.1-64.23, before 14.1-73.37 FIPS, and before 13.1-37.279 and NDcPP; Gateway: before 14.1-73.37 FIPS and before 13.1-64.23.</p>
+      <dl>
+        <div><dt>Published</dt><dd>2026-09-27</dd></div>
+        <div><dt>Last Modified</dt><dd>2026-09-28</dd></div>
+        <div><dt>Status</dt><dd>Analyzed</dd></div>
+        <div><dt>Attack Vector</dt><dd>네트워크</dd></div>
+        <div><dt>Attack Complexity</dt><dd>낮음</dd></div>
+        <div><dt>Privileges</dt><dd>없음</dd></div>
+        <div><dt>User Interaction</dt><dd>없음</dd></div>
+        <div><dt>CWE</dt><dd>CWE-444</dd></div>
+        <div><dt>Affected</dt><dd>citrix netscaler_application_delivery_controller, citrix netscaler_gateway</dd></div>
+      </dl>
+      <div class="vector"><code>CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:N</code></div>
+      <details>
+        <summary>References</summary>
+        <ul><li><a href="https://support.citrix.com/support-home/kbsearch/article?articleNumber=CTX697096" target="_blank" rel="noopener">https://support.citrix.com/support-home/kbsearch/article?articleNumber=CTX697096</a></li></ul>
+      </details>
+    </article>
+    <article class="cve-card" id="CVE-2026-88771">
+      <div class="cve-top">
+        <a class="cve-id" href="https://nvd.nist.gov/vuln/detail/CVE-2026-88771" target="_blank" rel="noopener">CVE-2026-88771</a>
+        <span class="score">CVSS 9.8 CRITICAL</span>
+      </div>
+      <p class="desc">Improper input validation vulnerability in Citrix NetScaler ADC and Citrix NetScaler Gateway.
+
+This issue affects ADC: before 14.1-73.37, before 13.1-64.23, before 14.1-73.37 FIPS, and before 13.1.37.279 FIPS and NDcPP; Gateway: before 14.1-73.37 and before 13.1-64.23 leading to an unauthenticated attacker to execute arbitrary commands.</p>
+      <dl>
+        <div><dt>Published</dt><dd>2026-09-27</dd></div>
+        <div><dt>Last Modified</dt><dd>2026-09-28</dd></div>
+        <div><dt>Status</dt><dd>Analyzed</dd></div>
+        <div><dt>Attack Vector</dt><dd>네트워크</dd></div>
+        <div><dt>Attack Complexity</dt><dd>낮음</dd></div>
+        <div><dt>Privileges</dt><dd>없음</dd></div>
+        <div><dt>User Interaction</dt><dd>없음</dd></div>
+        <div><dt>CWE</dt><dd>CWE-20</dd></div>
+        <div><dt>Affected</dt><dd>citrix netscaler_application_delivery_controller, citrix netscaler_gateway</dd></div>
+      </dl>
+      <div class="vector"><code>CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H</code></div>
+      <details>
+        <summary>References</summary>
+        <ul><li><a href="https://support.citrix.com/support-home/kbsearch/article?articleNumber=CTX697096" target="_blank" rel="noopener">https://support.citrix.com/support-home/kbsearch/article?articleNumber=CTX697096</a></li><li><a href="https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-88771" target="_blank" rel="noopener">https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-88771</a></li></ul>
       </details>
     </article>
     <article class="cve-card" id="CVE-2026-101090">
