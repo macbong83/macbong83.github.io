@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>2026년 9월 보안 벤더 동향: AI 에이전트, 제로데이, CAASM | SecuLog</title>
+<meta name="description" content="2026년 9월 주요 보안 벤더들의 AI 에이전트 보안, 제로데이 취약점 대응, CAASM 도구 진화 등 주요 동향을 정리했습니다.">
+<meta name="keywords" content="AI 에이전트, 제로데이, CAASM, 보안 벤더, 취약점 패치, 보안 정책, 랜섬웨어, Proxyware, CrowdStrike, Check Point, Palo Alto">
+<meta property="og:type" content="article">
+<meta property="og:title" content="2026년 9월 보안 벤더 동향: AI 에이전트, 제로데이, CAASM">
+<meta property="og:description" content="2026년 9월 주요 보안 벤더들의 AI 에이전트 보안, 제로데이 취약점 대응, CAASM 도구 진화 등 주요 동향을 정리했습니다.">
+<meta property="og:url" content="https://macbong83.github.io/posts/vendor-weekly-2026-09-28.html">
+<meta property="og:site_name" content="SecuLog">
+<link rel="canonical" href="https://macbong83.github.io/posts/vendor-weekly-2026-09-28.html">
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: -apple-system,'Malgun Gothic','Apple SD Gothic Neo',Arial,sans-serif; background:#f4f5f7; color:#1a1a2e; line-height:1.6; }
+  a { text-decoration:none; color:inherit; }
+  .wrapper { max-width:700px; margin:32px auto; background:#fff; border-radius:12px; overflow:hidden; box-shadow:0 2px 20px rgba(0,0,0,0.08); }
+  .header { background:#0d1b3e; padding:28px 36px 24px; border-bottom:3px solid #2563eb; }
+  .wordmark { font-size:26px; font-weight:800; color:#fff; letter-spacing:-0.02em; }
+  .wordmark .accent { color:#60a5fa; }
+  .header-meta { margin-top:10px; }
+  .nl-label { font-size:10px; letter-spacing:0.1em; text-transform:uppercase; color:#64748b; }
+  .nl-title { font-size:19px; font-weight:700; color:#fff; margin-top:4px; }
+  .nl-date { font-size:12px; color:#94a3b8; margin-top:3px; }
+  .summary-box { background:#f0f7ff; border-left:4px solid #2563eb; padding:16px 20px; margin:24px 36px 0; border-radius:0 8px 8px 0; font-size:13px; color:#1e3a5f; line-height:1.7; }
+  .body { padding:28px 36px 32px; }
+  .section-label { font-size:10px; letter-spacing:0.1em; text-transform:uppercase; color:#8a93a8; font-weight:600; padding-bottom:8px; border-bottom:1px solid #e8eaed; margin-bottom:4px; margin-top:28px; }
+  .section-label:first-child { margin-top:0; }
+  .card { display:block; padding:16px 0; border-bottom:1px solid #f0f1f3; transition:background 0.15s; }
+  .card:last-child { border-bottom:none; }
+  .card:hover { background:#f8f9fc; margin:0 -36px; padding:16px 36px; }
+  .card-inner { display:flex; gap:14px; }
+  .sev-bar { width:3px; border-radius:2px; flex-shrink:0; margin:3px 0; }
+  .sev-vendor { background:#0891b2; }
+  .card-content { flex:1; }
+  .card-top { display:flex; align-items:center; gap:8px; margin-bottom:6px; flex-wrap:wrap; }
+  .badge { font-size:10px; font-weight:700; padding:3px 9px; border-radius:4px; }
+  .badge-vendor { background:#e0f2fe; color:#0369a1; border:1px solid #bae6fd; }
+  .card-headline { font-size:14px; font-weight:600; color:#0d1b3e; margin-bottom:5px; line-height:1.45; }
+  .card-headline .arrow { font-size:12px; color:#2563eb; margin-left:4px; opacity:0; transition:opacity 0.15s; }
+  .card:hover .card-headline .arrow { opacity:1; }
+  .card-summary { font-size:13px; color:#4a5568; line-height:1.65; }
+  .trend-box { background:#f8f9fc; border-radius:10px; padding:18px 20px; margin-top:6px; }
+  .trend-row { display:flex; gap:12px; padding:10px 0; border-bottom:1px solid #e8eaed; align-items:flex-start; }
+  .trend-row:last-child { border-bottom:none; padding-bottom:0; }
+  .trend-num { font-size:11px; font-weight:700; color:#2563eb; min-width:22px; padding-top:2px; }
+  .trend-text { font-size:13px; color:#4a5568; line-height:1.6; }
+  .trend-text strong { color:#0d1b3e; font-weight:600; }
+  .footer { background:#f4f5f7; border-top:1px solid #e8eaed; padding:16px 36px; font-size:11px; color:#9aa0b0; }
+  @media(max-width:600px){
+    .wrapper{margin:0;border-radius:0;}
+    .header{padding:18px 20px;}
+    .body{padding:18px 20px 24px;}
+    .summary-box{margin:16px 20px 0;}
+    .card:hover{margin:0 -20px;padding:16px 20px;}
+    .footer{padding:14px 20px;}
+  }
+</style>
+</head>
+<body>
+<div class="wrapper">
+  <div class="header">
+    <div class="wordmark">Secu<span class="accent">Log</span></div>
+    <div class="header-meta">
+      <div class="nl-label">글로벌 보안 벤더 주간 동향</div>
+      <div class="nl-title">이번 주 보안 벤더 동향</div>
+      <div class="nl-date">2026-09-22 ~ 2026-09-28</div>
+    </div>
+  </div>
+  <div class="summary-box">이번 주에는 AI 에이전트 보안, 제로데이 취약점 대응, 랜섬웨어 공격 증가, 그리고 보안 자산 관리(CAASM) 도구의 중요성 등 주요 주제가 다뤄졌다. 특히 AI 에이전트의 자율성과 보안 정책 관리의 필요성이 강조되었다.</div>
+  <div class="body">
+    <div class="section-label">이번 주 주요 포스트</div>
+    
+    <a class="card" href="https://unit42.paloaltonetworks.com/detecting-exposed-aws-iam-credentials/" target="_blank">
+      <div class="card-inner"><div class="sev-bar sev-vendor"></div><div class="card-content">
+        <div class="card-top"><span class="badge badge-vendor">Palo Alto</span></div>
+        <div class="card-headline">AWS IAM 자격 증명 보호 전략<span class="arrow">↗</span></div>
+        <div class="card-summary">AWS가 GitHub 비밀 스캔과 CloudTrail 모니터링을 통해 노출된 IAM 자격 증명을 차단하는 방식을 공유함으로써, 기업은 자동화된 보안 정책을 통해 자격 증명 노출을 효과적으로 관리할 수 있는 모범 사례를 얻을 수 있다.</div>
+      </div></div>
+    </a>
+    <a class="card" href="https://blog.checkpoint.com/ai-security/no-attacker-required-what-a-two-day-hackathon-taught-us-about-agent-security/" target="_blank">
+      <div class="card-inner"><div class="sev-bar sev-vendor"></div><div class="card-content">
+        <div class="card-top"><span class="badge badge-vendor">Check Point</span></div>
+        <div class="card-headline">AI 에이전트 보안의 새로운 패러다임<span class="arrow">↗</span></div>
+        <div class="card-summary">AI 에이전트가 공격자 없이 자율적으로 위험한 행동을 할 수 있음을 보여주며, 기업은 AI 에이전트의 행동을 모니터링하고 제어하는 보안 정책을 즉시 수립해야 한다.</div>
+      </div></div>
+    </a>
+    <a class="card" href="https://blog.checkpoint.com/security/security-advisory-action-required-active-exploitation-of-cve-2026-85102-and-a-management-pre-authentication-vulnerability-cve-2026-93616/" target="_blank">
+      <div class="card-inner"><div class="sev-bar sev-vendor"></div><div class="card-content">
+        <div class="card-top"><span class="badge badge-vendor">Check Point</span></div>
+        <div class="card-headline">CVE-2026-85102 및 CVE-2026-93616 취약점 대응<span class="arrow">↗</span></div>
+        <div class="card-summary">CVE-2026-85102과 CVE-2026-93616의 즉각적인 패치 적용이 필요하며, 기업은 보안 패치 관리 프로세스를 강화해야 한다.</div>
+      </div></div>
+    </a>
+    <a class="card" href="https://asec.ahnlab.com/ko/95515/" target="_blank">
+      <div class="card-inner"><div class="sev-bar sev-vendor"></div><div class="card-content">
+        <div class="card-top"><span class="badge badge-vendor">AhnLab</span></div>
+        <div class="card-headline">Proxyware 유포 사례 분석<span class="arrow">↗</span></div>
+        <div class="card-summary">Larva-25012 공격자가 기존 감염 시스템을 대상으로 Proxyware를 유포하고 있음을 확인하여, 기업은 내부 네트워크의 보안 모니터링을 강화해야 한다.</div>
+      </div></div>
+    </a>
+    <a class="card" href="https://blog.checkpoint.com/ai-security/workforce-ai-security-policy-management-is-now-conversational/" target="_blank">
+      <div class="card-inner"><div class="sev-bar sev-vendor"></div><div class="card-content">
+        <div class="card-top"><span class="badge badge-vendor">Check Point</span></div>
+        <div class="card-headline">자연어 기반 AI 보안 정책 관리 도입<span class="arrow">↗</span></div>
+        <div class="card-summary">자연어로 AI 보안 정책을 관리할 수 있는 기능이 도입되며, 기업은 보안 정책 관리의 효율성을 높일 수 있다.</div>
+      </div></div>
+    </a>
+    <a class="card" href="https://www.crowdstrike.com/en-us/blog/crowdstrike-named-leader-forrester-wave-proactive-security-platforms-q3-2026/" target="_blank">
+      <div class="card-inner"><div class="sev-bar sev-vendor"></div><div class="card-content">
+        <div class="card-top"><span class="badge badge-vendor">CrowdStrike</span></div>
+        <div class="card-headline">Forrester Wave 리더 선정<span class="arrow">↗</span></div>
+        <div class="card-summary">CrowdStrike가 Forrester Wave에서 리더로 선정됨으로써, 기업은 프로페시브 보안 플랫폼에 대한 신뢰를 강화할 수 있다.</div>
+      </div></div>
+    </a>
+    <a class="card" href="https://blog.checkpoint.com/ai-security/jev-is-not-a-language-model-but-it-breaks-like-one-prompt-injection-against-a-typed-decision-model/" target="_blank">
+      <div class="card-inner"><div class="sev-bar sev-vendor"></div><div class="card-content">
+        <div class="card-top"><span class="badge badge-vendor">Check Point</span></div>
+        <div class="card-headline">Jev AI 모델의 취약점 분석<span class="arrow">↗</span></div>
+        <div class="card-summary">Jev AI 모델이 프롬프트 인젝션 공격에 취약함을 보여주며, AI 결정 모델의 보안 강화가 시급하다.</div>
+      </div></div>
+    </a>
+    <a class="card" href="https://www.tenable.com/blog/frequently-asked-questions-about-reported-citrix-netscaler-zero-day-vulnerabilities" target="_blank">
+      <div class="card-inner"><div class="sev-bar sev-vendor"></div><div class="card-content">
+        <div class="card-top"><span class="badge badge-vendor">Tenable</span></div>
+        <div class="card-headline">Citrix NetScaler 제로데이 취약점 대응<span class="arrow">↗</span></div>
+        <div class="card-summary">Citrix NetScaler의 제로데이 취약점이 공개되어 패치 적용이 시급하며, 기업은 취약점 관리 프로세스를 즉시 점검해야 한다.</div>
+      </div></div>
+    </a>
+    <div class="section-label" style="margin-top:28px;">공통 트렌드</div>
+    <div class="trend-box">
+      <div class="trend-row">
+        <div class="trend-num">01</div>
+        <div class="trend-text"><strong>AI 에이전트 보안</strong> — AI 에이전트가 자율적으로 행동할 수 있는 환경에서 보안 정책의 중요성이 대두되고 있으며, 기업은 AI 에이전트의 행동을 모니터링하고 제어하는 보안 프레임워크를 수립해야 한다.</div>
+      </div>
+      <div class="trend-row">
+        <div class="trend-num">02</div>
+        <div class="trend-text"><strong>제로데이 취약점 대응</strong> — 최근 제로데이 취약점이 여러 벤더에서 공개되며, 기업은 취약점 패치 관리 프로세스를 강화하고 실시간 모니터링을 통해 위협을 차단해야 한다.</div>
+      </div>
+      <div class="trend-row">
+        <div class="trend-num">03</div>
+        <div class="trend-text"><strong>CAASM 도구의 진화</strong> — CAASM 도구는 자산 목록을 넘어 자산의 중요도와 연결 정보를 기반으로 위험을 정확히 평가해야 하며, 기업은 CAASM 도구의 진화를 주시해야 한다.</div>
+      </div></div>
+  </div>
+  <div class="footer">
+    출처: CrowdStrike · SentinelOne · Tenable · Prompt Security &nbsp;|&nbsp; © 2026 Felix · SecuLog
+  </div>
+</div>
+</body>
+</html>
