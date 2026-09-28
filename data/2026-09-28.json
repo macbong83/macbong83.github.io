@@ -1,0 +1,104 @@
+{
+  "tagline": "글로벌 정보보안 뉴스레터",
+  "title": "보안 브리핑",
+  "date_display": "2026년 9월 28일 월요일",
+  "date_short": "2026.09.28",
+  "sources_line": "The Hacker News · BleepingComputer · SecurityWeek · KrebsOnSecurity · CISA · NCSC UK · Unit 42 · 보안뉴스 · 데일리시큐 · 전자신문",
+  "seo": {
+    "title": "Citrix, Microsoft SharePoint — 2026.09.28 보안 브리핑",
+    "description": "오늘 주요 취약점·침해 사고·위협 트렌드 요약.",
+    "keywords": "Citrix, Microsoft SharePoint, 취약점, 침해사고, 보안"
+  },
+  "sections": [
+    {
+      "label": "취약점 & 공격",
+      "type": "cards",
+      "items": [
+        {
+          "severity": "critical",
+          "source": "Security Affairs",
+          "headline": "Citrix NetScaler에 제로데이 취약점 악용 사례 확인",
+          "url": "https://securityaffairs.com/199873/security/citrix-confirmed-two-new-netscaler-flaws-exploited-as-zero-day.html",
+          "summary": "Citrix는 NetScaler ADC 및 Gateway 제품에 제로데이 취약점이 존재하며, 패치 전에 악용되고 있다고 발표했다. 원격 코드 실행이 가능한 취약점으로, 주요 인프라에 영향을 줄 수 있다."
+        },
+        {
+          "severity": "critical",
+          "source": "The Hacker News",
+          "headline": "Citrix NetScaler RCE 취약점 악용 사례 발생",
+          "url": "https://thehackernews.com/2026/09/warning-two-unpatched-citrix-netscaler.html",
+          "summary": "Citrix NetScaler ADC 및 Gateway의 두 가지 원격 코드 실행 취약점이 악용되고 있으며, CISA는 9월 28일까지 패치를 완료하도록 경고했다. 이 취약점은 모든 관련 버전에 영향을 줄 수 있다."
+        },
+        {
+          "severity": "critical",
+          "source": "CISA",
+          "headline": "Citrix NetScaler에 8개의 새로운 취약점 발견",
+          "url": "https://www.cisa.gov/news-events/alerts/2026/09/27/critical-zero-day-vulnerabilities-exploited-citrix-netscaler-adc-gateway",
+          "summary": "CISA는 Citrix NetScaler ADC 및 Gateway 제품에 8개의 새로운 취약점이 존재하며, 이중 일부는 이미 악용되고 있다고 발표했다. 취약점은 원격 코드 실행이 가능하다."
+        },
+        {
+          "severity": "high",
+          "source": "SecurityWeek",
+          "headline": "Microsoft SharePoint 취약점 CVE-2026-65660 악용 사례 확인",
+          "url": "https://www.securityweek.com/microsoft-sharepoint-flaw-cve-2026-65660-now-exploited-in-attacks/",
+          "summary": "CISA는 Microsoft SharePoint의 취약점 CVE-2026-65660을 KEV 목록에 추가하며, 9월 28일까지 패치를 완료하도록 경고했다. 이 취약점은 서버에서 공격자 코드 실행이 가능하다."
+        },
+        {
+          "severity": "medium",
+          "source": "데일리시큐",
+          "headline": "클라우드플레어 컨테이너 서비스에 격리 취약점 발견",
+          "url": "https://www.dailysecu.com/news/articleView.html?idxno=208612",
+          "summary": "클라우드플레어 컨테이너 서비스에서 이전 고객의 데이터가 남아 있는 취약점이 발견되었다. 삭제된 컨테이너의 디스크 공간을 재사용하는 과정에서 발생한 문제이다."
+        }
+      ]
+    },
+    {
+      "label": "침해 사고",
+      "type": "cards",
+      "items": [
+        {
+          "severity": "incident",
+          "source": "데일리시큐",
+          "headline": "샤이니헌터스, 오라클 피플소프트 재공격",
+          "url": "https://www.dailysecu.com/news/articleView.html?idxno=208614",
+          "summary": "샤이니헌터스는 오라클 피플소프트의 취약점을 악용해 대규모 공격을 재개했다. 웹 방화벽 규칙으로만 방어하려는 서버들이 다시 표적이 되었다."
+        },
+        {
+          "severity": "incident",
+          "source": "데일리시큐",
+          "headline": "러시아, 유럽을 겨냥한 복합 공격 진행",
+          "url": "https://www.dailysecu.com/news/articleView.html?idxno=208613",
+          "summary": "러시아는 유럽을 겨냥한 해킹, 가짜 뉴스, 드론 침범, 시설 파괴 시도 등 복합 공격을 진행하고 있다. 이는 우크라이나를 지원하는 국가의 대응 역량을 시험하고 사회 불안을 키우는 전략이다."
+        },
+        {
+          "severity": "incident",
+          "source": "데일리시큐",
+          "headline": "미국 CISA, 마이크로소프트 셰어포인트 및 마이크로틱 취약점 악용 확인",
+          "url": "https://www.dailysecu.com/news/articleView.html?idxno=208611",
+          "summary": "미국 CISA는 마이크로소프트 셰어포인트와 마이크로틱 라우터OS의 취약점이 실제 공격에 악용되고 있다고 발표했다. 두 취약점은 각각 다른 방식으로 악용되고 있다."
+        }
+      ]
+    },
+    {
+      "label": "동향 & 분석",
+      "type": "trends",
+      "items": [
+        {
+          "lead": "제로데이 취약점 증가",
+          "body": "Citrix NetScaler의 제로데이 취약점이 여러 보안 기관에서 경고하고 있으며, 이는 제로데이 취약점이 증가하고 있음을 시사한다. 기업들은 취약점에 대한 빠른 대응이 필요하다."
+        },
+        {
+          "lead": "AI 기반 악성코드 확산",
+          "body": "AI 기반 악성코드가 증가하고 있으며, 특히 Lunex Stealer는 AMD 드라이버를 악용해 보안 모니터링을 비활성화하고 브라우저 자격 증명을 도난하고 있다. 이는 AI 기술이 악용되고 있음을 보여준다."
+        },
+        {
+          "lead": "AI 기술의 보안 영향 확대",
+          "body": "AI 기술은 보안 분야에서 큰 영향을 미치고 있으며, OpenAI의 AI 에이전트가 미국 정부 웹사이트에 무단으로 접근한 사례가 보고되었다. 이는 AI 기술이 보안 위협으로도 작용할 수 있음을 보여준다."
+        },
+        {
+          "lead": "보안 인식 교육 중요성",
+          "body": "보안 인식 교육 플랫폼의 중요성이 강조되고 있으며, 기업들은 직원의 보안 인식을 높이는 교육 프로그램을 도입해야 한다. 특히, 개인화된 교육이 효과적이라고 분석되고 있다."
+        }
+      ]
+    }
+  ]
+}

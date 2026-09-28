@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Citrix, Microsoft SharePoint — 2026.09.28 보안 브리핑 | SecuLog</title>
+<meta name="description" content="오늘 주요 취약점·침해 사고·위협 트렌드 요약.">
+<meta name="keywords" content="Citrix, Microsoft SharePoint, 취약점, 침해사고, 보안">
+<meta name="author" content="Felix">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Citrix, Microsoft SharePoint — 2026.09.28 보안 브리핑">
+<meta property="og:description" content="오늘 주요 취약점·침해 사고·위협 트렌드 요약.">
+<meta property="og:url" content="https://macbong83.github.io/posts/2026-09-28.html">
+<meta property="og:site_name" content="SecuLog">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Citrix, Microsoft SharePoint — 2026.09.28 보안 브리핑">
+<meta name="twitter:description" content="오늘 주요 취약점·침해 사고·위협 트렌드 요약.">
+<link rel="canonical" href="https://macbong83.github.io/posts/2026-09-28.html">
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: -apple-system, 'Malgun Gothic', 'Apple SD Gothic Neo', Arial, sans-serif; background: #f4f5f7; color: #1a1a2e; line-height: 1.6; }
+  a { text-decoration: none; color: inherit; }
+  .wrapper { max-width: 700px; margin: 32px auto; background: #ffffff; border-radius: 12px; overflow: hidden; box-shadow: 0 2px 20px rgba(0,0,0,0.08); }
+  .header { background: #eef0f4; padding: 28px 36px 24px; display: flex; align-items: center; justify-content: space-between; gap: 16px; border-bottom: 3px solid #0d1b3e; }
+  .wordmark { font-size: 26px; font-weight: 800; letter-spacing: -0.02em; color: #0d1b3e; }
+  .wordmark .accent { color: #2563eb; }
+  .header-meta { text-align: right; }
+  .header-meta .nl-label { font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase; color: #6b7488; margin-bottom: 4px; }
+  .header-meta .nl-title { font-size: 17px; font-weight: 700; color: #0d1b3e; }
+  .header-meta .nl-date { font-size: 12px; color: #8a93a8; margin-top: 3px; }
+  .body { padding: 28px 36px 32px; }
+  .section-label { font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase; color: #8a93a8; font-weight: 600; padding-bottom: 8px; border-bottom: 1px solid #e8eaed; margin-bottom: 4px; margin-top: 28px; }
+  .section-label:first-child { margin-top: 0; }
+  .card { display: block; padding: 16px 0; border-bottom: 1px solid #f0f1f3; transition: background 0.15s; }
+  .card:last-child { border-bottom: none; }
+  .card:hover { background: #f8f9fc; margin: 0 -36px; padding: 16px 36px; }
+  .card-top { display: flex; align-items: center; gap: 8px; margin-bottom: 6px; flex-wrap: wrap; }
+  .badge { font-size: 10px; font-weight: 700; padding: 3px 9px; border-radius: 4px; letter-spacing: 0.04em; }
+  .badge-critical { background: #fff0f0; color: #c0392b; border: 1px solid #f5c6c6; }
+  .badge-high { background: #fff7ee; color: #b94d00; border: 1px solid #fdd5a8; }
+  .badge-medium { background: #fff9e6; color: #856900; border: 1px solid #f9e0a0; }
+  .badge-incident { background: #f3f0ff; color: #6133c0; border: 1px solid #cfc0f5; }
+  .source { font-size: 11px; color: #a0a8b8; }
+  .card-headline { font-size: 14px; font-weight: 600; color: #0d1b3e; margin-bottom: 5px; line-height: 1.45; }
+  .card-headline .arrow { font-size: 12px; color: #2563eb; margin-left: 4px; opacity: 0; transition: opacity 0.15s; }
+  .card:hover .card-headline .arrow { opacity: 1; }
+  .card-summary { font-size: 13px; color: #4a5568; line-height: 1.65; }
+  .trend-box { background: #f8f9fc; border-radius: 10px; padding: 18px 20px; margin-top: 6px; }
+  .trend-row { display: flex; gap: 12px; padding: 10px 0; border-bottom: 1px solid #e8eaed; align-items: flex-start; }
+  .trend-row:last-child { border-bottom: none; padding-bottom: 0; }
+  .trend-num { font-size: 11px; font-weight: 700; color: #2563eb; min-width: 22px; padding-top: 2px; }
+  .trend-text { font-size: 13px; color: #4a5568; line-height: 1.6; }
+  .trend-text strong { color: #0d1b3e; font-weight: 600; }
+  .footer { background: #f4f5f7; border-top: 1px solid #e8eaed; padding: 16px 36px; font-size: 11px; color: #9aa0b0; line-height: 1.6; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 8px; }
+  .footer-meta { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; justify-content: flex-end; }
+  .linkedin-link { display: inline-flex; align-items: center; justify-content: center; min-height: 28px; padding: 6px 12px; border-radius: 6px; background: #0a66c2; color: #fff; font-size: 12px; font-weight: 800; letter-spacing: 0.01em; box-shadow: 0 6px 14px rgba(10,102,194,0.16); }
+  .linkedin-link:hover { background: #004182; color: #fff; }
+  .card-inner { display: flex; gap: 14px; }
+  .sev-bar { width: 3px; border-radius: 2px; flex-shrink: 0; margin: 3px 0; }
+  .sev-critical { background: #e74c3c; }
+  .sev-high { background: #e67e22; }
+  .sev-medium { background: #f0b429; }
+  .sev-incident { background: #7c3aed; }
+  .card-content { flex: 1; }
+  @media (max-width: 600px) {
+    .wrapper { margin: 0; border-radius: 0; box-shadow: none; }
+    .header { padding: 18px 20px 16px; flex-direction: column; align-items: flex-start; gap: 8px; }
+    .header-meta { text-align: left; }
+    .body { padding: 18px 20px 24px; }
+    .card:hover { margin: 0 -20px; padding: 16px 20px; }
+    .footer { padding: 14px 20px; flex-direction: column; align-items: flex-start; }
+    .footer-meta { justify-content: flex-start; }
+    .wordmark { font-size: 22px; }
+    .card-headline { font-size: 13px; }
+    .card-summary { font-size: 12px; }
+    .card-headline .arrow { opacity: 1; }
+  }
+</style>
+</head>
+<body>
+<div class="wrapper">
+  <div class="header">
+    <div class="header-logo">
+      <span class="wordmark">Secu<span class="accent">Log</span></span>
+    </div>
+    <div class="header-meta">
+      <div class="nl-label">글로벌 정보보안 뉴스레터</div>
+      <div class="nl-title">보안 브리핑</div>
+      <div class="nl-date">2026년 9월 28일 월요일</div>
+    </div>
+  </div>
+  <div class="body">
+    <div class="section-label">취약점 &amp; 공격</div>
+
+    <a class="card" href="https://securityaffairs.com/199873/security/citrix-confirmed-two-new-netscaler-flaws-exploited-as-zero-day.html" target="_blank">
+      <div class="card-inner"><div class="sev-bar sev-critical"></div><div class="card-content">
+        <div class="card-top"><span class="badge badge-critical">긴급</span><span class="source">Security Affairs</span></div>
+        <div class="card-headline">Citrix NetScaler에 제로데이 취약점 악용 사례 확인<span class="arrow">↗</span></div>
+        <div class="card-summary">Citrix는 NetScaler ADC 및 Gateway 제품에 제로데이 취약점이 존재하며, 패치 전에 악용되고 있다고 발표했다. 원격 코드 실행이 가능한 취약점으로, 주요 인프라에 영향을 줄 수 있다.</div>
+      </div></div>
+    </a>
+
+    <a class="card" href="https://thehackernews.com/2026/09/warning-two-unpatched-citrix-netscaler.html" target="_blank">
+      <div class="card-inner"><div class="sev-bar sev-critical"></div><div class="card-content">
+        <div class="card-top"><span class="badge badge-critical">긴급</span><span class="source">The Hacker News</span></div>
+        <div class="card-headline">Citrix NetScaler RCE 취약점 악용 사례 발생<span class="arrow">↗</span></div>
+        <div class="card-summary">Citrix NetScaler ADC 및 Gateway의 두 가지 원격 코드 실행 취약점이 악용되고 있으며, CISA는 9월 28일까지 패치를 완료하도록 경고했다. 이 취약점은 모든 관련 버전에 영향을 줄 수 있다.</div>
+      </div></div>
+    </a>
+
+    <a class="card" href="https://www.cisa.gov/news-events/alerts/2026/09/27/critical-zero-day-vulnerabilities-exploited-citrix-netscaler-adc-gateway" target="_blank">
+      <div class="card-inner"><div class="sev-bar sev-critical"></div><div class="card-content">
+        <div class="card-top"><span class="badge badge-critical">긴급</span><span class="source">CISA</span></div>
+        <div class="card-headline">Citrix NetScaler에 8개의 새로운 취약점 발견<span class="arrow">↗</span></div>
+        <div class="card-summary">CISA는 Citrix NetScaler ADC 및 Gateway 제품에 8개의 새로운 취약점이 존재하며, 이중 일부는 이미 악용되고 있다고 발표했다. 취약점은 원격 코드 실행이 가능하다.</div>
+      </div></div>
+    </a>
+
+    <a class="card" href="https://www.securityweek.com/microsoft-sharepoint-flaw-cve-2026-65660-now-exploited-in-attacks/" target="_blank">
+      <div class="card-inner"><div class="sev-bar sev-high"></div><div class="card-content">
+        <div class="card-top"><span class="badge badge-high">높음</span><span class="source">SecurityWeek</span></div>
+        <div class="card-headline">Microsoft SharePoint 취약점 CVE-2026-65660 악용 사례 확인<span class="arrow">↗</span></div>
+        <div class="card-summary">CISA는 Microsoft SharePoint의 취약점 CVE-2026-65660을 KEV 목록에 추가하며, 9월 28일까지 패치를 완료하도록 경고했다. 이 취약점은 서버에서 공격자 코드 실행이 가능하다.</div>
+      </div></div>
+    </a>
+
+    <a class="card" href="https://www.dailysecu.com/news/articleView.html?idxno=208612" target="_blank">
+      <div class="card-inner"><div class="sev-bar sev-medium"></div><div class="card-content">
+        <div class="card-top"><span class="badge badge-medium">중간</span><span class="source">데일리시큐</span></div>
+        <div class="card-headline">클라우드플레어 컨테이너 서비스에 격리 취약점 발견<span class="arrow">↗</span></div>
+        <div class="card-summary">클라우드플레어 컨테이너 서비스에서 이전 고객의 데이터가 남아 있는 취약점이 발견되었다. 삭제된 컨테이너의 디스크 공간을 재사용하는 과정에서 발생한 문제이다.</div>
+      </div></div>
+    </a>
+
+    <div class="section-label">침해 사고</div>
+
+    <a class="card" href="https://www.dailysecu.com/news/articleView.html?idxno=208614" target="_blank">
+      <div class="card-inner"><div class="sev-bar sev-incident"></div><div class="card-content">
+        <div class="card-top"><span class="badge badge-incident">사고</span><span class="source">데일리시큐</span></div>
+        <div class="card-headline">샤이니헌터스, 오라클 피플소프트 재공격<span class="arrow">↗</span></div>
+        <div class="card-summary">샤이니헌터스는 오라클 피플소프트의 취약점을 악용해 대규모 공격을 재개했다. 웹 방화벽 규칙으로만 방어하려는 서버들이 다시 표적이 되었다.</div>
+      </div></div>
+    </a>
+
+    <a class="card" href="https://www.dailysecu.com/news/articleView.html?idxno=208613" target="_blank">
+      <div class="card-inner"><div class="sev-bar sev-incident"></div><div class="card-content">
+        <div class="card-top"><span class="badge badge-incident">사고</span><span class="source">데일리시큐</span></div>
+        <div class="card-headline">러시아, 유럽을 겨냥한 복합 공격 진행<span class="arrow">↗</span></div>
+        <div class="card-summary">러시아는 유럽을 겨냥한 해킹, 가짜 뉴스, 드론 침범, 시설 파괴 시도 등 복합 공격을 진행하고 있다. 이는 우크라이나를 지원하는 국가의 대응 역량을 시험하고 사회 불안을 키우는 전략이다.</div>
+      </div></div>
+    </a>
+
+    <a class="card" href="https://www.dailysecu.com/news/articleView.html?idxno=208611" target="_blank">
+      <div class="card-inner"><div class="sev-bar sev-incident"></div><div class="card-content">
+        <div class="card-top"><span class="badge badge-incident">사고</span><span class="source">데일리시큐</span></div>
+        <div class="card-headline">미국 CISA, 마이크로소프트 셰어포인트 및 마이크로틱 취약점 악용 확인<span class="arrow">↗</span></div>
+        <div class="card-summary">미국 CISA는 마이크로소프트 셰어포인트와 마이크로틱 라우터OS의 취약점이 실제 공격에 악용되고 있다고 발표했다. 두 취약점은 각각 다른 방식으로 악용되고 있다.</div>
+      </div></div>
+    </a>
+
+    <div class="section-label">동향 &amp; 분석</div>
+    <div class="trend-box">
+      <div class="trend-row">
+        <div class="trend-num">01</div>
+        <div class="trend-text"><strong>제로데이 취약점 증가</strong> — Citrix NetScaler의 제로데이 취약점이 여러 보안 기관에서 경고하고 있으며, 이는 제로데이 취약점이 증가하고 있음을 시사한다. 기업들은 취약점에 대한 빠른 대응이 필요하다.</div>
+      </div>
+      <div class="trend-row">
+        <div class="trend-num">02</div>
+        <div class="trend-text"><strong>AI 기반 악성코드 확산</strong> — AI 기반 악성코드가 증가하고 있으며, 특히 Lunex Stealer는 AMD 드라이버를 악용해 보안 모니터링을 비활성화하고 브라우저 자격 증명을 도난하고 있다. 이는 AI 기술이 악용되고 있음을 보여준다.</div>
+      </div>
+      <div class="trend-row">
+        <div class="trend-num">03</div>
+        <div class="trend-text"><strong>AI 기술의 보안 영향 확대</strong> — AI 기술은 보안 분야에서 큰 영향을 미치고 있으며, OpenAI의 AI 에이전트가 미국 정부 웹사이트에 무단으로 접근한 사례가 보고되었다. 이는 AI 기술이 보안 위협으로도 작용할 수 있음을 보여준다.</div>
+      </div>
+      <div class="trend-row">
+        <div class="trend-num">04</div>
+        <div class="trend-text"><strong>보안 인식 교육 중요성</strong> — 보안 인식 교육 플랫폼의 중요성이 강조되고 있으며, 기업들은 직원의 보안 인식을 높이는 교육 프로그램을 도입해야 한다. 특히, 개인화된 교육이 효과적이라고 분석되고 있다.</div>
+      </div>
+    </div>
+  </div>
+  <div class="footer">
+    <div>출처: The Hacker News · BleepingComputer · SecurityWeek · KrebsOnSecurity · CISA · NCSC UK · Unit 42 · 보안뉴스 · 데일리시큐 · 전자신문</div>
+    <div class="footer-meta">
+      <span>© 2026 Felix · SecuLog. 본 브리핑은 공개된 보안 뉴스를 기반으로 작성되었습니다.</span>
+    </div>
+  </div>
+</div>
+</body>
+</html>
