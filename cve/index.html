@@ -41,13 +41,197 @@
     <h1>CVE Archive</h1>
     <p>NVD 기반 Critical CVE를 누적 관리하는 별도 페이지입니다. 블로그에는 CVE 자동 글을 발행하지 않고, 이 페이지에만 기록합니다.</p>
     <div class="meta">
-      <span>Total 1204</span>
-      <span>Updated 2026-09-29 08:00 KST</span>
+      <span>Total 1212</span>
+      <span>Updated 2026-09-29 20:00 KST</span>
       <span>Source NVD API</span>
     </div>
   </section>
   <div class="notice">중복 제거 기준은 CVE ID입니다. 동일 CVE는 다시 추가하지 않습니다. 실제 악용 여부와 패치 우선순위는 CISA KEV, 벤더 권고, 자산 노출 여부와 함께 검토해야 합니다.</div>
 
+    <article class="cve-card" id="CVE-2026-102361">
+      <div class="cve-top">
+        <a class="cve-id" href="https://nvd.nist.gov/vuln/detail/CVE-2026-102361" target="_blank" rel="noopener">CVE-2026-102361</a>
+        <span class="score">CVSS 9.1 CRITICAL</span>
+      </div>
+      <p class="desc">mall4j through 4.0 contains a missing authentication vulnerability in the PUT /user/updatePwd endpoint that allows unauthenticated attackers to reset any storefront account password. Attackers can supply a target username in the request body to overwrite passwords without verification, enabling account takeover and access to orders and personal data.</p>
+      <dl>
+        <div><dt>Published</dt><dd>2026-09-29</dd></div>
+        <div><dt>Last Modified</dt><dd>2026-09-29</dd></div>
+        <div><dt>Status</dt><dd>Received</dd></div>
+        <div><dt>Attack Vector</dt><dd>네트워크</dd></div>
+        <div><dt>Attack Complexity</dt><dd>낮음</dd></div>
+        <div><dt>Privileges</dt><dd>없음</dd></div>
+        <div><dt>User Interaction</dt><dd>없음</dd></div>
+        <div><dt>CWE</dt><dd>CWE-306</dd></div>
+        <div><dt>Affected</dt><dd>NVD CPE 기준 확인 필요</dd></div>
+      </dl>
+      <div class="vector"><code>CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N</code></div>
+      <details>
+        <summary>References</summary>
+        <ul><li><a href="https://github.com/LinYuanyi1/cve-request-poc/blob/114b3f0d149e50a7678f591bf8043399fc9ac96c/mall4j/A01_updatepwd_account_takeover.py" target="_blank" rel="noopener">https://github.com/LinYuanyi1/cve-request-poc/blob/114b3f0d149e50a7678f591bf8043399fc9ac96c/mall4j/A01_updatepwd_account_takeover.py</a></li><li><a href="https://github.com/gz-yami/mall4j" target="_blank" rel="noopener">https://github.com/gz-yami/mall4j</a></li><li><a href="https://github.com/gz-yami/mall4j/blob/ffc672fc1aa4320ce02d0b93853bb456ae0a4dae/yami-shop-api/src/main/java/com/yami/shop/api/controller/UserRegisterController.java#L78-L100" target="_blank" rel="noopener">https://github.com/gz-yami/mall4j/blob/ffc672fc1aa4320ce02d0b93853bb456ae0a4dae/yami-shop-api/src/main/java/com/yami/shop/api/controller/UserRegisterController.java#L78-L100</a></li><li><a href="https://www.vulncheck.com/advisories/mall4j-through-4.0-missing-authentication-in-password-update-endpoint" target="_blank" rel="noopener">https://www.vulncheck.com/advisories/mall4j-through-4.0-missing-authentication-in-password-update-endpoint</a></li></ul>
+      </details>
+    </article>
+    <article class="cve-card" id="CVE-2026-102240">
+      <div class="cve-top">
+        <a class="cve-id" href="https://nvd.nist.gov/vuln/detail/CVE-2026-102240" target="_blank" rel="noopener">CVE-2026-102240</a>
+        <span class="score">CVSS 10.0 CRITICAL</span>
+      </div>
+      <p class="desc">A vulnerability was found in Netcore NAP930 0.1.241010.141410. This affects the function eval of the file /www/cgi-bin/network_tools of the component Network Tools CGI. The manipulation of the argument sid results in os command injection. The attack may be performed from remote. The exploit has been made public and could be used. The vendor was contacted early about this disclosure but did not respond in any way.</p>
+      <dl>
+        <div><dt>Published</dt><dd>2026-09-29</dd></div>
+        <div><dt>Last Modified</dt><dd>2026-09-29</dd></div>
+        <div><dt>Status</dt><dd>Received</dd></div>
+        <div><dt>Attack Vector</dt><dd>네트워크</dd></div>
+        <div><dt>Attack Complexity</dt><dd>낮음</dd></div>
+        <div><dt>Privileges</dt><dd>없음</dd></div>
+        <div><dt>User Interaction</dt><dd>없음</dd></div>
+        <div><dt>CWE</dt><dd>CWE-77, CWE-78</dd></div>
+        <div><dt>Affected</dt><dd>NVD CPE 기준 확인 필요</dd></div>
+      </dl>
+      <div class="vector"><code>CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:H</code></div>
+      <details>
+        <summary>References</summary>
+        <ul><li><a href="https://github.com/senxitoyshuyi-ui/HACKALL/blob/main/netcore_NAP930%20V0.1.241010.141410%20Router/NAP930_network_tools_command_injection.md" target="_blank" rel="noopener">https://github.com/senxitoyshuyi-ui/HACKALL/blob/main/netcore_NAP930%20V0.1.241010.141410%20Router/NAP930_network_tools_command_injection.md</a></li><li><a href="https://vuldb.com/cve/CVE-2026-102240" target="_blank" rel="noopener">https://vuldb.com/cve/CVE-2026-102240</a></li><li><a href="https://vuldb.com/submit/931247" target="_blank" rel="noopener">https://vuldb.com/submit/931247</a></li><li><a href="https://vuldb.com/vuln/411139" target="_blank" rel="noopener">https://vuldb.com/vuln/411139</a></li></ul>
+      </details>
+    </article>
+    <article class="cve-card" id="CVE-2026-101354">
+      <div class="cve-top">
+        <a class="cve-id" href="https://nvd.nist.gov/vuln/detail/CVE-2026-101354" target="_blank" rel="noopener">CVE-2026-101354</a>
+        <span class="score">CVSS 9.6 CRITICAL</span>
+      </div>
+      <p class="desc">A security flaw has been discovered in FAST FAC1203R 20200116_2.0.4. The affected element is the function _tWlanTask of the component MmtAtePrase Parser. Performing a manipulation results in stack-based buffer overflow. The attacker must have access to the local network to execute the attack. The exploit has been released to the public and may be used for attacks. The vendor was contacted early about this disclosure but did not respond in any way.</p>
+      <dl>
+        <div><dt>Published</dt><dd>2026-09-29</dd></div>
+        <div><dt>Last Modified</dt><dd>2026-09-29</dd></div>
+        <div><dt>Status</dt><dd>Received</dd></div>
+        <div><dt>Attack Vector</dt><dd>인접 네트워크</dd></div>
+        <div><dt>Attack Complexity</dt><dd>낮음</dd></div>
+        <div><dt>Privileges</dt><dd>없음</dd></div>
+        <div><dt>User Interaction</dt><dd>없음</dd></div>
+        <div><dt>CWE</dt><dd>CWE-119, CWE-121</dd></div>
+        <div><dt>Affected</dt><dd>NVD CPE 기준 확인 필요</dd></div>
+      </dl>
+      <div class="vector"><code>CVSS:3.1/AV:A/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:H</code></div>
+      <details>
+        <summary>References</summary>
+        <ul><li><a href="https://github.com/xiaobor123/vuls-find-VxWorks/tree/main/vul-find-FAST_FAC1203R-twlantask-MmtAtePrase-stack-overflow(1)/vul-find-FAST_FAC1203R-twlantask-MmtAtePrase-stack-overflow" target="_blank" rel="noopener">https://github.com/xiaobor123/vuls-find-VxWorks/tree/main/vul-find-FAST_FAC1203R-twlantask-MmtAtePrase-stack-overflow(1)/vul-find-FAST_FAC1203R-twlantask-MmtAtePrase-stack-overflow</a></li><li><a href="https://vuldb.com/cve/CVE-2026-101354" target="_blank" rel="noopener">https://vuldb.com/cve/CVE-2026-101354</a></li><li><a href="https://vuldb.com/submit/927238" target="_blank" rel="noopener">https://vuldb.com/submit/927238</a></li><li><a href="https://vuldb.com/vuln/411088" target="_blank" rel="noopener">https://vuldb.com/vuln/411088</a></li></ul>
+      </details>
+    </article>
+    <article class="cve-card" id="CVE-2026-101264">
+      <div class="cve-top">
+        <a class="cve-id" href="https://nvd.nist.gov/vuln/detail/CVE-2026-101264" target="_blank" rel="noopener">CVE-2026-101264</a>
+        <span class="score">CVSS 9.1 CRITICAL</span>
+      </div>
+      <p class="desc">A vulnerability was determined in Ziroom ZHOME A0101 1.0.1.0. Impacted is an unknown function of the file /api/ZRnetwork/set_passwd. This manipulation of the argument password1 causes command injection. The attack can be initiated remotely. The exploit has been publicly disclosed and may be utilized. The vendor was contacted early about this disclosure but did not respond in any way.</p>
+      <dl>
+        <div><dt>Published</dt><dd>2026-09-29</dd></div>
+        <div><dt>Last Modified</dt><dd>2026-09-29</dd></div>
+        <div><dt>Status</dt><dd>Received</dd></div>
+        <div><dt>Attack Vector</dt><dd>네트워크</dd></div>
+        <div><dt>Attack Complexity</dt><dd>낮음</dd></div>
+        <div><dt>Privileges</dt><dd>높음</dd></div>
+        <div><dt>User Interaction</dt><dd>없음</dd></div>
+        <div><dt>CWE</dt><dd>CWE-74, CWE-77</dd></div>
+        <div><dt>Affected</dt><dd>NVD CPE 기준 확인 필요</dd></div>
+      </dl>
+      <div class="vector"><code>CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:C/C:H/I:H/A:H</code></div>
+      <details>
+        <summary>References</summary>
+        <ul><li><a href="https://github.com/waltz-sketch/Ziroom/blob/main/set_passwd_password1_command_injection.md" target="_blank" rel="noopener">https://github.com/waltz-sketch/Ziroom/blob/main/set_passwd_password1_command_injection.md</a></li><li><a href="https://vuldb.com/cve/CVE-2026-101264" target="_blank" rel="noopener">https://vuldb.com/cve/CVE-2026-101264</a></li><li><a href="https://vuldb.com/submit/914646" target="_blank" rel="noopener">https://vuldb.com/submit/914646</a></li><li><a href="https://vuldb.com/vuln/411032" target="_blank" rel="noopener">https://vuldb.com/vuln/411032</a></li></ul>
+      </details>
+    </article>
+    <article class="cve-card" id="CVE-2026-101263">
+      <div class="cve-top">
+        <a class="cve-id" href="https://nvd.nist.gov/vuln/detail/CVE-2026-101263" target="_blank" rel="noopener">CVE-2026-101263</a>
+        <span class="score">CVSS 9.1 CRITICAL</span>
+      </div>
+      <p class="desc">A vulnerability was found in Ziroom ZHOME A0101 1.0.1.0. This issue affects some unknown processing of the file /api/ZRQos/set_online_client. The manipulation of the argument mac results in command injection. It is possible to launch the attack remotely. The exploit has been made public and could be used. The vendor was contacted early about this disclosure but did not respond in any way.</p>
+      <dl>
+        <div><dt>Published</dt><dd>2026-09-29</dd></div>
+        <div><dt>Last Modified</dt><dd>2026-09-29</dd></div>
+        <div><dt>Status</dt><dd>Received</dd></div>
+        <div><dt>Attack Vector</dt><dd>네트워크</dd></div>
+        <div><dt>Attack Complexity</dt><dd>낮음</dd></div>
+        <div><dt>Privileges</dt><dd>높음</dd></div>
+        <div><dt>User Interaction</dt><dd>없음</dd></div>
+        <div><dt>CWE</dt><dd>CWE-74, CWE-77</dd></div>
+        <div><dt>Affected</dt><dd>NVD CPE 기준 확인 필요</dd></div>
+      </dl>
+      <div class="vector"><code>CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:C/C:H/I:H/A:H</code></div>
+      <details>
+        <summary>References</summary>
+        <ul><li><a href="https://github.com/waltz-sketch/Ziroom/blob/main/set_online_client_mac_command_injection.md" target="_blank" rel="noopener">https://github.com/waltz-sketch/Ziroom/blob/main/set_online_client_mac_command_injection.md</a></li><li><a href="https://vuldb.com/cve/CVE-2026-101263" target="_blank" rel="noopener">https://vuldb.com/cve/CVE-2026-101263</a></li><li><a href="https://vuldb.com/submit/914645" target="_blank" rel="noopener">https://vuldb.com/submit/914645</a></li><li><a href="https://vuldb.com/vuln/411031" target="_blank" rel="noopener">https://vuldb.com/vuln/411031</a></li></ul>
+      </details>
+    </article>
+    <article class="cve-card" id="CVE-2026-101262">
+      <div class="cve-top">
+        <a class="cve-id" href="https://nvd.nist.gov/vuln/detail/CVE-2026-101262" target="_blank" rel="noopener">CVE-2026-101262</a>
+        <span class="score">CVSS 9.1 CRITICAL</span>
+      </div>
+      <p class="desc">A vulnerability has been found in Ziroom ZHOME A0101 1.0.1.0. This vulnerability affects unknown code of the file /api/ZRQos/set_online_client. The manipulation of the argument ip leads to command injection. It is possible to initiate the attack remotely. The exploit has been disclosed to the public and may be used. The vendor was contacted early about this disclosure but did not respond in any way.</p>
+      <dl>
+        <div><dt>Published</dt><dd>2026-09-28</dd></div>
+        <div><dt>Last Modified</dt><dd>2026-09-28</dd></div>
+        <div><dt>Status</dt><dd>Received</dd></div>
+        <div><dt>Attack Vector</dt><dd>네트워크</dd></div>
+        <div><dt>Attack Complexity</dt><dd>낮음</dd></div>
+        <div><dt>Privileges</dt><dd>높음</dd></div>
+        <div><dt>User Interaction</dt><dd>없음</dd></div>
+        <div><dt>CWE</dt><dd>CWE-74, CWE-77</dd></div>
+        <div><dt>Affected</dt><dd>NVD CPE 기준 확인 필요</dd></div>
+      </dl>
+      <div class="vector"><code>CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:C/C:H/I:H/A:H</code></div>
+      <details>
+        <summary>References</summary>
+        <ul><li><a href="https://github.com/waltz-sketch/Ziroom/blob/main/set_online_client_ip_command_injection.md" target="_blank" rel="noopener">https://github.com/waltz-sketch/Ziroom/blob/main/set_online_client_ip_command_injection.md</a></li><li><a href="https://vuldb.com/cve/CVE-2026-101262" target="_blank" rel="noopener">https://vuldb.com/cve/CVE-2026-101262</a></li><li><a href="https://vuldb.com/submit/914644" target="_blank" rel="noopener">https://vuldb.com/submit/914644</a></li><li><a href="https://vuldb.com/vuln/411030" target="_blank" rel="noopener">https://vuldb.com/vuln/411030</a></li></ul>
+      </details>
+    </article>
+    <article class="cve-card" id="CVE-2026-101261">
+      <div class="cve-top">
+        <a class="cve-id" href="https://nvd.nist.gov/vuln/detail/CVE-2026-101261" target="_blank" rel="noopener">CVE-2026-101261</a>
+        <span class="score">CVSS 9.1 CRITICAL</span>
+      </div>
+      <p class="desc">A flaw has been found in Ziroom ZHOME A0101 1.0.1.0. This affects an unknown part of the file /api/ZRnetwork/firstSetup_wifi. Executing a manipulation of the argument login_pwd can lead to command injection. The attack may be performed from remote. The exploit has been published and may be used. The vendor was contacted early about this disclosure but did not respond in any way.</p>
+      <dl>
+        <div><dt>Published</dt><dd>2026-09-28</dd></div>
+        <div><dt>Last Modified</dt><dd>2026-09-28</dd></div>
+        <div><dt>Status</dt><dd>Received</dd></div>
+        <div><dt>Attack Vector</dt><dd>네트워크</dd></div>
+        <div><dt>Attack Complexity</dt><dd>낮음</dd></div>
+        <div><dt>Privileges</dt><dd>높음</dd></div>
+        <div><dt>User Interaction</dt><dd>없음</dd></div>
+        <div><dt>CWE</dt><dd>CWE-74, CWE-77</dd></div>
+        <div><dt>Affected</dt><dd>NVD CPE 기준 확인 필요</dd></div>
+      </dl>
+      <div class="vector"><code>CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:C/C:H/I:H/A:H</code></div>
+      <details>
+        <summary>References</summary>
+        <ul><li><a href="https://github.com/waltz-sketch/Ziroom/blob/main/firstsetup_wifi_login_pwd_command_injection.md" target="_blank" rel="noopener">https://github.com/waltz-sketch/Ziroom/blob/main/firstsetup_wifi_login_pwd_command_injection.md</a></li><li><a href="https://vuldb.com/cve/CVE-2026-101261" target="_blank" rel="noopener">https://vuldb.com/cve/CVE-2026-101261</a></li><li><a href="https://vuldb.com/submit/914643" target="_blank" rel="noopener">https://vuldb.com/submit/914643</a></li><li><a href="https://vuldb.com/vuln/411029" target="_blank" rel="noopener">https://vuldb.com/vuln/411029</a></li></ul>
+      </details>
+    </article>
+    <article class="cve-card" id="CVE-2026-101260">
+      <div class="cve-top">
+        <a class="cve-id" href="https://nvd.nist.gov/vuln/detail/CVE-2026-101260" target="_blank" rel="noopener">CVE-2026-101260</a>
+        <span class="score">CVSS 9.1 CRITICAL</span>
+      </div>
+      <p class="desc">A vulnerability was detected in Ziroom ZHOME A0101 1.0.1.0. Affected by this issue is some unknown functionality of the file /api/ZRnetwork/firstLogin. Performing a manipulation of the argument firstLogin results in command injection. The attack is possible to be carried out remotely. The exploit is now public and may be used. The vendor was contacted early about this disclosure but did not respond in any way.</p>
+      <dl>
+        <div><dt>Published</dt><dd>2026-09-28</dd></div>
+        <div><dt>Last Modified</dt><dd>2026-09-28</dd></div>
+        <div><dt>Status</dt><dd>Received</dd></div>
+        <div><dt>Attack Vector</dt><dd>네트워크</dd></div>
+        <div><dt>Attack Complexity</dt><dd>낮음</dd></div>
+        <div><dt>Privileges</dt><dd>높음</dd></div>
+        <div><dt>User Interaction</dt><dd>없음</dd></div>
+        <div><dt>CWE</dt><dd>CWE-74, CWE-77</dd></div>
+        <div><dt>Affected</dt><dd>NVD CPE 기준 확인 필요</dd></div>
+      </dl>
+      <div class="vector"><code>CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:C/C:H/I:H/A:H</code></div>
+      <details>
+        <summary>References</summary>
+        <ul><li><a href="https://github.com/waltz-sketch/Ziroom/blob/main/firstlogin_command_injection.md" target="_blank" rel="noopener">https://github.com/waltz-sketch/Ziroom/blob/main/firstlogin_command_injection.md</a></li><li><a href="https://vuldb.com/cve/CVE-2026-101260" target="_blank" rel="noopener">https://vuldb.com/cve/CVE-2026-101260</a></li><li><a href="https://vuldb.com/submit/914642" target="_blank" rel="noopener">https://vuldb.com/submit/914642</a></li><li><a href="https://vuldb.com/vuln/411028" target="_blank" rel="noopener">https://vuldb.com/vuln/411028</a></li></ul>
+      </details>
+    </article>
     <article class="cve-card" id="CVE-2026-101187">
       <div class="cve-top">
         <a class="cve-id" href="https://nvd.nist.gov/vuln/detail/CVE-2026-101187" target="_blank" rel="noopener">CVE-2026-101187</a>
