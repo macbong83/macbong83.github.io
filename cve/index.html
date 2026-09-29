@@ -41,13 +41,36 @@
     <h1>CVE Archive</h1>
     <p>NVD 기반 Critical CVE를 누적 관리하는 별도 페이지입니다. 블로그에는 CVE 자동 글을 발행하지 않고, 이 페이지에만 기록합니다.</p>
     <div class="meta">
-      <span>Total 1212</span>
-      <span>Updated 2026-09-29 20:00 KST</span>
+      <span>Total 1214</span>
+      <span>Updated 2026-09-30 08:00 KST</span>
       <span>Source NVD API</span>
     </div>
   </section>
   <div class="notice">중복 제거 기준은 CVE ID입니다. 동일 CVE는 다시 추가하지 않습니다. 실제 악용 여부와 패치 우선순위는 CISA KEV, 벤더 권고, 자산 노출 여부와 함께 검토해야 합니다.</div>
 
+    <article class="cve-card" id="CVE-2026-53988">
+      <div class="cve-top">
+        <a class="cve-id" href="https://nvd.nist.gov/vuln/detail/CVE-2026-53988" target="_blank" rel="noopener">CVE-2026-53988</a>
+        <span class="score">CVSS 10.0 CRITICAL</span>
+      </div>
+      <p class="desc">Dockhand before 1.0.40 contains an authentication bypass vulnerability in its git webhook endpoints that allows unauthenticated remote attackers to trigger arbitrary stack redeployments by exploiting a null webhook secret guard condition. Attackers can enumerate sequential stack IDs and send unsigned webhook requests to force git clone and docker compose operations, enabling denial of service or, when combined with write access to the tracked git branch, container escape and full host compromise via attacker-controlled docker-compose.yml with privileged bind mounts.</p>
+      <dl>
+        <div><dt>Published</dt><dd>2026-09-29</dd></div>
+        <div><dt>Last Modified</dt><dd>2026-09-29</dd></div>
+        <div><dt>Status</dt><dd>Received</dd></div>
+        <div><dt>Attack Vector</dt><dd>네트워크</dd></div>
+        <div><dt>Attack Complexity</dt><dd>낮음</dd></div>
+        <div><dt>Privileges</dt><dd>없음</dd></div>
+        <div><dt>User Interaction</dt><dd>없음</dd></div>
+        <div><dt>CWE</dt><dd>CWE-306</dd></div>
+        <div><dt>Affected</dt><dd>NVD CPE 기준 확인 필요</dd></div>
+      </dl>
+      <div class="vector"><code>CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:H</code></div>
+      <details>
+        <summary>References</summary>
+        <ul><li><a href="https://github.com/Finsys/dockhand/releases/tag/v1.0.40" target="_blank" rel="noopener">https://github.com/Finsys/dockhand/releases/tag/v1.0.40</a></li><li><a href="https://www.vulncheck.com/advisories/dockhand-unauthenticated-webhook-trigger-via-git-webhook-endpoints" target="_blank" rel="noopener">https://www.vulncheck.com/advisories/dockhand-unauthenticated-webhook-trigger-via-git-webhook-endpoints</a></li></ul>
+      </details>
+    </article>
     <article class="cve-card" id="CVE-2026-102361">
       <div class="cve-top">
         <a class="cve-id" href="https://nvd.nist.gov/vuln/detail/CVE-2026-102361" target="_blank" rel="noopener">CVE-2026-102361</a>
@@ -161,6 +184,29 @@
       <details>
         <summary>References</summary>
         <ul><li><a href="https://github.com/waltz-sketch/Ziroom/blob/main/set_online_client_mac_command_injection.md" target="_blank" rel="noopener">https://github.com/waltz-sketch/Ziroom/blob/main/set_online_client_mac_command_injection.md</a></li><li><a href="https://vuldb.com/cve/CVE-2026-101263" target="_blank" rel="noopener">https://vuldb.com/cve/CVE-2026-101263</a></li><li><a href="https://vuldb.com/submit/914645" target="_blank" rel="noopener">https://vuldb.com/submit/914645</a></li><li><a href="https://vuldb.com/vuln/411031" target="_blank" rel="noopener">https://vuldb.com/vuln/411031</a></li></ul>
+      </details>
+    </article>
+    <article class="cve-card" id="CVE-2023-54400">
+      <div class="cve-top">
+        <a class="cve-id" href="https://nvd.nist.gov/vuln/detail/CVE-2023-54400" target="_blank" rel="noopener">CVE-2023-54400</a>
+        <span class="score">CVSS 9.8 CRITICAL</span>
+      </div>
+      <p class="desc">Fumasoft Fumeng Cloud contains a SQL injection vulnerability in the AjaxMethod.ashx endpoint that allows unauthenticated remote attackers to inject arbitrary SQL through the Name parameter of the getEmpByname action without any authentication. Attackers can exploit UNION-based SQL injection techniques against the Microsoft SQL Server backend to extract, disclose, and modify database contents, with potential for further compromise of the underlying server. Exploitation evidence was first observed by the Shadowserver Foundation on 2023-10-18.</p>
+      <dl>
+        <div><dt>Published</dt><dd>2026-09-29</dd></div>
+        <div><dt>Last Modified</dt><dd>2026-09-29</dd></div>
+        <div><dt>Status</dt><dd>Received</dd></div>
+        <div><dt>Attack Vector</dt><dd>네트워크</dd></div>
+        <div><dt>Attack Complexity</dt><dd>낮음</dd></div>
+        <div><dt>Privileges</dt><dd>없음</dd></div>
+        <div><dt>User Interaction</dt><dd>없음</dd></div>
+        <div><dt>CWE</dt><dd>CWE-89</dd></div>
+        <div><dt>Affected</dt><dd>NVD CPE 기준 확인 필요</dd></div>
+      </dl>
+      <div class="vector"><code>CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H</code></div>
+      <details>
+        <summary>References</summary>
+        <ul><li><a href="https://github.com/emadshanab/goby-poc/blob/main/fumengyun%20%20AjaxMethod.ashx%20SQL%20injection.json" target="_blank" rel="noopener">https://github.com/emadshanab/goby-poc/blob/main/fumengyun%20%20AjaxMethod.ashx%20SQL%20injection.json</a></li><li><a href="https://github.com/projectdiscovery/nuclei-templates/blob/main/http/vulnerabilities/other/fumasoft-sqli.yaml" target="_blank" rel="noopener">https://github.com/projectdiscovery/nuclei-templates/blob/main/http/vulnerabilities/other/fumasoft-sqli.yaml</a></li><li><a href="https://www.vulncheck.com/advisories/fumeng-cloud-sql-injection-via-ajaxmethod-ashx-getempbyname" target="_blank" rel="noopener">https://www.vulncheck.com/advisories/fumeng-cloud-sql-injection-via-ajaxmethod-ashx-getempbyname</a></li></ul>
       </details>
     </article>
     <article class="cve-card" id="CVE-2026-101262">

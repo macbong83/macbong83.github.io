@@ -1,5 +1,32 @@
 [
   {
+    "id": "CVE-2026-53988",
+    "published": "2026-09-29",
+    "last_modified": "2026-09-29",
+    "status": "Received",
+    "description": "Dockhand before 1.0.40 contains an authentication bypass vulnerability in its git webhook endpoints that allows unauthenticated remote attackers to trigger arbitrary stack redeployments by exploiting a null webhook secret guard condition. Attackers can enumerate sequential stack IDs and send unsigned webhook requests to force git clone and docker compose operations, enabling denial of service or, when combined with write access to the tracked git branch, container escape and full host compromise via attacker-controlled docker-compose.yml with privileged bind mounts.",
+    "cvss": {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:H",
+      "score": 10.0,
+      "severity": "CRITICAL",
+      "attack_vector": "네트워크",
+      "attack_complexity": "낮음",
+      "privileges_required": "없음",
+      "user_interaction": "없음"
+    },
+    "cwes": [
+      "CWE-306"
+    ],
+    "affected": [],
+    "references": [
+      "https://github.com/Finsys/dockhand/releases/tag/v1.0.40",
+      "https://www.vulncheck.com/advisories/dockhand-unauthenticated-webhook-trigger-via-git-webhook-endpoints"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-53988",
+    "added_at": "2026-09-30T08:00:27+09:00"
+  },
+  {
     "id": "CVE-2026-102361",
     "published": "2026-09-29",
     "last_modified": "2026-09-29",
@@ -151,6 +178,34 @@
     ],
     "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-101263",
     "added_at": "2026-09-29T20:00:43+09:00"
+  },
+  {
+    "id": "CVE-2023-54400",
+    "published": "2026-09-29",
+    "last_modified": "2026-09-29",
+    "status": "Received",
+    "description": "Fumasoft Fumeng Cloud contains a SQL injection vulnerability in the AjaxMethod.ashx endpoint that allows unauthenticated remote attackers to inject arbitrary SQL through the Name parameter of the getEmpByname action without any authentication. Attackers can exploit UNION-based SQL injection techniques against the Microsoft SQL Server backend to extract, disclose, and modify database contents, with potential for further compromise of the underlying server. Exploitation evidence was first observed by the Shadowserver Foundation on 2023-10-18.",
+    "cvss": {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "score": 9.8,
+      "severity": "CRITICAL",
+      "attack_vector": "네트워크",
+      "attack_complexity": "낮음",
+      "privileges_required": "없음",
+      "user_interaction": "없음"
+    },
+    "cwes": [
+      "CWE-89"
+    ],
+    "affected": [],
+    "references": [
+      "https://github.com/emadshanab/goby-poc/blob/main/fumengyun%20%20AjaxMethod.ashx%20SQL%20injection.json",
+      "https://github.com/projectdiscovery/nuclei-templates/blob/main/http/vulnerabilities/other/fumasoft-sqli.yaml",
+      "https://www.vulncheck.com/advisories/fumeng-cloud-sql-injection-via-ajaxmethod-ashx-getempbyname"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2023-54400",
+    "added_at": "2026-09-30T08:00:27+09:00"
   },
   {
     "id": "CVE-2026-101262",
