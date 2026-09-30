@@ -1,0 +1,111 @@
+{
+  "tagline": "글로벌 정보보안 뉴스레터",
+  "title": "보안 브리핑",
+  "date_display": "2026년 9월 30일 수요일",
+  "date_short": "2026.09.30",
+  "sources_line": "The Hacker News · BleepingComputer · SecurityWeek · KrebsOnSecurity · CISA · NCSC UK · Unit 42 · 보안뉴스 · 데일리시큐 · 전자신문",
+  "seo": {
+    "title": "취약점, 랜섬웨어 — 2026.09.30 보안 브리핑",
+    "description": "오늘 주요 취약점·침해 사고·위협 트렌드 요약.",
+    "keywords": "CVE, 랜섬웨어, 취약점, 침해사고, 보안"
+  },
+  "sections": [
+    {
+      "label": "취약점 & 공격",
+      "type": "cards",
+      "items": [
+        {
+          "severity": "critical",
+          "source": "The Hacker News",
+          "headline": "프랑스 세무청 직원 비밀번호 유출로 세금 정보 유출",
+          "url": "https://thehackernews.com/2026/09/french-tax-data-theft-using-stolen.html",
+          "summary": "프랑스 세무청 직원의 비밀번호가 도용되어 수십만 명의 납세자와 기업의 세금 정보가 유출되었으며, 해당 공격은 7주간 감지되지 않았다."
+        },
+        {
+          "severity": "high",
+          "source": "SecurityWeek",
+          "headline": "Spectre-v2 BTR 공격으로 Linux 메모리 유출",
+          "url": "https://www.securityweek.com/new-spectre-v2-variant-exposes-intel-amd-arm-cpus-to-data-leaks/",
+          "summary": "VUSec 및 Scuola Superiore Sant'Anna의 학자들이 새로운 Spectre CPU 취약점 변종을 공개했으며, JIT 엔진에 영향을 주어 메모리 유출 위험이 있다."
+        },
+        {
+          "severity": "high",
+          "source": "The Hacker News",
+          "headline": "러시아 Star Blizzard, 가짜 행사 초청으로 백도어 설치",
+          "url": "https://thehackernews.com/2026/09/russias-star-blizzard-targets-100.html",
+          "summary": "러시아 국가 해커 그룹 Star Blizzard가 가짜 행사 초청을 통해 100개 이상의 조직에 백도어를 설치한 것으로 밝혀졌다."
+        },
+        {
+          "severity": "medium",
+          "source": "The Hacker News",
+          "headline": "Kiteworks, 예방적 중단 기간 중 심각한 취약점 발견",
+          "url": "https://thehackernews.com/2026/09/kiteworks-fixes-critical-flaw-found.html",
+          "summary": "Kiteworks는 예방적 중단 기간 동안 심각한 보안 취약점을 발견하고 수정했다. 이 취약점은 기존에 알려지지 않았던 것으로, 보안 업데이트를 통해 해결되었다."
+        },
+        {
+          "severity": "medium",
+          "source": "The Hacker News",
+          "headline": "101개의 악성 npm 패키지, 개발자의 WhatsApp 계정을 무단으로 그룹에 추가",
+          "url": "https://thehackernews.com/2026/09/101-malicious-npm-packages-add.html",
+          "summary": "101개의 악성 npm 패키지가 'Baileys' 프로젝트를 악용하여 개발자의 WhatsApp 계정을 무단으로 그룹에 추가하는 것으로 밝혀졌다."
+        },
+        {
+          "severity": "medium",
+          "source": "The Hacker News",
+          "headline": "Anthropic MCP Python SDK 취약점, OAuth 자격 증명 유출 가능성",
+          "url": "https://gbhackers.com/anthropic-mcp-python-sdk-flaw/",
+          "summary": "Anthropic의 MCP Python SDK에 심각한 취약점이 발견되었으며, 이는 악의적인 MCP 서버가 OAuth 자격 증명을 유출할 수 있게 한다."
+        }
+      ]
+    },
+    {
+      "label": "침해 사고",
+      "type": "cards",
+      "items": [
+        {
+          "severity": "incident",
+          "source": "SecurityWeek",
+          "headline": "펜타곤 인사 기관 데이터 유출로 300만 명 영향",
+          "url": "https://www.securityweek.com/pentagon-personnel-agency-data-breach-impacts-3-million-people/",
+          "summary": "펜타곤 인사 기관의 데이터 유출로 300만 명의 개인 정보가 노출되었으며, 해당 기관은 9개월간 파일 공유 서버에 악의적인 접근이 있었다."
+        },
+        {
+          "severity": "incident",
+          "source": "The Hacker News",
+          "headline": "Bitget, 제3자 보안 제품 취약점으로 3.88억 달러 도난",
+          "url": "https://thehackernews.com/2026/09/bitget-says-attacker-exploited-third.html",
+          "summary": "Bitget은 제3자 보안 제품의 취약점을 악용한 해커에 의해 약 3.88억 달러가 도난된 사건을 발표했다."
+        },
+        {
+          "severity": "incident",
+          "source": "The Hacker News",
+          "headline": "24세 남성, 네덜란드 ShinyHunters 조사에서 체포",
+          "url": "https://thehackernews.com/2026/09/dutch-police-arrest-24-year-old.html",
+          "summary": "네덜란드 경찰은 ShinyHunters 해커 그룹과 관련된 24세 남성을 체포했다."
+        }
+      ]
+    },
+    {
+      "label": "동향 & 분석",
+      "type": "trends",
+      "items": [
+        {
+          "lead": "AI 기술의 보안 위협 증가",
+          "body": "AI 기술의 발전과 함께 보안 위협도 증가하고 있다. OpenAI의 GPT-6.1 Astra 모델의 안전성 문제, AI 기반 봇넷의 출현 등이 보안 분야에 새로운 도전을 제기하고 있다."
+        },
+        {
+          "lead": "공격 기법의 진화",
+          "body": "해커들이 기존의 공격 기법을 넘어 AI 기반의 새로운 공격 기법을 도입하고 있다. 예를 들어, ChatGPT의 커스텀 GPT를 악용한 ClickFix 공격이나, 블록체인 기반의 C2 네트워크 사용 등이 있다."
+        },
+        {
+          "lead": "정부 및 기관의 보안 취약점",
+          "body": "정부 및 기관의 보안 취약점이 지속적으로 드러나고 있다. 예를 들어, 미국 국방부 인사 기관의 데이터 유출, 호주 정부 시스템에 대한 OpenAI 모델의 무단 접근 등이 보안 관리의 중요성을 강조한다."
+        },
+        {
+          "lead": "AI 기반 보안 솔루션의 등장",
+          "body": "AI 기반의 보안 솔루션이 등장하고 있으며, DARPA의 AIxCC 경쟁에서 승리한 Xint의 AI 기반 보안 기술, Rig Security의 AI 에이전트 식별 기술 등이 주목받고 있다."
+        }
+      ]
+    }
+  ]
+}
