@@ -41,13 +41,151 @@
     <h1>CVE Archive</h1>
     <p>NVD 기반 Critical CVE를 누적 관리하는 별도 페이지입니다. 블로그에는 CVE 자동 글을 발행하지 않고, 이 페이지에만 기록합니다.</p>
     <div class="meta">
-      <span>Total 1214</span>
-      <span>Updated 2026-09-30 08:00 KST</span>
+      <span>Total 1223</span>
+      <span>Updated 2026-09-30 20:00 KST</span>
       <span>Source NVD API</span>
     </div>
   </section>
   <div class="notice">중복 제거 기준은 CVE ID입니다. 동일 CVE는 다시 추가하지 않습니다. 실제 악용 여부와 패치 우선순위는 CISA KEV, 벤더 권고, 자산 노출 여부와 함께 검토해야 합니다.</div>
 
+    <article class="cve-card" id="CVE-2026-103056">
+      <div class="cve-top">
+        <a class="cve-id" href="https://nvd.nist.gov/vuln/detail/CVE-2026-103056" target="_blank" rel="noopener">CVE-2026-103056</a>
+        <span class="score">CVSS 9.0 CRITICAL</span>
+      </div>
+      <p class="desc">AiSOC versions 7.2.0 before 12.0.0 contain a command injection vulnerability in the actions service that builds CrowdStrike Real Time Response command strings by interpolating unescaped action parameters in crowdstrike_rtr.py and endpoint.py. Authenticated users can inject single quotes into file_path, path, script_name, or script_args parameters to break out of quoted arguments and execute arbitrary commands on managed endpoints with SYSTEM or root privileges.</p>
+      <dl>
+        <div><dt>Published</dt><dd>2026-09-30</dd></div>
+        <div><dt>Last Modified</dt><dd>2026-09-30</dd></div>
+        <div><dt>Status</dt><dd>Received</dd></div>
+        <div><dt>Attack Vector</dt><dd>네트워크</dd></div>
+        <div><dt>Attack Complexity</dt><dd>낮음</dd></div>
+        <div><dt>Privileges</dt><dd>낮음</dd></div>
+        <div><dt>User Interaction</dt><dd>필요</dd></div>
+        <div><dt>CWE</dt><dd>CWE-78</dd></div>
+        <div><dt>Affected</dt><dd>NVD CPE 기준 확인 필요</dd></div>
+      </dl>
+      <div class="vector"><code>CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:C/C:H/I:H/A:H</code></div>
+      <details>
+        <summary>References</summary>
+        <ul><li><a href="https://github.com/beenuar/AiSOC/blob/v11.2.0/services/actions/app/clients/crowdstrike_rtr.py#L273" target="_blank" rel="noopener">https://github.com/beenuar/AiSOC/blob/v11.2.0/services/actions/app/clients/crowdstrike_rtr.py#L273</a></li><li><a href="https://github.com/beenuar/AiSOC/blob/v11.2.0/services/actions/app/executors/endpoint.py#L442" target="_blank" rel="noopener">https://github.com/beenuar/AiSOC/blob/v11.2.0/services/actions/app/executors/endpoint.py#L442</a></li><li><a href="https://github.com/beenuar/AiSOC/commit/dac39723404130312daba15d42d19114f09f75b2" target="_blank" rel="noopener">https://github.com/beenuar/AiSOC/commit/dac39723404130312daba15d42d19114f09f75b2</a></li><li><a href="https://github.com/beenuar/AiSOC/releases/tag/v12.0.0" target="_blank" rel="noopener">https://github.com/beenuar/AiSOC/releases/tag/v12.0.0</a></li></ul>
+      </details>
+    </article>
+    <article class="cve-card" id="CVE-2026-102911">
+      <div class="cve-top">
+        <a class="cve-id" href="https://nvd.nist.gov/vuln/detail/CVE-2026-102911" target="_blank" rel="noopener">CVE-2026-102911</a>
+        <span class="score">CVSS 9.9 CRITICAL</span>
+      </div>
+      <p class="desc">A flaw has been found in zosmaai pi-llm-wiki up to 0.11.7. Affected is an unknown function of the file mcp/index.ts of the component wiki_capture_source MCP tool. Executing a manipulation of the argument url can lead to os command injection. The attack can be executed remotely. The exploit has been published and may be used. Upgrading to version 0.11.8 is able to address this issue. This patch is called 360867034e79175b45c8e04a98e4ca712bbaca35. Upgrading the affected component is advised.</p>
+      <dl>
+        <div><dt>Published</dt><dd>2026-09-30</dd></div>
+        <div><dt>Last Modified</dt><dd>2026-09-30</dd></div>
+        <div><dt>Status</dt><dd>Received</dd></div>
+        <div><dt>Attack Vector</dt><dd>네트워크</dd></div>
+        <div><dt>Attack Complexity</dt><dd>낮음</dd></div>
+        <div><dt>Privileges</dt><dd>낮음</dd></div>
+        <div><dt>User Interaction</dt><dd>없음</dd></div>
+        <div><dt>CWE</dt><dd>CWE-77, CWE-78</dd></div>
+        <div><dt>Affected</dt><dd>NVD CPE 기준 확인 필요</dd></div>
+      </dl>
+      <div class="vector"><code>CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H</code></div>
+      <details>
+        <summary>References</summary>
+        <ul><li><a href="https://github.com/zosmaai/pi-llm-wiki/" target="_blank" rel="noopener">https://github.com/zosmaai/pi-llm-wiki/</a></li><li><a href="https://github.com/zosmaai/pi-llm-wiki/commit/360867034e79175b45c8e04a98e4ca712bbaca35" target="_blank" rel="noopener">https://github.com/zosmaai/pi-llm-wiki/commit/360867034e79175b45c8e04a98e4ca712bbaca35</a></li><li><a href="https://github.com/zosmaai/pi-llm-wiki/issues/185" target="_blank" rel="noopener">https://github.com/zosmaai/pi-llm-wiki/issues/185</a></li><li><a href="https://github.com/zosmaai/pi-llm-wiki/pull/186" target="_blank" rel="noopener">https://github.com/zosmaai/pi-llm-wiki/pull/186</a></li></ul>
+      </details>
+    </article>
+    <article class="cve-card" id="CVE-2026-102794">
+      <div class="cve-top">
+        <a class="cve-id" href="https://nvd.nist.gov/vuln/detail/CVE-2026-102794" target="_blank" rel="noopener">CVE-2026-102794</a>
+        <span class="score">CVSS 9.1 CRITICAL</span>
+      </div>
+      <p class="desc">A vulnerability has been found in Ziroom ZHOME A0101 1.0.1.0. This issue affects some unknown processing of the file /api/ZRnetwork/ping. Such manipulation of the argument url leads to command injection. It is possible to launch the attack remotely. The exploit has been disclosed to the public and may be used. The vendor was contacted early about this disclosure but did not respond in any way.</p>
+      <dl>
+        <div><dt>Published</dt><dd>2026-09-30</dd></div>
+        <div><dt>Last Modified</dt><dd>2026-09-30</dd></div>
+        <div><dt>Status</dt><dd>Received</dd></div>
+        <div><dt>Attack Vector</dt><dd>네트워크</dd></div>
+        <div><dt>Attack Complexity</dt><dd>낮음</dd></div>
+        <div><dt>Privileges</dt><dd>높음</dd></div>
+        <div><dt>User Interaction</dt><dd>없음</dd></div>
+        <div><dt>CWE</dt><dd>CWE-74, CWE-77</dd></div>
+        <div><dt>Affected</dt><dd>NVD CPE 기준 확인 필요</dd></div>
+      </dl>
+      <div class="vector"><code>CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:C/C:H/I:H/A:H</code></div>
+      <details>
+        <summary>References</summary>
+        <ul><li><a href="https://github.com/waltz-sketch/Ziroom/blob/main/zrnetwork_ping_url_command_injection.md" target="_blank" rel="noopener">https://github.com/waltz-sketch/Ziroom/blob/main/zrnetwork_ping_url_command_injection.md</a></li><li><a href="https://vuldb.com/cve/CVE-2026-102794" target="_blank" rel="noopener">https://vuldb.com/cve/CVE-2026-102794</a></li><li><a href="https://vuldb.com/submit/914651" target="_blank" rel="noopener">https://vuldb.com/submit/914651</a></li><li><a href="https://vuldb.com/vuln/411471" target="_blank" rel="noopener">https://vuldb.com/vuln/411471</a></li></ul>
+      </details>
+    </article>
+    <article class="cve-card" id="CVE-2026-102793">
+      <div class="cve-top">
+        <a class="cve-id" href="https://nvd.nist.gov/vuln/detail/CVE-2026-102793" target="_blank" rel="noopener">CVE-2026-102793</a>
+        <span class="score">CVSS 9.1 CRITICAL</span>
+      </div>
+      <p class="desc">A flaw has been found in Ziroom ZHOME A0101 1.0.1.0. This vulnerability affects the function set_time_zone of the file /api/ZRFirmware/set_time_zone. This manipulation of the argument hostname/zonename causes command injection. It is possible to initiate the attack remotely. The exploit has been published and may be used. The vendor was contacted early about this disclosure but did not respond in any way.</p>
+      <dl>
+        <div><dt>Published</dt><dd>2026-09-30</dd></div>
+        <div><dt>Last Modified</dt><dd>2026-09-30</dd></div>
+        <div><dt>Status</dt><dd>Received</dd></div>
+        <div><dt>Attack Vector</dt><dd>네트워크</dd></div>
+        <div><dt>Attack Complexity</dt><dd>낮음</dd></div>
+        <div><dt>Privileges</dt><dd>높음</dd></div>
+        <div><dt>User Interaction</dt><dd>없음</dd></div>
+        <div><dt>CWE</dt><dd>CWE-74, CWE-77</dd></div>
+        <div><dt>Affected</dt><dd>NVD CPE 기준 확인 필요</dd></div>
+      </dl>
+      <div class="vector"><code>CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:C/C:H/I:H/A:H</code></div>
+      <details>
+        <summary>References</summary>
+        <ul><li><a href="https://github.com/waltz-sketch/Ziroom/blob/main/set_time_zone_hostname_command_injection.md" target="_blank" rel="noopener">https://github.com/waltz-sketch/Ziroom/blob/main/set_time_zone_hostname_command_injection.md</a></li><li><a href="https://vuldb.com/cve/CVE-2026-102793" target="_blank" rel="noopener">https://vuldb.com/cve/CVE-2026-102793</a></li><li><a href="https://vuldb.com/submit/914649" target="_blank" rel="noopener">https://vuldb.com/submit/914649</a></li><li><a href="https://vuldb.com/submit/914650" target="_blank" rel="noopener">https://vuldb.com/submit/914650</a></li></ul>
+      </details>
+    </article>
+    <article class="cve-card" id="CVE-2026-102458">
+      <div class="cve-top">
+        <a class="cve-id" href="https://nvd.nist.gov/vuln/detail/CVE-2026-102458" target="_blank" rel="noopener">CVE-2026-102458</a>
+        <span class="score">CVSS 9.8 CRITICAL</span>
+      </div>
+      <p class="desc">EasyFlow .NET developed by Digiwin has a Missing Authentication vulnerability. Unauthenticated remote attackers can obtain other users&#x27; plaintext passwords through a specific API.</p>
+      <dl>
+        <div><dt>Published</dt><dd>2026-09-30</dd></div>
+        <div><dt>Last Modified</dt><dd>2026-09-30</dd></div>
+        <div><dt>Status</dt><dd>Received</dd></div>
+        <div><dt>Attack Vector</dt><dd>네트워크</dd></div>
+        <div><dt>Attack Complexity</dt><dd>낮음</dd></div>
+        <div><dt>Privileges</dt><dd>없음</dd></div>
+        <div><dt>User Interaction</dt><dd>없음</dd></div>
+        <div><dt>CWE</dt><dd>CWE-306</dd></div>
+        <div><dt>Affected</dt><dd>NVD CPE 기준 확인 필요</dd></div>
+      </dl>
+      <div class="vector"><code>CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H</code></div>
+      <details>
+        <summary>References</summary>
+        <ul><li><a href="https://www.twcert.org.tw/en/cp-139-11242-13f37-2.html" target="_blank" rel="noopener">https://www.twcert.org.tw/en/cp-139-11242-13f37-2.html</a></li><li><a href="https://www.twcert.org.tw/tw/cp-132-11237-c9189-1.html" target="_blank" rel="noopener">https://www.twcert.org.tw/tw/cp-132-11237-c9189-1.html</a></li></ul>
+      </details>
+    </article>
+    <article class="cve-card" id="CVE-2026-102455">
+      <div class="cve-top">
+        <a class="cve-id" href="https://nvd.nist.gov/vuln/detail/CVE-2026-102455" target="_blank" rel="noopener">CVE-2026-102455</a>
+        <span class="score">CVSS 9.8 CRITICAL</span>
+      </div>
+      <p class="desc">EasyFlow .NET developed by Digiwin has a Insecure Deserialization vulnerability. Unauthenticated remote attackers can execute arbitrary code on the server by sending maliciously crafted serialized content.</p>
+      <dl>
+        <div><dt>Published</dt><dd>2026-09-30</dd></div>
+        <div><dt>Last Modified</dt><dd>2026-09-30</dd></div>
+        <div><dt>Status</dt><dd>Received</dd></div>
+        <div><dt>Attack Vector</dt><dd>네트워크</dd></div>
+        <div><dt>Attack Complexity</dt><dd>낮음</dd></div>
+        <div><dt>Privileges</dt><dd>없음</dd></div>
+        <div><dt>User Interaction</dt><dd>없음</dd></div>
+        <div><dt>CWE</dt><dd>CWE-502</dd></div>
+        <div><dt>Affected</dt><dd>NVD CPE 기준 확인 필요</dd></div>
+      </dl>
+      <div class="vector"><code>CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H</code></div>
+      <details>
+        <summary>References</summary>
+        <ul><li><a href="https://www.twcert.org.tw/en/cp-139-11242-13f37-2.html" target="_blank" rel="noopener">https://www.twcert.org.tw/en/cp-139-11242-13f37-2.html</a></li><li><a href="https://www.twcert.org.tw/tw/cp-132-11237-c9189-1.html" target="_blank" rel="noopener">https://www.twcert.org.tw/tw/cp-132-11237-c9189-1.html</a></li></ul>
+      </details>
+    </article>
     <article class="cve-card" id="CVE-2026-53988">
       <div class="cve-top">
         <a class="cve-id" href="https://nvd.nist.gov/vuln/detail/CVE-2026-53988" target="_blank" rel="noopener">CVE-2026-53988</a>
@@ -69,6 +207,75 @@
       <details>
         <summary>References</summary>
         <ul><li><a href="https://github.com/Finsys/dockhand/releases/tag/v1.0.40" target="_blank" rel="noopener">https://github.com/Finsys/dockhand/releases/tag/v1.0.40</a></li><li><a href="https://www.vulncheck.com/advisories/dockhand-unauthenticated-webhook-trigger-via-git-webhook-endpoints" target="_blank" rel="noopener">https://www.vulncheck.com/advisories/dockhand-unauthenticated-webhook-trigger-via-git-webhook-endpoints</a></li></ul>
+      </details>
+    </article>
+    <article class="cve-card" id="CVE-2026-103041">
+      <div class="cve-top">
+        <a class="cve-id" href="https://nvd.nist.gov/vuln/detail/CVE-2026-103041" target="_blank" rel="noopener">CVE-2026-103041</a>
+        <span class="score">CVSS 9.8 CRITICAL</span>
+      </div>
+      <p class="desc">LightLLM through 1.2.0 multimodal deployments expose an unauthenticated RPyC cache service with pickle deserialization enabled on all interfaces. Attackers can send crafted serialized objects to exposed cache methods to execute arbitrary code with service privileges.</p>
+      <dl>
+        <div><dt>Published</dt><dd>2026-09-29</dd></div>
+        <div><dt>Last Modified</dt><dd>2026-09-29</dd></div>
+        <div><dt>Status</dt><dd>Deferred</dd></div>
+        <div><dt>Attack Vector</dt><dd>네트워크</dd></div>
+        <div><dt>Attack Complexity</dt><dd>낮음</dd></div>
+        <div><dt>Privileges</dt><dd>없음</dd></div>
+        <div><dt>User Interaction</dt><dd>없음</dd></div>
+        <div><dt>CWE</dt><dd>CWE-502</dd></div>
+        <div><dt>Affected</dt><dd>NVD CPE 기준 확인 필요</dd></div>
+      </dl>
+      <div class="vector"><code>CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H</code></div>
+      <details>
+        <summary>References</summary>
+        <ul><li><a href="https://github.com/ModelTC/LightLLM" target="_blank" rel="noopener">https://github.com/ModelTC/LightLLM</a></li><li><a href="https://github.com/ModelTC/LightLLM/issues/1596" target="_blank" rel="noopener">https://github.com/ModelTC/LightLLM/issues/1596</a></li><li><a href="https://github.com/ModelTC/lightllm/blob/v1.2.0/lightllm/server/embed_cache/manager.py#L29-L31" target="_blank" rel="noopener">https://github.com/ModelTC/lightllm/blob/v1.2.0/lightllm/server/embed_cache/manager.py#L29-L31</a></li><li><a href="https://github.com/ModelTC/lightllm/blob/v1.2.0/lightllm/server/embed_cache/manager.py#L66" target="_blank" rel="noopener">https://github.com/ModelTC/lightllm/blob/v1.2.0/lightllm/server/embed_cache/manager.py#L66</a></li></ul>
+      </details>
+    </article>
+    <article class="cve-card" id="CVE-2026-103040">
+      <div class="cve-top">
+        <a class="cve-id" href="https://nvd.nist.gov/vuln/detail/CVE-2026-103040" target="_blank" rel="noopener">CVE-2026-103040</a>
+        <span class="score">CVSS 9.8 CRITICAL</span>
+      </div>
+      <p class="desc">LightLLM through 1.2.0 contains a remote code execution vulnerability in the router profiler service when started with --enable_profiling flag. The service exposes an unauthenticated RPyC server with pickle deserialization enabled, allowing attackers to execute arbitrary code by sending crafted serialized objects to the profiler command queue.</p>
+      <dl>
+        <div><dt>Published</dt><dd>2026-09-29</dd></div>
+        <div><dt>Last Modified</dt><dd>2026-09-29</dd></div>
+        <div><dt>Status</dt><dd>Deferred</dd></div>
+        <div><dt>Attack Vector</dt><dd>네트워크</dd></div>
+        <div><dt>Attack Complexity</dt><dd>낮음</dd></div>
+        <div><dt>Privileges</dt><dd>없음</dd></div>
+        <div><dt>User Interaction</dt><dd>없음</dd></div>
+        <div><dt>CWE</dt><dd>CWE-502</dd></div>
+        <div><dt>Affected</dt><dd>NVD CPE 기준 확인 필요</dd></div>
+      </dl>
+      <div class="vector"><code>CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H</code></div>
+      <details>
+        <summary>References</summary>
+        <ul><li><a href="https://github.com/ModelTC/LightLLM" target="_blank" rel="noopener">https://github.com/ModelTC/LightLLM</a></li><li><a href="https://github.com/ModelTC/LightLLM/issues/1597" target="_blank" rel="noopener">https://github.com/ModelTC/LightLLM/issues/1597</a></li><li><a href="https://github.com/ModelTC/lightllm/blob/v1.2.0/lightllm/server/router/profiler_service.py#L32-L34" target="_blank" rel="noopener">https://github.com/ModelTC/lightllm/blob/v1.2.0/lightllm/server/router/profiler_service.py#L32-L34</a></li><li><a href="https://github.com/ModelTC/lightllm/blob/v1.2.0/lightllm/server/router/profiler_service.py#L46-L50" target="_blank" rel="noopener">https://github.com/ModelTC/lightllm/blob/v1.2.0/lightllm/server/router/profiler_service.py#L46-L50</a></li></ul>
+      </details>
+    </article>
+    <article class="cve-card" id="CVE-2026-102792">
+      <div class="cve-top">
+        <a class="cve-id" href="https://nvd.nist.gov/vuln/detail/CVE-2026-102792" target="_blank" rel="noopener">CVE-2026-102792</a>
+        <span class="score">CVSS 9.1 CRITICAL</span>
+      </div>
+      <p class="desc">A vulnerability was detected in Ziroom ZHOME A0101 1.0.1.0. This affects the function set_syslog of the file /api/ZRnetwork/set_syslog. The manipulation of the argument conloglevel/log_size results in command injection. The attack may be performed from remote. The exploit is now public and may be used. The vendor was contacted early about this disclosure but did not respond in any way.</p>
+      <dl>
+        <div><dt>Published</dt><dd>2026-09-29</dd></div>
+        <div><dt>Last Modified</dt><dd>2026-09-29</dd></div>
+        <div><dt>Status</dt><dd>Received</dd></div>
+        <div><dt>Attack Vector</dt><dd>네트워크</dd></div>
+        <div><dt>Attack Complexity</dt><dd>낮음</dd></div>
+        <div><dt>Privileges</dt><dd>높음</dd></div>
+        <div><dt>User Interaction</dt><dd>없음</dd></div>
+        <div><dt>CWE</dt><dd>CWE-74, CWE-77</dd></div>
+        <div><dt>Affected</dt><dd>NVD CPE 기준 확인 필요</dd></div>
+      </dl>
+      <div class="vector"><code>CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:C/C:H/I:H/A:H</code></div>
+      <details>
+        <summary>References</summary>
+        <ul><li><a href="https://github.com/waltz-sketch/Ziroom/blob/main/set_syslog_conloglevel_command_injection.md" target="_blank" rel="noopener">https://github.com/waltz-sketch/Ziroom/blob/main/set_syslog_conloglevel_command_injection.md</a></li><li><a href="https://vuldb.com/cve/CVE-2026-102792" target="_blank" rel="noopener">https://vuldb.com/cve/CVE-2026-102792</a></li><li><a href="https://vuldb.com/submit/914647" target="_blank" rel="noopener">https://vuldb.com/submit/914647</a></li><li><a href="https://vuldb.com/submit/914648" target="_blank" rel="noopener">https://vuldb.com/submit/914648</a></li></ul>
       </details>
     </article>
     <article class="cve-card" id="CVE-2026-102361">

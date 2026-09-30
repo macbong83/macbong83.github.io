@@ -1,5 +1,185 @@
 [
   {
+    "id": "CVE-2026-103056",
+    "published": "2026-09-30",
+    "last_modified": "2026-09-30",
+    "status": "Received",
+    "description": "AiSOC versions 7.2.0 before 12.0.0 contain a command injection vulnerability in the actions service that builds CrowdStrike Real Time Response command strings by interpolating unescaped action parameters in crowdstrike_rtr.py and endpoint.py. Authenticated users can inject single quotes into file_path, path, script_name, or script_args parameters to break out of quoted arguments and execute arbitrary commands on managed endpoints with SYSTEM or root privileges.",
+    "cvss": {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:C/C:H/I:H/A:H",
+      "score": 9.0,
+      "severity": "CRITICAL",
+      "attack_vector": "네트워크",
+      "attack_complexity": "낮음",
+      "privileges_required": "낮음",
+      "user_interaction": "필요"
+    },
+    "cwes": [
+      "CWE-78"
+    ],
+    "affected": [],
+    "references": [
+      "https://github.com/beenuar/AiSOC/blob/v11.2.0/services/actions/app/clients/crowdstrike_rtr.py#L273",
+      "https://github.com/beenuar/AiSOC/blob/v11.2.0/services/actions/app/executors/endpoint.py#L442",
+      "https://github.com/beenuar/AiSOC/commit/dac39723404130312daba15d42d19114f09f75b2",
+      "https://github.com/beenuar/AiSOC/releases/tag/v12.0.0",
+      "https://github.com/beenuar/AiSOC/security/advisories/GHSA-7q37-2wfw-xrx7",
+      "https://www.vulncheck.com/advisories/aisoc-7.2.0-before-12.0.0-command-injection-via-crowdstrike-rtr"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-103056",
+    "added_at": "2026-09-30T20:00:26+09:00"
+  },
+  {
+    "id": "CVE-2026-102911",
+    "published": "2026-09-30",
+    "last_modified": "2026-09-30",
+    "status": "Received",
+    "description": "A flaw has been found in zosmaai pi-llm-wiki up to 0.11.7. Affected is an unknown function of the file mcp/index.ts of the component wiki_capture_source MCP tool. Executing a manipulation of the argument url can lead to os command injection. The attack can be executed remotely. The exploit has been published and may be used. Upgrading to version 0.11.8 is able to address this issue. This patch is called 360867034e79175b45c8e04a98e4ca712bbaca35. Upgrading the affected component is advised.",
+    "cvss": {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H",
+      "score": 9.9,
+      "severity": "CRITICAL",
+      "attack_vector": "네트워크",
+      "attack_complexity": "낮음",
+      "privileges_required": "낮음",
+      "user_interaction": "없음"
+    },
+    "cwes": [
+      "CWE-77",
+      "CWE-78"
+    ],
+    "affected": [],
+    "references": [
+      "https://github.com/zosmaai/pi-llm-wiki/",
+      "https://github.com/zosmaai/pi-llm-wiki/commit/360867034e79175b45c8e04a98e4ca712bbaca35",
+      "https://github.com/zosmaai/pi-llm-wiki/issues/185",
+      "https://github.com/zosmaai/pi-llm-wiki/pull/186",
+      "https://github.com/zosmaai/pi-llm-wiki/releases/tag/v0.11.8",
+      "https://vuldb.com/cve/CVE-2026-102911"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-102911",
+    "added_at": "2026-09-30T20:00:26+09:00"
+  },
+  {
+    "id": "CVE-2026-102794",
+    "published": "2026-09-30",
+    "last_modified": "2026-09-30",
+    "status": "Received",
+    "description": "A vulnerability has been found in Ziroom ZHOME A0101 1.0.1.0. This issue affects some unknown processing of the file /api/ZRnetwork/ping. Such manipulation of the argument url leads to command injection. It is possible to launch the attack remotely. The exploit has been disclosed to the public and may be used. The vendor was contacted early about this disclosure but did not respond in any way.",
+    "cvss": {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:C/C:H/I:H/A:H",
+      "score": 9.1,
+      "severity": "CRITICAL",
+      "attack_vector": "네트워크",
+      "attack_complexity": "낮음",
+      "privileges_required": "높음",
+      "user_interaction": "없음"
+    },
+    "cwes": [
+      "CWE-74",
+      "CWE-77"
+    ],
+    "affected": [],
+    "references": [
+      "https://github.com/waltz-sketch/Ziroom/blob/main/zrnetwork_ping_url_command_injection.md",
+      "https://vuldb.com/cve/CVE-2026-102794",
+      "https://vuldb.com/submit/914651",
+      "https://vuldb.com/vuln/411471",
+      "https://vuldb.com/vuln/411471/cti"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-102794",
+    "added_at": "2026-09-30T20:00:26+09:00"
+  },
+  {
+    "id": "CVE-2026-102793",
+    "published": "2026-09-30",
+    "last_modified": "2026-09-30",
+    "status": "Received",
+    "description": "A flaw has been found in Ziroom ZHOME A0101 1.0.1.0. This vulnerability affects the function set_time_zone of the file /api/ZRFirmware/set_time_zone. This manipulation of the argument hostname/zonename causes command injection. It is possible to initiate the attack remotely. The exploit has been published and may be used. The vendor was contacted early about this disclosure but did not respond in any way.",
+    "cvss": {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:C/C:H/I:H/A:H",
+      "score": 9.1,
+      "severity": "CRITICAL",
+      "attack_vector": "네트워크",
+      "attack_complexity": "낮음",
+      "privileges_required": "높음",
+      "user_interaction": "없음"
+    },
+    "cwes": [
+      "CWE-74",
+      "CWE-77"
+    ],
+    "affected": [],
+    "references": [
+      "https://github.com/waltz-sketch/Ziroom/blob/main/set_time_zone_hostname_command_injection.md",
+      "https://vuldb.com/cve/CVE-2026-102793",
+      "https://vuldb.com/submit/914649",
+      "https://vuldb.com/submit/914650",
+      "https://vuldb.com/vuln/411470",
+      "https://vuldb.com/vuln/411470/cti"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-102793",
+    "added_at": "2026-09-30T20:00:26+09:00"
+  },
+  {
+    "id": "CVE-2026-102458",
+    "published": "2026-09-30",
+    "last_modified": "2026-09-30",
+    "status": "Received",
+    "description": "EasyFlow .NET developed by Digiwin has a Missing Authentication vulnerability. Unauthenticated remote attackers can obtain other users' plaintext passwords through a specific API.",
+    "cvss": {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "score": 9.8,
+      "severity": "CRITICAL",
+      "attack_vector": "네트워크",
+      "attack_complexity": "낮음",
+      "privileges_required": "없음",
+      "user_interaction": "없음"
+    },
+    "cwes": [
+      "CWE-306"
+    ],
+    "affected": [],
+    "references": [
+      "https://www.twcert.org.tw/en/cp-139-11242-13f37-2.html",
+      "https://www.twcert.org.tw/tw/cp-132-11237-c9189-1.html"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-102458",
+    "added_at": "2026-09-30T20:00:26+09:00"
+  },
+  {
+    "id": "CVE-2026-102455",
+    "published": "2026-09-30",
+    "last_modified": "2026-09-30",
+    "status": "Received",
+    "description": "EasyFlow .NET developed by Digiwin has a Insecure Deserialization vulnerability. Unauthenticated remote attackers can execute arbitrary code on the server by sending maliciously crafted serialized content.",
+    "cvss": {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "score": 9.8,
+      "severity": "CRITICAL",
+      "attack_vector": "네트워크",
+      "attack_complexity": "낮음",
+      "privileges_required": "없음",
+      "user_interaction": "없음"
+    },
+    "cwes": [
+      "CWE-502"
+    ],
+    "affected": [],
+    "references": [
+      "https://www.twcert.org.tw/en/cp-139-11242-13f37-2.html",
+      "https://www.twcert.org.tw/tw/cp-132-11237-c9189-1.html"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-102455",
+    "added_at": "2026-09-30T20:00:26+09:00"
+  },
+  {
     "id": "CVE-2026-53988",
     "published": "2026-09-29",
     "last_modified": "2026-09-29",
@@ -25,6 +205,98 @@
     ],
     "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-53988",
     "added_at": "2026-09-30T08:00:27+09:00"
+  },
+  {
+    "id": "CVE-2026-103041",
+    "published": "2026-09-29",
+    "last_modified": "2026-09-29",
+    "status": "Deferred",
+    "description": "LightLLM through 1.2.0 multimodal deployments expose an unauthenticated RPyC cache service with pickle deserialization enabled on all interfaces. Attackers can send crafted serialized objects to exposed cache methods to execute arbitrary code with service privileges.",
+    "cvss": {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "score": 9.8,
+      "severity": "CRITICAL",
+      "attack_vector": "네트워크",
+      "attack_complexity": "낮음",
+      "privileges_required": "없음",
+      "user_interaction": "없음"
+    },
+    "cwes": [
+      "CWE-502"
+    ],
+    "affected": [],
+    "references": [
+      "https://github.com/ModelTC/LightLLM",
+      "https://github.com/ModelTC/LightLLM/issues/1596",
+      "https://github.com/ModelTC/lightllm/blob/v1.2.0/lightllm/server/embed_cache/manager.py#L29-L31",
+      "https://github.com/ModelTC/lightllm/blob/v1.2.0/lightllm/server/embed_cache/manager.py#L66",
+      "https://www.vulncheck.com/advisories/lightllm-through-1.2.0-unauthenticated-remote-code-execution-via-embed-cache-rpyc-service"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-103041",
+    "added_at": "2026-09-30T20:00:26+09:00"
+  },
+  {
+    "id": "CVE-2026-103040",
+    "published": "2026-09-29",
+    "last_modified": "2026-09-29",
+    "status": "Deferred",
+    "description": "LightLLM through 1.2.0 contains a remote code execution vulnerability in the router profiler service when started with --enable_profiling flag. The service exposes an unauthenticated RPyC server with pickle deserialization enabled, allowing attackers to execute arbitrary code by sending crafted serialized objects to the profiler command queue.",
+    "cvss": {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "score": 9.8,
+      "severity": "CRITICAL",
+      "attack_vector": "네트워크",
+      "attack_complexity": "낮음",
+      "privileges_required": "없음",
+      "user_interaction": "없음"
+    },
+    "cwes": [
+      "CWE-502"
+    ],
+    "affected": [],
+    "references": [
+      "https://github.com/ModelTC/LightLLM",
+      "https://github.com/ModelTC/LightLLM/issues/1597",
+      "https://github.com/ModelTC/lightllm/blob/v1.2.0/lightllm/server/router/profiler_service.py#L32-L34",
+      "https://github.com/ModelTC/lightllm/blob/v1.2.0/lightllm/server/router/profiler_service.py#L46-L50",
+      "https://www.vulncheck.com/advisories/lightllm-through-1.2.0-unauthenticated-remote-code-execution-via-router-profiler-rpyc-service"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-103040",
+    "added_at": "2026-09-30T20:00:26+09:00"
+  },
+  {
+    "id": "CVE-2026-102792",
+    "published": "2026-09-29",
+    "last_modified": "2026-09-29",
+    "status": "Received",
+    "description": "A vulnerability was detected in Ziroom ZHOME A0101 1.0.1.0. This affects the function set_syslog of the file /api/ZRnetwork/set_syslog. The manipulation of the argument conloglevel/log_size results in command injection. The attack may be performed from remote. The exploit is now public and may be used. The vendor was contacted early about this disclosure but did not respond in any way.",
+    "cvss": {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:C/C:H/I:H/A:H",
+      "score": 9.1,
+      "severity": "CRITICAL",
+      "attack_vector": "네트워크",
+      "attack_complexity": "낮음",
+      "privileges_required": "높음",
+      "user_interaction": "없음"
+    },
+    "cwes": [
+      "CWE-74",
+      "CWE-77"
+    ],
+    "affected": [],
+    "references": [
+      "https://github.com/waltz-sketch/Ziroom/blob/main/set_syslog_conloglevel_command_injection.md",
+      "https://vuldb.com/cve/CVE-2026-102792",
+      "https://vuldb.com/submit/914647",
+      "https://vuldb.com/submit/914648",
+      "https://vuldb.com/vuln/411469",
+      "https://vuldb.com/vuln/411469/cti"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-102792",
+    "added_at": "2026-09-30T20:00:26+09:00"
   },
   {
     "id": "CVE-2026-102361",
