@@ -41,13 +41,105 @@
     <h1>CVE Archive</h1>
     <p>NVD 기반 Critical CVE를 누적 관리하는 별도 페이지입니다. 블로그에는 CVE 자동 글을 발행하지 않고, 이 페이지에만 기록합니다.</p>
     <div class="meta">
-      <span>Total 1223</span>
-      <span>Updated 2026-09-30 20:00 KST</span>
+      <span>Total 1227</span>
+      <span>Updated 2026-10-01 20:00 KST</span>
       <span>Source NVD API</span>
     </div>
   </section>
   <div class="notice">중복 제거 기준은 CVE ID입니다. 동일 CVE는 다시 추가하지 않습니다. 실제 악용 여부와 패치 우선순위는 CISA KEV, 벤더 권고, 자산 노출 여부와 함께 검토해야 합니다.</div>
 
+    <article class="cve-card" id="CVE-2026-92966">
+      <div class="cve-top">
+        <a class="cve-id" href="https://nvd.nist.gov/vuln/detail/CVE-2026-92966" target="_blank" rel="noopener">CVE-2026-92966</a>
+        <span class="score">CVSS 9.1 CRITICAL</span>
+      </div>
+      <p class="desc">The The Appointment Booking Plugin – LatePoint | Calendar &amp; Scheduling for WordPress plugin for WordPress is vulnerable to arbitrary shortcode execution in all versions up to, and including, 5.7.0. This is due to the software allowing users to execute an action that does not properly validate a value before running do_shortcode. This makes it possible for unauthenticated attackers to execute arbitrary shortcodes. The payload is planted during the unauthenticated booking flow and triggered when the Customer Cabinet block rendered by render_customer_dashboard() outputs the stored name into the content stream, where WordPress core&#x27;s do_shortcode filter at priority 11 re-parses and executes it.</p>
+      <dl>
+        <div><dt>Published</dt><dd>2026-10-01</dd></div>
+        <div><dt>Last Modified</dt><dd>2026-10-01</dd></div>
+        <div><dt>Status</dt><dd>Received</dd></div>
+        <div><dt>Attack Vector</dt><dd>네트워크</dd></div>
+        <div><dt>Attack Complexity</dt><dd>낮음</dd></div>
+        <div><dt>Privileges</dt><dd>없음</dd></div>
+        <div><dt>User Interaction</dt><dd>없음</dd></div>
+        <div><dt>CWE</dt><dd>CWE-94</dd></div>
+        <div><dt>Affected</dt><dd>NVD CPE 기준 확인 필요</dd></div>
+      </dl>
+      <div class="vector"><code>CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N</code></div>
+      <details>
+        <summary>References</summary>
+        <ul><li><a href="https://plugins.trac.wordpress.org/browser/latepoint/tags/5.7.0/lib/helpers/blocks_helper.php#L234" target="_blank" rel="noopener">https://plugins.trac.wordpress.org/browser/latepoint/tags/5.7.0/lib/helpers/blocks_helper.php#L234</a></li><li><a href="https://plugins.trac.wordpress.org/browser/latepoint/tags/5.7.0/lib/models/customer_model.php#L386" target="_blank" rel="noopener">https://plugins.trac.wordpress.org/browser/latepoint/tags/5.7.0/lib/models/customer_model.php#L386</a></li><li><a href="https://plugins.trac.wordpress.org/browser/latepoint/tags/5.7.0/lib/views/customer_cabinet/dashboard.php#L19" target="_blank" rel="noopener">https://plugins.trac.wordpress.org/browser/latepoint/tags/5.7.0/lib/views/customer_cabinet/dashboard.php#L19</a></li><li><a href="https://plugins.trac.wordpress.org/browser/latepoint/tags/5.7.1/lib/helpers/blocks_helper.php" target="_blank" rel="noopener">https://plugins.trac.wordpress.org/browser/latepoint/tags/5.7.1/lib/helpers/blocks_helper.php</a></li></ul>
+      </details>
+    </article>
+    <article class="cve-card" id="CVE-2026-75957">
+      <div class="cve-top">
+        <a class="cve-id" href="https://nvd.nist.gov/vuln/detail/CVE-2026-75957" target="_blank" rel="noopener">CVE-2026-75957</a>
+        <span class="score">CVSS 9.8 CRITICAL</span>
+      </div>
+      <p class="desc">The Ultimate Multisite – WordPress Multisite SaaS &amp; WaaS Platform plugin for WordPress is vulnerable to Authentication Bypass in all versions up to, and including, 2.15.0 via the `checkout_form` parameter of the `login_customer_after_checkout` function. This is due to the publicly accessible `wu_ajax_nopriv_wu_validate_form` AJAX handler accepting a freely obtainable checkout nonce, and the `checkout_form=wu-finish-checkout` parameter causing `get_validation_rules()` to discard all validation rules while `finish_checkout_form_fields()` returns an empty step list — forcing `is_last_step()` to return true and routing the request directly into full order processing — after which `maybe_create_customer()` resolves the attacker-supplied `email_address` to an existing WordPress user ID without any authentication or ownership verification, and `login_customer_after_checkout()` calls `wp_set_auth_cookie()` for that user ID via a passwordless code path. This makes it possible for unauthenticated attackers to log in as any existing WordPress user — including a Network Super Admin — simply by knowing their email address. Exploitation requires that the targeted user account has no pre-existing Ultimate Multisite customer record; accounts such as a Network Super Admin on a fresh Multisite install, or any administrator or editor added before Ultimate Multisite was configured, satisfy this condition and are therefore exploitable.</p>
+      <dl>
+        <div><dt>Published</dt><dd>2026-10-01</dd></div>
+        <div><dt>Last Modified</dt><dd>2026-10-01</dd></div>
+        <div><dt>Status</dt><dd>Received</dd></div>
+        <div><dt>Attack Vector</dt><dd>네트워크</dd></div>
+        <div><dt>Attack Complexity</dt><dd>낮음</dd></div>
+        <div><dt>Privileges</dt><dd>없음</dd></div>
+        <div><dt>User Interaction</dt><dd>없음</dd></div>
+        <div><dt>CWE</dt><dd>CWE-287</dd></div>
+        <div><dt>Affected</dt><dd>NVD CPE 기준 확인 필요</dd></div>
+      </dl>
+      <div class="vector"><code>CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H</code></div>
+      <details>
+        <summary>References</summary>
+        <ul><li><a href="https://plugins.trac.wordpress.org/browser/ultimate-multisite/tags/2.14.2/inc/checkout/class-checkout.php#L1223" target="_blank" rel="noopener">https://plugins.trac.wordpress.org/browser/ultimate-multisite/tags/2.14.2/inc/checkout/class-checkout.php#L1223</a></li><li><a href="https://plugins.trac.wordpress.org/browser/ultimate-multisite/tags/2.14.2/inc/checkout/class-checkout.php#L208" target="_blank" rel="noopener">https://plugins.trac.wordpress.org/browser/ultimate-multisite/tags/2.14.2/inc/checkout/class-checkout.php#L208</a></li><li><a href="https://plugins.trac.wordpress.org/browser/ultimate-multisite/tags/2.14.2/inc/checkout/class-checkout.php#L2489" target="_blank" rel="noopener">https://plugins.trac.wordpress.org/browser/ultimate-multisite/tags/2.14.2/inc/checkout/class-checkout.php#L2489</a></li><li><a href="https://plugins.trac.wordpress.org/browser/ultimate-multisite/tags/2.14.2/inc/checkout/class-checkout.php#L2700" target="_blank" rel="noopener">https://plugins.trac.wordpress.org/browser/ultimate-multisite/tags/2.14.2/inc/checkout/class-checkout.php#L2700</a></li></ul>
+      </details>
+    </article>
+    <article class="cve-card" id="CVE-2026-15989">
+      <div class="cve-top">
+        <a class="cve-id" href="https://nvd.nist.gov/vuln/detail/CVE-2026-15989" target="_blank" rel="noopener">CVE-2026-15989</a>
+        <span class="score">CVSS 9.8 CRITICAL</span>
+      </div>
+      <p class="desc">The Super Forms – Drag &amp; Drop Form Builder plugin for WordPress is vulnerable to Privilege Escalation in all versions up to, and including, 6.3.316. This is due to the Register &amp; Login add-on&#x27;s before_email_success_msg() function whitelisting the client-submitted &#x27;role&#x27; key and copying it into the user-data array that is passed directly to wp_insert_user(), without validating the submitted role against the administrator-configured register_user_role, without an allow-list, and without any current_user_can() capability check. This makes it possible for unauthenticated attackers to register a new account with the Administrator role by injecting role=administrator into the data submitted to any published Super Forms registration form (register_login_action=&#x27;register&#x27;).</p>
+      <dl>
+        <div><dt>Published</dt><dd>2026-10-01</dd></div>
+        <div><dt>Last Modified</dt><dd>2026-10-01</dd></div>
+        <div><dt>Status</dt><dd>Received</dd></div>
+        <div><dt>Attack Vector</dt><dd>네트워크</dd></div>
+        <div><dt>Attack Complexity</dt><dd>낮음</dd></div>
+        <div><dt>Privileges</dt><dd>없음</dd></div>
+        <div><dt>User Interaction</dt><dd>없음</dd></div>
+        <div><dt>CWE</dt><dd>CWE-269</dd></div>
+        <div><dt>Affected</dt><dd>NVD CPE 기준 확인 필요</dd></div>
+      </dl>
+      <div class="vector"><code>CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H</code></div>
+      <details>
+        <summary>References</summary>
+        <ul><li><a href="https://github.com/RensTillmann/super-forms/pull/205" target="_blank" rel="noopener">https://github.com/RensTillmann/super-forms/pull/205</a></li><li><a href="https://www.wordfence.com/threat-intel/vulnerabilities/id/7eb62d35-3f0e-4733-8f7f-723d0f25b710?source=cve" target="_blank" rel="noopener">https://www.wordfence.com/threat-intel/vulnerabilities/id/7eb62d35-3f0e-4733-8f7f-723d0f25b710?source=cve</a></li></ul>
+      </details>
+    </article>
+    <article class="cve-card" id="CVE-2025-41753">
+      <div class="cve-top">
+        <a class="cve-id" href="https://nvd.nist.gov/vuln/detail/CVE-2025-41753" target="_blank" rel="noopener">CVE-2025-41753</a>
+        <span class="score">CVSS 9.8 CRITICAL</span>
+      </div>
+      <p class="desc">The object name of a dynamically created BACnet File Object is interpreted as a file path without sufficient validation. Because relative paths are not limited to the intended directory, an unauthenticated remote attacker can traverse outside of it and read or overwrite arbitrary files on the device, which may lead to full system compromise.</p>
+      <dl>
+        <div><dt>Published</dt><dd>2026-10-01</dd></div>
+        <div><dt>Last Modified</dt><dd>2026-10-01</dd></div>
+        <div><dt>Status</dt><dd>Received</dd></div>
+        <div><dt>Attack Vector</dt><dd>네트워크</dd></div>
+        <div><dt>Attack Complexity</dt><dd>낮음</dd></div>
+        <div><dt>Privileges</dt><dd>없음</dd></div>
+        <div><dt>User Interaction</dt><dd>없음</dd></div>
+        <div><dt>CWE</dt><dd>CWE-22</dd></div>
+        <div><dt>Affected</dt><dd>NVD CPE 기준 확인 필요</dd></div>
+      </dl>
+      <div class="vector"><code>CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H</code></div>
+      <details>
+        <summary>References</summary>
+        <ul><li><a href="https://www.certvde.com/en/advisories/VDE-2025-102/" target="_blank" rel="noopener">https://www.certvde.com/en/advisories/VDE-2025-102/</a></li></ul>
+      </details>
+    </article>
     <article class="cve-card" id="CVE-2026-103056">
       <div class="cve-top">
         <a class="cve-id" href="https://nvd.nist.gov/vuln/detail/CVE-2026-103056" target="_blank" rel="noopener">CVE-2026-103056</a>
