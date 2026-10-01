@@ -41,13 +41,36 @@
     <h1>CVE Archive</h1>
     <p>NVD 기반 Critical CVE를 누적 관리하는 별도 페이지입니다. 블로그에는 CVE 자동 글을 발행하지 않고, 이 페이지에만 기록합니다.</p>
     <div class="meta">
-      <span>Total 1227</span>
-      <span>Updated 2026-10-01 20:00 KST</span>
+      <span>Total 1229</span>
+      <span>Updated 2026-10-02 08:00 KST</span>
       <span>Source NVD API</span>
     </div>
   </section>
   <div class="notice">중복 제거 기준은 CVE ID입니다. 동일 CVE는 다시 추가하지 않습니다. 실제 악용 여부와 패치 우선순위는 CISA KEV, 벤더 권고, 자산 노출 여부와 함께 검토해야 합니다.</div>
 
+    <article class="cve-card" id="CVE-2026-96659">
+      <div class="cve-top">
+        <a class="cve-id" href="https://nvd.nist.gov/vuln/detail/CVE-2026-96659" target="_blank" rel="noopener">CVE-2026-96659</a>
+        <span class="score">CVSS 9.1 CRITICAL</span>
+      </div>
+      <p class="desc">A flaw was found in Foreman. This vulnerability allows an authenticated user with low-level Viewer permissions to cause unauthorized information disclosure by submitting requests to template preview endpoints. By exploiting this issue, the user can access sensitive data, such as host root passwords. Furthermore, under insecure system configurations where Safemode protections are disabled, the flaw may allow the user to execute arbitrary commands as the Foreman system account.</p>
+      <dl>
+        <div><dt>Published</dt><dd>2026-10-01</dd></div>
+        <div><dt>Last Modified</dt><dd>2026-10-01</dd></div>
+        <div><dt>Status</dt><dd>Awaiting Analysis</dd></div>
+        <div><dt>Attack Vector</dt><dd>네트워크</dd></div>
+        <div><dt>Attack Complexity</dt><dd>낮음</dd></div>
+        <div><dt>Privileges</dt><dd>낮음</dd></div>
+        <div><dt>User Interaction</dt><dd>없음</dd></div>
+        <div><dt>CWE</dt><dd>CWE-267</dd></div>
+        <div><dt>Affected</dt><dd>NVD CPE 기준 확인 필요</dd></div>
+      </dl>
+      <div class="vector"><code>CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:L/A:L</code></div>
+      <details>
+        <summary>References</summary>
+        <ul><li><a href="https://access.redhat.com/errata/RHSA-2026:74503" target="_blank" rel="noopener">https://access.redhat.com/errata/RHSA-2026:74503</a></li><li><a href="https://access.redhat.com/security/cve/CVE-2026-96659" target="_blank" rel="noopener">https://access.redhat.com/security/cve/CVE-2026-96659</a></li><li><a href="https://bugzilla.redhat.com/show_bug.cgi?id=2536844" target="_blank" rel="noopener">https://bugzilla.redhat.com/show_bug.cgi?id=2536844</a></li></ul>
+      </details>
+    </article>
     <article class="cve-card" id="CVE-2026-92966">
       <div class="cve-top">
         <a class="cve-id" href="https://nvd.nist.gov/vuln/detail/CVE-2026-92966" target="_blank" rel="noopener">CVE-2026-92966</a>
@@ -276,6 +299,29 @@
       <details>
         <summary>References</summary>
         <ul><li><a href="https://www.twcert.org.tw/en/cp-139-11242-13f37-2.html" target="_blank" rel="noopener">https://www.twcert.org.tw/en/cp-139-11242-13f37-2.html</a></li><li><a href="https://www.twcert.org.tw/tw/cp-132-11237-c9189-1.html" target="_blank" rel="noopener">https://www.twcert.org.tw/tw/cp-132-11237-c9189-1.html</a></li></ul>
+      </details>
+    </article>
+    <article class="cve-card" id="CVE-2026-102427">
+      <div class="cve-top">
+        <a class="cve-id" href="https://nvd.nist.gov/vuln/detail/CVE-2026-102427" target="_blank" rel="noopener">CVE-2026-102427</a>
+        <span class="score">CVSS 10.0 CRITICAL</span>
+      </div>
+      <p class="desc">Joomla Extension - ordasoft.com - Unauthenticated Remote Code Execution in OrdaSoft Joomla CCK &lt; 8.3.16 - site/uploader.php is reached through the component’s normal frontend routing (task=getContent), a task with no authentication or ACL check anywhere in the dispatch chain. The handler validates the uploaded file’s content with a real magic-byte MIME check, but the extension allow-list that would otherwise restrict the saved file’s extension was present in the source and commented out. The saved file’s extension was taken directly from the attacker-supplied filename with no validation, and the file was written to a path directly under the Joomla web root that is executed by the PHP handler. An image/PHP polyglot, a file whose header bytes satisfy the MIME check with PHP source appended after, passed the content check while carrying a .php extension of the attacker’s choosing.</p>
+      <dl>
+        <div><dt>Published</dt><dd>2026-09-30</dd></div>
+        <div><dt>Last Modified</dt><dd>2026-10-01</dd></div>
+        <div><dt>Status</dt><dd>Analyzed</dd></div>
+        <div><dt>Attack Vector</dt><dd>네트워크</dd></div>
+        <div><dt>Attack Complexity</dt><dd>낮음</dd></div>
+        <div><dt>Privileges</dt><dd>없음</dd></div>
+        <div><dt>User Interaction</dt><dd>없음</dd></div>
+        <div><dt>CWE</dt><dd>CWE-434</dd></div>
+        <div><dt>Affected</dt><dd>ordasoft joomla_cck</dd></div>
+      </dl>
+      <div class="vector"><code>CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:H</code></div>
+      <details>
+        <summary>References</summary>
+        <ul><li><a href="https://www.ordasoft.com/" target="_blank" rel="noopener">https://www.ordasoft.com/</a></li></ul>
       </details>
     </article>
     <article class="cve-card" id="CVE-2026-53988">

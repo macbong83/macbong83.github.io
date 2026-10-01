@@ -1,5 +1,33 @@
 [
   {
+    "id": "CVE-2026-96659",
+    "published": "2026-10-01",
+    "last_modified": "2026-10-01",
+    "status": "Awaiting Analysis",
+    "description": "A flaw was found in Foreman. This vulnerability allows an authenticated user with low-level Viewer permissions to cause unauthorized information disclosure by submitting requests to template preview endpoints. By exploiting this issue, the user can access sensitive data, such as host root passwords. Furthermore, under insecure system configurations where Safemode protections are disabled, the flaw may allow the user to execute arbitrary commands as the Foreman system account.",
+    "cvss": {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:L/A:L",
+      "score": 9.1,
+      "severity": "CRITICAL",
+      "attack_vector": "네트워크",
+      "attack_complexity": "낮음",
+      "privileges_required": "낮음",
+      "user_interaction": "없음"
+    },
+    "cwes": [
+      "CWE-267"
+    ],
+    "affected": [],
+    "references": [
+      "https://access.redhat.com/errata/RHSA-2026:74503",
+      "https://access.redhat.com/security/cve/CVE-2026-96659",
+      "https://bugzilla.redhat.com/show_bug.cgi?id=2536844"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-96659",
+    "added_at": "2026-10-02T08:00:39+09:00"
+  },
+  {
     "id": "CVE-2026-92966",
     "published": "2026-10-01",
     "last_modified": "2026-10-01",
@@ -292,6 +320,34 @@
     ],
     "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-102455",
     "added_at": "2026-09-30T20:00:26+09:00"
+  },
+  {
+    "id": "CVE-2026-102427",
+    "published": "2026-09-30",
+    "last_modified": "2026-10-01",
+    "status": "Analyzed",
+    "description": "Joomla Extension - ordasoft.com - Unauthenticated Remote Code Execution in OrdaSoft Joomla CCK < 8.3.16 - site/uploader.php is reached through the component’s normal frontend routing (task=getContent), a task with no authentication or ACL check anywhere in the dispatch chain. The handler validates the uploaded file’s content with a real magic-byte MIME check, but the extension allow-list that would otherwise restrict the saved file’s extension was present in the source and commented out. The saved file’s extension was taken directly from the attacker-supplied filename with no validation, and the file was written to a path directly under the Joomla web root that is executed by the PHP handler. An image/PHP polyglot, a file whose header bytes satisfy the MIME check with PHP source appended after, passed the content check while carrying a .php extension of the attacker’s choosing.",
+    "cvss": {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:H",
+      "score": 10.0,
+      "severity": "CRITICAL",
+      "attack_vector": "네트워크",
+      "attack_complexity": "낮음",
+      "privileges_required": "없음",
+      "user_interaction": "없음"
+    },
+    "cwes": [
+      "CWE-434"
+    ],
+    "affected": [
+      "ordasoft joomla_cck"
+    ],
+    "references": [
+      "https://www.ordasoft.com/"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-102427",
+    "added_at": "2026-10-02T08:00:39+09:00"
   },
   {
     "id": "CVE-2026-53988",
