@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>취약점, 랜섬웨어 — 2026.10.01 보안 브리핑 | SecuLog</title>
+<meta name="description" content="오늘 주요 취약점·침해 사고·위협 트렌드 요약.">
+<meta name="keywords" content="CVE, 랜섬웨어, 취약점, 침해사고, 보안">
+<meta name="author" content="Felix">
+<meta property="og:type" content="article">
+<meta property="og:title" content="취약점, 랜섬웨어 — 2026.10.01 보안 브리핑">
+<meta property="og:description" content="오늘 주요 취약점·침해 사고·위협 트렌드 요약.">
+<meta property="og:url" content="https://macbong83.github.io/posts/2026-10-01.html">
+<meta property="og:site_name" content="SecuLog">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="취약점, 랜섬웨어 — 2026.10.01 보안 브리핑">
+<meta name="twitter:description" content="오늘 주요 취약점·침해 사고·위협 트렌드 요약.">
+<link rel="canonical" href="https://macbong83.github.io/posts/2026-10-01.html">
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: -apple-system, 'Malgun Gothic', 'Apple SD Gothic Neo', Arial, sans-serif; background: #f4f5f7; color: #1a1a2e; line-height: 1.6; }
+  a { text-decoration: none; color: inherit; }
+  .wrapper { max-width: 700px; margin: 32px auto; background: #ffffff; border-radius: 12px; overflow: hidden; box-shadow: 0 2px 20px rgba(0,0,0,0.08); }
+  .header { background: #eef0f4; padding: 28px 36px 24px; display: flex; align-items: center; justify-content: space-between; gap: 16px; border-bottom: 3px solid #0d1b3e; }
+  .wordmark { font-size: 26px; font-weight: 800; letter-spacing: -0.02em; color: #0d1b3e; }
+  .wordmark .accent { color: #2563eb; }
+  .header-meta { text-align: right; }
+  .header-meta .nl-label { font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase; color: #6b7488; margin-bottom: 4px; }
+  .header-meta .nl-title { font-size: 17px; font-weight: 700; color: #0d1b3e; }
+  .header-meta .nl-date { font-size: 12px; color: #8a93a8; margin-top: 3px; }
+  .body { padding: 28px 36px 32px; }
+  .section-label { font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase; color: #8a93a8; font-weight: 600; padding-bottom: 8px; border-bottom: 1px solid #e8eaed; margin-bottom: 4px; margin-top: 28px; }
+  .section-label:first-child { margin-top: 0; }
+  .card { display: block; padding: 16px 0; border-bottom: 1px solid #f0f1f3; transition: background 0.15s; }
+  .card:last-child { border-bottom: none; }
+  .card:hover { background: #f8f9fc; margin: 0 -36px; padding: 16px 36px; }
+  .card-top { display: flex; align-items: center; gap: 8px; margin-bottom: 6px; flex-wrap: wrap; }
+  .badge { font-size: 10px; font-weight: 700; padding: 3px 9px; border-radius: 4px; letter-spacing: 0.04em; }
+  .badge-critical { background: #fff0f0; color: #c0392b; border: 1px solid #f5c6c6; }
+  .badge-high { background: #fff7ee; color: #b94d00; border: 1px solid #fdd5a8; }
+  .badge-medium { background: #fff9e6; color: #856900; border: 1px solid #f9e0a0; }
+  .badge-incident { background: #f3f0ff; color: #6133c0; border: 1px solid #cfc0f5; }
+  .source { font-size: 11px; color: #a0a8b8; }
+  .card-headline { font-size: 14px; font-weight: 600; color: #0d1b3e; margin-bottom: 5px; line-height: 1.45; }
+  .card-headline .arrow { font-size: 12px; color: #2563eb; margin-left: 4px; opacity: 0; transition: opacity 0.15s; }
+  .card:hover .card-headline .arrow { opacity: 1; }
+  .card-summary { font-size: 13px; color: #4a5568; line-height: 1.65; }
+  .trend-box { background: #f8f9fc; border-radius: 10px; padding: 18px 20px; margin-top: 6px; }
+  .trend-row { display: flex; gap: 12px; padding: 10px 0; border-bottom: 1px solid #e8eaed; align-items: flex-start; }
+  .trend-row:last-child { border-bottom: none; padding-bottom: 0; }
+  .trend-num { font-size: 11px; font-weight: 700; color: #2563eb; min-width: 22px; padding-top: 2px; }
+  .trend-text { font-size: 13px; color: #4a5568; line-height: 1.6; }
+  .trend-text strong { color: #0d1b3e; font-weight: 600; }
+  .footer { background: #f4f5f7; border-top: 1px solid #e8eaed; padding: 16px 36px; font-size: 11px; color: #9aa0b0; line-height: 1.6; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 8px; }
+  .footer-meta { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; justify-content: flex-end; }
+  .linkedin-link { display: inline-flex; align-items: center; justify-content: center; min-height: 28px; padding: 6px 12px; border-radius: 6px; background: #0a66c2; color: #fff; font-size: 12px; font-weight: 800; letter-spacing: 0.01em; box-shadow: 0 6px 14px rgba(10,102,194,0.16); }
+  .linkedin-link:hover { background: #004182; color: #fff; }
+  .card-inner { display: flex; gap: 14px; }
+  .sev-bar { width: 3px; border-radius: 2px; flex-shrink: 0; margin: 3px 0; }
+  .sev-critical { background: #e74c3c; }
+  .sev-high { background: #e67e22; }
+  .sev-medium { background: #f0b429; }
+  .sev-incident { background: #7c3aed; }
+  .card-content { flex: 1; }
+  @media (max-width: 600px) {
+    .wrapper { margin: 0; border-radius: 0; box-shadow: none; }
+    .header { padding: 18px 20px 16px; flex-direction: column; align-items: flex-start; gap: 8px; }
+    .header-meta { text-align: left; }
+    .body { padding: 18px 20px 24px; }
+    .card:hover { margin: 0 -20px; padding: 16px 20px; }
+    .footer { padding: 14px 20px; flex-direction: column; align-items: flex-start; }
+    .footer-meta { justify-content: flex-start; }
+    .wordmark { font-size: 22px; }
+    .card-headline { font-size: 13px; }
+    .card-summary { font-size: 12px; }
+    .card-headline .arrow { opacity: 1; }
+  }
+</style>
+</head>
+<body>
+<div class="wrapper">
+  <div class="header">
+    <div class="header-logo">
+      <span class="wordmark">Secu<span class="accent">Log</span></span>
+    </div>
+    <div class="header-meta">
+      <div class="nl-label">글로벌 정보보안 뉴스레터</div>
+      <div class="nl-title">보안 브리핑</div>
+      <div class="nl-date">2026년 10월 1일 목요일</div>
+    </div>
+  </div>
+  <div class="body">
+    <div class="section-label">취약점 &amp; 공격</div>
+
+    <a class="card" href="https://thehackernews.com/2026/09/attackers-exploit-zimbra-flaw-to-deploy.html" target="_blank">
+      <div class="card-inner"><div class="sev-bar sev-high"></div><div class="card-content">
+        <div class="card-top"><span class="badge badge-high">높음</span><span class="source">The Hacker News</span></div>
+        <div class="card-headline">Zimbra 취약점 악용해 웹쉘 배포 및 인증 정보 유출<span class="arrow">↗</span></div>
+        <div class="card-summary">Microsoft 보안 연구팀은 Zimbra Collaboration Suite의 취약점(CVE-2026-73570, CVSS 8.9)이 패치되었음에도 불구하고 악용되어 웹쉘 배포 및 이메일 데이터 접근이 발생했다고 보고했다. 이 취약점은 인증 없이도 공격이 가능하다.</div>
+      </div></div>
+    </a>
+
+    <a class="card" href="https://thehackernews.com/2026/09/cisco-warns-of-attackers-exploiting.html" target="_blank">
+      <div class="card-inner"><div class="sev-bar sev-critical"></div><div class="card-content">
+        <div class="card-top"><span class="badge badge-critical">긴급</span><span class="source">The Hacker News</span></div>
+        <div class="card-headline">Cisco SD-WAN Manager 제로데이 취약점 악용<span class="arrow">↗</span></div>
+        <div class="card-summary">Cisco는 SD-WAN Manager에 존재하는 제로데이 취약점(CVE-2026-76504, CVSS 9.5)이 악용되어 원격 공격자가 로그인 없이도 시스템에 접근할 수 있다고 경고했다. 이 취약점은 네트워크 관리에 중대한 영향을 줄 수 있다.</div>
+      </div></div>
+    </a>
+
+    <a class="card" href="https://thehackernews.com/2026/09/attackers-exploit-netscaler-flaw-for.html" target="_blank">
+      <div class="card-inner"><div class="sev-bar sev-high"></div><div class="card-content">
+        <div class="card-top"><span class="badge badge-high">높음</span><span class="source">The Hacker News</span></div>
+        <div class="card-headline">Citrix NetScaler 취약점 악용해 웹쉘 배포<span class="arrow">↗</span></div>
+        <div class="card-summary">Citrix NetScaler의 취약점(CVE-2026-88772, CVSS 9.5)이 악용되어 공격자가 원격으로 시스템에 접근하고 웹쉘을 배포하고 있다. Mandiant 및 Google Threat Intelligence Group은 이 취약점이 활발히 악용되고 있다고 보고했다.</div>
+      </div></div>
+    </a>
+
+    <a class="card" href="https://www.securityweek.com/watchguard-patches-critical-fireware-os-code-injection-vulnerability/" target="_blank">
+      <div class="card-inner"><div class="sev-bar sev-high"></div><div class="card-content">
+        <div class="card-top"><span class="badge badge-high">높음</span><span class="source">SecurityWeek</span></div>
+        <div class="card-headline">WatchGuard Fireware OS 코드 주입 취약점 패치<span class="arrow">↗</span></div>
+        <div class="card-summary">WatchGuard는 Fireware OS의 15개 취약점 중 특히 코드 주입 취약점(CVE-2026-86131)을 패치했다. 이 취약점은 원격 공격자가 시스템에 루트 접근을 얻을 수 있어 보안 업데이트가 필수적이다.</div>
+      </div></div>
+    </a>
+
+    <a class="card" href="https://www.securityweek.com/chrome-firefox-updates-patch-over-100-vulnerabilities/" target="_blank">
+      <div class="card-inner"><div class="sev-bar sev-high"></div><div class="card-content">
+        <div class="card-top"><span class="badge badge-high">높음</span><span class="source">SecurityWeek</span></div>
+        <div class="card-headline">Chrome, Firefox 100개 이상 취약점 패치<span class="arrow">↗</span></div>
+        <div class="card-summary">Chrome과 Firefox는 100개 이상의 취약점을 수정한 업데이트를 발표했다. 이 중 일부 취약점은 원격 공격자가 임의 코드 실행이나 브라우저 샌드박스 탈출이 가능하다.</div>
+      </div></div>
+    </a>
+
+    <a class="card" href="https://gbhackers.com/critical-mikrotik-routeros-vulnerability/" target="_blank">
+      <div class="card-inner"><div class="sev-bar sev-high"></div><div class="card-content">
+        <div class="card-top"><span class="badge badge-high">높음</span><span class="source">gbhackers.com</span></div>
+        <div class="card-headline">MikroTik RouterOS 원격 코드 실행 취약점<span class="arrow">↗</span></div>
+        <div class="card-summary">MikroTik RouterOS의 취약점(CVE-2026-84411, CVSS 9.0)은 인증 없이 원격 공격자가 코드를 실행하거나 서비스 거부 공격을 수행할 수 있다. 이 취약점은 7.24 이전 버전에서 영향을 받는다.</div>
+      </div></div>
+    </a>
+
+    <div class="section-label">침해 사고</div>
+
+    <a class="card" href="https://thehackernews.com/2026/09/french-tax-data-theft-using-stolen.html" target="_blank">
+      <div class="card-inner"><div class="sev-bar sev-incident"></div><div class="card-content">
+        <div class="card-top"><span class="badge badge-incident">사고</span><span class="source">The Hacker News</span></div>
+        <div class="card-headline">프랑스 세금 데이터 유출, 7주간 탐지되지 않음<span class="arrow">↗</span></div>
+        <div class="card-summary">프랑스 세무청 직원의 계정 정보가 유출되어 수십만 명의 납세자와 기업의 세금 정보가 유출되었으나, 7주간 탐지되지 않았다. 이 사건은 기술적으로 복잡하지 않았으나, 보안 대응의 부족을 드러냈다.</div>
+      </div></div>
+    </a>
+
+    <a class="card" href="https://thehackernews.com/2026/09/russias-star-blizzard-targets-100.html" target="_blank">
+      <div class="card-inner"><div class="sev-bar sev-incident"></div><div class="card-content">
+        <div class="card-top"><span class="badge badge-incident">사고</span><span class="source">The Hacker News</span></div>
+        <div class="card-headline">러시아 Star Blizzard, 100개 이상 조직에 백도어 배포<span class="arrow">↗</span></div>
+        <div class="card-summary">러시아 국가 해커 그룹 Star Blizzard는 가짜 행사 초청장을 통해 100개 이상의 조직에 백도어를 설치하는 공격을 수행했다. 이 공격은 우크라이나와 관련된 조직을 주 타겟으로 삼았다.</div>
+      </div></div>
+    </a>
+
+    <a class="card" href="https://securityaffairs.com/2000" target="_blank">
+      <div class="card-inner"><div class="sev-bar sev-incident"></div><div class="card-content">
+        <div class="card-top"><span class="badge badge-incident">사고</span><span class="source">SecurityAffairs</span></div>
+        <div class="card-headline">일본 철도 운영사 Keio Corporation 및 Tokyo Metro 보안 유출<span class="arrow">↗</span></div>
+        <div class="card-summary">일본의 Keio Corporation 및 Tokyo Metro는 보안 침해를 공개했다. 이 사건은 철도 운영에 대한 민감한 데이터 유출로 이어졌으며, 보안 대응의 중요성을 강조했다.</div>
+      </div></div>
+    </a>
+
+    <div class="section-label">동향 &amp; 분석</div>
+    <div class="trend-box">
+      <div class="trend-row">
+        <div class="trend-num">01</div>
+        <div class="trend-text"><strong>AI 기반 공격 증가</strong> — AI 기술이 보안 취약점 탐지 및 공격 전략 개발에 활용되고 있다. 예를 들어, AI가 생성한 가짜 GPT는 악용되어 RAT 배포에 사용되고 있으며, 이는 보안 대응에 새로운 도전을 제기한다.</div>
+      </div>
+      <div class="trend-row">
+        <div class="trend-num">02</div>
+        <div class="trend-text"><strong>공급망 공격 확대</strong> — 공급망 공격은 개발자 자격 증명을 탐지하여 소스 코드 이외의 환경으로 확장되고 있다. 이는 CI/CD 환경에서의 보안 취약점을 악용하여 공격자가 지속적인 접근을 얻는 데 기여한다.</div>
+      </div>
+      <div class="trend-row">
+        <div class="trend-num">03</div>
+        <div class="trend-text"><strong>RMM 도구 악용 증가</strong> — RMM(Remote Monitoring and Management) 도구가 악용되어 지속적인 접근 및 자격 증명 유출이 발생하고 있다. 이는 공격자가 정당한 소프트웨어를 악용하여 피해를 가하는 사례로, 보안 인식을 강화해야 한다.</div>
+      </div>
+      <div class="trend-row">
+        <div class="trend-num">04</div>
+        <div class="trend-text"><strong>취약점 패치 지연</strong> — 취약점이 패치되었음에도 불구하고, 많은 조직에서 패치를 지연시키는 경우가 많다. 이는 공격자가 취약점을 악용하여 피해를 가하는 데 기여하며, 보안 정책의 엄격한 이행이 필요하다.</div>
+      </div>
+    </div>
+  </div>
+  <div class="footer">
+    <div>출처: The Hacker News · BleepingComputer · SecurityWeek · KrebsOnSecurity · CISA · NCSC UK · Unit 42 · 보안뉴스 · 데일리시큐 · 전자신문</div>
+    <div class="footer-meta">
+      <span>© 2026 Felix · SecuLog. 본 브리핑은 공개된 보안 뉴스를 기반으로 작성되었습니다.</span>
+    </div>
+  </div>
+</div>
+</body>
+</html>

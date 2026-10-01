@@ -1,0 +1,111 @@
+{
+  "tagline": "글로벌 정보보안 뉴스레터",
+  "title": "보안 브리핑",
+  "date_display": "2026년 10월 1일 목요일",
+  "date_short": "2026.10.01",
+  "sources_line": "The Hacker News · BleepingComputer · SecurityWeek · KrebsOnSecurity · CISA · NCSC UK · Unit 42 · 보안뉴스 · 데일리시큐 · 전자신문",
+  "seo": {
+    "title": "취약점, 랜섬웨어 — 2026.10.01 보안 브리핑",
+    "description": "오늘 주요 취약점·침해 사고·위협 트렌드 요약.",
+    "keywords": "CVE, 랜섬웨어, 취약점, 침해사고, 보안"
+  },
+  "sections": [
+    {
+      "label": "취약점 & 공격",
+      "type": "cards",
+      "items": [
+        {
+          "severity": "high",
+          "source": "The Hacker News",
+          "headline": "Zimbra 취약점 악용해 웹쉘 배포 및 인증 정보 유출",
+          "url": "https://thehackernews.com/2026/09/attackers-exploit-zimbra-flaw-to-deploy.html",
+          "summary": "Microsoft 보안 연구팀은 Zimbra Collaboration Suite의 취약점(CVE-2026-73570, CVSS 8.9)이 패치되었음에도 불구하고 악용되어 웹쉘 배포 및 이메일 데이터 접근이 발생했다고 보고했다. 이 취약점은 인증 없이도 공격이 가능하다."
+        },
+        {
+          "severity": "critical",
+          "source": "The Hacker News",
+          "headline": "Cisco SD-WAN Manager 제로데이 취약점 악용",
+          "url": "https://thehackernews.com/2026/09/cisco-warns-of-attackers-exploiting.html",
+          "summary": "Cisco는 SD-WAN Manager에 존재하는 제로데이 취약점(CVE-2026-76504, CVSS 9.5)이 악용되어 원격 공격자가 로그인 없이도 시스템에 접근할 수 있다고 경고했다. 이 취약점은 네트워크 관리에 중대한 영향을 줄 수 있다."
+        },
+        {
+          "severity": "high",
+          "source": "The Hacker News",
+          "headline": "Citrix NetScaler 취약점 악용해 웹쉘 배포",
+          "url": "https://thehackernews.com/2026/09/attackers-exploit-netscaler-flaw-for.html",
+          "summary": "Citrix NetScaler의 취약점(CVE-2026-88772, CVSS 9.5)이 악용되어 공격자가 원격으로 시스템에 접근하고 웹쉘을 배포하고 있다. Mandiant 및 Google Threat Intelligence Group은 이 취약점이 활발히 악용되고 있다고 보고했다."
+        },
+        {
+          "severity": "high",
+          "source": "SecurityWeek",
+          "headline": "WatchGuard Fireware OS 코드 주입 취약점 패치",
+          "url": "https://www.securityweek.com/watchguard-patches-critical-fireware-os-code-injection-vulnerability/",
+          "summary": "WatchGuard는 Fireware OS의 15개 취약점 중 특히 코드 주입 취약점(CVE-2026-86131)을 패치했다. 이 취약점은 원격 공격자가 시스템에 루트 접근을 얻을 수 있어 보안 업데이트가 필수적이다."
+        },
+        {
+          "severity": "high",
+          "source": "SecurityWeek",
+          "headline": "Chrome, Firefox 100개 이상 취약점 패치",
+          "url": "https://www.securityweek.com/chrome-firefox-updates-patch-over-100-vulnerabilities/",
+          "summary": "Chrome과 Firefox는 100개 이상의 취약점을 수정한 업데이트를 발표했다. 이 중 일부 취약점은 원격 공격자가 임의 코드 실행이나 브라우저 샌드박스 탈출이 가능하다."
+        },
+        {
+          "severity": "high",
+          "source": "gbhackers.com",
+          "headline": "MikroTik RouterOS 원격 코드 실행 취약점",
+          "url": "https://gbhackers.com/critical-mikrotik-routeros-vulnerability/",
+          "summary": "MikroTik RouterOS의 취약점(CVE-2026-84411, CVSS 9.0)은 인증 없이 원격 공격자가 코드를 실행하거나 서비스 거부 공격을 수행할 수 있다. 이 취약점은 7.24 이전 버전에서 영향을 받는다."
+        }
+      ]
+    },
+    {
+      "label": "침해 사고",
+      "type": "cards",
+      "items": [
+        {
+          "severity": "incident",
+          "source": "The Hacker News",
+          "headline": "프랑스 세금 데이터 유출, 7주간 탐지되지 않음",
+          "url": "https://thehackernews.com/2026/09/french-tax-data-theft-using-stolen.html",
+          "summary": "프랑스 세무청 직원의 계정 정보가 유출되어 수십만 명의 납세자와 기업의 세금 정보가 유출되었으나, 7주간 탐지되지 않았다. 이 사건은 기술적으로 복잡하지 않았으나, 보안 대응의 부족을 드러냈다."
+        },
+        {
+          "severity": "incident",
+          "source": "The Hacker News",
+          "headline": "러시아 Star Blizzard, 100개 이상 조직에 백도어 배포",
+          "url": "https://thehackernews.com/2026/09/russias-star-blizzard-targets-100.html",
+          "summary": "러시아 국가 해커 그룹 Star Blizzard는 가짜 행사 초청장을 통해 100개 이상의 조직에 백도어를 설치하는 공격을 수행했다. 이 공격은 우크라이나와 관련된 조직을 주 타겟으로 삼았다."
+        },
+        {
+          "severity": "incident",
+          "source": "SecurityAffairs",
+          "headline": "일본 철도 운영사 Keio Corporation 및 Tokyo Metro 보안 유출",
+          "url": "https://securityaffairs.com/2000",
+          "summary": "일본의 Keio Corporation 및 Tokyo Metro는 보안 침해를 공개했다. 이 사건은 철도 운영에 대한 민감한 데이터 유출로 이어졌으며, 보안 대응의 중요성을 강조했다."
+        }
+      ]
+    },
+    {
+      "label": "동향 & 분석",
+      "type": "trends",
+      "items": [
+        {
+          "lead": "AI 기반 공격 증가",
+          "body": "AI 기술이 보안 취약점 탐지 및 공격 전략 개발에 활용되고 있다. 예를 들어, AI가 생성한 가짜 GPT는 악용되어 RAT 배포에 사용되고 있으며, 이는 보안 대응에 새로운 도전을 제기한다."
+        },
+        {
+          "lead": "공급망 공격 확대",
+          "body": "공급망 공격은 개발자 자격 증명을 탐지하여 소스 코드 이외의 환경으로 확장되고 있다. 이는 CI/CD 환경에서의 보안 취약점을 악용하여 공격자가 지속적인 접근을 얻는 데 기여한다."
+        },
+        {
+          "lead": "RMM 도구 악용 증가",
+          "body": "RMM(Remote Monitoring and Management) 도구가 악용되어 지속적인 접근 및 자격 증명 유출이 발생하고 있다. 이는 공격자가 정당한 소프트웨어를 악용하여 피해를 가하는 사례로, 보안 인식을 강화해야 한다."
+        },
+        {
+          "lead": "취약점 패치 지연",
+          "body": "취약점이 패치되었음에도 불구하고, 많은 조직에서 패치를 지연시키는 경우가 많다. 이는 공격자가 취약점을 악용하여 피해를 가하는 데 기여하며, 보안 정책의 엄격한 이행이 필요하다."
+        }
+      ]
+    }
+  ]
+}
