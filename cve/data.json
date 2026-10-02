@@ -1,5 +1,234 @@
 [
   {
+    "id": "CVE-2026-97637",
+    "published": "2026-10-02",
+    "last_modified": "2026-10-02",
+    "status": "Received",
+    "description": "The JSON API Auth plugin for WordPress is vulnerable to Authentication Bypass via Cached Session Cookie Disclosure in all versions up to, and including, 3.1.2. The vulnerability exists because the required PI-Media/json-api parent plugin caches controller dispatch results in transients keyed solely by URI and query string, ignoring HTTP method and POST body; this causes the `generate_auth_cookie()` endpoint — which embeds a live WordPress `logged_in` cookie produced by `wp_generate_auth_cookie()` directly in its JSON response body — to serve that cached authenticated response to any subsequent unauthenticated GET request to the same URI. This makes it possible for unauthenticated attackers to retrieve a valid Administrator `logged_in` session cookie from the cached response and use it to fully authenticate as the site Administrator, including via the same plugin's `get_currentuserinfo` endpoint and any cookie-authenticated controller action. Exploitation requires the PI-Media/json-api parent plugin to be installed and active with the Auth controller enabled, and a legitimate Administrator must have POSTed to `/api/auth/generate_auth_cookie/` within the preceding 24-hour cache TTL; the nominal HTTPS enforcement gate present in `Auth.php` is trivially bypassed by supplying `insecure=cool` as a request parameter.",
+    "cvss": {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "score": 9.8,
+      "severity": "CRITICAL",
+      "attack_vector": "네트워크",
+      "attack_complexity": "낮음",
+      "privileges_required": "없음",
+      "user_interaction": "없음"
+    },
+    "cwes": [
+      "CWE-287"
+    ],
+    "affected": [],
+    "references": [
+      "https://plugins.trac.wordpress.org/browser/json-api-auth/tags/3.1.2/controllers/Auth.php#L104",
+      "https://plugins.trac.wordpress.org/browser/json-api-auth/tags/3.1.2/controllers/Auth.php#L28",
+      "https://plugins.trac.wordpress.org/browser/json-api-auth/tags/3.1.2/controllers/Auth.php#L66",
+      "https://plugins.trac.wordpress.org/browser/json-api-auth/tags/3.1.2/controllers/Auth.php#L77",
+      "https://plugins.trac.wordpress.org/browser/json-api-auth/tags/3.1.2/json-api-auth.php#L65",
+      "https://plugins.trac.wordpress.org/changeset?reponame=&old=3712939%40json-api-auth&new=3712939%40json-api-auth"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-97637",
+    "added_at": "2026-10-02T20:00:53+09:00"
+  },
+  {
+    "id": "CVE-2026-94541",
+    "published": "2026-10-02",
+    "last_modified": "2026-10-02",
+    "status": "Received",
+    "description": "The WPMobile.App – Android and iOS App Builder plugin for WordPress is vulnerable to authorization bypass in all versions up to, and including, 11.82 This is due to the plugin not properly verifying that a user is authorized to perform an action. This makes it possible for unauthenticated attackers to exfiltrate password-reset URLs for arbitrary users, including administrators, mirrored into the push queue by the mail-to-push feature, and use those URLs to take over the targeted accounts. This exploit chain requires the plugin's mail-to-push feature (wpmobile_auto_mail=1) to be enabled, as that setting is what causes outbound WordPress password-reset emails — including the reset URL and key — to be mirrored into the push row queue where they become accessible to the attacker.",
+    "cvss": {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "score": 9.8,
+      "severity": "CRITICAL",
+      "attack_vector": "네트워크",
+      "attack_complexity": "낮음",
+      "privileges_required": "없음",
+      "user_interaction": "없음"
+    },
+    "cwes": [
+      "CWE-862"
+    ],
+    "affected": [],
+    "references": [
+      "https://plugins.trac.wordpress.org/browser/wpappninja/trunk/inc/api/push.php#L467",
+      "https://plugins.trac.wordpress.org/browser/wpappninja/trunk/inc/api/read_enhanced.php#L171",
+      "https://plugins.trac.wordpress.org/browser/wpappninja/trunk/inc/common/deeplinking.php#L249",
+      "https://plugins.trac.wordpress.org/browser/wpappninja/trunk/inc/functions/sdk2019.php#L256",
+      "https://www.wordfence.com/threat-intel/vulnerabilities/id/18fddc88-53d5-42c0-946f-f88ef6abb39f?source=cve"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-94541",
+    "added_at": "2026-10-02T20:00:53+09:00"
+  },
+  {
+    "id": "CVE-2026-86345",
+    "published": "2026-10-02",
+    "last_modified": "2026-10-02",
+    "status": "Received",
+    "description": "A flaw was found in 389-ds-base. The server does not discard plaintext bytes already buffered from a client connection when negotiating StartTLS, allowing an on-path attacker to inject a crafted LDAP message that is processed after the TLS upgrade and whose response is delivered to the client in place of the client's own pending operation's response, due to messageID collision. This can cause a client application to treat a failed authentication (bind) attempt as successful.",
+    "cvss": {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:C/C:H/I:H/A:H",
+      "score": 9.0,
+      "severity": "CRITICAL",
+      "attack_vector": "네트워크",
+      "attack_complexity": "높음",
+      "privileges_required": "없음",
+      "user_interaction": "없음"
+    },
+    "cwes": [
+      "CWE-923"
+    ],
+    "affected": [],
+    "references": [
+      "https://access.redhat.com/security/cve/CVE-2026-86345",
+      "https://bugzilla.redhat.com/show_bug.cgi?id=2529332"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-86345",
+    "added_at": "2026-10-02T20:00:53+09:00"
+  },
+  {
+    "id": "CVE-2026-19660",
+    "published": "2026-10-02",
+    "last_modified": "2026-10-02",
+    "status": "Received",
+    "description": "The Divi Membership plugin for WordPress is vulnerable to Authentication Bypass in all versions up to, and including, 2.3.0. The `process_paypal_callback` function, hooked to the `init` action, accepts a base64-encoded `paypal_param` GET parameter with no IPN validation, no cryptographic signature check, no ownership verification, and no nonce, allowing it to trust an entirely attacker-controlled user ID value that is passed directly to `wp_set_current_user()` and `wp_set_auth_cookie()`. This makes it possible for unauthenticated attackers to log in as any existing WordPress user — including administrators — by supplying an arbitrary user ID in the `paypal_param` GET parameter, resulting in full site takeover. The vulnerability is further compounded by the fact that the PayPal gateway class is instantiated unconditionally regardless of whether PayPal is enabled or configured, ensuring the vulnerable hook is always registered on every front-end request.",
+    "cvss": {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "score": 9.8,
+      "severity": "CRITICAL",
+      "attack_vector": "네트워크",
+      "attack_complexity": "낮음",
+      "privileges_required": "없음",
+      "user_interaction": "없음"
+    },
+    "cwes": [
+      "CWE-287"
+    ],
+    "affected": [],
+    "references": [
+      "https://diviengine.com/divi-membership-changelog/",
+      "https://www.wordfence.com/threat-intel/vulnerabilities/id/3d650cda-341f-4772-9b67-1bac200e3fb7?source=cve"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-19660",
+    "added_at": "2026-10-02T20:00:53+09:00"
+  },
+  {
+    "id": "CVE-2026-15896",
+    "published": "2026-10-02",
+    "last_modified": "2026-10-02",
+    "status": "Received",
+    "description": "The Super Forms – Drag & Drop Form Builder plugin for WordPress is vulnerable to Directory Traversal in all versions up to, and including, 6.3.316 via the parse_request function. This makes it possible for unauthenticated attackers to read the contents of arbitrary files on the server, which can contain sensitive information. The optional 'file_upload_auth' setting defaults to empty, meaning no authentication is required in the default configuration; enabling this setting mitigates unauthenticated exploitation but does not remediate the path traversal itself. Exploitation on Linux requires a real 13-digit timestamp directory to exist, whereas on Windows the traversal works with any hardcoded 13-digit prefix. However, the plugin's file upload response returns the name of the created directory, which means the vulnerability is exploitable as long as file upload is enabled on the form.",
+    "cvss": {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:H",
+      "score": 9.1,
+      "severity": "CRITICAL",
+      "attack_vector": "네트워크",
+      "attack_complexity": "낮음",
+      "privileges_required": "없음",
+      "user_interaction": "없음"
+    },
+    "cwes": [
+      "CWE-26"
+    ],
+    "affected": [],
+    "references": [
+      "https://github.com/RensTillmann/super-forms/pull/205",
+      "https://www.wordfence.com/threat-intel/vulnerabilities/id/dc3df045-1020-403f-8e10-a1b75261b769?source=cve"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-15896",
+    "added_at": "2026-10-02T20:00:53+09:00"
+  },
+  {
+    "id": "CVE-2026-14378",
+    "published": "2026-10-02",
+    "last_modified": "2026-10-02",
+    "status": "Received",
+    "description": "The DevKit Pro plugin for WordPress is vulnerable to Authentication Bypass Leading to Administrator Account Takeover in all versions up to, and including, 2.3.0 This is due to the `revert_switch` handler trusting the attacker-controlled `original_user_id` cookie as the privileged identity: `verify_nonce_and_capability()` incorrectly checks the `manage_options` capability on the user identified by the cookie rather than on the actual requester via `current_user_can()`, while the switch-back form and a valid session-bound nonce are emitted publicly via `wp_footer` to any visitor — including unauthenticated users — whenever that cookie is present. This makes it possible for unauthenticated attackers to set the `original_user_id` cookie to any administrator's user ID, collect the rendered nonce, and POST it back to the `revert_switch` handler, causing `wp_set_auth_cookie()` to be called with the administrator's ID and granting the attacker a full administrator-level authenticated session and complete site takeover.",
+    "cvss": {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "score": 9.8,
+      "severity": "CRITICAL",
+      "attack_vector": "네트워크",
+      "attack_complexity": "낮음",
+      "privileges_required": "없음",
+      "user_interaction": "없음"
+    },
+    "cwes": [
+      "CWE-287"
+    ],
+    "affected": [],
+    "references": [
+      "https://docs.dplugins.com/devkit/changelog",
+      "https://www.wordfence.com/threat-intel/vulnerabilities/id/2ab3986a-69e0-442f-8e79-35b1bc5376d9?source=cve"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-14378",
+    "added_at": "2026-10-02T20:00:53+09:00"
+  },
+  {
+    "id": "CVE-2026-103765",
+    "published": "2026-10-02",
+    "last_modified": "2026-10-02",
+    "status": "Received",
+    "description": "Mooncake through 0.3.13.post1 contains a missing authentication vulnerability in the HTTP metadata server /metadata handler that allows unauthenticated attackers to read, overwrite, and delete transfer engine metadata keys. Attackers can poison segment descriptors such as tcp_data_port or re-create rpc_meta entries to redirect KV cache transfers to attacker-controlled listeners, or exhaust server memory.",
+    "cvss": {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:L/A:H",
+      "score": 9.4,
+      "severity": "CRITICAL",
+      "attack_vector": "네트워크",
+      "attack_complexity": "낮음",
+      "privileges_required": "없음",
+      "user_interaction": "없음"
+    },
+    "cwes": [
+      "CWE-306"
+    ],
+    "affected": [],
+    "references": [
+      "https://github.com/kvcache-ai/Mooncake",
+      "https://github.com/kvcache-ai/Mooncake/blob/719735896c86b56fabec6cf3e825fb2ea640597a/mooncake-wheel/mooncake/http_metadata_server.py#L61-L106",
+      "https://github.com/kvcache-ai/Mooncake/issues/4444",
+      "https://www.vulncheck.com/advisories/mooncake-through-0.3.13-post1-missing-authentication-in-http-metadata-server"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-103765",
+    "added_at": "2026-10-02T20:00:53+09:00"
+  },
+  {
+    "id": "CVE-2026-103764",
+    "published": "2026-10-02",
+    "last_modified": "2026-10-02",
+    "status": "Received",
+    "description": "Mooncake transfer engine before 0.3.13 contains an untrusted pointer dereference in ServerSession::readHeader that allows unauthenticated attackers to read and write arbitrary process memory via the TCP transport data port. Attackers can send a crafted SessionHeader with arbitrary addr and size values using READ or WRITE opcodes to disclose KV cache contents, prompts and secrets or corrupt memory toward code execution.",
+    "cvss": {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "score": 9.8,
+      "severity": "CRITICAL",
+      "attack_vector": "네트워크",
+      "attack_complexity": "낮음",
+      "privileges_required": "없음",
+      "user_interaction": "없음"
+    },
+    "cwes": [
+      "CWE-822"
+    ],
+    "affected": [],
+    "references": [
+      "https://github.com/kvcache-ai/Mooncake",
+      "https://github.com/kvcache-ai/Mooncake/blob/6041a609a8c3af35e778f70db344f145c2914980/mooncake-transfer-engine/src/transport/tcp_transport/tcp_transport.cpp#L209",
+      "https://github.com/kvcache-ai/Mooncake/commit/a2933849417259e562fc9cbad63c618d464dfb2d",
+      "https://github.com/kvcache-ai/Mooncake/issues/4441",
+      "https://github.com/kvcache-ai/Mooncake/releases/tag/v0.3.13",
+      "https://www.vulncheck.com/advisories/mooncake-transfer-engine-before-0.3.13-unauthenticated-arbitrary-memory-read-write-via-tcp-transport"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-103764",
+    "added_at": "2026-10-02T20:00:53+09:00"
+  },
+  {
     "id": "CVE-2026-96659",
     "published": "2026-10-01",
     "last_modified": "2026-10-01",
