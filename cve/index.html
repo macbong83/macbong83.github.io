@@ -41,8 +41,8 @@
     <h1>CVE Archive</h1>
     <p>NVD 기반 Critical CVE를 누적 관리하는 별도 페이지입니다. 블로그에는 CVE 자동 글을 발행하지 않고, 이 페이지에만 기록합니다.</p>
     <div class="meta">
-      <span>Total 1237</span>
-      <span>Updated 2026-10-02 20:00 KST</span>
+      <span>Total 1243</span>
+      <span>Updated 2026-10-03 08:00 KST</span>
       <span>Source NVD API</span>
     </div>
   </section>
@@ -117,6 +117,52 @@
         <ul><li><a href="https://access.redhat.com/security/cve/CVE-2026-86345" target="_blank" rel="noopener">https://access.redhat.com/security/cve/CVE-2026-86345</a></li><li><a href="https://bugzilla.redhat.com/show_bug.cgi?id=2529332" target="_blank" rel="noopener">https://bugzilla.redhat.com/show_bug.cgi?id=2529332</a></li></ul>
       </details>
     </article>
+    <article class="cve-card" id="CVE-2026-82042">
+      <div class="cve-top">
+        <a class="cve-id" href="https://nvd.nist.gov/vuln/detail/CVE-2026-82042" target="_blank" rel="noopener">CVE-2026-82042</a>
+        <span class="score">CVSS 9.8 CRITICAL</span>
+      </div>
+      <p class="desc">UTMStack before 11.2.16 contains an authentication bypass vulnerability that allows remote attackers to gain full administrative API access by presenting a valid Utm-Internal-Key header matching the INTERNAL_KEY environment variable value, which the InternalApiKeyFilter accepts for any endpoint without path restriction, constant-time comparison, rate limiting, or audit logging. Attackers who obtain the key value can authenticate without a user account or JWT to create accounts, manage users, exfiltrate data, and modify security rules.</p>
+      <dl>
+        <div><dt>Published</dt><dd>2026-10-02</dd></div>
+        <div><dt>Last Modified</dt><dd>2026-10-02</dd></div>
+        <div><dt>Status</dt><dd>Received</dd></div>
+        <div><dt>Attack Vector</dt><dd>네트워크</dd></div>
+        <div><dt>Attack Complexity</dt><dd>낮음</dd></div>
+        <div><dt>Privileges</dt><dd>없음</dd></div>
+        <div><dt>User Interaction</dt><dd>없음</dd></div>
+        <div><dt>CWE</dt><dd>CWE-306</dd></div>
+        <div><dt>Affected</dt><dd>NVD CPE 기준 확인 필요</dd></div>
+      </dl>
+      <div class="vector"><code>CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H</code></div>
+      <details>
+        <summary>References</summary>
+        <ul><li><a href="https://github.com/UTMStack/UTMStack/releases/tag/v11.2.16" target="_blank" rel="noopener">https://github.com/UTMStack/UTMStack/releases/tag/v11.2.16</a></li><li><a href="https://github.com/utmstack/UTMStack/commit/4e7a727c3b8d8e2ad020d3b4f982a6d085dbecdd" target="_blank" rel="noopener">https://github.com/utmstack/UTMStack/commit/4e7a727c3b8d8e2ad020d3b4f982a6d085dbecdd</a></li><li><a href="https://www.vulncheck.com/advisories/utmstack-authentication-bypass-via-internalapikeyfilter" target="_blank" rel="noopener">https://www.vulncheck.com/advisories/utmstack-authentication-bypass-via-internalapikeyfilter</a></li></ul>
+      </details>
+    </article>
+    <article class="cve-card" id="CVE-2026-82041">
+      <div class="cve-top">
+        <a class="cve-id" href="https://nvd.nist.gov/vuln/detail/CVE-2026-82041" target="_blank" rel="noopener">CVE-2026-82041</a>
+        <span class="score">CVSS 9.9 CRITICAL</span>
+      </div>
+      <p class="desc">UTMStack before 11.2.16 contains a missing authorization vulnerability in UTMIncidentCommandWebsocket.processCommand(), the handler mapped to the /command/{hostname} STOMP destination, where no role check or command allowlist is applied before forwarding supplied commands. Any authenticated user, regardless of role, can send arbitrary operating-system commands over gRPC to any connected agent, resulting in command execution on monitored endpoints where agent processes commonly run as root or SYSTEM.</p>
+      <dl>
+        <div><dt>Published</dt><dd>2026-10-02</dd></div>
+        <div><dt>Last Modified</dt><dd>2026-10-02</dd></div>
+        <div><dt>Status</dt><dd>Received</dd></div>
+        <div><dt>Attack Vector</dt><dd>네트워크</dd></div>
+        <div><dt>Attack Complexity</dt><dd>낮음</dd></div>
+        <div><dt>Privileges</dt><dd>낮음</dd></div>
+        <div><dt>User Interaction</dt><dd>없음</dd></div>
+        <div><dt>CWE</dt><dd>CWE-862</dd></div>
+        <div><dt>Affected</dt><dd>NVD CPE 기준 확인 필요</dd></div>
+      </dl>
+      <div class="vector"><code>CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H</code></div>
+      <details>
+        <summary>References</summary>
+        <ul><li><a href="https://github.com/UTMStack/UTMStack/releases/tag/v11.2.16" target="_blank" rel="noopener">https://github.com/UTMStack/UTMStack/releases/tag/v11.2.16</a></li><li><a href="https://github.com/utmstack/UTMStack/commit/4e7a727c3b8d8e2ad020d3b4f982a6d085dbecdd" target="_blank" rel="noopener">https://github.com/utmstack/UTMStack/commit/4e7a727c3b8d8e2ad020d3b4f982a6d085dbecdd</a></li><li><a href="https://www.vulncheck.com/advisories/utmstack-missing-authorization-via-command-websocket" target="_blank" rel="noopener">https://www.vulncheck.com/advisories/utmstack-missing-authorization-via-command-websocket</a></li></ul>
+      </details>
+    </article>
     <article class="cve-card" id="CVE-2026-19660">
       <div class="cve-top">
         <a class="cve-id" href="https://nvd.nist.gov/vuln/detail/CVE-2026-19660" target="_blank" rel="noopener">CVE-2026-19660</a>
@@ -138,6 +184,29 @@
       <details>
         <summary>References</summary>
         <ul><li><a href="https://diviengine.com/divi-membership-changelog/" target="_blank" rel="noopener">https://diviengine.com/divi-membership-changelog/</a></li><li><a href="https://www.wordfence.com/threat-intel/vulnerabilities/id/3d650cda-341f-4772-9b67-1bac200e3fb7?source=cve" target="_blank" rel="noopener">https://www.wordfence.com/threat-intel/vulnerabilities/id/3d650cda-341f-4772-9b67-1bac200e3fb7?source=cve</a></li></ul>
+      </details>
+    </article>
+    <article class="cve-card" id="CVE-2026-19652">
+      <div class="cve-top">
+        <a class="cve-id" href="https://nvd.nist.gov/vuln/detail/CVE-2026-19652" target="_blank" rel="noopener">CVE-2026-19652</a>
+        <span class="score">CVSS 9.8 CRITICAL</span>
+      </div>
+      <p class="desc">The Divi Membership plugin for WordPress is vulnerable to Privilege Escalation in versions up to, and including, 2.2.0. This is due to the `dmem_form_submit_handler()` function determining the new user&#x27;s role by iterating all WordPress roles and calling `password_verify()` against an attacker-controlled bcrypt hash supplied in the `form_id` POST parameter, with no validation or whitelist of allowed roles. This makes it possible for unauthenticated attackers to register a new account with the administrator role by submitting a locally computed bcrypt hash of `administrator` as `form_id`, and when `auto_login=on` is submitted, be immediately authenticated as that administrator in the same request, resulting in full site takeover. Exploitation requires a WordPress nonce, but that nonce is publicly emitted on any page rendering the Divi Membership registration form and is therefore obtainable by any unauthenticated visitor.</p>
+      <dl>
+        <div><dt>Published</dt><dd>2026-10-02</dd></div>
+        <div><dt>Last Modified</dt><dd>2026-10-02</dd></div>
+        <div><dt>Status</dt><dd>Deferred</dd></div>
+        <div><dt>Attack Vector</dt><dd>네트워크</dd></div>
+        <div><dt>Attack Complexity</dt><dd>낮음</dd></div>
+        <div><dt>Privileges</dt><dd>없음</dd></div>
+        <div><dt>User Interaction</dt><dd>없음</dd></div>
+        <div><dt>CWE</dt><dd>CWE-269</dd></div>
+        <div><dt>Affected</dt><dd>NVD CPE 기준 확인 필요</dd></div>
+      </dl>
+      <div class="vector"><code>CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H</code></div>
+      <details>
+        <summary>References</summary>
+        <ul><li><a href="https://diviengine.com/divi-membership-changelog/" target="_blank" rel="noopener">https://diviengine.com/divi-membership-changelog/</a></li><li><a href="https://diviengine.com/product/divi-membership/" target="_blank" rel="noopener">https://diviengine.com/product/divi-membership/</a></li><li><a href="https://www.wordfence.com/threat-intel/vulnerabilities/id/81d46c7a-dfe4-4991-99cc-66e5c6d3e3c8?source=cve" target="_blank" rel="noopener">https://www.wordfence.com/threat-intel/vulnerabilities/id/81d46c7a-dfe4-4991-99cc-66e5c6d3e3c8?source=cve</a></li></ul>
       </details>
     </article>
     <article class="cve-card" id="CVE-2026-15896">
@@ -230,6 +299,29 @@
       <details>
         <summary>References</summary>
         <ul><li><a href="https://github.com/kvcache-ai/Mooncake" target="_blank" rel="noopener">https://github.com/kvcache-ai/Mooncake</a></li><li><a href="https://github.com/kvcache-ai/Mooncake/blob/6041a609a8c3af35e778f70db344f145c2914980/mooncake-transfer-engine/src/transport/tcp_transport/tcp_transport.cpp#L209" target="_blank" rel="noopener">https://github.com/kvcache-ai/Mooncake/blob/6041a609a8c3af35e778f70db344f145c2914980/mooncake-transfer-engine/src/transport/tcp_transport/tcp_transport.cpp#L209</a></li><li><a href="https://github.com/kvcache-ai/Mooncake/commit/a2933849417259e562fc9cbad63c618d464dfb2d" target="_blank" rel="noopener">https://github.com/kvcache-ai/Mooncake/commit/a2933849417259e562fc9cbad63c618d464dfb2d</a></li><li><a href="https://github.com/kvcache-ai/Mooncake/issues/4441" target="_blank" rel="noopener">https://github.com/kvcache-ai/Mooncake/issues/4441</a></li></ul>
+      </details>
+    </article>
+    <article class="cve-card" id="CVE-2023-54405">
+      <div class="cve-top">
+        <a class="cve-id" href="https://nvd.nist.gov/vuln/detail/CVE-2023-54405" target="_blank" rel="noopener">CVE-2023-54405</a>
+        <span class="score">CVSS 9.8 CRITICAL</span>
+      </div>
+      <p class="desc">H3C CVM, the Cloud Virtualization Management component of the H3C CAS cloud platform, contains an unauthenticated arbitrary file upload vulnerability in the /cas/fileUpload/upload endpoint that allows remote attackers to write arbitrary files by manipulating the caller-supplied token parameter without restricting path traversal or file type. Attackers can exploit the path traversal in the token parameter to upload a malicious JSP file into a web-accessible directory and then request it to achieve remote code execution as the web-server user. Exploitation evidence was first observed by the Shadowserver Foundation on 2023-10-14.</p>
+      <dl>
+        <div><dt>Published</dt><dd>2026-10-02</dd></div>
+        <div><dt>Last Modified</dt><dd>2026-10-02</dd></div>
+        <div><dt>Status</dt><dd>Received</dd></div>
+        <div><dt>Attack Vector</dt><dd>네트워크</dd></div>
+        <div><dt>Attack Complexity</dt><dd>낮음</dd></div>
+        <div><dt>Privileges</dt><dd>없음</dd></div>
+        <div><dt>User Interaction</dt><dd>없음</dd></div>
+        <div><dt>CWE</dt><dd>CWE-434</dd></div>
+        <div><dt>Affected</dt><dd>NVD CPE 기준 확인 필요</dd></div>
+      </dl>
+      <div class="vector"><code>CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H</code></div>
+      <details>
+        <summary>References</summary>
+        <ul><li><a href="https://blog.csdn.net/qq_41904294/article/details/134697278" target="_blank" rel="noopener">https://blog.csdn.net/qq_41904294/article/details/134697278</a></li><li><a href="https://github.com/projectdiscovery/nuclei-templates/blob/main/http/vulnerabilities/other/h3c-cvm-arbitrary-file-upload.yaml" target="_blank" rel="noopener">https://github.com/projectdiscovery/nuclei-templates/blob/main/http/vulnerabilities/other/h3c-cvm-arbitrary-file-upload.yaml</a></li><li><a href="https://www.h3c.com/en/Support/Resource_Center/EN/Cloud_Computing/Catalog/H3C_CAS/H3C_CAS/Technical_Documents/Configure___Deploy/User_Manuals/H3C_CAS_CVM_UG_E0785-21554/?CHID=1087104" target="_blank" rel="noopener">https://www.h3c.com/en/Support/Resource_Center/EN/Cloud_Computing/Catalog/H3C_CAS/H3C_CAS/Technical_Documents/Configure___Deploy/User_Manuals/H3C_CAS_CVM_UG_E0785-21554/?CHID=1087104</a></li><li><a href="https://www.vulncheck.com/advisories/h3c-cvm-unauthenticated-file-upload-via-fileupload-upload-token" target="_blank" rel="noopener">https://www.vulncheck.com/advisories/h3c-cvm-unauthenticated-file-upload-via-fileupload-upload-token</a></li></ul>
       </details>
     </article>
     <article class="cve-card" id="CVE-2026-96659">
@@ -437,6 +529,52 @@
       <details>
         <summary>References</summary>
         <ul><li><a href="https://github.com/waltz-sketch/Ziroom/blob/main/set_time_zone_hostname_command_injection.md" target="_blank" rel="noopener">https://github.com/waltz-sketch/Ziroom/blob/main/set_time_zone_hostname_command_injection.md</a></li><li><a href="https://vuldb.com/cve/CVE-2026-102793" target="_blank" rel="noopener">https://vuldb.com/cve/CVE-2026-102793</a></li><li><a href="https://vuldb.com/submit/914649" target="_blank" rel="noopener">https://vuldb.com/submit/914649</a></li><li><a href="https://vuldb.com/submit/914650" target="_blank" rel="noopener">https://vuldb.com/submit/914650</a></li></ul>
+      </details>
+    </article>
+    <article class="cve-card" id="CVE-2026-102490">
+      <div class="cve-top">
+        <a class="cve-id" href="https://nvd.nist.gov/vuln/detail/CVE-2026-102490" target="_blank" rel="noopener">CVE-2026-102490</a>
+        <span class="score">CVSS 9.8 CRITICAL</span>
+      </div>
+      <p class="desc">All versions of Zammad including the latest alpha enable the local zammad user to escalate privileges to root.</p>
+      <dl>
+        <div><dt>Published</dt><dd>2026-09-30</dd></div>
+        <div><dt>Last Modified</dt><dd>2026-10-02</dd></div>
+        <div><dt>Status</dt><dd>Analyzed</dd></div>
+        <div><dt>Attack Vector</dt><dd>네트워크</dd></div>
+        <div><dt>Attack Complexity</dt><dd>낮음</dd></div>
+        <div><dt>Privileges</dt><dd>없음</dd></div>
+        <div><dt>User Interaction</dt><dd>없음</dd></div>
+        <div><dt>CWE</dt><dd>CWE-269</dd></div>
+        <div><dt>Affected</dt><dd>zammad zammad, zammad zammad 7.1.0, docker docker -, linux linux_kernel -</dd></div>
+      </dl>
+      <div class="vector"><code>CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H</code></div>
+      <details>
+        <summary>References</summary>
+        <ul><li><a href="https://csirt.divd.nl/CVE-2026-102490" target="_blank" rel="noopener">https://csirt.divd.nl/CVE-2026-102490</a></li><li><a href="https://csirt.divd.nl/DIVD-2026-00015" target="_blank" rel="noopener">https://csirt.divd.nl/DIVD-2026-00015</a></li><li><a href="https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-102490" target="_blank" rel="noopener">https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-102490</a></li></ul>
+      </details>
+    </article>
+    <article class="cve-card" id="CVE-2026-102489">
+      <div class="cve-top">
+        <a class="cve-id" href="https://nvd.nist.gov/vuln/detail/CVE-2026-102489" target="_blank" rel="noopener">CVE-2026-102489</a>
+        <span class="score">CVSS 9.8 CRITICAL</span>
+      </div>
+      <p class="desc">Zammad versions 6.3.0 to 6.5.4 are vulnerable a session hijack vulnerability that leads to remote code execution as the zammad user. The vulnerability is also present in version 7.0.0 to version 7.1.3, but not exploitable due to environment conditions.</p>
+      <dl>
+        <div><dt>Published</dt><dd>2026-09-30</dd></div>
+        <div><dt>Last Modified</dt><dd>2026-10-02</dd></div>
+        <div><dt>Status</dt><dd>Analyzed</dd></div>
+        <div><dt>Attack Vector</dt><dd>네트워크</dd></div>
+        <div><dt>Attack Complexity</dt><dd>낮음</dd></div>
+        <div><dt>Privileges</dt><dd>없음</dd></div>
+        <div><dt>User Interaction</dt><dd>없음</dd></div>
+        <div><dt>CWE</dt><dd>CWE-384</dd></div>
+        <div><dt>Affected</dt><dd>zammad zammad, docker docker -, linux linux_kernel -</dd></div>
+      </dl>
+      <div class="vector"><code>CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H</code></div>
+      <details>
+        <summary>References</summary>
+        <ul><li><a href="https://csirt.divd.nl/CVE-2026-102489" target="_blank" rel="noopener">https://csirt.divd.nl/CVE-2026-102489</a></li><li><a href="https://csirt.divd.nl/DIVD-2026-00015" target="_blank" rel="noopener">https://csirt.divd.nl/DIVD-2026-00015</a></li><li><a href="https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-102489" target="_blank" rel="noopener">https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-102489</a></li></ul>
       </details>
     </article>
     <article class="cve-card" id="CVE-2026-102458">

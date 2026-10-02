@@ -88,6 +88,62 @@
     "added_at": "2026-10-02T20:00:53+09:00"
   },
   {
+    "id": "CVE-2026-82042",
+    "published": "2026-10-02",
+    "last_modified": "2026-10-02",
+    "status": "Received",
+    "description": "UTMStack before 11.2.16 contains an authentication bypass vulnerability that allows remote attackers to gain full administrative API access by presenting a valid Utm-Internal-Key header matching the INTERNAL_KEY environment variable value, which the InternalApiKeyFilter accepts for any endpoint without path restriction, constant-time comparison, rate limiting, or audit logging. Attackers who obtain the key value can authenticate without a user account or JWT to create accounts, manage users, exfiltrate data, and modify security rules.",
+    "cvss": {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "score": 9.8,
+      "severity": "CRITICAL",
+      "attack_vector": "네트워크",
+      "attack_complexity": "낮음",
+      "privileges_required": "없음",
+      "user_interaction": "없음"
+    },
+    "cwes": [
+      "CWE-306"
+    ],
+    "affected": [],
+    "references": [
+      "https://github.com/UTMStack/UTMStack/releases/tag/v11.2.16",
+      "https://github.com/utmstack/UTMStack/commit/4e7a727c3b8d8e2ad020d3b4f982a6d085dbecdd",
+      "https://www.vulncheck.com/advisories/utmstack-authentication-bypass-via-internalapikeyfilter"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-82042",
+    "added_at": "2026-10-03T08:00:31+09:00"
+  },
+  {
+    "id": "CVE-2026-82041",
+    "published": "2026-10-02",
+    "last_modified": "2026-10-02",
+    "status": "Received",
+    "description": "UTMStack before 11.2.16 contains a missing authorization vulnerability in UTMIncidentCommandWebsocket.processCommand(), the handler mapped to the /command/{hostname} STOMP destination, where no role check or command allowlist is applied before forwarding supplied commands. Any authenticated user, regardless of role, can send arbitrary operating-system commands over gRPC to any connected agent, resulting in command execution on monitored endpoints where agent processes commonly run as root or SYSTEM.",
+    "cvss": {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H",
+      "score": 9.9,
+      "severity": "CRITICAL",
+      "attack_vector": "네트워크",
+      "attack_complexity": "낮음",
+      "privileges_required": "낮음",
+      "user_interaction": "없음"
+    },
+    "cwes": [
+      "CWE-862"
+    ],
+    "affected": [],
+    "references": [
+      "https://github.com/UTMStack/UTMStack/releases/tag/v11.2.16",
+      "https://github.com/utmstack/UTMStack/commit/4e7a727c3b8d8e2ad020d3b4f982a6d085dbecdd",
+      "https://www.vulncheck.com/advisories/utmstack-missing-authorization-via-command-websocket"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-82041",
+    "added_at": "2026-10-03T08:00:31+09:00"
+  },
+  {
     "id": "CVE-2026-19660",
     "published": "2026-10-02",
     "last_modified": "2026-10-02",
@@ -113,6 +169,34 @@
     ],
     "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-19660",
     "added_at": "2026-10-02T20:00:53+09:00"
+  },
+  {
+    "id": "CVE-2026-19652",
+    "published": "2026-10-02",
+    "last_modified": "2026-10-02",
+    "status": "Deferred",
+    "description": "The Divi Membership plugin for WordPress is vulnerable to Privilege Escalation in versions up to, and including, 2.2.0. This is due to the `dmem_form_submit_handler()` function determining the new user's role by iterating all WordPress roles and calling `password_verify()` against an attacker-controlled bcrypt hash supplied in the `form_id` POST parameter, with no validation or whitelist of allowed roles. This makes it possible for unauthenticated attackers to register a new account with the administrator role by submitting a locally computed bcrypt hash of `administrator` as `form_id`, and when `auto_login=on` is submitted, be immediately authenticated as that administrator in the same request, resulting in full site takeover. Exploitation requires a WordPress nonce, but that nonce is publicly emitted on any page rendering the Divi Membership registration form and is therefore obtainable by any unauthenticated visitor.",
+    "cvss": {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "score": 9.8,
+      "severity": "CRITICAL",
+      "attack_vector": "네트워크",
+      "attack_complexity": "낮음",
+      "privileges_required": "없음",
+      "user_interaction": "없음"
+    },
+    "cwes": [
+      "CWE-269"
+    ],
+    "affected": [],
+    "references": [
+      "https://diviengine.com/divi-membership-changelog/",
+      "https://diviengine.com/product/divi-membership/",
+      "https://www.wordfence.com/threat-intel/vulnerabilities/id/81d46c7a-dfe4-4991-99cc-66e5c6d3e3c8?source=cve"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-19652",
+    "added_at": "2026-10-03T08:00:31+09:00"
   },
   {
     "id": "CVE-2026-15896",
@@ -227,6 +311,35 @@
     ],
     "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-103764",
     "added_at": "2026-10-02T20:00:53+09:00"
+  },
+  {
+    "id": "CVE-2023-54405",
+    "published": "2026-10-02",
+    "last_modified": "2026-10-02",
+    "status": "Received",
+    "description": "H3C CVM, the Cloud Virtualization Management component of the H3C CAS cloud platform, contains an unauthenticated arbitrary file upload vulnerability in the /cas/fileUpload/upload endpoint that allows remote attackers to write arbitrary files by manipulating the caller-supplied token parameter without restricting path traversal or file type. Attackers can exploit the path traversal in the token parameter to upload a malicious JSP file into a web-accessible directory and then request it to achieve remote code execution as the web-server user. Exploitation evidence was first observed by the Shadowserver Foundation on 2023-10-14.",
+    "cvss": {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "score": 9.8,
+      "severity": "CRITICAL",
+      "attack_vector": "네트워크",
+      "attack_complexity": "낮음",
+      "privileges_required": "없음",
+      "user_interaction": "없음"
+    },
+    "cwes": [
+      "CWE-434"
+    ],
+    "affected": [],
+    "references": [
+      "https://blog.csdn.net/qq_41904294/article/details/134697278",
+      "https://github.com/projectdiscovery/nuclei-templates/blob/main/http/vulnerabilities/other/h3c-cvm-arbitrary-file-upload.yaml",
+      "https://www.h3c.com/en/Support/Resource_Center/EN/Cloud_Computing/Catalog/H3C_CAS/H3C_CAS/Technical_Documents/Configure___Deploy/User_Manuals/H3C_CAS_CVM_UG_E0785-21554/?CHID=1087104",
+      "https://www.vulncheck.com/advisories/h3c-cvm-unauthenticated-file-upload-via-fileupload-upload-token"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2023-54405",
+    "added_at": "2026-10-03T08:00:31+09:00"
   },
   {
     "id": "CVE-2026-96659",
@@ -495,6 +608,71 @@
     ],
     "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-102793",
     "added_at": "2026-09-30T20:00:26+09:00"
+  },
+  {
+    "id": "CVE-2026-102490",
+    "published": "2026-09-30",
+    "last_modified": "2026-10-02",
+    "status": "Analyzed",
+    "description": "All versions of Zammad including the latest alpha enable the local zammad user to escalate privileges to root.",
+    "cvss": {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "score": 9.8,
+      "severity": "CRITICAL",
+      "attack_vector": "네트워크",
+      "attack_complexity": "낮음",
+      "privileges_required": "없음",
+      "user_interaction": "없음"
+    },
+    "cwes": [
+      "CWE-269"
+    ],
+    "affected": [
+      "zammad zammad",
+      "zammad zammad 7.1.0",
+      "docker docker -",
+      "linux linux_kernel -"
+    ],
+    "references": [
+      "https://csirt.divd.nl/CVE-2026-102490",
+      "https://csirt.divd.nl/DIVD-2026-00015",
+      "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-102490"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-102490",
+    "added_at": "2026-10-03T08:00:31+09:00"
+  },
+  {
+    "id": "CVE-2026-102489",
+    "published": "2026-09-30",
+    "last_modified": "2026-10-02",
+    "status": "Analyzed",
+    "description": "Zammad versions 6.3.0 to 6.5.4 are vulnerable a session hijack vulnerability that leads to remote code execution as the zammad user. The vulnerability is also present in version 7.0.0 to version 7.1.3, but not exploitable due to environment conditions.",
+    "cvss": {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "score": 9.8,
+      "severity": "CRITICAL",
+      "attack_vector": "네트워크",
+      "attack_complexity": "낮음",
+      "privileges_required": "없음",
+      "user_interaction": "없음"
+    },
+    "cwes": [
+      "CWE-384"
+    ],
+    "affected": [
+      "zammad zammad",
+      "docker docker -",
+      "linux linux_kernel -"
+    ],
+    "references": [
+      "https://csirt.divd.nl/CVE-2026-102489",
+      "https://csirt.divd.nl/DIVD-2026-00015",
+      "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-102489"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-102489",
+    "added_at": "2026-10-03T08:00:31+09:00"
   },
   {
     "id": "CVE-2026-102458",
