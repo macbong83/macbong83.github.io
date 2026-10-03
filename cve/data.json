@@ -1,5 +1,67 @@
 [
   {
+    "id": "CVE-2026-92084",
+    "published": "2026-10-03",
+    "last_modified": "2026-10-03",
+    "status": "Received",
+    "description": "The The Beaver Builder Page Builder – Drag and Drop Website Builder plugin for WordPress is vulnerable to arbitrary shortcode execution in all versions up to, and including, 2.11.0.5. This is due to the software allowing users to execute an action that does not properly validate a value before running do_shortcode. This makes it possible for unauthenticated attackers to execute arbitrary shortcodes. Exploitation requires the target site to have a Beaver Builder page containing the Sidebar module populated with a widget that displays attacker-controllable text, such as the core Recent Comments widget, with comment moderation disabled or the attacker's comment approved.",
+    "cvss": {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N",
+      "score": 9.1,
+      "severity": "CRITICAL",
+      "attack_vector": "네트워크",
+      "attack_complexity": "낮음",
+      "privileges_required": "없음",
+      "user_interaction": "없음"
+    },
+    "cwes": [
+      "CWE-94"
+    ],
+    "affected": [],
+    "references": [
+      "https://plugins.trac.wordpress.org/browser/beaver-builder-lite-version/tags/2.11.0.5/classes/class-fl-builder-module.php#L143",
+      "https://plugins.trac.wordpress.org/browser/beaver-builder-lite-version/tags/2.11.0.5/classes/class-fl-builder.php#L2139",
+      "https://plugins.trac.wordpress.org/browser/beaver-builder-lite-version/tags/2.11.0.5/classes/class-fl-builder.php#L2264",
+      "https://plugins.trac.wordpress.org/browser/beaver-builder-lite-version/tags/2.11.0.5/modules/sidebar/includes/frontend.php#L4",
+      "https://plugins.trac.wordpress.org/browser/beaver-builder-lite-version/tags/2.11.0.5/modules/sidebar/sidebar.php#L11",
+      "https://plugins.trac.wordpress.org/changeset/3713226/beaver-builder-lite-version/trunk/modules/sidebar/sidebar.php"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-92084",
+    "added_at": "2026-10-03T20:00:29+09:00"
+  },
+  {
+    "id": "CVE-2026-87115",
+    "published": "2026-10-03",
+    "last_modified": "2026-10-03",
+    "status": "Received",
+    "description": "The VikAppointments Services Booking Calendar plugin for WordPress is vulnerable to arbitrary file deletion due to insufficient file path validation in the extract function in all versions up to, and including, 1.2.21. This makes it possible for unauthenticated attackers to delete arbitrary files on the server, which can easily lead to remote code execution when the right file is deleted (such as wp-config.php). Exploitation requires at least one File-type custom field to be published on the confirmation page shortcode, as this field is not created by default during plugin installation.",
+    "cvss": {
+      "version": "3.1",
+      "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:H",
+      "score": 9.1,
+      "severity": "CRITICAL",
+      "attack_vector": "네트워크",
+      "attack_complexity": "낮음",
+      "privileges_required": "없음",
+      "user_interaction": "없음"
+    },
+    "cwes": [
+      "CWE-22"
+    ],
+    "affected": [],
+    "references": [
+      "https://plugins.trac.wordpress.org/browser/vikappointments/tags/1.2.19/site/controllers/confirmapp.php#L88",
+      "https://plugins.trac.wordpress.org/browser/vikappointments/tags/1.2.19/site/helpers/libraries/customfields/types/file.php#L131",
+      "https://plugins.trac.wordpress.org/browser/vikappointments/tags/1.2.19/site/helpers/libraries/customfields/types/file.php#L53",
+      "https://plugins.trac.wordpress.org/browser/vikappointments/tags/1.2.19/vikappointments.php#L237",
+      "https://plugins.trac.wordpress.org/browser/vikappointments/tags/1.2.21/site/controllers/confirmapp.php#L88",
+      "https://plugins.trac.wordpress.org/browser/vikappointments/tags/1.2.21/site/helpers/libraries/customfields/types/file.php#L131"
+    ],
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-87115",
+    "added_at": "2026-10-03T20:00:29+09:00"
+  },
+  {
     "id": "CVE-2026-97637",
     "published": "2026-10-02",
     "last_modified": "2026-10-02",

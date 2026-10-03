@@ -41,13 +41,59 @@
     <h1>CVE Archive</h1>
     <p>NVD 기반 Critical CVE를 누적 관리하는 별도 페이지입니다. 블로그에는 CVE 자동 글을 발행하지 않고, 이 페이지에만 기록합니다.</p>
     <div class="meta">
-      <span>Total 1243</span>
-      <span>Updated 2026-10-03 08:00 KST</span>
+      <span>Total 1245</span>
+      <span>Updated 2026-10-03 20:00 KST</span>
       <span>Source NVD API</span>
     </div>
   </section>
   <div class="notice">중복 제거 기준은 CVE ID입니다. 동일 CVE는 다시 추가하지 않습니다. 실제 악용 여부와 패치 우선순위는 CISA KEV, 벤더 권고, 자산 노출 여부와 함께 검토해야 합니다.</div>
 
+    <article class="cve-card" id="CVE-2026-92084">
+      <div class="cve-top">
+        <a class="cve-id" href="https://nvd.nist.gov/vuln/detail/CVE-2026-92084" target="_blank" rel="noopener">CVE-2026-92084</a>
+        <span class="score">CVSS 9.1 CRITICAL</span>
+      </div>
+      <p class="desc">The The Beaver Builder Page Builder – Drag and Drop Website Builder plugin for WordPress is vulnerable to arbitrary shortcode execution in all versions up to, and including, 2.11.0.5. This is due to the software allowing users to execute an action that does not properly validate a value before running do_shortcode. This makes it possible for unauthenticated attackers to execute arbitrary shortcodes. Exploitation requires the target site to have a Beaver Builder page containing the Sidebar module populated with a widget that displays attacker-controllable text, such as the core Recent Comments widget, with comment moderation disabled or the attacker&#x27;s comment approved.</p>
+      <dl>
+        <div><dt>Published</dt><dd>2026-10-03</dd></div>
+        <div><dt>Last Modified</dt><dd>2026-10-03</dd></div>
+        <div><dt>Status</dt><dd>Received</dd></div>
+        <div><dt>Attack Vector</dt><dd>네트워크</dd></div>
+        <div><dt>Attack Complexity</dt><dd>낮음</dd></div>
+        <div><dt>Privileges</dt><dd>없음</dd></div>
+        <div><dt>User Interaction</dt><dd>없음</dd></div>
+        <div><dt>CWE</dt><dd>CWE-94</dd></div>
+        <div><dt>Affected</dt><dd>NVD CPE 기준 확인 필요</dd></div>
+      </dl>
+      <div class="vector"><code>CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N</code></div>
+      <details>
+        <summary>References</summary>
+        <ul><li><a href="https://plugins.trac.wordpress.org/browser/beaver-builder-lite-version/tags/2.11.0.5/classes/class-fl-builder-module.php#L143" target="_blank" rel="noopener">https://plugins.trac.wordpress.org/browser/beaver-builder-lite-version/tags/2.11.0.5/classes/class-fl-builder-module.php#L143</a></li><li><a href="https://plugins.trac.wordpress.org/browser/beaver-builder-lite-version/tags/2.11.0.5/classes/class-fl-builder.php#L2139" target="_blank" rel="noopener">https://plugins.trac.wordpress.org/browser/beaver-builder-lite-version/tags/2.11.0.5/classes/class-fl-builder.php#L2139</a></li><li><a href="https://plugins.trac.wordpress.org/browser/beaver-builder-lite-version/tags/2.11.0.5/classes/class-fl-builder.php#L2264" target="_blank" rel="noopener">https://plugins.trac.wordpress.org/browser/beaver-builder-lite-version/tags/2.11.0.5/classes/class-fl-builder.php#L2264</a></li><li><a href="https://plugins.trac.wordpress.org/browser/beaver-builder-lite-version/tags/2.11.0.5/modules/sidebar/includes/frontend.php#L4" target="_blank" rel="noopener">https://plugins.trac.wordpress.org/browser/beaver-builder-lite-version/tags/2.11.0.5/modules/sidebar/includes/frontend.php#L4</a></li></ul>
+      </details>
+    </article>
+    <article class="cve-card" id="CVE-2026-87115">
+      <div class="cve-top">
+        <a class="cve-id" href="https://nvd.nist.gov/vuln/detail/CVE-2026-87115" target="_blank" rel="noopener">CVE-2026-87115</a>
+        <span class="score">CVSS 9.1 CRITICAL</span>
+      </div>
+      <p class="desc">The VikAppointments Services Booking Calendar plugin for WordPress is vulnerable to arbitrary file deletion due to insufficient file path validation in the extract function in all versions up to, and including, 1.2.21. This makes it possible for unauthenticated attackers to delete arbitrary files on the server, which can easily lead to remote code execution when the right file is deleted (such as wp-config.php). Exploitation requires at least one File-type custom field to be published on the confirmation page shortcode, as this field is not created by default during plugin installation.</p>
+      <dl>
+        <div><dt>Published</dt><dd>2026-10-03</dd></div>
+        <div><dt>Last Modified</dt><dd>2026-10-03</dd></div>
+        <div><dt>Status</dt><dd>Received</dd></div>
+        <div><dt>Attack Vector</dt><dd>네트워크</dd></div>
+        <div><dt>Attack Complexity</dt><dd>낮음</dd></div>
+        <div><dt>Privileges</dt><dd>없음</dd></div>
+        <div><dt>User Interaction</dt><dd>없음</dd></div>
+        <div><dt>CWE</dt><dd>CWE-22</dd></div>
+        <div><dt>Affected</dt><dd>NVD CPE 기준 확인 필요</dd></div>
+      </dl>
+      <div class="vector"><code>CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:H</code></div>
+      <details>
+        <summary>References</summary>
+        <ul><li><a href="https://plugins.trac.wordpress.org/browser/vikappointments/tags/1.2.19/site/controllers/confirmapp.php#L88" target="_blank" rel="noopener">https://plugins.trac.wordpress.org/browser/vikappointments/tags/1.2.19/site/controllers/confirmapp.php#L88</a></li><li><a href="https://plugins.trac.wordpress.org/browser/vikappointments/tags/1.2.19/site/helpers/libraries/customfields/types/file.php#L131" target="_blank" rel="noopener">https://plugins.trac.wordpress.org/browser/vikappointments/tags/1.2.19/site/helpers/libraries/customfields/types/file.php#L131</a></li><li><a href="https://plugins.trac.wordpress.org/browser/vikappointments/tags/1.2.19/site/helpers/libraries/customfields/types/file.php#L53" target="_blank" rel="noopener">https://plugins.trac.wordpress.org/browser/vikappointments/tags/1.2.19/site/helpers/libraries/customfields/types/file.php#L53</a></li><li><a href="https://plugins.trac.wordpress.org/browser/vikappointments/tags/1.2.19/vikappointments.php#L237" target="_blank" rel="noopener">https://plugins.trac.wordpress.org/browser/vikappointments/tags/1.2.19/vikappointments.php#L237</a></li></ul>
+      </details>
+    </article>
     <article class="cve-card" id="CVE-2026-97637">
       <div class="cve-top">
         <a class="cve-id" href="https://nvd.nist.gov/vuln/detail/CVE-2026-97637" target="_blank" rel="noopener">CVE-2026-97637</a>
