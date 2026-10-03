@@ -1,0 +1,104 @@
+{
+  "tagline": "글로벌 정보보안 뉴스레터",
+  "title": "보안 브리핑",
+  "date_display": "2026년 10월 3일 토요일",
+  "date_short": "2026.10.03",
+  "sources_line": "The Hacker News · BleepingComputer · SecurityWeek · KrebsOnSecurity · CISA · NCSC UK · Unit 42 · 보안뉴스 · 데일리시큐 · 전자신문",
+  "seo": {
+    "title": "취약점, 랜섬웨어 — 2026.10.03 보안 브리핑",
+    "description": "오늘 주요 취약점·침해 사고·위협 트렌드 요약.",
+    "keywords": "CVE, 랜섬웨어, 취약점, 침해사고, 보안"
+  },
+  "sections": [
+    {
+      "label": "취약점 & 공격",
+      "type": "cards",
+      "items": [
+        {
+          "severity": "critical",
+          "source": "The Hacker News",
+          "headline": "GitLab AI 게이트웨이에 critical 취약점, 명령 실행 허용",
+          "url": "https://thehackernews.com/2026/10/gitlab-patches-critical-self-hosted-ai.html",
+          "summary": "GitLab의 AI 게이트웨이에 critical 취약점이 발견되어, 특정 조건 하에 사용자가 명령을 실행할 수 있다. 이 취약점은 CISA의 KEV 카탈로그에 등재되었다."
+        },
+        {
+          "severity": "critical",
+          "source": "SecurityWeek",
+          "headline": "FortiMail zero-day 취약점, 공격자에 의해 악용됨",
+          "url": "https://www.securityweek.com/exploited-fortinet-fortimail-zero-day-calls-for-urgent-action/",
+          "summary": "CVE-2026-104286 취약점은 공격자에 의해 악용되어, 시스템에 임의 파일을 쓸 수 있다. CISA는 이 취약점을 KEV 카탈로그에 추가했다."
+        },
+        {
+          "severity": "high",
+          "source": "The Hacker News",
+          "headline": "Dell CSM 취약점, 무인증으로 관리자 권한 획득 가능",
+          "url": "https://thehackernews.com/2026/10/dell-csm-flaws-enable-unauthenticated.html",
+          "summary": "Dell CSM의 취약점은 공격자에 의해 악용되어, Kubernetes 노드에 무인증으로 관리자 권한을 얻을 수 있다. 이 취약점은 CVSS 10.0 점수를 받았다."
+        },
+        {
+          "severity": "high",
+          "source": "The Hacker News",
+          "headline": "Antino 백도어, Outlook 및 OneDrive를 통해 C2 통신",
+          "url": "https://thehackernews.com/2026/10/antino-backdoor-uses-outlook-and.html",
+          "summary": "중국 관련 위협 행위자에 의해 운영된 Antino 백도어가 Outlook 및 OneDrive를 통해 C2 통신을 수행하며, 아시아 여러 국가의 정부 및 정책 기관을 대상으로 공격을 진행했다."
+        },
+        {
+          "severity": "medium",
+          "source": "The Hacker News",
+          "headline": "Capacitor 취약점, 원격 콘텐츠가 앱 권한으로 실행 가능",
+          "url": "https://gbhackers.com/capacitor-vulnerability/",
+          "summary": "Capacitor의 CVE-2026-103922 취약점은 공격자가 원격 콘텐츠를 앱의 권한으로 실행할 수 있게 해주는 것으로, CVSS 9.3 점수를 받았다."
+        }
+      ]
+    },
+    {
+      "label": "침해 사고",
+      "type": "cards",
+      "items": [
+        {
+          "severity": "incident",
+          "source": "The Hacker News",
+          "headline": "16세 청소년, KillSec 랜섬웨어 그룹 운영 의심",
+          "url": "https://thehackernews.com/2026/10/police-arrest-16-year-old-suspected-of.html",
+          "summary": "스페인 경찰은 16세 청소년을 KillSec 랜섬웨어 그룹 운영자로 의심하며 체포했다. 이 그룹은 조직의 데이터를 유출하고, 지불하지 않으면 공개하겠다고 위협했다."
+        },
+        {
+          "severity": "incident",
+          "source": "SecurityWeek",
+          "headline": "KillSec 랜섬웨어 그룹, 국제 경찰 작전으로 해체",
+          "url": "https://securityaffairs.com/200200/cyber-crime/operation-killswitch-police-dismantle-killsec-ransomware-group.html",
+          "summary": "경찰은 KillSec 랜섬웨어 그룹을 해체하며, 3명의 용의자를 체포하고, 5대 서버를 압수했다. 이 그룹은 약 1,000명의 피해자를 대상으로 공격을 진행했다."
+        },
+        {
+          "severity": "incident",
+          "source": "The Hacker News",
+          "headline": "Microsoft 공식 X 계정, 암호화폐 사기꾼에 의해 해킹",
+          "url": "https://www.securityweek.com/crypto-scammers-hijack-microsofts-official-x-account/",
+          "summary": "Microsoft의 공식 X 계정이 해커에 의해 해킹되어, 암호화폐 사기꾼이 1300만 팔로워를 이용해 Clippy 테마의 암호화폐 계정을 홍보했다."
+        }
+      ]
+    },
+    {
+      "label": "동향 & 분석",
+      "type": "trends",
+      "items": [
+        {
+          "lead": "AI 기반 공격 증가",
+          "body": "AI 기반의 SQL 인젝션, 자율 침투 도구, 백도어 등이 증가하고 있으며, 이는 기존의 보안 방어 체계를 우회하는 데 효과적이다. 특히, 정부 및 금융 기관을 대상으로 한 공격이 주목받고 있다."
+        },
+        {
+          "lead": "공급망 공격 확대",
+          "body": "공급망 공격은 점점 더 심각해지고 있으며, 공신력 있는 소스를 이용해 악성코드를 배포하는 사례가 증가하고 있다. 이는 보안 팀이 대응하기 어렵게 만든다."
+        },
+        {
+          "lead": "AI 기반 보안 대응 강화",
+          "body": "AI 기술은 공격자뿐만 아니라 방어자에게도 유용하게 활용되고 있다. 예를 들어, Microsoft는 AI를 사용해 공격 후 대응 시간을 분 단위로 줄일 수 있다고 밝혔다."
+        },
+        {
+          "lead": "국제 협력 강화",
+          "body": "국제적으로 랜섬웨어 그룹 해체 및 체포 사례가 증가하고 있으며, 이는 글로벌 협력이 강화되고 있음을 보여준다. 특히, Europol과 같은 국제 기관의 역할이 중요해지고 있다."
+        }
+      ]
+    }
+  ]
+}
